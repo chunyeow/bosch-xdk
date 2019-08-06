@@ -1,0 +1,524 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t" kind="group">
+    <compoundname>SEND_DATA_OVER_MQTT</compoundname>
+    <title>SendDataOverMQTT</title>
+    <innerfile refid="_send_data_over_m_q_t_t_2source_2_app_controller_8c">AppController.c</innerfile>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga90ce7b07b4530c957f9f83201d8dc8bc" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga41a2f220f03970c1857bd96528307a81" kindref="member">CmdProcessor_T</ref> *</type>
+        <definition>CmdProcessor_T* AppCmdProcessor</definition>
+        <argsstring></argsstring>
+        <name>AppCmdProcessor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle to store the main Command processor handle to be used by run-time event driven threads </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" line="202" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" bodystart="202" bodyend="-1"/>
+        <referencedby refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="467" endline="502">AppControllerSetup</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga6fa700b048407619b5309da95dcce5dd" prot="public" static="yes" mutable="no">
+        <type><ref refid="_free_r_t_o_s_8h_1af7cd8f53b62f0c497b442b504c30f2ec" kindref="member">xTaskHandle</ref></type>
+        <definition>xTaskHandle AppControllerHandle</definition>
+        <argsstring></argsstring>
+        <name>AppControllerHandle</name>
+        <initializer>= <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>OS thread handle for Application controller to be used by run-time blocking threads </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" line="204" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" bodystart="204" bodyend="-1"/>
+        <referencedby refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="413" endline="451">AppControllerEnable</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gacb648b143da3770b877885277d8e2d69" prot="public" static="yes" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t AppIncomingMsgCount</definition>
+        <argsstring></argsstring>
+        <name>AppIncomingMsgCount</name>
+        <initializer>= 0UL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Incoming message count </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" line="196" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" bodystart="196" bodyend="-1"/>
+        <referencedby refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gae8d2fbd8eb045ec77c4157654313c76d" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="212" endline="239">AppMQTTSubscribeCB</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gaee5a224a390a0c62cf38e1363566925c" prot="public" static="yes" mutable="no">
+        <type>char</type>
+        <definition>char AppIncomingMsgPayloadBuffer[APP_MQTT_DATA_BUFFER_SIZE]</definition>
+        <argsstring>[APP_MQTT_DATA_BUFFER_SIZE]</argsstring>
+        <name>AppIncomingMsgPayloadBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Incoming message payload buffer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" line="200" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" bodystart="200" bodyend="-1"/>
+        <referencedby refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gae8d2fbd8eb045ec77c4157654313c76d" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="212" endline="239">AppMQTTSubscribeCB</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga79fd6112ab2e4757f4e0b8858101b8a9" prot="public" static="yes" mutable="no">
+        <type>char</type>
+        <definition>char AppIncomingMsgTopicBuffer[APP_MQTT_DATA_BUFFER_SIZE]</definition>
+        <argsstring>[APP_MQTT_DATA_BUFFER_SIZE]</argsstring>
+        <name>AppIncomingMsgTopicBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Incoming message topic buffer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" line="198" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" bodystart="198" bodyend="-1"/>
+        <referencedby refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gae8d2fbd8eb045ec77c4157654313c76d" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="212" endline="239">AppMQTTSubscribeCB</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gaccc272a3eb726cbfd73b1e590664e831" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___m_q_t_t_1ga3f6c5ca1c797f3b2689a94f874cf17d8" kindref="member">MQTT_Connect_T</ref></type>
+        <definition>MQTT_Connect_T MqttConnectInfo</definition>
+        <argsstring></argsstring>
+        <name>MqttConnectInfo</name>
+        <initializer>=
+        {
+                .ClientId = <ref refid="_send_data_over_m_q_t_t_2source_2_app_controller_8h_1a20f097ba1b767be276a9151254daaa7c" kindref="member">APP_MQTT_CLIENT_ID</ref>,
+                .BrokerURL = <ref refid="_send_data_over_m_q_t_t_2source_2_app_controller_8h_1aae73376839fcc8c1548a05122784792e" kindref="member">APP_MQTT_BROKER_HOST_URL</ref>,
+                .BrokerPort = <ref refid="_send_data_over_m_q_t_t_2source_2_app_controller_8h_1a5ab03c23311dccc660acbf8a74460139" kindref="member">APP_MQTT_BROKER_HOST_PORT</ref>,
+                .CleanSession = <ref refid="_serval___types_8h_1a41f9c5fb8b08eb5dc3edce4dcb37fee7" kindref="member">true</ref>,
+                .KeepAliveInterval = 100,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MQTT connect parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" line="170" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga9389eb08e70bb80b0e5a543cafad13cd" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___m_q_t_t_1ga6080d1070fc2aece944234503f9438b3" kindref="member">MQTT_Publish_T</ref></type>
+        <definition>MQTT_Publish_T MqttPublishInfo</definition>
+        <argsstring></argsstring>
+        <name>MqttPublishInfo</name>
+        <initializer>=
+        {
+                .Topic = <ref refid="_send_data_over_m_q_t_t_2source_2_app_controller_8h_1ae9021bd95250198b25d3095ba683948d" kindref="member">APP_MQTT_TOPIC</ref>,
+                .QoS = 1UL,
+                .Payload = NULL,
+                .PayloadLength = 0UL,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MQTT publish parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" line="188" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gae7601f2f630f2a173816551fb6195e31" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___m_q_t_t_1ga0a68b81714e84c6fac8b519543cad050" kindref="member">MQTT_Setup_T</ref></type>
+        <definition>MQTT_Setup_T MqttSetupInfo</definition>
+        <argsstring></argsstring>
+        <name>MqttSetupInfo</name>
+        <initializer>=
+        {
+                .MqttType = <ref refid="group___m_q_t_t_1gga746edc210a107932b44f72db4ed17fdcaa6f7f97362be83819b4cedd6e6054fa3" kindref="member">MQTT_TYPE_SERVALSTACK</ref>,
+                .IsSecure = <ref refid="_send_data_over_m_q_t_t_2source_2_app_controller_8h_1af832bcf77e0bf5579e0d8fa6b799a5b0" kindref="member">APP_MQTT_SECURE_ENABLE</ref>,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MQTT setup parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" line="164" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga75118ffde597ae27240717ddc625e4ea" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___m_q_t_t_1ga9b934742c5035be0ddfb9df8330d5f6d" kindref="member">MQTT_Subscribe_T</ref></type>
+        <definition>MQTT_Subscribe_T MqttSubscribeInfo</definition>
+        <argsstring></argsstring>
+        <name>MqttSubscribeInfo</name>
+        <initializer>=
+        {
+                .Topic = <ref refid="_send_data_over_m_q_t_t_2source_2_app_controller_8h_1ae9021bd95250198b25d3095ba683948d" kindref="member">APP_MQTT_TOPIC</ref>,
+                .QoS = 1UL,
+                .IncomingPublishNotificationCB = AppMQTTSubscribeCB,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MQTT subscribe parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" line="181" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga30f9cefc6d3484ef7c8aafac99310abe" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___i_n_b_u_i_l_d_s_e_n_s_o_r_1ga7769593edd2c8739a3debfe559ad6ff8" kindref="member">Sensor_Setup_T</ref></type>
+        <definition>Sensor_Setup_T SensorSetup</definition>
+        <argsstring></argsstring>
+        <name>SensorSetup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sensor setup parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" line="112" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga0e412a42d216de0f4feb72dfc0dfa51d" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___w_l_a_n_1ga0e6768bd91dfe20a7c6e5c6ce49533af" kindref="member">WLAN_Setup_T</ref></type>
+        <definition>WLAN_Setup_T WLANSetupInfo</definition>
+        <argsstring></argsstring>
+        <name>WLANSetupInfo</name>
+        <initializer>=
+        {
+                .IsEnterprise = <ref refid="_serval___types_8h_1a65e9886d74aaee76545e83dd09011727" kindref="member">false</ref>,
+                .IsHostPgmEnabled = <ref refid="_serval___types_8h_1a65e9886d74aaee76545e83dd09011727" kindref="member">false</ref>,
+                .SSID = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1af8d23ae6c17168a7ce76f565959a7100" kindref="member">WLAN_SSID</ref>,
+                .Username = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a7595c51ecaebc052ebb16bfee33ef064" kindref="member">WLAN_PSK</ref>,
+                .Password = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a7595c51ecaebc052ebb16bfee33ef064" kindref="member">WLAN_PSK</ref>,
+                .IsStatic = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a3b7cbbe0cc99913db8a349bf04cb7648" kindref="member">WLAN_STATIC_IP</ref>,
+                .IpAddr = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1af8b956915d3648203d2db609f103d400" kindref="member">WLAN_IP_ADDR</ref>,
+                .GwAddr = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1aabe89318c85014d96791cdb2cd9263a8" kindref="member">WLAN_GW_ADDR</ref>,
+                .DnsAddr = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a91bfddd64e54251da5ca4e7b2d4b5774" kindref="member">WLAN_DNS_ADDR</ref>,
+                .Mask = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a408301af8a45e844e60c3be81a51a5e7" kindref="member">WLAN_MASK</ref>,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>WLAN setup parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" line="98" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga22919ee3de6947c4b6616a9231e71f67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AppController_Init</definition>
+        <argsstring>(void *cmdProcessorHandle, uint32_t param2)</argsstring>
+        <name>AppController_Init</name>
+        <param>
+          <type>void *</type>
+          <declname>cmdProcessorHandle</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>Gives control to the Application controller. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a template function where the user can write his custom application.</para><para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" line="507" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" bodystart="507" bodyend="529"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e">CmdProcessor_Enqueue</references>
+        <references refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="467" endline="502">AppControllerSetup</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+      </memberdef>
+      <memberdef kind="function" id="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga5ef9cc8f277726dc19c525c8049d388f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerEnable</definition>
+        <argsstring>(void *param1, uint32_t param2)</argsstring>
+        <name>AppControllerEnable</name>
+        <param>
+          <type>void *</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>To enable the necessary modules for the application. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>WLAN</para></listitem><listitem><para>ServalPAL</para></listitem><listitem><para>SNTP (if secure communication)</para></listitem><listitem><para>MQTT</para></listitem><listitem><para>Sensor</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" line="413" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" bodystart="413" bodyend="451"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___w_l_a_n_1gade1d0097361a009766b934f25111dd8b">WLAN_Enable</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___s_e_r_v_a_l_p_a_l_1ga5c486b056c82b352bd487143e7ca7633">ServalPAL_Enable</references>
+        <references refid="group___s_n_t_p_1gaec27b2582b486a4b87a4ab217abd1f15">SNTP_Enable</references>
+        <references refid="group___m_q_t_t_1gad1a47f1a6c484e10e2b6fcda82a30b15">MQTT_Enable</references>
+        <references refid="group___i_n_b_u_i_l_d_s_e_n_s_o_r_1ga098f1e2f6e287146591b8ff5886c6820">Sensor_Enable</references>
+        <references refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="307" endline="397">AppControllerFire</references>
+        <references refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1af793604cd2dbedfc6b69f10936fe7c41" compoundref="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h" startline="61">TASK_STACK_SIZE_APP_CONTROLLER</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1a4651501b886d4de331b9f06b37265177" compoundref="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h" startline="59">TASK_PRIO_APP_CONTROLLER</references>
+        <references refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga6fa700b048407619b5309da95dcce5dd" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="204">AppControllerHandle</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba497273b2285191edc1cda8648b67250a" compoundref="_b_c_d_s___retcode_8h" startline="107">RETCODE_OUT_OF_RESOURCES</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+        <references refid="group___x_d_k_u_t_i_l_s_1ga7ffe38d38314b5301a4ddd04f4fa7ca6" compoundref="_utils_8c" startline="277" endline="284">Utils_PrintResetCause</references>
+        <referencedby refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="467" endline="502">AppControllerSetup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerFire</definition>
+        <argsstring>(void *pvParameters)</argsstring>
+        <name>AppControllerFire</name>
+        <param>
+          <type>void *</type>
+          <declname>pvParameters</declname>
+        </param>
+        <briefdescription>
+<para>Responsible for controlling the send data over MQTT application control flow. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Synchronize SNTP time stamp for the system if MQTT communication is secure</para></listitem><listitem><para>Connect to MQTT broker</para></listitem><listitem><para>Subscribe to MQTT topic</para></listitem><listitem><para>Read environmental sensor data</para></listitem><listitem><para>Publish data periodically for a MQTT topic</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pvParameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" line="307" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" bodystart="307" bodyend="397"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga4018a2f55b6bbf5d5e46d76042eab829" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="90">APP_MQTT_DATA_BUFFER_SIZE</references>
+        <references refid="group___s_n_t_p_1ga524d9a28f1943d999fe94951b268cc1f">SNTP_GetTimeFromServer</references>
+        <references refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga1cfc98de5e09b225abf287dd632ccf31" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="126">APP_RESPONSE_FROM_SNTP_SERVER_TIMEOUT</references>
+        <references refid="group___m_q_t_t_1gaad7be1b93cb23c7cb9c831bf8707d2cd">MQTT_ConnectToBroker</references>
+        <references refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gab7768b86d8aaa50f2b01816b9d210c2b" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="83">MQTT_CONNECT_TIMEOUT_IN_MS</references>
+        <references refid="group___m_q_t_t_1ga24dc99e3d05394073c43acf89797e43d">MQTT_SubsribeToTopic</references>
+        <references refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga65e7407f9e61d4e844a1aa2068ee7ebe" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="85">MQTT_SUBSCRIBE_TIMEOUT_IN_MS</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="task_8h_1a84d4e660b04630be2939d91b3c2412f8">vTaskSuspend</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gab59acc7b7dbee4dcdbc84fa610fac328" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="248" endline="293">AppControllerValidateWLANConnectivity</references>
+        <references refid="group___i_n_b_u_i_l_d_s_e_n_s_o_r_1ga79fa92353c8d9e30f05d957755a48f24">Sensor_GetData</references>
+        <references refid="struct_sensor___value___s_1a547107fb9bde20fd87dedc23ae5b2be5" compoundref="_x_d_k___sensor_8h" startline="264">Sensor_Value_S::RH</references>
+        <references refid="struct_sensor___value___s_1aab91169cc86c5a56fe7def7cebd4fba6" compoundref="_x_d_k___sensor_8h" startline="265">Sensor_Value_S::Pressure</references>
+        <references refid="struct_sensor___value___s_1a30b2ceb495b99ab029b438563e5f22fa" compoundref="_x_d_k___sensor_8h" startline="266">Sensor_Value_S::Temp</references>
+        <references refid="struct_m_q_t_t___publish___s_1a0dbdb3d7f218fcbde52ea86cc1b98167" compoundref="_x_d_k___m_q_t_t_8h" startline="110">MQTT_Publish_S::Payload</references>
+        <references refid="struct_m_q_t_t___publish___s_1a9bb4e842b701984f7fd0c0502c6f4aec" compoundref="_x_d_k___m_q_t_t_8h" startline="111">MQTT_Publish_S::PayloadLength</references>
+        <references refid="group___m_q_t_t_1ga974142e97ee7a8d5b0fa8dbae3bec4a9">MQTT_PublishToTopic</references>
+        <references refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gaf41a11969c0f4a07c56b61f5288af03c" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="87">MQTT_PUBLISH_TIMEOUT_IN_MS</references>
+        <references refid="task_8h_1aa154068cecd7f31446a7a84af44ab1a3">vTaskDelay</references>
+        <references refid="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8h_1a96fd6207524109a3cf4317d7f533caef" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8h" startline="147">APP_MQTT_DATA_PUBLISH_PERIODICITY</references>
+        <referencedby refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="413" endline="451">AppControllerEnable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga5ca12481e985f2cd2437fe712e08c9b7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerSetup</definition>
+        <argsstring>(void *param1, uint32_t param2)</argsstring>
+        <name>AppControllerSetup</name>
+        <param>
+          <type>void *</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>To setup the necessary modules for the application. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>WLAN</para></listitem><listitem><para>ServalPAL</para></listitem><listitem><para>SNTP (if secure communication)</para></listitem><listitem><para>MQTT</para></listitem><listitem><para>Sensor</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" line="467" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" bodystart="467" bodyend="502"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___w_l_a_n_1ga5e86721c894549287a387d49af37b1e3">WLAN_Setup</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___s_e_r_v_a_l_p_a_l_1gab722469d5c22a0211799fd3d5a5073bc">ServalPAL_Setup</references>
+        <references refid="group___s_n_t_p_1ga4aff8a89750e6d74f5b8053ebb66ca77">SNTP_Setup</references>
+        <references refid="group___m_q_t_t_1ga9441719e760911a8a2f726055ebf31c5">MQTT_Setup</references>
+        <references refid="struct_sensor___setup___s_1a4b767178f176a51f1c1c6abc68069ece" compoundref="_x_d_k___sensor_8h" startline="208">Sensor_Setup_S::CmdProcessorHandle</references>
+        <references refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga90ce7b07b4530c957f9f83201d8dc8bc" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="202">AppCmdProcessor</references>
+        <references refid="group___i_n_b_u_i_l_d_s_e_n_s_o_r_1ga128512064ba3f94f8d0157cc1e87db22">Sensor_Setup</references>
+        <references refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e">CmdProcessor_Enqueue</references>
+        <references refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="413" endline="451">AppControllerEnable</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+        <referencedby refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga22919ee3de6947c4b6616a9231e71f67" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="507" endline="529">AppController_Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gab59acc7b7dbee4dcdbc84fa610fac328" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>static Retcode_T AppControllerValidateWLANConnectivity</definition>
+        <argsstring>(void)</argsstring>
+        <name>AppControllerValidateWLANConnectivity</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This will validate the WLAN network connectivity. </para>        </briefdescription>
+        <detaileddescription>
+<para>If there is no connectivity then it will scan for the given network and try to reconnect</para><para><simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" line="248" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" bodystart="248" bodyend="293"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gae501bfe35eecb13b627779b1ef52a14d">WlanNetworkConnect_GetIpStatus</references>
+        <references refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga59e805ac62f3860ed3de3cf83206d0a5a13e90103cd4c170fe84bdceb5ecf5eb4" compoundref="_b_c_d_s___wlan_network_connect_8h" startline="129">WLANNWCT_IPSTATUS_CT_AQRD</references>
+        <references refid="group___s_n_t_p_1gaec80b221bdd585c1a08580f498973a80">SNTP_Disable</references>
+        <references refid="group___w_l_a_n_1gabf173491fd6f551a2a0383b317d43352">WLAN_Reconnect</references>
+        <references refid="group___s_n_t_p_1gaec27b2582b486a4b87a4ab217abd1f15">SNTP_Enable</references>
+        <references refid="group___m_q_t_t_1gaad7be1b93cb23c7cb9c831bf8707d2cd">MQTT_ConnectToBroker</references>
+        <references refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gab7768b86d8aaa50f2b01816b9d210c2b" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="83">MQTT_CONNECT_TIMEOUT_IN_MS</references>
+        <references refid="group___m_q_t_t_1ga24dc99e3d05394073c43acf89797e43d">MQTT_SubsribeToTopic</references>
+        <references refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga65e7407f9e61d4e844a1aa2068ee7ebe" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="85">MQTT_SUBSCRIBE_TIMEOUT_IN_MS</references>
+        <referencedby refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="307" endline="397">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gae8d2fbd8eb045ec77c4157654313c76d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppMQTTSubscribeCB</definition>
+        <argsstring>(MQTT_SubscribeCBParam_T param)</argsstring>
+        <name>AppMQTTSubscribeCB</name>
+        <param>
+          <type><ref refid="group___m_q_t_t_1ga2053210bf733399ace9c64cc3c94978b" kindref="member">MQTT_SubscribeCBParam_T</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" line="179" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" bodystart="212" bodyend="239"/>
+        <references refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gacb648b143da3770b877885277d8e2d69" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="196">AppIncomingMsgCount</references>
+        <references refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga79fd6112ab2e4757f4e0b8858101b8a9" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="198">AppIncomingMsgTopicBuffer</references>
+        <references refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gaee5a224a390a0c62cf38e1363566925c" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="200">AppIncomingMsgPayloadBuffer</references>
+        <references refid="struct_m_q_t_t___subscribe_c_b_param___s_1a9bb4e842b701984f7fd0c0502c6f4aec" compoundref="_x_d_k___m_q_t_t_8h" startline="127">MQTT_SubscribeCBParam_S::PayloadLength</references>
+        <references refid="struct_m_q_t_t___subscribe_c_b_param___s_1a0dbdb3d7f218fcbde52ea86cc1b98167" compoundref="_x_d_k___m_q_t_t_8h" startline="126">MQTT_SubscribeCBParam_S::Payload</references>
+        <references refid="struct_m_q_t_t___subscribe_c_b_param___s_1a7541db6f774e5c7accba225ddefd7fe5" compoundref="_x_d_k___m_q_t_t_8h" startline="125">MQTT_SubscribeCBParam_S::TopicLength</references>
+        <references refid="struct_m_q_t_t___subscribe_c_b_param___s_1a0b5e3044530ac62fa73836f192f90f77" compoundref="_x_d_k___m_q_t_t_8h" startline="124">MQTT_SubscribeCBParam_S::Topic</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga4018a2f55b6bbf5d5e46d76042eab829" prot="public" static="no">
+        <name>APP_MQTT_DATA_BUFFER_SIZE</name>
+        <initializer>UINT32_C(256)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>macro for data size of incoming subscribed and published messages </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" line="90" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" bodystart="90" bodyend="-1"/>
+        <referencedby refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="307" endline="397">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga09172068262a168884b86e26a8122080" prot="public" static="no">
+        <name>APP_TEMPERATURE_OFFSET_CORRECTION</name>
+        <initializer>(-3459)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro for static temperature offset correction. Self heating, temperature correction factor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" line="89" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gabff8f3a204e79671b98fabaa652198c3" prot="public" static="no">
+        <name>BCDS_MODULE_ID</name>
+        <initializer><ref refid="_xdk_extension_port_2source_2_xdk_app_info_8h_1a58c5197225b08cbce9809ee5d9b3ae74ac664b9d7c9367aef22abcb23812b6f33" kindref="member">XDK_APP_MODULE_ID_APP_CONTROLLER</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" line="58" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gab7768b86d8aaa50f2b01816b9d210c2b" prot="public" static="no">
+        <name>MQTT_CONNECT_TIMEOUT_IN_MS</name>
+        <initializer>UINT32_C(60000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro for MQTT connection timeout in milli-second </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" line="83" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" bodystart="83" bodyend="-1"/>
+        <referencedby refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gab59acc7b7dbee4dcdbc84fa610fac328" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="248" endline="293">AppControllerValidateWLANConnectivity</referencedby>
+        <referencedby refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="307" endline="397">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gaf41a11969c0f4a07c56b61f5288af03c" prot="public" static="no">
+        <name>MQTT_PUBLISH_TIMEOUT_IN_MS</name>
+        <initializer>UINT32_C(20000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro for MQTT publication timeout in milli-second </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" line="87" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" bodystart="87" bodyend="-1"/>
+        <referencedby refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="307" endline="397">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga65e7407f9e61d4e844a1aa2068ee7ebe" prot="public" static="no">
+        <name>MQTT_SUBSCRIBE_TIMEOUT_IN_MS</name>
+        <initializer>UINT32_C(20000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro for MQTT subscription timeout in milli-second </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" line="85" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SendDataOverMQTT/source/AppController.c" bodystart="85" bodyend="-1"/>
+        <referencedby refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gab59acc7b7dbee4dcdbc84fa610fac328" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="248" endline="293">AppControllerValidateWLANConnectivity</referencedby>
+        <referencedby refid="group___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="307" endline="397">AppControllerFire</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Demo application for using MQTT protocol. </para>    </briefdescription>
+    <detaileddescription>
+<para>This example shows how to use the MQTT protocol to transfer the environmental data.</para><para>You need to add your WLAN-Credentials in <ref refid="_xdk_extension_port_2source_2_app_controller_8h" kindref="compound">AppController.h</ref><linebreak/>
+When running the program keep the USB plugged in to the PC. You can see in the console output of the XDK-Workbench the content of the environmental data. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

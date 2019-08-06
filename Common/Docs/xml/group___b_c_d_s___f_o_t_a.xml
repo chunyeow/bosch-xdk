@@ -1,0 +1,928 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___b_c_d_s___f_o_t_a" kind="group">
+    <compoundname>BCDS_FOTA</compoundname>
+    <title>Fota</title>
+    <innerfile refid="_b_c_d_s___fota_8h">BCDS_Fota.h</innerfile>
+    <innergroup refid="group___f_o_t_a">FOTA through SD Card</innergroup>
+    <innergroup refid="group___b_c_d_s___f_o_t_a___f_w_c_o_n_t_a_i_n_e_r">FWContainer</innergroup>
+    <innergroup refid="group___b_c_d_s___f_o_t_a___c_o_p_y_a_g_e_n_t">FotaCopyAgent</innergroup>
+    <innergroup refid="group___b_c_d_s___f_o_t_a___d_o_w_n_l_o_a_d_a_g_e_n_t">FotaDownloadAgent</innergroup>
+    <innergroup refid="group___b_c_d_s___f_o_t_a___p_a_r_t_i_t_i_o_n_a_g_e_n_t">FotaPartitionAgent</innergroup>
+    <innergroup refid="group___b_c_d_s___f_o_t_a___r_e_g_i_s_t_r_y_a_g_e_n_t">FotaRegistryAgent</innergroup>
+    <innergroup refid="group___b_c_d_s___f_o_t_a___v_e_r_i_f_i_c_a_t_i_o_n_a_g_e_n_t">FotaVerificationAgent</innergroup>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___b_c_d_s___f_o_t_a_1ga827742b56f5c2c5573a371c612a5ec5d" prot="public" static="no">
+        <name>BCDS_FOTA_ModuleID_E</name>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga827742b56f5c2c5573a371c612a5ec5da0515b1e8345d61f9ece44b7c9ac6f8f8" prot="public">
+          <name>BCDS_FOTA_MODULE_ID_COAPDOWNLOADAGENT</name>
+          <initializer>= 50</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga827742b56f5c2c5573a371c612a5ec5da4659bac53ed213e2abeaf9f62e6e2cd0" prot="public">
+          <name>BCDS_FOTA_MODULE_ID_EXTFLASHPARITIONAGENT</name>
+          <initializer>= 60</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga827742b56f5c2c5573a371c612a5ec5da90e1af9c18151e4fd9b40c1fdb7f27e7" prot="public">
+          <name>BCDS_FOTA_MODULE_ID_EFM32XXPARITIONAGENT</name>
+          <initializer>= 61</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga827742b56f5c2c5573a371c612a5ec5da1d85fb12a275e23127d10a1c9c8a0d50" prot="public">
+          <name>BCDS_FOTA_MODULE_ID_MX25R8035F_PARTITION_AGENT</name>
+          <initializer>= 62</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga827742b56f5c2c5573a371c612a5ec5da978dff8073776460ab0de6e10b4a265d" prot="public">
+          <name>BCDS_FOTA_MODULE_ID_COPYAGENT</name>
+          <initializer>= 70</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga827742b56f5c2c5573a371c612a5ec5da71f0d19173b2a9b827dc79a6f18a23f5" prot="public">
+          <name>BCDS_FOTA_MODULE_ID_FW1COPYAGENT</name>
+          <initializer>= 71</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga827742b56f5c2c5573a371c612a5ec5daff8b0959553181639560aeb2899d959a" prot="public">
+          <name>BCDS_FOTA_MODULE_ID_HVERIFICATION</name>
+          <initializer>= 80</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga827742b56f5c2c5573a371c612a5ec5da378e8be3eb2fec656045715f2c840cd5" prot="public">
+          <name>BCDS_FOTA_MODULE_ID_REGAGENT</name>
+          <initializer>= 90</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>BCDS_MODULE_ID for each FOTA C module  usage: #undef BCDS_MODULE_ID #define BCDS_MODULE_ID BCDS_FOTA_MODULE_ID_xxx. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_Fota.h" line="58" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_Fota.h" bodystart="57" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___b_c_d_s___f_o_t_a_1ga74016746d53b2f61d641e9b6bddc5e49" prot="public" static="no">
+        <name>Fota_Event_E</name>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a36db096d8739a66aad43fd770d8b429b" prot="public">
+          <name>FOTA_EVENT_STORAGEAGENT_PRIMARY_STORED</name>
+          <initializer>= UINT16_C(0)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a9db0f99b1ed03893055df051a4c03e69" prot="public">
+          <name>FOTA_EVENT_STORAGEAGENT_BACKUP_STORED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a1a81386c64d89caa2700578aa54db87f" prot="public">
+          <name>FOTA_EVENT_STORAGEAGENT_DOWNLOAD_STORED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a26d2cc11885c51abfdba57090c263bbe" prot="public">
+          <name>FOTA_EVENT_STORAGEAGENT_PRIMARY_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49aa53cf714ec1ee3ca7a2b50fda59b6061" prot="public">
+          <name>FOTA_EVENT_STORAGEAGENT_BACKUP_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a53017d5834904f64678e817028582626" prot="public">
+          <name>FOTA_EVENT_STORAGEAGENT_DOWNLOAD_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49af7af2b6c39d3758f408d92741a59f11d" prot="public">
+          <name>FOTA_EVENT_STORAGEAGENT_PRIMARY_ERASED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49ae8a9f9c703d9f1754e56e822459ca6c8" prot="public">
+          <name>FOTA_EVENT_STORAGEAGENT_BACKUP_ERASED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49ae7d1045e7f945c1333400fcad0a6e136" prot="public">
+          <name>FOTA_EVENT_STORAGEAGENT_DOWNLOAD_ERASED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a352c3596be8ec75672dcc1496534387c" prot="public">
+          <name>FOTA_EVENT_STORGEAGENT_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a9c259995639b244b8f54635a2a06b1c9" prot="public">
+          <name>FOTA_EVENT_DOWNLOADAGENT_STARTED</name>
+          <initializer>= UINT16_C(100)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a9f76af1422c45459c94c72916125e0d1" prot="public">
+          <name>FOTA_EVENT_DOWNLOADAGENT_STOPPED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a967355e96ec923107869444aa1e95ce8" prot="public">
+          <name>FOTA_EVENT_DOWNLOADAGENT_CONTINUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49ac6d409ba070600ddec0bf0ebff677dbe" prot="public">
+          <name>FOTA_EVENT_DOWNLOADAGENT_UNEXPECTED_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a758b557b3708dd75a0ef928ea17be4cf" prot="public">
+          <name>FOTA_EVENT_DOWNLOADAGENT_PACKAGE_LOADED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49ac73000a91ac7938dcdd5b87bbb553428" prot="public">
+          <name>FOTA_EVENT_DOWNLOADAGENT_COMPLETE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49ab53749b2c28760b51a6a5dd2709d40d5" prot="public">
+          <name>FOTA_EVENT_DOWNLOADAGENT_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a443a90a5b68bec0557aa80e506a823d9" prot="public">
+          <name>FOTA_EVENT_DOWNLOADAGENT_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a7b2f096e4acabb21de9f7d8b829aa339" prot="public">
+          <name>FOTA_EVENT_VERIFICATIONAGENT_HEADER_OK</name>
+          <initializer>= UINT16_C(200)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49aa574d9addf03675a42253315c45dcbd5" prot="public">
+          <name>FOTA_EVENT_VERIFICATIONAGENT_HEADER_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49ab4119cf5c36b11cce9a8b52176514d34" prot="public">
+          <name>FOTA_EVENT_VERIFICATIONAGENT_IMAGE_OK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a8551e713c57b630531d03afba91c70e0" prot="public">
+          <name>FOTA_EVENT_VERIFICATIONAGENT_IMAGE_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a4a000e65ca78911aa09c60f8d4ed3b3a" prot="public">
+          <name>FOTA_EVENT_VERIFICATIONAGENT_SIGNATURE_OK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49ae0def66c96ce4cac79e2fc70018db533" prot="public">
+          <name>FOTA_EVENT_VERIFICATIONAGENT_SIGNATURE_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a7c23afdd2a9463d424b9f7495954ae1b" prot="public">
+          <name>FOTA_EVENT_VERIFICATIONAGENT_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a5ffdae8a7f182535be5a49eb8945bd23" prot="public">
+          <name>FOTA_EVENT_REGISTRY_KEY_WRITE_OK</name>
+          <initializer>= UINT16_C(300)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a39dafa233a011cb395ef31e4bf43b2a0" prot="public">
+          <name>FOTA_EVENT_REGISTRY_KEY_WRITE_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49adf1e632b3c4f3d7367a37c902205d78d" prot="public">
+          <name>FOTA_EVENT_REGISTRY_SAVE_OK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a464bf7cdd9e71fb88de27f516f943c17" prot="public">
+          <name>FOTA_EVENT_REGISTRY_SAVE_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49abfeb42397b94ea44fbed653d3c80db02" prot="public">
+          <name>FOTA_EVENT_REGISTRY_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a75ba21a2b58e8bdc0bb24844be2929ee" prot="public">
+          <name>FOTA_EVENT_COPY_UPDATE_OK</name>
+          <initializer>= UINT16_C(400)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a31abfbe092b8f8a38d7327e6e033642d" prot="public">
+          <name>FOTA_EVENT_COPY_UPDATE_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49ae042501057f0d21bf77a33f932cf7bdc" prot="public">
+          <name>FOTA_EVENT_COPY_ROLLBACK_OK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a83f754e38dc82c30c30b84a2930400b9" prot="public">
+          <name>FOTA_EVENT_COPY_ROLLBACK_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a08d734ba8e7da4de4ca35d4e4bdd761d" prot="public">
+          <name>FOTA_EVENT_PARTITION_AGENT_INIT_OK</name>
+          <initializer>= UINT16_C(500)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a0f5e1454f1e5d0b02f8ada49761685d5" prot="public">
+          <name>FOTA_EVENT_PARTITION_AGENT_INIT_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49aa9d7a003b35c2ef2406dd0c10ca507bc" prot="public">
+          <name>FOTA_EVENT_PARTITION_READ_OK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a36ca6ffa7c99fff4a42c8e7eebb14120" prot="public">
+          <name>FOTA_EVENT_PARTITION_READ_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49af4ed6c54fdbc21ae9d8afcb9beeb5c38" prot="public">
+          <name>FOTA_EVENT_PARTITION_WRITE_OK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49abf388831063a61af4e3a75d31af592ec" prot="public">
+          <name>FOTA_EVENT_PARTITION_WRITE_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a85e48d1dabdfceaa9b923b16319e45c6" prot="public">
+          <name>FOTA_EVENT_PARTITION_ERASE_OK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a9e4b2714de21c1a2ded31cc14f20398f" prot="public">
+          <name>FOTA_EVENT_PARTITION_ERASE_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1gga74016746d53b2f61d641e9b6bddc5e49a7c3cad9cf8b0ea1706d9f536beaa557c" prot="public">
+          <name>FOTA_EVENT_PARTITION_OUT_OF_STORAGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>This enum represents to Identify the different FOTA Partitions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_Fota.h" line="177" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_Fota.h" bodystart="176" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___b_c_d_s___f_o_t_a_1gab92a1d77f039787d2a23ae7f945c43c2" prot="public" static="no">
+        <name>Fota_Retcode_E</name>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a13778088565252b801bcd291d3a78a29" prot="public">
+          <name>FOTA_RETCODE_INTERNAL_ERROR</name>
+          <initializer>= RETCODE_FIRST_CUSTOM_CODE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2ae5d62b83fb3e42ddd6ac7faadfbe7c4a" prot="public">
+          <name>FOTA_RETCODE_CRC_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2ac6c5a956d61310d74ede1e53df5df11d" prot="public">
+          <name>FOTA_RETCODE_INVALID_SIGNATURE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2ab190101ab9d83a90107743820ed6c4b1" prot="public">
+          <name>FOTA_RETCODE_INVALID_HEADER_VERSION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a1e205091ea77e372209f2c01b84bc5be" prot="public">
+          <name>FOTA_RETCODE_RESOURCE_CHANGED_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2aee5f4d6df5bb9ecc0d79f9aecd9ccc15" prot="public">
+          <name>FOTA_RETCODE_CONTAINER_READ_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a83d00ecfb1f89e240c8b853a2e4db468" prot="public">
+          <name>FOTA_RETCODE_FIRMWARE_SIZE_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2abd13daa9f8ceddb7f8eb856bffa0901e" prot="public">
+          <name>FOTA_RETCODE_FIRMWARE_VERSION_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a39e6e2b6a1bd99c4f27e0a300a924a25" prot="public">
+          <name>FOTA_DL_CLIENT_SESSION_ALREADY_ACTIVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a70f4ff3870665480306e8541c426a12d" prot="public">
+          <name>FOTA_DL_SEND_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Coap session is already active. resume d/w after coap timeout period Send has failed and notify to application to handle the communication channel related errors like Radio signal loss. So that application should resume download after checking radio status </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2aa2d4d461e9f4b578dac2715dd1e26e10" prot="public">
+          <name>FOTA_DL_SEND_TIMEOUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a5d136f1432fb9bc7316331a01ba88466" prot="public">
+          <name>FOTA_DL_SEND_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a62f5ee3c5e5ba61a3deaa8681a0173da" prot="public">
+          <name>FOTA_DL_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a7ed0d38aab096b0fcc92a125bf36fbf5" prot="public">
+          <name>FOTA_DL_UNKNOWN_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a1220e16663ea29c5e94f5f1538d007d1" prot="public">
+          <name>FOTA_DL_STACK_ASYNC_CALL_POPPED_UP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a66b3c07677600f9946f1ac59096542d8" prot="public">
+          <name>FOTA_DL_NOTFOUND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2aea97e514761f2f9b65699234b10fb11b" prot="public">
+          <name>FOTA_DL_RX_TIMEOUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a798f91be2da47723f062a50521e3394b" prot="public">
+          <name>FOTA_DL_FATAL_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a55ce79b15bf53f26c4ee11b3905b97e8" prot="public">
+          <name>FOTA_DL_DATA_SIZE_OVERLOAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a52f72851c0f870b5a9be3646a4d9ef93" prot="public">
+          <name>FOTA_DL_DATA_BUFFER_INVALID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a01b123e254130a166e63ec9038a3c2a4" prot="public">
+          <name>FOTA_DL_DATA_WRITE_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2ab28372fb97fe0f8a3ac7944619432803" prot="public">
+          <name>FOTA_DL_CMD_PROCESSOR_ENQUEUE_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2af0dbb18159f3f1458ea5a8ce733ccd2b" prot="public">
+          <name>FOTA_DL_DOWNLOAD_INPROGRESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a5c47101eef495a99433afa303d2615d2" prot="public">
+          <name>FOTA_DL_DOWNLOAD_NOT_INPROGRESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a4866971e4729cf7e0e425f5a07d6948e" prot="public">
+          <name>FOTA_FAILED_NVM_WRITE_DOWNLOAD_IN_PROGRESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a6ec9d044ac1e1c15fd232b7aaf4dc903" prot="public">
+          <name>FOTA_FAILED_NVM_WRITE_FOTA_CURRENT_STATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2afb8f3e821c4322c52ef0482883c99ee3" prot="public">
+          <name>FOTA_FAILED_NVM_FLUSH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a39c5fb02cbaaf4a21f8167ca81c3fb01" prot="public">
+          <name>FOTA_FAILED_ENV_READ_CREDENTIALS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2ab5e3be988d71ebf8951f1d50425810a3" prot="public">
+          <name>FOTA_FAILED_NVM_READ_CREDENTIALS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2ac2b598069d0dc31896559315b0e81ad8" prot="public">
+          <name>FOTA_FAILED_RESULT_AND_STATE_UPDATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a057b0a3613a907c1055d7bf0130d5526" prot="public">
+          <name>FOTA_UPDATE_INVALID_URI_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a99e3554523b6b218890b7fe791e84fd2" prot="public">
+          <name>FOTA_FAILED_TO_SETUP_NEW_DOWNLOAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a55e8a38a6891b2a0b35da9461f91a0c0" prot="public">
+          <name>FOTA_FAILED_DUE_TO_INCONSISTENT_STATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a29af3285bfc7b4307dff4036bd9f6c22" prot="public">
+          <name>FOTA_FAILED_UPDATE_GENERIC_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a39a092acd55969087b16c8652717bf76" prot="public">
+          <name>FOTA_DATA_PROCESSING_OVERLOAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2af54aff9118a9bc53b81d7328b807e515" prot="public">
+          <name>FOTA_DATA_SIZE_OVERLOAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a73f441b276733bb36486782a34592d70" prot="public">
+          <name>SDCARD_NOT_DETECTED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a6226d94dc4b18db14912e90449aaec3a" prot="public">
+          <name>SDCARD_FILE_OPEN_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a74cd616cf66288ba712dfb2e7cc8ceea" prot="public">
+          <name>SDCARD_FILE_WRITE_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2ab229f5f62a085952a0fd55cfe015cdc2" prot="public">
+          <name>SDCARD_FILE_READ_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a1a8a115463cb24fa108ba9f66b276809" prot="public">
+          <name>SDCARD_FILE_ERASE_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2aa1413bd9c99de5ee74864ef26e2f223b" prot="public">
+          <name>SDCARD_FILE_CLOSE_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a7215f75cd2bbb8d628da4763413d114a" prot="public">
+          <name>SDCARD_FILE_NOT_FOUND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a38433c794efab2853aeb0f21c7594ae0" prot="public">
+          <name>SDCARD_OUT_OF_STORAGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2ae6863b12ede10821760562570697c8da" prot="public">
+          <name>SDCARD_GET_FILE_SIZE_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2acb22968c4f925c72cc3ce0c439487dba" prot="public">
+          <name>EXTFLASH_FILE_OPEN_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a70e27f2254165357ab2cee55102150fe" prot="public">
+          <name>EXTFLASH_FILE_WRITE_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a15f589e091d85521f3d882d812ecde0a" prot="public">
+          <name>EXTFLASH_FILE_READ_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a50c10d5b459d7dfca0ddab71bfb5f6a0" prot="public">
+          <name>EXTFLASH_FILE_ERASE_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2aa67dda191c0a2bf5f75e36c1c8a3e0d9" prot="public">
+          <name>EXTFLASH_FILE_CLOSE_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2abe61982b6532a9db6cecc084343bd14e" prot="public">
+          <name>EXTFLASH_FILE_NOT_FOUND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a535ef8a86832a4f2368a98c25cd0e1ac" prot="public">
+          <name>EXTFLASH_OUT_OF_STORAGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2af14562987522d2c2f12d6e45157aa0a3" prot="public">
+          <name>FOTA_DELAY_REQUEST_NOTIFY_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a7c3404637e31c70f919cd865498bf169" prot="public">
+          <name>FOTA_SEND_FAILED_NOTIFY_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a358fbd1137fba63fdb10ba15547f95e6" prot="public">
+          <name>FOTA_FW_KEYSIZE_WRONG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a04226fab8b261e845f09b8256d2f771e" prot="public">
+          <name>FOTA_FW_NOT_SUPPORTED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a54f219c85b78d2bbef52babda6278ebd" prot="public">
+          <name>FOTA_FW_CRCINIT_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2ac0ad48bfaf51c639a8df8eded3b73a5d" prot="public">
+          <name>FOTA_FW_CRCRUN_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a708c9ff773a116cfe982ade4b96aee03" prot="public">
+          <name>FOTA_FW_CRCFINAL_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2ac5ff03dd7ac13e6648002d4ec6ae06c6" prot="public">
+          <name>FOTA_FW_CRC_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a87a70a924c6154284f0c76c347d5ffa8" prot="public">
+          <name>FOTA_FW_SIG_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a7b137135b249a949efae862a1e1d20e6" prot="public">
+          <name>FOTA_CPY_SIZE_WRONG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a393145ba2672c750600dc3f32c0cef45" prot="public">
+          <name>INTFLASH_FILE_OPEN_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a3d16778b4eb0f40d27fca7da74872821" prot="public">
+          <name>INTFLASH_FILE_WRITE_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a10626ca3310cc0f693b4ae96d7e94a9b" prot="public">
+          <name>INTFLASH_FILE_READ_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a6c6304810df5747fcb74b286d1a6d841" prot="public">
+          <name>INTFLASH_FILE_ERASE_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a60d67d4dd939633e3471cc1b5adaf83b" prot="public">
+          <name>INTFLASH_FILE_CLOSE_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a48408cfe035aed5fc8a3b8898fdc4e91" prot="public">
+          <name>INTFLASH_FILE_NOT_FOUND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a7d1bde573e65f25c006d565ecdef35b2" prot="public">
+          <name>INTFLASH_OUT_OF_STORAGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a49c5e5a2c6416109f379434cb473e9b7" prot="public">
+          <name>FOTA_RETCODE_MAX_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>module specific extension of the basic retcode </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_Fota.h" line="85" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_Fota.h" bodystart="84" bodyend="171"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___b_c_d_s___f_o_t_a_1gac960a449a2869279b9c031a46eed0694" prot="public" static="no">
+        <type>enum <ref refid="group___b_c_d_s___f_o_t_a_1ga74016746d53b2f61d641e9b6bddc5e49" kindref="member">Fota_Event_E</ref></type>
+        <definition>typedef enum Fota_Event_E Fota_Event_T</definition>
+        <argsstring></argsstring>
+        <name>Fota_Event_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_Fota.h" line="58" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_Fota.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This module provides declarations which are commonly used by Fota. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

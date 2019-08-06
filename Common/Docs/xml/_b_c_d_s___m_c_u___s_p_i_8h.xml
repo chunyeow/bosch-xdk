@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_b_c_d_s___m_c_u___s_p_i_8h" kind="file">
+    <compoundname>BCDS_MCU_SPI.h</compoundname>
+    <includes refid="_b_c_d_s___h_a_l_8h" local="yes">BCDS_HAL.h</includes>
+    <includedby refid="_extension_port_spi_8c" local="yes">SDK/xdk110/Common/source/ExtensionPortSpi.c</includedby>
+    <includedby refid="_b_c_d_s___m_c_u___s_p_i___handle_8h" local="yes">SDK/xdk110/Platform/Essentials/include/mcu/efm32/BCDS_MCU_SPI_Handle.h</includedby>
+    <incdepgraph>
+      <node id="37311">
+        <label>stdbool.h</label>
+      </node>
+      <node id="37314">
+        <label>BCDS_HALConfig.h</label>
+        <link refid="_b_c_d_s___h_a_l_config_8h"/>
+      </node>
+      <node id="37306">
+        <label>SDK/xdk110/Platform/Essentials/include/mcu/BCDS_MCU_SPI.h</label>
+        <link refid="BCDS_MCU_SPI.h"/>
+        <childnode refid="37307" relation="include">
+        </childnode>
+      </node>
+      <node id="37310">
+        <label>stdint.h</label>
+      </node>
+      <node id="37308">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="37309" relation="include">
+        </childnode>
+      </node>
+      <node id="37313">
+        <label>stdlib.h</label>
+      </node>
+      <node id="37312">
+        <label>string.h</label>
+      </node>
+      <node id="37309">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="37310" relation="include">
+        </childnode>
+        <childnode refid="37311" relation="include">
+        </childnode>
+        <childnode refid="37312" relation="include">
+        </childnode>
+        <childnode refid="37313" relation="include">
+        </childnode>
+      </node>
+      <node id="37307">
+        <label>BCDS_HAL.h</label>
+        <link refid="_b_c_d_s___h_a_l_8h"/>
+        <childnode refid="37308" relation="include">
+        </childnode>
+        <childnode refid="37314" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="37316">
+        <label>SDK/xdk110/Common/source/ExtensionPortSpi.c</label>
+        <link refid="_extension_port_spi_8c"/>
+      </node>
+      <node id="37315">
+        <label>SDK/xdk110/Platform/Essentials/include/mcu/BCDS_MCU_SPI.h</label>
+        <link refid="BCDS_MCU_SPI.h"/>
+        <childnode refid="37316" relation="include">
+        </childnode>
+        <childnode refid="37317" relation="include">
+        </childnode>
+      </node>
+      <node id="37318">
+        <label>SDK/xdk110/Platform/BSP/source/BSP_Max31865.c</label>
+        <link refid="_b_s_p___max31865_8c"/>
+      </node>
+      <node id="37317">
+        <label>SDK/xdk110/Platform/Essentials/include/mcu/efm32/BCDS_MCU_SPI_Handle.h</label>
+        <link refid="_b_c_d_s___m_c_u___s_p_i___handle_8h"/>
+        <childnode refid="37318" relation="include">
+        </childnode>
+        <childnode refid="37319" relation="include">
+        </childnode>
+      </node>
+      <node id="37319">
+        <label>SDK/xdk110/Platform/BSP/source/BSP_WiFi_cc3100mod.c</label>
+        <link refid="_b_s_p___wi_fi__cc3100mod_8c"/>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor">#ifndef<sp/>BCDS_MCU_SPI_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BCDS_MCU_SPI_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___h_a_l_8h" kindref="compound">BCDS_HAL.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Code<sp/>is<sp/>only<sp/>effective<sp/>if<sp/>feature<sp/>is<sp/>enabled<sp/>in<sp/>configuration<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>BCDS_FEATURE_SPI<sp/>&amp;&amp;<sp/>BCDS_SPI_COUNT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___basics_8h" kindref="compound">BCDS_Basics.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group___b_c_d_s___h_a_l_1ga39fd157e78cb1535814fe63af2f3e1ee" kindref="member">HWHandle_T</ref><sp/>SPI_T;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="keyword">struct<sp/></highlight><highlight class="normal">MCU_SPI_DeviceAttr_S</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>(*MCU_SPI_SelectFuncPtr)(int32_t);<sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>(*MCU_SPI_DeselectFuncPtr)(int32_t);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="keyword">struct<sp/></highlight><highlight class="normal">MCU_SPI_Event_S</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>RxReady<sp/><sp/><sp/><sp/>:1;<sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>RxError<sp/><sp/><sp/><sp/>:1;<sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>RxComplete<sp/>:1;<sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>TxError<sp/><sp/><sp/><sp/>:1;<sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>TxComplete<sp/>:1;<sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>DataLoss<sp/><sp/><sp/>:1;<sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="116"><highlight class="keyword">union<sp/></highlight><highlight class="normal">MCU_SPI_Event_U</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">MCU_SPI_Event_S<sp/>bitfield;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>registerValue;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>RETCODE_HAL_SPI_E</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>RETCODE_HAL_SPI_DRIVER_RX_NOT_READY<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba6c81977454c58d70cd853a61001f4a47" kindref="member">RETCODE_FIRST_CUSTOM_CODE</ref>,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>RETCODE_HAL_SPI_DRIVER_TX_NOT_READY,</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>RETCODE_HAL_SPI_DRIVER_RX_NOT_RUN,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>RETCODE_HAL_SPI_DRIVER_RESSOURCE_NOT_AVAILABLE,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*MCU_SPI_Callback_T)(SPI_T<sp/>spi,<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">MCU_SPI_Event_S<sp/>event);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>MCU_SPI_Initialize(SPI_T<sp/>spi,<sp/>MCU_SPI_Callback_T<sp/>callback);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>MCU_SPI_Deinitialize(SPI_T<sp/>spi);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>MCU_SPI_Send(SPI_T<sp/>spi,<sp/>uint8_t<sp/>*<sp/>data,<sp/>uint32_t<sp/>len);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>MCU_SPI_Receive(SPI_T<sp/>spi,<sp/>uint8_t<sp/>*<sp/>buffer,<sp/>uint32_t<sp/>len);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>MCU_SPI_Transfer(SPI_T<sp/>spi,<sp/>uint8_t*<sp/>data_out,<sp/>uint8_t*<sp/>data_in,</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>numTransfer);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal">uint32_t<sp/>MCU_SPI_GetDataCount(SPI_T<sp/>spi);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>BCDS_FEATURE_SPI<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>BCDS_MCU_SPI_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/mcu/BCDS_MCU_SPI.h"/>
+  </compounddef>
+</doxygen>

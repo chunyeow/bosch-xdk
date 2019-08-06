@@ -1,0 +1,388 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t" kind="group">
+    <compoundname>LWM2M_EXAMPLE_CLIENT</compoundname>
+    <title>Lwm2mExampleClient</title>
+    <innerfile refid="_lwm2m_example_client_2source_2_app_controller_8c">AppController.c</innerfile>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga90ce7b07b4530c957f9f83201d8dc8bc" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga41a2f220f03970c1857bd96528307a81" kindref="member">CmdProcessor_T</ref> *</type>
+        <definition>CmdProcessor_T* AppCmdProcessor</definition>
+        <argsstring></argsstring>
+        <name>AppCmdProcessor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle to store the main Command processor handle to be reused by ServalPAL thread </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="99" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="99" bodyend="-1"/>
+        <referencedby refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="339" endline="372">AppControllerSetup</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga6fa700b048407619b5309da95dcce5dd" prot="public" static="yes" mutable="no">
+        <type><ref refid="_free_r_t_o_s_8h_1af7cd8f53b62f0c497b442b504c30f2ec" kindref="member">xTaskHandle</ref></type>
+        <definition>xTaskHandle AppControllerHandle</definition>
+        <argsstring></argsstring>
+        <name>AppControllerHandle</name>
+        <initializer>= <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>OS thread handle for Application controller to be used by run-time blocking threads </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="101" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="101" bodyend="-1"/>
+        <referencedby refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="286" endline="323">AppControllerEnable</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga8dd7d646ca7d1ad2fc229ce9a2f986d0" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___l_w_m2_m_1ga16484e7e661031ac083e827b121c49c0" kindref="member">LWM2M_Setup_T</ref></type>
+        <definition>LWM2M_Setup_T Lwm2mSetup</definition>
+        <argsstring></argsstring>
+        <name>Lwm2mSetup</name>
+        <initializer>=
+        {
+                .CmdProcessorHandle = <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,
+                .IsSecure = <ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1ae1405e5ca0194821db6eef41361302de" kindref="member">APP_LWM2M_SECURITY_ENABLE</ref>,
+                .SecurityMode = <ref refid="group___l_w_m2_m_1gga799b84e69ed8edba6241d395af36be40a8928ef4eaac3d38d78d10c811b096075" kindref="member">LWM2M_SECURITY_MODE_PRE_SHARED_KEY</ref>,
+                .SecurityPreSharedKey =
+                        {
+                                .Identity = <ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1afcab362465a4bed46de41c3066d6ad9a" kindref="member">APP_LWM2M_DTLS_PSK_IDENTITY</ref>,
+                                .Key = <ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1a432d649e6bb235c461a3e78496576ffa" kindref="member">APP_LWM2M_DTLS_PSK_KEY</ref>,
+                                .KeyLength = <ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1aff05f62c00feb1a4bdda4edeb440cf78" kindref="member">APP_LWM2M_DTLS_PSK_KEY_LENGTH</ref>,
+                        },
+                .EndPointName = <ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1a1a6395b6a67095806d7be39d6ebca1e3" kindref="member">APP_LWM2M_END_POINT_NAME</ref>,
+                .Binding = &quot;U&quot;,
+                .Lifetime = <ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1a987d5fddeaf58b6ea798cfed6670c150" kindref="member">APP_LWM2M_LIFETIME_IN_SECONDS</ref>,
+                .ConfirmableNotification = <ref refid="_serval___types_8h_1a65e9886d74aaee76545e83dd09011727" kindref="member">false</ref>,
+                .MACAddr = <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,
+                .TestMode = <ref refid="group___l_w_m2_m_1gga4eedbf331041e6f0e983739568a99397abe974359bd7777e3c284d359059d8be5" kindref="member">LWM2M_TEST_MODE_YES</ref>,
+                .ServerURL = <ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1a0db427c9bf1f7dfb73433c25a1c8b743" kindref="member">APP_LWM2M_SERVER_URL</ref>,
+                .ServerPort = <ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1ac0ae98b679714a1f6f3b494da5a50440" kindref="member">APP_LWM2M_SERVER_PORT</ref>,
+                .ClientPort = <ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1a5349ea16d94c498fc219d6fe46bd3616" kindref="member">APP_LWM2M_CLIENT_PORT</ref>,
+                .StatusNotificationCB = <ref refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga997745c6da28920bec4229c0b9b0be01" kindref="member">AppLWM2MStatusNotificationCB</ref>,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Lwm2m setup parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="125" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga62d7996cafb989f27d906c6ab4823e15" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___s_n_t_p_1gaa31240c500f1b41b43b0367c694c570a" kindref="member">SNTP_Setup_T</ref></type>
+        <definition>SNTP_Setup_T SNTPSetupInfo</definition>
+        <argsstring></argsstring>
+        <name>SNTPSetupInfo</name>
+        <initializer>=
+        {
+                .ServerUrl = <ref refid="_send_data_over_m_q_t_t_2source_2_app_controller_8h_1a27dec0587f6fe92077449a4b3324cd95" kindref="member">SNTP_SERVER_URL</ref>,
+                .ServerPort = <ref refid="_send_data_over_m_q_t_t_2source_2_app_controller_8h_1a0c65edee974d3e3bdb4e01a4d8b58764" kindref="member">SNTP_SERVER_PORT</ref>,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SNTP setup parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="117" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga0e412a42d216de0f4feb72dfc0dfa51d" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___w_l_a_n_1ga0e6768bd91dfe20a7c6e5c6ce49533af" kindref="member">WLAN_Setup_T</ref></type>
+        <definition>WLAN_Setup_T WLANSetupInfo</definition>
+        <argsstring></argsstring>
+        <name>WLANSetupInfo</name>
+        <initializer>=
+        {
+                .IsEnterprise = <ref refid="_serval___types_8h_1a65e9886d74aaee76545e83dd09011727" kindref="member">false</ref>,
+                .IsHostPgmEnabled = <ref refid="_serval___types_8h_1a65e9886d74aaee76545e83dd09011727" kindref="member">false</ref>,
+                .SSID = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1af8d23ae6c17168a7ce76f565959a7100" kindref="member">WLAN_SSID</ref>,
+                .Username = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a7595c51ecaebc052ebb16bfee33ef064" kindref="member">WLAN_PSK</ref>, 
+                .Password = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a7595c51ecaebc052ebb16bfee33ef064" kindref="member">WLAN_PSK</ref>,
+                .IsStatic = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a3b7cbbe0cc99913db8a349bf04cb7648" kindref="member">WLAN_STATIC_IP</ref>,
+                .IpAddr = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1af8b956915d3648203d2db609f103d400" kindref="member">WLAN_IP_ADDR</ref>,
+                .GwAddr = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1aabe89318c85014d96791cdb2cd9263a8" kindref="member">WLAN_GW_ADDR</ref>,
+                .DnsAddr = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a91bfddd64e54251da5ca4e7b2d4b5774" kindref="member">WLAN_DNS_ADDR</ref>,
+                .Mask = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a408301af8a45e844e60c3be81a51a5e7" kindref="member">WLAN_MASK</ref>,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>WLAN setup parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="103" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga22919ee3de6947c4b6616a9231e71f67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AppController_Init</definition>
+        <argsstring>(void *cmdProcessorHandle, uint32_t param2)</argsstring>
+        <name>AppController_Init</name>
+        <param>
+          <type>void *</type>
+          <declname>cmdProcessorHandle</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>Gives control to the Application controller. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a template function where the user can write his custom application.</para><para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="377" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="377" bodyend="399"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e">CmdProcessor_Enqueue</references>
+        <references refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="339" endline="372">AppControllerSetup</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+      </memberdef>
+      <memberdef kind="function" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ef9cc8f277726dc19c525c8049d388f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerEnable</definition>
+        <argsstring>(void *param1, uint32_t param2)</argsstring>
+        <name>AppControllerEnable</name>
+        <param>
+          <type>void *</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>To enable the necessary modules for the application. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>LED</para></listitem><listitem><para>WLAN</para></listitem><listitem><para>ServalPAL</para></listitem><listitem><para>SNTP</para></listitem><listitem><para>Lwm2m</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="286" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="286" bodyend="323"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___l_e_d_1gae3a60da7a90139abb54f4ddb36456756">LED_Enable</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___w_l_a_n_1gade1d0097361a009766b934f25111dd8b">WLAN_Enable</references>
+        <references refid="group___s_e_r_v_a_l_p_a_l_1ga5c486b056c82b352bd487143e7ca7633">ServalPAL_Enable</references>
+        <references refid="group___s_n_t_p_1gaec27b2582b486a4b87a4ab217abd1f15">SNTP_Enable</references>
+        <references refid="group___l_w_m2_m_1ga293d21237804efe67e6da3f9d6a6a7f0">LWM2M_Enable</references>
+        <references refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="249" endline="270">AppControllerFire</references>
+        <references refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1af793604cd2dbedfc6b69f10936fe7c41" compoundref="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h" startline="61">TASK_STACK_SIZE_APP_CONTROLLER</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1a4651501b886d4de331b9f06b37265177" compoundref="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h" startline="59">TASK_PRIO_APP_CONTROLLER</references>
+        <references refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga6fa700b048407619b5309da95dcce5dd" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="101">AppControllerHandle</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba497273b2285191edc1cda8648b67250a" compoundref="_b_c_d_s___retcode_8h" startline="107">RETCODE_OUT_OF_RESOURCES</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+        <references refid="group___x_d_k_u_t_i_l_s_1ga7ffe38d38314b5301a4ddd04f4fa7ca6" compoundref="_utils_8c" startline="277" endline="284">Utils_PrintResetCause</references>
+        <referencedby refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="339" endline="372">AppControllerSetup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerFire</definition>
+        <argsstring>(void *pvParameters)</argsstring>
+        <name>AppControllerFire</name>
+        <param>
+          <type>void *</type>
+          <declname>pvParameters</declname>
+        </param>
+        <briefdescription>
+<para>Responsible for controlling the LWM2M Example client control flow. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pvParameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FreeRTOS task handle. Could be used if more than one thread is using this function block. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="249" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="249" bodyend="270"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_o_s_c_h___x_d_k___c_l_o_u_d___c_o_n_n_e_c_t_i_v_i_t_y_1ga13cd7228522dd0317118b20aa81a1f0a" compoundref="_bosch_x_d_k_cloud_connectivity_2source_2_app_controller_8c" startline="523" endline="539">AppControllerSyncSNTP</references>
+        <references refid="group___l_w_m2_m_1ga1db9f69f0009e52e04f87744772bdf25">LWM2M_Register</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="task_8h_1aa154068cecd7f31446a7a84af44ab1a3">vTaskDelay</references>
+        <references refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga1aa49fa5385a3028b6cbe7556c695bb9" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="93">APP_SYNC_TIME_INTERVAL_MAX_MS</references>
+        <referencedby refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="286" endline="323">AppControllerEnable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ca12481e985f2cd2437fe712e08c9b7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerSetup</definition>
+        <argsstring>(void *param1, uint32_t param2)</argsstring>
+        <name>AppControllerSetup</name>
+        <param>
+          <type>void *</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>To setup the necessary modules for the application. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>LED</para></listitem><listitem><para>WLAN</para></listitem><listitem><para>ServalPAL</para></listitem><listitem><para>SNTP</para></listitem><listitem><para>Lwm2m</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="339" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="339" bodyend="372"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___l_e_d_1gaec11150ded6e8967d64145a758af0616">LED_Setup</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___w_l_a_n_1ga5e86721c894549287a387d49af37b1e3">WLAN_Setup</references>
+        <references refid="group___s_e_r_v_a_l_p_a_l_1gab722469d5c22a0211799fd3d5a5073bc">ServalPAL_Setup</references>
+        <references refid="group___s_n_t_p_1ga4aff8a89750e6d74f5b8053ebb66ca77">SNTP_Setup</references>
+        <references refid="struct_l_w_m2_m___setup___s_1a4b767178f176a51f1c1c6abc68069ece" compoundref="_x_d_k___l_w_m2_m_8h" startline="175">LWM2M_Setup_S::CmdProcessorHandle</references>
+        <references refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga90ce7b07b4530c957f9f83201d8dc8bc" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="99">AppCmdProcessor</references>
+        <references refid="group___l_w_m2_m_1ga10a55388243ab04a367ec4e68b6ef9d3">LWM2M_Setup</references>
+        <references refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e">CmdProcessor_Enqueue</references>
+        <references refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="286" endline="323">AppControllerEnable</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+        <referencedby refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga22919ee3de6947c4b6616a9231e71f67" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="377" endline="399">AppController_Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga13cd7228522dd0317118b20aa81a1f0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AppControllerSyncSNTP</definition>
+        <argsstring>(void)</argsstring>
+        <name>AppControllerSyncSNTP</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This will synchronizing the SNTP server time with the node. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="225" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="225" bodyend="241"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___s_n_t_p_1ga524d9a28f1943d999fe94951b268cc1f">SNTP_GetTimeFromServer</references>
+        <references refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga1cfc98de5e09b225abf287dd632ccf31" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="95">APP_RESPONSE_FROM_SNTP_SERVER_TIMEOUT</references>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+      </memberdef>
+      <memberdef kind="function" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga997745c6da28920bec4229c0b9b0be01" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppLWM2MStatusNotificationCB</definition>
+        <argsstring>(LWM2M_StatusNotification_T status)</argsstring>
+        <name>AppLWM2MStatusNotificationCB</name>
+        <param>
+          <type><ref refid="group___l_w_m2_m_1gab795bfb86b6a2ae1dffac0f6adb4f572" kindref="member">LWM2M_StatusNotification_T</ref></type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Refer function prototype for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="123" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="155" bodyend="220"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___l_w_m2_m_1gga1d6f3bae29cdee718e19bfb51c2613ada6660fb5b533fd084fa4cdc9ce2aa33f7" compoundref="_x_d_k___l_w_m2_m_8h" startline="110">LWM2M_REGISTRATION_SUCCESS</references>
+        <references refid="group___l_e_d_1ga017ce6b05845f8ea5f91e0103cf025a6">LED_Off</references>
+        <references refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a2b719feebe5e5a744315a07766e16af2" compoundref="_x_d_k___l_e_d_8h" startline="64">LED_INBUILT_RED</references>
+        <references refid="group___l_e_d_1gaa08f7e9c416b666b93efadee96284629">LED_On</references>
+        <references refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a9ef5f00f3a78db87b6b039fcc52f82bd" compoundref="_x_d_k___l_e_d_8h" startline="66">LED_INBUILT_ORANGE</references>
+        <references refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a9563b16cb4e0808638f4838b21350347" compoundref="_x_d_k___l_e_d_8h" startline="65">LED_INBUILT_YELLOW</references>
+        <references refid="group___l_w_m2_m_1gga1d6f3bae29cdee718e19bfb51c2613adafca7ab0245c00ba468bb7f4af30d00f7" compoundref="_x_d_k___l_w_m2_m_8h" startline="111">LWM2M_REGISTRATION_FAILURE</references>
+        <references refid="group___l_w_m2_m_1gga1d6f3bae29cdee718e19bfb51c2613ada5541f4af4b7d3cc93df323035f7b8daa" compoundref="_x_d_k___l_w_m2_m_8h" startline="112">LWM2M_REGISTRATION_UPDATE_SUCCESS</references>
+        <references refid="group___l_w_m2_m_1gga1d6f3bae29cdee718e19bfb51c2613adac25aa49a0e74e7aaf1a526822c8c1329" compoundref="_x_d_k___l_w_m2_m_8h" startline="113">LWM2M_REGISTRATION_UPDATE_FAILURE</references>
+        <references refid="group___l_w_m2_m_1gga1d6f3bae29cdee718e19bfb51c2613ada07ec51d895bc4a64db8f28e30192738f" compoundref="_x_d_k___l_w_m2_m_8h" startline="114">LWM2M_DEREGISTRATION_SUCCESS</references>
+        <references refid="group___l_w_m2_m_1gga1d6f3bae29cdee718e19bfb51c2613ada3cc64031884401a8bf9bc37ad061465c" compoundref="_x_d_k___l_w_m2_m_8h" startline="115">LWM2M_DEREGISTRATION_FAILURE</references>
+        <references refid="group___l_w_m2_m_1gga1d6f3bae29cdee718e19bfb51c2613ada488d122dc321480d8ea5f781606af616" compoundref="_x_d_k___l_w_m2_m_8h" startline="116">LWM2M_NOTIFICATION_SUCCESS</references>
+        <references refid="group___l_w_m2_m_1gga1d6f3bae29cdee718e19bfb51c2613ada99728396ab4879c5b9e422488e297b2f" compoundref="_x_d_k___l_w_m2_m_8h" startline="117">LWM2M_NOTIFICATION_FAILURE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga1cfc98de5e09b225abf287dd632ccf31" prot="public" static="no">
+        <name>APP_RESPONSE_FROM_SNTP_SERVER_TIMEOUT</name>
+        <initializer>UINT32_C(10000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Timeout for SNTP server time sync </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="95" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="95" bodyend="-1"/>
+        <referencedby refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga13cd7228522dd0317118b20aa81a1f0a" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="225" endline="241">AppControllerSyncSNTP</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga1aa49fa5385a3028b6cbe7556c695bb9" prot="public" static="no">
+        <name>APP_SYNC_TIME_INTERVAL_MAX_MS</name>
+        <initializer>UINT32_C(1800000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>APP_SYNC_TIME_INTERVAL_MAX_MS is the synchronization time with SNTP server. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="93" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="93" bodyend="-1"/>
+        <referencedby refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="249" endline="270">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1gabff8f3a204e79671b98fabaa652198c3" prot="public" static="no">
+        <name>BCDS_MODULE_ID</name>
+        <initializer><ref refid="_xdk_extension_port_2source_2_xdk_app_info_8h_1a58c5197225b08cbce9809ee5d9b3ae74ac664b9d7c9367aef22abcb23812b6f33" kindref="member">XDK_APP_MODULE_ID_APP_CONTROLLER</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="66" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>LWM2M Client for connecting to a LWM2M server. </para>    </briefdescription>
+    <detaileddescription>
+<para>This module will act as the client of the LWM2M protocol.</para><para>This example demonstrates how to register with a LWM2M Server including the standard LWM2M Objects. Insecure and encrypted communication are supported. The example will connect to the <ulink url="http://leshan.eclipse.org">leshan.eclipse.org</ulink> LWM2M Server.</para><para>You need to enter your WLAN-Credentials in <ref refid="_xdk_extension_port_2source_2_app_controller_8h" kindref="compound">AppController.h</ref>. Once the XDK is connected to the network and to the Leshan Server the orange LED will turn on. From the website you can now click on the desired client and read the objects.</para><para><image type="html" name="LeshanClient.png" width="\textwidth">Leshan Client – User Interface to the Leshan Server; Object Read</image>
+ </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

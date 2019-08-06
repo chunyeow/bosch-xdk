@@ -1,0 +1,64 @@
+/** 
+@page XDK_COMMON_USER_GUIDE XDK Common User Guide
+@brief Explains XDK common user guide and how the modules can be used for an application
+<hr>
+
+This simple guide is intended, for the developers who intend to develop a application using the XDK Common module or for developers who intend to use/improve existing sample application.
+
+XDK application uses Common modules for System startup and feature interfaces(like BLE, Wlan). By default all the feature macros are enabled in common_feature.mk. <b>XDK_FEATURE_SET</b> macro is used to select the features needed by application.
+\code
+XDK_FEATURE_SET ?='ALL'
+- ALL    ----> All the features will be enabled
+- NONE   ----> All the features will be disabled
+- SELECT ----> Application has to select the required features
+\endcode
+
+XDK Common module implements the following components,
+
+\section XDK_COMMON_USER_GUIDE_STARTUP Startup:
+
+This module contains "Main" routine  and the APIs , in which user can easily integrate application specific routines
+
+\section XDK_COMMON_USER_GUIDE_CONNECTIVITY Connectivity:
+
+This module contains the following network interfaces,
+1.	<b>BLE</b> : This interface is enabled with XDK_CONNECTIVITY_BLE feature macro. This module handles the BLE peripheral feature which has implementation support for Sensor service, BCDS bidirectional service and Custom service.
+2.	<b>HTTPRestClient</b> : This interface is enabled with XDK_CONNECTIVITY_HTTPRESTCLIENT feature macro. This module handles the HTTP rest client services (POST and GET) with and without security support.
+3.	<b>LED</b> : This interface is enabled with XDK_CONNECTIVITY_LED feature macro. This module handles the LED features.
+4.	<b>LoRa</b> : This interface is enabled with XDK_CONNECTIVITY_LORA feature macro. This module handles the LORA peripheral feature.
+5.	<b>LWM2M</b> : This interface is enabled with XDK_CONNECTIVITY_LORA feature macro. This module supports  few standard OMA objects. It also supports the following standard IPSO (OMA standardized) objects and XDK (BCDS vendor specific) objects like Sensor device, Alert notification.
+6.	<b>MQTT</b> : This interface is enabled with XDK_CONNECTIVITY_MQTT feature macro. This module handles the MQTT communication support from AWS and ServalStack. 
+7.	<b>UDP</b> :  This interface is enabled with XDK_CONNECTIVITY_UDP feature macro. This module handles UDP service from ServalStack.
+8.	<b>WLAN</b> :  This interface is enabled with XDK_CONNECTIVITY_WLAN feature macro. This module handles the WLAN services (Personal WPA2 and Enterprise WPA2 connection). 
+
+\section XDK_COMMON_USER_GUIDE_SENSOR Sensor:
+
+This module contains the following sensor interfaces,
+1.	<b>BUTTON</b> : This interface is enabled with XDK_SENSOR_BUTTON feature macro. This module handles the Button features.
+2.	<b>EXTERNAL</b> : This interface is enabled with XDK_SENSOR_EXTERNALSENSOR feature macro. This module interfaces External Sensor features for MAX31865 and LEM.
+3.	<b>LEM</b> : This interface is enabled by default for internal Lem Sensor.
+4.	<b>SENSOR</b> : This interface is enabled with XDK_SENSOR_SENSOR feature macro. Interface file for the In-built Sensor BMI160, BMA280, BMG160, MAX44009, BMM150, BME280.
+5.	<b>VIRTUAL</b> : This interface is enabled with XDK_SENSOR_VIRTUALSENSOR feature macro. This module handles the generic Sensor data sampling and reporting.
+6.	<b>NOISE</b> : This interface is enabled by default. This module interfaces the internal Noise sensor.
+
+\section XDK_COMMON_USER_GUIDE_UTILITY Utility:
+
+This module contains the following utility interfaces,
+1.	<b>CAYENNELPPSERIALIZER</b> : This interface is enabled by default. The Cayenne Low Power Payload (LPP) provides a convenient and easy way to send data over LPWAN networks such as LoRaWAN.
+2.	<b>PPMPSERIALIZER</b> : This interface is enabled by default for serializing PPMP payload.
+3.	<b>FOTA</b> : This interface is enabled by default for handling FOTA related activities like Firmware validation and Firmware update from the SD Card.
+4.	<b>SERVALPAL</b> : This interface is enabled with XDK_UTILITY_SERVALPAL feature macro. This module handles the Serval stack Platform Adaptation Layer setup.
+5.	<b>SNTP</b> : This interface is enabled with XDK_UTILITY_SNTP feature macro. This module handles the SNTP timestamp (from server and system).
+6.	<b>STORAGE</b> : This interface is enabled with XDK_UTILITY_STORAGE feature macro. This module handles storage in SD card and WiFi file system.
+7.	<b>TIMESTAMP</b> : This interface is enabled by default. This module is responsible for time stamp conversions to ISO 8601 format.
+8.	<b>UTILS</b> : This interface is enabled by default for XDK utility.
+
+\section XDK_COMMON_USER_GUIDE_OTHER Other_Components:
+
+This module contains other components like,
+1.	<b>MCU_ADC</b> : This interface is enabled by default and handles the ADC Channel configurations, manages the data.
+2.	<b>BATTERYMONITOR</b> : This interface is enabled by default and is used to measure the battery voltage.
+3.	<b>cJSON</b> : This interface is enabled by default and used to parse json payload.
+4.	<b>EXTENSIONPORTSPI</b> : This interface is enabled by default and used for SPI communication interface.
+
+*/

@@ -1,0 +1,602 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___b_a_s_i_c_s" kind="group">
+    <compoundname>BASICS</compoundname>
+    <title>Basics</title>
+    <innerfile refid="_b_c_d_s___basics_8h">BCDS_Basics.h</innerfile>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___b_a_s_i_c_s_1gacc94a18519f2c51df3d650b582555d1b" prot="public" static="no">
+        <name>BCDS_ALWAYS_INLINE</name>
+        <briefdescription>
+<para>Macro to force the compiler to always inline an inline function. </para>        </briefdescription>
+        <detaileddescription>
+<para>GCC: in GCC, the inline keyword is not always regarded by the compiler. Based on the situation the compiler can decide to emit a real function instead of the function body only. Defining a function as always_inline makes it madatory for the compiler to inline it always.</para><para><programlisting><codeline><highlight class="normal">BCDS_ALWAYS_INLINE<sp/>void<sp/>FOO_foo(void){<sp/>;<sp/>}</highlight></codeline>
+</programlisting></para><para><simplesect kind="note"><para>Inlining makes C level debugging hard as the inlined code is not aligned with the source file. To eliminate this issue, in debug builds the macro is disabled. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Basics.h" line="159" column="12" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Basics.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___b_a_s_i_c_s_1gadbf9dd427159a39ba4a41212ecddd3a2" prot="public" static="no">
+        <name>BCDS_DEPRECATED</name>
+        <param><defname>param                                                                                                    </defname></param>
+        <initializer>param <ref refid="struct____attribute____" kindref="compound">__attribute__</ref> ((deprecated))</initializer>
+        <briefdescription>
+<para>Macro to inform the compiler that a function or type is deprecated. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: function or type to deprecate. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Basics.h" line="100" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Basics.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___b_a_s_i_c_s_1gaa96705d9a49e1415975ed6e737d9060b" prot="public" static="no">
+        <name>BCDS_INLINE</name>
+        <initializer><ref refid="struct____attribute____" kindref="compound">__attribute__</ref>((__unused__))</initializer>
+        <briefdescription>
+<para>Macro to inline a function. </para>        </briefdescription>
+        <detaileddescription>
+<para>GCC: in GCC, the inline keyword is not always regarded by the compiler. Based on the situation the compiler can decide to emit a real function instead of the function body only. Inline is not supported by C89 or before C standards. <programlisting><codeline><highlight class="normal">BCDS_INLINE<sp/>void<sp/>FOO_foo(void){<sp/>;<sp/>}</highlight></codeline>
+</programlisting> <simplesect kind="note"><para>Inlining makes C level debugging hard as the inlined code is not aligned with the source file. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Basics.h" line="178" column="12" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Basics.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___b_a_s_i_c_s_1ga289d75bd5e42fc75a86c3b02d443bc5c" prot="public" static="no">
+        <name>BCDS_SECTION</name>
+        <param><defname>sectionName</defname></param>
+        <briefdescription>
+<para>Macro to inform the compiler that this section is a part of the provided linker section. </para>        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">void<sp/>BCDS_SECTION(section_name)</highlight></codeline>
+</programlisting></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sectionName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: The section name that has been provided in the Linker file. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Basics.h" line="137" column="12" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Basics.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" prot="public" static="no">
+        <name>BCDS_UNUSED</name>
+        <param><defname>variableName</defname></param>
+        <initializer>((void) variableName)</initializer>
+        <briefdescription>
+<para>Macro to inform the compiler that a variable is intentionally not in use. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">variableName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: The unused variable. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Basics.h" line="93" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Basics.h" bodystart="93" bodyend="-1"/>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gab33d1827931e656830843d7274f89055" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="421" endline="527">AppControllerFireTask</referencedby>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gab69e900037ff919feff8de34718fd2f5" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="552" endline="721">AppControllerFire</referencedby>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="742" endline="796">AppControllerEnable</referencedby>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="817" endline="870">AppControllerSetup</referencedby>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga22919ee3de6947c4b6616a9231e71f67" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="875" endline="897">AppController_Init</referencedby>
+        <referencedby refid="group___b_o_s_c_h___x_d_k___c_l_o_u_d___c_o_n_n_e_c_t_i_v_i_t_y_1ga13cd7228522dd0317118b20aa81a1f0a" compoundref="_bosch_x_d_k_cloud_connectivity_2source_2_app_controller_8c" startline="523" endline="539">AppControllerSyncSNTP</referencedby>
+        <referencedby refid="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga02bea3f77597146a6e8125019961d851" compoundref="_http_example_client_2source_2_app_controller_8c" startline="186" endline="194">HTTPRestClientGetCB</referencedby>
+        <referencedby refid="group___s_e_n_d___a_c_c_e_l_e_r_o_m_e_t_e_r___d_a_t_a___o_v_e_r___u_d_p___a_n_d___b_l_e_1gac7cc79e209c1ff3a24fce2a8c67f09b3" compoundref="_send_accel_data_over_udp_and_ble_2source_2_app_controller_8c" startline="262" endline="284">AppControllerBleStartOrEndMsgSend</referencedby>
+        <referencedby refid="group___s_e_n_d___a_c_c_e_l_e_r_o_m_e_t_e_r___d_a_t_a___o_v_e_r___u_d_p___a_n_d___b_l_e_1ga4035bea80e1ce048a57881a3014ddfaf" compoundref="_send_accel_data_over_udp_and_ble_2source_2_app_controller_8c" startline="295" endline="326">AppControllerBleDataRxCB</referencedby>
+        <referencedby refid="group___s_t_r_e_a_m___s_e_n_s_o_r___d_a_t_a___o_v_e_r___u_s_b_1ga2500a4390e9daf991c38583addbe297b" compoundref="_stream_sensor_data_over_usb_2source_2_app_controller_8c" startline="154" endline="160">AccelAppCallback</referencedby>
+        <referencedby refid="group___s_t_r_e_a_m___s_e_n_s_o_r___d_a_t_a___o_v_e_r___u_s_b_1ga328a43d8f2b908f4596d25c9ebb2806d" compoundref="_stream_sensor_data_over_usb_2source_2_app_controller_8c" startline="162" endline="168">LightAppCallback</referencedby>
+        <referencedby refid="group___v_i_r_t_u_a_l___x_d_k___d_e_m_o_1gaab68311898e45f13c98dc0a156f27394" compoundref="_virtual_xdk_demo_2source_2_app_controller_8c" startline="979" endline="1039">NoiseSensorTask</referencedby>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga6565144400437782a01decf74189abd6" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="137" endline="144">WlanConnectStatusCallback</referencedby>
+        <referencedby refid="group___x_d_k___extension___port___gpio_1gaa7b9b95f5bfe9dc4ab1c21dae9ab508c" compoundref="_extension_gpio_example_8c" startline="86" endline="91">GpioInterruptConsumer</referencedby>
+        <referencedby refid="group___x_d_k___extension___port___i2c_1ga37e6acdd295cfd357fe7455f0c0c5dbb" compoundref="_extension_i2c_example_8c" startline="92" endline="125">ExtensionI2cExample_Initialize</referencedby>
+        <referencedby refid="group___x_d_k___extension___port___spi_1ga970c2061323a4966fdbfed2f25e3bd15" compoundref="_extension_spi_example_8c" startline="132" endline="151">ExtensionSpiExample_Initialize</referencedby>
+        <referencedby refid="group___x_d_k___extension___port___uart_1ga891f2db2ef992db19d6ada0e2988252e" compoundref="_extension_uart_example_8c" startline="113" endline="134">ProcessUartRxData</referencedby>
+        <referencedby refid="group___x_d_k___extension___port___uart_1ga8ef2820a885c9b674a408ff566f232ea" compoundref="_extension_uart_example_8c" startline="179" endline="183">FrameEndCheckFunc</referencedby>
+        <referencedby refid="_wlan_connect_8c_1a67d29d7f78a8d3d4cd224eae69fe3e3a" compoundref="_wlan_connect_8c" startline="99" endline="130">disConnectNonBlockingCall</referencedby>
+        <referencedby refid="_wlan_connect_8c_1a7fdbea454e658c78d943e6613e7d2fec" compoundref="_wlan_connect_8c" startline="132" endline="176">connectNonBlockingCall</referencedby>
+        <referencedby refid="_battery_monitor_8c_1a3a535a147586f68296d407bfab52cd7f" compoundref="_battery_monitor_8c" startline="62" endline="76">AdcSampleIRQCallback</referencedby>
+        <referencedby refid="_ble_device_info_service_8c_1a45339333c594630967c0acc64e0b0c88" compoundref="_ble_device_info_service_8c" startline="135" endline="138">DeviceInformationServiceCallback</referencedby>
+        <referencedby refid="_l_w_m2_m_object_device_8c_1a594e2caa2cae43d431d28d075ff5b02d" compoundref="_l_w_m2_m_object_device_8c" startline="366" endline="373">factoryResetFunc</referencedby>
+        <referencedby refid="_l_w_m2_m_object_sensor_device_8c_1a151a15f45e12b28318fbd9deb13733f1" compoundref="_l_w_m2_m_object_sensor_device_8c" startline="123" endline="200">SensorTimerHandler</referencedby>
+        <referencedby refid="_l_w_m2_m_object_sensor_device_8c_1adcc1d02520631306ee8d45480fc6767b" compoundref="_l_w_m2_m_object_sensor_device_8c" startline="202" endline="206">SensorTimer</referencedby>
+        <referencedby refid="_lem_8c_1a11c1fe48a737ee12f073a9b6cf948e3c" compoundref="_lem_8c" startline="94" endline="119">CalculateRunningRMS</referencedby>
+        <referencedby refid="_noise_sensor_8c_1a340f6c2fa8e708a8a9c4617fd7ef88b3" compoundref="_noise_sensor_8c" startline="68" endline="94">ProcessCH4Data</referencedby>
+        <referencedby refid="group___b_c_d_s___h_a_l___b_s_p___board_1ga12d8c4efe0afa9269e816c50f51bdd1e" compoundref="_b_s_p___board_8c" startline="243" endline="351">BSP_Board_Initialize</referencedby>
+        <referencedby refid="group___b_c_d_s___h_a_l___b_s_p___board_1ga73f95c72d1961a3caccb6b5fd4da3468" compoundref="_b_s_p___board_8c" startline="356" endline="360">BSP_Board_SwitchPowerMode</referencedby>
+        <referencedby refid="_b_s_p___charger___b_q2405_x_8c_1aa6f648b833dd1843d26e82d7d7d49c4e" compoundref="_b_s_p___charger___b_q2405_x_8c" startline="78" endline="84">BSP_Charger_BQ2405X_Enable</referencedby>
+        <referencedby refid="_b_s_p___charger___b_q2405_x_8c_1aae5e4e8a577e3d0bee2a3b25d9ea4b50" compoundref="_b_s_p___charger___b_q2405_x_8c" startline="184" endline="215">BSP_Charger_BQ2405X_MeasureSignal</referencedby>
+        <referencedby refid="_gyroscope_8c_1a4773423d3d442ff0ad488cc992508d2a" compoundref="_gyroscope_8c" startline="172" endline="177">bmgIsrCallback</referencedby>
+        <referencedby refid="_magnetometer_8c_1a94adf4571abb577f84589dc251415ac3" compoundref="_magnetometer_8c" startline="111" endline="116">bmmIsrCallback</referencedby>
+        <referencedby refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gaea1554403ec5ae6ad5a634c231dd5954" compoundref="_bma280_utils_8c" startline="272" endline="311">Bma280Utils_configInterrupt</referencedby>
+        <referencedby refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ga4daa634b2002897a2d80476d3a96e73b" compoundref="_bma280_utils_8c" startline="314" endline="347">Bma280Utils_disableInterrupt</referencedby>
+        <referencedby refid="_sensor_node_mapping_8c_1ae1d233c975956d208802d62db87572b5" compoundref="_sensor_node_mapping_8c" startline="55" endline="59">I2cInterruptCallback</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___b_a_s_i_c_s_1gaf83c8e25f9774a09bc8f9173bae34f3b" prot="public" static="no">
+        <name>BCDS_UNUSED_FUNC</name>
+        <param><defname>function</defname></param>
+        <initializer>function</initializer>
+        <briefdescription>
+<para>Macro to inform the compiler that a function is intentionally not in use. </para>        </briefdescription>
+        <detaileddescription>
+<para>GCC: in GCC the compiler option -Wunused (-Wall) generates warnings if a function is not in use. Using the <ref refid="group___b_a_s_i_c_s_1gaf83c8e25f9774a09bc8f9173bae34f3b" kindref="member">BCDS_UNUSED_FUNC()</ref> macro results in the following changes in compiler behavior:<itemizedlist>
+<listitem><para>attached to a function, the macro means that the function is meant to be possibly unused. GCC will not produce a warning for this function.</para></listitem></itemizedlist>
+</para><para><programlisting><codeline><highlight class="normal">void<sp/>BCDS_UNUSED_FUNC(FOO_foo(uint8_t<sp/>param1,<sp/>uint8_t<sp/>param2)){<sp/>;<sp/>}</highlight></codeline>
+</programlisting></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: The unused function with its arguments list. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Basics.h" line="121" column="12" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Basics.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___b_a_s_i_c_s_1ga65e9886d74aaee76545e83dd09011727" prot="public" static="no">
+        <name>false</name>
+        <initializer>((bool) 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Basics.h" line="66" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Basics.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___b_a_s_i_c_s_1gaa93f0eb578d23995850d61f7d61c55c1" prot="public" static="no">
+        <name>FALSE</name>
+        <initializer>((bool) 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Basics.h" line="76" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Basics.h" bodystart="76" bodyend="-1"/>
+        <referencedby refid="syscall_8c_1a2593b7acfe680686184f9ecb1be50323" compoundref="syscall_8c" startline="19" endline="40">ff_cre_syncobj</referencedby>
+        <referencedby refid="_serval___string_descr_8h_1a3c40bb13d0f8453cd0b89f5d53e44370" compoundref="_serval___string_descr_8h" startline="431" endline="445">StringDescr_compareFrom</referencedby>
+        <referencedby refid="_serval___string_descr_8h_1ab6a4d5521d110050509901412566c13e" compoundref="_serval___string_descr_8h" startline="514" endline="529">StringDescr_compareFromNoCase</referencedby>
+        <referencedby refid="driver_8c_1a3d66c1531b132da08639f90bc7138c2f" compoundref="driver_8c" startline="867" endline="936">_SlDrvMsgWrite</referencedby>
+        <referencedby refid="driver_8c_1a938358cbc0da41c53ec56a5ef7c1bff6" compoundref="driver_8c" startline="1231" endline="1289">_SlAsyncEventGenericHandler</referencedby>
+        <referencedby refid="driver_8c_1ad80816b51658603daa919f9f1f9b20a0" compoundref="driver_8c" startline="1295" endline="1391">_SlDrvMsgReadCmdCtx</referencedby>
+        <referencedby refid="driver_8h_1a5e081105b679db5f8284ca868d3181fa" compoundref="driver_8c" startline="1396" endline="1481">_SlDrvMsgReadSpawnCtx</referencedby>
+        <referencedby refid="driver_8c_1a7798a0d938832d028cc7c3b3d91e9b48" compoundref="driver_8c" startline="1588" endline="1714">_SlDrvRxHdrRead</referencedby>
+        <referencedby refid="driver_8h_1a3b3ae3e887a962fdbbe01867389557fa" compoundref="driver_8c" startline="1749" endline="1781">_SlDrvCmdSend</referencedby>
+        <referencedby refid="nonos_8h_1a954d558f1d447286f292f24017f2779b" compoundref="nonos_8c" startline="61" endline="134">_SlNonOsSemGet</referencedby>
+        <referencedby refid="nonos_8h_1a82603f206edc009b152527b72a0d6d65" compoundref="nonos_8c" startline="137" endline="162">_SlNonOsSpawn</referencedby>
+        <referencedby refid="nonos_8h_1ac9697cfc827b271c5570f88a832d1f9c" compoundref="nonos_8c" startline="165" endline="194">_SlNonOsMainLoopTask</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" prot="public" static="no">
+        <name>NULL</name>
+        <initializer>((void *) 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Basics.h" line="80" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Basics.h" bodystart="80" bodyend="-1"/>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gad59dfe5e013298fd5be3440516ba26ea" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="325" endline="407">AppParseConfigFile</referencedby>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gab33d1827931e656830843d7274f89055" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="421" endline="527">AppControllerFireTask</referencedby>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gab69e900037ff919feff8de34718fd2f5" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="552" endline="721">AppControllerFire</referencedby>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="742" endline="796">AppControllerEnable</referencedby>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="817" endline="870">AppControllerSetup</referencedby>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga22919ee3de6947c4b6616a9231e71f67" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="875" endline="897">AppController_Init</referencedby>
+        <referencedby refid="group___b_o_s_c_h___x_d_k___c_l_o_u_d___c_o_n_n_e_c_t_i_v_i_t_y_1gae2ffb62acf8dc2b313a7062011665d12" compoundref="_bosch_x_d_k_cloud_connectivity_2source_2_app_controller_8c" startline="433" endline="457">AppControllerGetWlanConnectDescription</referencedby>
+        <referencedby refid="group___b_o_s_c_h___x_d_k___c_l_o_u_d___c_o_n_n_e_c_t_i_v_i_t_y_1gaee13b98bef01547033a861f8d1f4e1ef" compoundref="_bosch_x_d_k_cloud_connectivity_2source_2_app_controller_8c" startline="462" endline="518">AppControllerWLANMonitor</referencedby>
+        <referencedby refid="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga02bea3f77597146a6e8125019961d851" compoundref="_http_example_client_2source_2_app_controller_8c" startline="186" endline="194">HTTPRestClientGetCB</referencedby>
+        <referencedby refid="group___s_e_n_d___a_c_c_e_l_e_r_o_m_e_t_e_r___d_a_t_a___o_v_e_r___u_d_p___a_n_d___b_l_e_1gac7cc79e209c1ff3a24fce2a8c67f09b3" compoundref="_send_accel_data_over_udp_and_ble_2source_2_app_controller_8c" startline="262" endline="284">AppControllerBleStartOrEndMsgSend</referencedby>
+        <referencedby refid="group___s_e_n_d___a_c_c_e_l_e_r_o_m_e_t_e_r___d_a_t_a___o_v_e_r___u_d_p___a_n_d___b_l_e_1ga4035bea80e1ce048a57881a3014ddfaf" compoundref="_send_accel_data_over_udp_and_ble_2source_2_app_controller_8c" startline="295" endline="326">AppControllerBleDataRxCB</referencedby>
+        <referencedby refid="group___v_i_r_t_u_a_l___x_d_k___d_e_m_o_1ga8475dfd77af8aacb25ac628a1c18fc7b" compoundref="_virtual_xdk_demo_2source_2_app_controller_8c" startline="446" endline="471">CurrentExternalHWConnected</referencedby>
+        <referencedby refid="group___v_i_r_t_u_a_l___x_d_k___d_e_m_o_1ga0682bfb91b632041c05a68890e0c7beb" compoundref="_virtual_xdk_demo_2source_2_app_controller_8c" startline="473" endline="562">HandleExternalHwHotPlug</referencedby>
+        <referencedby refid="group___v_i_r_t_u_a_l___x_d_k___d_e_m_o_1ga4a64e44fdbcc6eb50297baa60e0e046c" compoundref="_virtual_xdk_demo_2source_2_app_controller_8c" startline="566" endline="756">SampleAndNotifyHighPriorityData</referencedby>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga6565144400437782a01decf74189abd6" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="137" endline="144">WlanConnectStatusCallback</referencedby>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga45a7411bed72ce367a7e7b6f053d6545" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="171" endline="187">myDhcpIpCallbackFunc</referencedby>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga6b08614c341359b0edd92c1feaf47fc6" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="203" endline="527">SetAndGetIp</referencedby>
+        <referencedby refid="_app_txt_parser_8c_1ae92f4676033ec2f8a423624d646bed51" compoundref="_app_txt_parser_8c" startline="265" endline="370">ATPGetToken</referencedby>
+        <referencedby refid="_app_txt_parser_8c_1a092d4344ba0035a921c3fe813adaa9a3" compoundref="_app_txt_parser_8c" startline="413" endline="425">AppTxtParserReset</referencedby>
+        <referencedby refid="_app_txt_parser_8c_1a18e460e6891af2d129ce192263d60c89" compoundref="_app_txt_parser_8c" startline="436" endline="618">AppTxtParserInitialize</referencedby>
+        <referencedby refid="_app_txt_parser_8c_1ae4112ad4907f2e586427ef379f249c2b" compoundref="_app_txt_parser_8c" startline="689" endline="706">digitHexToBin</referencedby>
+        <referencedby refid="_app_txt_parser_8c_1ac0f94583aa2b3765d2589b7e8c28b02d" compoundref="_app_txt_parser_8c" startline="753" endline="812">ATPExpandToken</referencedby>
+        <referencedby refid="_app_txt_parser_8c_1ad67a9f172cb4dbe9b312d44cc13ef3b2" compoundref="_app_txt_parser_8c" startline="814" endline="817">ATPEmptyCfg</referencedby>
+        <referencedby refid="_extension_port_spi_ctrl_8h_1ae2d748b29c4347fe06fdd74c7e93d488" compoundref="_extension_port_spi_ctrl_8c" startline="58" endline="88">ExtensionPortSpiCtrl_Initialize</referencedby>
+        <referencedby refid="_sigfox_8h_1a5675010bb267dc9eaa10bb70e63cef5b" compoundref="_sigfox_8c" startline="313" endline="371">Sigfox_SendPayload</referencedby>
+        <referencedby refid="_sigfox_8h_1a95182aab1b4de005d2816c85c86ed6f2" compoundref="_sigfox_8c" startline="626" endline="667">Sigfox_SetFCCMacroChannel</referencedby>
+        <referencedby refid="group___x_d_k___extension___port___gpio_1ga0d2eec702f3954283fae072c87abaf27" compoundref="_extension_gpio_example_8c" startline="100" endline="116">GpioInterruptCallback</referencedby>
+        <referencedby refid="group___x_d_k___extension___port___gpio_1ga43878ea6891d400977c664a051563761" compoundref="_extension_gpio_example_8c" startline="119" endline="131">ExtensionGpioExample_Initialize</referencedby>
+        <referencedby refid="group___x_d_k___extension___port___gpio_1ga90baef8256d1b2cd0765ec00ff0b3d92" compoundref="_extension_gpio_example_8c" startline="134" endline="157">ExtensionGpioExample_InitGpioIntBothEdge</referencedby>
+        <referencedby refid="group___x_d_k___extension___port___gpio_1gac80620d8d76b8d91c391adfe18d01fb0" compoundref="_extension_gpio_example_8c" startline="160" endline="177">ExtensionGpioExample_InitGpioOutputMode</referencedby>
+        <referencedby refid="group___x_d_k___extension___port___i2c_1ga37e6acdd295cfd357fe7455f0c0c5dbb" compoundref="_extension_i2c_example_8c" startline="92" endline="125">ExtensionI2cExample_Initialize</referencedby>
+        <referencedby refid="group___x_d_k___extension___port___i2c_1gadf329416e1a57f4a93e674a849d0b5c7" compoundref="_extension_i2c_example_8c" startline="174" endline="201">ExtensionI2cExample_DeInitialize</referencedby>
+        <referencedby refid="group___x_d_k___extension___port___spi_1ga33bdece599dd3ae82c48bd271b813e75" compoundref="_extension_spi_example_8c" startline="101" endline="114">SpiCSPinInit</referencedby>
+        <referencedby refid="group___x_d_k___extension___port___uart_1ga785a2158f05b7b5f73d90c39096bac6c" compoundref="_extension_uart_example_8c" startline="138" endline="153">UartAppCallback</referencedby>
+        <referencedby refid="group___x_d_k___extension___port___uart_1ga24130a88a54fc2a1767f7887c77318d9" compoundref="_extension_uart_example_8c" startline="202" endline="266">ExtensionUartExample_Initialize</referencedby>
+        <referencedby refid="group___x_d_k___extension___port___uart_1gacebe9c79d5732d5660670a060d0848d0" compoundref="_extension_uart_example_8c" startline="269" endline="281">ExtensionUartExample_Read</referencedby>
+        <referencedby refid="group___x_d_k___extension___port___uart_1ga48477b2d61dfc16266b9ad8f8c576739" compoundref="_extension_uart_example_8c" startline="284" endline="296">ExtensionUartExample_Write</referencedby>
+        <referencedby refid="group___x_d_k___extension___port___uart_1ga146b61102a358113bfcdcecc6d2a85f6" compoundref="_extension_uart_example_8c" startline="299" endline="325">ExtensionUartExample_DeInitialize</referencedby>
+        <referencedby refid="group___p_a_l__socket_monitor_1ga18d76d1ac74abd06b43cacc97ed51a92" compoundref="_serval_p_a_l___wi_fi_8c" startline="116" endline="128">PAL_socketMonitorInit</referencedby>
+        <referencedby refid="_wlan_connect_8c_1ac65f1c9d233f2b8f17ff34b55020e003" compoundref="_wlan_connect_8c" startline="263" endline="284">NonBlockingTimer</referencedby>
+        <referencedby refid="_wlan_connect_8c_1a465235bdbbcd96b17389fb9a12875b6a" compoundref="_wlan_connect_8c" startline="286" endline="333">WlanConnect_Open</referencedby>
+        <referencedby refid="_wlan_connect_8c_1af65d9ac0f02489ae99a5e40e5bd38588" compoundref="_wlan_connect_8c" startline="335" endline="388">WlanConnect_WEP_Open</referencedby>
+        <referencedby refid="_wlan_connect_8c_1ac52437d88ce199ce1d49baba8938af8d" compoundref="_wlan_connect_8c" startline="390" endline="438">WlanConnect_WPA</referencedby>
+        <referencedby refid="_wlan_connect_8c_1a5d20c403ef7d79b6ce38888545501643" compoundref="_wlan_connect_8c" startline="440" endline="482">WlanConnect_WPS_PBC</referencedby>
+        <referencedby refid="_wlan_connect_8c_1aef0cbcc48d0069bdc3f8fe30133864a9" compoundref="_wlan_connect_8c" startline="484" endline="527">WlanConnect_WPS_PIN</referencedby>
+        <referencedby refid="_wlan_connect_8c_1aa63bfe8d9118a1300b0c1bc3c897f7d3" compoundref="_wlan_connect_8c" startline="529" endline="586">WlanConnect_EnterpriseWPA</referencedby>
+        <referencedby refid="_wlan_connect_8c_1aea24a59e30c0ff0fce2beeb63af11e55" compoundref="_wlan_connect_8c" startline="613" endline="685">WlanConnect_Disconnect</referencedby>
+        <referencedby refid="_wlan_connect_8c_1abbdb496ce3db76ba6ad9a3882e1a41cc" compoundref="_wlan_connect_8c" startline="714" endline="850">WlanConnect_ScanNetworks</referencedby>
+        <referencedby refid="_mcu___adc_8c_1ae3c27300ec7ae28eb45c50caf2672ad1" compoundref="_mcu___adc_8c" startline="170" endline="242">Adc_McuIrqCallback</referencedby>
+        <referencedby refid="_mcu___adc_8h_1ac43ceff74fb52944a6f5a70090e1368e" compoundref="_mcu___adc_8c" startline="245" endline="287">Mcu_Adc_Initialize</referencedby>
+        <referencedby refid="_mcu___adc_8h_1a44e63406e19cdf37c1ea9c92f82c060f" compoundref="_mcu___adc_8c" startline="290" endline="321">Mcu_Adc_DeInitialize</referencedby>
+        <referencedby refid="_mcu___adc_8h_1a7c06b63d12bfbb86668ce40476ebb76b" compoundref="_mcu___adc_8c" startline="323" endline="366">Mcu_Adc_StartSingle</referencedby>
+        <referencedby refid="_mcu___adc_8h_1a212b87da9358bd695370474550555f8a" compoundref="_mcu___adc_8c" startline="369" endline="435">Mcu_Adc_StartScan</referencedby>
+        <referencedby refid="_adc_central_8c_1a813d501cbe2d92dbb3c002498fd092e0" compoundref="_adc_central_8c" startline="149" endline="172">findScanChannelsInfo</referencedby>
+        <referencedby refid="_adc_central_8c_1a0d97f4dc9f61d71d47a5d6969a7bd406" compoundref="_adc_central_8c" startline="191" endline="236">AdcIRQCallback</referencedby>
+        <referencedby refid="group___m_c_u___a_d_c_1gaf745cabdf12c14268e1317ff99a3d2da" compoundref="_adc_central_8c" startline="394" endline="432">AdcCentral_DeInit</referencedby>
+        <referencedby refid="group___m_c_u___a_d_c_1ga384bfb9ef993b0b92e10b86f753de9b2" compoundref="_adc_central_8c" startline="435" endline="473">AdcCentral_Init</referencedby>
+        <referencedby refid="group___m_c_u___a_d_c_1ga1045e55329fc26bdacc46ef7f040cc6f" compoundref="_adc_central_8c" startline="475" endline="504">AdcCentral_StartSingle</referencedby>
+        <referencedby refid="group___m_c_u___a_d_c_1ga4487fdc581149fa5086b20427da36045" compoundref="_adc_central_8c" startline="506" endline="587">AdcCentral_StartScan</referencedby>
+        <referencedby refid="group___m_c_u___a_d_c_1ga624c10c0aaa3e1cf89b2b0aa08c8cc62" compoundref="_adc_central_8c" startline="589" endline="642">AdcCentral_StopScan</referencedby>
+        <referencedby refid="group___b_a_t_t_e_r_y_m_o_n_i_t_o_r_1ga5a312f35b44dd926b4c5f054300c40c6" compoundref="_battery_monitor_8c" startline="79" endline="109">BatteryMonitor_Init</referencedby>
+        <referencedby refid="_ble_device_info_service_8h_1af362aa99ff5d31aabc87d2edd14ee6f5" compoundref="_ble_device_info_service_8c" startline="140" endline="154">BleDeviceInformationService_Initialize</referencedby>
+        <referencedby refid="_grid_eye_service_8c_1a383a706cf4adfa3a5f324e594adfc157" compoundref="_grid_eye_service_8c" startline="131" endline="196">GridEyeService_ServiceCallback</referencedby>
+        <referencedby refid="_grid_eye_service_8h_1a6215abdd0e841fb4515cdc20595d5015" compoundref="_grid_eye_service_8c" startline="349" endline="361">GridEyeService_Init</referencedby>
+        <referencedby refid="_grid_eye_service_8c_1a9ea933926fbca9369d8f65ddc2098515" compoundref="_grid_eye_service_8c" startline="363" endline="434">GridEyeService_SendData</referencedby>
+        <referencedby refid="_sensor_services_8c_1ab2e8a3dce22eeaa1cedfc108e21dd0e0" compoundref="_sensor_services_8c" startline="410" endline="466">AcceleratorSensorServiceCallback</referencedby>
+        <referencedby refid="_sensor_services_8c_1a5a15bd7a06265bc0862b7adfee197ab9" compoundref="_sensor_services_8c" startline="519" endline="574">GyroSensorServiceCallback</referencedby>
+        <referencedby refid="_sensor_services_8c_1aedd36a49cc2fb0d292fc323aa1ba35b9" compoundref="_sensor_services_8c" startline="625" endline="668">LightSensorServiceCallback</referencedby>
+        <referencedby refid="_sensor_services_8c_1ad2c043b4eff7aaac6d9f203833ed9b27" compoundref="_sensor_services_8c" startline="712" endline="732">SensorServicesCallback</referencedby>
+        <referencedby refid="_sensor_services_8c_1af10f554681511130bf36d1c8601ca2fa" compoundref="_sensor_services_8c" startline="904" endline="954">HighDataRateServiceCallback</referencedby>
+        <referencedby refid="_sensor_services_8c_1a87b83af1a4cc12d715b21703fd1777d8" compoundref="_sensor_services_8c" startline="1005" endline="1063">ControlXdkServiceCallback</referencedby>
+        <referencedby refid="group___b_c_d_s___b_l_e___s_e_n_s_o_r___s_e_r_v_i_c_e_s_1ga7eb1fe5795add73c93a3edfd156d29a8" compoundref="_sensor_services_8c" startline="1508" endline="1520">SensorServices_Init</referencedby>
+        <referencedby refid="group___b_c_d_s___b_l_e___s_e_n_s_o_r___s_e_r_v_i_c_e_s_1gab2cac8a8afcdab504e7ec7e1f45c02cb" compoundref="_sensor_services_8c" startline="1582" endline="1645">SensorServices_SendData</referencedby>
+        <referencedby refid="_l_w_m2_m_dns_util_8c_1aaecdbeca56c583d89d1a7325d90b5a2d" compoundref="_l_w_m2_m_dns_util_8c" startline="94" endline="158">LWM2MDnsTask</referencedby>
+        <referencedby refid="_l_w_m2_m_dns_util_8h_1ac36ccc6664c9e678170532efb92f8e56" compoundref="_l_w_m2_m_dns_util_8c" startline="161" endline="186">LWM2MDnsUtil_Init</referencedby>
+        <referencedby refid="_l_w_m2_m_dns_util_8h_1a427e741596232deee7e1720520459dd4" compoundref="_l_w_m2_m_dns_util_8c" startline="189" endline="233">LWM2MDnsUtil_StartResolveHostname</referencedby>
+        <referencedby refid="_l_w_m2_m_dns_util_8h_1a606e9bc47d83330561e161158d1d6c47" compoundref="_l_w_m2_m_dns_util_8c" startline="236" endline="239">LWM2MDnsUtil_ResolveHostname</referencedby>
+        <referencedby refid="_l_w_m2_m_dns_util_8h_1abc5ec06fe4f4bdac07760aad40ba1825" compoundref="_l_w_m2_m_dns_util_8c" startline="242" endline="369">LWM2MDnsUtil_ExtendedResolveHostname</referencedby>
+        <referencedby refid="_l_w_m2_m_object_alert_notification_8c_1a01d015f58e522b96fe78da5239ef807e" compoundref="_l_w_m2_m_object_alert_notification_8c" startline="94" endline="109">LWM2MReadAlert</referencedby>
+        <referencedby refid="_l_w_m2_m_object_connectivity_monitoring_8c_1a67bb4d82aad96e47818db52b1c650300" compoundref="_l_w_m2_m_object_connectivity_monitoring_8c" startline="84" endline="104">LWM2MGetAvailableNetworkBearer</referencedby>
+        <referencedby refid="_l_w_m2_m_object_connectivity_monitoring_8c_1ab7290eeb15fa57cfea5ff96548cafa4d" compoundref="_l_w_m2_m_object_connectivity_monitoring_8c" startline="109" endline="135">LWM2MGetIpAddresses</referencedby>
+        <referencedby refid="_l_w_m2_m_object_device_8c_1aa0802818ea28ddcd85660943ff5c66a9" compoundref="_l_w_m2_m_object_device_8c" startline="248" endline="276">convert32IntegerToVersionString</referencedby>
+        <referencedby refid="_l_w_m2_m_object_device_8c_1a1e01037a069f24775036af956528766a" compoundref="_l_w_m2_m_object_device_8c" startline="281" endline="303">util_serialize_array</referencedby>
+        <referencedby refid="_l_w_m2_m_object_device_8c_1a4a0d17b387729985f84da89c04b23136" compoundref="_l_w_m2_m_object_device_8c" startline="308" endline="319">serialNumber_RO</referencedby>
+        <referencedby refid="_l_w_m2_m_object_device_8c_1a72f81af0f315534ff20ce377eb3f12fd" compoundref="_l_w_m2_m_object_device_8c" startline="325" endline="342">firmwareVersionNumber_RO</referencedby>
+        <referencedby refid="_l_w_m2_m_object_device_8c_1a82d54cf0ae42a135a0e2baacb8c7688c" compoundref="_l_w_m2_m_object_device_8c" startline="378" endline="387">errorCodeFunc</referencedby>
+        <referencedby refid="_l_w_m2_m_object_device_8c_1a3b7414ca4d8f5ecb90ff96c61f26ce8a" compoundref="_l_w_m2_m_object_device_8c" startline="417" endline="468">getCurrentTime</referencedby>
+        <referencedby refid="_l_w_m2_m_object_device_8c_1a4777f35732578da875cf3b6f555a9afa" compoundref="_l_w_m2_m_object_device_8c" startline="471" endline="502">lwm2mDeviceUtcOffset</referencedby>
+        <referencedby refid="_l_w_m2_m_object_device_8c_1a076a4cd33f0468dead1fe212a21da3ae" compoundref="_l_w_m2_m_object_device_8c" startline="507" endline="542">getTimeZone</referencedby>
+        <referencedby refid="_l_w_m2_m_object_device_8c_1a7eaee6ba8222443b9c7ff16120fd8a3d" compoundref="_l_w_m2_m_object_device_8c" startline="547" endline="568">lwm2mDeviceGetBinding</referencedby>
+        <referencedby refid="_l_w_m2_m_object_device_8c_1acc3a338156b69c3aeaeb39b21ee46675" compoundref="_l_w_m2_m_object_device_8c" startline="573" endline="607">availablePowerSourcesfunc</referencedby>
+        <referencedby refid="_l_w_m2_m_object_device_8c_1a3de693371743de156ee2b5b921e9661e" compoundref="_l_w_m2_m_object_device_8c" startline="612" endline="654">powerSourceVoltageFunc</referencedby>
+        <referencedby refid="_l_w_m2_m_object_device_8c_1a59ae782dd048c0d8746877c7e5cf99b4" compoundref="_l_w_m2_m_object_device_8c" startline="659" endline="690">batteryLevelFunc</referencedby>
+        <referencedby refid="_l_w_m2_m_object_device_8c_1af11fa85968fe590cdeb95ef72218db20" compoundref="_l_w_m2_m_object_device_8c" startline="695" endline="758">batteryStatusFunc</referencedby>
+        <referencedby refid="_l_w_m2_m_object_light_control_8c_1aeb855237778e4128d7e5e17a00c35ef5" compoundref="_l_w_m2_m_object_light_control_8c" startline="143" endline="176">LightControl</referencedby>
+        <referencedby refid="_l_w_m2_m_object_sensor_device_8c_1adcc1d02520631306ee8d45480fc6767b" compoundref="_l_w_m2_m_object_sensor_device_8c" startline="202" endline="206">SensorTimer</referencedby>
+        <referencedby refid="_l_w_m2_m_object_sensor_device_8c_1af887ef922ca578a14913d28a0f9d7f02" compoundref="_l_w_m2_m_object_sensor_device_8c" startline="208" endline="238">Interval</referencedby>
+        <referencedby refid="_l_w_m2_m_object_sensor_device_8c_1a08a55806d7f3e9a2bf776aa0939e13a5" compoundref="_l_w_m2_m_object_sensor_device_8c" startline="240" endline="302">PreprocessingMode</referencedby>
+        <referencedby refid="_l_w_m2_m_object_sensor_device_8h_1aa711e3bca637a54f1ccc6869be661b32" compoundref="_l_w_m2_m_object_sensor_device_8c" startline="307" endline="324">LWM2MObjectSensorDevice_Init</referencedby>
+        <referencedby refid="_extension_port_spi_8c_1a9c3e62120427e617d4f02ace0e996f5e" compoundref="_extension_port_spi_8c" startline="73" endline="106">AppCallback</referencedby>
+        <referencedby refid="group___e_x_t_e_n_s_i_o_n_p_o_r_t_s_p_i_1gaad3ad9808efe73485bd5b05ed83460e3" compoundref="_extension_port_spi_8c" startline="111" endline="156">ExtensionPortSpi_Initialize</referencedby>
+        <referencedby refid="group___e_x_t_e_n_s_i_o_n_p_o_r_t_s_p_i_1gadb5aa0fcb79fc02fef96ae5ba805973b" compoundref="_extension_port_spi_8c" startline="159" endline="187">ExtensionPortSpi_Read</referencedby>
+        <referencedby refid="group___e_x_t_e_n_s_i_o_n_p_o_r_t_s_p_i_1ga972c4950da24b0fb48383ef8e3f037e0" compoundref="_extension_port_spi_8c" startline="190" endline="217">ExtensionPortSpi_Write</referencedby>
+        <referencedby refid="group___e_x_t_e_n_s_i_o_n_p_o_r_t_s_p_i_1gafbe088dba3b02c7cefa13e626debc69e" compoundref="_extension_port_spi_8c" startline="220" endline="259">ExtensionPortSpi_DeInitialize</referencedby>
+        <referencedby refid="group___l_e_m_1ga4736c1b55f6c7aec32925476b23efb62" compoundref="_lem_8c" startline="181" endline="193">Lem_GetRmsVoltage</referencedby>
+        <referencedby refid="group___l_e_m_1gaa99070df000f2a2c22b12d94dcc2fa2e" compoundref="_lem_8c" startline="196" endline="208">Lem_GetRmsCurrent</referencedby>
+        <referencedby refid="_noise_sensor_8c_1a340f6c2fa8e708a8a9c4617fd7ef88b3" compoundref="_noise_sensor_8c" startline="68" endline="94">ProcessCH4Data</referencedby>
+        <referencedby refid="group___n_o_i_s_e_s_e_n_s_o_r_1ga768120add5c75dfb2e6942d35101b7fa" compoundref="_noise_sensor_8c" startline="96" endline="118">NoiseSensor_Setup</referencedby>
+        <referencedby refid="group___n_o_i_s_e_s_e_n_s_o_r_1ga7fb2dfb213f9bacae96eee4e1bc65fbe" compoundref="_noise_sensor_8c" startline="120" endline="147">NoiseSensor_Enable</referencedby>
+        <referencedby refid="group___n_o_i_s_e_s_e_n_s_o_r_1ga9224b270431190333187713b2f53f92c" compoundref="_noise_sensor_8c" startline="149" endline="188">NoiseSensor_ReadRmsValue</referencedby>
+        <referencedby refid="group___n_o_i_s_e_s_e_n_s_o_r_1gaaf106b5b0f33ff97ed750f001d741030" compoundref="_noise_sensor_8c" startline="190" endline="208">NoiseSensor_Disable</referencedby>
+        <referencedby refid="group___s_y_s_t_e_m_s_t_a_r_t_u_p_1gab3bf0967da05629b9d5b23b21d15aeb1" compoundref="_system_startup_8c" startline="297" endline="388">systemStartup</referencedby>
+        <referencedby refid="group___c_a_y_e_n_n_e_l_p_p_s_e_r_i_a_l_i_z_e_r_1gab007bc6739b50da0ee4d30be1ec6f48c" compoundref="_cayenne_l_p_p_serializer_8c" startline="64" endline="252">CayenneLPPSerializer_SingleInstance</referencedby>
+        <referencedby refid="_f_o_t_a_8c_1a287949f2b79c91baba97f89d80c835c0" compoundref="_f_o_t_a_8c" startline="84" endline="127">VerifyHeader</referencedby>
+        <referencedby refid="_f_o_t_a_8c_1a097478fcf96e268decbc6b9d276b4ea1" compoundref="_f_o_t_a_8c" startline="143" endline="236">VerifyImage</referencedby>
+        <referencedby refid="group___f_o_t_a_1gaaad99c1582b78008e934940d22cd799a" compoundref="_f_o_t_a_8c" startline="239" endline="275">FOTA_ReadHeader</referencedby>
+        <referencedby refid="group___f_o_t_a_1gabf12b749780627e17664236408f1a69c" compoundref="_f_o_t_a_8c" startline="278" endline="297">FOTA_ReadFirmwareVersion</referencedby>
+        <referencedby refid="group___f_o_t_a_1ga5521a95006cba98cdaac2ae9ac8d6712" compoundref="_f_o_t_a_8c" startline="300" endline="319">FOTA_ReadFirmwareCRC</referencedby>
+        <referencedby refid="group___f_o_t_a_1ga02aaeb14e249d60489d2f887a46f26bc" compoundref="_f_o_t_a_8c" startline="322" endline="368">FOTA_ValidateSdcardFw</referencedby>
+        <referencedby refid="group___f_o_t_a_1gaa17c22be08c000fec0331fab53040c26" compoundref="_f_o_t_a_8c" startline="371" endline="413">FOTA_UpdateSdcardFw</referencedby>
+        <referencedby refid="group___p_p_m_p_s_e_r_i_a_l_i_z_e_r_1ga2a38431051ef8a659595ce5eb2558806" compoundref="_p_p_m_p_serializer_8c" startline="84" endline="97">PPMPSerializer_Setup</referencedby>
+        <referencedby refid="group___p_p_m_p_s_e_r_i_a_l_i_z_e_r_1gac6f89c07a494d40c5e1b41b0e505d8a2" compoundref="_p_p_m_p_serializer_8c" startline="106" endline="306">PPMPSerializer_PayloadSensorSelective</referencedby>
+        <referencedby refid="group___p_p_m_p_s_e_r_i_a_l_i_z_e_r_1ga31284e51a3ef72bf5c365b3039cb07c3" compoundref="_p_p_m_p_serializer_8c" startline="309" endline="374">PPMPSerializer_PayloadExternalSensorSelective</referencedby>
+        <referencedby refid="group___t_i_m_e_s_t_a_m_p_1ga9d2ba3e11602f017a9e9dff9a4050a7f" compoundref="_time_stamp_8c" startline="89" endline="182">TimeStamp_SecsToTm</referencedby>
+        <referencedby refid="group___t_i_m_e_s_t_a_m_p_1gae661cf6ba094af296258b2377099f480" compoundref="_time_stamp_8c" startline="185" endline="254">TimeStamp_TmToIso8601</referencedby>
+        <referencedby refid="group___x_d_k_u_t_i_l_s_1ga9913af2567859f88c40f614b19c0057e" compoundref="_utils_8c" startline="190" endline="229">Utils_GetXdkVersionString</referencedby>
+        <referencedby refid="group___x_d_k_u_t_i_l_s_1ga918108a91eb509742e6af55abc363804" compoundref="_utils_8c" startline="287" endline="334">Utils_ConvertIpStringToNumber</referencedby>
+        <referencedby refid="_wifi_storage_8h_1a06d4627bfa59684cf1d7007d8224feb9" compoundref="_wifi_storage_8c" startline="56" endline="100">WifiStorage_FileOpen</referencedby>
+        <referencedby refid="_wifi_storage_8h_1a776f3ad735ead50abc4de0789eaa702e" compoundref="_wifi_storage_8c" startline="103" endline="142">WifiStorage_FileWrite</referencedby>
+        <referencedby refid="_wifi_storage_8h_1ae820b9d5ffd5ebc9adf20a92670bc473" compoundref="_wifi_storage_8c" startline="145" endline="190">WifiStorage_FileRead</referencedby>
+        <referencedby refid="_wifi_storage_8h_1a6bc33c75f0b8b3b615deed54f539ee13" compoundref="_wifi_storage_8c" startline="193" endline="220">WifiStorage_GetFileStatus</referencedby>
+        <referencedby refid="_wifi_storage_8h_1aed76db260530bae26ba523551c3219ed" compoundref="_wifi_storage_8c" startline="235" endline="254">WifiStorage_FileDelete</referencedby>
+        <referencedby refid="syscall_8c_1a2593b7acfe680686184f9ecb1be50323" compoundref="syscall_8c" startline="19" endline="40">ff_cre_syncobj</referencedby>
+        <referencedby refid="heap__4_8c_1a0379669d07d76cc81e3028123113b271" compoundref="heap__4_8c" startline="113" endline="260">pvPortMalloc</referencedby>
+        <referencedby refid="heap__4_8c_1a1e7cea2fd1bc894ea3b5f5e8179d259b" compoundref="heap__4_8c" startline="263" endline="308">vPortFree</referencedby>
+        <referencedby refid="heap__4_8c_1a3e55181f788f17d9a3e7d226a5206e4f" compoundref="heap__4_8c" startline="329" endline="374">prvHeapInit</referencedby>
+        <referencedby refid="queue_8c_1a0f632268707981dea3f177f5fba36e22" compoundref="queue_8c" startline="408" endline="447">prvInitialiseNewQueue</referencedby>
+        <referencedby refid="queue_8c_1acb67c81366c00896b21cd826e07d885d" compoundref="queue_8c" startline="725" endline="920">xQueueGenericSend</referencedby>
+        <referencedby refid="queue_8c_1a0fb58b25eb396a5cf8e1688b7e1a56cb" compoundref="queue_8c" startline="923" endline="1071">xQueueGenericSendFromISR</referencedby>
+        <referencedby refid="queue_8c_1a4df49fafb6ba4400ede6f2d07a40865f" compoundref="queue_8c" startline="1074" endline="1236">xQueueGiveFromISR</referencedby>
+        <referencedby refid="queue_8c_1ad0a166f3b1219a5e37e31f8090d4800d" compoundref="queue_8c" startline="1239" endline="1378">xQueueReceive</referencedby>
+        <referencedby refid="queue_8c_1a8f68e37e931bbf95440c8845f512e090" compoundref="queue_8c" startline="1600" endline="1747">xQueuePeek</referencedby>
+        <referencedby refid="queue_8c_1ac61ec62828e70ed35d18559a35550462" compoundref="queue_8c" startline="1750" endline="1838">xQueueReceiveFromISR</referencedby>
+        <referencedby refid="queue_8c_1af67763957452955ac663c374d71278ce" compoundref="queue_8c" startline="1841" endline="1892">xQueuePeekFromISR</referencedby>
+        <referencedby refid="queue_8c_1a77098159b7735e0c27e27aa7072376c6" compoundref="queue_8c" startline="2040" endline="2116">prvCopyDataToQueue</referencedby>
+        <referencedby refid="queue_8c_1a7297c84a7c770ed57567bad1d3e2faf6" compoundref="queue_8c" startline="2137" endline="2254">prvUnlockQueue</referencedby>
+        <referencedby refid="tasks_8c_1a132d136b8d2586e0778ce369e5cb8a1e" compoundref="tasks_8c" startline="1038" endline="1118">prvAddNewTaskToReadyList</referencedby>
+        <referencedby refid="tasks_8c_1a598661cdd2a6af95a077245d11e3d142" compoundref="tasks_8c" startline="1912" endline="2029">vTaskStartScheduler</referencedby>
+        <referencedby refid="tasks_8c_1adf830ea0f150fcdfdaa944667137f080" compoundref="tasks_8c" startline="2116" endline="2223">xTaskResumeAll</referencedby>
+        <referencedby refid="tasks_8c_1a54f31e9aef0eb7b87e48c7d68ecc84c1" compoundref="tasks_8c" startline="2646" endline="2815">xTaskIncrementTick</referencedby>
+        <referencedby refid="_serval___callable_8h_1af1a45b6035ccf4042dccd7ed8367ef4e" compoundref="_serval___callable_8h" startline="173" endline="176">Callable_clear</referencedby>
+        <referencedby refid="_serval___string_descr_8h_1a738627f0f9f6774da12f3a4d10851f69" compoundref="_serval___string_descr_8h" startline="84" endline="87">StringDescr_isValid</referencedby>
+        <referencedby refid="_serval___string_descr_8h_1a48f840636ff8dc19ddec82ecbb6be6ba" compoundref="_serval___string_descr_8h" startline="106" endline="116">StringDescr_get</referencedby>
+        <referencedby refid="_serval___string_descr_8h_1ae923a3cf3155c2a374223ee119d86859" compoundref="_serval___string_descr_8h" startline="133" endline="141">StringDescr_charAt</referencedby>
+        <referencedby refid="_serval___string_descr_8h_1ad43b4ca414a6593ff60b47abaad08abf" compoundref="_serval___string_descr_8h" startline="156" endline="162">StringDescr_getLength</referencedby>
+        <referencedby refid="_serval___string_descr_8h_1a37de2785404cf3291aa2b11cdbe7ed2a" compoundref="_serval___string_descr_8h" startline="177" endline="184">StringDescr_wrap</referencedby>
+        <referencedby refid="_serval___string_descr_8h_1a0b6f1c3fc0df7102b8fd1aaa1d0f71d9" compoundref="_serval___string_descr_8h" startline="209" endline="221">StringDescr_cloneSegment</referencedby>
+        <referencedby refid="_serval___string_descr_8h_1a74ba7e71611919cba3b4510bd9d08252" compoundref="_serval___string_descr_8h" startline="290" endline="308">StringDescr_copySegment</referencedby>
+        <referencedby refid="_serval___string_descr_8h_1a3c40bb13d0f8453cd0b89f5d53e44370" compoundref="_serval___string_descr_8h" startline="431" endline="445">StringDescr_compareFrom</referencedby>
+        <referencedby refid="_serval___string_descr_8h_1ab6a4d5521d110050509901412566c13e" compoundref="_serval___string_descr_8h" startline="514" endline="529">StringDescr_compareFromNoCase</referencedby>
+        <referencedby refid="jsmn_8c_1a0d7a964b95b65cd16699a355ede80394" compoundref="jsmn_8c" startline="8" endline="21">jsmn_alloc_token</referencedby>
+        <referencedby refid="jsmn_8c_1a4d1f29464811e2bbf5506fbe5c7ee9de" compoundref="jsmn_8c" startline="37" endline="81">jsmn_parse_primitive</referencedby>
+        <referencedby refid="jsmn_8c_1a568f184e45bb9718270088e1e05a4264" compoundref="jsmn_8c" startline="86" endline="148">jsmn_parse_string</referencedby>
+        <referencedby refid="jsmn_8h_1a774f985a9750a10c7e88304e30191e03" compoundref="jsmn_8c" startline="153" endline="300">jsmn_parse</referencedby>
+        <referencedby refid="httpcli_8c_1ab0879aaea34466e111e6cd3a4d57dbe9" compoundref="httpcli_8c" startline="137" endline="159">asyncThread</referencedby>
+        <referencedby refid="httpcli_8c_1aab989cda5fb83c6a3d6b2e1a50a39b14" compoundref="httpcli_8c" startline="165" endline="250">contentHandler</referencedby>
+        <referencedby refid="httpcli_8c_1a4db54ba4176d66ed6912d282cc32afaa" compoundref="httpcli_8c" startline="383" endline="400">checkContentField</referencedby>
+        <referencedby refid="httpcli_8c_1a0355ca15123447bdc6eb2d24d108bc5b" compoundref="httpcli_8c" startline="406" endline="485">getChunkedData</referencedby>
+        <referencedby refid="httpcli_8c_1a58a1ac8adb19446f704acc016874ebec" compoundref="httpcli_8c" startline="500" endline="549">getStatus</referencedby>
+        <referencedby refid="httpcli_8c_1a838a38137a34205feae395582c033b90" compoundref="httpcli_8c" startline="626" endline="640">lookUpResponseFields</referencedby>
+        <referencedby refid="httpcli_8c_1a581d77f1c56e1f39c3d417f654524584" compoundref="httpcli_8c" startline="685" endline="754">redirect</referencedby>
+        <referencedby refid="httpcli_8c_1a890bf487908c66d3493bf509f93c7a20" compoundref="httpcli_8c" startline="761" endline="847">startSecureMode</referencedby>
+        <referencedby refid="httpcli_8c_1a82b67ac9f18d62ae1b75ce9b0592ddba" compoundref="httpcli_8c" startline="984" endline="1038">threadCreate</referencedby>
+        <referencedby refid="httpcli_8c_1a566e6d4090d5ea3878ff29ee893df20b" compoundref="httpcli_8c" startline="1043" endline="1052">threadExit</referencedby>
+        <referencedby refid="httpcli_8c_1a8d78ffe7c41d99d2b1e7483a37291106" compoundref="httpcli_8c" startline="1072" endline="1168">HTTPCli_initSockAddr</referencedby>
+        <referencedby refid="httpcli_8c_1afc75b514878275b1ca1a7137f6291722" compoundref="httpcli_8c" startline="1174" endline="1328">HTTPCli_connect</referencedby>
+        <referencedby refid="httpcli_8c_1a0ca70ecd802cbfdc177061201a5ce70c" compoundref="httpcli_8c" startline="1333" endline="1354">HTTPCli_construct</referencedby>
+        <referencedby refid="httpcli_8c_1a3fc3d145c5bed1194d854a5c92ac071e" compoundref="httpcli_8c" startline="1359" endline="1369">HTTPCli_create</referencedby>
+        <referencedby refid="httpcli_8c_1a166cc2afb714fb47522c44220f862e71" compoundref="httpcli_8c" startline="1374" endline="1381">HTTPCli_delete</referencedby>
+        <referencedby refid="httpcli_8c_1af2dc5d5f32a4d0a848261dbaafd49b88" compoundref="httpcli_8c" startline="1386" endline="1408">HTTPCli_destruct</referencedby>
+        <referencedby refid="httpcli_8c_1a652bb64d36b5c7562decd13b9fbd4c97" compoundref="httpcli_8c" startline="1413" endline="1424">HTTPCli_disconnect</referencedby>
+        <referencedby refid="httpcli_8c_1a5b59314823889f033682095dfcc1a8e9" compoundref="httpcli_8c" startline="1429" endline="1442">HTTPCli_setRequestFields</referencedby>
+        <referencedby refid="httpcli_8c_1aa219fa0462c97850e962cfafd5707426" compoundref="httpcli_8c" startline="1447" endline="1459">HTTPCli_setResponseFields</referencedby>
+        <referencedby refid="httpcli_8c_1a5e9751064a5a19932cd0f156aa6076f9" compoundref="httpcli_8c" startline="1464" endline="1469">HTTPCli_setSecureParams</referencedby>
+        <referencedby refid="httpcli_8c_1a5a7db52de0e9ba815a4e49eb5098da53" compoundref="httpcli_8c" startline="1474" endline="1510">HTTPCli_sendRequest</referencedby>
+        <referencedby refid="httpcli_8c_1a2c71815580c4784c34cad13b5c0377a1" compoundref="httpcli_8c" startline="1515" endline="1546">HTTPCli_sendField</referencedby>
+        <referencedby refid="httpcli_8c_1a1354f80e1d836c0db2155ffdb2d8f978" compoundref="httpcli_8c" startline="1551" endline="1563">HTTPCli_sendRequestBody</referencedby>
+        <referencedby refid="httpcli_8c_1a1a9013f3b0526ce375677c7f161cc631" compoundref="httpcli_8c" startline="1568" endline="1583">HTTPCli_getResponseStatus</referencedby>
+        <referencedby refid="httpcli_8c_1ae989b222ec02bf3c35cdd15c41250cfe" compoundref="httpcli_8c" startline="1588" endline="1672">HTTPCli_getResponseField</referencedby>
+        <referencedby refid="httpcli_8c_1a6945059cfb7950f374c8f47dbf782b7a" compoundref="httpcli_8c" startline="1677" endline="1702">HTTPCli_readResponseBody</referencedby>
+        <referencedby refid="httpcli_8c_1a72d852f92bea0975171ec7ea5d44ba2f" compoundref="httpcli_8c" startline="1707" endline="1720">HTTPCli_readRawResponseBody</referencedby>
+        <referencedby refid="ssock_8c_1a94aa24017367e2f3ea225607a92ad24e" compoundref="ssock_8c" startline="42" endline="56">Ssock_construct</referencedby>
+        <referencedby refid="ssock_8c_1a8d92d85d623062d4ac1780259690ec4f" compoundref="ssock_8c" startline="75" endline="83">Ssock_delete</referencedby>
+        <referencedby refid="ssock_8c_1aca6b9a3ea6754ed5514de342c5682171" compoundref="ssock_8c" startline="88" endline="106">Ssock_destruct</referencedby>
+        <referencedby refid="ssock_8c_1a3ee30268020be7e2eba1d85812a627cc" compoundref="ssock_8c" startline="176" endline="247">Ssock_send</referencedby>
+        <referencedby refid="osi__freertos_8c_1a9eb7208eb699bd117b84ebde61aa4f33" compoundref="osi__freertos_8c" startline="77" endline="96">osi_SyncObjCreate</referencedby>
+        <referencedby refid="osi__freertos_8c_1a40c2c82f3011dd747b389b125ebdb4b0" compoundref="osi__freertos_8c" startline="108" endline="117">osi_SyncObjDelete</referencedby>
+        <referencedby refid="osi__freertos_8c_1a78c03b31fcdc1b56a2e35e3b619e61b5" compoundref="osi__freertos_8c" startline="131" endline="147">osi_SyncObjSignal</referencedby>
+        <referencedby refid="osi__freertos_8c_1a41e5c4092623164f5877a7e9a11fa510" compoundref="osi__freertos_8c" startline="161" endline="183">osi_SyncObjSignalFromISR</referencedby>
+        <referencedby refid="osi__freertos_8c_1a1035dcca60f40c33d0de41879a987d64" compoundref="osi__freertos_8c" startline="200" endline="215">osi_SyncObjWait</referencedby>
+        <referencedby refid="osi__freertos_8c_1a92826107028a71291859ac72d8e4ecd0" compoundref="osi__freertos_8c" startline="227" endline="243">osi_SyncObjClear</referencedby>
+        <referencedby refid="osi__freertos_8c_1af2a82eda600de3cd4c799d6f708805e7" compoundref="osi__freertos_8c" startline="258" endline="274">osi_LockObjCreate</referencedby>
+        <referencedby refid="osi__freertos_8c_1a2eb3dbb18062d1cdbe3c8e4a8563f733" compoundref="osi__freertos_8c" startline="360" endline="376">osi_LockObjLock</referencedby>
+        <referencedby refid="osi__freertos_8c_1ab2ac82f45a6ada6a054cd48935c7e18f" compoundref="osi__freertos_8c" startline="388" endline="404">osi_LockObjUnlock</referencedby>
+        <referencedby refid="osi__freertos_8c_1aaafd216ec0ee6e7701c537c8a687a781" compoundref="osi__freertos_8c" startline="479" endline="493">VStartSimpleLinkSpawnTask</referencedby>
+        <referencedby refid="osi__freertos_8c_1af68671b75da07b264100a0aa69597b74" compoundref="osi__freertos_8c" startline="531" endline="553">osi_MsgQCreate</referencedby>
+        <referencedby refid="osi__freertos_8c_1acb7e2af7159a78f7bec683ee622e4f0e" compoundref="osi__freertos_8c" startline="563" endline="572">osi_MsgQDelete</referencedby>
+        <referencedby refid="osi__freertos_8c_1a59917ac1693f8b9322adffd61940faf7" compoundref="osi__freertos_8c" startline="585" endline="602">osi_MsgQWrite</referencedby>
+        <referencedby refid="osi__freertos_8c_1ad0ef6deb2e1e66e730e7ef91d6bf149d" compoundref="osi__freertos_8c" startline="615" endline="637">osi_MsgQRead</referencedby>
+        <referencedby refid="driver_8h_1a5cb774a507144e37c36a17224f30b303" compoundref="device_8c" startline="207" endline="221">_sl_HandleAsync_Stop</referencedby>
+        <referencedby refid="driver_8h_1ab732cb01a6c2781f69ca3d53e43aa883" compoundref="driver_8c" startline="556" endline="598">_SlDrvDriverCBDeinit</referencedby>
+        <referencedby refid="driver_8h_1a2c3fed985798e8518a89943c4e3193d1" compoundref="driver_8c" startline="603" endline="620">_SlDrvRxIrqHandler</referencedby>
+        <referencedby refid="driver_8h_1a232d29361e3abcd8737a7c62320999e9" compoundref="driver_8c" startline="681" endline="786">_SlDrvDataReadOp</referencedby>
+        <referencedby refid="driver_8c_1a3d66c1531b132da08639f90bc7138c2f" compoundref="driver_8c" startline="867" endline="936">_SlDrvMsgWrite</referencedby>
+        <referencedby refid="driver_8c_1a086b1286684fc388bec97ca3d73c13ea" compoundref="driver_8c" startline="941" endline="1225">_SlDrvMsgRead</referencedby>
+        <referencedby refid="driver_8c_1a938358cbc0da41c53ec56a5ef7c1bff6" compoundref="driver_8c" startline="1231" endline="1289">_SlAsyncEventGenericHandler</referencedby>
+        <referencedby refid="driver_8c_1ad80816b51658603daa919f9f1f9b20a0" compoundref="driver_8c" startline="1295" endline="1391">_SlDrvMsgReadCmdCtx</referencedby>
+        <referencedby refid="driver_8h_1a5e081105b679db5f8284ca868d3181fa" compoundref="driver_8c" startline="1396" endline="1481">_SlDrvMsgReadSpawnCtx</referencedby>
+        <referencedby refid="driver_8c_1a65c89d214cacb406b3fdca48fa335440" compoundref="driver_8c" startline="1527" endline="1582">_SlDrvClassifyRxMsg</referencedby>
+        <referencedby refid="driver_8h_1ae44e411de6a20cb5cb5d4522f83e571d" compoundref="driver_8c" startline="1859" endline="1910">_SlDrvReleasePoolObj</referencedby>
+        <referencedby refid="fs_8c_1a80c25fe95f386e721b514438c85b1dc6" compoundref="fs_8c" startline="63" endline="71">_sl_Strlen</referencedby>
+        <referencedby refid="netapp_8c_1a2d093ff0efe56e5d007c353d0320be7b" compoundref="netapp_8c" startline="788" endline="852">_sl_HandleAsync_DnsGetHostByService</referencedby>
+        <referencedby refid="netapp_8c_1a2b64ccc68d6362cad422ed3cea1d3e28" compoundref="netapp_8c" startline="950" endline="973">_sl_HandleAsync_DnsGetHostByName</referencedby>
+        <referencedby refid="netapp_8c_1a9d35889ccfaa100ace25a2f794545584" compoundref="netapp_8c" startline="990" endline="1016">_sl_HandleAsync_PingResponse</referencedby>
+        <referencedby refid="nonos_8h_1ac9697cfc827b271c5570f88a832d1f9c" compoundref="nonos_8c" startline="165" endline="194">_SlNonOsMainLoopTask</referencedby>
+        <referencedby refid="socket_8c_1ad3a0598bb9371fb6fc075e9bfd892ced" compoundref="socket_8c" startline="590" endline="608">_sl_HandleAsync_Connect</referencedby>
+        <referencedby refid="socket_8c_1a2650f1331dd1a0bfb023e079ab086f33" compoundref="socket_8c" startline="893" endline="907">_sl_HandleAsync_Accept</referencedby>
+        <referencedby refid="socket_8c_1ae35e8b68510a4003c4f010d745003538" compoundref="socket_8c" startline="912" endline="927">_sl_HandleAsync_Select</referencedby>
+        <referencedby refid="_b_s_p___board_8c_1ad7b221558ec67814ba6e859d03502fba" compoundref="_b_s_p___board_8c" startline="847" endline="858">Board_USB_Init</referencedby>
+        <referencedby refid="_b_s_p___board_8c_1a749f9eb44439d6a0783a74e48838bed4" compoundref="_b_s_p___board_8c" startline="887" endline="922">Board_RTC_Init</referencedby>
+        <referencedby refid="_b_s_p___board_8c_1ad1c278d364b8bd3ea865f3dfa62f184a" compoundref="_b_s_p___board_8c" startline="925" endline="965">Board_BURTC_Init</referencedby>
+        <referencedby refid="_b_s_p___b_t___e_m9301_8c_1a4707ba15ec20eaa4817512e6f31ade75" compoundref="_b_s_p___b_t___e_m9301_8c" startline="92" endline="158">BSP_BT_EM9301_Enable</referencedby>
+        <referencedby refid="_b_s_p___b_t___e_m9301_8c_1a904d47773001fb69141919f51322c281" compoundref="_b_s_p___b_t___e_m9301_8c" startline="163" endline="188">BSP_BT_EM9301_Disable</referencedby>
+        <referencedby refid="_b_s_p___b_t___e_m9301_8h_1a651efd671201e638d4c473b08a9176a4" compoundref="_b_s_p___b_t___e_m9301_8c" startline="259" endline="266">BT_EM9301_UART_TxISR</referencedby>
+        <referencedby refid="_b_s_p___b_t___e_m9301_8h_1a28d3d9806ef90bc2756db8b91925fd4e" compoundref="_b_s_p___b_t___e_m9301_8c" startline="271" endline="278">BT_EM9301_UART_RxISR</referencedby>
+        <referencedby refid="group___b_c_d_s___h_a_l___b_s_p___i_r_sensor___node_1ga63ec777f119d10a6d31915a5679142c8" compoundref="_b_s_p___i_r_sensor_node_8c" startline="77" endline="88">BSP_IRSensorNode_Enable</referencedby>
+        <referencedby refid="group___b_c_d_s___h_a_l___b_s_p___l_o_r_a___r_n2xx3_1ga5281066fc561e0fc5c48b5b378b6b868" compoundref="_b_s_p___lo_ra___r_n2xx3_8c" startline="123" endline="194">BSP_LoRa_RN2xx3_Enable</referencedby>
+        <referencedby refid="group___b_c_d_s___h_a_l___b_s_p___l_o_r_a___r_n2xx3_1ga1efb57bce075697bf38e38b225d43f5f" compoundref="_b_s_p___lo_ra___r_n2xx3_8c" startline="267" endline="276">BSP_LoRa_RN2xx3_ChangeBaudrate</referencedby>
+        <referencedby refid="_b_s_p___max31865_8c_1ab766fd093e403158e219bc08f5ce7048" compoundref="_b_s_p___max31865_8c" startline="68" endline="81">BSP_Max31865_EnableCS</referencedby>
+        <referencedby refid="_b_c_d_s___b_s_p___max31865_8h_1ae4ccb6b29269cdbf7f3a0aabd6b4d00e" compoundref="_b_s_p___max31865_8c" startline="140" endline="187">BSP_Max31865_Enable</referencedby>
+        <referencedby refid="group___b_c_d_s___h_a_l___b_s_p___sensor___node_1ga311d37af892ea5672b90ddac5d658440" compoundref="_b_s_p___sensor_node_8c" startline="206" endline="519">BSP_SensorNode_Enable</referencedby>
+        <referencedby refid="group___b_c_d_s___h_a_l___b_s_p___sensor___node_1ga5af05449409434d39749e474f3c1096c" compoundref="_b_s_p___sensor_node_8c" startline="523" endline="684">BSP_SensorNode_Disable</referencedby>
+        <referencedby refid="_b_s_p___sensor_node_8c_1abc115043009d0aa886ad447c0dc4b0fe" compoundref="_b_s_p___sensor_node_8c" startline="744" endline="758">SensorNode_EnableBus</referencedby>
+        <referencedby refid="_b_s_p___sensor_node_8c_1a8609a71beab79b9b72774f7949f7b1bf" compoundref="_b_s_p___sensor_node_8c" startline="763" endline="773">SensorNode_DisableBus</referencedby>
+        <referencedby refid="_b_s_p___sensor_node_8h_1af63b0dc51a42da8ca3f4adbafe4e406f" compoundref="_b_s_p___sensor_node_8c" startline="945" endline="952">SensorNode_I2CISR</referencedby>
+        <referencedby refid="_b_s_p___u_m_t_s___lisa_u2_8c_1ad726df6f9101d839810b4c67f76efd5d" compoundref="_b_s_p___u_m_t_s___lisa_u2_8c" startline="79" endline="96">BSP_UMTS_LisaU2_EnableUart</referencedby>
+        <referencedby refid="_b_s_p___u_m_t_s___lisa_u2_8c_1a20fd4e7af4f923377bdae1740a6bbf63" compoundref="_b_s_p___u_m_t_s___lisa_u2_8c" startline="103" endline="153">BSP_UMTS_LisaU2_EnableGpio</referencedby>
+        <referencedby refid="_b_s_p___u_m_t_s___quectel_u_c20_8c_1a6be8a8c6ea7f174027b340602deb2498" compoundref="_b_s_p___u_m_t_s___quectel_u_c20_8c" startline="75" endline="100">BSP_UMTS_QuectelUC20_EnableGpio</referencedby>
+        <referencedby refid="_b_s_p___u_m_t_s___quectel_u_c20_8c_1a0af96e20b7f7c808fc09fec297626edf" compoundref="_b_s_p___u_m_t_s___quectel_u_c20_8c" startline="102" endline="119">BSP_UMTS_QuectelUC20_EnableUart</referencedby>
+        <referencedby refid="group___b_c_d_s___h_a_l___b_s_p___w_i_f_i___c_c3100_m_o_d_1ga09fcd8842ecdd3811532b084bbad508f" compoundref="_b_s_p___wi_fi__cc3100mod_8c" startline="145" endline="200">BSP_WiFi_CC3100MOD_Enable</referencedby>
+        <referencedby refid="group___b_c_d_s___h_a_l___b_s_p___w_i_f_i___c_c3100_m_o_d_1ga6d3668f47bf10f8ca2b80d5f7cb76180" compoundref="_b_s_p___wi_fi__cc3100mod_8c" startline="205" endline="232">BSP_WiFi_CC3100MOD_Disable</referencedby>
+        <referencedby refid="_b_s_p___wi_fi__cc3100mod_8h_1a487baf309fe0acf78649956b662f080e" compoundref="_b_s_p___wi_fi__cc3100mod_8c" startline="320" endline="327">WiFi_CC3100MOD_SPIRxISR</referencedby>
+        <referencedby refid="_b_s_p___wi_fi__cc3100mod_8h_1a151d5543d80272aac71c698c680fdad1" compoundref="_b_s_p___wi_fi__cc3100mod_8c" startline="332" endline="340">WiFi_CC3100MOD_SPITxISR</referencedby>
+        <referencedby refid="_accelerometer_8c_1a10c18d53d47e4a1deb77777590a45446" compoundref="_accelerometer_8c" startline="168" endline="226">bmaIsrCallback</referencedby>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gada44fddcce4df8b6f4d19fcd06b0f0f3" compoundref="_accelerometer_8c" startline="288" endline="350">Accelerometer_init</referencedby>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga3acc84c8c162385554985c28a68eb806" compoundref="_accelerometer_8c" startline="353" endline="439">Accelerometer_setBandwidth</referencedby>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga419e1726b46209822d79f7284f19fdf4" compoundref="_accelerometer_8c" startline="442" endline="512">Accelerometer_getBandwidth</referencedby>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga7260622f587a50b2356e2848ccc00b1e" compoundref="_accelerometer_8c" startline="515" endline="579">Accelerometer_setRange</referencedby>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gacf67a297289375fd8843e1de4d7e4be3" compoundref="_accelerometer_8c" startline="582" endline="646">Accelerometer_getRange</referencedby>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga84f23dba9c1d1d5671921deabd2bd6f3" compoundref="_accelerometer_8c" startline="649" endline="689">Accelerometer_setSleepDuration</referencedby>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gaac53224e698bbb8e5f00e57bc0022fa0" compoundref="_accelerometer_8c" startline="692" endline="744">Accelerometer_getSleepDuration</referencedby>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga235db8382dee66d6f1296ecf3085f88a" compoundref="_accelerometer_8c" startline="747" endline="803">Accelerometer_setMode</referencedby>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gab9a567fe170de76e20dd7a86ba8a3a56" compoundref="_accelerometer_8c" startline="806" endline="871">Accelerometer_getMode</referencedby>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga5dcaf1b81b63ccce1a85ab649b920aca" compoundref="_accelerometer_8c" startline="874" endline="947">Accelerometer_readXyzLsbValue</referencedby>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga0db11ba711c71c40c97a971065f02fef" compoundref="_accelerometer_8c" startline="950" endline="1038">Accelerometer_readXyzGValue</referencedby>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gaddf51f53b785d82dd8232b7f94e676f8" compoundref="_accelerometer_8c" startline="1041" endline="1076">Accelerometer_deInit</referencedby>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gac04dfe1f1d0f10a41008eb54b0258a8e" compoundref="_accelerometer_8c" startline="1079" endline="1141">Accelerometer_configInterrupt</referencedby>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga4b8d0377af6ed3ea55a4832707f2575c" compoundref="_accelerometer_8c" startline="1144" endline="1181">Accelerometer_disableInterrupt</referencedby>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga86d22a4235b00503611ee658d4dc54c8" compoundref="_accelerometer_8c" startline="1184" endline="1229">Accelerometer_regRealTimeCallback</referencedby>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gaf3cb0741e503f98fba6b2cc6721b1b19" compoundref="_accelerometer_8c" startline="1232" endline="1281">Accelerometer_regDeferredCallback</referencedby>
+        <referencedby refid="_environmental_8c_1a8aefa08fb507d207d2b233f7543794a8" compoundref="_environmental_8c" startline="144" endline="253">setOverSampling</referencedby>
+        <referencedby refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ga9081d552aa95071cee5d1924c5cfa8aa" compoundref="_environmental_8c" startline="257" endline="295">Environmental_init</referencedby>
+        <referencedby refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1gab2f7d424ab25601ff61a961bd20d2076" compoundref="_environmental_8c" startline="298" endline="343">Environmental_setPowerMode</referencedby>
+        <referencedby refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ga0e9ccfe4b09fbb04684377b36655ef1d" compoundref="_environmental_8c" startline="346" endline="395">Environmental_getPowerMode</referencedby>
+        <referencedby refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ga30122a20296806248fe942f37f3ac42a" compoundref="_environmental_8c" startline="398" endline="436">Environmental_readData</referencedby>
+        <referencedby refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1gaa30f140197c482cecacb434f9934fdb4" compoundref="_environmental_8c" startline="439" endline="472">Environmental_readDataLSB</referencedby>
+        <referencedby refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ga40f4de19b86cd4dd54190d850909debe" compoundref="_environmental_8c" startline="475" endline="508">Environmental_readTemperatureLSB</referencedby>
+        <referencedby refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ga8c4e04774311cb6369aacfd28e6eefd3" compoundref="_environmental_8c" startline="511" endline="545">Environmental_readPressureLSB</referencedby>
+        <referencedby refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1gaa134b7ebb4784e525de4a042f51265c5" compoundref="_environmental_8c" startline="548" endline="580">Environmental_readHumidityLSB</referencedby>
+        <referencedby refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ga942b519c8b24df40042b0ef8ce9e0e23" compoundref="_environmental_8c" startline="583" endline="602">Environmental_readTemperature</referencedby>
+        <referencedby refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1gaccc3e89c3dd3f3b14150c0643e3f2fb7" compoundref="_environmental_8c" startline="605" endline="623">Environmental_readPressure</referencedby>
+        <referencedby refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ga614e3797262d87a27766b13697c7f025" compoundref="_environmental_8c" startline="626" endline="645">Environmental_readHumidity</referencedby>
+        <referencedby refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1gab7a881570ce0c3b6dbb09908916c8886" compoundref="_environmental_8c" startline="648" endline="691">Environmental_setStandbyDuration</referencedby>
+        <referencedby refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1gae370b245b0220e8fcd3543e4c1030347" compoundref="_environmental_8c" startline="694" endline="742">Environmental_getStandbyDuration</referencedby>
+        <referencedby refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1gac12d7c21055e45a3816faba7126ab899" compoundref="_environmental_8c" startline="745" endline="787">Environmental_setFilterCoefficient</referencedby>
+        <referencedby refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ga3bcc760a8a3052c6dc0ce2ca866e95d3" compoundref="_environmental_8c" startline="809" endline="841">Environmental_deInit</referencedby>
+        <referencedby refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ga27b418165fd622f9acda094c915dc4c1" compoundref="_environmental_8c" startline="844" endline="907">Environmental_compensateData</referencedby>
+        <referencedby refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ga9a6b48ac7c4df666714dadad9d732815" compoundref="_environmental_8c" startline="909" endline="941">Environmental_setTemperatureOffset</referencedby>
+        <referencedby refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1gae2e5e3b3232e96863d616b6a5745ad0b" compoundref="_environmental_8c" startline="944" endline="961">Environmental_readCompensatedData</referencedby>
+        <referencedby refid="group___g_y_r_o_s_c_o_p_e_1gaa2458d131568a5310168493c8de4b008" compoundref="_gyroscope_8c" startline="253" endline="311">Gyroscope_init</referencedby>
+        <referencedby refid="group___g_y_r_o_s_c_o_p_e_1ga8947182f14af1e1606d0442aa1d46fe0" compoundref="_gyroscope_8c" startline="314" endline="379">Gyroscope_setBandwidth</referencedby>
+        <referencedby refid="group___g_y_r_o_s_c_o_p_e_1ga535fd310efa7ef77418e083c56af125b" compoundref="_gyroscope_8c" startline="382" endline="447">Gyroscope_setRange</referencedby>
+        <referencedby refid="group___g_y_r_o_s_c_o_p_e_1ga47c812193cc91cfd76b46ebf70a6f389" compoundref="_gyroscope_8c" startline="450" endline="515">Gyroscope_getRange</referencedby>
+        <referencedby refid="group___g_y_r_o_s_c_o_p_e_1ga04ffd09c3a4e659b70b556683d8d75a1" compoundref="_gyroscope_8c" startline="518" endline="584">Gyroscope_getBandwidth</referencedby>
+        <referencedby refid="group___g_y_r_o_s_c_o_p_e_1ga639775cb56f0576b49c9153631cc969e" compoundref="_gyroscope_8c" startline="587" endline="641">Gyroscope_setMode</referencedby>
+        <referencedby refid="group___g_y_r_o_s_c_o_p_e_1gaabe4b32dc48fd5cf62c265be7112dd07" compoundref="_gyroscope_8c" startline="644" endline="710">Gyroscope_getMode</referencedby>
+        <referencedby refid="group___g_y_r_o_s_c_o_p_e_1ga1af96bdf44f4c9b72af3a9c83c49d234" compoundref="_gyroscope_8c" startline="713" endline="782">Gyroscope_readXyzValue</referencedby>
+        <referencedby refid="group___g_y_r_o_s_c_o_p_e_1ga2f39d95a90398b2998b26dba51665c7d" compoundref="_gyroscope_8c" startline="785" endline="864">Gyroscope_readXyzDegreeValue</referencedby>
+        <referencedby refid="group___g_y_r_o_s_c_o_p_e_1ga2fda2f3e9d87e4c45beab3830eab5799" compoundref="_gyroscope_8c" startline="867" endline="908">Gyroscope_setSleepDuration</referencedby>
+        <referencedby refid="group___g_y_r_o_s_c_o_p_e_1ga1cfe684ee693e24616fbe9a3d898f550" compoundref="_gyroscope_8c" startline="911" endline="957">Gyroscope_setAutoSleepDuration</referencedby>
+        <referencedby refid="group___g_y_r_o_s_c_o_p_e_1gae535c68b0ad78ba4facefb44cf0cb365" compoundref="_gyroscope_8c" startline="960" endline="997">Gyroscope_deInit</referencedby>
+        <referencedby refid="_light_sensor_8c_1aa71d8ff1f79c187fa86fd8d328aacb33" compoundref="_light_sensor_8c" startline="120" endline="175">maxIsrCallback</referencedby>
+        <referencedby refid="group___l_i_g_h_t_s_e_n_s_o_r_1ga8dfdab1da8964962072f8dc80670eed3" compoundref="_light_sensor_8c" startline="197" endline="240">LightSensor_init</referencedby>
+        <referencedby refid="group___l_i_g_h_t_s_e_n_s_o_r_1gabac6a8be79ef059f61992e0a75af3510" compoundref="_light_sensor_8c" startline="243" endline="277">LightSensor_setManualMode</referencedby>
+        <referencedby refid="group___l_i_g_h_t_s_e_n_s_o_r_1gae1d9256af3559f86bc4f22483e875067" compoundref="_light_sensor_8c" startline="280" endline="314">LightSensor_setContinuousMode</referencedby>
+        <referencedby refid="group___l_i_g_h_t_s_e_n_s_o_r_1gab89dfabc33b9db7bc753d5d02b0eb7ce" compoundref="_light_sensor_8c" startline="317" endline="351">LightSensor_setIntegrationTime</referencedby>
+        <referencedby refid="group___l_i_g_h_t_s_e_n_s_o_r_1ga58b1505830f6f3b15855449c8e542864" compoundref="_light_sensor_8c" startline="354" endline="388">LightSensor_setBrightness</referencedby>
+        <referencedby refid="group___l_i_g_h_t_s_e_n_s_o_r_1ga26988871dc18cc236f0ea4327f4e5877" compoundref="_light_sensor_8c" startline="391" endline="435">LightSensor_getInterruptStatus</referencedby>
+        <referencedby refid="group___l_i_g_h_t_s_e_n_s_o_r_1gacb720f60e7a9c7c9ec89cfc83f411fa7" compoundref="_light_sensor_8c" startline="438" endline="468">LightSensor_readRawData</referencedby>
+        <referencedby refid="group___l_i_g_h_t_s_e_n_s_o_r_1ga9dd4ba9d7d78711481682560904157e1" compoundref="_light_sensor_8c" startline="471" endline="506">LightSensor_readLuxData</referencedby>
+        <referencedby refid="group___l_i_g_h_t_s_e_n_s_o_r_1ga4b97ce5f66085d87fd7a47e6536ffb8c" compoundref="_light_sensor_8c" startline="509" endline="545">LightSensor_configureThresholdInterrupt</referencedby>
+        <referencedby refid="group___l_i_g_h_t_s_e_n_s_o_r_1ga3f710e2ff25449b9fac6a0b3b818804d" compoundref="_light_sensor_8c" startline="548" endline="583">LightSensor_registerRealTimeCallback</referencedby>
+        <referencedby refid="group___l_i_g_h_t_s_e_n_s_o_r_1ga210788a263cd6a7500cd28e0d6d79f93" compoundref="_light_sensor_8c" startline="586" endline="620">LightSensor_registerDeferredCallback</referencedby>
+        <referencedby refid="group___l_i_g_h_t_s_e_n_s_o_r_1ga36eaa34f6790894c2512b349e974b102" compoundref="_light_sensor_8c" startline="623" endline="655">LightSensor_disableInterrupt</referencedby>
+        <referencedby refid="group___l_i_g_h_t_s_e_n_s_o_r_1ga3f9f8c33a566b1b596abe7b4876292a7" compoundref="_light_sensor_8c" startline="658" endline="691">LightSensor_deInit</referencedby>
+        <referencedby refid="_magnetometer_8c_1a52715c03f45aac6042642e70033d95cd" compoundref="_magnetometer_8c" startline="156" endline="182">readMagData</referencedby>
+        <referencedby refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1gaf40245eb686e93e500e099a2a6b8cc96" compoundref="_magnetometer_8c" startline="187" endline="229">Magnetometer_init</referencedby>
+        <referencedby refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1ga814223a8dcfad143f9947d2377bb5bae" compoundref="_magnetometer_8c" startline="232" endline="268">Magnetometer_setPowerMode</referencedby>
+        <referencedby refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1ga2282c34c9edd3218270de1da4291e91f" compoundref="_magnetometer_8c" startline="271" endline="307">Magnetometer_setPresetMode</referencedby>
+        <referencedby refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1gaefdb2fe3bfe409cee62ed9027a06d9a8" compoundref="_magnetometer_8c" startline="310" endline="346">Magnetometer_setDataRate</referencedby>
+        <referencedby refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1ga3ad1ff8cf577dd856fba8135b1a8d6bc" compoundref="_magnetometer_8c" startline="349" endline="397">Magnetometer_getPowerMode</referencedby>
+        <referencedby refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1ga34262b75df9cc64e4be0eefcfa34c435" compoundref="_magnetometer_8c" startline="400" endline="448">Magnetometer_getPresetMode</referencedby>
+        <referencedby refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1gaef7d12d92efc37972cdc3c64dead649a" compoundref="_magnetometer_8c" startline="451" endline="498">Magnetometer_getDataRate</referencedby>
+        <referencedby refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1ga0cec30e7bfc8cb941272bf952358c1da" compoundref="_magnetometer_8c" startline="501" endline="549">Magnetometer_readXyzLsbData</referencedby>
+        <referencedby refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1gacd41dcea2e551fea5ab4d225d17c6e0e" compoundref="_magnetometer_8c" startline="552" endline="598">Magnetometer_readXyzTeslaData</referencedby>
+        <referencedby refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1ga43cfc8f1215a003fe6176d8a1e45d4a3" compoundref="_magnetometer_8c" startline="601" endline="632">Magnetometer_deInit</referencedby>
+        <referencedby refid="_axis_remap_8c_1aa5483f1ef3e297e895b29bb26745c578" compoundref="_axis_remap_8c" startline="77" endline="186">AxisRemap_remapSensorData</referencedby>
+        <referencedby refid="_bma280_utils_8c_1a8dd47fd99bb6a894f1fdb7765f113a72" compoundref="_bma280_utils_8c" startline="136" endline="180">configureSlopeInterrupt</referencedby>
+        <referencedby refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gad28cd9dcdad4868c49a8f0b366129159" compoundref="_bma280_utils_8c" startline="194" endline="241">Bma280Utils_initialize</referencedby>
+        <referencedby refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gacbfe1aa23afcc1a2202cb59641ff6911" compoundref="_bma280_utils_8c" startline="246" endline="269">Bma280Utils_remapAxis</referencedby>
+        <referencedby refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gaea1554403ec5ae6ad5a634c231dd5954" compoundref="_bma280_utils_8c" startline="272" endline="311">Bma280Utils_configInterrupt</referencedby>
+        <referencedby refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ga78022e6a93c3ad60bc81a7c8411aba39" compoundref="_bma280_utils_8c" startline="350" endline="375">Bma280Utils_uninitialize</referencedby>
+        <referencedby refid="group___b_m_e280___s_e_n_s_o_r_u_t_i_l_s_1gade35e15aa7d82ef6278aa12e37818aa0" compoundref="_bme280_utils_8c" startline="104" endline="175">Bme280Utils_initialize</referencedby>
+        <referencedby refid="group___b_m_e280___s_e_n_s_o_r_u_t_i_l_s_1ga73ff7abf2a4ec0d356224fcb44160e58" compoundref="_bme280_utils_8c" startline="178" endline="205">Bme280Utils_uninitialize</referencedby>
+        <referencedby refid="group___b_m_g160___s_e_n_s_o_r_u_t_i_l_s_1gaf1fb45718693a026e8d7c7acea433493" compoundref="_bmg160_utils_8c" startline="104" endline="145">Bmg160Utils_initialize</referencedby>
+        <referencedby refid="group___b_m_g160___s_e_n_s_o_r_u_t_i_l_s_1ga8f9d55b9efbee2a2e440ae31d4b612fc" compoundref="_bmg160_utils_8c" startline="148" endline="175">Bmg160Utils_uninitialize</referencedby>
+        <referencedby refid="group___b_m_g160___s_e_n_s_o_r_u_t_i_l_s_1gaf0e41ccbd5a733cbea4d72783d1d518c" compoundref="_bmg160_utils_8c" startline="178" endline="206">Bmg160Utils_remapAxis</referencedby>
+        <referencedby refid="group___b_m_i160___s_e_n_s_o_r_u_t_i_l_s_1ga448a33506d894b5f181ec6ca72cc558a" compoundref="_bmi160_utils_8c" startline="171" endline="195">Bmi160Utils_remapAxis</referencedby>
+        <referencedby refid="group___b_m_m150___s_e_n_s_o_r_u_t_i_l_s_1ga1a609179f668971e29a1af81c20fe1c3" compoundref="_bmm150_utils_8c" startline="105" endline="153">Bmm150Utils_initialize</referencedby>
+        <referencedby refid="group___b_m_m150___s_e_n_s_o_r_u_t_i_l_s_1ga4d6b91067fbdaf51211640801eec92d5" compoundref="_bmm150_utils_8c" startline="156" endline="180">Bmm150Utils_remapAxis</referencedby>
+        <referencedby refid="group___b_m_m150___s_e_n_s_o_r_u_t_i_l_s_1ga7ac4195e7ba480e9d6f3543ffc9dca2b" compoundref="_bmm150_utils_8c" startline="183" endline="210">Bmm150Utils_uninitialize</referencedby>
+        <referencedby refid="group___m_a_x44009___s_e_n_s_o_r_u_t_i_l_s_1gaf7a721e130f2663dc135b52f64346ecc" compoundref="_max44009_utils_8c" startline="97" endline="148">Max44009Utils_initialize</referencedby>
+        <referencedby refid="group___m_a_x44009___s_e_n_s_o_r_u_t_i_l_s_1ga1d7f1c574c04ad912549e31aaacfe259" compoundref="_max44009_utils_8c" startline="151" endline="168">Max44009Utils_configInterrupt</referencedby>
+        <referencedby refid="group___m_a_x44009___s_e_n_s_o_r_u_t_i_l_s_1gaad6f3d2e68b426f1b95f16ed11e61a70" compoundref="_max44009_utils_8c" startline="186" endline="215">Max44009Utils_uninitialize</referencedby>
+        <referencedby refid="_sensor_node_mapping_8h_1a76bdc1fd6f340a0a598dadddb9ab278a" compoundref="_sensor_node_mapping_8c" startline="62" endline="88">SensorNodeMapping_Init</referencedby>
+        <referencedby refid="_sensor_node_mapping_8h_1ac656d2e1648f159bb70e26e1666a94c3" compoundref="_sensor_node_mapping_8c" startline="91" endline="100">SensorNodeMapping_Write</referencedby>
+        <referencedby refid="_sensor_node_mapping_8h_1a77b5d6036b31e0f795e5167c9435db6c" compoundref="_sensor_node_mapping_8c" startline="102" endline="110">SensorNodeMapping_Read</referencedby>
+        <referencedby refid="_sensor_node_mapping_8h_1a9ed27f9661fce27488014ca5b12372c8" compoundref="_sensor_node_mapping_8c" startline="113" endline="121">SensorNodeMapping_BurstRead</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___b_a_s_i_c_s_1gac97b8ee753e4405397a42ad5799b0f9e" prot="public" static="no">
+        <name>null</name>
+        <initializer>((void *) 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Basics.h" line="84" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Basics.h" bodystart="84" bodyend="-1"/>
+        <referencedby refid="_serval___callable_8h_1a3960f4b58f721ecd74cd6fb356426b46" compoundref="_serval___callable_8h" startline="120" endline="124">Callable_isAssigned</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___b_a_s_i_c_s_1ga41f9c5fb8b08eb5dc3edce4dcb37fee7" prot="public" static="no">
+        <name>true</name>
+        <initializer>((bool) 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Basics.h" line="69" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Basics.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___b_a_s_i_c_s_1gaa8cecfc5c5c054d2875c03e77b7be15d" prot="public" static="no">
+        <name>TRUE</name>
+        <initializer>((bool) 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Basics.h" line="73" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Basics.h" bodystart="73" bodyend="-1"/>
+        <referencedby refid="driver_8h_1a2c3fed985798e8518a89943c4e3193d1" compoundref="driver_8c" startline="603" endline="620">_SlDrvRxIrqHandler</referencedby>
+        <referencedby refid="driver_8h_1a442fb2f7327f3073f2ddc00d410b9325" compoundref="driver_8c" startline="625" endline="674">_SlDrvCmdOp</referencedby>
+        <referencedby refid="driver_8h_1a232d29361e3abcd8737a7c62320999e9" compoundref="driver_8c" startline="681" endline="786">_SlDrvDataReadOp</referencedby>
+        <referencedby refid="driver_8h_1a6efdaf73c7789eec46fa642dbeb1a8b4" compoundref="driver_8c" startline="791" endline="862">_SlDrvDataWriteOp</referencedby>
+        <referencedby refid="driver_8c_1a3d66c1531b132da08639f90bc7138c2f" compoundref="driver_8c" startline="867" endline="936">_SlDrvMsgWrite</referencedby>
+        <referencedby refid="driver_8c_1a938358cbc0da41c53ec56a5ef7c1bff6" compoundref="driver_8c" startline="1231" endline="1289">_SlAsyncEventGenericHandler</referencedby>
+        <referencedby refid="driver_8c_1ad80816b51658603daa919f9f1f9b20a0" compoundref="driver_8c" startline="1295" endline="1391">_SlDrvMsgReadCmdCtx</referencedby>
+        <referencedby refid="driver_8h_1a5e081105b679db5f8284ca868d3181fa" compoundref="driver_8c" startline="1396" endline="1481">_SlDrvMsgReadSpawnCtx</referencedby>
+        <referencedby refid="driver_8c_1a7798a0d938832d028cc7c3b3d91e9b48" compoundref="driver_8c" startline="1588" endline="1714">_SlDrvRxHdrRead</referencedby>
+        <referencedby refid="driver_8c_1a393717a405238bf4bec58edafc77881b" compoundref="driver_8c" startline="2047" endline="2056">_SlDrvObjGlobalLockWaitForever</referencedby>
+        <referencedby refid="driver_8h_1a714cdaa4e6c41b9fee80d98ef165ed0f" compoundref="driver_8c" startline="2085" endline="2098">_SlDrvSyncObjWaitForever</referencedby>
+        <referencedby refid="driver_8h_1a995e127353908119519878516131cb9c" compoundref="driver_8c" startline="2106" endline="2121">_SlDrvSyncObjWaitTimeout</referencedby>
+        <referencedby refid="driver_8h_1a50ec1d708ec955912044b2669c4723ea" compoundref="driver_8c" startline="2124" endline="2181">_SlDriverHandleError</referencedby>
+        <referencedby refid="nonos_8h_1a82603f206edc009b152527b72a0d6d65" compoundref="nonos_8c" startline="137" endline="162">_SlNonOsSpawn</referencedby>
+        <referencedby refid="nonos_8h_1ac9697cfc827b271c5570f88a832d1f9c" compoundref="nonos_8c" startline="165" endline="194">_SlNonOsMainLoopTask</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Basic macro definitions and standard imports. </para>    </briefdescription>
+    <detaileddescription>
+<para>This file provides the standard int and bool header support apart from compiler abstraction library.<itemizedlist>
+<listitem><para>The library provides macros to abstract from non standard C compiler switches like GCC&apos;s <bold>attribute</bold> keyword.</para></listitem><listitem><para>abstraction macros for all attributes including always_inline, section, unused arguments and variable macros. </para></listitem></itemizedlist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,448 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_l_e_d_8c" kind="file">
+    <compoundname>LED.c</compoundname>
+    <includes refid="_xdk_common_info_8h" local="yes">XdkCommonInfo.h</includes>
+    <incdepgraph>
+      <node id="24266">
+        <label>stdbool.h</label>
+      </node>
+      <node id="24262">
+        <label>XdkCommonInfo.h</label>
+        <link refid="_xdk_common_info_8h"/>
+        <childnode refid="24263" relation="include">
+        </childnode>
+      </node>
+      <node id="24265">
+        <label>stdint.h</label>
+      </node>
+      <node id="24263">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="24264" relation="include">
+        </childnode>
+      </node>
+      <node id="24268">
+        <label>stdlib.h</label>
+      </node>
+      <node id="24267">
+        <label>string.h</label>
+      </node>
+      <node id="24264">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="24265" relation="include">
+        </childnode>
+        <childnode refid="24266" relation="include">
+        </childnode>
+        <childnode refid="24267" relation="include">
+        </childnode>
+        <childnode refid="24268" relation="include">
+        </childnode>
+      </node>
+      <node id="24261">
+        <label>SDK/xdk110/Common/source/Connectivity/LED.c</label>
+        <link refid="LED.c"/>
+        <childnode refid="24262" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_l_e_d_8c_1abff8f3a204e79671b98fabaa652198c3" prot="public" static="no">
+        <name>BCDS_MODULE_ID</name>
+        <initializer><ref refid="_xdk_common_info_8h_1a7d550569e587db8903a47a7044e6e935ac54f060bfcc4d4c0903249d40994771d" kindref="member">XDK_COMMON_ID_LED</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LED.c" line="51" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LED.c" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This module handles the LED features. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="comment">/*<sp/>module<sp/>includes<sp/>**********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>own<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_xdk_common_info_8h" kindref="compound">XdkCommonInfo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>BCDS_MODULE_ID<sp/><sp/></highlight><highlight class="comment">/*<sp/>Module<sp/>ID<sp/>define<sp/>before<sp/>including<sp/>Basics<sp/>package*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="_l_e_d_8c_1abff8f3a204e79671b98fabaa652198c3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BCDS_MODULE_ID<sp/>XDK_COMMON_ID_LED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>XDK_CONNECTIVITY_LED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>own<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_x_d_k___l_e_d_8h" kindref="compound">XDK_LED.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>additional<sp/>interface<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_s_p___board_type_8h" kindref="compound">BSP_BoardType.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___b_s_p___l_e_d_8h" kindref="compound">BCDS_BSP_LED.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;em_gpio.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_free_r_t_o_s_8h" kindref="compound">FreeRTOS.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="timers_8h" kindref="compound">timers.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>constant<sp/>definitions<sp/>*****************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>@todo<sp/>-<sp/>Add<sp/>support<sp/>in<sp/>BSP<sp/>to<sp/>read<sp/>the<sp/>status<sp/>of<sp/>IO<sp/>instead<sp/>of<sp/>em_gpio.h<sp/>usage<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_ORANGE_PIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_ORANGE_PORT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(gpioPortB)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_RED_PIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(12)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_RED_PORT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(gpioPortA)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_YELLOW_PIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_YELLOW_PORT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(gpioPortB)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_INBUILT_ALL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(LED_INBUILT_RED<sp/>|<sp/>LED_INBUILT_ORANGE<sp/>|<sp/>LED_INBUILT_YELLOW)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>local<sp/>variables<sp/>**********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="timers_8h_1aae4bf1dce696ab615d5fd073606fd3cb" kindref="member">TimerHandle_t</ref><sp/>LEDTimerHandle<sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="group___l_e_d_1ga69df03f3460daaef968a73b0012a9cbe" kindref="member">LED_T</ref><sp/>LEDBlinkColour<sp/>=<sp/><ref refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a9a44adc9095a3ee8df5e3e837397fca5" kindref="member">LED_INBUILT_INVALID</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>LEDBlinkIsOnCycle<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>LEDBlinkRollingPatternIsEnabled<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/>LEDBlinkOnTimeInMs<sp/>=<sp/>0UL;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/>LEDBlinkOffTimeInMs<sp/>=<sp/>0UL;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>local<sp/>functions<sp/>*********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>LEDPatternRunning(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(0UL<sp/>==<sp/>count)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___l_e_d_1gaa08f7e9c416b666b93efadee96284629" kindref="member">LED_On</ref>(<ref refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a9ef5f00f3a78db87b6b039fcc52f82bd" kindref="member">LED_INBUILT_ORANGE</ref>);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count++;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(1UL<sp/>==<sp/>count)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___l_e_d_1gaa08f7e9c416b666b93efadee96284629" kindref="member">LED_On</ref>(<ref refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a2b719feebe5e5a744315a07766e16af2" kindref="member">LED_INBUILT_RED</ref>);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count++;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(2UL<sp/>==<sp/>count)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___l_e_d_1gaa08f7e9c416b666b93efadee96284629" kindref="member">LED_On</ref>(<ref refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a9ef5f00f3a78db87b6b039fcc52f82bd" kindref="member">LED_INBUILT_ORANGE</ref>);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count++;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___l_e_d_1gaa08f7e9c416b666b93efadee96284629" kindref="member">LED_On</ref>(<ref refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a9563b16cb4e0808638f4838b21350347" kindref="member">LED_INBUILT_YELLOW</ref>);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retcode;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LEDTimerCallbackHandler(<ref refid="timers_8h_1aae4bf1dce696ab615d5fd073606fd3cb" kindref="member">TimerHandle_t</ref><sp/>timer)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" kindref="member">BCDS_UNUSED</ref>(timer);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>pdTRUE<sp/>!=<sp/><ref refid="timers_8h_1a8327c7fc10aee414cb163b445c5269a4" kindref="member">xTimerStop</ref>(LEDTimerHandle,<sp/>0))</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8ba84716d310c64d38417c7b9fdf8b0f105" kindref="member">RETCODE_LED_BLINK_TIMER_OPERATION_FAILED</ref>);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(LEDBlinkRollingPatternIsEnabled)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___l_e_d_1ga017ce6b05845f8ea5f91e0103cf025a6" kindref="member">LED_Off</ref>(LED_INBUILT_ALL);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>LEDPatternRunning();</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___l_e_d_1gaf2f9764f6bad12c86c46c506ecd3b3b0" kindref="member">LED_Toggle</ref>(LEDBlinkColour);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>pdTRUE<sp/>!=<sp/><ref refid="timers_8h_1ab12eac1c69a3437b8161ce81ff34b2f4" kindref="member">xTimerChangePeriod</ref>(LEDTimerHandle,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pdMS_TO_TICKS((LEDBlinkRollingPatternIsEnabled?LEDBlinkOnTimeInMs:(LEDBlinkIsOnCycle<sp/>?<sp/>LEDBlinkOffTimeInMs<sp/>:<sp/>LEDBlinkOnTimeInMs))),<sp/>0))</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8ba84716d310c64d38417c7b9fdf8b0f105" kindref="member">RETCODE_LED_BLINK_TIMER_OPERATION_FAILED</ref>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LEDBlinkIsOnCycle<sp/>=<sp/>!LEDBlinkIsOnCycle;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>!=<sp/>retcode)</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2" kindref="member">Retcode_RaiseError</ref>(retcode);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>LEDBlinkEnable(<ref refid="group___l_e_d_1ga69df03f3460daaef968a73b0012a9cbe" kindref="member">LED_T</ref><sp/>ledToBlink,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ledPattern,<sp/>uint32_t<sp/>onTimeInMs,<sp/>uint32_t<sp/>offTimeInMs)</highlight></codeline>
+<codeline lineno="180"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>LEDTimerHandle)</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" kindref="member">RETCODE_UNINITIALIZED</ref>);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___l_e_d_1gaa08f7e9c416b666b93efadee96284629" kindref="member">LED_On</ref>(ledToBlink);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>pdFALSE<sp/>!=<sp/><ref refid="timers_8h_1a2cd9b1399fb25203be698f123846dc33" kindref="member">xTimerIsTimerActive</ref>(LEDTimerHandle))</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>pdTRUE<sp/>!=<sp/><ref refid="timers_8h_1a8327c7fc10aee414cb163b445c5269a4" kindref="member">xTimerStop</ref>(LEDTimerHandle,<sp/>0))</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8ba84716d310c64d38417c7b9fdf8b0f105" kindref="member">RETCODE_LED_BLINK_TIMER_OPERATION_FAILED</ref>);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LEDBlinkOnTimeInMs<sp/>=<sp/>onTimeInMs;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LEDBlinkOffTimeInMs<sp/>=<sp/>offTimeInMs;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LEDBlinkIsOnCycle<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LEDBlinkColour<sp/>=<sp/>ledToBlink;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LEDBlinkRollingPatternIsEnabled<sp/>=<sp/>ledPattern;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>pdTRUE<sp/>!=<sp/><ref refid="timers_8h_1ab12eac1c69a3437b8161ce81ff34b2f4" kindref="member">xTimerChangePeriod</ref>(LEDTimerHandle,<sp/>pdMS_TO_TICKS(LEDBlinkOnTimeInMs),<sp/>0))</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8ba84716d310c64d38417c7b9fdf8b0f105" kindref="member">RETCODE_LED_BLINK_TIMER_OPERATION_FAILED</ref>);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retcode;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>LEDBlinkDisable(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="219"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>LEDBlinkIsOnCycle<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>LEDBlinkRollingPatternIsEnabled<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>LEDTimerHandle)</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" kindref="member">RETCODE_UNINITIALIZED</ref>);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="timers_8h_1a2cd9b1399fb25203be698f123846dc33" kindref="member">xTimerIsTimerActive</ref>(LEDTimerHandle)<sp/>!=<sp/>pdFALSE)</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>pdTRUE<sp/>!=<sp/><ref refid="timers_8h_1a8327c7fc10aee414cb163b445c5269a4" kindref="member">xTimerStop</ref>(LEDTimerHandle,<sp/>0))</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8ba84716d310c64d38417c7b9fdf8b0f105" kindref="member">RETCODE_LED_BLINK_TIMER_OPERATION_FAILED</ref>);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___l_e_d_1ga017ce6b05845f8ea5f91e0103cf025a6" kindref="member">LED_Off</ref>(LED_INBUILT_ALL);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retcode;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___l_e_d_1gaec11150ded6e8967d64145a758af0616" kindref="member">LED_Setup</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="251"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>(LEDTimerHandle<sp/>=<sp/>xTimerCreate(</highlight><highlight class="stringliteral">&quot;LED_Blink&quot;</highlight><highlight class="normal">,<sp/>pdMS_TO_TICKS(10)<sp/></highlight><highlight class="comment">/*<sp/>dummy<sp/>value<sp/>*/</highlight><highlight class="normal">,<sp/>pdFALSE,<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,<sp/>LEDTimerCallbackHandler)))</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6acec8ccdc2bb7d9c1e4806729ea2acb76" kindref="member">RETCODE_SEVERITY_FATAL</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba497273b2285191edc1cda8648b67250a" kindref="member">RETCODE_OUT_OF_RESOURCES</ref>);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>BSP_LED_Connect();</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retcode;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___l_e_d_1gae3a60da7a90139abb54f4ddb36456756" kindref="member">LED_Enable</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="268"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(BSP_LED_EnableAll());</highlight></codeline>
+<codeline lineno="270"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___l_e_d_1gaa08f7e9c416b666b93efadee96284629" kindref="member">LED_On</ref>(<ref refid="group___l_e_d_1ga69df03f3460daaef968a73b0012a9cbe" kindref="member">LED_T</ref><sp/>led)</highlight></codeline>
+<codeline lineno="274"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!((led<sp/>&amp;<sp/>(<ref refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a2b719feebe5e5a744315a07766e16af2" kindref="member">LED_INBUILT_RED</ref><sp/>|<sp/><ref refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a9ef5f00f3a78db87b6b039fcc52f82bd" kindref="member">LED_INBUILT_ORANGE</ref><sp/>|<sp/><ref refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a9563b16cb4e0808638f4838b21350347" kindref="member">LED_INBUILT_YELLOW</ref>))))</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref>);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)<sp/>&amp;&amp;<sp/>(led<sp/>&amp;<sp/><ref refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a2b719feebe5e5a744315a07766e16af2" kindref="member">LED_INBUILT_RED</ref>))</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>BSP_LED_Switch((uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___l_e_d_1ggaa8667c77de71404efc89df73ff77fbe8a4ab90f395d545f77577d19c485e18e99" kindref="member">BSP_XDK_LED_R</ref>,<sp/>(uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___l_e_d_1gga04070ddf0e599d5784e51f7f731102d8aa8351fce64f9b2047a9e6f4dd4257edf" kindref="member">BSP_LED_COMMAND_ON</ref>);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)<sp/>&amp;&amp;<sp/>(led<sp/>&amp;<sp/><ref refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a9ef5f00f3a78db87b6b039fcc52f82bd" kindref="member">LED_INBUILT_ORANGE</ref>))</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>BSP_LED_Switch((uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___l_e_d_1ggaa8667c77de71404efc89df73ff77fbe8a6bb9fa6b265dcf74112acf846bfecb3b" kindref="member">BSP_XDK_LED_O</ref>,<sp/>(uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___l_e_d_1gga04070ddf0e599d5784e51f7f731102d8aa8351fce64f9b2047a9e6f4dd4257edf" kindref="member">BSP_LED_COMMAND_ON</ref>);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)<sp/>&amp;&amp;<sp/>(led<sp/>&amp;<sp/><ref refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a9563b16cb4e0808638f4838b21350347" kindref="member">LED_INBUILT_YELLOW</ref>))</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>BSP_LED_Switch((uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___l_e_d_1ggaa8667c77de71404efc89df73ff77fbe8a454d7f443360a9b333f17e143e27abc4" kindref="member">BSP_XDK_LED_Y</ref>,<sp/>(uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___l_e_d_1gga04070ddf0e599d5784e51f7f731102d8aa8351fce64f9b2047a9e6f4dd4257edf" kindref="member">BSP_LED_COMMAND_ON</ref>);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retcode;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___l_e_d_1ga017ce6b05845f8ea5f91e0103cf025a6" kindref="member">LED_Off</ref>(<ref refid="group___l_e_d_1ga69df03f3460daaef968a73b0012a9cbe" kindref="member">LED_T</ref><sp/>led)</highlight></codeline>
+<codeline lineno="299"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!((led<sp/>&amp;<sp/>(LED_INBUILT_RED<sp/>|<sp/>LED_INBUILT_ORANGE<sp/>|<sp/>LED_INBUILT_YELLOW))))</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref>);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)<sp/>&amp;&amp;<sp/>(led<sp/>&amp;<sp/>LED_INBUILT_RED))</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>BSP_LED_Switch((uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___l_e_d_1ggaa8667c77de71404efc89df73ff77fbe8a4ab90f395d545f77577d19c485e18e99" kindref="member">BSP_XDK_LED_R</ref>,<sp/>(uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___l_e_d_1gga04070ddf0e599d5784e51f7f731102d8a789d7d3b630958c461bf0568b1a72b29" kindref="member">BSP_LED_COMMAND_OFF</ref>);</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)<sp/>&amp;&amp;<sp/>(led<sp/>&amp;<sp/>LED_INBUILT_ORANGE))</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>BSP_LED_Switch((uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___l_e_d_1ggaa8667c77de71404efc89df73ff77fbe8a6bb9fa6b265dcf74112acf846bfecb3b" kindref="member">BSP_XDK_LED_O</ref>,<sp/>(uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___l_e_d_1gga04070ddf0e599d5784e51f7f731102d8a789d7d3b630958c461bf0568b1a72b29" kindref="member">BSP_LED_COMMAND_OFF</ref>);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)<sp/>&amp;&amp;<sp/>(led<sp/>&amp;<sp/>LED_INBUILT_YELLOW))</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>BSP_LED_Switch((uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___l_e_d_1ggaa8667c77de71404efc89df73ff77fbe8a454d7f443360a9b333f17e143e27abc4" kindref="member">BSP_XDK_LED_Y</ref>,<sp/>(uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___l_e_d_1gga04070ddf0e599d5784e51f7f731102d8a789d7d3b630958c461bf0568b1a72b29" kindref="member">BSP_LED_COMMAND_OFF</ref>);</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retcode;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___l_e_d_1gaf2f9764f6bad12c86c46c506ecd3b3b0" kindref="member">LED_Toggle</ref>(<ref refid="group___l_e_d_1ga69df03f3460daaef968a73b0012a9cbe" kindref="member">LED_T</ref><sp/>led)</highlight></codeline>
+<codeline lineno="324"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!((led<sp/>&amp;<sp/>(LED_INBUILT_RED<sp/>|<sp/>LED_INBUILT_ORANGE<sp/>|<sp/>LED_INBUILT_YELLOW))))</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref>);</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)<sp/>&amp;&amp;<sp/>(led<sp/>&amp;<sp/>LED_INBUILT_RED))</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>BSP_LED_Switch((uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___l_e_d_1ggaa8667c77de71404efc89df73ff77fbe8a4ab90f395d545f77577d19c485e18e99" kindref="member">BSP_XDK_LED_R</ref>,<sp/>(uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___l_e_d_1gga04070ddf0e599d5784e51f7f731102d8a474237186e86749743987833c3b790f2" kindref="member">BSP_LED_COMMAND_TOGGLE</ref>);</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)<sp/>&amp;&amp;<sp/>(led<sp/>&amp;<sp/>LED_INBUILT_ORANGE))</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>BSP_LED_Switch((uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___l_e_d_1ggaa8667c77de71404efc89df73ff77fbe8a6bb9fa6b265dcf74112acf846bfecb3b" kindref="member">BSP_XDK_LED_O</ref>,<sp/>(uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___l_e_d_1gga04070ddf0e599d5784e51f7f731102d8a474237186e86749743987833c3b790f2" kindref="member">BSP_LED_COMMAND_TOGGLE</ref>);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)<sp/>&amp;&amp;<sp/>(led<sp/>&amp;<sp/>LED_INBUILT_YELLOW))</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>BSP_LED_Switch((uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___l_e_d_1ggaa8667c77de71404efc89df73ff77fbe8a454d7f443360a9b333f17e143e27abc4" kindref="member">BSP_XDK_LED_Y</ref>,<sp/>(uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___l_e_d_1gga04070ddf0e599d5784e51f7f731102d8a474237186e86749743987833c3b790f2" kindref="member">BSP_LED_COMMAND_TOGGLE</ref>);</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retcode;</highlight></codeline>
+<codeline lineno="345"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___l_e_d_1ga7d46b05a734bd343a41811e1f662e421" kindref="member">LED_Blink</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable,<sp/><ref refid="group___l_e_d_1ga69df03f3460daaef968a73b0012a9cbe" kindref="member">LED_T</ref><sp/>ledToBlink,<sp/>uint32_t<sp/>onTimeInMs,<sp/>uint32_t<sp/>offTimeInMs)</highlight></codeline>
+<codeline lineno="349"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enable)</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>LEDBlinkEnable(ledToBlink,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/>onTimeInMs,<sp/>offTimeInMs);</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>LEDBlinkDisable();</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retcode;</highlight></codeline>
+<codeline lineno="361"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___l_e_d_1gad0e48e65b26fce58c6a1ca7f2314cde9" kindref="member">LED_Pattern</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable,<sp/><ref refid="group___l_e_d_1gac1a2dc1d7d8cd530cdcabe37093c8a8e" kindref="member">LED_Pattern_T</ref><sp/>pattern,<sp/>uint32_t<sp/>statusTimeInMs)</highlight></codeline>
+<codeline lineno="365"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___l_e_d_1gga8873b78f1ec88bb296a06e275f1dcf72a39b80f3b395d236dce0a1c6b37349b16" kindref="member">LED_PATTERN_ROLLING</ref><sp/>!=<sp/>pattern)</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref>);</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enable)</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>LEDBlinkEnable(LED_INBUILT_ALL,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/>statusTimeInMs,<sp/>0UL);</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>LEDBlinkDisable();</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retcode;</highlight></codeline>
+<codeline lineno="384"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___l_e_d_1ga30fe5930882dc043c840c795eecbe595" kindref="member">LED_Status</ref>(<ref refid="group___l_e_d_1ga69df03f3460daaef968a73b0012a9cbe" kindref="member">LED_T</ref><sp/>led,<sp/>uint8_t<sp/>*<sp/>status)</highlight></codeline>
+<codeline lineno="388"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(led)</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>LED_INBUILT_RED:</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*status<sp/>=<sp/>GPIO_PinOutGet(LED_RED_PORT,<sp/>LED_RED_PIN);</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>LED_INBUILT_ORANGE:</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*status<sp/>=<sp/>GPIO_PinOutGet(LED_ORANGE_PORT,<sp/>LED_ORANGE_PIN);</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>LED_INBUILT_YELLOW:</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*status<sp/>=<sp/>GPIO_PinOutGet(LED_YELLOW_PORT,<sp/>LED_YELLOW_PIN);</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref>);</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retcode;</highlight></codeline>
+<codeline lineno="407"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"></highlight></codeline>
+<codeline lineno="409"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>XDK_CONNECTIVITY_LED<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LED.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_serval___thread_8h" kind="file">
+    <compoundname>Serval_Thread.h</compoundname>
+    <includes refid="_p_threading_8h" local="no">PThreading.h</includes>
+    <incdepgraph>
+      <node id="33067">
+        <label>stdbool.h</label>
+      </node>
+      <node id="33076">
+        <label>list.h</label>
+      </node>
+      <node id="33064">
+        <label>BCDS_Assert.h</label>
+        <link refid="_b_c_d_s___assert_8h"/>
+        <childnode refid="33065" relation="include">
+        </childnode>
+      </node>
+      <node id="33065">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="33066" relation="include">
+        </childnode>
+      </node>
+      <node id="33062">
+        <label>stdint.h</label>
+      </node>
+      <node id="33069">
+        <label>stdlib.h</label>
+      </node>
+      <node id="33070">
+        <label>BCDS_TaskConfig.h</label>
+        <link refid="_b_c_d_s___task_config_8h"/>
+      </node>
+      <node id="33073">
+        <label>semphr.h</label>
+        <link refid="semphr_8h"/>
+        <childnode refid="33074" relation="include">
+        </childnode>
+      </node>
+      <node id="33061">
+        <label>stddef.h</label>
+      </node>
+      <node id="33059">
+        <label>PThreading.h</label>
+        <link refid="_p_threading_8h"/>
+        <childnode refid="33060" relation="include">
+        </childnode>
+        <childnode refid="33063" relation="include">
+        </childnode>
+        <childnode refid="33073" relation="include">
+        </childnode>
+        <childnode refid="33075" relation="include">
+        </childnode>
+      </node>
+      <node id="33072">
+        <label>portable.h</label>
+      </node>
+      <node id="33068">
+        <label>string.h</label>
+      </node>
+      <node id="33066">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="33062" relation="include">
+        </childnode>
+        <childnode refid="33067" relation="include">
+        </childnode>
+        <childnode refid="33068" relation="include">
+        </childnode>
+        <childnode refid="33069" relation="include">
+        </childnode>
+      </node>
+      <node id="33071">
+        <label>projdefs.h</label>
+      </node>
+      <node id="33074">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+      </node>
+      <node id="33058">
+        <label>SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/pal/Serval_Thread.h</label>
+        <link refid="Serval_Thread.h"/>
+        <childnode refid="33059" relation="include">
+        </childnode>
+      </node>
+      <node id="33075">
+        <label>task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="33076" relation="include">
+        </childnode>
+      </node>
+      <node id="33063">
+        <label>FreeRTOSConfig.h</label>
+        <link refid="_free_r_t_o_s_config_8h"/>
+        <childnode refid="33062" relation="include">
+        </childnode>
+        <childnode refid="33064" relation="include">
+        </childnode>
+        <childnode refid="33070" relation="include">
+        </childnode>
+      </node>
+      <node id="33060">
+        <label>FreeRTOS.h</label>
+        <link refid="_free_r_t_o_s_8h"/>
+        <childnode refid="33061" relation="include">
+        </childnode>
+        <childnode refid="33062" relation="include">
+        </childnode>
+        <childnode refid="33063" relation="include">
+        </childnode>
+        <childnode refid="33071" relation="include">
+        </childnode>
+        <childnode refid="33072" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+<para>An interface to platform specific thread handling functions which are needed to implement the multi-threading safety of the stack. </para>    </briefdescription>
+    <detaileddescription>
+<para>This header includes the header <ref refid="_p_threading_8h" kindref="compound">PThreading.h</ref> which must be provided by the PAL implementation. This header also contains pre-processor directives to double-check the right content of <ref refid="_p_threading_8h" kindref="compound">PThreading.h</ref>.</para><para>In the following we document the required content of <ref refid="_p_threading_8h" kindref="compound">PThreading.h</ref>. </para><para>#define SERVAL_MUTEX_MODE_ENABLE <linebreak/>
+ #define SERVAL_MUTEX_MODE_DISABLE <linebreak/>
+ #define SERVAL_MUTEX_MODE_TEST <linebreak/>
+ An enumeration of the supported mutex modes given as numbers e.g. 0, 1, 2. It is used by the stack along with the macro <ref refid="_p_threading_8h_1a89511cc7aec7e420fd4969eded3fcde1" kindref="member">SERVAL_MUTEX_SET_MODE(mode)</ref>. </para><para>#define <ref refid="_p_threading_8h_1a89511cc7aec7e420fd4969eded3fcde1" kindref="member">SERVAL_MUTEX_SET_MODE(mode)</ref> <linebreak/>
+ this macro is for testing only and by this optional by this, this macro may be implemented as empty and this macro has only an effect when the code is compiled in TRACE or DEBUG Mode <itemizedlist>
+<listitem>
+<para>SERVAL_MUTEX_MODE_ENABLE: enables normal mutex working  </para></listitem>
+<listitem>
+<para>SERVAL_MUTEX_MODE_TEST: before locking an mutex there is a short wait time, so other treads get the bigger chance to be dispatched -&gt; this makes the propability for bad multithreading access higher (error counter)  </para></listitem>
+<listitem>
+<para>SERVAL_MUTEX_MODE_DISABLE: disable mutexes, but detect bad multi-threading access (error counter)  </para></listitem>
+</itemizedlist>
+</para><para>#define <ref refid="_p_threading_8h_1a7d80807bb0d9a7a51a387d885ddfce46" kindref="member">SERVAL_MUTEX_EXTERN(mutex)</ref> <linebreak/>
+ declares the datatype of mutex as external. for use in headers, if mutex is used more as in one module this macro must be implemented in the PAL </para><para>#define <ref refid="_p_threading_8h_1a25126f69ca7b451ad0f69f3f15333c4a" kindref="member">SERVAL_MUTEX_INSTANCE(mutex)</ref> <linebreak/>
+ declares the datatype for use in data declaration section of module source file this macro must be implemented in the PAL </para><para>#define <ref refid="_p_threading_8h_1ade128d54c583f02db2ac5922d73cf5ce" kindref="member">SERVAL_MUTEX_INIT()</ref> <linebreak/>
+ initalizes the global data of mutex module this macro must be implemented in the PAL </para><para>#define <ref refid="_p_threading_8h_1a6b236ecaa2270ac4cb0077842987dbcf" kindref="member">SERVAL_MUTEX_CREATE(mutex)</ref> <linebreak/>
+ creates the operating system resources for this mutex this macro must be implemented in the PAL </para><para>#define <ref refid="_p_threading_8h_1a045ce125a02c06b60b1ffae72092da0a" kindref="member">SERVAL_MUTEX_LOCK(mutex)</ref> <linebreak/>
+ locks the mutex this macro must be implemented in the PAL </para><para>#define <ref refid="_p_threading_8h_1ab722cef927ba269ba7a051e7e3cfbe7b" kindref="member">SERVAL_MUTEX_UNLOCK(mutex)</ref> <linebreak/>
+ locks the mutex this macro must be implemented in the PAL </para><para>#define <ref refid="_p_threading_8h_1a6605f9b871c04bd763747b3b8006bded" kindref="member">SERVAL_MUTEX_GET_ERROR_COUNT(mutex)</ref> <linebreak/>
+ this macro is for testing only and by this optional by this, this macro may be implemented as empty (returns 0) it gets the count of bad multithreading access of this mutex (error counter) </para><para>#define <ref refid="_p_threading_8h_1adb7968fd3a7a2b0c9260cca58bb9cece" kindref="member">SERVAL_MUTEX_GET_SUM_ERROR_COUNT()</ref> <linebreak/>
+ this macro is for testing only and by this optional by this, this macro may be implemented as empty (returns 0) it gets the count of bad multithreading access of all mutexes of the stack together (sum error counter) </para><para>#define <ref refid="_p_threading_8h_1ac7cb34991975a84b7637bf48e879e913" kindref="member">SERVAL_MUTEX_IS_TRACE_LOCK()</ref> <linebreak/>
+ this macro is for testing only and by this optional by this, this macro may be implemented as empty (returns 0) this macro only valid for Logging Module. Mutex Tracing would cause deadlock, because logging itself use mutex. when macro returns 1 means: logging should not use mutex </para><para>#define <ref refid="_p_threading_8h_1a8e57a5403258640a2f64bfc5e991c5c2" kindref="member">SERVAL_MUTEX_SET_NO_TRACE(mutex,noTrace)</ref> <linebreak/>
+ this macro is for testing only and by this optional by this, this macro may be implemented as empty (returns 0) no mutex tracing for this specific mutex. It is mostly for the logging mutex to reduce logging. </para><para>#define <ref refid="_p_threading_8h_1a6b92c6f48841fa03c8bafa53bb6c2b61" kindref="member">SERVAL_THREAD_GET_ID()</ref> <linebreak/>
+ this macro is for testing only and by this optional it returns the thread id of calling thread environment </para><para>#define <ref refid="_p_threading_8h_1a6b8ed8fb40a8a19e574275d8c42dce0a" kindref="member">SERVAL_SLEEP_MS(ms)</ref> <linebreak/>
+ this macro is for testing only and by this optional it sets the calling thread into sleep for ms milliseconds </para><para>#define SERVAL_PREINITIALIZED_DATA <linebreak/>
+ this macro is optional, but must be at least implemented as returning the value false (0) it optimizes the initialization handling of the stack it shall return true (!=0) if the boot loader supports the copy of preinitialized data into stack. And false (0) if not. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/********************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2010-2018<sp/>Contributors<sp/>to<sp/>this<sp/>project</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>NOTICE<sp/>file(s)<sp/>distributed<sp/>with<sp/>this<sp/>work<sp/>for<sp/>additional</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>information<sp/>regarding<sp/>copyright<sp/>ownership.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>This<sp/>program<sp/>and<sp/>the<sp/>accompanying<sp/>materials<sp/>are<sp/>made<sp/>available<sp/>under<sp/>the</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>terms<sp/>of<sp/>the<sp/>Eclipse<sp/>Public<sp/>License<sp/>2.0<sp/>which<sp/>is<sp/>available<sp/>at</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>http://www.eclipse.org/legal/epl-2.0</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>EPL-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="preprocessor">#ifndef<sp/>SERVAL_THREAD_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVAL_THREAD_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_p_threading_8h" kindref="compound">PThreading.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SERVAL_MUTEX_INIT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>&quot;Macro<sp/>SERVAL_MUTEX_INIT<sp/>not<sp/>defined.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SERVAL_MUTEX_INSTANCE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>&quot;Macro<sp/>MUTEX_INSTANCE<sp/>not<sp/>defined.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SERVAL_MUTEX_EXTERN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>&quot;Macro<sp/>MUTEX_EXTERN<sp/>not<sp/>defined.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SERVAL_MUTEX_CREATE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>&quot;Macro<sp/>MUTEX_CREATE<sp/>not<sp/>defined.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SERVAL_MUTEX_LOCK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>&quot;Macro<sp/>MUTEX_LOCK<sp/>not<sp/>defined.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SERVAL_MUTEX_UNLOCK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>&quot;Macro<sp/>MUTEX_UNLOCK<sp/>not<sp/>defined.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SERVAL_MUTEX_SET_MODE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>&quot;Macro<sp/>SERVAL_MUTEX_SET_MODE<sp/>not<sp/>defined.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SERVAL_MUTEX_GET_ERROR_COUNT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>&quot;Macro<sp/>SERVAL_MUTEX_GET_ERROR_COUNT<sp/>not<sp/>defined.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SERVAL_MUTEX_GET_SUM_ERROR_COUNT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>&quot;Macro<sp/>SERVAL_MUTEX_GET_SUM_ERROR_COUNT<sp/>not<sp/>defined.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SERVAL_MUTEX_IS_TRACE_LOCK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>&quot;Macro<sp/>SERVAL_MUTEX_IS_TRACE_LOCK<sp/>not<sp/>defined.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SERVAL_MUTEX_SET_NO_TRACE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>&quot;Macro<sp/>SERVAL_MUTEX_SET_NO_TRACE<sp/>not<sp/>defined.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SERVAL_THREAD_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/pal/Serval_Thread.h"/>
+  </compounddef>
+</doxygen>

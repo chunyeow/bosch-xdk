@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_ble_weight_scale___sensor_8h" kind="file">
+    <compoundname>BleWeightScale_Sensor.h</compoundname>
+    <includes refid="_ble_types_8h" local="yes">BleTypes.h</includes>
+    <incdepgraph>
+      <node id="28938">
+        <label>BleTypes.h</label>
+        <link refid="_ble_types_8h"/>
+        <childnode refid="28939" relation="include">
+        </childnode>
+      </node>
+      <node id="28940">
+        <label>BLECustomConfig.h</label>
+        <link refid="_common_2config_2_b_l_e_custom_config_8h"/>
+      </node>
+      <node id="28939">
+        <label>BleConfig.h</label>
+        <link refid="_ble_config_8h"/>
+        <childnode refid="28940" relation="include">
+        </childnode>
+      </node>
+      <node id="28937">
+        <label>SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_WeightScale/Interfaces/BleWeightScale_Sensor.h</label>
+        <link refid="BleWeightScale_Sensor.h"/>
+        <childnode refid="28938" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_ble_weight_scale___sensor_8h_1a6b838e044121cf713fce8f02993f0638" prot="public" static="no">
+        <name>BLEWEIGHTSCALE_SUPPORT_SENSOR</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>BLEWEIGHTSCALE_SUPPORT_SENSOR Defines if the BLE WEIGHT SCALE Profile implementation supports the SENSOR Role If enabled ( set to 1 ) it enables all the following BLE WEIGHT SCALE Profile SENSOR configurations and Application Interfaces. The default value for this option is disabled (0). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_WeightScale/Interfaces/BleWeightScale_Sensor.h" line="50" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_WeightScale/Interfaces/BleWeightScale_Sensor.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__BLEWEIGHTSCALE_SENSOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__BLEWEIGHTSCALE_SENSOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleWeightScale_Sensor.h</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Description:<sp/><sp/><sp/>Contains<sp/>interfaces<sp/>definitions<sp/>for<sp/>Weight<sp/>Scale</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Profile<sp/>when<sp/>the<sp/>local<sp/>device<sp/>operates<sp/>in</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>the<sp/>SENSOR<sp/>role.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Created:<sp/><sp/><sp/><sp/><sp/>January<sp/>,<sp/>2014</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>Version:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0.1</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>File<sp/>Revision:<sp/>$Rev:<sp/>3232<sp/>$</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>$Project$</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>ALL<sp/>RIGHTS<sp/>RESERVED.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>Unpublished<sp/>Confidential<sp/>Information<sp/>of<sp/>ALPWISE.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>Do<sp/>Not<sp/>Disclose.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>No<sp/>part<sp/>of<sp/>this<sp/>work<sp/>may<sp/>be<sp/>used<sp/>or<sp/>reproduced<sp/>in<sp/>any<sp/>form<sp/>or<sp/>by<sp/>any</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>means,<sp/>or<sp/>stored<sp/>in<sp/>a<sp/>database<sp/>or<sp/>retrieval<sp/>system,<sp/>without<sp/>prior<sp/>written</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>permission<sp/>of<sp/>ALPWISE.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>Use<sp/>of<sp/>this<sp/>work<sp/>is<sp/>governed<sp/>by<sp/>a<sp/>license<sp/>granted<sp/>ALPWISE.</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>This<sp/>work<sp/>contains<sp/>confidential<sp/>and<sp/>proprietary<sp/>information<sp/>of</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/>ALPWISE.<sp/>which<sp/>is<sp/>protected<sp/>by<sp/>copyright,<sp/>trade<sp/>secret,</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/>trademark<sp/>and<sp/>other<sp/>intellectual<sp/>property<sp/>rights.</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ble_types_8h" kindref="compound">BleTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************\</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/><sp/>CONFIGURATION</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">\****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor">#ifndef<sp/>BLEWEIGHTSCALE_SUPPORT_SENSOR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="_ble_weight_scale___sensor_8h_1a6b838e044121cf713fce8f02993f0638" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEWEIGHTSCALE_SUPPORT_SENSOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//BLEWEIGHTSCALE_SUPPORT_SENSOR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#if(BLEWEIGHTSCALE_SUPPORT_SENSOR<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Then<sp/>check<sp/>dependencies<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ble_device_information___service_8h" kindref="compound">Services/BleDeviceInformation_Service.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ble_weight_scale___service_8h" kindref="compound">Services/BleWeightScale_Service.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ble_body_composition___service_8h" kindref="compound">Services/BleBodyComposition_Service.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ble_user_data___service_8h" kindref="compound">Services/BleUserData_Service.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>WEIGHT<sp/>SCALE<sp/>Service<sp/>is<sp/>mandatory<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLE_SUPPORT_WEIGHTSCALE_SERVICE<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>BLE_SUPPORT_WEIGHTSCALE_SERVICE<sp/>shall<sp/>be<sp/>enabled<sp/>when<sp/>BleWeightScale<sp/>SENSOR<sp/>Role<sp/>is<sp/>enabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLE_SUPPORT_WEIGHTSCALE_SERVICE<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//<sp/>device<sp/>Information<sp/>Service<sp/>is<sp/>mandatory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLE_SUPPORT_DEVICEINFORMATION_SERVICE<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>BLE_SUPPORT_DEVICEINFORMATION_SERVICE<sp/>shall<sp/>be<sp/>enabled<sp/>when<sp/>BleWeightScale<sp/>SENSOR<sp/>Role<sp/>is<sp/>enabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLE_SUPPORT_DEVICEINFORMATION_SERVICE<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLEDEVICEINFORMATION_SUPPORT_MODELNUMBER<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>BLEDEVICEINFORMATION_SUPPORT_MODELNUMBER<sp/>shall<sp/>be<sp/>enabled<sp/>when<sp/>BleWeightScale<sp/>SENSOR<sp/>Role<sp/>is<sp/>enabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLEDEVICEINFORMATION_SUPPORT_MODELNUMBER<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLEDEVICEINFORMATION_SUPPORT_MANUFACTURERNAME<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>BLEDEVICEINFORMATION_SUPPORT_MANUFACTURERNAME<sp/>shall<sp/>be<sp/>enabled<sp/>when<sp/>BleWeightScale<sp/>SENSOR<sp/>Role<sp/>is<sp/>enabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLEDEVICEINFORMATION_SUPPORT_MANUFACTURERNAME<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************\</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/>*<sp/>OPTIONAL<sp/>FEATURES<sp/>FOR<sp/>BLE<sp/>WEIGHT<sp/>SCALE<sp/>SENSOR<sp/>PROFILE</highlight></codeline>
+<codeline lineno="80"><highlight class="comment">\****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************\</highlight></codeline>
+<codeline lineno="83"><highlight class="comment"><sp/>*<sp/><sp/>CONSTANTS<sp/>definition</highlight></codeline>
+<codeline lineno="84"><highlight class="comment">\****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************\</highlight></codeline>
+<codeline lineno="87"><highlight class="comment"><sp/>*<sp/><sp/>TYPES<sp/>definition</highlight></codeline>
+<codeline lineno="88"><highlight class="comment">\****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************\</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/>*<sp/><sp/>APPLICATION<sp/>INTERFACE<sp/>functions<sp/>definition</highlight></codeline>
+<codeline lineno="93"><highlight class="comment">\****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/>BLEWEIGHTSCALE_SENSOR_Register(</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleUserDataServiceCallback<sp/>callback<sp/>);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************\</highlight></codeline>
+<codeline lineno="118"><highlight class="comment"><sp/>*OPTIONAL<sp/>API<sp/>functions<sp/>definition<sp/>WEIGHTSCALE&amp;BODYCOMPOSITION<sp/>SENSOR<sp/>PROFILE</highlight></codeline>
+<codeline lineno="119"><highlight class="comment">\****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLEWEIGHTSCALE_SUPPORT_SENSOR==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//_BLEWEIGHTSCALE_SENSOR_H</highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_WeightScale/Interfaces/BleWeightScale_Sensor.h"/>
+  </compounddef>
+</doxygen>

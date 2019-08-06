@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___b_c_d_s___f_o_t_a___v_e_r_i_f_i_c_a_t_i_o_n_a_g_e_n_t" kind="group">
+    <compoundname>BCDS_FOTA_VERIFICATIONAGENT</compoundname>
+    <title>FotaVerificationAgent</title>
+    <innerfile refid="_b_c_d_s___fota_verification_agent_8h">BCDS_FotaVerificationAgent.h</innerfile>
+    <innerclass refid="struct_fota_verification_agent___s" prot="public">FotaVerificationAgent_S</innerclass>
+    <innergroup refid="group___b_c_d_s___f_o_t_a___e_c_d_s_a___v_e_r_i_f_i_c_a_t_i_o_n_a_g_e_n_t">EcdsaVerificationAgent</innergroup>
+    <innergroup refid="group___b_c_d_s___f_o_t_a___f_w_c1_c_r_y_p_t_v_e_r_i_f_i_c_a_t_i_o_n_a_g_e_n_t">FWC1NoCryptoVerificationAGENT</innergroup>
+    <innergroup refid="group___b_c_d_s___f_o_t_a___f_w_c2_r_s_a_c_y_c_u_r_t_l_s_v_e_r_i_f_i_c_a_t_i_o_n_a_g_e_n_t">FWC2RsaCycurTLSVerificationAGENT</innergroup>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___b_c_d_s___f_o_t_a___v_e_r_i_f_i_c_a_t_i_o_n_a_g_e_n_t_1gafa1f56ad4b8b3f9909bd6b73cc013a06" prot="public" static="no">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>(*</type>
+        <definition>typedef Retcode_T(* FotaVerificationAgent_Deinitialize_T)(void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>FotaVerificationAgent_Deinitialize_T</name>
+        <briefdescription>
+<para>De-initialize the agent.. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaVerificationAgent.h" line="159" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaVerificationAgent.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___f_o_t_a___v_e_r_i_f_i_c_a_t_i_o_n_a_g_e_n_t_1gaad13b90cddaf2de27e2b45aef4aa2d7f" prot="public" static="no">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>(*</type>
+        <definition>typedef Retcode_T(* FotaVerificationAgent_Initialize_T)(FotaPartitionAgent_T *partitionAgent, FotaRegistryAgent_T *registryAgent, EventHub_T *hub, void *publicKey, const uint32_t publicKeySize)</definition>
+        <argsstring>)(FotaPartitionAgent_T *partitionAgent, FotaRegistryAgent_T *registryAgent, EventHub_T *hub, void *publicKey, const uint32_t publicKeySize)</argsstring>
+        <name>FotaVerificationAgent_Initialize_T</name>
+        <briefdescription>
+<para>Initialize the verification agent. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">FOTA_PartitionAgent_T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>* partitionAgent This agent handle the download partition (where we will store our new firmware after a fota). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">FOTA_RegistryAgent_T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>* registryAgent This agent is used to save the internal state of the agent before a reboot. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">EventHub_T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>* hub This hub allows to the agent to communicate in an asynchrony way with the application using it. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>* publicKey Pointer to the publicKey to use. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">uint32_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>publicKeySize Size of the public key.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref> A null pointer was provided. </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a358fbd1137fba63fdb10ba15547f95e6" kindref="member">FOTA_FW_KEYSIZE_WRONG</ref> when size of the public key was wrong. </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> Initialize successfully </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaVerificationAgent.h" line="75" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaVerificationAgent.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___f_o_t_a___v_e_r_i_f_i_c_a_t_i_o_n_a_g_e_n_t_1ga0483dadd22b8a7bcff104c4e34997d38" prot="public" static="no">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>(*</type>
+        <definition>typedef Retcode_T(* FotaVerificationAgent_ReadFooter_T)(FWContainer_Footer_T *footer)</definition>
+        <argsstring>)(FWContainer_Footer_T *footer)</argsstring>
+        <name>FotaVerificationAgent_ReadFooter_T</name>
+        <briefdescription>
+<para>Return the content of the footer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">FWContainer_Footer_T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>* footer Footer structure to fill and return to the application.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref> A null pointer was provided. </para></simplesect>
+<simplesect kind="return"><para>#XXXX_OUT_OF_STORAGE while reading the data from out of storage (based on the selected partition) </para></simplesect>
+<simplesect kind="return"><para>#XXXX_FILE_READ_ERROR File read fails (based on the selected partition) </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a04226fab8b261e845f09b8256d2f771e" kindref="member">FOTA_FW_NOT_SUPPORTED</ref> If the header is invalid </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> When footer read successfully </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaVerificationAgent.h" line="103" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaVerificationAgent.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___f_o_t_a___v_e_r_i_f_i_c_a_t_i_o_n_a_g_e_n_t_1ga8fc596faa64d134ee9dc2ef5474a0648" prot="public" static="no">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>(*</type>
+        <definition>typedef Retcode_T(* FotaVerificationAgent_ReadHeader_T)(FWContainer_Header_T *header)</definition>
+        <argsstring>)(FWContainer_Header_T *header)</argsstring>
+        <name>FotaVerificationAgent_ReadHeader_T</name>
+        <briefdescription>
+<para>Return the content of the header. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">FWContainer_Header_T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>* header Header structure to fill and return to the application.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref> A null pointer was provided. </para></simplesect>
+<simplesect kind="return"><para>#XXXX_OUT_OF_STORAGE while reading the data from out of storage (based on the selected partition) </para></simplesect>
+<simplesect kind="return"><para>#XXXX_FILE_READ_ERROR File read fails (based on the selected partition) </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a04226fab8b261e845f09b8256d2f771e" kindref="member">FOTA_FW_NOT_SUPPORTED</ref> If the header is invalid </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> When header read successfully </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaVerificationAgent.h" line="89" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaVerificationAgent.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___f_o_t_a___v_e_r_i_f_i_c_a_t_i_o_n_a_g_e_n_t_1ga53a160d998a472eeefa25e064df6af8c" prot="public" static="no">
+        <type>struct <ref refid="struct_fota_verification_agent___s" kindref="compound">FotaVerificationAgent_S</ref></type>
+        <definition>typedef struct FotaVerificationAgent_S FotaVerificationAgent_T</definition>
+        <argsstring></argsstring>
+        <name>FotaVerificationAgent_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaVerificationAgent.h" line="159" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaVerificationAgent.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___f_o_t_a___v_e_r_i_f_i_c_a_t_i_o_n_a_g_e_n_t_1ga9f9473a02b3b03854dd55bd5dfba6787" prot="public" static="no">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>(*</type>
+        <definition>typedef Retcode_T(* FotaVerificationAgent_VerifyHeader_T)(void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>FotaVerificationAgent_VerifyHeader_T</name>
+        <briefdescription>
+<para>Verify the header. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref> A null pointer was provided. </para></simplesect>
+<simplesect kind="return"><para>#XXXX_OUT_OF_STORAGE while reading the data from out of storage (based on the selected partition) </para></simplesect>
+<simplesect kind="return"><para>#XXXX_FILE_READ_ERROR File read fails (based on the selected partition) </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a54f219c85b78d2bbef52babda6278ebd" kindref="member">FOTA_FW_CRCINIT_FAIL</ref> If the CRC initialization fails </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2ac0ad48bfaf51c639a8df8eded3b73a5d" kindref="member">FOTA_FW_CRCRUN_FAIL</ref> If the CRC checksum calculation fails </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a708c9ff773a116cfe982ade4b96aee03" kindref="member">FOTA_FW_CRCFINAL_FAIL</ref> If the finalized CRC checksum fails </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2ac5ff03dd7ac13e6648002d4ec6ae06c6" kindref="member">FOTA_FW_CRC_FAIL</ref> If the calculated CRC and HeaderCRC mismatches </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a83d00ecfb1f89e240c8b853a2e4db468" kindref="member">FOTA_RETCODE_FIRMWARE_SIZE_FAIL</ref> If the firmware size is invalid </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> On successfully verifying the header </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaVerificationAgent.h" line="120" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaVerificationAgent.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___f_o_t_a___v_e_r_i_f_i_c_a_t_i_o_n_a_g_e_n_t_1ga70ea5adf3deef2efc1fcd9ae14e2457c" prot="public" static="no">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>(*</type>
+        <definition>typedef Retcode_T(* FotaVerificationAgent_VerifyImage_T)(void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>FotaVerificationAgent_VerifyImage_T</name>
+        <briefdescription>
+<para>Verify the footer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref> A null pointer was provided. </para></simplesect>
+<simplesect kind="return"><para>#XXXX_OUT_OF_STORAGE while reading the data from out of storage (based on the selected partition) </para></simplesect>
+<simplesect kind="return"><para>#XXXX_FILE_READ_ERROR File read fails (based on the selected partition) </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a54f219c85b78d2bbef52babda6278ebd" kindref="member">FOTA_FW_CRCINIT_FAIL</ref> If the CRC initialization fails </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2ac0ad48bfaf51c639a8df8eded3b73a5d" kindref="member">FOTA_FW_CRCRUN_FAIL</ref> If the CRC checksum calculation fails </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a708c9ff773a116cfe982ade4b96aee03" kindref="member">FOTA_FW_CRCFINAL_FAIL</ref> If the finalized CRC checksum fails </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2ac5ff03dd7ac13e6648002d4ec6ae06c6" kindref="member">FOTA_FW_CRC_FAIL</ref> If the calculated CRC and ImageCRC mismatches </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a83d00ecfb1f89e240c8b853a2e4db468" kindref="member">FOTA_RETCODE_FIRMWARE_SIZE_FAIL</ref> If the firmware size is invalid </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> On successfully verifying the header </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaVerificationAgent.h" line="136" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaVerificationAgent.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___f_o_t_a___v_e_r_i_f_i_c_a_t_i_o_n_a_g_e_n_t_1ga1e8368a0669c0821b5578db10416f30a" prot="public" static="no">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>(*</type>
+        <definition>typedef Retcode_T(* FotaVerificationAgent_VerifySignature_T)(void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>FotaVerificationAgent_VerifySignature_T</name>
+        <briefdescription>
+<para>Verify the signature. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref> A null pointer was provided. </para></simplesect>
+<simplesect kind="return"><para>#XXXX_OUT_OF_STORAGE while reading the data from out of storage (based on the selected partition) </para></simplesect>
+<simplesect kind="return"><para>#XXXX_FILE_READ_ERROR File read fails (based on the selected partition) </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a13778088565252b801bcd291d3a78a29" kindref="member">FOTA_RETCODE_INTERNAL_ERROR</ref> If initialize or update of the SHA context or hash calculation fails </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a04226fab8b261e845f09b8256d2f771e" kindref="member">FOTA_FW_NOT_SUPPORTED</ref> If the header is invalid while reading the footer </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2ac6c5a956d61310d74ede1e53df5df11d" kindref="member">FOTA_RETCODE_INVALID_SIGNATURE</ref> If signature verification fails </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a13778088565252b801bcd291d3a78a29" kindref="member">FOTA_RETCODE_INTERNAL_ERROR</ref> If signature verification fails </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> On successfully verifying the signature </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaVerificationAgent.h" line="151" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaVerificationAgent.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This module is responsible for validating new firmware that is about to be switched with the current working firmware. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

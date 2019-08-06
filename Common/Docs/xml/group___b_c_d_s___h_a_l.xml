@@ -1,0 +1,487 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___b_c_d_s___h_a_l" kind="group">
+    <compoundname>BCDS_HAL</compoundname>
+    <title>HAL</title>
+    <innerfile refid="_b_c_d_s___h_a_l_8h">BCDS_HAL.h</innerfile>
+    <innerclass refid="struct_h_a_l___device_handle___s" prot="public">HAL_DeviceHandle_S</innerclass>
+    <innergroup refid="group___b_c_d_s___h_a_l___b_s_p___i_f">BSP</innergroup>
+    <innergroup refid="group___b_c_d_s___h_a_l___m_c_u___i_f">MCU</innergroup>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___b_c_d_s___h_a_l_1ga01e78708cc0e7c3bdc9b9aca63d1d19f" prot="public" static="no">
+        <name>BCDS_HAL_CallMode_E</name>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga01e78708cc0e7c3bdc9b9aca63d1d19fa1775f3610b83d6dcda161aa3441033e9" prot="public">
+          <name>BCDS_HAL_CALL_MODE_NON_BLOCKING</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Returns before operation completed and caller expects a callback upon completion </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga01e78708cc0e7c3bdc9b9aca63d1d19fa951c87840d13b20a75d732e7fb79bc94" prot="public">
+          <name>BCDS_HAL_CALL_MODE_BLOCKING</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Blocks function return until operation finished </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Declares an enumeration for various possible API call modes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL.h" line="171" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL.h" bodystart="170" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___b_c_d_s___h_a_l_1ga0f18153151d57bc36c78ccf1a5380a03" prot="public" static="no">
+        <name>BCDS_HAL_HalRetcode_E</name>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03a0faa6a75f5d13833b5a991fb9f16e491" prot="public">
+          <name>RETCODE_HAL_GENERAL</name>
+          <initializer>= RETCODE_FIRST_CUSTOM_CODE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03a335e5d8f3dbed6c8f1114ff9dfc72648" prot="public">
+          <name>RETCODE_HAL_GENERAL_MAX</name>
+          <initializer>= RETCODE_HAL_GENERAL + HAL_RETURN_CODE_RANGE - 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03adbb0ae8b753260ac9b3988dbfff9137a" prot="public">
+          <name>RETCODE_UART_GENERAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Start of UART return codes </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03aa74e8783fc2871e22dacb522c0a838f4" prot="public">
+          <name>RETCODE_UART_INIT_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03a8f6f45e55cbaf59a7fbfc3307846d146" prot="public">
+          <name>RETCODE_UART_HAL_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03abd51ddac0cf4ec740afaa99329c78389" prot="public">
+          <name>RETCODE_UART_HAL_BUSY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03ac51523fe15000133ac52a22f80ad6f7a" prot="public">
+          <name>RETCODE_UART_HAL_TIMEOUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03a28a1b02536aef4159ea916bc04b66ecd" prot="public">
+          <name>RETCODE_UART_DMA_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03a49c2f651cbafd30682b78cf0246fc7a8" prot="public">
+          <name>RETCODE_UART_MAX</name>
+          <initializer>= RETCODE_UART_GENERAL + HAL_RETURN_CODE_RANGE - 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>End of UART return codes </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03ad9b64fb9297e3364b5b0ddfa7d971817" prot="public">
+          <name>RETCODE_LEUART_GENERAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Start of LEUART return codes </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03a4bc99bcf7969a1e31d8351393dac80b8" prot="public">
+          <name>RETCODE_LEUART_INIT_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03afd5132e2c4e4954997d94db736eb0155" prot="public">
+          <name>RETCODE_LEUART_HAL_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03a1634f0c6fe76d748d5d84dbad7e16ee8" prot="public">
+          <name>RETCODE_LEUART_HAL_BUSY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03aa908fbca192b83aa6e6b4adc2138a6b6" prot="public">
+          <name>RETCODE_LEUART_HAL_TIMEOUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03ab015ee5253186dd2ed2eb56cc1534a8d" prot="public">
+          <name>RETCODE_LEUART_DMA_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03aceade748862196a28285888d909565fd" prot="public">
+          <name>RETCODE_LEUART_MAX</name>
+          <initializer>= RETCODE_LEUART_GENERAL + HAL_RETURN_CODE_RANGE - 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>End of LEUART return codes </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03ac04e7d6e515df928a3d90d0370b5839f" prot="public">
+          <name>RETCODE_IC2_GENERAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>General I2C return code </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03a800c98a6286675dcb2f2cfd5923b33dc" prot="public">
+          <name>RETCODE_IC2_MAX</name>
+          <initializer>= RETCODE_IC2_GENERAL + HAL_RETURN_CODE_RANGE - 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>End of I2C return codes </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03a02d5c1fb7399e57967577f97bd2fbcfb" prot="public">
+          <name>RETCODE_SLEEP_GENERAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>General Sleep return code </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03a4bd7207e4227248e8a96125996430732" prot="public">
+          <name>RETCODE_SLEEP_NOSLEEP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>No Sleep Possible </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03af6da8edd00c8bc924fc1273d6822de75" prot="public">
+          <name>RETCODE_SLEEP_MAX</name>
+          <initializer>= RETCODE_SLEEP_GENERAL + HAL_RETURN_CODE_RANGE - 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>End of SLEEP return codes </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03a1f8e815924cbb4293dacc2f91855d874" prot="public">
+          <name>RETCODE_TIMER_GENERAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>General Timer return code </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03ab91bc4f959ce146f6526ed4ab6474609" prot="public">
+          <name>RETCODE_TIMER_NOHWHANDLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>No hardware handle was provided </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03a8668a4ea9af132f348a5cf1af104c432" prot="public">
+          <name>RETCODE_TIMER_NOINIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Timer handle was not initialized </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03a7bc1c17cf029087f052eb75f6f1396ca" prot="public">
+          <name>RETCODE_TIMER_ALREADY_INITIALIZED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03ad8eb6e66ee3103cb835edf4e4950c1c5" prot="public">
+          <name>RETCODE_TIMER_IS_ACTIVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03a2740a9b715ba7e1801c26f6c1c3d6143" prot="public">
+          <name>RETCODE_TIMER_IS_NOT_ACTIVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03a7417c6019539895ec8524f80550b4846" prot="public">
+          <name>RETCODE_TIMER_INIT_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03a2903be15de339125de0d290c6d9a74fb" prot="public">
+          <name>RETCODE_TIMER_DEINIT_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03a5c0c4f4eaa7d60d748d6cf0ae5538c13" prot="public">
+          <name>RETCODE_TIMER_START_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03ab0217f9665776f58e537635e08a1ab6c" prot="public">
+          <name>RETCODE_TIMER_STOP_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03ad4a55b41c5c09e9da832e3aed383679e" prot="public">
+          <name>RETCODE_TIMER_MAX</name>
+          <initializer>= RETCODE_TIMER_GENERAL + HAL_RETURN_CODE_RANGE - 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>End of TIMER return codes </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03a9938e7c426dfaa406dc70aa74998ebfd" prot="public">
+          <name>RETCODE_RNG_HAL_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03a2a489c166c70f73dddb1f39a5f859953" prot="public">
+          <name>RETCODE_RNG_HAL_BUSY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03ad9e2a7a0f608297df855175119876114" prot="public">
+          <name>RETCODE_RNG_HAL_TIMEOUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03a6c510267aa20fde880bd169333697798" prot="public">
+          <name>RETCODE_CRC_HAL_INIT_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga0f18153151d57bc36c78ccf1a5380a03ad592ab7223d77faeff3bff3a5217e647" prot="public">
+          <name>RETCODE_CRC_HAL_DEINIT_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Declares the return codes used by the HAL components. </para>        </briefdescription>
+        <detaileddescription>
+<para>For each component there is a defined range of return codes reserved. The maximum number of codes available for a component is defined by HAL_RETURN_CODE_RANGE. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL.h" line="77" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL.h" bodystart="76" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___b_c_d_s___h_a_l_1ga73facb5b1c035f52153cb22a3f63abca" prot="public" static="no">
+        <name>BCDS_HAL_InterfaceType_E</name>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga73facb5b1c035f52153cb22a3f63abcaa339dd9d6d454e56c111810a3f0ff9ebc" prot="public">
+          <name>BCDS_HAL_INTERFACE_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Undefined / Default / None of the bus communication interface is used </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga73facb5b1c035f52153cb22a3f63abcaab803ca710c74e25e1b0eb3858a6fba88" prot="public">
+          <name>BCDS_HAL_INTERFACE_SPI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>SPI is used as the communication interface </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga73facb5b1c035f52153cb22a3f63abcaa019bc8fad60997110e8ce8e410abf463" prot="public">
+          <name>BCDS_HAL_INTERFACE_I2C</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>I2C is used as the communication interface </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga73facb5b1c035f52153cb22a3f63abcaa5427aa47c8ce704cb1c3923c2d99253a" prot="public">
+          <name>BCDS_HAL_INTERFACE_UART</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>UART is used as the communication interface </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Declares an enumeration for various possible communication interfaces. </para>        </briefdescription>
+        <detaileddescription>
+<para>A field of this type is e.g. used by the BSP in the handlers that are created for communication devices to inform the MCU module about the interface type that is configured for a device. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL.h" line="144" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL.h" bodystart="143" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___b_c_d_s___h_a_l_1ga3010d030959afeb41b86bee2d9e810ec" prot="public" static="no">
+        <name>BCDS_HAL_TransferMode_E</name>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga3010d030959afeb41b86bee2d9e810eca08e2e2b2dc756c9e6914cb0d9237bb06" prot="public">
+          <name>BCDS_HAL_TRANSFER_MODE_BLOCKING</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000021"><xreftitle>Deprecated</xreftitle><xrefdescription><para>. Use BCDS_HAL_CallMode_E instead </para></xrefdescription></xrefsect></para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga3010d030959afeb41b86bee2d9e810ecad0de3c31ea65828411efa7123f81f3fb" prot="public">
+          <name>BCDS_HAL_TRANSFER_MODE_INTERRUPT</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>BCDS_HAL_TRANSFER_MODE_INTERRUPT </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga3010d030959afeb41b86bee2d9e810ecaeb375f7888a2ec7bbf0a03d4a0c74e0f" prot="public">
+          <name>BCDS_HAL_TRANSFER_MODE_DMA</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>BCDS_HAL_TRANSFER_MODE_DMA </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga3010d030959afeb41b86bee2d9e810ecacfcbcc8ce5aa759d8d1570b4518d5138" prot="public">
+          <name>BCDS_HAL_TRANSFER_MODE_INTERRUPT_RX_DMA_TX</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___h_a_l_1gga3010d030959afeb41b86bee2d9e810eca187890ead3f386abf172d099d0a9f03f" prot="public">
+          <name>BCDS_HAL_TRANSFER_MODE_INTERRUPT_TX_DMA_RX</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>BCDS_HAL_TRANSFER_MODE_INTERRUPT_RX_DMA_TX </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Declares an enumeration for various possible transfer modes of communication interfaces. </para>        </briefdescription>
+        <detaileddescription>
+<para>A field of this type is e.g. used by the BSP in the handlers that are created for communication devices to inform the MCU module about the transfer mode that is configured for a device. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL.h" line="159" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL.h" bodystart="158" bodyend="165"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___b_c_d_s___h_a_l_1ga1d6f05de13749e859d98c7514ddfbf84" prot="public" static="no">
+        <type>struct <ref refid="struct_h_a_l___device_handle___s" kindref="compound">HAL_DeviceHandle_S</ref></type>
+        <definition>typedef struct HAL_DeviceHandle_S HAL_DeviceHandle_T</definition>
+        <argsstring></argsstring>
+        <name>HAL_DeviceHandle_T</name>
+        <briefdescription>
+<para>The data type for the Device specific handle. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL.h" line="186" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___h_a_l_1ga39fd157e78cb1535814fe63af2f3e1ee" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* HWHandle_T</definition>
+        <argsstring></argsstring>
+        <name>HWHandle_T</name>
+        <briefdescription>
+<para>A data type for a general purpose hardware handle. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL.h" line="180" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___h_a_l_1ga2dde415c61e0cc847892a1d05aaacd52" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* SWHandle_T</definition>
+        <argsstring></argsstring>
+        <name>SWHandle_T</name>
+        <briefdescription>
+<para>A data type for a general purpose software handle. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL.h" line="186" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___b_c_d_s___h_a_l_1ga59e8912780ca6b4eb67a22682843bb33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HAL_IsInISR</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_IsInISR</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>return the Status if we run in ISR Context or not </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>TRUE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if we are in Isr Context </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL.h" line="214" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___b_c_d_s___h_a_l_1ga1a506361aab1b8fd0f078dab1612f48a" prot="public" static="no">
+        <name>HAL_RETURN_CODE_RANGE</name>
+        <initializer>(UINT32_C(50))</initializer>
+        <briefdescription>
+<para>Defines the number of return codes that can be used by each HAL component. </para>        </briefdescription>
+        <detaileddescription>
+<para>Defines the number of return codes that can be defined for each HAL component. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL.h" line="67" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The Hardware Abstraction Layer Interface. </para>    </briefdescription>
+    <detaileddescription>
+<para>This component defines several modules that provide interfaces to abstract certain hardware related aspects. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

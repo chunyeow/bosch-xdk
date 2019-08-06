@@ -1,0 +1,1094 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_b_c_d_s___wlan_driver_8h" kind="file">
+    <compoundname>BCDS_WlanDriver.h</compoundname>
+    <includes refid="_b_c_d_s___basics_8h" local="yes">BCDS_Basics.h</includes>
+    <includes refid="_b_c_d_s___retcode_8h" local="yes">BCDS_Retcode.h</includes>
+    <includes local="no">time.h</includes>
+    <includedby refid="_wlan_connect_8c" local="yes">SDK/xdk110/Common/legacy/source/WlanConnect.c</includedby>
+    <includedby refid="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" local="yes">SDK/xdk110/Apps/AwsSendDataOverMQTT/source/AppController.c</includedby>
+    <incdepgraph>
+      <node id="39842">
+        <label>stdbool.h</label>
+      </node>
+      <node id="39845">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="39840" relation="include">
+        </childnode>
+      </node>
+      <node id="39841">
+        <label>stdint.h</label>
+      </node>
+      <node id="39844">
+        <label>stdlib.h</label>
+      </node>
+      <node id="39843">
+        <label>string.h</label>
+      </node>
+      <node id="39840">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="39841" relation="include">
+        </childnode>
+        <childnode refid="39842" relation="include">
+        </childnode>
+        <childnode refid="39843" relation="include">
+        </childnode>
+        <childnode refid="39844" relation="include">
+        </childnode>
+      </node>
+      <node id="39846">
+        <label>time.h</label>
+      </node>
+      <node id="39839">
+        <label>SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h</label>
+        <link refid="BCDS_WlanDriver.h"/>
+        <childnode refid="39840" relation="include">
+        </childnode>
+        <childnode refid="39845" relation="include">
+        </childnode>
+        <childnode refid="39846" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="39848">
+        <label>SDK/xdk110/Common/legacy/source/WlanConnect.c</label>
+        <link refid="_wlan_connect_8c"/>
+      </node>
+      <node id="39849">
+        <label>SDK/xdk110/Apps/AwsSendDataOverMQTT/source/AppController.c</label>
+        <link refid="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c"/>
+      </node>
+      <node id="39847">
+        <label>SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h</label>
+        <link refid="BCDS_WlanDriver.h"/>
+        <childnode refid="39848" relation="include">
+        </childnode>
+        <childnode refid="39849" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_wlan_driver___sl_spawn_msg___s" prot="public">WlanDriver_SlSpawnMsg_S</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gad039b6c973a87547c1a1271d1770718c" prot="public" static="no">
+        <name>WLANDRIVER_COM_TIMEOUT</name>
+        <initializer>UINT32_C(5000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="85" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gac624fa6ec819d33292bf6930d0bd387a" prot="public" static="no">
+        <name>WLANDRIVER_FAILURE</name>
+        <initializer>INT32_C(-1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Definition representing failure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="81" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga2c52ca0209cd824077dd6f5b8bfa1ff0" prot="public" static="no">
+        <name>WLANDRIVER_MAX_DELAY</name>
+        <initializer>(UINT32_MAX)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Definition representing Maximum delay </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="79" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gae9b70af8c8941d7719042832afebd650" prot="public" static="no">
+        <name>WLANDRIVER_NOT_ENOUGH_MEMORY</name>
+        <initializer>(-1L)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="82" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga24224cb077981fa60dc1b15ec38fd914" prot="public" static="no">
+        <name>WLANDRIVER_OS_NO_WAIT</name>
+        <initializer>UINT32_C(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Definition representing wait for ever time value for OS API TimeOut </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="78" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga241ccfce77522db8e742217f8b25b4ad" prot="public" static="no">
+        <name>WLANDRIVER_OS_WAIT_FOREVER</name>
+        <initializer>(UINT32_MAX)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Definition representing wait for ever time value for OS API TimeOut </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="77" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gada774dccb0214a9423687d3b86ee6542" prot="public" static="no">
+        <name>WLANDRIVER_SPI_ERROR</name>
+        <initializer>INT32_C(-1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="84" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gabdc046088085c085a960bcfd0bae9d98" prot="public" static="no">
+        <name>WLANDRIVER_SPI_LOCK_TIMEOUT</name>
+        <initializer>UINT32_C(5000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="86" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gaf93151556533c3f050937812bb3442e7" prot="public" static="no">
+        <name>WLANDRIVER_SPI_RW_ERROR</name>
+        <initializer>UINT32_C(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="83" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gae65b35d0153b4923927cc4b7567790e4" prot="public" static="no">
+        <name>WLANDRIVER_SUCCESS</name>
+        <initializer>INT32_C(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Definition representing Success </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="80" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga5c60036e38dbc8cfd7a88522eaea8142" prot="public" static="no">
+        <type>signed int</type>
+        <definition>typedef signed int Fd_t</definition>
+        <argsstring></argsstring>
+        <name>Fd_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>fileDescriptor for SPI port </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="89" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga31ef69feb947d795252ca7d2ca2dd913" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* WLANDRIVER_EVENT_HANDLER)(void *pValue)</definition>
+        <argsstring>)(void *pValue)</argsstring>
+        <name>WLANDRIVER_EVENT_HANDLER</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>type definition of wifi event handler </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="92" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gab21ab10b86e7029625510934eb2f5303" prot="public" static="no">
+        <type>short(*</type>
+        <definition>typedef short(* WLANDRIVER_OSI_SPAWN_ENTRY)(void *pValue)</definition>
+        <argsstring>)(void *pValue)</argsstring>
+        <name>WLANDRIVER_OSI_SPAWN_ENTRY</name>
+        <briefdescription>
+<para>type definition for a spawn entry callback </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The function which gets invoked inside stack returns the type short, hence in V1.2.0 simplelink stack this change is required  the spawn mechanism enable to run a function on different context. This mechanism allow to transfer the execution context from interrupt context to thread context or changing the context from an unknown user thread to general context. The implementation of the spawn mechanism depends on the user&apos;s system requirements and could varies from implementation of serialized execution using single thread to creating thread per call</para></simplesect>
+<simplesect kind="note"><para>The stack size of the execution thread must be at least of TBD bytes! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="110" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gab2735c3b534ef27c95fdff49b57ddb18" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* WlanDriver_OsLockObject</definition>
+        <argsstring></argsstring>
+        <name>WlanDriver_OsLockObject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="144" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga2a05b00f998ddcce2a739152100c51f7" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* WlanDriver_OsSyncObject</definition>
+        <argsstring></argsstring>
+        <name>WlanDriver_OsSyncObject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="133" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gae7f66080a8e8fb872e7becf5574507dc" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t WlanDriver_OsTime</definition>
+        <argsstring></argsstring>
+        <name>WlanDriver_OsTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="149" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga44f7b92f79c71534fb68dd127b044acf" prot="public" static="no">
+        <type>struct <ref refid="struct_wlan_driver___sl_spawn_msg___s" kindref="compound">WlanDriver_SlSpawnMsg_S</ref></type>
+        <definition>typedef struct WlanDriver_SlSpawnMsg_S WlanDriver_SlSpawnMsg_T</definition>
+        <argsstring></argsstring>
+        <name>WlanDriver_SlSpawnMsg_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="110" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gaa1c5ffb9a2fd567aed2f2026d4740531" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WlanDriver_DeInit</definition>
+        <argsstring>(void)</argsstring>
+        <name>WlanDriver_DeInit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Function to De-Initialize the WIFI Driver Layer. disabling WiFi clock , Powering off the WiFi module,Deleting the task and queue created. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>In case of any other error refer <ref refid="group___b_c_d_s___h_a_l___b_s_p___w_i_f_i___c_c3100_m_o_d_1ga54c268229472b0db9d28b4fe5ecf2da8" kindref="member">BSP_WiFi_CC3100MOD_Connect</ref> error codes </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="408" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gaef77c5b99cc6d2d15b6b8f13e08d5cc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WlanDriver_DeviceDisable</definition>
+        <argsstring>(void)</argsstring>
+        <name>WlanDriver_DeviceDisable</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Function to write given no of bytes over SPI Function to disable the WIFI device. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>any error value refer <ref refid="group___b_c_d_s___h_a_l___b_s_p___w_i_f_i___c_c3100_m_o_d_1ga6d3668f47bf10f8ca2b80d5f7cb76180" kindref="member">BSP_WiFi_CC3100MOD_Disable</ref> error codes </para></simplesect>
+<simplesect kind="note"><para>This function will be called by the WiFi driver API mapped in &lt;user.h&gt; header file </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="186" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga5ebb70616edcfb05bb62359f57569551" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WlanDriver_DeviceEnable</definition>
+        <argsstring>(void)</argsstring>
+        <name>WlanDriver_DeviceEnable</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Function to enable the WIFI device. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>any error value refer <ref refid="group___b_c_d_s___h_a_l___b_s_p___w_i_f_i___c_c3100_m_o_d_1ga09fcd8842ecdd3811532b084bbad508f" kindref="member">BSP_WiFi_CC3100MOD_Enable</ref> error codes </para></simplesect>
+<simplesect kind="note"><para>This function will be called by the WiFi driver API mapped in &lt;user.h&gt; header file </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="195" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga74ad901f0a6c348364fd739c4aca398a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WlanDriver_Init</definition>
+        <argsstring>(void)</argsstring>
+        <name>WlanDriver_Init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Function to Initialize the WIFI Driver Layer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> when successful </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba497273b2285191edc1cda8648b67250a" kindref="member">RETCODE_OUT_OF_RESOURCES</ref> Failed to create Semaphore while calling xSemaphoreCreateBinary. </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga440396a99858d69393bf1bb90ff5f4f7" kindref="member">RETCODE_RTOS_QUEUE_ERROR</ref> Failed to create SpawnQAndTask while calling CreateSpawnQAndTask.</para></simplesect>
+<simplesect kind="return"><para>In case of any other error refer <ref refid="group___b_c_d_s___h_a_l___b_s_p___w_i_f_i___c_c3100_m_o_d_1ga54c268229472b0db9d28b4fe5ecf2da8" kindref="member">BSP_WiFi_CC3100MOD_Connect</ref> error codes </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="165" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga733bde50024d7f6f3cf54655449e7e85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t WlanDriver_OsiSpawn</definition>
+        <argsstring>(WLANDRIVER_OSI_SPAWN_ENTRY pEntry, void *pValue, unsigned long flags)</argsstring>
+        <name>WlanDriver_OsiSpawn</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gab21ab10b86e7029625510934eb2f5303" kindref="member">WLANDRIVER_OSI_SPAWN_ENTRY</ref></type>
+          <declname>pEntry</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>pValue</declname>
+        </param>
+        <param>
+          <type>unsigned <ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga295b9aa203738050fd2137fb81030321" kindref="member">long</ref></type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>This function call the pEntry callback from a different context. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pEntry</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- pointer to the entry callback </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- pointer to any type of memory structure that would be passed to pEntry callback from the execution thread. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- execution flags - reserved for future usage</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gae65b35d0153b4923927cc4b7567790e4" kindref="member">WLANDRIVER_SUCCESS</ref> - if flags set to SL_SPAWN_FLAG_FROM_SL_IRQ_HANDLER and xQueueSendFromISR is returning pdTRUE </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gac624fa6ec819d33292bf6930d0bd387a" kindref="member">WLANDRIVER_FAILURE</ref> - if flags set to SL_SPAWN_FLAG_FROM_SL_IRQ_HANDLER and xQueueSendFromISR is returning pdFAIL </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gae65b35d0153b4923927cc4b7567790e4" kindref="member">WLANDRIVER_SUCCESS</ref> - if flags set to some value other than SL_SPAWN_FLAG_FROM_SL_IRQ_HANDLER and xQueueSendFromISR is returning pdTRUE </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gac624fa6ec819d33292bf6930d0bd387a" kindref="member">WLANDRIVER_FAILURE</ref> - if flags set to some value other than SL_SPAWN_FLAG_FROM_SL_IRQ_HANDLER and xQueueSendFromISR is returning pdFAIL </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="389" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gad2aed04e8d6ffd986a0ce8ef39ffdda8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t WlanDriver_OsLockObjectCreate</definition>
+        <argsstring>(WlanDriver_OsLockObject *pLockObj)</argsstring>
+        <name>WlanDriver_OsLockObjectCreate</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gab2735c3b534ef27c95fdff49b57ddb18" kindref="member">WlanDriver_OsLockObject</ref> *</type>
+          <declname>pLockObj</declname>
+        </param>
+        <briefdescription>
+<para>This function creates a locking object (mutex semaphore) Locking object are used to protect a resource from mutual accesses of two or more threads. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pLockObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the locking object control block </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gae65b35d0153b4923927cc4b7567790e4" kindref="member">WLANDRIVER_SUCCESS</ref> - successfully created lock object </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gac624fa6ec819d33292bf6930d0bd387a" kindref="member">WLANDRIVER_FAILURE</ref> - Failure when input parameter is NULL. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="339" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga814fa26787c11c94e00fc290479db02b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t WlanDriver_OsLockObjectDelete</definition>
+        <argsstring>(WlanDriver_OsLockObject *pLockObj)</argsstring>
+        <name>WlanDriver_OsLockObjectDelete</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gab2735c3b534ef27c95fdff49b57ddb18" kindref="member">WlanDriver_OsLockObject</ref> *</type>
+          <declname>pLockObj</declname>
+        </param>
+        <briefdescription>
+<para>This function deletes a locking object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pLockObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the locking object control block </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gae65b35d0153b4923927cc4b7567790e4" kindref="member">WLANDRIVER_SUCCESS</ref> - successfully deleted lock object </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gac624fa6ec819d33292bf6930d0bd387a" kindref="member">WLANDRIVER_FAILURE</ref> - Failure when input parameter is NULL. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="347" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gab80ec3bb43bfe184aebfd86726a0f844" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t WlanDriver_OsLockObjectWait</definition>
+        <argsstring>(WlanDriver_OsLockObject *pLockObj, WlanDriver_OsTime TimeOut)</argsstring>
+        <name>WlanDriver_OsLockObjectWait</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gab2735c3b534ef27c95fdff49b57ddb18" kindref="member">WlanDriver_OsLockObject</ref> *</type>
+          <declname>pLockObj</declname>
+        </param>
+        <param>
+          <type><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gae7f66080a8e8fb872e7becf5574507dc" kindref="member">WlanDriver_OsTime</ref></type>
+          <declname>TimeOut</declname>
+        </param>
+        <briefdescription>
+<para>For details refer API documentation is in the interface header file WlanDriverInterface.h. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function locks a locking object All other threads that call this function before this thread calls the WlanDriver_osLockUnlock would be suspended <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pLockObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the lock object control block </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>numeric value specifies the maximum number of mSec to stay suspended while waiting for the locking object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gae65b35d0153b4923927cc4b7567790e4" kindref="member">WLANDRIVER_SUCCESS</ref> - reception of the locking object within the TimeOut window </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gac624fa6ec819d33292bf6930d0bd387a" kindref="member">WLANDRIVER_FAILURE</ref> - Failure when input parameter is NULL. </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gac624fa6ec819d33292bf6930d0bd387a" kindref="member">WLANDRIVER_FAILURE</ref> - Failure when xSemaphoreTake returns pdFAIL. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="362" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga95abcd81da91afceb4524edf057d4ae4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t WlanDriver_OsLockUnlock</definition>
+        <argsstring>(WlanDriver_OsLockObject *pLockObj)</argsstring>
+        <name>WlanDriver_OsLockUnlock</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gab2735c3b534ef27c95fdff49b57ddb18" kindref="member">WlanDriver_OsLockObject</ref> *</type>
+          <declname>pLockObj</declname>
+        </param>
+        <briefdescription>
+<para>This function unlock a locking object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pLockObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the lock object control block </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gae65b35d0153b4923927cc4b7567790e4" kindref="member">WLANDRIVER_SUCCESS</ref> - successfully released the lock object </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gac624fa6ec819d33292bf6930d0bd387a" kindref="member">WLANDRIVER_FAILURE</ref> - Failure when input parameter is NULL. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="370" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga7f67121b74f311f926b30eb6029a6966" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t WlanDriver_OsSyncObjectClear</definition>
+        <argsstring>(WlanDriver_OsSyncObject *pSyncObj)</argsstring>
+        <name>WlanDriver_OsSyncObjectClear</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga2a05b00f998ddcce2a739152100c51f7" kindref="member">WlanDriver_OsSyncObject</ref> *</type>
+          <declname>pSyncObj</declname>
+        </param>
+        <briefdescription>
+<para>This API tries to take the sync object without no wait time. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pSyncObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the sync object control block </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gae65b35d0153b4923927cc4b7567790e4" kindref="member">WLANDRIVER_SUCCESS</ref> - successful reception of the signal </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gac624fa6ec819d33292bf6930d0bd387a" kindref="member">WLANDRIVER_FAILURE</ref> - Failure when input parameter is NULL. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="330" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gaac26421c87e048237b5a4c0f6fcc1f60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t WlanDriver_OsSyncObjectCreate</definition>
+        <argsstring>(WlanDriver_OsSyncObject *pSyncObj)</argsstring>
+        <name>WlanDriver_OsSyncObjectCreate</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga2a05b00f998ddcce2a739152100c51f7" kindref="member">WlanDriver_OsSyncObject</ref> *</type>
+          <declname>pSyncObj</declname>
+        </param>
+        <briefdescription>
+<para>This function creates a sync object (binary semaphore) The sync object is used for synchronization between different thread or ISR and a thread. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pSyncObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the sync object control block</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gae65b35d0153b4923927cc4b7567790e4" kindref="member">WLANDRIVER_SUCCESS</ref> - successfully created synchronous object </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gac624fa6ec819d33292bf6930d0bd387a" kindref="member">WLANDRIVER_FAILURE</ref> - Failure when input parameter is NULL. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="281" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga6ca4ac9bdd26d6211ad8fbae1c707ab6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t WlanDriver_OsSyncObjectDelete</definition>
+        <argsstring>(WlanDriver_OsSyncObject *pSyncObj)</argsstring>
+        <name>WlanDriver_OsSyncObjectDelete</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga2a05b00f998ddcce2a739152100c51f7" kindref="member">WlanDriver_OsSyncObject</ref> *</type>
+          <declname>pSyncObj</declname>
+        </param>
+        <briefdescription>
+<para>This function deletes a sync object (binary semaphore) if the input parameter is valid. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pSyncObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the sync object control block</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gae65b35d0153b4923927cc4b7567790e4" kindref="member">WLANDRIVER_SUCCESS</ref> - successfully deleted synchronous object </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gac624fa6ec819d33292bf6930d0bd387a" kindref="member">WLANDRIVER_FAILURE</ref> - Failure when input parameter is NULL. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="290" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga4f15378380be03a89f5e775654ef2046" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t WlanDriver_OsSyncObjectSignal</definition>
+        <argsstring>(WlanDriver_OsSyncObject *pSyncObj)</argsstring>
+        <name>WlanDriver_OsSyncObjectSignal</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga2a05b00f998ddcce2a739152100c51f7" kindref="member">WlanDriver_OsSyncObject</ref> *</type>
+          <declname>pSyncObj</declname>
+        </param>
+        <briefdescription>
+<para>This function generates a sync signal for the object (binary semaphore) All suspended threads waiting on this sync object are resumed. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pSyncObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the sync object control block</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gae65b35d0153b4923927cc4b7567790e4" kindref="member">WLANDRIVER_SUCCESS</ref> - successfully released the synchronous object </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gac624fa6ec819d33292bf6930d0bd387a" kindref="member">WLANDRIVER_FAILURE</ref> - Failure when input parameter is NULL. </para></simplesect>
+<simplesect kind="note"><para>This API gives the synchronous object successfully if it was already taken by some one. If the sync object given as input was not taken and this API call simply returns since sync object shall not be given if it is not taken </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="303" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga22cd6840f12971ca47743b9a0ebdab89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t WlanDriver_OsSyncObjectWait</definition>
+        <argsstring>(WlanDriver_OsSyncObject *pSyncObj, WlanDriver_OsTime TimeOut)</argsstring>
+        <name>WlanDriver_OsSyncObjectWait</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga2a05b00f998ddcce2a739152100c51f7" kindref="member">WlanDriver_OsSyncObject</ref> *</type>
+          <declname>pSyncObj</declname>
+        </param>
+        <param>
+          <type><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gae7f66080a8e8fb872e7becf5574507dc" kindref="member">WlanDriver_OsTime</ref></type>
+          <declname>TimeOut</declname>
+        </param>
+        <briefdescription>
+<para>This function waits for a sync signal of the specific sync object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pSyncObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the sync object control block </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>numeric value specifies the maximum number of mSec to stay suspended while waiting for the sync signal </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gae65b35d0153b4923927cc4b7567790e4" kindref="member">WLANDRIVER_SUCCESS</ref> - reception of the signal within the TimeOut window </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gac624fa6ec819d33292bf6930d0bd387a" kindref="member">WLANDRIVER_FAILURE</ref> - Failure when input parameter is NULL. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="322" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga80db1d3c984fc768c999aa6ce8b58fdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t WlanDriver_OsSyncSignalFromISR</definition>
+        <argsstring>(WlanDriver_OsSyncObject *pSyncObj)</argsstring>
+        <name>WlanDriver_OsSyncSignalFromISR</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga2a05b00f998ddcce2a739152100c51f7" kindref="member">WlanDriver_OsSyncObject</ref> *</type>
+          <declname>pSyncObj</declname>
+        </param>
+        <briefdescription>
+<para>This function generates a sync signal for the object from Interrupt. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pSyncObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the sync object control block</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gae65b35d0153b4923927cc4b7567790e4" kindref="member">WLANDRIVER_SUCCESS</ref> - successfully released the synchronous object from interrupt </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gac624fa6ec819d33292bf6930d0bd387a" kindref="member">WLANDRIVER_FAILURE</ref> - Failure when input parameter is NULL. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="312" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga6cae2055771da707905bdff5ddb43dd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int WlanDriver_RegInterruptHdlr</definition>
+        <argsstring>(WLANDRIVER_EVENT_HANDLER InterruptHdl, void *pValue)</argsstring>
+        <name>WlanDriver_RegInterruptHdlr</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga31ef69feb947d795252ca7d2ca2dd913" kindref="member">WLANDRIVER_EVENT_HANDLER</ref></type>
+          <declname>InterruptHdl</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>pValue</declname>
+        </param>
+        <briefdescription>
+<para>Function to register the Interrupt handler. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gae65b35d0153b4923927cc4b7567790e4" kindref="member">WLANDRIVER_SUCCESS</ref> when successful </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gac624fa6ec819d33292bf6930d0bd387a" kindref="member">WLANDRIVER_FAILURE</ref> when the value of input pointer(pValue) is NULL</para></simplesect>
+<simplesect kind="note"><para>This function will be called by the WiFi driver API mapped in &lt;user.h&gt; header file </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="176" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga36e8185bd025783b2c52ba22742ef953" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WlanDriver_SetDeviceTime</definition>
+        <argsstring>(struct tm *tm)</argsstring>
+        <name>WlanDriver_SetDeviceTime</name>
+        <param>
+          <type>struct tm *</type>
+          <declname>tm</declname>
+        </param>
+        <briefdescription>
+<para>Function to set the current device time. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- pointer to all kinds of useful information about the current time.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="399" column="1"/>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gab33d1827931e656830843d7274f89055" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="421" endline="527">AppControllerFireTask</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gaaf36b335187063ee05686e755ef0fe16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WlanDriver_SimpleLinkSpawnTask</definition>
+        <argsstring>(void *pvParameters)</argsstring>
+        <name>WlanDriver_SimpleLinkSpawnTask</name>
+        <param>
+          <type>void *</type>
+          <declname>pvParameters</declname>
+        </param>
+        <briefdescription>
+<para>This is the simplelink spawn task required to call SimpleLink Driver&apos;s callback from a different context. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pvParameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the task parameter </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="377" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga95edebf75d9ec268c58172cff0306c1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int WlanDriver_SpiClose</definition>
+        <argsstring>(Fd_t fd)</argsstring>
+        <name>WlanDriver_SpiClose</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga5c60036e38dbc8cfd7a88522eaea8142" kindref="member">Fd_t</ref></type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+<para>Function to close the SPI port. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gada774dccb0214a9423687d3b86ee6542" kindref="member">WLANDRIVER_SPI_ERROR</ref> - if spiHandle is NULL </para></simplesect>
+<simplesect kind="return"><para>any error value refer #MCU_SPI_Deinitialize error codes </para></simplesect>
+<simplesect kind="note"><para>The return type &apos;int&apos; and input parameter &apos;Fd_t&apos; cannot be replaced with BCDS datatype since prototype has to match one on one with third party function data type </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="207" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga5cc556a100034e6f7a039ecb84507b33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga5c60036e38dbc8cfd7a88522eaea8142" kindref="member">Fd_t</ref></type>
+        <definition>Fd_t WlanDriver_SpiOpen</definition>
+        <argsstring>(char *ifName, unsigned long flags)</argsstring>
+        <name>WlanDriver_SpiOpen</name>
+        <param>
+          <type>char *</type>
+          <declname>ifName</declname>
+        </param>
+        <param>
+          <type>unsigned <ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga295b9aa203738050fd2137fb81030321" kindref="member">long</ref></type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Function to Initialize the SPI port. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gada774dccb0214a9423687d3b86ee6542" kindref="member">WLANDRIVER_SPI_ERROR</ref> - if spiHandle is NULL </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gada774dccb0214a9423687d3b86ee6542" kindref="member">WLANDRIVER_SPI_ERROR</ref> - if MCU_SPI_Initialize returns some error code other than RETCODE_OK </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gae65b35d0153b4923927cc4b7567790e4" kindref="member">WLANDRIVER_SUCCESS</ref> when successful</para></simplesect>
+<simplesect kind="note"><para>The return type &apos;Fd_t&apos; and input parameters &apos;char*&apos;and &apos;unsigned long&apos; cannot be replaced with BCDS datatype since prototype has to match one on one with third party function data type </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="222" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gaef042f39295f4e885dac941f67dbbaa9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int WlanDriver_SpiRead</definition>
+        <argsstring>(Fd_t fd, unsigned char *pBuff, int len)</argsstring>
+        <name>WlanDriver_SpiRead</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga5c60036e38dbc8cfd7a88522eaea8142" kindref="member">Fd_t</ref></type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>pBuff</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Function to read given number of bytes over SPI. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>-file descriptor for spi port, which is not used in current implementation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pBuff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- pointer to the first location of a buffer that contains enough space for all expected data</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>[in/out]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>len - number of bytes to read from the communication channel</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gaf93151556533c3f050937812bb3442e7" kindref="member">WLANDRIVER_SPI_RW_ERROR</ref> - spi read failed </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaa0e5f5d6d335ce57106dbe4c3c914a9d" kindref="member">RETCODE_TIMEOUT</ref> - if xSemaphoreTake fails.</para></simplesect>
+<simplesect kind="note"><para>The return value consist of (First 1 MSByte represents Package ID, Next byte represents Severity and Last 2 LSBytes represents error code).</para></simplesect>
+<simplesect kind="return"><para>#len - on success returns number of bytes received.</para></simplesect>
+<simplesect kind="note"><para>The return type &apos;int&apos; and input parameters &apos;Fd_t&apos;,&apos;unsigned char*&apos;and &apos;int&apos; cannot be replaced with BCDS datatype since prototype has to match one on one with third party function data type </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="270" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gac7ae7d0cca1e67519715942b93de27c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int WlanDriver_SpiWrite</definition>
+        <argsstring>(Fd_t fd, unsigned char *pBuff, int len)</argsstring>
+        <name>WlanDriver_SpiWrite</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga5c60036e38dbc8cfd7a88522eaea8142" kindref="member">Fd_t</ref></type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>pBuff</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Function to write given no of bytes over SPI. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>-file descriptor for spi port, which is not used in current implementation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pBuff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- pointer to the first location of a buffer that contains the data to send over the communication channel.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>[in/out]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>len - number of bytes to write to the communication channel</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gaf93151556533c3f050937812bb3442e7" kindref="member">WLANDRIVER_SPI_RW_ERROR</ref> - spi write failed if MCU_SPI_Send returns some value other than RETCODE_OK. </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaa0e5f5d6d335ce57106dbe4c3c914a9d" kindref="member">RETCODE_TIMEOUT</ref> - if xSemaphoreTake fails. </para></simplesect>
+<simplesect kind="return"><para>#len - on success returns number of bytes sent.</para></simplesect>
+<simplesect kind="note"><para>The return type &apos;int&apos; and input parameters &apos;Fd_t&apos;,&apos;unsigned char*&apos;and &apos;int&apos; cannot be replaced with BCDS datatype since prototype has to match one on one with third party function data type </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h" line="244" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>Bosch<sp/>Connected<sp/>Devices<sp/>and<sp/>Solutions<sp/>GmbH.</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*<sp/>All<sp/>Rights<sp/>Reserved.<sp/>Confidential.</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*<sp/>Distribution<sp/>only<sp/>to<sp/>people<sp/>who<sp/>need<sp/>to<sp/>know<sp/>this<sp/>information<sp/>in</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*<sp/>order<sp/>to<sp/>do<sp/>their<sp/>job.(Need-to-know<sp/>principle).</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*<sp/>Distribution<sp/>to<sp/>persons<sp/>outside<sp/>the<sp/>company,<sp/>only<sp/>if<sp/>these<sp/>persons</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/>*<sp/>signed<sp/>a<sp/>non-disclosure<sp/>agreement.</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/>*<sp/>Electronic<sp/>transmission,<sp/>e.g.<sp/>via<sp/>electronic<sp/>mail,<sp/>must<sp/>be<sp/>made<sp/>in</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>*<sp/>encrypted<sp/>form.</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="comment">/*<sp/>header<sp/>definition<sp/>********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BCDS_WLANDRIVER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BCDS_WLANDRIVER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>public<sp/>interface<sp/>declaration<sp/>*********************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___basics_8h" kindref="compound">BCDS_Basics.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___retcode_8h" kindref="compound">BCDS_Retcode.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>public<sp/>type<sp/>and<sp/>macro<sp/>definitions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga241ccfce77522db8e742217f8b25b4ad" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WLANDRIVER_OS_WAIT_FOREVER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(UINT32_MAX)<sp/><sp/></highlight></codeline>
+<codeline lineno="78" refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga24224cb077981fa60dc1b15ec38fd914" refkind="member"><highlight class="preprocessor">#define<sp/>WLANDRIVER_OS_NO_WAIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT32_C(0)<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79" refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga2c52ca0209cd824077dd6f5b8bfa1ff0" refkind="member"><highlight class="preprocessor">#define<sp/>WLANDRIVER_MAX_DELAY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(UINT32_MAX)<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80" refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gae65b35d0153b4923927cc4b7567790e4" refkind="member"><highlight class="preprocessor">#define<sp/>WLANDRIVER_SUCCESS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INT32_C(0)<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81" refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gac624fa6ec819d33292bf6930d0bd387a" refkind="member"><highlight class="preprocessor">#define<sp/>WLANDRIVER_FAILURE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INT32_C(-1)<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82" refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gae9b70af8c8941d7719042832afebd650" refkind="member"><highlight class="preprocessor">#define<sp/>WLANDRIVER_NOT_ENOUGH_MEMORY<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-1L)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gaf93151556533c3f050937812bb3442e7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WLANDRIVER_SPI_RW_ERROR<sp/><sp/><sp/><sp/><sp/>UINT32_C(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gada774dccb0214a9423687d3b86ee6542" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WLANDRIVER_SPI_ERROR<sp/><sp/><sp/><sp/><sp/>INT32_C(-1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gad039b6c973a87547c1a1271d1770718c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WLANDRIVER_COM_TIMEOUT<sp/><sp/>UINT32_C(5000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gabdc046088085c085a960bcfd0bae9d98" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WLANDRIVER_SPI_LOCK_TIMEOUT<sp/><sp/>UINT32_C(5000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga5c60036e38dbc8cfd7a88522eaea8142" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga5c60036e38dbc8cfd7a88522eaea8142" kindref="member">Fd_t</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga31ef69feb947d795252ca7d2ca2dd913" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga31ef69feb947d795252ca7d2ca2dd913" kindref="member">WLANDRIVER_EVENT_HANDLER</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pValue);</highlight></codeline>
+<codeline lineno="110" refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gab21ab10b86e7029625510934eb2f5303" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>short<sp/>(*<ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gab21ab10b86e7029625510934eb2f5303" kindref="member">WLANDRIVER_OSI_SPAWN_ENTRY</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pValue);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="struct_wlan_driver___sl_spawn_msg___s" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_wlan_driver___sl_spawn_msg___s" kindref="compound">WlanDriver_SlSpawnMsg_S</ref></highlight></codeline>
+<codeline lineno="117"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="118" refid="struct_wlan_driver___sl_spawn_msg___s_1a18e603e8bf7314ea9cd94877f64ce636" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gab21ab10b86e7029625510934eb2f5303" kindref="member">WLANDRIVER_OSI_SPAWN_ENTRY</ref><sp/><ref refid="struct_wlan_driver___sl_spawn_msg___s_1a18e603e8bf7314ea9cd94877f64ce636" kindref="member">pEntry</ref>;</highlight></codeline>
+<codeline lineno="119" refid="struct_wlan_driver___sl_spawn_msg___s_1a63ad54c993b6ca0d76f718dc1a1164c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="struct_wlan_driver___sl_spawn_msg___s_1a63ad54c993b6ca0d76f718dc1a1164c3" kindref="member">pValue</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="121" refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga44f7b92f79c71534fb68dd127b044acf" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_wlan_driver___sl_spawn_msg___s" kindref="compound">WlanDriver_SlSpawnMsg_S</ref><sp/><ref refid="struct_wlan_driver___sl_spawn_msg___s" kindref="compound">WlanDriver_SlSpawnMsg_T</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/>@brief<sp/><sp/><sp/><sp/><sp/>type<sp/>definition<sp/>for<sp/>a<sp/>sync<sp/>object<sp/>container</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"></highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/>@info<sp/><sp/>Sync<sp/>object<sp/>is<sp/>object<sp/>used<sp/>to<sp/>synchronize<sp/>between<sp/>two<sp/>threads<sp/>or<sp/>thread<sp/>and<sp/>interrupt<sp/>handler.One</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/>thread<sp/>is<sp/>waiting<sp/>on<sp/>the<sp/>object<sp/>and<sp/>the<sp/>other<sp/>thread<sp/>send<sp/>a<sp/>signal,<sp/>which<sp/>then<sp/>release<sp/>the<sp/>waiting<sp/>thread.</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/>The<sp/>signal<sp/>must<sp/>be<sp/>able<sp/>to<sp/>be<sp/>sent<sp/>from<sp/>interrupt<sp/>context.<sp/>This<sp/>object<sp/>is<sp/>generally<sp/>implemented<sp/>by<sp/>binary</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/>semaphore<sp/>or<sp/>events.</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"></highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/>@note<sp/><sp/>On<sp/>each<sp/>porting<sp/>or<sp/>platform<sp/>the<sp/>type<sp/>could<sp/>be<sp/>whatever<sp/>is<sp/>needed<sp/>-<sp/>integer,<sp/>structure<sp/>etc.</highlight></codeline>
+<codeline lineno="132"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga2a05b00f998ddcce2a739152100c51f7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga2a05b00f998ddcce2a739152100c51f7" kindref="member">WlanDriver_OsSyncObject</ref>;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="136"><highlight class="comment"><sp/>@brief<sp/><sp/><sp/><sp/><sp/>type<sp/>definition<sp/>for<sp/>a<sp/>locking<sp/>object<sp/>container</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"></highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/>@info<sp/><sp/><sp/><sp/><sp/><sp/>Locking<sp/>object<sp/>are<sp/>used<sp/>to<sp/>protect<sp/>a<sp/>resource<sp/>from<sp/>mutual<sp/>accesses<sp/>of<sp/>two<sp/>or<sp/>more<sp/>threads.</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/>The<sp/>locking<sp/>object<sp/>should<sp/>support<sp/>re-entrant<sp/>locks<sp/>by<sp/>a<sp/>signal<sp/>thread.</highlight></codeline>
+<codeline lineno="140"><highlight class="comment"><sp/>This<sp/>object<sp/>is<sp/>generally<sp/>implemented<sp/>by<sp/>mutex<sp/>semaphore</highlight></codeline>
+<codeline lineno="141"><highlight class="comment"></highlight></codeline>
+<codeline lineno="142"><highlight class="comment"><sp/>@note<sp/><sp/>On<sp/>each<sp/>porting<sp/>or<sp/>platform<sp/>the<sp/>type<sp/>could<sp/>be<sp/>whatever<sp/>is<sp/>needed<sp/>-<sp/>integer,<sp/>structure<sp/>etc.</highlight></codeline>
+<codeline lineno="143"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gab2735c3b534ef27c95fdff49b57ddb18" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gab2735c3b534ef27c95fdff49b57ddb18" kindref="member">WlanDriver_OsLockObject</ref>;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>@brief<sp/><sp/>Type<sp/>definition<sp/>for<sp/>a<sp/>time<sp/>value<sp/>in<sp/>milliseconds.</highlight></codeline>
+<codeline lineno="147"><highlight class="comment"><sp/>@note<sp/><sp/>On<sp/>each<sp/>porting<sp/>or<sp/>platform<sp/>the<sp/>type<sp/>could<sp/>be<sp/>whatever<sp/>is<sp/>needed<sp/>-<sp/>integer,<sp/>pointer<sp/>to<sp/>structure<sp/>etc.</highlight></codeline>
+<codeline lineno="148"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gae7f66080a8e8fb872e7becf5574507dc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gae7f66080a8e8fb872e7becf5574507dc" kindref="member">WlanDriver_OsTime</ref>;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>public<sp/>function<sp/>prototype<sp/>declarations<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>public<sp/>global<sp/>variable<sp/>declarations<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga74ad901f0a6c348364fd739c4aca398a" kindref="member">WlanDriver_Init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga6cae2055771da707905bdff5ddb43dd1" kindref="member">WlanDriver_RegInterruptHdlr</ref>(<ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga31ef69feb947d795252ca7d2ca2dd913" kindref="member">WLANDRIVER_EVENT_HANDLER</ref><sp/>InterruptHdl,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="struct_wlan_driver___sl_spawn_msg___s_1a63ad54c993b6ca0d76f718dc1a1164c3" kindref="member">pValue</ref>);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gaef77c5b99cc6d2d15b6b8f13e08d5cc4" kindref="member">WlanDriver_DeviceDisable</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga5ebb70616edcfb05bb62359f57569551" kindref="member">WlanDriver_DeviceEnable</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga95edebf75d9ec268c58172cff0306c1b" kindref="member">WlanDriver_SpiClose</ref>(<ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga5c60036e38dbc8cfd7a88522eaea8142" kindref="member">Fd_t</ref><sp/>fd);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga5c60036e38dbc8cfd7a88522eaea8142" kindref="member">Fd_t</ref><sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga5cc556a100034e6f7a039ecb84507b33" kindref="member">WlanDriver_SpiOpen</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ifName,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>flags);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gac7ae7d0cca1e67519715942b93de27c1" kindref="member">WlanDriver_SpiWrite</ref>(<ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga5c60036e38dbc8cfd7a88522eaea8142" kindref="member">Fd_t</ref><sp/>fd,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pBuff,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gaef042f39295f4e885dac941f67dbbaa9" kindref="member">WlanDriver_SpiRead</ref>(<ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga5c60036e38dbc8cfd7a88522eaea8142" kindref="member">Fd_t</ref><sp/>fd,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pBuff,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal">int32_t<sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gaac26421c87e048237b5a4c0f6fcc1f60" kindref="member">WlanDriver_OsSyncObjectCreate</ref>(<ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga2a05b00f998ddcce2a739152100c51f7" kindref="member">WlanDriver_OsSyncObject</ref>*<sp/>pSyncObj);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal">int32_t<sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga6ca4ac9bdd26d6211ad8fbae1c707ab6" kindref="member">WlanDriver_OsSyncObjectDelete</ref>(<ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga2a05b00f998ddcce2a739152100c51f7" kindref="member">WlanDriver_OsSyncObject</ref>*<sp/>pSyncObj);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal">int32_t<sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga4f15378380be03a89f5e775654ef2046" kindref="member">WlanDriver_OsSyncObjectSignal</ref>(<ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga2a05b00f998ddcce2a739152100c51f7" kindref="member">WlanDriver_OsSyncObject</ref>*<sp/>pSyncObj);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal">int32_t<sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga80db1d3c984fc768c999aa6ce8b58fdf" kindref="member">WlanDriver_OsSyncSignalFromISR</ref>(<ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga2a05b00f998ddcce2a739152100c51f7" kindref="member">WlanDriver_OsSyncObject</ref>*<sp/>pSyncObj);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal">int32_t<sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga22cd6840f12971ca47743b9a0ebdab89" kindref="member">WlanDriver_OsSyncObjectWait</ref>(<ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga2a05b00f998ddcce2a739152100c51f7" kindref="member">WlanDriver_OsSyncObject</ref>*<sp/>pSyncObj,<sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gae7f66080a8e8fb872e7becf5574507dc" kindref="member">WlanDriver_OsTime</ref><sp/>TimeOut);</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal">int32_t<sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga7f67121b74f311f926b30eb6029a6966" kindref="member">WlanDriver_OsSyncObjectClear</ref>(<ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga2a05b00f998ddcce2a739152100c51f7" kindref="member">WlanDriver_OsSyncObject</ref>*<sp/>pSyncObj);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal">int32_t<sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gad2aed04e8d6ffd986a0ce8ef39ffdda8" kindref="member">WlanDriver_OsLockObjectCreate</ref>(<ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gab2735c3b534ef27c95fdff49b57ddb18" kindref="member">WlanDriver_OsLockObject</ref>*<sp/>pLockObj);</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal">int32_t<sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga814fa26787c11c94e00fc290479db02b" kindref="member">WlanDriver_OsLockObjectDelete</ref>(<ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gab2735c3b534ef27c95fdff49b57ddb18" kindref="member">WlanDriver_OsLockObject</ref>*<sp/>pLockObj);</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal">int32_t<sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gab80ec3bb43bfe184aebfd86726a0f844" kindref="member">WlanDriver_OsLockObjectWait</ref>(<ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gab2735c3b534ef27c95fdff49b57ddb18" kindref="member">WlanDriver_OsLockObject</ref>*<sp/>pLockObj,<sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gae7f66080a8e8fb872e7becf5574507dc" kindref="member">WlanDriver_OsTime</ref><sp/>TimeOut);</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal">int32_t<sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga95abcd81da91afceb4524edf057d4ae4" kindref="member">WlanDriver_OsLockUnlock</ref>(<ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gab2735c3b534ef27c95fdff49b57ddb18" kindref="member">WlanDriver_OsLockObject</ref>*<sp/>pLockObj);</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gaaf36b335187063ee05686e755ef0fe16" kindref="member">WlanDriver_SimpleLinkSpawnTask</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pvParameters);</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal">int32_t<sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga733bde50024d7f6f3cf54655449e7e85" kindref="member">WlanDriver_OsiSpawn</ref>(<ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gab21ab10b86e7029625510934eb2f5303" kindref="member">WLANDRIVER_OSI_SPAWN_ENTRY</ref><sp/><ref refid="struct_wlan_driver___sl_spawn_msg___s_1a18e603e8bf7314ea9cd94877f64ce636" kindref="member">pEntry</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="struct_wlan_driver___sl_spawn_msg___s_1a63ad54c993b6ca0d76f718dc1a1164c3" kindref="member">pValue</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>flags);</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1ga36e8185bd025783b2c52ba22742ef953" kindref="member">WlanDriver_SetDeviceTime</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>tm<sp/>*tm);</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___b_c_d_s___w_l_a_n___d_r_i_v_e_r_1gaa1c5ffb9a2fd567aed2f2026d4740531" kindref="member">WlanDriver_DeInit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"></highlight></codeline>
+<codeline lineno="410"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>BCDS_WLANDRIVER_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanDriver.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_ble_hci_8h" kind="file">
+    <compoundname>BleHci.h</compoundname>
+    <includes refid="_ble_types_8h" local="yes">BleTypes.h</includes>
+    <includedby refid="_ble_radio_8c" local="yes">SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleRadio.c</includedby>
+    <incdepgraph>
+      <node id="28425">
+        <label>SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/BleHci.h</label>
+        <link refid="BleHci.h"/>
+        <childnode refid="28426" relation="include">
+        </childnode>
+      </node>
+      <node id="28426">
+        <label>BleTypes.h</label>
+        <link refid="_ble_types_8h"/>
+        <childnode refid="28427" relation="include">
+        </childnode>
+      </node>
+      <node id="28428">
+        <label>BLECustomConfig.h</label>
+        <link refid="_common_2config_2_b_l_e_custom_config_8h"/>
+      </node>
+      <node id="28427">
+        <label>BleConfig.h</label>
+        <link refid="_ble_config_8h"/>
+        <childnode refid="28428" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="28429">
+        <label>SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/BleHci.h</label>
+        <link refid="BleHci.h"/>
+        <childnode refid="28430" relation="include">
+        </childnode>
+      </node>
+      <node id="28430">
+        <label>SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleRadio.c</label>
+        <link refid="_ble_radio_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_ble_hci_vendor_command_complete" prot="public">BleHciVendorCommandComplete</innerclass>
+    <innerclass refid="struct_ble_hci_vendor_command_status" prot="public">BleHciVendorCommandStatus</innerclass>
+    <innerclass refid="struct_ble_hci_vendor_event" prot="public">BleHciVendorEvent</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_ble_hci_8h_1a64f66278d59d5a65853c4ea41d869cb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref></type>
+        <definition>BleStatus BLEHCI_SendVendorSpecificCommand</definition>
+        <argsstring>(U16 opCode, U8 parmsLen, U8 *parms)</argsstring>
+        <name>BLEHCI_SendVendorSpecificCommand</name>
+        <param>
+          <type><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref></type>
+          <declname>opCode</declname>
+        </param>
+        <param>
+          <type><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref></type>
+          <declname>parmsLen</declname>
+        </param>
+        <param>
+          <type><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref> *</type>
+          <declname>parms</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/BleHci.h" line="134" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__BLEHCI_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__BLEHCI_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>This<sp/>software<sp/>is<sp/>copyrighted<sp/>by<sp/>Alpwise,<sp/>2016.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>The<sp/>use<sp/>of<sp/>this<sp/>software<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>XDK<sp/>SDK<sp/>EULA</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleHci.h</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Description:<sp/><sp/><sp/>Contains<sp/>Application<sp/>interfaces<sp/>routines<sp/>for<sp/>BLEHCI.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>Created:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>January,<sp/>2009</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>Version:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0.1</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>File<sp/>Revision:<sp/>$Rev:<sp/>3068<sp/>$</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>$Project$</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ble_types_8h" kindref="compound">BleTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLE_ENABLE_VENDOR_SPECIFIC<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/>Type<sp/>definition</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="struct_ble_hci_vendor_command_complete" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41" refid="struct_ble_hci_vendor_command_complete_1a667d2daf04d843648fba76e0f0b2e28d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><ref refid="struct_ble_hci_vendor_command_complete_1a667d2daf04d843648fba76e0f0b2e28d" kindref="member">opcode</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="struct_ble_hci_vendor_command_complete_1ac9ef1a5d5e7c28c7acec7fd6258dc494" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/>*<ref refid="struct_ble_hci_vendor_command_complete_1ac9ef1a5d5e7c28c7acec7fd6258dc494" kindref="member">parms</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}<sp/><ref refid="struct_ble_hci_vendor_command_complete" kindref="compound">BleHciVendorCommandComplete</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="struct_ble_hci_vendor_command_status" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61" refid="struct_ble_hci_vendor_command_status_1a667d2daf04d843648fba76e0f0b2e28d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><ref refid="struct_ble_hci_vendor_command_status_1a667d2daf04d843648fba76e0f0b2e28d" kindref="member">opcode</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="struct_ble_hci_vendor_command_status_1aa2ef32d18f7a5a009b93a17834fe3828" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><ref refid="struct_ble_hci_vendor_command_status_1aa2ef32d18f7a5a009b93a17834fe3828" kindref="member">status</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}<sp/><ref refid="struct_ble_hci_vendor_command_status" kindref="compound">BleHciVendorCommandStatus</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="struct_ble_hci_vendor_event" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//U8<sp/>eventCode;<sp/>//always<sp/>0xFF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="struct_ble_hci_vendor_event_1abd08c764a7ecf15c8a14ec1b607ee923" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><ref refid="struct_ble_hci_vendor_event_1abd08c764a7ecf15c8a14ec1b607ee923" kindref="member">parmsLen</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="struct_ble_hci_vendor_event_1ac9ef1a5d5e7c28c7acec7fd6258dc494" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/>*<ref refid="struct_ble_hci_vendor_event_1ac9ef1a5d5e7c28c7acec7fd6258dc494" kindref="member">parms</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}<sp/><ref refid="struct_ble_hci_vendor_event" kindref="compound">BleHciVendorEvent</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLE_ENABLE_VENDOR_SPECIFIC<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLE_ENABLE_HCI_LOCK<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/>BleHciLockState;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEHCI_UNLOCKHCIPACKET<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEHCI_LOCKHCIPACKET<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLE_ENABLE_HCI_LOCK<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/>*<sp/><sp/>APPLICATION<sp/>INTERFACE<sp/>functions<sp/>definition</highlight></codeline>
+<codeline lineno="107"><highlight class="comment"><sp/>****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLE_ENABLE_VENDOR_SPECIFIC<sp/>==<sp/>1)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Send<sp/>a<sp/>vendor<sp/>specific<sp/>HCI<sp/>command.</highlight></codeline>
+<codeline lineno="111"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="112"><highlight class="comment"><sp/>*<sp/>BLEHCI_SendVendorSpecificCommand():</highlight></codeline>
+<codeline lineno="113"><highlight class="comment"><sp/>*<sp/><sp/>Send<sp/>a<sp/>vendor<sp/>specific<sp/>command.<sp/>when<sp/>an<sp/>application<sp/>to<sp/>send<sp/>a<sp/>vendor</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"><sp/>*<sp/><sp/>specific<sp/>command,<sp/>it<sp/>can<sp/>use<sp/>this<sp/>interface.</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/>*<sp/><sp/>The<sp/>opcode<sp/>of<sp/>the<sp/>command<sp/>to<sp/>send<sp/>shall<sp/>have<sp/>an<sp/>OGF<sp/>of<sp/>0x3F,<sp/>and<sp/>the<sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="comment"><sp/>*<sp/><sp/>command<sp/>should<sp/>generate<sp/>a<sp/>command<sp/>complete<sp/>or<sp/>a<sp/>command<sp/>status<sp/>event.</highlight></codeline>
+<codeline lineno="117"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="118"><highlight class="comment"><sp/>*<sp/><sp/>Upon<sp/>the<sp/>controller<sp/>answer<sp/>to<sp/>this<sp/>command,<sp/>the<sp/>application<sp/>callback</highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/>*<sp/><sp/>will<sp/>receive<sp/>a<sp/>BLEEVENT_VENDOR_COMMAND_COMPLETE<sp/>event<sp/>or<sp/>a</highlight></codeline>
+<codeline lineno="120"><highlight class="comment"><sp/>*<sp/><sp/>BLEEVENT_VENDOR_COMMAND_STATUS<sp/>event.</highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/>*<sp/>BLE_ENABLE_VENDOR_SPECIFIC<sp/>shall<sp/>be<sp/>enabled</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/>*<sp/><sp/>opCode<sp/><sp/>The<sp/>opcode<sp/>of<sp/>the<sp/>command<sp/>to<sp/>send,<sp/>the<sp/>OGF<sp/>shall<sp/>be<sp/>0x3F</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>otherwise<sp/>the<sp/>function<sp/>fails</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/>*<sp/><sp/>parmsLen<sp/><sp/>The<sp/>parameters<sp/>data<sp/>length</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/>*<sp/><sp/>parms<sp/><sp/><sp/><sp/><sp/>The<sp/>parameters<sp/>data</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"><sp/>*<sp/><sp/>The<sp/>status<sp/>of<sp/>the<sp/>operation:</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/>*<sp/><sp/>-<sp/>BLESTATUS_SUCCESS<sp/>indicates<sp/>that<sp/>the<sp/>operation<sp/>succeeded</highlight></codeline>
+<codeline lineno="132"><highlight class="comment"><sp/>*<sp/><sp/>-<sp/>BLESTATUS_FAILED<sp/>indicates<sp/>that<sp/>the<sp/>operation<sp/>has<sp/>failed</highlight></codeline>
+<codeline lineno="133"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/><ref refid="_ble_hci_8h_1a64f66278d59d5a65853c4ea41d869cb2" kindref="member">BLEHCI_SendVendorSpecificCommand</ref>(<ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/>opCode,<sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/>parmsLen,<sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref>*<sp/>parms);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLE_ENABLE_VENDOR_SPECIFIC<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>((BLE_ENABLE_HCI_LOCK<sp/>==<sp/>1)<sp/>&amp;&amp;<sp/>(BLECONTROLLER_NEED_SPECIFIC_INIT<sp/>==<sp/>1))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>BLEHCI_SetHciLockState(<sp/>BleHciLockState<sp/>lockState<sp/>);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//((BLE_ENABLE_HCI_LOCK<sp/>==<sp/>1)<sp/>&amp;&amp;<sp/>(BLECONTROLLER_NEED_SPECIFIC_INIT<sp/>==<sp/>1))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*__BLEHCI_H*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/BleHci.h"/>
+  </compounddef>
+</doxygen>

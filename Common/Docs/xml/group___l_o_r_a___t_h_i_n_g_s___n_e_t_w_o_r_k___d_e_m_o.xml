@@ -1,0 +1,403 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o" kind="group">
+    <compoundname>LORA_THINGS_NETWORK_DEMO</compoundname>
+    <title>LoRaThingsNetworkDemo</title>
+    <innerfile refid="_lo_ra_things_network_demo_2source_2_app_controller_8c">AppController.c</innerfile>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga90ce7b07b4530c957f9f83201d8dc8bc" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga41a2f220f03970c1857bd96528307a81" kindref="member">CmdProcessor_T</ref> *</type>
+        <definition>CmdProcessor_T* AppCmdProcessor</definition>
+        <argsstring></argsstring>
+        <name>AppCmdProcessor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle to store the main Command processor handle to be used by run-time event driven threads </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" line="151" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" bodystart="151" bodyend="-1"/>
+        <referencedby refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8c" startline="389" endline="415">AppControllerSetup</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga6fa700b048407619b5309da95dcce5dd" prot="public" static="yes" mutable="no">
+        <type><ref refid="_free_r_t_o_s_8h_1af7cd8f53b62f0c497b442b504c30f2ec" kindref="member">xTaskHandle</ref></type>
+        <definition>xTaskHandle AppControllerHandle</definition>
+        <argsstring></argsstring>
+        <name>AppControllerHandle</name>
+        <initializer>= <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>OS thread handle for Application controller to be used by run-time blocking threads </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" line="152" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1gaa7767e6480cf1e0153b9cc8a5e6c4921" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t AppKey[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>AppKey</name>
+        <initializer>= { <ref refid="_lo_ra_things_network_demo_2source_2_app_controller_8h_1a90d8e3c227201146fc5968e0fbbc46cc" kindref="member">APP_LORA_APP_KEY</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt; AppKey is the data encryption key used to &quot;encode&quot; the messages between the end nodes and the Application Server </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" line="84" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga9ba25f48659d34184b256bfd28dd0c1f" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___lo_ra_1ga7f627533d69eee9c475c5ecef418f4e1" kindref="member">LoRa_Setup_T</ref></type>
+        <definition>LoRa_Setup_T LoRaSetupInfo</definition>
+        <argsstring></argsstring>
+        <name>LoRaSetupInfo</name>
+        <initializer>=
+        {
+                .CodingRate = <ref refid="_lo_ra_things_network_demo_2source_2_app_controller_8h_1ac35b05cb324ccfc3941509240fdb6e61" kindref="member">APP_LORA_CODING_RATE</ref>,
+                .DevEUI = <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,
+                .AppEUI = <ref refid="_lo_ra_things_network_demo_2source_2_app_controller_8h_1a438e798ec27e3533871ffd0f0abdb7b5" kindref="member">APP_LORA_APP_EUI</ref>,
+                .<ref refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1gaa7767e6480cf1e0153b9cc8a5e6c4921" kindref="member">AppKey</ref> = (uint8_t*) <ref refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1gaa7767e6480cf1e0153b9cc8a5e6c4921" kindref="member">AppKey</ref>,
+                .RxFreq = <ref refid="_lo_ra_things_network_demo_2source_2_app_controller_8h_1a920295860db7cf80d4bb04282ba02e5f" kindref="member">APP_LORA_RX_WINDOW_FREQ</ref>,
+                .Freq = <ref refid="_lo_ra_things_network_demo_2source_2_app_controller_8h_1ae54b680f2ac2d72422455029aaae6af9" kindref="member">APP_LORA_FREQUENCY</ref>,
+                .EventCallback = <ref refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga4cb07a7434ccd435603525716ebefdc8" kindref="member">LoRaEventNotificationCB</ref>,
+                .JoinType = <ref refid="group___lo_ra_1gga24627b44241c99afc85a11a90341742ba339b2b00bef92ce434534dba6e89bc23" kindref="member">LORA_JOINTYPE_OTAA</ref>,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt; LoRa setup parameters Sensor setup parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" line="94" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga30f9cefc6d3484ef7c8aafac99310abe" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___i_n_b_u_i_l_d_s_e_n_s_o_r_1ga7769593edd2c8739a3debfe559ad6ff8" kindref="member">Sensor_Setup_T</ref></type>
+        <definition>Sensor_Setup_T SensorSetup</definition>
+        <argsstring></argsstring>
+        <name>SensorSetup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" line="107" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga22919ee3de6947c4b6616a9231e71f67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AppController_Init</definition>
+        <argsstring>(void *cmdProcessorHandle, uint32_t param2)</argsstring>
+        <name>AppController_Init</name>
+        <param>
+          <type>void *</type>
+          <declname>cmdProcessorHandle</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>Gives control to the Application controller. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a template function where the user can write his custom application.</para><para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" line="418" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" bodystart="418" bodyend="440"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e">CmdProcessor_Enqueue</references>
+        <references refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8c" startline="389" endline="415">AppControllerSetup</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+      </memberdef>
+      <memberdef kind="function" id="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga5ef9cc8f277726dc19c525c8049d388f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerEnable</definition>
+        <argsstring>(void *param1, uint32_t param2)</argsstring>
+        <name>AppControllerEnable</name>
+        <param>
+          <type>void *</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>To enable the necessary modules for the application. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>LoRa</para></listitem><listitem><para>Sensor</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" line="336" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" bodystart="336" bodyend="376"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___lo_ra_1ga03b463571101c0e72fc7d94968c28302">LoRa_Enable</references>
+        <references refid="group___lo_ra_1ga430500db1e5590ac729572396aac0ea7">LoRa_GetHwEUI</references>
+        <references refid="group___i_n_b_u_i_l_d_s_e_n_s_o_r_1ga098f1e2f6e287146591b8ff5886c6820">Sensor_Enable</references>
+        <references refid="group___l_e_d_1gae3a60da7a90139abb54f4ddb36456756">LED_Enable</references>
+        <references refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8c" startline="203" endline="323">AppControllerFire</references>
+        <references refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1af793604cd2dbedfc6b69f10936fe7c41" compoundref="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h" startline="61">TASK_STACK_SIZE_APP_CONTROLLER</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1a4651501b886d4de331b9f06b37265177" compoundref="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h" startline="59">TASK_PRIO_APP_CONTROLLER</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba497273b2285191edc1cda8648b67250a" compoundref="_b_c_d_s___retcode_8h" startline="107">RETCODE_OUT_OF_RESOURCES</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+        <referencedby refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8c" startline="389" endline="415">AppControllerSetup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerFire</definition>
+        <argsstring>(void *pvParameters)</argsstring>
+        <name>AppControllerFire</name>
+        <param>
+          <type>void *</type>
+          <declname>pvParameters</declname>
+        </param>
+        <briefdescription>
+<para>Responsible for controlling the LORA Example application control flow. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>LoRa join is done</para></listitem><listitem><para>Read the Sensor data</para></listitem><listitem><para>Send sensor data via. LoRa.</para></listitem><listitem><para>Wait for APP_CONTROLLER_LORA_TX_DELAY before proceeding to redoing the above steps except first step</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pvParameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" line="203" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" bodystart="203" bodyend="323"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="_lo_ra_things_network_demo_2source_2_app_controller_8h_1a48b3cf178d479fc3ed314d21ec732c03" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8h" startline="50">APP_LORA_BUFFER_MAX_SIZE</references>
+        <references refid="struct_cayenne_l_p_p_serializer___output___s_1ae1d7039acb24324331f29b356e48602d" compoundref="_x_d_k___cayenne_l_p_p_serializer_8h" startline="201">CayenneLPPSerializer_Output_S::BufferLength</references>
+        <references refid="group___lo_ra_1gac15904441cffe97eaa910cfff9734f76">LoRa_Join</references>
+        <references refid="group___l_e_d_1gaa08f7e9c416b666b93efadee96284629">LED_On</references>
+        <references refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a9563b16cb4e0808638f4838b21350347" compoundref="_x_d_k___l_e_d_8h" startline="65">LED_INBUILT_YELLOW</references>
+        <references refid="group___lo_ra_1gaaeb9f159c406558aef0b5bc2c67b1771">LoRa_SetDataRate</references>
+        <references refid="group___lo_ra_1ga4062b901272926338010c9d9fa2462c1">LoRa_SendUnconfirmed</references>
+        <references refid="group___i_n_b_u_i_l_d_s_e_n_s_o_r_1ga79fa92353c8d9e30f05d957755a48f24">Sensor_GetData</references>
+        <references refid="struct_cayenne_l_p_p_serializer___output___s_1a96b5ab6cb65b9119c915f37c4f587f20" compoundref="_x_d_k___cayenne_l_p_p_serializer_8h" startline="200">CayenneLPPSerializer_Output_S::BufferPointer</references>
+        <references refid="struct_cayenne_l_p_p_serializer___input___s_1a7e82ad34172a15efc14f9486b984a278" compoundref="_x_d_k___cayenne_l_p_p_serializer_8h" startline="186">CayenneLPPSerializer_Input_S::DataType</references>
+        <references refid="group___c_a_y_e_n_n_e_l_p_p_s_e_r_i_a_l_i_z_e_r_1gga75a77a12f1c7b9f0ddee92bdf7dccf49a27b9ad9a31d9dee2667abf2a40c808b4" compoundref="_x_d_k___cayenne_l_p_p_serializer_8h" startline="167">CAYENNE_LLP_SERIALIZER_TEMPERATURE_SENSOR</references>
+        <references refid="struct_cayenne_l_p_p_serializer___input___s_1a9935ea48f6f3fb8f1db6a87f90d3e05f" compoundref="_x_d_k___cayenne_l_p_p_serializer_8h" startline="185">CayenneLPPSerializer_Input_S::DataChannel</references>
+        <references refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga16d4628378bb027597f808912c87b889" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8c" startline="77">TEMPERATURE_DATA_CH</references>
+        <references refid="struct_cayenne_l_p_p_serializer___input___s_1ac08d2bad56cf39aea261e19f7786eed2" compoundref="_x_d_k___cayenne_l_p_p_serializer_8h" startline="187">CayenneLPPSerializer_Input_S::Data</references>
+        <references refid="union_cayenne_l_p_p_serializer___data___u_1a35d7e5fd0e2c6a4fd6aec704e1f369e9" compoundref="_x_d_k___cayenne_l_p_p_serializer_8h" startline="121">CayenneLPPSerializer_Data_U::TemperatureSensorValue</references>
+        <references refid="struct_sensor___value___s_1a30b2ceb495b99ab029b438563e5f22fa" compoundref="_x_d_k___sensor_8h" startline="266">Sensor_Value_S::Temp</references>
+        <references refid="group___c_a_y_e_n_n_e_l_p_p_s_e_r_i_a_l_i_z_e_r_1gab007bc6739b50da0ee4d30be1ec6f48c" compoundref="_cayenne_l_p_p_serializer_8c" startline="64" endline="252">CayenneLPPSerializer_SingleInstance</references>
+        <references refid="struct_cayenne_l_p_p_serializer___output___s_1ab588ca1ae25d4fe7235547896ef6e966" compoundref="_x_d_k___cayenne_l_p_p_serializer_8h" startline="202">CayenneLPPSerializer_Output_S::BufferFilledLength</references>
+        <references refid="group___c_a_y_e_n_n_e_l_p_p_s_e_r_i_a_l_i_z_e_r_1gga75a77a12f1c7b9f0ddee92bdf7dccf49a5bddc50be18efe41bcb04a2dcaec85a3" compoundref="_x_d_k___cayenne_l_p_p_serializer_8h" startline="168">CAYENNE_LLP_SERIALIZER_HUMIDITY_SENSOR</references>
+        <references refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga75d21851eecfa4f0491d545f6591ba5c" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8c" startline="78">HUMIDITY_DATA_CH</references>
+        <references refid="union_cayenne_l_p_p_serializer___data___u_1abb20b2b6bfe3e7bc9c90d3207abefab4" compoundref="_x_d_k___cayenne_l_p_p_serializer_8h" startline="125">CayenneLPPSerializer_Data_U::HumiditySensorValue</references>
+        <references refid="struct_sensor___value___s_1a547107fb9bde20fd87dedc23ae5b2be5" compoundref="_x_d_k___sensor_8h" startline="264">Sensor_Value_S::RH</references>
+        <references refid="group___c_a_y_e_n_n_e_l_p_p_s_e_r_i_a_l_i_z_e_r_1gga75a77a12f1c7b9f0ddee92bdf7dccf49a46d7b29203882539a76049b6a86e344f" compoundref="_x_d_k___cayenne_l_p_p_serializer_8h" startline="170">CAYENNE_LLP_SERIALIZER_BAROMETER</references>
+        <references refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga8d029223fb5c512e76236e8e496f0686" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8c" startline="79">PRESSURE_DATA_CH</references>
+        <references refid="union_cayenne_l_p_p_serializer___data___u_1a74fc139b4a846394f9e1b4760c67df1c" compoundref="_x_d_k___cayenne_l_p_p_serializer_8h" startline="135">CayenneLPPSerializer_Data_U::BarometerValue</references>
+        <references refid="struct_sensor___value___s_1aab91169cc86c5a56fe7def7cebd4fba6" compoundref="_x_d_k___sensor_8h" startline="265">Sensor_Value_S::Pressure</references>
+        <references refid="group___c_a_y_e_n_n_e_l_p_p_s_e_r_i_a_l_i_z_e_r_1gga75a77a12f1c7b9f0ddee92bdf7dccf49acdf73fbbe12f0cf0a0a046dfbd1c29b6" compoundref="_x_d_k___cayenne_l_p_p_serializer_8h" startline="165">CAYENNE_LLP_SERIALIZER_ILLUMINANCE_SENSOR</references>
+        <references refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga8058d7f8eb3b06314a4133a773a482ce" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8c" startline="80">ILLUMINANCE_DATA_CH</references>
+        <references refid="union_cayenne_l_p_p_serializer___data___u_1a1a16f4c40a3019b0ec16c444faa466d3" compoundref="_x_d_k___cayenne_l_p_p_serializer_8h" startline="113">CayenneLPPSerializer_Data_U::IlluminanceSensorValue</references>
+        <references refid="struct_sensor___value___s_1a9023a95854456ae95ede28f80751a3b1" compoundref="_x_d_k___sensor_8h" startline="267">Sensor_Value_S::Light</references>
+        <references refid="_lo_ra_things_network_demo_2source_2_app_controller_8h_1a0319bd4a3196474779c250f387b9024d" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8h" startline="54">APP_LORA_PORT</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="task_8h_1aa154068cecd7f31446a7a84af44ab1a3">vTaskDelay</references>
+        <references refid="_lo_ra_things_network_demo_2source_2_app_controller_8h_1acee00cff8f7d6fc5db84f7a7bacc06f7" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8h" startline="45">APP_CONTROLLER_LORA_TX_DELAY</references>
+        <references refid="group___lo_ra_1ga430500db1e5590ac729572396aac0ea7">LoRa_GetHwEUI</references>
+        <references refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a2b719feebe5e5a744315a07766e16af2" compoundref="_x_d_k___l_e_d_8h" startline="64">LED_INBUILT_RED</references>
+        <references refid="task_8h_1a84d4e660b04630be2939d91b3c2412f8">vTaskSuspend</references>
+        <referencedby refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8c" startline="336" endline="376">AppControllerEnable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga5ca12481e985f2cd2437fe712e08c9b7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerSetup</definition>
+        <argsstring>(void *param1, uint32_t param2)</argsstring>
+        <name>AppControllerSetup</name>
+        <param>
+          <type>void *</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>To setup the necessary modules for the application. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>LoRa</para></listitem><listitem><para>Sensor</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" line="389" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" bodystart="389" bodyend="415"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___lo_ra_1gad688d42c0ec23282fa2f3ed8f35dbb5c">LoRa_Setup</references>
+        <references refid="struct_sensor___setup___s_1a4b767178f176a51f1c1c6abc68069ece" compoundref="_x_d_k___sensor_8h" startline="208">Sensor_Setup_S::CmdProcessorHandle</references>
+        <references refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga90ce7b07b4530c957f9f83201d8dc8bc" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8c" startline="151">AppCmdProcessor</references>
+        <references refid="group___i_n_b_u_i_l_d_s_e_n_s_o_r_1ga128512064ba3f94f8d0157cc1e87db22">Sensor_Setup</references>
+        <references refid="group___l_e_d_1gaec11150ded6e8967d64145a758af0616">LED_Setup</references>
+        <references refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e">CmdProcessor_Enqueue</references>
+        <references refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8c" startline="336" endline="376">AppControllerEnable</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+        <referencedby refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga22919ee3de6947c4b6616a9231e71f67" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8c" startline="418" endline="440">AppController_Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga4cb07a7434ccd435603525716ebefdc8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void LoRaEventNotificationCB</definition>
+        <argsstring>(LoRa_Event_T event)</argsstring>
+        <name>LoRaEventNotificationCB</name>
+        <param>
+          <type><ref refid="group___lo_ra_1gae5d0929ffb3226248ffce14c65903c68" kindref="member">LoRa_Event_T</ref></type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>This is the LoRa event Notification callback function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>event type that is received. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" line="91" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" bodystart="157" bodyend="190"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___lo_ra_1gga6ef1724a082ccdde367dbddf293fb7bca470078c88070a10f1945ebf86a70e66a" compoundref="_x_d_k___lo_ra_8h" startline="70">LORA_EVENT_RECEIVED_PACKET</references>
+        <references refid="group___l_e_d_1gaa08f7e9c416b666b93efadee96284629">LED_On</references>
+        <references refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a2b719feebe5e5a744315a07766e16af2" compoundref="_x_d_k___l_e_d_8h" startline="64">LED_INBUILT_RED</references>
+        <references refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a9ef5f00f3a78db87b6b039fcc52f82bd" compoundref="_x_d_k___l_e_d_8h" startline="66">LED_INBUILT_ORANGE</references>
+        <references refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a9563b16cb4e0808638f4838b21350347" compoundref="_x_d_k___l_e_d_8h" startline="65">LED_INBUILT_YELLOW</references>
+        <references refid="group___lo_ra_1gga6ef1724a082ccdde367dbddf293fb7bca7f84674087f103b43621b18a8a8ffc2d" compoundref="_x_d_k___lo_ra_8h" startline="71">LORA_EVENT_SEND_FAILED</references>
+        <references refid="group___l_e_d_1ga017ce6b05845f8ea5f91e0103cf025a6">LED_Off</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga09172068262a168884b86e26a8122080" prot="public" static="no">
+        <name>APP_TEMPERATURE_OFFSET_CORRECTION</name>
+        <initializer>(-3459)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro for static temperature offset correction. Self heating, temperature correction factor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" line="74" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1gabff8f3a204e79671b98fabaa652198c3" prot="public" static="no">
+        <name>BCDS_MODULE_ID</name>
+        <initializer><ref refid="_xdk_extension_port_2source_2_xdk_app_info_8h_1a58c5197225b08cbce9809ee5d9b3ae74ac664b9d7c9367aef22abcb23812b6f33" kindref="member">XDK_APP_MODULE_ID_APP_CONTROLLER</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" line="53" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga75d21851eecfa4f0491d545f6591ba5c" prot="public" static="no">
+        <name>HUMIDITY_DATA_CH</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" line="78" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" bodystart="78" bodyend="-1"/>
+        <referencedby refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8c" startline="203" endline="323">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga8058d7f8eb3b06314a4133a773a482ce" prot="public" static="no">
+        <name>ILLUMINANCE_DATA_CH</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" line="80" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" bodystart="80" bodyend="-1"/>
+        <referencedby refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8c" startline="203" endline="323">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga8d029223fb5c512e76236e8e496f0686" prot="public" static="no">
+        <name>PRESSURE_DATA_CH</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" line="79" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" bodystart="79" bodyend="-1"/>
+        <referencedby refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8c" startline="203" endline="323">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga16d4628378bb027597f808912c87b889" prot="public" static="no">
+        <name>TEMPERATURE_DATA_CH</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" line="77" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c" bodystart="77" bodyend="-1"/>
+        <referencedby refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8c" startline="203" endline="323">AppControllerFire</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Demo application of Transmitting temperature,pressure,humidity and light sensor data on LoRa every configured interval (<ref refid="_lo_ra_things_network_demo_2source_2_app_controller_8h_1acee00cff8f7d6fc5db84f7a7bacc06f7" kindref="member">APP_CONTROLLER_LORA_TX_DELAY</ref>) </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

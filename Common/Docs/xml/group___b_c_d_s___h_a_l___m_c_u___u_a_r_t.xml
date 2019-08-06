@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___b_c_d_s___h_a_l___m_c_u___u_a_r_t" kind="group">
+    <compoundname>BCDS_HAL_MCU_UART</compoundname>
+    <title>UART</title>
+    <innerfile refid="_b_c_d_s___m_c_u___u_a_r_t_8h">BCDS_MCU_UART.h</innerfile>
+    <briefdescription>
+<para>Unified UART (Universal Asynchronous Receiver Transmitter) Interface. </para>    </briefdescription>
+    <detaileddescription>
+<para>A typical use of this API would start with initializing the UART instance. This will initializes the UART with default settings.</para><para><programlisting><codeline><highlight class="normal">retcode<sp/>=<sp/>MCU_UART_Initialize(uart,<sp/>callback);</highlight></codeline>
+</programlisting></para><para>Now, the UART is configured and active such that the communication can start. The application should use the function MCU_UART_Receive() to receive a certain number bytes. If receiving is non-blocking, the call triggers the receiving process and returns. The callback is invoked with an RxComplete event when the expected number of bytes has been received.</para><para>For sending, the application uses the function MCU_UART_Send(). In a non-blocking scenario a callback will happen to notify the application about the success or failure of the sending operation.</para><para>The callback may be also called for other events such as errors.</para><para><simplesect kind="note"><para>The callback function is usually invoked in the ISR context. The implementation of the callback function must take this into account.</para></simplesect>
+<simplesect kind="note"><para>It is possible to disable the entire UART feature in the HAL-BSP configuration file. I.e. the UART code will only be compiled and linked if the feature <bold>BCDS_FEATURE_UART</bold> is set to 1 in the configuration file.</para></simplesect>
+<simplesect kind="note"><para>The driver may work in an interrupt- or DMA-based mode. This depends on the implementation of the driver as well as on the way how the UART hardware is initialized and configured in the BSP. </para></simplesect>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

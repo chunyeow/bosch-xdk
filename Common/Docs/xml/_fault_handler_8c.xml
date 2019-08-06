@@ -1,0 +1,1483 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_fault_handler_8c" kind="file">
+    <compoundname>FaultHandler.c</compoundname>
+    <includes refid="_b_c_d_s___b_s_p___board_8h" local="yes">BCDS_BSP_Board.h</includes>
+    <includes local="yes">stdio.h</includes>
+    <incdepgraph>
+      <node id="27324">
+        <label>stdbool.h</label>
+      </node>
+      <node id="27327">
+        <label>BCDS_HALConfig.h</label>
+        <link refid="_b_c_d_s___h_a_l_config_8h"/>
+      </node>
+      <node id="27323">
+        <label>stdint.h</label>
+      </node>
+      <node id="27321">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="27322" relation="include">
+        </childnode>
+      </node>
+      <node id="27326">
+        <label>stdlib.h</label>
+      </node>
+      <node id="27325">
+        <label>string.h</label>
+      </node>
+      <node id="27322">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="27323" relation="include">
+        </childnode>
+        <childnode refid="27324" relation="include">
+        </childnode>
+        <childnode refid="27325" relation="include">
+        </childnode>
+        <childnode refid="27326" relation="include">
+        </childnode>
+      </node>
+      <node id="27320">
+        <label>BCDS_HAL.h</label>
+        <link refid="_b_c_d_s___h_a_l_8h"/>
+        <childnode refid="27321" relation="include">
+        </childnode>
+        <childnode refid="27327" relation="include">
+        </childnode>
+      </node>
+      <node id="27318">
+        <label>SDK/xdk110/Common/source/FaultHandler.c</label>
+        <link refid="FaultHandler.c"/>
+        <childnode refid="27319" relation="include">
+        </childnode>
+        <childnode refid="27328" relation="include">
+        </childnode>
+      </node>
+      <node id="27319">
+        <label>BCDS_BSP_Board.h</label>
+        <link refid="_b_c_d_s___b_s_p___board_8h"/>
+        <childnode refid="27320" relation="include">
+        </childnode>
+      </node>
+      <node id="27328">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_fault_handler_8c_1a51077bf424ba2497baa1c66927895860" prot="public" static="no">
+        <name>NVIC_AFSR</name>
+        <initializer>(*(volatile unsigned int*) (0xE000ED3Cu))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="89" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="89" bodyend="-1"/>
+        <referencedby refid="_fault_handler_8c_1a66ac0301348f904721bcd7cfadfe4317" compoundref="_fault_handler_8c" startline="309" endline="352">extractFaultInfo</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_fault_handler_8c_1aaf616f38c33b267a72da33a45f548c22" prot="public" static="no">
+        <name>NVIC_BFAR</name>
+        <initializer>(*(volatile unsigned int*) (0xE000ED38u))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="87" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="87" bodyend="-1"/>
+        <referencedby refid="_fault_handler_8c_1a66ac0301348f904721bcd7cfadfe4317" compoundref="_fault_handler_8c" startline="309" endline="352">extractFaultInfo</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_fault_handler_8c_1a6392e0beb7b77e5a9507be1754b7f59c" prot="public" static="no">
+        <name>NVIC_BFSR</name>
+        <initializer>(*(volatile unsigned char*) (0xE000ED29u))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="79" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="79" bodyend="-1"/>
+        <referencedby refid="_fault_handler_8c_1a66ac0301348f904721bcd7cfadfe4317" compoundref="_fault_handler_8c" startline="309" endline="352">extractFaultInfo</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_fault_handler_8c_1ac8ac5f0f42315fd63ceb33e8c54fd06c" prot="public" static="no">
+        <name>NVIC_DFSR</name>
+        <initializer>(*(volatile unsigned int*) (0xE000ED30u))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="85" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="85" bodyend="-1"/>
+        <referencedby refid="_fault_handler_8c_1a66ac0301348f904721bcd7cfadfe4317" compoundref="_fault_handler_8c" startline="309" endline="352">extractFaultInfo</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_fault_handler_8c_1a09ca4d4823c17e484a4b357298c04910" prot="public" static="no">
+        <name>NVIC_HFSR</name>
+        <initializer>(*(volatile unsigned int*) (0xE000ED2Cu))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="83" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="83" bodyend="-1"/>
+        <referencedby refid="_fault_handler_8c_1a66ac0301348f904721bcd7cfadfe4317" compoundref="_fault_handler_8c" startline="309" endline="352">extractFaultInfo</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_fault_handler_8c_1a51557db99e5587d28e47dcd217746fd3" prot="public" static="no">
+        <name>NVIC_MFSR</name>
+        <initializer>(*(volatile unsigned char*) (0xE000ED28u))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="77" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="77" bodyend="-1"/>
+        <referencedby refid="_fault_handler_8c_1a66ac0301348f904721bcd7cfadfe4317" compoundref="_fault_handler_8c" startline="309" endline="352">extractFaultInfo</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_fault_handler_8c_1aa0d132455989bd4116be6db52d05d75b" prot="public" static="no">
+        <name>NVIC_UFSR</name>
+        <initializer>(*(volatile unsigned short*)(0xE000ED2Au))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="81" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="81" bodyend="-1"/>
+        <referencedby refid="_fault_handler_8c_1a66ac0301348f904721bcd7cfadfe4317" compoundref="_fault_handler_8c" startline="309" endline="352">extractFaultInfo</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_fault_handler_8c_1a10f9762b17fe1905be10d0461ebc9f0a" prot="public" static="no">
+        <name>SYSHND_CTRL</name>
+        <initializer>(*(volatile unsigned int*) (0xE000ED24u))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="75" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="75" bodyend="-1"/>
+        <referencedby refid="_fault_handler_8c_1a66ac0301348f904721bcd7cfadfe4317" compoundref="_fault_handler_8c" startline="309" endline="352">extractFaultInfo</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_fault_handler_8c_1a82ae4500d608af5e15626ea2ca32473e" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>volatile unsigned int afsr</definition>
+        <argsstring></argsstring>
+        <name>afsr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="213" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1aae88ad82eb93184ef168e8ff2028ed31" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int APSR</definition>
+        <argsstring></argsstring>
+        <name>APSR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="113" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a204b77b87957a68a5d1b3afabfda1478" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>volatile unsigned int bfar</definition>
+        <argsstring></argsstring>
+        <name>bfar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="172" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a8572731e652bdc9ced44da05a2d4251e" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int BFARVALID</definition>
+        <argsstring></argsstring>
+        <name>BFARVALID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="168" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a1c5d165d53a992ba72a08bb546a6a505" prot="public" static="no" mutable="no">
+        <type>union @12::@16</type>
+        <definition>union @12::@16  bfsr</definition>
+        <argsstring></argsstring>
+        <name>bfsr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="170" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a1c8aeea3d7f8e092df78494b65fbb452" prot="public" static="no" mutable="no">
+        <type>struct @12::@13::@20::@21</type>
+        <definition>struct @12::@19::@27  bits</definition>
+        <argsstring></argsstring>
+        <name>bits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="114" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a8877263ae4a2d08b18f110b980d65aa4" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int BKPT</definition>
+        <argsstring></argsstring>
+        <name>BKPT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="207" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a79c868bc5a6b977a315841ef4aa96cca" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int BUSFAULTACT</definition>
+        <argsstring></argsstring>
+        <name>BUSFAULTACT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="123" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a0ed7c028cdc3479c2f7f03a5c86244c8" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int BUSFAULTENA</definition>
+        <argsstring></argsstring>
+        <name>BUSFAULTENA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="137" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1abacc9fc26a68be3b697ea89e6bd9e5c3" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int BUSFAULTPENDED</definition>
+        <argsstring></argsstring>
+        <name>BUSFAULTPENDED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="134" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a977b4c6fdb29af4d067f43aa302e99e9" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>volatile unsigned int byte</definition>
+        <argsstring></argsstring>
+        <name>byte</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="108" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a8b0572245f68bc9c34f5bab98b976d82" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char DACCVIOL</definition>
+        <argsstring></argsstring>
+        <name>DACCVIOL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="148" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1ab5bb0782fe1aa11b369f13631f6486fc" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int DEBUGEVT</definition>
+        <argsstring></argsstring>
+        <name>DEBUGEVT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="198" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1ae1d6e2322a32c1487ff57dd5dccd0f55" prot="public" static="no" mutable="no">
+        <type>union @12::@19</type>
+        <definition>union @12::@19  dfsr</definition>
+        <argsstring></argsstring>
+        <name>dfsr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="212" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1ac1b68e1eace553353ba14a903210e0de" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short DIVBYZERO</definition>
+        <argsstring></argsstring>
+        <name>DIVBYZERO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="185" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1ada2e5fbdb8c7fa3be7471cd41b7b5995" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int DWTTRAP</definition>
+        <argsstring></argsstring>
+        <name>DWTTRAP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="208" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1ac936a8743571f8aaa0f4ac87f19f6944" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int EPSR</definition>
+        <argsstring></argsstring>
+        <name>EPSR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="112" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a636a344a5601ce1ab0537678f6062b25" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int EXTERNAL</definition>
+        <argsstring></argsstring>
+        <name>EXTERNAL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="210" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a791fd65d37a51f3e63cba72be802c93d" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int FORCED</definition>
+        <argsstring></argsstring>
+        <name>FORCED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="197" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a98581f987c94cc9c55fb3280436db209" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int HALTED</definition>
+        <argsstring></argsstring>
+        <name>HALTED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="206" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" prot="public" static="yes" mutable="no">
+        <type>struct @12</type>
+        <definition>struct @12  HardFaultRegs</definition>
+        <argsstring></argsstring>
+        <name>HardFaultRegs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="214" column="1"/>
+        <referencedby refid="_fault_handler_8c_1a66ac0301348f904721bcd7cfadfe4317" compoundref="_fault_handler_8c" startline="309" endline="352">extractFaultInfo</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1adf58e36483fc0c462c91fe7d7d76f352" prot="public" static="no" mutable="no">
+        <type>union @12::@18</type>
+        <definition>union @12::@18  hfsr</definition>
+        <argsstring></argsstring>
+        <name>hfsr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="200" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1ae3c97673fa5e7b0e7a69d754e245fc36" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char IACCVIOL</definition>
+        <argsstring></argsstring>
+        <name>IACCVIOL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="147" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a79e94f7846c4c6c4e66f9230e71f068e" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int IBUSERR</definition>
+        <argsstring></argsstring>
+        <name>IBUSERR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="162" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1ac96ad10d2d090353a33c52b639b47695" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int IMPREISERR</definition>
+        <argsstring></argsstring>
+        <name>IMPREISERR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="164" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a38cd379c2c6c37e89cd2efb3a6ee9719" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short INVPC</definition>
+        <argsstring></argsstring>
+        <name>INVPC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="181" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a4bedb3adcf9faa32fb1b145b64ef0694" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short INVSTATE</definition>
+        <argsstring></argsstring>
+        <name>INVSTATE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="180" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a87f48cc23b4c7833f557b72e5211ef2f" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int IPSR</definition>
+        <argsstring></argsstring>
+        <name>IPSR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="111" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a5143afa854b72fb665bf6d3d0cc4aa17" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>volatile unsigned int lr</definition>
+        <argsstring></argsstring>
+        <name>lr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="104" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a99b915b7c0b4421eea09bfd1fe7d1006" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int MEMFAULTACT</definition>
+        <argsstring></argsstring>
+        <name>MEMFAULTACT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="122" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a58194a4f4d738e7a4602a9ebf65922e4" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int MEMFAULTENA</definition>
+        <argsstring></argsstring>
+        <name>MEMFAULTENA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="136" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a34a53287378cff101561bf02440eac41" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int MEMFAULTPENDED</definition>
+        <argsstring></argsstring>
+        <name>MEMFAULTPENDED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="133" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a6056e7dbe21aec96c4688276ffe3f74e" prot="public" static="no" mutable="no">
+        <type>union @12::@15</type>
+        <definition>union @12::@15  mfsr</definition>
+        <argsstring></argsstring>
+        <name>mfsr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="155" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1abb054ab62cec08c6d544e14fe044093e" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char MMARVALID</definition>
+        <argsstring></argsstring>
+        <name>MMARVALID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="153" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1af17bcd3a143f40c11afb8cfbd101011b" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int MONITORACT</definition>
+        <argsstring></argsstring>
+        <name>MONITORACT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="128" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1aa765cb5a9350be9e3a9fbe1f3c15e692" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char MSTKERR</definition>
+        <argsstring></argsstring>
+        <name>MSTKERR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="151" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1aa789377ac4efe1266f3fa7ba3774f707" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char MUNSTKERR</definition>
+        <argsstring></argsstring>
+        <name>MUNSTKERR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="150" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a1e0a633d4d21b7d2b93e686fced83217" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short NOCP</definition>
+        <argsstring></argsstring>
+        <name>NOCP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="182" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a64b917f8da4b760f3b3bf89efc9f59c9" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>volatile unsigned int pc</definition>
+        <argsstring></argsstring>
+        <name>pc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="105" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1ad63eb311bb19c4d4a2dea5572e27a049" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int PENDSVACT</definition>
+        <argsstring></argsstring>
+        <name>PENDSVACT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="130" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1aac0331857fd23097d8470e917c96c1f4" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int PRECISERR</definition>
+        <argsstring></argsstring>
+        <name>PRECISERR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="163" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a30ad139a1ce520664c03b7f4f2c86529" prot="public" static="no" mutable="no">
+        <type>union @12::@13::@20</type>
+        <definition>union @12::@13::@20  psr</definition>
+        <argsstring></argsstring>
+        <name>psr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="115" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1ae26a84c7eae2bfc66936c83d79d4c5df" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>volatile unsigned int r0</definition>
+        <argsstring></argsstring>
+        <name>r0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="99" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a4c4ba41ae7b35e6b1d8642f215a6a81d" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>volatile unsigned int r1</definition>
+        <argsstring></argsstring>
+        <name>r1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="100" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a05629fe46add85f8e78ee7c6514adca0" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>volatile unsigned int r12</definition>
+        <argsstring></argsstring>
+        <name>r12</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="103" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a8b403b5c4c9e9b0633dd64beb778e0ad" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>volatile unsigned int r2</definition>
+        <argsstring></argsstring>
+        <name>r2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="101" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a6948b597c3145f44bf8581852b13423d" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>volatile unsigned int r3</definition>
+        <argsstring></argsstring>
+        <name>r3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="102" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a4b478815761c775852e930640aa34f22" prot="public" static="no" mutable="no">
+        <type>struct @12::@13</type>
+        <definition>struct @12::@13  SavedRegs</definition>
+        <argsstring></argsstring>
+        <name>SavedRegs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="116" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1aa6a94e0e31289308785ee8b2768f8bdf" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int STKERR</definition>
+        <argsstring></argsstring>
+        <name>STKERR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="166" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a4543407c6df50882b787aa118a9e8a92" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int SVCALLACT</definition>
+        <argsstring></argsstring>
+        <name>SVCALLACT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="127" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a4e661f39b73aecac0987d1b513384e86" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int SVCALLPENDED</definition>
+        <argsstring></argsstring>
+        <name>SVCALLPENDED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="135" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a633af50fe23ad83cfdc8c99fb08d1740" prot="public" static="no" mutable="no">
+        <type>union @12::@14</type>
+        <definition>union @12::@14  syshndctrl</definition>
+        <argsstring></argsstring>
+        <name>syshndctrl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="140" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a1fa813c2511a12a9fb330b519762033c" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int SYSTICKACT</definition>
+        <argsstring></argsstring>
+        <name>SYSTICKACT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="131" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a52df73134e2f73398a92cff0e796f0b7" prot="public" static="no" mutable="no">
+        <type>union @12::@17</type>
+        <definition>union @12::@17  ufsr</definition>
+        <argsstring></argsstring>
+        <name>ufsr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="188" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a84a6b8413d7a5a78013858e764be1dfa" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short UNALIGNED</definition>
+        <argsstring></argsstring>
+        <name>UNALIGNED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="184" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a9bdb4320f42dc69c96befcd79a21047d" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short UNDEFINSTR</definition>
+        <argsstring></argsstring>
+        <name>UNDEFINSTR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="179" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1ac5ba8c15ebf675ada1256999e61f2da1" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int UNSTKERR</definition>
+        <argsstring></argsstring>
+        <name>UNSTKERR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="165" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1afe4536d777b0076f863423991951d674" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned int UnusedBits</definition>
+        <argsstring></argsstring>
+        <name>UnusedBits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="149" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1ac5b383530c8489f8f7f48f090de18d96" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int UnusedBits1</definition>
+        <argsstring></argsstring>
+        <name>UnusedBits1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="124" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1ae6e53f5a9af71d710e9a67a42040da35" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int UnusedBits2</definition>
+        <argsstring></argsstring>
+        <name>UnusedBits2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="126" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a7881de60fae44a1ebf3f2d3bbe5cef10" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int UnusedBits3</definition>
+        <argsstring></argsstring>
+        <name>UnusedBits3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="129" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a1823414ef39692c88a834c9c57cf731d" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int USGFAULTACT</definition>
+        <argsstring></argsstring>
+        <name>USGFAULTACT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="125" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a5fc1d39bf6c6a584018caf343c7f6c2a" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int USGFAULTENA</definition>
+        <argsstring></argsstring>
+        <name>USGFAULTENA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="138" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1aa66dde0042dcceffdd1f139adc3efd90" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int USGFAULTPENDED</definition>
+        <argsstring></argsstring>
+        <name>USGFAULTPENDED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="132" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a6b119aac264151cd754c5a7bcce49cf2" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int VCATCH</definition>
+        <argsstring></argsstring>
+        <name>VCATCH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="209" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fault_handler_8c_1a96fd35e06acf6446516a5e3603feb639" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int VECTBL</definition>
+        <argsstring></argsstring>
+        <name>VECTBL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="195" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_fault_handler_8c_1a2804a023941a956288c32ad08b2cf59e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__attribute__</definition>
+        <argsstring>((naked))</argsstring>
+        <name>__attribute__</name>
+        <param>
+          <type>(naked)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Debug function which is entered whenever an unrecoverable system fault occurs.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pulFaultStackAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the saved fault stack.Hard Fault exception handler</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Usage Fault exception handler</para><para>BUS Fault exception handler</para><para>Memory Manager Fault exception handler </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="230" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="230" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="_fault_handler_8c_1a0b916b681dab5bb9f7cdb3fdba9eb586" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bus_Fault_Handler</definition>
+        <argsstring>(unsigned int *pulBusFaultStackAddress)</argsstring>
+        <name>Bus_Fault_Handler</name>
+        <param>
+          <type>unsigned int *</type>
+          <declname>pulBusFaultStackAddress</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="299" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="299" bodyend="302"/>
+        <references refid="_fault_handler_8c_1a66ac0301348f904721bcd7cfadfe4317" compoundref="_fault_handler_8c" startline="309" endline="352">extractFaultInfo</references>
+      </memberdef>
+      <memberdef kind="function" id="_fault_handler_8c_1a66ac0301348f904721bcd7cfadfe4317" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void extractFaultInfo</definition>
+        <argsstring>(unsigned int *pStack)</argsstring>
+        <name>extractFaultInfo</name>
+        <param>
+          <type>unsigned int *</type>
+          <declname>pStack</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="220" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="309" bodyend="352"/>
+        <references refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42">HardFaultRegs</references>
+        <references refid="_fault_handler_8c_1a10f9762b17fe1905be10d0461ebc9f0a" compoundref="_fault_handler_8c" startline="75">SYSHND_CTRL</references>
+        <references refid="_fault_handler_8c_1a51557db99e5587d28e47dcd217746fd3" compoundref="_fault_handler_8c" startline="77">NVIC_MFSR</references>
+        <references refid="_fault_handler_8c_1a6392e0beb7b77e5a9507be1754b7f59c" compoundref="_fault_handler_8c" startline="79">NVIC_BFSR</references>
+        <references refid="_fault_handler_8c_1aaf616f38c33b267a72da33a45f548c22" compoundref="_fault_handler_8c" startline="87">NVIC_BFAR</references>
+        <references refid="_fault_handler_8c_1aa0d132455989bd4116be6db52d05d75b" compoundref="_fault_handler_8c" startline="81">NVIC_UFSR</references>
+        <references refid="_fault_handler_8c_1a09ca4d4823c17e484a4b357298c04910" compoundref="_fault_handler_8c" startline="83">NVIC_HFSR</references>
+        <references refid="_fault_handler_8c_1ac8ac5f0f42315fd63ceb33e8c54fd06c" compoundref="_fault_handler_8c" startline="85">NVIC_DFSR</references>
+        <references refid="_fault_handler_8c_1a51077bf424ba2497baa1c66927895860" compoundref="_fault_handler_8c" startline="89">NVIC_AFSR</references>
+        <references refid="group___b_c_d_s___h_a_l___b_s_p___board_1ga9002f1e2b3c29dc6d5b4a23cb3eb40dd" compoundref="_b_s_p___board_8c" startline="994" endline="997">BSP_Board_SoftReset</references>
+        <referencedby refid="_fault_handler_8c_1aeaaaa496bc8bd655919653e267b6bddd" compoundref="_fault_handler_8c" startline="289" endline="292">Hard_Fault_Handler</referencedby>
+        <referencedby refid="_fault_handler_8c_1a37af88ad2cfdf4da712e42a9ba1fd9b2" compoundref="_fault_handler_8c" startline="294" endline="297">Usage_Fault_Handler</referencedby>
+        <referencedby refid="_fault_handler_8c_1a0b916b681dab5bb9f7cdb3fdba9eb586" compoundref="_fault_handler_8c" startline="299" endline="302">Bus_Fault_Handler</referencedby>
+        <referencedby refid="_fault_handler_8c_1ab3116d01bb8d4fb14a267f3f8a248fec" compoundref="_fault_handler_8c" startline="304" endline="307">Mem_Fault_Handler</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_fault_handler_8c_1aeaaaa496bc8bd655919653e267b6bddd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hard_Fault_Handler</definition>
+        <argsstring>(unsigned int *pulHardFaultStackAddress)</argsstring>
+        <name>Hard_Fault_Handler</name>
+        <param>
+          <type>unsigned int *</type>
+          <declname>pulHardFaultStackAddress</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="289" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="289" bodyend="292"/>
+        <references refid="_fault_handler_8c_1a66ac0301348f904721bcd7cfadfe4317" compoundref="_fault_handler_8c" startline="309" endline="352">extractFaultInfo</references>
+      </memberdef>
+      <memberdef kind="function" id="_fault_handler_8c_1ab3116d01bb8d4fb14a267f3f8a248fec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mem_Fault_Handler</definition>
+        <argsstring>(unsigned int *pulMemFaultStackAddress)</argsstring>
+        <name>Mem_Fault_Handler</name>
+        <param>
+          <type>unsigned int *</type>
+          <declname>pulMemFaultStackAddress</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="304" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="304" bodyend="307"/>
+        <references refid="_fault_handler_8c_1a66ac0301348f904721bcd7cfadfe4317" compoundref="_fault_handler_8c" startline="309" endline="352">extractFaultInfo</references>
+      </memberdef>
+      <memberdef kind="function" id="_fault_handler_8c_1a37af88ad2cfdf4da712e42a9ba1fd9b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Usage_Fault_Handler</definition>
+        <argsstring>(unsigned int *pulUsageFaultStackAddress)</argsstring>
+        <name>Usage_Fault_Handler</name>
+        <param>
+          <type>unsigned int *</type>
+          <declname>pulUsageFaultStackAddress</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" line="294" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c" bodystart="294" bodyend="297"/>
+        <references refid="_fault_handler_8c_1a66ac0301348f904721bcd7cfadfe4317" compoundref="_fault_handler_8c" startline="309" endline="352">extractFaultInfo</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The fault handler module can aid software developers to analyze exceptions thrown by the MCU.</para><para>This module defines a exception&apos;s handler function for each CMSIS defined fault handlers.</para><para>In case of exceptions, the hard fault exception handler will be called which will save the context into C variables which can be checked in the debugger after the exception event as the event handler blocks the application.</para><para><simplesect kind="note"><para>The SCB structure from CMSIS can be monitored in the debugger to get additional information about the hard fault failure. For example, SCB-&gt;CFSR can tell what kind of exception occurred.</para></simplesect>
+<simplesect kind="note"><para>The module is only active in debug builds!</para></simplesect>
+Release builds must be built with the NDEBUG symbol defined in the makefile.</para><para><simplesect kind="note"><para>The library is specifically designed for ARM based MCUs implementing the ARM Embedded ABI. </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="comment">/*<sp/>module<sp/>includes<sp/>**********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>standard<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>additional<sp/>interface<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___b_s_p___board_8h" kindref="compound">BCDS_BSP_Board.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stdio.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>constant<sp/>definitions<sp/>*****************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">/*System<sp/>Handler<sp/>Control<sp/>and<sp/>State<sp/>Register<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="_fault_handler_8c_1a10f9762b17fe1905be10d0461ebc9f0a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SYSHND_CTRL<sp/>(*(volatile<sp/>unsigned<sp/>int*)<sp/>(0xE000ED24u))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">/*Memory<sp/>Management<sp/>Fault<sp/>Status<sp/>Register<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="_fault_handler_8c_1a51557db99e5587d28e47dcd217746fd3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NVIC_MFSR<sp/>(*(volatile<sp/>unsigned<sp/>char*)<sp/>(0xE000ED28u))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">/*Bus<sp/>Fault<sp/>Status<sp/>Register<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="_fault_handler_8c_1a6392e0beb7b77e5a9507be1754b7f59c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NVIC_BFSR<sp/>(*(volatile<sp/>unsigned<sp/>char*)<sp/>(0xE000ED29u))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Usage<sp/>Fault<sp/>Status<sp/>Register<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="_fault_handler_8c_1aa0d132455989bd4116be6db52d05d75b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NVIC_UFSR<sp/>(*(volatile<sp/>unsigned<sp/>short*)(0xE000ED2Au))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">/*Hard<sp/>Fault<sp/>Status<sp/>Register<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="_fault_handler_8c_1a09ca4d4823c17e484a4b357298c04910" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NVIC_HFSR<sp/>(*(volatile<sp/>unsigned<sp/>int*)<sp/>(0xE000ED2Cu))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Debug<sp/>Fault<sp/>Status<sp/>Register<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="_fault_handler_8c_1ac8ac5f0f42315fd63ceb33e8c54fd06c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NVIC_DFSR<sp/>(*(volatile<sp/>unsigned<sp/>int*)<sp/>(0xE000ED30u))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Bus<sp/>Fault<sp/>Manage<sp/>Address<sp/>Register<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="_fault_handler_8c_1aaf616f38c33b267a72da33a45f548c22" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NVIC_BFAR<sp/>(*(volatile<sp/>unsigned<sp/>int*)<sp/>(0xE000ED38u))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Auxiliary<sp/>Fault<sp/>Status<sp/>Register<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="_fault_handler_8c_1a51077bf424ba2497baa1c66927895860" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NVIC_AFSR<sp/>(*(volatile<sp/>unsigned<sp/>int*)<sp/>(0xE000ED3Cu))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>local<sp/>variables<sp/>**********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>global<sp/>variables<sp/>*********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="99" refid="_fault_handler_8c_1ae26a84c7eae2bfc66936c83d79d4c5df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1ae26a84c7eae2bfc66936c83d79d4c5df" kindref="member">r0</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Register<sp/>R0<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="_fault_handler_8c_1a4c4ba41ae7b35e6b1d8642f215a6a81d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a4c4ba41ae7b35e6b1d8642f215a6a81d" kindref="member">r1</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Register<sp/>R1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="_fault_handler_8c_1a8b403b5c4c9e9b0633dd64beb778e0ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a8b403b5c4c9e9b0633dd64beb778e0ad" kindref="member">r2</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Register<sp/>R2<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="_fault_handler_8c_1a6948b597c3145f44bf8581852b13423d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a6948b597c3145f44bf8581852b13423d" kindref="member">r3</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Register<sp/>R3<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="_fault_handler_8c_1a05629fe46add85f8e78ee7c6514adca0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a05629fe46add85f8e78ee7c6514adca0" kindref="member">r12</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Register<sp/>R12<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="_fault_handler_8c_1a5143afa854b72fb665bf6d3d0cc4aa17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a5143afa854b72fb665bf6d3d0cc4aa17" kindref="member">lr</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Link<sp/>register<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="_fault_handler_8c_1a64b917f8da4b760f3b3bf89efc9f59c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a64b917f8da4b760f3b3bf89efc9f59c9" kindref="member">pc</ref>;<sp/></highlight><highlight class="comment">/*Program<sp/>counter<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="108" refid="_fault_handler_8c_1a977b4c6fdb29af4d067f43aa302e99e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a977b4c6fdb29af4d067f43aa302e99e9" kindref="member">byte</ref>;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111" refid="_fault_handler_8c_1a87f48cc23b4c7833f557b72e5211ef2f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a87f48cc23b4c7833f557b72e5211ef2f" kindref="member">IPSR</ref><sp/>:8;<sp/></highlight><highlight class="comment">/*<sp/>Interrupt<sp/>Program<sp/>Status<sp/>register<sp/>(IPSR)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="_fault_handler_8c_1ac936a8743571f8aaa0f4ac87f19f6944" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1ac936a8743571f8aaa0f4ac87f19f6944" kindref="member">EPSR</ref><sp/>:19;<sp/></highlight><highlight class="comment">/*<sp/>Execution<sp/>Program<sp/>Status<sp/>register<sp/>(EPSR)*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="_fault_handler_8c_1aae88ad82eb93184ef168e8ff2028ed31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1aae88ad82eb93184ef168e8ff2028ed31" kindref="member">APSR</ref><sp/>:5;<sp/></highlight><highlight class="comment">/*<sp/>Application<sp/>Program<sp/>Status<sp/>register<sp/>(APSR)*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><ref refid="_fault_handler_8c_1a1c8aeea3d7f8e092df78494b65fbb452" kindref="member">bits</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><ref refid="_fault_handler_8c_1a30ad139a1ce520664c03b7f4f2c86529" kindref="member">psr</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Program<sp/>status<sp/>register.*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="_fault_handler_8c_1a4b478815761c775852e930640aa34f22" kindref="member">SavedRegs</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a977b4c6fdb29af4d067f43aa302e99e9" kindref="member">byte</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="122" refid="_fault_handler_8c_1a99b915b7c0b4421eea09bfd1fe7d1006" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a99b915b7c0b4421eea09bfd1fe7d1006" kindref="member">MEMFAULTACT</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>as<sp/>1<sp/>if<sp/>memory<sp/>management<sp/>fault<sp/>is<sp/>active<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="_fault_handler_8c_1a79c868bc5a6b977a315841ef4aa96cca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a79c868bc5a6b977a315841ef4aa96cca" kindref="member">BUSFAULTACT</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>as<sp/>1<sp/>if<sp/>bus<sp/>fault<sp/>exception<sp/>is<sp/>active<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="_fault_handler_8c_1ac5b383530c8489f8f7f48f090de18d96" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1ac5b383530c8489f8f7f48f090de18d96" kindref="member">UnusedBits1</ref><sp/>:1;</highlight></codeline>
+<codeline lineno="125" refid="_fault_handler_8c_1a1823414ef39692c88a834c9c57cf731d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a1823414ef39692c88a834c9c57cf731d" kindref="member">USGFAULTACT</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>as<sp/>1<sp/>if<sp/>usage<sp/>fault<sp/>exception<sp/>is<sp/>active<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="_fault_handler_8c_1ae6e53f5a9af71d710e9a67a42040da35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1ae6e53f5a9af71d710e9a67a42040da35" kindref="member">UnusedBits2</ref><sp/>:3;</highlight></codeline>
+<codeline lineno="127" refid="_fault_handler_8c_1a4543407c6df50882b787aa118a9e8a92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a4543407c6df50882b787aa118a9e8a92" kindref="member">SVCALLACT</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>as<sp/>1<sp/>if<sp/>SVC<sp/>exception<sp/>is<sp/>active<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="_fault_handler_8c_1af17bcd3a143f40c11afb8cfbd101011b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1af17bcd3a143f40c11afb8cfbd101011b" kindref="member">MONITORACT</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>as<sp/>1<sp/>if<sp/>debug<sp/>monitor<sp/>exception<sp/>is<sp/>active<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="_fault_handler_8c_1a7881de60fae44a1ebf3f2d3bbe5cef10" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a7881de60fae44a1ebf3f2d3bbe5cef10" kindref="member">UnusedBits3</ref><sp/>:1;</highlight></codeline>
+<codeline lineno="130" refid="_fault_handler_8c_1ad63eb311bb19c4d4a2dea5572e27a049" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1ad63eb311bb19c4d4a2dea5572e27a049" kindref="member">PENDSVACT</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>as<sp/>1<sp/>if<sp/>PendSV<sp/>exception<sp/>is<sp/>active<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="_fault_handler_8c_1a1fa813c2511a12a9fb330b519762033c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a1fa813c2511a12a9fb330b519762033c" kindref="member">SYSTICKACT</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>as<sp/>1<sp/>if<sp/>SYSTICK<sp/>exception<sp/>is<sp/>active<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="_fault_handler_8c_1aa66dde0042dcceffdd1f139adc3efd90" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1aa66dde0042dcceffdd1f139adc3efd90" kindref="member">USGFAULTPENDED</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Usage<sp/>fault<sp/>pended;<sp/>usage<sp/>fault<sp/>started<sp/>but<sp/>was<sp/>replaced<sp/>by<sp/>a<sp/>higher-priority<sp/>exception<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="_fault_handler_8c_1a34a53287378cff101561bf02440eac41" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a34a53287378cff101561bf02440eac41" kindref="member">MEMFAULTPENDED</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Memory<sp/>management<sp/>fault<sp/>pended;<sp/>memory<sp/>management<sp/>fault<sp/>started<sp/>but<sp/>was<sp/>replaced<sp/>by<sp/>a<sp/>higher-priority<sp/>exception<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="_fault_handler_8c_1abacc9fc26a68be3b697ea89e6bd9e5c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1abacc9fc26a68be3b697ea89e6bd9e5c3" kindref="member">BUSFAULTPENDED</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Bus<sp/>fault<sp/>pended;<sp/>bus<sp/>fault<sp/>handler<sp/>was<sp/>started<sp/>but<sp/>was<sp/>replaced<sp/>by<sp/>a<sp/>higher-priority<sp/>exception<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="_fault_handler_8c_1a4e661f39b73aecac0987d1b513384e86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a4e661f39b73aecac0987d1b513384e86" kindref="member">SVCALLPENDED</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>SVC<sp/>pended;<sp/>SVC<sp/>was<sp/>started<sp/>but<sp/>was<sp/>replaced<sp/>by<sp/>a<sp/>higher-priority<sp/>exception<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="_fault_handler_8c_1a58194a4f4d738e7a4602a9ebf65922e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a58194a4f4d738e7a4602a9ebf65922e4" kindref="member">MEMFAULTENA</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Memory<sp/>management<sp/>fault<sp/>handler<sp/>enable<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="_fault_handler_8c_1a0ed7c028cdc3479c2f7f03a5c86244c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a0ed7c028cdc3479c2f7f03a5c86244c8" kindref="member">BUSFAULTENA</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Bus<sp/>fault<sp/>handler<sp/>enable<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="_fault_handler_8c_1a5fc1d39bf6c6a584018caf343c7f6c2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a5fc1d39bf6c6a584018caf343c7f6c2a" kindref="member">USGFAULTENA</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Usage<sp/>fault<sp/>handler<sp/>enable<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><ref refid="_fault_handler_8c_1a1c8aeea3d7f8e092df78494b65fbb452" kindref="member">bits</ref>;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="_fault_handler_8c_1a633af50fe23ad83cfdc8c99fb08d1740" kindref="member">syshndctrl</ref>;<sp/></highlight><highlight class="comment">/*<sp/>System<sp/>Handler<sp/>Control<sp/>and<sp/>State<sp/>Register<sp/>(0xE000ED24)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a977b4c6fdb29af4d067f43aa302e99e9" kindref="member">byte</ref>;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="147" refid="_fault_handler_8c_1ae3c97673fa5e7b0e7a69d754e245fc36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1ae3c97673fa5e7b0e7a69d754e245fc36" kindref="member">IACCVIOL</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Instruction<sp/>access<sp/>violation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="_fault_handler_8c_1a8b0572245f68bc9c34f5bab98b976d82" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a8b0572245f68bc9c34f5bab98b976d82" kindref="member">DACCVIOL</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Data<sp/>access<sp/>violation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="_fault_handler_8c_1afe4536d777b0076f863423991951d674" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1afe4536d777b0076f863423991951d674" kindref="member">UnusedBits</ref><sp/>:1;</highlight></codeline>
+<codeline lineno="150" refid="_fault_handler_8c_1aa789377ac4efe1266f3fa7ba3774f707" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1aa789377ac4efe1266f3fa7ba3774f707" kindref="member">MUNSTKERR</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Unstacking<sp/>error<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="_fault_handler_8c_1aa765cb5a9350be9e3a9fbe1f3c15e692" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1aa765cb5a9350be9e3a9fbe1f3c15e692" kindref="member">MSTKERR</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Stacking<sp/>error<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1ae6e53f5a9af71d710e9a67a42040da35" kindref="member">UnusedBits2</ref><sp/>:2;</highlight></codeline>
+<codeline lineno="153" refid="_fault_handler_8c_1abb054ab62cec08c6d544e14fe044093e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1abb054ab62cec08c6d544e14fe044093e" kindref="member">MMARVALID</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Indicates<sp/>the<sp/>MMAR<sp/>is<sp/>valid<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><ref refid="_fault_handler_8c_1a1c8aeea3d7f8e092df78494b65fbb452" kindref="member">bits</ref>;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="_fault_handler_8c_1a6056e7dbe21aec96c4688276ffe3f74e" kindref="member">mfsr</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Memory<sp/>Management<sp/>Fault<sp/>Status<sp/>Register<sp/>(0xE000ED28)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a977b4c6fdb29af4d067f43aa302e99e9" kindref="member">byte</ref>;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="162" refid="_fault_handler_8c_1a79e94f7846c4c6c4e66f9230e71f068e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a79e94f7846c4c6c4e66f9230e71f068e" kindref="member">IBUSERR</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Instruction<sp/>access<sp/>violation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163" refid="_fault_handler_8c_1aac0331857fd23097d8470e917c96c1f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1aac0331857fd23097d8470e917c96c1f4" kindref="member">PRECISERR</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Precise<sp/>data<sp/>access<sp/>violation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="_fault_handler_8c_1ac96ad10d2d090353a33c52b639b47695" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1ac96ad10d2d090353a33c52b639b47695" kindref="member">IMPREISERR</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Imprecise<sp/>data<sp/>access<sp/>violation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="_fault_handler_8c_1ac5ba8c15ebf675ada1256999e61f2da1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1ac5ba8c15ebf675ada1256999e61f2da1" kindref="member">UNSTKERR</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Unstacking<sp/>error<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166" refid="_fault_handler_8c_1aa6a94e0e31289308785ee8b2768f8bdf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1aa6a94e0e31289308785ee8b2768f8bdf" kindref="member">STKERR</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Stacking<sp/>error<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1afe4536d777b0076f863423991951d674" kindref="member">UnusedBits</ref><sp/>:2;</highlight></codeline>
+<codeline lineno="168" refid="_fault_handler_8c_1a8572731e652bdc9ced44da05a2d4251e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a8572731e652bdc9ced44da05a2d4251e" kindref="member">BFARVALID</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Indicates<sp/>BFAR<sp/>is<sp/>valid<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><ref refid="_fault_handler_8c_1a1c8aeea3d7f8e092df78494b65fbb452" kindref="member">bits</ref>;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="_fault_handler_8c_1a1c5d165d53a992ba72a08bb546a6a505" kindref="member">bfsr</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Bus<sp/>Fault<sp/>Status<sp/>Register<sp/>(0xE000ED29)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="_fault_handler_8c_1a204b77b87957a68a5d1b3afabfda1478" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a204b77b87957a68a5d1b3afabfda1478" kindref="member">bfar</ref>;<sp/></highlight><highlight class="comment">/*Bus<sp/>Fault<sp/>Manage<sp/>Address<sp/>Register<sp/><sp/><sp/>(0xE000ED38)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a977b4c6fdb29af4d067f43aa302e99e9" kindref="member">byte</ref>;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="179" refid="_fault_handler_8c_1a9bdb4320f42dc69c96befcd79a21047d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a9bdb4320f42dc69c96befcd79a21047d" kindref="member">UNDEFINSTR</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Attempts<sp/>to<sp/>execute<sp/>an<sp/>undefined<sp/>instruction<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="_fault_handler_8c_1a4bedb3adcf9faa32fb1b145b64ef0694" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a4bedb3adcf9faa32fb1b145b64ef0694" kindref="member">INVSTATE</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Attempts<sp/>to<sp/>switch<sp/>to<sp/>an<sp/>invalid<sp/>state<sp/>(e.g.,<sp/>ARM)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="_fault_handler_8c_1a38cd379c2c6c37e89cd2efb3a6ee9719" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a38cd379c2c6c37e89cd2efb3a6ee9719" kindref="member">INVPC</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Attempts<sp/>to<sp/>do<sp/>an<sp/>exception<sp/>with<sp/>a<sp/>bad<sp/>value<sp/>in<sp/>the<sp/>EXC_RETURN<sp/>number<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="_fault_handler_8c_1a1e0a633d4d21b7d2b93e686fced83217" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a1e0a633d4d21b7d2b93e686fced83217" kindref="member">NOCP</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Attempts<sp/>to<sp/>execute<sp/>a<sp/>coprocessor<sp/>instruction<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1afe4536d777b0076f863423991951d674" kindref="member">UnusedBits</ref><sp/>:4;</highlight></codeline>
+<codeline lineno="184" refid="_fault_handler_8c_1a84a6b8413d7a5a78013858e764be1dfa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a84a6b8413d7a5a78013858e764be1dfa" kindref="member">UNALIGNED</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Indicates<sp/>that<sp/>an<sp/>unaligned<sp/>access<sp/>fault<sp/>has<sp/>taken<sp/>place<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185" refid="_fault_handler_8c_1ac1b68e1eace553353ba14a903210e0de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1ac1b68e1eace553353ba14a903210e0de" kindref="member">DIVBYZERO</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Indicates<sp/>a<sp/>divide<sp/>by<sp/>zero<sp/>has<sp/>taken<sp/>place<sp/>(can<sp/>be<sp/>set<sp/>only<sp/>if<sp/>DIV_0_TRP<sp/>is<sp/>set)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><ref refid="_fault_handler_8c_1a1c8aeea3d7f8e092df78494b65fbb452" kindref="member">bits</ref>;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="_fault_handler_8c_1a52df73134e2f73398a92cff0e796f0b7" kindref="member">ufsr</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Usage<sp/>Fault<sp/>Status<sp/>Register<sp/>(0xE000ED2A)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a977b4c6fdb29af4d067f43aa302e99e9" kindref="member">byte</ref>;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1afe4536d777b0076f863423991951d674" kindref="member">UnusedBits</ref><sp/>:1;</highlight></codeline>
+<codeline lineno="195" refid="_fault_handler_8c_1a96fd35e06acf6446516a5e3603feb639" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a96fd35e06acf6446516a5e3603feb639" kindref="member">VECTBL</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Indicates<sp/>hard<sp/>fault<sp/>is<sp/>caused<sp/>by<sp/>failed<sp/>vector<sp/>fetch<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1ae6e53f5a9af71d710e9a67a42040da35" kindref="member">UnusedBits2</ref><sp/>:28;</highlight></codeline>
+<codeline lineno="197" refid="_fault_handler_8c_1a791fd65d37a51f3e63cba72be802c93d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a791fd65d37a51f3e63cba72be802c93d" kindref="member">FORCED</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Indicates<sp/>hard<sp/>fault<sp/>is<sp/>taken<sp/>because<sp/>of<sp/>bus<sp/>fault/memory<sp/>management<sp/>fault/usage<sp/>fault<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198" refid="_fault_handler_8c_1ab5bb0782fe1aa11b369f13631f6486fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1ab5bb0782fe1aa11b369f13631f6486fc" kindref="member">DEBUGEVT</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Indicates<sp/>hard<sp/>fault<sp/>is<sp/>triggered<sp/>by<sp/>debug<sp/>event<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><ref refid="_fault_handler_8c_1a1c8aeea3d7f8e092df78494b65fbb452" kindref="member">bits</ref>;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="_fault_handler_8c_1adf58e36483fc0c462c91fe7d7d76f352" kindref="member">hfsr</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Hard<sp/>Fault<sp/>Status<sp/>Register<sp/>(0xE000ED2C)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a977b4c6fdb29af4d067f43aa302e99e9" kindref="member">byte</ref>;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="206" refid="_fault_handler_8c_1a98581f987c94cc9c55fb3280436db209" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a98581f987c94cc9c55fb3280436db209" kindref="member">HALTED</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Halt<sp/>requested<sp/>in<sp/>NVIC<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207" refid="_fault_handler_8c_1a8877263ae4a2d08b18f110b980d65aa4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a8877263ae4a2d08b18f110b980d65aa4" kindref="member">BKPT</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>BKPT<sp/>instruction<sp/>executed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208" refid="_fault_handler_8c_1ada2e5fbdb8c7fa3be7471cd41b7b5995" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1ada2e5fbdb8c7fa3be7471cd41b7b5995" kindref="member">DWTTRAP</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>DWT<sp/>match<sp/>occurred<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209" refid="_fault_handler_8c_1a6b119aac264151cd754c5a7bcce49cf2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a6b119aac264151cd754c5a7bcce49cf2" kindref="member">VCATCH</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>Vector<sp/>fetch<sp/>occurred<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210" refid="_fault_handler_8c_1a636a344a5601ce1ab0537678f6062b25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a636a344a5601ce1ab0537678f6062b25" kindref="member">EXTERNAL</ref><sp/>:1;<sp/></highlight><highlight class="comment">/*<sp/>EDBGRQ<sp/>signal<sp/>asserted<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><ref refid="_fault_handler_8c_1a1c8aeea3d7f8e092df78494b65fbb452" kindref="member">bits</ref>;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="_fault_handler_8c_1ae1d6e2322a32c1487ff57dd5dccd0f55" kindref="member">dfsr</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Debug<sp/>Fault<sp/>Status<sp/>Register<sp/>(0xE000ED30)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213" refid="_fault_handler_8c_1a82ae4500d608af5e15626ea2ca32473e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a82ae4500d608af5e15626ea2ca32473e" kindref="member">afsr</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Auxiliary<sp/>Fault<sp/>Status<sp/>Register<sp/>(0xE000ED3C)<sp/>Vendor<sp/>controlled<sp/>(optional)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal">}<sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>inline<sp/>functions<sp/>*********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>local<sp/>functions<sp/>**********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a66ac0301348f904721bcd7cfadfe4317" kindref="member">extractFaultInfo</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>pStack);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>global<sp/>functions<sp/>*********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230" refid="_fault_handler_8c_1a2804a023941a956288c32ad08b2cf59e" refkind="member"><highlight class="normal"><ref refid="_fault_handler_8c_1a2804a023941a956288c32ad08b2cf59e" kindref="member">__attribute__</ref>((naked))void<sp/>HardFault_Handler(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="231"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>__asm<sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>(</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>tst<sp/>lr,<sp/>#4<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>ite<sp/>eq<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>mrseq<sp/>r0,<sp/>msp<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>mrsne<sp/>r0,<sp/>psp<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>ldr<sp/>r2,<sp/>handler2_address_const<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>bx<sp/>r2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>handler2_address_const:<sp/>.word<sp/>Hard_Fault_Handler<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245" refid="group___f_o_t_a_1gac3f386836c3da530e53d6776dff129f2" refkind="member"><highlight class="normal"><ref refid="_fault_handler_8c_1a2804a023941a956288c32ad08b2cf59e" kindref="member">__attribute__</ref>((naked))<sp/>void<sp/>UsageFault_Handler(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="246"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>__asm<sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>(</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>tst<sp/>lr,<sp/>#4<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>ite<sp/>eq<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>mrseq<sp/>r0,<sp/>msp<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>mrsne<sp/>r0,<sp/>psp<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>ldr<sp/>r2,<sp/>handler2_address_const1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>bx<sp/>r2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>handler2_address_const1:<sp/>.word<sp/>Usage_Fault_Handler<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><ref refid="_fault_handler_8c_1a2804a023941a956288c32ad08b2cf59e" kindref="member">__attribute__</ref>((naked))<sp/>void<sp/>BusFault_Handler(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="261"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>__asm<sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>(</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>tst<sp/>lr,<sp/>#4<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>ite<sp/>eq<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>mrseq<sp/>r0,<sp/>msp<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>mrsne<sp/>r0,<sp/>psp<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>ldr<sp/>r2,<sp/>handler2_address_const2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>bx<sp/>r2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>handler2_address_const2:<sp/>.word<sp/>Bus_Fault_Handler<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><ref refid="_fault_handler_8c_1a2804a023941a956288c32ad08b2cf59e" kindref="member">__attribute__</ref>((naked))void<sp/>MemManage_Handler(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="276"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>__asm<sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>(</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>tst<sp/>lr,<sp/>#4<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>ite<sp/>eq<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>mrseq<sp/>r0,<sp/>msp<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>mrsne<sp/>r0,<sp/>psp<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>ldr<sp/>r2,<sp/>handler2_address_const3<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>bx<sp/>r2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>handler2_address_const3:<sp/>.word<sp/>Mem_Fault_Handler<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289" refid="_fault_handler_8c_1aeaaaa496bc8bd655919653e267b6bddd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1aeaaaa496bc8bd655919653e267b6bddd" kindref="member">Hard_Fault_Handler</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*pulHardFaultStackAddress)</highlight></codeline>
+<codeline lineno="290"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_fault_handler_8c_1a66ac0301348f904721bcd7cfadfe4317" kindref="member">extractFaultInfo</ref>(pulHardFaultStackAddress);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294" refid="_fault_handler_8c_1a37af88ad2cfdf4da712e42a9ba1fd9b2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a37af88ad2cfdf4da712e42a9ba1fd9b2" kindref="member">Usage_Fault_Handler</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*pulUsageFaultStackAddress)</highlight></codeline>
+<codeline lineno="295"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_fault_handler_8c_1a66ac0301348f904721bcd7cfadfe4317" kindref="member">extractFaultInfo</ref>(pulUsageFaultStackAddress);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299" refid="_fault_handler_8c_1a0b916b681dab5bb9f7cdb3fdba9eb586" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a0b916b681dab5bb9f7cdb3fdba9eb586" kindref="member">Bus_Fault_Handler</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*pulBusFaultStackAddress)</highlight></codeline>
+<codeline lineno="300"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_fault_handler_8c_1a66ac0301348f904721bcd7cfadfe4317" kindref="member">extractFaultInfo</ref>(pulBusFaultStackAddress);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304" refid="_fault_handler_8c_1ab3116d01bb8d4fb14a267f3f8a248fec" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1ab3116d01bb8d4fb14a267f3f8a248fec" kindref="member">Mem_Fault_Handler</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*pulMemFaultStackAddress)</highlight></codeline>
+<codeline lineno="305"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_fault_handler_8c_1a66ac0301348f904721bcd7cfadfe4317" kindref="member">extractFaultInfo</ref>(pulMemFaultStackAddress);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309" refid="_fault_handler_8c_1a66ac0301348f904721bcd7cfadfe4317" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_fault_handler_8c_1a66ac0301348f904721bcd7cfadfe4317" kindref="member">extractFaultInfo</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>pStack)</highlight></codeline>
+<codeline lineno="310"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;HardFault_Occured_going<sp/>to<sp/>reset<sp/>the<sp/>processor<sp/><sp/>\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>NVIC<sp/>registers<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.syshndctrl.byte<sp/>=<sp/><ref refid="_fault_handler_8c_1a10f9762b17fe1905be10d0461ebc9f0a" kindref="member">SYSHND_CTRL</ref>;<sp/></highlight><highlight class="comment">/*<sp/>System<sp/>Handler<sp/>Control<sp/>and<sp/>State<sp/>Register<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;syshndctrl_register_byteValue<sp/>%d<sp/>\r\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.syshndctrl.byte);</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.mfsr.byte<sp/>=<sp/><ref refid="_fault_handler_8c_1a51557db99e5587d28e47dcd217746fd3" kindref="member">NVIC_MFSR</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Memory<sp/>Fault<sp/>Status<sp/>Register<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;HardFaultRegs.mfsr.byte<sp/>Value<sp/>%d<sp/>\r\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.mfsr.byte);</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.bfsr.byte<sp/>=<sp/><ref refid="_fault_handler_8c_1a6392e0beb7b77e5a9507be1754b7f59c" kindref="member">NVIC_BFSR</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Bus<sp/>Fault<sp/>Status<sp/>Register<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/>HardFaultRegs.bfsr.byte<sp/>Value<sp/>%d<sp/>\r\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.bfsr.byte);</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.bfar<sp/>=<sp/><ref refid="_fault_handler_8c_1aaf616f38c33b267a72da33a45f548c22" kindref="member">NVIC_BFAR</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Bus<sp/>Fault<sp/>Manage<sp/>Address<sp/>Register<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/>HardFaultRegs.bfar<sp/>Value<sp/>%d<sp/>\r\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.bfar);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.ufsr.byte<sp/>=<sp/><ref refid="_fault_handler_8c_1aa0d132455989bd4116be6db52d05d75b" kindref="member">NVIC_UFSR</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Usage<sp/>Fault<sp/>Status<sp/>Register<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/>HardFaultRegs.ufsr.byte<sp/>Value<sp/>%d<sp/>\r\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.ufsr.byte);</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.hfsr.byte<sp/>=<sp/><ref refid="_fault_handler_8c_1a09ca4d4823c17e484a4b357298c04910" kindref="member">NVIC_HFSR</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Hard<sp/>Fault<sp/>Status<sp/>Register<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/>HardFaultRegs.hfsr.byte<sp/>Value<sp/>%d<sp/>\r\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.hfsr.byte);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.dfsr.byte<sp/>=<sp/><ref refid="_fault_handler_8c_1ac8ac5f0f42315fd63ceb33e8c54fd06c" kindref="member">NVIC_DFSR</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Debug<sp/>Fault<sp/>Status<sp/>Register<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/>HardFaultRegs.dfsr.byte<sp/>Value<sp/>%d<sp/>\r\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.dfsr.byte);</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.afsr<sp/>=<sp/><ref refid="_fault_handler_8c_1a51077bf424ba2497baa1c66927895860" kindref="member">NVIC_AFSR</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Auxiliary<sp/>Fault<sp/>Status<sp/>Register<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/>HardFaultRegs.afsr<sp/>Value<sp/>%d<sp/>\r\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.afsr);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>saved<sp/>registers<sp/>from<sp/>the<sp/>stack<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.SavedRegs.r0<sp/>=<sp/>pStack[0];<sp/></highlight><highlight class="comment">/*<sp/>Register<sp/>R0<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.SavedRegs.r1<sp/>=<sp/>pStack[1];<sp/></highlight><highlight class="comment">/*<sp/>Register<sp/>R1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.SavedRegs.r2<sp/>=<sp/>pStack[2];<sp/></highlight><highlight class="comment">/*<sp/>Register<sp/>R2<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.SavedRegs.r3<sp/>=<sp/>pStack[3];<sp/></highlight><highlight class="comment">/*<sp/>Register<sp/>R3<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.SavedRegs.r12<sp/>=<sp/>pStack[4];<sp/></highlight><highlight class="comment">/*<sp/>Register<sp/>R12<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.SavedRegs.lr<sp/>=<sp/>pStack[5];<sp/></highlight><highlight class="comment">/*<sp/>Link<sp/>register<sp/>LR<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/>HardFaultRegs.SavedRegs.lr<sp/>Value<sp/>%d<sp/>\r\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.SavedRegs.lr);</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.SavedRegs.pc<sp/>=<sp/>pStack[6];<sp/></highlight><highlight class="comment">/*<sp/>Program<sp/>counter<sp/>PC<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/>HardFaultRegs.SavedRegs.pc<sp/>Value<sp/>%d<sp/>\r\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.SavedRegs.pc);</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.SavedRegs.psr.byte<sp/>=<sp/>pStack[7];<sp/></highlight><highlight class="comment">/*<sp/>Program<sp/>status<sp/>word<sp/>PSR<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/>HardFaultRegs.SavedRegs.psr.byte<sp/>Value<sp/>%d<sp/>\r\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="_fault_handler_8c_1ac53dd00d81a5875d249ae09199f2dd42" kindref="member">HardFaultRegs</ref>.SavedRegs.psr.byte);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___h_a_l___b_s_p___board_1ga9002f1e2b3c29dc6d5b4a23cb3eb40dd" kindref="member">BSP_Board_SoftReset</ref>();</highlight></codeline>
+<codeline lineno="352"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/FaultHandler.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,532 @@
+/** 
+@page XDK_SOFTWARE_STARTUP_GUIDE XDK Software Startup Guide
+@brief Explains XDK Startup Procedure and how you can customize it
+<hr>
+
+This simple guide is intended, for the developers who are going to develop applications for XDK, to know the basic startup procedure of the system before they start writing 
+their application.
+
+XDK software can be configured to start in two ways as described below. The configuration can be done using <b>BCDS_SYSTEM_STARTUP_METHOD</b> macro present in the <b>application Makefile</b>.
+Refer the code block below representing the change. Also Note that by default XDK is shipped with <b>DEFAULT_STARTUP</b> enabled.   
+
+\code
+export BCDS_SYSTEM_STARTUP_METHOD=CUSTOM_STARTUP
+\endcode
+
+\section XDK_SOFTWARE_STARTUP_GUIDE_Default_startup Default Startup:
+
+The \c Main() function implemented in SystemStartUp module will be the first C function executed during power ON and it does the following,
+1.	EFM32 chip is configured to a proper state with the help of library function exported by emlib.
+2.	All the interrupt sources are configured to maximum priority to ensure, ISR runs at highest priority.
+3.	System peripherals like GPIO,I2C and USB are initialized to a proper state.
+4.	GPIO pins related to the device are configured to its default value.
+5.	User page module is initialized, which is used to save configuration information like Wifi MAC address, Bluetooth MAC address, etc., in the user page area of flash.
+6.	Create a default application specific initialization timer and start it.
+7.	Give control to operating system by starting task scheduler of FreeRTOS.
+
+\section XDK_SOFTWARE_STARTUP_GUIDE_Custom_startup Custom Startup:
+
+Custom startup procedure will exclude step 3 to 5 described above in default startup procedure, to give flexibility to users, in order to have their own way of initializing system peripherals. The user can choose to initialize and configure the peripherals which he wants to use in his application.  If, Custom startup procedure is configured, the user has to ensure the GPIO pins that they are using are initialized to a proper default state.
+In both of the above configurations XDK's SystemStartUp module will schedule a default application specific initialization timer "appInitSystem", which will run in the timer task context with task priority 2.
+@note While creating the OS task inside place holder "appInitSystem" the priority of OS tasks created shall be preferably less than or equal to 2. Because assigning priority greater than 2 may block all the timer task having lesser priority in this case.
+So, all the user applications are expected to have the implementation of the task "appInitSystem" and this will be the place holder for application specific initialization function.  Application specific initialization function can further create either "timers" or "OS tasks" as suitable for its purpose (refer FreeRTOS.h for API reference).
+
+\section Task_priority Task creation and its priority:
+
+Users can find configuration related to FreeRTOS in a file called, FreeRTOSConfig.h and it is present in path <b>"xdk110\Common\config\AmazonFreeRTOS"</b>.  This contains information like maximum task priority, stack size, heap size, software timer configurations, CPU clock and interrupt priority configurations. 
+As explained, the user can create "Timer" or "OS Task" for its application use.  Since, the creation of OS task requires the user to specify the task priority and stack size, we expect the user, to understand the task priorities of FreeRTOS, if, they prefer to create and use OS task for their application (see [FreeRTOS](http://www.freertos.org/RTOS.html) documentation).
+The maximum priority of a task in XDK software is presently configured to 5, which is controlled by the macro configMAX_PRIORITIES. Considering the fact that the interrupt routines should run in the highest task priority, XDK assigns maximum priority to its interrupt sources.  So, any task running in XDK should have the priority less than the configMAX_PRIORITIES that is 5.
+For a user who does not want to get into the complexities of handling independent OS tasks, we suggest to use timers to realize their use cases.
+
+\section Hardware_Interrupt_priority Hardware Interrupt Priority:
+
+All hardware interrupts are configured to SYSCALL_INTERRUPT_PRIORITY_MAX.If user want to change the priority
+of any peripheral interrupts then it can be changed from 0 to SYSCALL_INTERRUPT_PRIORITY_MAX.Priority 0 means
+highest priority and  SYSCALL_INTERRUPT_PRIORITY_MAX means least priority, within this priority range the 
+ISR routine can call freeRTOS ISR safe API's(like xSemaphoreGiveFromISR)
+
+Note: If the priority is set greater than SYSCALL_INTERRUPT_PRIORITY_MAX then freeRTOS ISR safe API's(like xSemaphoreGiveFromISR) must 
+not be called in that particular peripheral ISR,violating this may have undesired behavior 
+
+\section XDK_SOFTWARE_STARTUP_GUIDE_helloworld1 Startup code for v3.4.0 and above
+
+\code
+----------------------------------------------------Main.c--------------------------------------
+/* own header files */
+#include "XdkAppInfo.h"
+
+#undef BCDS_MODULE_ID  /* Module ID define before including Basics package*/
+#define BCDS_MODULE_ID XDK_APP_MODULE_ID_MAIN
+
+/* system header files */
+#include <stdio.h>
+#include "BCDS_Basics.h"
+
+/* additional interface header files */
+#include "XdkSystemStartup.h"
+#include "BCDS_Assert.h"
+#include "AppController.h"
+#include "BCDS_CmdProcessor.h"
+#include "FreeRTOS.h"
+#include "task.h"
+/* own header files */
+
+/* global variables ********************************************************* */
+static CmdProcessor_T MainCmdProcessor;
+
+/* functions */
+
+int main(void)
+{
+    /* Mapping Default Error Handling function */
+    Retcode_T retcode = Retcode_Initialize(DefaultErrorHandlingFunc);
+    if (RETCODE_OK == retcode)
+    {
+        retcode = systemStartup();
+    }
+    if (RETCODE_OK == retcode)
+    {
+        retcode = CmdProcessor_Initialize(&MainCmdProcessor, (char *) "MainCmdProcessor", TASK_PRIO_MAIN_CMD_PROCESSOR, TASK_STACK_SIZE_MAIN_CMD_PROCESSOR, TASK_Q_LEN_MAIN_CMD_PROCESSOR);
+    }
+    if (RETCODE_OK == retcode)
+    {
+        /* Here we enqueue the application initialization into the command
+         * processor, such that the initialization function will be invoked
+         * once the RTOS scheduler is started below.
+         */
+        retcode = CmdProcessor_Enqueue(&MainCmdProcessor, AppController_Init, &MainCmdProcessor, UINT32_C(0));
+    }
+    if (RETCODE_OK == retcode)
+    {
+        /* start scheduler */
+        vTaskStartScheduler();
+        /* Code must not reach here since the OS must take control. If not, we will assert. */
+    }
+    else
+    {
+        Retcode_RaiseError(retcode);
+        printf("main : XDK System Startup failed.\r\n");
+    }
+    assert(false);
+}
+----------------------------------------------------End of application------------------------------------
+\endcode
+
+\subsection XDK_SOFTWARE_STARTUP_GUIDE_helloworld As per the Application Common Control Flow Changes by using CommandProcessor in XDK-3.4.0 & above:
+
+Example : The following is the sample application to write a application using xdk modules.
+
+1. Application should follow the below three steps :
+<ul>
+	<li><b>Setup</b>  - Here necessary modules required for the application like WLAN, BLE ,Sensors etc from the common are defined</li>
+	<li><b>Enable</b> - Here necessary  modules required for the application are enabled</li>
+	<li><b>Fire</b>	 -  After the setup and enable is done , fire is responsible for controlling application control flow. Any application logic which is blocking in nature or fixed time dependent can be placed in this API.</li>
+</ul>
+2. Command processor should be used for all event based operation
+3. Tasks should be used for polling based operation
+4. Try to avoid Software timer usage
+5. All reusable components/modules should be placed in common repo. Application Features should be independent from BCDS shared package/3rd party library.
+6. Common repository :
+<ul>
+    <li>Feature control should be based on run time configurable Ex. security enable/disable</li>
+    <li>Feature enable/disable should be controlled from config macro. Ex. #define XDK_BLE_FEATURE 1</li>
+    <li>Features  should be RTOS and ServalStack independent</li>
+    <li>Each module/components should support Setup, Enable APIs.</li>
+    <ul>
+    	<li>These Setup, Enable apis should be a blocking call and must be command processor independent</li>
+        <li>Optionally modules should support Disable, Close apis.</li>
+        <li>All used resources properly initialized and de-initialized incluing static variables.</li>
+    </ul>
+    <li>Variable naming for function return value</li>
+    <ul>
+        <li>retcode - Retcode_T</li>
+        <li>rc - retcode_t</li>
+        <li>result - any other result value</li>
+        <li>status - any other status value</li>
+    </ul>
+</ul>
+\code
+----------------------------------------------------Application.c--------------------------------------
+/* own header files */
+#include "XdkAppInfo.h"
+#undef BCDS_MODULE_ID  /* Module ID define before including Basics package*/
+#define BCDS_MODULE_ID XDK_APP_MODULE_ID_APP_CONTROLLER
+
+/* own header files */
+#include "AppController.h"
+
+/* system header files */
+#include <stdio.h>
+
+/* additional interface header files */
+#include "BCDS_CmdProcessor.h"
+#include "FreeRTOS.h"
+#include "task.h"
+
+/* constant definitions ***************************************************** */
+
+/* local variables ********************************************************** */
+
+/**< Handle to store the main Command processor handle to be used by run-time event driven threads */
+static CmdProcessor_T * AppCmdProcessor;
+
+/**< OS thread handle for Application controller to be used by run-time blocking threads */
+static xTaskHandle AppControllerHandle = NULL;
+
+/* global variables ********************************************************* */
+
+/* inline functions ********************************************************* */
+
+/* local functions ********************************************************** */
+
+/**
+ * @brief Responsible for controlling application control flow.
+ * Any application logic which is blocking in nature or fixed time dependent
+ * can be placed here.
+ *
+ * @param[in] pvParameters
+ * FreeRTOS task handle. Could be used if more than one thread is using this function block.
+ */
+static void AppControllerFire(void* pvParameters)
+{
+    BCDS_UNUSED(pvParameters);
+
+    /* A function that implements a task must not exit or attempt to return to
+     its caller function as there is nothing to return to. */
+    while (1)
+    {
+        /* code to implement application control flow */
+        ;
+    }
+}
+
+/**
+ * @brief To enable the necessary modules for the application
+ *
+ * @param [in] param1
+ * A generic pointer to any context data structure which will be passed to the function when it is invoked by the command processor.
+ *
+ * @param [in] param2
+ * A generic 32 bit value  which will be passed to the function when it is invoked by the command processor..
+ */
+static void AppControllerEnable(void * param1, uint32_t param2)
+{
+    BCDS_UNUSED(param1);
+    BCDS_UNUSED(param2);
+    Retcode_T retcode = RETCODE_OK;
+
+    /* @todo - Enable necessary modules for the application and check their return values */
+    if (RETCODE_OK == retcode)
+    {
+        if (pdPASS != xTaskCreate(AppControllerFire, (const char * const ) "AppController", TASK_STACK_SIZE_APP_CONTROLLER, NULL, TASK_PRIO_APP_CONTROLLER, &AppControllerHandle))
+        {
+            retcode = RETCODE(RETCODE_SEVERITY_ERROR, RETCODE_OUT_OF_RESOURCES);
+        }
+    }
+    if (RETCODE_OK != retcode)
+    {
+        printf("AppControllerEnable : Failed \r\n");
+        Retcode_RaiseError(retcode);
+    }
+}
+
+/**
+ * @brief To setup the necessary modules for the application
+ *
+ * @param [in] param1
+ * A generic pointer to any context data structure which will be passed to the function when it is invoked by the command processor.
+ *
+ * @param [in] param2
+ * A generic 32 bit value  which will be passed to the function when it is invoked by the command processor..
+ */
+static void AppControllerSetup(void * param1, uint32_t param2)
+{
+    BCDS_UNUSED(param1);
+    BCDS_UNUSED(param2);
+    Retcode_T retcode = RETCODE_OK;
+
+    /* @todo - Setup the necessary modules required for the application */
+
+    retcode = CmdProcessor_Enqueue(AppCmdProcessor, AppControllerEnable, NULL, UINT32_C(0));
+    if (RETCODE_OK != retcode)
+    {
+        printf("AppControllerSetup : Failed \r\n");
+        Retcode_RaiseError(retcode);
+    }
+}
+
+/* global functions ********************************************************* */
+
+/** Refer interface header for description */
+void AppController_Init(void * cmdProcessorHandle, uint32_t param2)
+{
+    BCDS_UNUSED(param2);
+
+    Retcode_T retcode = RETCODE_OK;
+
+    if (cmdProcessorHandle == NULL)
+    {
+        printf("AppController_Run : Command processor handle is NULL \r\n");
+        retcode = RETCODE(RETCODE_SEVERITY_ERROR, RETCODE_NULL_POINTER);
+    }
+    else
+    {
+        AppCmdProcessor = (CmdProcessor_T *) cmdProcessorHandle;
+        retcode = CmdProcessor_Enqueue(AppCmdProcessor, AppControllerSetup, NULL, UINT32_C(0));
+    }
+
+    if (RETCODE_OK != retcode)
+    {
+        Retcode_RaiseError(retcode);
+    }
+}
+----------------------------------------------------End of application------------------------------------
+\endcode
+
+\section XDK_SOFTWARE_STARTUP_GUIDE_helloworld_program Procedure to realize 'hello world' program on XDK for version below XDK-3.0.0:
+Realizing "Hello World" program in XDK is straight forward and pretty simple.  All, the user has to do is, as explained, implement default application specific initialization task and print 'hello world' as below,
+
+\code
+----------------------------------------------------Main.c--------------------------------------
+#include <stdio.h>
+
+/* system header files */
+#include <BCDS_Basics.h>
+#include "BCDS_CmdProcessor.h"
+#include "BCDS_Assert.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "BEA_bleEchoData_cc.h"
+
+/* additional interface header files */
+#include "XdkSystemStartup.h"
+
+/* global variables ********************************************************* */
+static CmdProcessor_T MainCmdProcessor;
+
+int main(void)
+{
+    /* Mapping Default Error Handling function */
+    Retcode_T returnValue = Retcode_initialize(DefaultErrorHandlingFunc);
+    if (RETCODE_OK == returnValue)
+    {
+        returnValue = systemStartup();
+    }
+    if (RETCODE_OK == returnValue)
+    {
+        returnValue = CmdProcessor_initialize(&MainCmdProcessor, (char *) "MainCmdProcessor", TASK_PRIO_MAIN_CMD_PROCESSOR, TASK_STACK_SIZE_MAIN_CMD_PROCESSOR, TASK_Q_LEN_MAIN_CMD_PROCESSOR);
+    }
+    if (RETCODE_OK == returnValue)
+    {
+        /* Here we enqueue the application initialization into the command
+         * processor, such that the initialization function will be invoked
+         * once the RTOS scheduler is started below.
+         */
+        returnValue = CmdProcessor_enqueue(&MainCmdProcessor, appInitSystem, &MainCmdProcessor, UINT32_C(0));
+    }
+    if (RETCODE_OK != returnValue)
+    {
+        printf("System Startup failed");
+        assert(false);
+    }
+    /* start scheduler */
+    vTaskStartScheduler();
+}
+\endcode
+
+\code
+----------------------------------------------------application.c--------------------------------------
+/* system header files */
+#include <stdio.h>
+#include <BCDS_Basics.h>
+
+/* additional interface header files */
+#include "FreeRTOS.h"
+
+xTaskHandle Application_gdt; /**< variable to store task handle for Application_init */
+
+/*
+ * @brief Application to print "hello world" on serial console.
+ */
+void Application_init(void * pvParameters)
+{
+   (void) pvParameters;
+    for (;;)
+    {
+        printf("Hello world\r\n");
+		vTaskDelay((portTickType) 1000 / portTICK_RATE_MS);
+    }
+}
+
+/*
+ * @brief This is a template function where the user can write his/her custom application.
+ */
+void appInitSystem(void * CmdProcessorHandle, uint32_t param2)
+{
+    BCDS_UNUSED(CmdProcessorHandle);
+    BCDS_UNUSED(param2);
+	/*Call the Application Init API*/
+	xTaskCreate(Application_init, (const char * const) "Application_init",
+    256,NULL,1,&Application_gdt);
+}
+----------------------------------End of application----------------------------------------------------
+\endcode
+
+Message "Hello World" will be printed on the console after flashing the above implementation.  
+
+A more efficient way of doing this however would be to use a timer:
+
+\code
+----------------------------------------------------application.c--------------------------------------
+/* system header files */
+#include <stdio.h>
+#include <BCDS_Basics.h>
+
+/* additional interface header files */
+#include "FreeRTOS.h"
+
+#define THREESECONDDELAY UINT32_C(1000) /* one second is represented by this macro */
+#define TIMERBLOCKTIME   UINT32_C(0xffff)    /* Macro used to define blocktime of a timer */
+#define TIMER_AUTORELOAD_ON             UINT32_C(1)             /**< Auto reload of timer is enabled*/
+
+
+/*
+ * @brief Print string "Hello World" on the console
+ * @param[in] pxTimer timer handle
+ */
+void printHelloWorld(xTimerHandle pxTimer)
+{
+    BCDS_UNUSED(pxTimer);
+    printf("Hello world\r\n");
+}
+
+/*
+ * @brief Application to print "hello world" on serial console.
+ */
+void Application_init(void)
+{
+    xTimerHandle timerHandle_gdt;
+
+    /* create timer task to read and print lightsensor data every three seconds*/
+	 /* Validated for portMAX_DELAY to assist the task to wait Infinitely (without timing out) and ticks cannot be 0 in FreeRTOS timer. So ticks is assigned to 1*/
+    timerHandle_gdt = xTimerCreate(
+        (char * const) "Test Application to print Hello World", (THREESECONDDELAY/portTICK_RATE_MS),
+        TIMER_AUTORELOAD_ON, NULL, printHelloWorld);
+
+    /*start the timer*/
+    xTimerStart(timerHandle_gdt, TIMERBLOCKTIME);
+}
+
+/*
+ * @brief This is a template function where the user can write his/her custom application.
+ */
+void appInitSystem(void * CmdProcessorHandle, uint32_t param2)
+{
+    BCDS_UNUSED(CmdProcessorHandle);
+    BCDS_UNUSED(param2);
+    Application_init();
+}
+----------------------------------------------------End of application------------------------------------
+\endcode
+
+\subsection XDK-XDK_SOFTWARE_STARTUP_GUIDE_helloworld_program As per the Application Common Control Flow Changes by using CommandProcessor in XDK-3.0.0 to XDK-3.3.1:
+
+Example : Message "Hello World" will be printed on the console after flashing the above implementation.  
+
+A more efficient way of doing this however would be to use a timer and CommandProcessor:
+
+\code
+----------------------------------------------------application.c--------------------------------------
+/* system header files */
+#include <stdio.h>
+#include <BCDS_Basics.h>
+
+/* additional interface header files */
+#include "FreeRTOS.h"
+
+#define THREESECONDDELAY UINT32_C(1000) /* one second is represented by this macro */
+#define TIMERBLOCKTIME   UINT32_C(0xffff)    /* Macro used to define blocktime of a timer */
+#define TIMER_AUTORELOAD_ON             UINT32_C(1)             /**< Auto reload of timer is enabled*/
+
+/*Application Command Processor Instance */
+CmdProcessor_T *AppCmdProcessor;
+
+/** 
+ * @brief The function is to print the Hello world on serialport.
+ *
+ * @param[in] param1 should be defined with the type void *(as argument)
+ *
+ *
+ * @param[in] param2 should be defined with the type uint32_t (as argument)
+ */
+static void printHelloWorld(void * param1, uint32_t param2)
+{
+    BCDS_UNUSED(param1);
+    BCDS_UNUSED(param2);
+	printf("Hello world\r\n");
+}
+/*
+ * @brief Print string "Hello World" on the console
+ * @param[in] pxTimer timer handle
+ */
+void processUsbPrintMsg(xTimerHandle pxTimer)
+{
+
+    BCDS_UNUSED(pxTimer); /* suppressing warning message */
+    Retcode_T returnValue = RETCODE_OK;
+    returnValue = CmdProcessor_enqueue(AppCmdProcessor, printHelloWorld, NULL, UINT32_C(0));
+    if (RETCODE_OK != returnValue)
+    {
+        printf("Enqueuing for PrintHelloWorld callback failed\n\r");
+    }
+}
+
+/*
+ * @brief Application to print "hello world" on serial console.
+ */
+void Application_init(void)
+{
+    xTimerHandle timerHandle_gdt;
+	* Return value for Timer start */
+    int8_t retValPerSwTimer = TIMER_NOT_ENOUGH_MEMORY;
+
+    /* create timer task to read and print lightsensor data every three seconds*/
+	 /* Validated for portMAX_DELAY to assist the task to wait Infinitely (without timing out) and ticks cannot be 0 in FreeRTOS timer. So ticks is assigned to 1*/
+    timerHandle_gdt = xTimerCreate(
+        (char * const) "Test Application to print Hello World", (THREESECONDDELAY/portTICK_RATE_MS),
+        TIMER_AUTORELOAD_ON, NULL, processUsbPrintMsg);
+	
+        /* timer create fail case */
+        if (NULL == timerHandle_gdt)
+        {
+            /* Assertion Reason: "This software timer was not Created, Due to Insufficient heap memory" */
+            assert(false);
+        }
+    /*start the timer*/
+    retValPerSwTimer = xTimerStart(timerHandle_gdt, TIMERBLOCKTIME);
+	     /* Timer start fail case */
+        if (TIMER_NOT_ENOUGH_MEMORY == retValPerSwTimer)
+        {
+            /* Assertion Reason: "This software timer was not started, Due to Insufficient heap memory" */
+            assert(false);
+        }
+}
+
+/*
+ * @brief This is a template function where the user can write his/her custom application.
+ */
+void appInitSystem(void * CmdProcessorHandle, uint32_t param2)
+{
+    if (CmdProcessorHandle == NULL)
+    {
+        printf("Command processor handle is null \n\r");
+        assert(false);
+    }
+    AppCmdProcessor = (CmdProcessor_T *)CmdProcessorHandle;
+    BCDS_UNUSED(param2);
+	Application_init();
+}
+----------------------------------------------------End of application------------------------------------
+\endcode
+
+*/

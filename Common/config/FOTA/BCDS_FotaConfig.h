@@ -1,0 +1,67 @@
+/*
+* Licensee agrees that the example code provided to Licensee has been developed and released by Bosch solely as an example to be used as a potential reference for application development by Licensee. 
+* Fitness and suitability of the example code for any use within application developed by Licensee need to be verified by Licensee on its own authority by taking appropriate state of the art actions and measures (e.g. by means of quality assurance measures).
+* Licensee shall be responsible for conducting the development of its applications as well as integration of parts of the example code into such applications, taking into account the state of the art of technology and any statutory regulations and provisions applicable for such applications. Compliance with the functional system requirements and testing there of (including validation of information/data security aspects and functional safety) and release shall be solely incumbent upon Licensee. 
+* For the avoidance of doubt, Licensee shall be responsible and fully liable for the applications and any distribution of such applications into the market.
+* 
+* 
+* Redistribution and use in source and binary forms, with or without 
+* modification, are permitted provided that the following conditions are 
+* met:
+* 
+*     (1) Redistributions of source code must retain the above copyright
+*     notice, this list of conditions and the following disclaimer. 
+* 
+*     (2) Redistributions in binary form must reproduce the above copyright
+*     notice, this list of conditions and the following disclaimer in
+*     the documentation and/or other materials provided with the
+*     distribution.  
+*     
+*     (3)The name of the author may not be used to
+*     endorse or promote products derived from this software without
+*     specific prior written permission.
+* 
+*  THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR 
+*  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+*  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+*  DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT,
+*  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+*  (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+*  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+*  HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+*  STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+*  IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+*  POSSIBILITY OF SUCH DAMAGE.
+*/
+/*----------------------------------------------------------------------------*/
+
+/**
+ * @file This file contains all configurable Parameters needed to perform
+ * a digital signature validation
+ */
+
+#ifndef BCDS_FOTACONFIG_H
+#define BCDS_FOTACONFIG_H
+
+/* Include all headers which are needed by this file. */
+
+/* Put the type and macro definitions here */
+
+#define FOTA_BLOCK_STORAGE_UPDATE_FREQUENCY         (UINT8_C(0x04)) /* Frequency at which the downloaded blocks (kept in RAM) will be updated to SD Card */
+#define FOTA_PRIMARY_PARTTITION_START_ADDRESS       UINT32_C(0x00020000) /* Start address of FLASH memory from where the existing application binary header starts */
+#define FOTA_FIRMWARE_MAX_SIZE                      UINT32_C(917504) /* Maximum size of the firmware permitted to be dowloaded(896KB) */
+#define FOTA_PARTITION_MAX_SIZE                     FOTA_FIRMWARE_MAX_SIZE /* Maximum size of the partition permitted to save the dowloaded firmware */
+#define FOTA_COAP_BLOCK_SIZE                        UINT8_C(128) /* CoAP block size for download */
+#define FOTA_MAX_PACKAGE_URL                        UINT8_C(120) /* Maximum size of the URL from where the firmware will be downloaded */
+
+#define FWCONTAINER_VARIANT                         1 /* Corresponds to XDK application specific firmware container variant */
+#define FWCONTAINER_BLOCK_SIZE                      UINT16_C(512) /* Block size of the XDK application specific firmware container variant */
+
+#define SDCARDAGENT_NUMBER_OF_ALLOWED_INSTANCES     2 /* Number of instances in the SD card storage agent */
+#define FOTA_PARTITION_DOWNLOAD                     1 /* Download partition instance number in the SD card storage agent */
+#define FOTA_PARTITION_BACKUP                       2 /* Backup partition instance number in the SD card storage agent */
+#define READ_BLOCK_SIZE                             UINT16_C(256) /* Read block size for Verification agent */
+#define BCDS_FEATURE_COAP_DOWNLOAD                  1
+#endif /* BCDS_FOTACONFIG_H */
+
+/**@}*/

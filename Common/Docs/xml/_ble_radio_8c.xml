@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_ble_radio_8c" kind="file">
+    <compoundname>BleRadio.c</compoundname>
+    <includes refid="_ble_types_8h" local="yes">BleTypes.h</includes>
+    <includes refid="_ble_radio_8h" local="yes">BleRadio.h</includes>
+    <includes refid="_ble_hci_8h" local="yes">BleHci.h</includes>
+    <incdepgraph>
+      <node id="28131">
+        <label>BleRadio.h</label>
+        <link refid="_ble_radio_8h"/>
+        <childnode refid="28128" relation="include">
+        </childnode>
+      </node>
+      <node id="28132">
+        <label>BleHci.h</label>
+        <link refid="_ble_hci_8h"/>
+        <childnode refid="28128" relation="include">
+        </childnode>
+      </node>
+      <node id="28128">
+        <label>BleTypes.h</label>
+        <link refid="_ble_types_8h"/>
+        <childnode refid="28129" relation="include">
+        </childnode>
+      </node>
+      <node id="28130">
+        <label>BLECustomConfig.h</label>
+        <link refid="_common_2config_2_b_l_e_custom_config_8h"/>
+      </node>
+      <node id="28129">
+        <label>BleConfig.h</label>
+        <link refid="_ble_config_8h"/>
+        <childnode refid="28130" relation="include">
+        </childnode>
+      </node>
+      <node id="28127">
+        <label>SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleRadio.c</label>
+        <link refid="BleRadio.c"/>
+        <childnode refid="28128" relation="include">
+        </childnode>
+        <childnode refid="28131" relation="include">
+        </childnode>
+        <childnode refid="28132" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>This<sp/>software<sp/>is<sp/>copyrighted<sp/>by<sp/>Alpwise,<sp/>2016.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>The<sp/>use<sp/>of<sp/>this<sp/>software<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>XDK<sp/>SDK<sp/>EULA</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleRadio.c</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Description:<sp/><sp/><sp/>Contains<sp/>interfaces<sp/>for<sp/>specific<sp/>Radio<sp/>initialisation</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>routines</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>Created:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>October,<sp/>2010</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>Version:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0.1</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>File<sp/>Revision:<sp/>$Rev:<sp/>2724<sp/>$</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>$Project$</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>trademark<sp/>and<sp/>other<sp/>intellectual<sp/>property<sp/>rights.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ble_types_8h" kindref="compound">BleTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ble_radio_8h" kindref="compound">BleRadio.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ble_hci_8h" kindref="compound">BleHci.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLECONTROLLER_NEED_SPECIFIC_INIT<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/><sp/>constant<sp/>definition</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*<sp/><sp/>APPLICATION<sp/>INTERFACE<sp/>functions<sp/>declaration</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/><ref refid="_ble_radio_8h_1a1703202cc70254d11f10b23c97edad97" kindref="member">BLERADIO_Init</ref>(){</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>here<sp/>specific<sp/>code<sp/>to<sp/>execute<sp/>during<sp/>Stack<sp/>Initialisation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>order<sp/>to<sp/>initialise<sp/>the<sp/>Bluetooth<sp/>Low<sp/>energy<sp/>Controller</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>It<sp/>must<sp/>includes<sp/>sending<sp/>the<sp/>HCC_RESET<sp/>Command</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&lt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_ble_types_8h_1ad14b20a1135ee7821fa32d0bb0d7b2fc" kindref="member">BLESTATUS_SUCCESS</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Handle<sp/>all<sp/>the<sp/>HCI<sp/>events<sp/>recieved<sp/>during<sp/>the<sp/>Radio<sp/>Initialisation</highlight></codeline>
+<codeline lineno="73"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="74"><highlight class="comment"><sp/>*<sp/>BLERADIO_HCIEventHandler()</highlight></codeline>
+<codeline lineno="75"><highlight class="comment"><sp/>*<sp/><sp/>This<sp/>function<sp/>handle<sp/>all<sp/>the<sp/>HCI<sp/>events<sp/>received<sp/>by<sp/>the<sp/>STACK<sp/>during</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/>*<sp/><sp/>the<sp/>radio<sp/>initialisation<sp/>procedure,<sp/>between<sp/>BLERADIO_Init<sp/>and</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/>*<sp/>BLEHCI_RadioIsInitalised</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/>*<sp/><sp/>BLECONTROLLER_NEED_SPECIFIC_INIT<sp/>shall<sp/>be<sp/>enabled.</highlight></codeline>
+<codeline lineno="80"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="81"><highlight class="comment"><sp/>*<sp/>@param<sp/><sp/>eventCode:<sp/>the<sp/>HCI<sp/>event<sp/>OpCode</highlight></codeline>
+<codeline lineno="82"><highlight class="comment"><sp/>*<sp/>@param<sp/><sp/>parmsLen:<sp/>the<sp/>HCI<sp/>event<sp/>Parameter<sp/>Lengh</highlight></codeline>
+<codeline lineno="83"><highlight class="comment"><sp/>*<sp/>@param<sp/><sp/>parms:<sp/>a<sp/>pointer<sp/>to<sp/>the<sp/>HCI<sp/>event<sp/>Parameter</highlight></codeline>
+<codeline lineno="84"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="comment"><sp/>*<sp/>@return<sp/>nothing</highlight></codeline>
+<codeline lineno="86"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="87"><highlight class="comment"><sp/>*<sp/>@author<sp/>Alexandre<sp/>GIMARD</highlight></codeline>
+<codeline lineno="88"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_ble_radio_8h_1ab79586ddc0e41c0e3ce9642aa183a0dc" kindref="member">BLERADIO_HCIEventHandler</ref>(<sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/>eventCode,<sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/>parmsLen,<sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/>*parms<sp/>){</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/>opcode;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>here<sp/>specific<sp/>code<sp/>to<sp/>execute<sp/>during<sp/>Stack<sp/>Initialisation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>order<sp/>to<sp/>handle<sp/>the<sp/>Bluetooth<sp/>Low<sp/>energy<sp/>Controller<sp/>event</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>once<sp/>completed<sp/>it<sp/>must<sp/>call<sp/>the<sp/>BLEHCI_RadioIsInitialised(<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&lt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="100"><highlight class="comment"><sp/>*<sp/><sp/>Internal<sp/>functions<sp/>declaration</highlight></codeline>
+<codeline lineno="101"><highlight class="comment"><sp/>****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLECONTROLLER_NEED_SPECIFIC_INIT<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleRadio.c"/>
+  </compounddef>
+</doxygen>

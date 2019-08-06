@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___b_c_d_s___h_a_l___b_s_p___mic___a_k_u340" kind="group">
+    <compoundname>BCDS_HAL_BSP_Mic_AKU340</compoundname>
+    <title>Mic_AKU340</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___b_c_d_s___h_a_l___b_s_p___mic___a_k_u340_1gac92d218b5003785956a79bbbd226626a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BCDS_DEPRECATED</definition>
+        <argsstring>(int32_t BSP_Mic_AKU340_Sense(void))</argsstring>
+        <name>BCDS_DEPRECATED</name>
+        <param>
+          <type>int32_t </type>
+          <declname>BSP_Mic_AKU340_Sense</declname>
+          <array>void</array>
+        </param>
+        <briefdescription>
+<para>Senses the AKU340 Microphone signal. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000029"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This API is deprecated.</para></xrefdescription></xrefsect></para><para>This function is called to trigger an ADC Conversion at the microphone pin and return the measured value.</para><para><simplesect kind="return"><para>returns INT32_MIN. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/bsp/BCDS_BSP_Mic_AKU340.h" line="94" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___h_a_l___b_s_p___mic___a_k_u340_1ga8489886b647fba04b1cbb62714859e4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T BSP_Mic_AKU340_Connect</definition>
+        <argsstring>(void)</argsstring>
+        <name>BSP_Mic_AKU340_Connect</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Maps the GPIO pins To their desired function. </para>        </briefdescription>
+        <detaileddescription>
+<para>The function once called will map the GPIO pins dedicated for the peripheral to their desired function.</para><para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in the case of success or an error code otherwise. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>Due to electrical issues noted, the AKU VOUT port has to be permanently drained using a pull-down to ground level in order to avoid charge accumulation</para>        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/bsp/BCDS_BSP_Mic_AKU340.h" line="73" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_Mic_AKU340.c" bodystart="65" bodyend="76"/>
+        <references refid="group___n_o_i_s_e___sensor___s_e_t_t_i_n_g_s_1gab3b996a9f445897296e7801f0b7832d3" compoundref="_b_s_p___board_settings_8h" startline="110">VDD_AKU_PORT</references>
+        <references refid="group___n_o_i_s_e___sensor___s_e_t_t_i_n_g_s_1ga771f7f138b12a30ab995f1cdbd8f7539" compoundref="_b_s_p___board_settings_8h" startline="109">VDD_AKU_PIN</references>
+        <references refid="group___n_o_i_s_e___sensor___s_e_t_t_i_n_g_s_1ga08d0664cc85bf1fe443d6a27f285fb11" compoundref="_b_s_p___board_settings_8h" startline="113">AKU_OUT_PORT</references>
+        <references refid="group___n_o_i_s_e___sensor___s_e_t_t_i_n_g_s_1ga0f05221476f7d55e68840ae026384898" compoundref="_b_s_p___board_settings_8h" startline="112">AKU_OUT_PIN</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <referencedby refid="group___n_o_i_s_e_s_e_n_s_o_r_1ga7fb2dfb213f9bacae96eee4e1bc65fbe" compoundref="_noise_sensor_8c" startline="120" endline="147">NoiseSensor_Enable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___h_a_l___b_s_p___mic___a_k_u340_1ga40c4493a092bfe26eeeb9bc597c114af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T BSP_Mic_AKU340_Disable</definition>
+        <argsstring>(void)</argsstring>
+        <name>BSP_Mic_AKU340_Disable</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Disables the control over the AKU340. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in the case of success or an error code otherwise. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/bsp/BCDS_BSP_Mic_AKU340.h" line="101" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_Mic_AKU340.c" bodystart="95" bodyend="105"/>
+        <references refid="_b_s_p___mic___a_k_u340_8c_1ae12cb43961aa0229586a6108090182b9" compoundref="_b_s_p___mic___a_k_u340_8c" startline="61">micEnabled</references>
+        <references refid="group___n_o_i_s_e___sensor___s_e_t_t_i_n_g_s_1gab3b996a9f445897296e7801f0b7832d3" compoundref="_b_s_p___board_settings_8h" startline="110">VDD_AKU_PORT</references>
+        <references refid="group___n_o_i_s_e___sensor___s_e_t_t_i_n_g_s_1ga771f7f138b12a30ab995f1cdbd8f7539" compoundref="_b_s_p___board_settings_8h" startline="109">VDD_AKU_PIN</references>
+        <references refid="group___n_o_i_s_e___sensor___s_e_t_t_i_n_g_s_1ga08d0664cc85bf1fe443d6a27f285fb11" compoundref="_b_s_p___board_settings_8h" startline="113">AKU_OUT_PORT</references>
+        <references refid="group___n_o_i_s_e___sensor___s_e_t_t_i_n_g_s_1ga0f05221476f7d55e68840ae026384898" compoundref="_b_s_p___board_settings_8h" startline="112">AKU_OUT_PIN</references>
+        <references refid="_b_s_p___board_8c_1a020117ef816fbaa56ea21db43e5d2f39" compoundref="_b_s_p___board_8c" startline="638" endline="651">Board_SnoozePowerSupply2V5</references>
+        <references refid="_b_s_p___board_shared_8h_1a363f84ef9ec49fb78723dab902e8e570a9c9e3cf07c3c024ad1a7603ba9978a40" compoundref="_b_s_p___board_shared_8h" startline="76">MIC_AKU340</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <referencedby refid="group___n_o_i_s_e_s_e_n_s_o_r_1gaaf106b5b0f33ff97ed750f001d741030" compoundref="_noise_sensor_8c" startline="190" endline="208">NoiseSensor_Disable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___h_a_l___b_s_p___mic___a_k_u340_1gaa068d5786953c81912bf3ba4ce405216" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T BSP_Mic_AKU340_Disconnect</definition>
+        <argsstring>(void)</argsstring>
+        <name>BSP_Mic_AKU340_Disconnect</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Disconnects the peripheral from the MCU. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function once called will disconnect the peripheral from the MCU and puts the pins into low power consumption status.</para><para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in the case of success or an error code otherwise. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/bsp/BCDS_BSP_Mic_AKU340.h" line="110" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_Mic_AKU340.c" bodystart="110" bodyend="116"/>
+        <references refid="group___n_o_i_s_e___sensor___s_e_t_t_i_n_g_s_1gab3b996a9f445897296e7801f0b7832d3" compoundref="_b_s_p___board_settings_8h" startline="110">VDD_AKU_PORT</references>
+        <references refid="group___n_o_i_s_e___sensor___s_e_t_t_i_n_g_s_1ga771f7f138b12a30ab995f1cdbd8f7539" compoundref="_b_s_p___board_settings_8h" startline="109">VDD_AKU_PIN</references>
+        <references refid="group___n_o_i_s_e___sensor___s_e_t_t_i_n_g_s_1ga08d0664cc85bf1fe443d6a27f285fb11" compoundref="_b_s_p___board_settings_8h" startline="113">AKU_OUT_PORT</references>
+        <references refid="group___n_o_i_s_e___sensor___s_e_t_t_i_n_g_s_1ga0f05221476f7d55e68840ae026384898" compoundref="_b_s_p___board_settings_8h" startline="112">AKU_OUT_PIN</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <referencedby refid="group___n_o_i_s_e_s_e_n_s_o_r_1gaaf106b5b0f33ff97ed750f001d741030" compoundref="_noise_sensor_8c" startline="190" endline="208">NoiseSensor_Disable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___h_a_l___b_s_p___mic___a_k_u340_1ga8823fe26ce3f53dd20444ab5ba4a85e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T BSP_Mic_AKU340_Enable</definition>
+        <argsstring>(void)</argsstring>
+        <name>BSP_Mic_AKU340_Enable</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Enables the control over the on board AKU340. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function once called will enable the AKU340 microphone and start the ADC conversion for its channel.</para><para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in the case of success or an error code otherwise. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/bsp/BCDS_BSP_Mic_AKU340.h" line="82" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_Mic_AKU340.c" bodystart="81" bodyend="90"/>
+        <references refid="_b_s_p___mic___a_k_u340_8c_1ae12cb43961aa0229586a6108090182b9" compoundref="_b_s_p___mic___a_k_u340_8c" startline="61">micEnabled</references>
+        <references refid="_b_s_p___board_8c_1a43a88dd2bacbfa6b21b32b3e0fb2c3eb" compoundref="_b_s_p___board_8c" startline="617" endline="633">Board_WakeupPowerSupply2V5</references>
+        <references refid="_b_s_p___board_shared_8h_1a363f84ef9ec49fb78723dab902e8e570a9c9e3cf07c3c024ad1a7603ba9978a40" compoundref="_b_s_p___board_shared_8h" startline="76">MIC_AKU340</references>
+        <references refid="group___n_o_i_s_e___sensor___s_e_t_t_i_n_g_s_1gab3b996a9f445897296e7801f0b7832d3" compoundref="_b_s_p___board_settings_8h" startline="110">VDD_AKU_PORT</references>
+        <references refid="group___n_o_i_s_e___sensor___s_e_t_t_i_n_g_s_1ga771f7f138b12a30ab995f1cdbd8f7539" compoundref="_b_s_p___board_settings_8h" startline="109">VDD_AKU_PIN</references>
+        <references refid="group___n_o_i_s_e___sensor___s_e_t_t_i_n_g_s_1ga08d0664cc85bf1fe443d6a27f285fb11" compoundref="_b_s_p___board_settings_8h" startline="113">AKU_OUT_PORT</references>
+        <references refid="group___n_o_i_s_e___sensor___s_e_t_t_i_n_g_s_1ga0f05221476f7d55e68840ae026384898" compoundref="_b_s_p___board_settings_8h" startline="112">AKU_OUT_PIN</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <referencedby refid="group___n_o_i_s_e_s_e_n_s_o_r_1ga7fb2dfb213f9bacae96eee4e1bc65fbe" compoundref="_noise_sensor_8c" startline="120" endline="147">NoiseSensor_Enable</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Hardware abstraction layer for the AKU340 microphone functionalities. </para>    </briefdescription>
+    <detaileddescription>
+<para>Typically the application needs to call <ref refid="group___b_c_d_s___h_a_l___b_s_p___mic___a_k_u340_1ga8489886b647fba04b1cbb62714859e4c" kindref="member">BSP_Mic_AKU340_Connect()</ref> to establish the link between the ADC and the AKU340 peripheral then it enables it via the <ref refid="group___b_c_d_s___h_a_l___b_s_p___mic___a_k_u340_1ga8823fe26ce3f53dd20444ab5ba4a85e2" kindref="member">BSP_Mic_AKU340_Enable()</ref> after that it is possible to sense the signal it using <ref refid="_b_s_p___mic___a_k_u340_8c_1a84a282cbfef56c6b25cb12f9e39df5a5" kindref="member">BSP_Mic_AKU340_Sense()</ref> which the value of the microphone output voltage.</para><para>The application can then disable the AKU340 and disconnect it from the MCU via <ref refid="group___b_c_d_s___h_a_l___b_s_p___mic___a_k_u340_1ga40c4493a092bfe26eeeb9bc597c114af" kindref="member">BSP_Mic_AKU340_Disable()</ref> and <ref refid="group___b_c_d_s___h_a_l___b_s_p___mic___a_k_u340_1gaa068d5786953c81912bf3ba4ce405216" kindref="member">BSP_Mic_AKU340_Disconnect()</ref> functions. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

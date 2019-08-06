@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___b_c_d_s___h_a_l___m_c_u___s_p_i" kind="group">
+    <compoundname>BCDS_HAL_MCU_SPI</compoundname>
+    <title>SPI</title>
+    <innerfile refid="_b_c_d_s___m_c_u___s_p_i_8h">BCDS_MCU_SPI.h</innerfile>
+    <briefdescription>
+<para>Unified SPI (Serial Peripheral Interface) API. </para>    </briefdescription>
+    <detaileddescription>
+<para>A typical use of this API would start with initializing the SPI instance. This will initializes the SPI with default settings.</para><para><programlisting><codeline><highlight class="normal">retcode<sp/>=<sp/>MCU_SPI_Initialize(spi,<sp/>callback);</highlight></codeline>
+</programlisting></para><para>Now, the SPI is configured and active such that the communication can start. The application should use the function MCU_SPI_Receive() to receive a certain number bytes.</para><para>For sending, the application uses the function MCU_SPI_Send().</para><para><simplesect kind="note"><para>It is possible to disable the entire SPI feature in the HAL-BSP configuration file. I.e. the SPI code will only be compiled and linked if the feature <bold>BCDS_FEATURE_SPI</bold> is set to 1 in the configuration file. </para></simplesect>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

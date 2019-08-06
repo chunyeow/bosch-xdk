@@ -1,0 +1,1018 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e" kind="page">
+    <compoundname>XDK_MIGRATION_GUIDE</compoundname>
+    <title>XDK Migration Guide</title>
+    <detaileddescription>
+<para>Outlines the changes between the version XDK-1.3.0 ,XDK-1.5.0, XDK-1.5.2, XDK-2.0.1, XDK-3.0.0, XDK-3.0.1 &amp; above</para><para><hruler/>
+ </para><sect1 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_UPDATE1">
+<title>Changes From the version XDK-3.4.0 &amp; above</title>
+<para>Table to capture the changes from XDK-3.4.0 and above</para><para><table rows="3" cols="2"><row>
+<entry thead="yes"><para>XDK-3.4.0 </para></entry><entry thead="yes"><para></para></entry></row>
+<row>
+<entry thead="no"><para>int32_t <ref refid="_b_s_p___mic___a_k_u340_8c_1a84a282cbfef56c6b25cb12f9e39df5a5" kindref="member">BSP_Mic_AKU340_Sense(void)</ref> </para></entry><entry thead="no"><para>Deprecated </para></entry></row>
+<row>
+<entry thead="no"><para>BCDS_BSP_Extension_Gpio.h </para></entry><entry thead="no"><para>Deprecated </para></entry></row>
+</table>
+</para></sect1>
+<sect1 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_UPDATE">
+<title>Changes From the version XDK-3.0.2 &amp; above</title>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_XDK_SENSORTOOLBOX">
+<title>SensorToolbox API</title>
+<para>Summary of Changes for SensorToolbox Files:<itemizedlist>
+<listitem><para>API: Few function are deprecated</para></listitem></itemizedlist>
+</para><para>Table to capture the changes from XDK-3.0.2 and above</para><para><table rows="6" cols="2"><row>
+<entry thead="yes"><para>XDK-1.x.x,XDK-2.x.x,XDK-3.0.0,XDK-3.0.1 </para></entry><entry thead="yes"><para>XDK-3.0.2  </para></entry></row>
+<row>
+<entry thead="no"><para>Retcode_T Orientation_readQuaternionValue(Orientation_QuaternionDataPtr_T quaternionValue) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___r_o_t_a_t_i_o_n_1gabee3b9ca61b5bba969d9025d14ebc9a2" kindref="member">Rotation_readQuaternionValue(Rotation_QuaternionDataPtr_T quaternionValue)</ref>; </para></entry></row>
+<row>
+<entry thead="no"><para>Retcode_T CalibratedAccel_getStatus(CalibratedAccel_StatusPtr_T calibAccelStatus) </para></entry><entry thead="no"><para>Deprecated </para></entry></row>
+<row>
+<entry thead="no"><para>Retcode_T CalibratedMag_getStatus(CalibratedMag_CalibStatusPtr_T calibMagStatus) </para></entry><entry thead="no"><para>Deprecated </para></entry></row>
+<row>
+<entry thead="no"><para>Retcode_T CalibratedGyro_getStatus(CalibratedGyro_CalibStatusPtr_T calibGyroStatus) </para></entry><entry thead="no"><para>Deprecated </para></entry></row>
+<row>
+<entry thead="no"><para>int32_t <ref refid="_b_s_p___mic___a_k_u340_8c_1a84a282cbfef56c6b25cb12f9e39df5a5" kindref="member">BSP_Mic_AKU340_Sense(void)</ref> </para></entry><entry thead="no"><para>Deprecated </para></entry></row>
+</table>
+</para></sect2>
+</sect1>
+<sect1 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_UPDATE">
+<title>Changes From the version XDK-3.0.2 &amp; above</title>
+<para>Table to capture the changes in XDK structure from version XDK-3.0.0 &amp; above</para><para><table rows="10" cols="3"><row>
+<entry thead="yes"><para>Description </para></entry><entry thead="yes"><para>XDK-3.0.0 </para></entry><entry thead="yes"><para>Comments  </para></entry></row>
+<row>
+<entry thead="no"><para>Platform/Peripherals </para></entry><entry thead="no"><para>Not Available </para></entry><entry thead="no"><para>instead of Peripherals Lower level drivers can be triggered(enable/disable) by using Drivers &amp; BSP packages under platform </para></entry></row>
+<row>
+<entry thead="no"><para>Platform/Power </para></entry><entry thead="no"><para>Not Available </para></entry><entry thead="no"><para>Power related configurations taken as a part of the modules itself , so decided to not provide options to the user for the power configurations </para></entry></row>
+<row>
+<entry thead="no"><para>Platform/Basics </para></entry><entry thead="no"><para>Not Available </para></entry><entry thead="no"><para>As Modularity improvements , Basics moved under Essentials </para></entry></row>
+<row>
+<entry thead="no"><para>Platform/Control </para></entry><entry thead="no"><para>Not Available </para></entry><entry thead="no"><para>As Modularity improvements , Control moved under Essentials </para></entry></row>
+<row>
+<entry thead="no"><para>Platform/MiscDrivers </para></entry><entry thead="no"><para>Not Available </para></entry><entry thead="no"><para>Apply Modularity improvements , MiscDrivers moved under Drivers </para></entry></row>
+<row>
+<entry thead="no"><para>Platform/SensorDrivers </para></entry><entry thead="no"><para>Not Available </para></entry><entry thead="no"><para>As Modularity improvements , SensorDrivers moved under Drivers </para></entry></row>
+<row>
+<entry thead="no"><para>Platform/Essentials </para></entry><entry thead="no"><para>Available </para></entry><entry thead="no"><para>Introduced New package including the of Basics &amp; Control packages as a improvement for the modularity </para></entry></row>
+<row>
+<entry thead="no"><para>Platform/Drivers </para></entry><entry thead="no"><para>Available </para></entry><entry thead="no"><para>Introduced New package including the of MiscDrivers &amp; SensorDrivers packages as a improvement for the modularity and also introducing portable and abstract API, regardless of the type of the underlying hardware </para></entry></row>
+<row>
+<entry thead="no"><para>Platform/BSP </para></entry><entry thead="no"><para>Available </para></entry><entry thead="no"><para>Board Support Package is the layer of software containing hardware-specific drivers </para></entry></row>
+</table>
+</para></sect1>
+<sect1 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_API_UPDATE">
+<title>API Changes from the version XDK-3.0.0 &amp; above on following modules :</title>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1DRIVERS">
+<title>DRIVERS</title>
+<para><itemizedlist>
+<listitem><para>As per New Improvement for the Modularity , MISCDRIVERS and SensorDrivers moved under Drivers package.</para></listitem><listitem><para>Interface Header file name changes to <ref refid="_b_c_d_s___s_d_card___driver_8h" kindref="compound">BCDS_SDCard_Driver.h</ref> instead of BCDS_SDCardDriver.h.</para></listitem><listitem><para>Retcode_T SDCardDriver_Connect(void) Interface API removed.</para></listitem></itemizedlist>
+</para><para>Table to capture the changes in MISCDRIVERS Interface API&apos;s in between version XDK-2.0.1 and XDK-3.0.0 &amp; above</para><para><table rows="11" cols="2"><row>
+<entry thead="yes"><para>XDK-2.0.1 &amp; below API </para></entry><entry thead="yes"><para>XDK-3.0.0 &amp; above API  </para></entry></row>
+<row>
+<entry thead="no"><para>Retcode_T SDCardDriver_Init(void); </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___s_d_c_a_r_d___d_r_i_v_e_r_1ga9a91444cfd57817a71946a2ddb0d6bee" kindref="member">SDCardDriver_Initialize(void)</ref>; </para></entry></row>
+<row>
+<entry thead="no"><para>SDCardDriver_Status_T <ref refid="group___s_d_c_a_r_d___d_r_i_v_e_r_1gaa49501d9b65522e0f353bde30b0e0faa" kindref="member">SDCardDriver_GetDetectStatus(void)</ref>; </para></entry><entry thead="no"><para>SDCardDriver_Status_T <ref refid="group___s_d_c_a_r_d___d_r_i_v_e_r_1gaa49501d9b65522e0f353bde30b0e0faa" kindref="member">SDCardDriver_GetDetectStatus(void)</ref>; </para></entry></row>
+<row>
+<entry thead="no"><para>void SDCardDriver_Disconnect(void); </para></entry><entry thead="no"><para>Not Available </para></entry></row>
+<row>
+<entry thead="no"><para>Not Available </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___s_d_c_a_r_d___d_r_i_v_e_r_1ga67fcdf38339b8065826012be1d8ae79b" kindref="member">SDCardDriver_Deinitialize(void)</ref>; </para></entry></row>
+<row>
+<entry thead="no"><para>Retcode_T SDCardDriver_Connect(void); </para></entry><entry thead="no"><para>Not Available </para></entry></row>
+<row>
+<entry thead="no"><para>Retcode_T <ref refid="group___s_d_c_a_r_d___d_r_i_v_e_r_1ga51605ef2862b0c5b8c5acc97b95f52c5" kindref="member">SDCardDriver_DiskInitialize(uint8_t sdDrive)</ref>; </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___s_d_c_a_r_d___d_r_i_v_e_r_1ga51605ef2862b0c5b8c5acc97b95f52c5" kindref="member">SDCardDriver_DiskInitialize(uint8_t SdDrive)</ref>; </para></entry></row>
+<row>
+<entry thead="no"><para>Retcode_T <ref refid="group___s_d_c_a_r_d___d_r_i_v_e_r_1gaab90bc8af8c109f206cf6f7affaa92ea" kindref="member">SDCardDriver_DiskWrite(uint8_t drive, const uint8_t *writeBuffer,uint32_t sector, uint32_t writeCount)</ref>; </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___s_d_c_a_r_d___d_r_i_v_e_r_1gaab90bc8af8c109f206cf6f7affaa92ea" kindref="member">SDCardDriver_DiskWrite(uint8_t Drive, const uint8_t *WriteBuffer,uint32_t Sector, uint32_t WriteCount)</ref>; </para></entry></row>
+<row>
+<entry thead="no"><para>Retcode_T <ref refid="group___s_d_c_a_r_d___d_r_i_v_e_r_1ga6ee0eaf3a04c14143f34d89d6d7ab19b" kindref="member">SDCardDriver_DiskRead(uint8_t drive, uint8_t *readBuffer,uint32_t sector, uint32_t readCount)</ref>; </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___s_d_c_a_r_d___d_r_i_v_e_r_1ga6ee0eaf3a04c14143f34d89d6d7ab19b" kindref="member">SDCardDriver_DiskRead(uint8_t Drive, uint8_t *ReadBuffer,uint32_t Sector, uint32_t ReadCount)</ref>; </para></entry></row>
+<row>
+<entry thead="no"><para>Retcode_T <ref refid="group___s_d_c_a_r_d___d_r_i_v_e_r_1gaaf88c928fd61e39938bba3cbd0874a1a" kindref="member">SDCardDriver_DiskIoctl(uint8_t drive, uint8_t control, void *buffer)</ref>; </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___s_d_c_a_r_d___d_r_i_v_e_r_1gaaf88c928fd61e39938bba3cbd0874a1a" kindref="member">SDCardDriver_DiskIoctl(uint8_t Drive, uint8_t Control, void *Buffer)</ref>; </para></entry></row>
+<row>
+<entry thead="no"><para>Retcode_T <ref refid="group___s_d_c_a_r_d___d_r_i_v_e_r_1gaffcffaff393bced96149a613bec539af" kindref="member">SDCardDriver_GetDiskStatus(uint8_t drive)</ref>; </para></entry><entry thead="no"><para>SDCardDriver_DiskStatus_T <ref refid="group___s_d_c_a_r_d___d_r_i_v_e_r_1gaffcffaff393bced96149a613bec539af" kindref="member">SDCardDriver_GetDiskStatus(uint8_t Drive)</ref>; </para></entry></row>
+</table>
+unsigned long <ref refid="ff_8h_1af58b536abfd30f77213f4ecaf2ac52f5" kindref="member">get_fattime(void)</ref>; | unsigned long <ref refid="ff_8h_1af58b536abfd30f77213f4ecaf2ac52f5" kindref="member">get_fattime(void)</ref>; | | |</para></sect2>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1FOTA">
+<title>FOTA</title>
+<para><itemizedlist>
+<listitem><para>FOTA Package Major changes happened in a way like , in XDK-3.0.0 , We have introduced Event Driven Base implementation.</para></listitem><listitem><para>API Name changed from FotaStateMachine_CancelDownload() -FotaStateMachine_ControlDownload()</para></listitem><listitem><para>Introduced Additional parameters for the following API&apos;s, Please refer the Interface API Document for the Following API&apos;s:<itemizedlist>
+<listitem><para>FotaStateMachine_Init</para></listitem><listitem><para>FotaStateMachine_GetState</para></listitem><listitem><para>DownloadClient_SetupNewDownload</para></listitem></itemizedlist>
+</para></listitem><listitem><para>New interface API provided in the validation agent: -ValidationAgent_VerifyIntegrity - This function is called to verify the integrity of the Firmware.</para></listitem></itemizedlist>
+</para></sect2>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1WLAN">
+<title>WLAN</title>
+<para><itemizedlist>
+<listitem><para>Following Interface API&apos;s deprecated(Not Available):<itemizedlist>
+<listitem><para>WlanDriver_InterruptEnable() - Function to enable the WIFI device Interrupt</para></listitem><listitem><para>WlanDriver_InterruptDisable() - Function to disable the WIFI device Interrupt</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Wlan interface changed to event driven</para></listitem><listitem><para>Implemented Wlan power management</para></listitem></itemizedlist>
+</para></sect2>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1BLE">
+<title>BLE</title>
+<para><itemizedlist>
+<listitem><para>BLE Package Major changes happened in a way like , Interface API names changed.</para></listitem><listitem><para>Following Interface Files has been removed:<itemizedlist>
+<listitem><para>BLE_serialDriver_ih.h</para></listitem><listitem><para>BLE_stateHandler_ih.h</para></listitem><listitem><para>BleMemory.h</para></listitem><listitem><para>BTI_bluetoothInterface_ih.h</para></listitem></itemizedlist>
+</para></listitem><listitem><para>New Interface Header file introduced for the BLE Connection:<itemizedlist>
+<listitem><para><ref refid="_b_c_d_s___ble_8h" kindref="compound">BCDS_Ble.h</ref></para></listitem></itemizedlist>
+</para></listitem></itemizedlist>
+</para></sect2>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1Utils">
+<title>Utils</title>
+<para><itemizedlist>
+<listitem><para>DBG_assert_ih.h has been removed.</para></listitem><listitem><para>Following Interface Files has been renamed as follows:<itemizedlist>
+<listitem><para>LB2C_lb2cProtocol_ih.h - <ref refid="_b_c_d_s___lean_b2_c_a_p_8h" kindref="compound">BCDS_LeanB2CAP.h</ref></para></listitem><listitem><para>LOG_module_ih.h - <ref refid="_b_c_d_s___logging_8h" kindref="compound">BCDS_Logging.h</ref></para></listitem><listitem><para>RB_ringBuffer_ih.h - <ref refid="_b_c_d_s___ring_buffer_8h" kindref="compound">BCDS_RingBuffer.h</ref></para></listitem><listitem><para>TLV_dataHandler_ih.h - <ref refid="_b_c_d_s___t_l_v_8h" kindref="compound">BCDS_TLV.h</ref></para></listitem></itemizedlist>
+</para></listitem><listitem><para>New Interface File Added;<itemizedlist>
+<listitem><para><ref refid="_b_c_d_s___x_protocol_8h" kindref="compound">BCDS_XProtocol.h</ref></para></listitem></itemizedlist>
+</para></listitem><listitem><para>As per the Modularity Improvement , Some of the Control Interface API&apos;s moved under Utils:<itemizedlist>
+<listitem><para><ref refid="_b_c_d_s___cmd_processor_8h" kindref="compound">BCDS_CmdProcessor.h</ref></para></listitem><listitem><para><ref refid="_b_c_d_s___event_hub_8h" kindref="compound">BCDS_EventHub.h</ref></para></listitem><listitem><para><ref refid="_b_c_d_s___guarded_task_8h" kindref="compound">BCDS_GuardedTask.h</ref></para></listitem><listitem><para><ref refid="_b_c_d_s___queue_8h" kindref="compound">BCDS_Queue.h</ref></para></listitem><listitem><para><ref refid="_b_c_d_s___sleep_control_8h" kindref="compound">BCDS_SleepControl.h</ref></para></listitem><listitem><para><ref refid="_b_c_d_s___task_monitor_8h" kindref="compound">BCDS_TaskMonitor.h</ref></para></listitem></itemizedlist>
+</para></listitem></itemizedlist>
+</para></sect2>
+</sect1>
+<sect1 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_API_UPDATE_NEW_MODULES">
+<title>New Modules with the Interface API&apos;s update from the version XDK-3.0.0 &amp; above on following modules :</title>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1ESSENTIALS">
+<title>ESSENTIALS</title>
+<para><itemizedlist>
+<listitem><para>Essentials provides the Interface API&apos;s to Access the Peripherals Driver Configurable API&apos;s and Basics &amp; Control package Interface API&apos;s same as earlier.</para></listitem></itemizedlist>
+</para></sect2>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1BSP">
+<title>BSP</title>
+<para><itemizedlist>
+<listitem><para>Board Support Package is the layer of software containing hardware-specific drivers.</para></listitem></itemizedlist>
+</para></sect2>
+</sect1>
+<sect1 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_UPDATE_NEW_METHOD">
+<title>HAL/BSP Method Introduction:</title>
+<para><itemizedlist>
+<listitem><para>As per the new HAL/BSP method, User can able to enable/disable the specific feature under <bold><ref refid="_b_c_d_s___h_a_l_config_8h" kindref="compound">Common/config/Essentials/BCDS_HALConfig.h</ref></bold> as follows : example: <programlisting><codeline><highlight class="normal">#define<sp/>BCDS_FEATURE_BSP_SD_CARD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1<sp/><sp/><sp/>/*<sp/>Feature<sp/>for<sp/>SD<sp/>CARD<sp/><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>BCDS_FEATURE_I2C<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1<sp/><sp/><sp/>/*<sp/>Feature<sp/>for<sp/>I2C<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>BCDS_FEATURE_BSP_USB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1<sp/><sp/><sp/>/*<sp/>Feature<sp/>for<sp/>USB<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>BCDS_FEATURE_SPI<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1<sp/><sp/><sp/>/*<sp/>Feature<sp/>for<sp/>SPI<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>BCDS_FEATURE_BSP_LED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1<sp/><sp/><sp/>/*<sp/>Feature<sp/>for<sp/>LED<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>BCDS_FEATURE_BSP_BUTTON<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1<sp/><sp/><sp/>/*<sp/>Feature<sp/>for<sp/>BUTTON<sp/>*/</highlight></codeline>
+</programlisting></para></listitem></itemizedlist>
+</para><para>Once we enabled the feature , we are able to access the peripheral configurable API&apos;s of particular feature.</para><sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1Application">
+<title>Common Control Flow Changes by using CommandProcessor:</title>
+<para>Example : Message &quot;Hello World&quot; will be printed on the console after flashing the below implementation.</para><para>A more efficient way of doing this however would be to use a timer and CommandProcessor:</para><para><programlisting><codeline><highlight class="normal">----------------------------------------------------application.c--------------------------------------</highlight></codeline>
+<codeline><highlight class="normal">/*<sp/>system<sp/>header<sp/>files<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;stdio.h&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;BCDS_Basics.h&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*<sp/>additional<sp/>interface<sp/>header<sp/>files<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;FreeRTOS.h&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#define<sp/>THREESECONDDELAY<sp/>UINT32_C(1000)<sp/>/*<sp/>one<sp/>second<sp/>is<sp/>represented<sp/>by<sp/>this<sp/>macro<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>TIMERBLOCKTIME<sp/><sp/><sp/>UINT32_C(0xffff)<sp/><sp/><sp/><sp/>/*<sp/>Macro<sp/>used<sp/>to<sp/>define<sp/>block<sp/>time<sp/>of<sp/>a<sp/>timer<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>TIMER_AUTORELOAD_ON<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT32_C(1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/**&lt;<sp/>Auto<sp/>reload<sp/>of<sp/>timer<sp/>is<sp/>enabled*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*Application<sp/>Command<sp/>Processor<sp/>Instance<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">CmdProcessor_T<sp/>*AppCmdProcessor;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@brief<sp/>The<sp/>function<sp/>is<sp/>to<sp/>print<sp/>the<sp/>Hello<sp/>world<sp/>on<sp/>serial<sp/>port.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@param[in]<sp/>param1<sp/>should<sp/>be<sp/>defined<sp/>with<sp/>the<sp/>type<sp/>void<sp/>*(as<sp/>argument)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@param[in]<sp/>param2<sp/>should<sp/>be<sp/>defined<sp/>with<sp/>the<sp/>type<sp/>uint32_t<sp/>(as<sp/>argument)</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">static<sp/>void<sp/>printHelloWorld(void<sp/>*<sp/>param1,<sp/>uint32_t<sp/>param2)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>BCDS_UNUSED(param1);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>BCDS_UNUSED(param2);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>printf(&quot;Hello<sp/>world\r\n&quot;);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">/*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@brief<sp/>Function<sp/>used<sp/>to<sp/>enqueue<sp/>CmdProcessor<sp/>to<sp/>run<sp/>printHelloWorld</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@param[in]<sp/>pxTimer<sp/>timer<sp/>handle</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>processUsbPrintMsg(xTimerHandle<sp/>pxTimer)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>BCDS_UNUSED(pxTimer);<sp/>/*<sp/>suppressing<sp/>warning<sp/>message<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Retcode_T<sp/>returnValue<sp/>=<sp/>RETCODE_OK;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>returnValue<sp/>=<sp/>CmdProcessor_enqueue(AppCmdProcessor,<sp/>printHelloWorld,<sp/>NULL,<sp/>UINT32_C(0));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(RETCODE_OK<sp/>!=<sp/>returnValue)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;Enqueuing<sp/>for<sp/>PrintHelloWorld<sp/>callback<sp/>failed\n\r&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@brief<sp/>Application<sp/>to<sp/>print<sp/>&quot;hello<sp/>world&quot;<sp/>on<sp/>serial<sp/>console.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>Application_init(void)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>xTimerHandle<sp/>timerHandle_gdt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>*<sp/>Return<sp/>value<sp/>for<sp/>Timer<sp/>start<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/>retValPerSwTimer<sp/>=<sp/>TIMER_NOT_ENOUGH_MEMORY;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>/*<sp/>create<sp/>timer<sp/>task<sp/>to<sp/>read<sp/>and<sp/>print<sp/>light<sp/>sensor<sp/>data<sp/>every<sp/>three<sp/>seconds*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>/*<sp/>Validated<sp/>for<sp/>portMAX_DELAY<sp/>to<sp/>assist<sp/>the<sp/>task<sp/>to<sp/>wait<sp/>Infinitely<sp/>(without<sp/>timing<sp/>out)<sp/>and<sp/>ticks<sp/>cannot<sp/>be<sp/>0<sp/>in<sp/>FreeRTOS<sp/>timer.<sp/>So<sp/>ticks<sp/>is<sp/>assigned<sp/>to<sp/>1*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>timerHandle_gdt<sp/>=<sp/>xTimerCreate(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(char<sp/>*<sp/>const)<sp/>&quot;Test<sp/>Application<sp/>to<sp/>print<sp/>Hello<sp/>World&quot;,<sp/>(THREESECONDDELAY/portTICK_RATE_MS),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TIMER_AUTORELOAD_ON,<sp/>NULL,<sp/>processUsbPrintMsg);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/*<sp/>timer<sp/>create<sp/>fail<sp/>case<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(NULL<sp/>==<sp/>timerHandle_gdt)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/*<sp/>Assertion<sp/>Reason:<sp/>&quot;This<sp/>software<sp/>timer<sp/>was<sp/>not<sp/>Created,<sp/>Due<sp/>to<sp/>Insufficient<sp/>heap<sp/>memory&quot;<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(false);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>/*start<sp/>the<sp/>timer*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>retValPerSwTimer<sp/>=<sp/>xTimerStart(timerHandle_gdt,<sp/>TIMERBLOCKTIME);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/*<sp/>Timer<sp/>start<sp/>fail<sp/>case<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(TIMER_NOT_ENOUGH_MEMORY<sp/>==<sp/>retValPerSwTimer)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/*<sp/>Assertion<sp/>Reason:<sp/>&quot;This<sp/>software<sp/>timer<sp/>was<sp/>not<sp/>started,<sp/>Due<sp/>to<sp/>Insufficient<sp/>heap<sp/>memory&quot;<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(false);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@brief<sp/>This<sp/>is<sp/>a<sp/>template<sp/>function<sp/>where<sp/>the<sp/>user<sp/>can<sp/>write<sp/>his/her<sp/>custom<sp/>application.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>appInitSystem(void<sp/>*<sp/>CmdProcessorHandle,<sp/>uint32_t<sp/>param2)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(CmdProcessorHandle<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;Command<sp/>processor<sp/>handle<sp/>is<sp/>null<sp/>\n\r&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(false);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>AppCmdProcessor<sp/>=<sp/>(CmdProcessor_T<sp/>*)CmdProcessorHandle;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>BCDS_UNUSED(param2);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Application_init();</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">----------------------------------------------------End<sp/>of<sp/>application------------------------------------</highlight></codeline>
+</programlisting></para></sect2>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_BUILD_SYSTEM_Migration_Details_XDK_3_0_0">
+<title>Folder Structure Changes in Detailed migration steps of XDK-3.0.0 &amp; above</title>
+<para>This section highlights the necessary changes in folder structure and files. Further please refer to any one of our new example application makefile to know the changes. Also to know how start up sequence code flow changed see <ref refid="_x_d_k__s_o_f_t_w_a_r_e__s_t_a_r_t_u_p__g_u_i_d_e" kindref="compound">XDK Software Startup Guide</ref></para><para><image type="html" name="Folder_Structure_Change.png"></image>
+</para><para><itemizedlist>
+<listitem><para>Hardware Specific pin configurations(_ph.h files) has been moved to BSP package itself.</para></listitem><listitem><para>Third party shared libraries Folder name changes in a way like third party shared code decided to maintain under folder named as <bold>3rd-party</bold> as follows:<itemizedlist>
+<listitem><para>Libraries/BLEStack/3rd-party/Alpwise</para></listitem><listitem><para>Libraries/BSTLib/3rd-party/bstlib</para></listitem><listitem><para>Libraries/ServalStack/3rd-party/ServalStack</para></listitem><listitem><para>Libraries/FATfs/3rd-party/fatfs</para></listitem><listitem><para>Libraries/FreeRTOS/3rd-party/FreeRTOS</para></listitem><listitem><para>Libraries/WiFi/3rd-party/TI/simplelink</para></listitem></itemizedlist>
+</para></listitem></itemizedlist>
+</para></sect2>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_LOWER_API">
+<title>Change of API names to Access the HMI (LED ,Button), So As per the new design LED,Button Interface API&apos;s exist under Platform/Essentials/include.</title>
+<para><table rows="10" cols="2"><row>
+<entry thead="yes"><para>XDK-2.0.1 &amp; below API </para></entry><entry thead="yes"><para>XDK-3.0.0 &amp; above API  </para></entry></row>
+<row>
+<entry thead="no"><para>LED_handle_tp LED_create(const GPIO_handle_tp pin, const GPIO_pinStates_t offState); </para></entry><entry thead="no"><para>Retcode_T BSP_LED_Enable(uint32_t id); </para></entry></row>
+<row>
+<entry thead="no"><para>LED_errorTypes_t LED_delete(LED_handle_tp handle); </para></entry><entry thead="no"><para>Retcode_T BSP_LED_Disable(uint32_t id); </para></entry></row>
+<row>
+<entry thead="no"><para>LED_errorTypes_t LED_setState(LED_handle_tp handle, const LED_operations_t state); </para></entry><entry thead="no"><para>Retcode_T BSP_LED_Connect(void); </para></entry></row>
+<row>
+<entry thead="no"><para>. </para></entry><entry thead="no"><para>Retcode_T BSP_LED_EnableAll(void); </para></entry></row>
+<row>
+<entry thead="no"><para>. </para></entry><entry thead="no"><para>Retcode_T BSP_LED_Switch(uint32_t id, uint32_t command); </para></entry></row>
+<row>
+<entry thead="no"><para>. </para></entry><entry thead="no"><para>Retcode_T BSP_LED_SwitchAll(uint32_t command); </para></entry></row>
+<row>
+<entry thead="no"><para>. </para></entry><entry thead="no"><para>Retcode_T BSP_LED_Disable(uint32_t id); </para></entry></row>
+<row>
+<entry thead="no"><para>. </para></entry><entry thead="no"><para>Retcode_T BSP_LED_DisableAll(void); </para></entry></row>
+<row>
+<entry thead="no"><para>. </para></entry><entry thead="no"><para>Retcode_T BSP_LED_Disconnect(void); </para></entry></row>
+</table>
+<itemizedlist>
+<listitem><para>For Better understanding , please refer &quot;LedsAndButtons&quot; application under xdk110/Apps.</para></listitem></itemizedlist>
+</para><para><table rows="8" cols="2"><row>
+<entry thead="yes"><para>XDK-2.0.1 &amp; below API </para></entry><entry thead="yes"><para>XDK-3.0.0 &amp; above API  </para></entry></row>
+<row>
+<entry thead="no"><para>BUTTON_handle_tp BUTTON_create(const GPIO_handle_tp pin, const GPIO_pinStates_t pressedState); </para></entry><entry thead="no"><para>Retcode_T BSP_Button_Connect(void); </para></entry></row>
+<row>
+<entry thead="no"><para>BUTTON_errorTypes_t BUTTON_delete(BUTTON_handle_tp handle); </para></entry><entry thead="no"><para>Retcode_T BSP_Button_Enable( uint32_t buttonId, BSP_Button_Callback_T callback); </para></entry></row>
+<row>
+<entry thead="no"><para>BUTTON_errorTypes_t BUTTON_enable(BUTTON_handle_tp handle); </para></entry><entry thead="no"><para>Retcode_T BSP_Button_Disable(uint32_t buttonId ); </para></entry></row>
+<row>
+<entry thead="no"><para>BUTTON_errorTypes_t BUTTON_disable(BUTTON_handle_tp handle); </para></entry><entry thead="no"><para>Retcode_T BSP_Button_Disconnect(void); </para></entry></row>
+<row>
+<entry thead="no"><para>_Bool BUTTON_isPressed(BUTTON_handle_tp handle); </para></entry><entry thead="no"><para>uint32_t BSP_Button_GetState(uint32_t buttonId); </para></entry></row>
+<row>
+<entry thead="no"><para>_Bool BUTTON_isReleased(BUTTON_handle_tp handle); </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>BUTTON_errorTypes_t BUTTON_setCallback(BUTTON_handle_tp handle, const BUTTON_callback_t callbackFunction, const uint32_t userParameter); </para></entry><entry thead="no"><para></para></entry></row>
+</table>
+<itemizedlist>
+<listitem><para>For Better understanding , please refer &quot;LedsAndButtons&quot; under APPS.</para></listitem><listitem><para>Servalpalwifi package shared to the End user as a archive(.a) library instead of Sharing the source files.</para></listitem><listitem><para>Serval Stack version updated to the latest version (v.1.8.1):<itemizedlist>
+<listitem><para>please refer the &quot;Changelog.md&quot; file under Servalstack.</para></listitem></itemizedlist>
+</para></listitem></itemizedlist>
+</para></sect2>
+</sect1>
+<sect1 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_BUILD_SYSTEM">
+<title>Build system migration guide</title>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_BUILD_SYSTEM_Migration_Guideline">
+<title>Migration Guideline</title>
+<para><itemizedlist>
+<listitem><para>These are the minimal steps required to migrate your old version application to version XDK-1.5.0 &amp; above<itemizedlist>
+<listitem><para>Delete the &quot;make&quot; folder containing the project application makefile. Note:User can make a copy of that any where before deleting for reference.</para></listitem><listitem><para>Copy the application makefile from any one of the example application into the application project directory</para></listitem><listitem><para>Copy the main.c file from any of example application into the application project directory</para></listitem><listitem><para>Replace your required application makefile changes in the copied example makefile. See <ref refid="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_BUILD_SYSTEM_Migration_Details" kindref="member">Detailed migration steps</ref></para></listitem><listitem><para>Compile the application in workbench.</para></listitem><listitem><para>Apply API changes as mentioned in the section <ref refid="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_API" kindref="member">Changes for the existing modules between the version XDK-1.3.0 and XDK-1.5.0 &amp; above</ref></para></listitem><listitem><para>For API changes between XDK-1.5.0 and XDK-1.5.2 &amp; above .See <ref refid="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_API_V1_5_2" kindref="member">Changes for the existing modules between the version XDK-1.5.0 and XDK-1.5.2 &amp; above</ref></para></listitem><listitem><para>For Deprecated file and package list refer section. See <ref refid="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_DEPRICATED_LIST" kindref="member">Deprecated,Renamed,moved packages/file list between the version XDK-1.3.0,XDK-1.5.0,XDK-1.5.2 &amp; above</ref></para></listitem><listitem><para>For FreeRtos API usage migration guide for the version XDK-1.5.2 &amp; above See <ref refid="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_FREERTOS_API_USAGE_GUIDE" kindref="member">Usage guide explaining how to use FreeRTOS API instead of OS abstraction API&apos;s</ref></para></listitem><listitem><para>Recompile and verify until the build gets successfully completed</para></listitem></itemizedlist>
+</para></listitem></itemizedlist>
+</para><para>This table depicts some of the common compilation errors and how it can be resolved</para><para><table rows="4" cols="2"><row>
+<entry thead="yes"><para>Compilation Error Message </para></entry><entry thead="yes"><para>Things that can go wrong  </para></entry></row>
+<row>
+<entry thead="no"><para>application.mk:92: *** multiple target patterns. Stop. </para></entry><entry thead="no"><para>Check whether correct application source directory mentioned in this makefile variable BCDS_APP_SOURCE_DIR </para></entry></row>
+<row>
+<entry thead="no"><para>fatal error: <ref refid="_accelerometer_8h" kindref="compound">accelerometer.h</ref>: No such file or directory </para></entry><entry thead="no"><para>For example, in this case file name changed to <ref refid="_b_c_d_s___accelerometer_8h" kindref="compound">BCDS_Accelerometer.h</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>fatal error: sensorTypes.h: No such file or directory </para></entry><entry thead="no"><para>For example in this case file is removed </para></entry></row>
+</table>
+</para></sect2>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_BUILD_SYSTEM_Migration_Details">
+<title>Detailed migration steps</title>
+<para>This section highlights only the necessary changes for the user to know how folder structure and files got changed. Furthermore the new structure is more organized such that in each modules all the source files and interface include files are placed under separate folders. Also now application makefile is made much more simple and short than previous.Further please refer to any one of our new example application makefile to know the changes. Also to know how start up sequence code flow changed see <ref refid="_x_d_k__s_o_f_t_w_a_r_e__s_t_a_r_t_u_p__g_u_i_d_e" kindref="compound">XDK Software Startup Guide</ref></para><para><image type="html" name="Old_New_Folder_Struct.png"></image>
+</para><para>Table to capture the changes in XDK structure between version XDK-1.3.0 and XDK-1.5.0 &amp; above</para><para><table rows="4" cols="3"><row>
+<entry thead="yes"><para>Description </para></entry><entry thead="yes"><para>XDK-1.3.0 </para></entry><entry thead="yes"><para>XDK-1.5.0 &amp; above  </para></entry></row>
+<row>
+<entry thead="no"><para>Location of main function </para></entry><entry thead="no"><para>Inside SSU_systemStartUp module and it is common for all application </para></entry><entry thead="no"><para>Inside the application folder,in a file main.c as shown in the above picture </para></entry></row>
+<row>
+<entry thead="no"><para>Location of application makefile </para></entry><entry thead="no"><para>&quot;make&quot; folder within the &quot;application project directory&quot; </para></entry><entry thead="no"><para>Inside the &quot;application project directory&quot;as shown in the above picture </para></entry></row>
+<row>
+<entry thead="no"><para>First API called after system booting </para></entry><entry thead="no"><para>void SSU_initSystem(OS_timerHandle_tp xTimer) {} </para></entry><entry thead="no"><para>void appInitSystem(OS_timerHandle_tp xTimer){} </para></entry></row>
+</table>
+Table to capture the changes in XDK application makefile between version XDK-1.3.0 and XDK-1.5.0 &amp; above</para><para><table rows="10" cols="3"><row>
+<entry thead="yes"><para>Description </para></entry><entry thead="yes"><para>XDK-1.3.0 </para></entry><entry thead="yes"><para>XDK-1.5.0 &amp; above  </para></entry></row>
+<row>
+<entry thead="no"><para>Application project directory Makefile variable </para></entry><entry thead="no"><para>APPLICATION_DIR </para></entry><entry thead="no"><para>export BCDS_APP_DIR </para></entry></row>
+<row>
+<entry thead="no"><para>Application source directory Makefile variable </para></entry><entry thead="no"><para>Not available </para></entry><entry thead="no"><para>export BCDS_APP_SOURCE_DIR </para></entry></row>
+<row>
+<entry thead="no"><para>Application include files list Makefile variable </para></entry><entry thead="no"><para>INCLUDEPATHS += \ </para></entry><entry thead="no"><para>export BCDS_XDK_INCLUDES = \ </para></entry></row>
+<row>
+<entry thead="no"><para>Application source file list Makefile variable </para></entry><entry thead="no"><para>APP_SRC += \ </para></entry><entry thead="no"><para>export BCDS_XDK_APP_SOURCE_FILES = \ </para></entry></row>
+<row>
+<entry thead="no"><para>Project name Makefile variable </para></entry><entry thead="no"><para>PROJECTNAME </para></entry><entry thead="no"><para>export BCDS_APP_NAME </para></entry></row>
+<row>
+<entry thead="no"><para>How to pass application specific C flags </para></entry><entry thead="no"><para>override CFLAGS +=  </para></entry><entry thead="no"><para>export BCDS_CFLAGS_COMMON = -DMY_DEFINE </para></entry></row>
+<row>
+<entry thead="no"><para>How to pass application specific assembler flags </para></entry><entry thead="no"><para>override ASMFLAGS +=  </para></entry><entry thead="no"><para>Not required </para></entry></row>
+<row>
+<entry thead="no"><para>How to pass application specific linker flags </para></entry><entry thead="no"><para>override LDFLAGS +=  </para></entry><entry thead="no"><para>Not required </para></entry></row>
+<row>
+<entry thead="no"><para>Custom startup configuration application Makefile variable </para></entry><entry thead="no"><para>configured using workbench project settings,not available in application makefile</para></entry><entry thead="no"><para>export BCDS_SYSTEM_STARTUP_METHOD = DEFAULT_STARTUP </para></entry></row>
+</table>
+</para></sect2>
+</sect1>
+<sect1 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_API">
+<title>Changes for the existing modules between the version XDK-1.3.0 and XDK-1.5.0 &amp; above</title>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_XDK_RELATED_PAGE">
+<title>Related Pages Documentation Changes</title>
+<para><itemizedlist>
+<listitem><para>The following related pages in the doxygen documents were updated<itemizedlist>
+<listitem><para>Known Issues</para></listitem><listitem><para>XDK Extension Bus User Guide</para></listitem><listitem><para>XDK Software Startup Guide</para></listitem></itemizedlist>
+</para></listitem><listitem><para>The following related pages in the doxygen documents were added newly<itemizedlist>
+<listitem><para>XDK Workbench Virtual XDK Plugin</para></listitem><listitem><para>XDK Workbench Live Monitor Plugin</para></listitem><listitem><para>XDK Bootloader User Guide</para></listitem><listitem><para>XDK Build System</para></listitem><listitem><para>XDK Energy Management</para></listitem><listitem><para>XDK Example Applications</para></listitem><listitem><para>XDK Operation Modes</para></listitem><listitem><para>XDK USB Device Handling</para></listitem></itemizedlist>
+</para></listitem></itemizedlist>
+</para></sect2>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_XDK_ACCEL_MODULE">
+<title>Accelerometer Module</title>
+<para>Summary of Changes for Accelerometer Module:<itemizedlist>
+<listitem><para>API: Function names changed to make them more uniform</para></listitem><listitem><para>API: Return types changed</para></listitem><listitem><para>API: Few function signatures changed</para></listitem><listitem><para>API: Input parameters type changed</para></listitem><listitem><para>API: <ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gaddf51f53b785d82dd8232b7f94e676f8" kindref="member">Accelerometer_deInit()</ref> added to power off the sensor when not in use</para></listitem><listitem><para>API: accelerometerUnregisterCallback() removed, added <ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga4b8d0377af6ed3ea55a4832707f2575c" kindref="member">Accelerometer_disableInterrupt()</ref> instead</para></listitem><listitem><para>API: accelerometerConfigureSlopeInterrupt() removed, added <ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gac04dfe1f1d0f10a41008eb54b0258a8e" kindref="member">Accelerometer_configInterrupt()</ref> instead</para></listitem><listitem><para>ENUMs: Names changed to make them more uniform</para></listitem><listitem><para>ENUMs: Element names in each of those are changed</para></listitem></itemizedlist>
+</para><para><table rows="3" cols="3"><row>
+<entry thead="yes"><para>Version Name </para></entry><entry thead="yes"><para>Module Interface </para></entry><entry thead="yes"><para>Module Interface Path  </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.3.0 </para></entry><entry thead="no"><para><ref refid="_accelerometer_8h" kindref="compound">accelerometer.h</ref> </para></entry><entry thead="no"><para>platform/device/sensors/Accelerometer/include </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.5.0 &amp; above </para></entry><entry thead="no"><para><ref refid="_b_c_d_s___accelerometer_8h" kindref="compound">BCDS_Accelerometer.h</ref> </para></entry><entry thead="no"><para>Platform/Sensors/include </para></entry></row>
+</table>
+Table to capture the difference between version XDK-1.3.0 and XDK-1.5.0 &amp; above</para><para><table rows="18" cols="2"><row>
+<entry thead="yes"><para>XDK-1.3.0 API </para></entry><entry thead="yes"><para>XDK-1.5.0 &amp; above API  </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t accelerometerInit(AccelerometerHandle_t ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gada44fddcce4df8b6f4d19fcd06b0f0f3" kindref="member">Accelerometer_init(Accelerometer_HandlePtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t accelerometerSetBandwidth(AccelerometerHandle_t , accelerometer_bandwidth_t ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga3acc84c8c162385554985c28a68eb806" kindref="member">Accelerometer_setBandwidth(Accelerometer_HandlePtr_T ,Accelerometer_Bandwidth_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t accelerometerGetBandwidth(AccelerometerHandle_t , accelerometer_bandwidth_tp ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga419e1726b46209822d79f7284f19fdf4" kindref="member">Accelerometer_getBandwidth(Accelerometer_HandlePtr_T , Accelerometer_BandwidthPtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t accelerometerSetRange(AccelerometerHandle_t , accelerometer_range_t) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga7260622f587a50b2356e2848ccc00b1e" kindref="member">Accelerometer_setRange(Accelerometer_HandlePtr_T , Accelerometer_Range_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t accelerometerGetRange(AccelerometerHandle_t , accelerometer_range_tp ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gacf67a297289375fd8843e1de4d7e4be3" kindref="member">Accelerometer_getRange(Accelerometer_HandlePtr_T , Accelerometer_RangePtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t accelerometerSetSleepDuration(AccelerometerHandle_t , accelerometer_sleepduration_t ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga84f23dba9c1d1d5671921deabd2bd6f3" kindref="member">Accelerometer_setSleepDuration(Accelerometer_HandlePtr_T , Accelerometer_SleepDuration_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>Not Available </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gaac53224e698bbb8e5f00e57bc0022fa0" kindref="member">Accelerometer_getSleepDuration(Accelerometer_HandlePtr_T , Accelerometer_SleepDurationPtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t accelerometerSetMode(AccelerometerHandle_t , accelerometer_powermode_t) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga235db8382dee66d6f1296ecf3085f88a" kindref="member">Accelerometer_setMode(Accelerometer_HandlePtr_T , Accelerometer_Powermode_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t accelerometerGetMode(AccelerometerHandle_t , accelerometer_powermode_tp ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gab9a567fe170de76e20dd7a86ba8a3a56" kindref="member">Accelerometer_getMode(Accelerometer_HandlePtr_T , Accelerometer_PowermodePtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t accelerometerReadXyzLsbValue(AccelerometerHandle_t, accelerometer_xyzData_tp) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga5dcaf1b81b63ccce1a85ab649b920aca" kindref="member">Accelerometer_readXyzLsbValue(Accelerometer_HandlePtr_T , Accelerometer_XyzDataPtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t accelerometerReadXyzGValue(AccelerometerHandle_t , accelerometer_xyzData_tp ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga0db11ba711c71c40c97a971065f02fef" kindref="member">Accelerometer_readXyzGValue(Accelerometer_HandlePtr_T, Accelerometer_XyzDataPtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>Not Available </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gaddf51f53b785d82dd8232b7f94e676f8" kindref="member">Accelerometer_deInit(Accelerometer_HandlePtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t accelerometerConfigureSlopeInterrupt(AccelerometerHandle_t, accelerometer_ConfigureSlopeInterrupt_t) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gac04dfe1f1d0f10a41008eb54b0258a8e" kindref="member">Accelerometer_configInterrupt(Accelerometer_HandlePtr_T, Accelerometer_InterruptChannel_T, Accelerometer_InterruptType_T , void *)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>Not Available </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga4b8d0377af6ed3ea55a4832707f2575c" kindref="member">Accelerometer_disableInterrupt(Accelerometer_HandlePtr_T , Accelerometer_InterruptChannel_T , Accelerometer_InterruptType_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t accelerometerRegisterRealTimeCallback(AccelerometerHandle_t ,interruptCallback ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga86d22a4235b00503611ee658d4dc54c8" kindref="member">Accelerometer_regRealTimeCallback(Accelerometer_HandlePtr_T , Accelerometer_InterruptChannel_T , accelRealTimeCallback)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t accelerometerRegisterDeferredCallback(AccelerometerHandle_t,deferredInterruptCallback) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gaf3cb0741e503f98fba6b2cc6721b1b19" kindref="member">Accelerometer_regDeferredCallback(Accelerometer_HandlePtr_T , Accelerometer_InterruptChannel_T , accelDeferredTimeCallback)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t accelerometerUnregisterCallback(AccelerometerHandle_t ) </para></entry><entry thead="no"><para>Not Available </para></entry></row>
+</table>
+</para></sect2>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_XDK_GYRO_MODULE">
+<title>Gyroscope Module</title>
+<para>Summary of Changes for Gyroscope Module:<itemizedlist>
+<listitem><para>API: Function names changed to make them more uniform</para></listitem><listitem><para>API: Return types changed</para></listitem><listitem><para>API: Few function signatures changed</para></listitem><listitem><para>API: Input parameters type changed</para></listitem><listitem><para>API: <ref refid="group___g_y_r_o_s_c_o_p_e_1gae535c68b0ad78ba4facefb44cf0cb365" kindref="member">Gyroscope_deInit()</ref> added to power OFF the sensor when not in use</para></listitem><listitem><para>ENUMs: Names changed to make them more uniform</para></listitem><listitem><para>ENUMs: Element names in each of those are changed</para></listitem></itemizedlist>
+</para><para><table rows="3" cols="3"><row>
+<entry thead="yes"><para>Version Name </para></entry><entry thead="yes"><para>Module Interface </para></entry><entry thead="yes"><para>Module Interface Path  </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.3.0 </para></entry><entry thead="no"><para><ref refid="_gyroscope_8h" kindref="compound">gyroscope.h</ref> </para></entry><entry thead="no"><para>platform/device/sensors/GyroScope/include </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.5.0 &amp; above </para></entry><entry thead="no"><para><ref refid="_b_c_d_s___gyroscope_8h" kindref="compound">BCDS_Gyroscope.h</ref> </para></entry><entry thead="no"><para>Platform/Sensors/include </para></entry></row>
+</table>
+Table to capture the difference between version XDK-1.3.0 and XDK-1.5.0 &amp; above</para><para><table rows="13" cols="2"><row>
+<entry thead="yes"><para>XDK-1.3.0 API </para></entry><entry thead="yes"><para>XDK-1.5.0 &amp; above API  </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t gyroscopeInit(GyroscopeHandle_t ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___g_y_r_o_s_c_o_p_e_1gaa2458d131568a5310168493c8de4b008" kindref="member">Gyroscope_init(Gyroscope_HandlePtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t gyroscopeSetBandwidth(GyroscopeHandle_t , gyroscope_bandwidth_t ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___g_y_r_o_s_c_o_p_e_1ga8947182f14af1e1606d0442aa1d46fe0" kindref="member">Gyroscope_setBandwidth(Gyroscope_HandlePtr_T , Gyroscope_Bandwidth_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t gyroscopeGetBandwidth(GyroscopeHandle_t , gyroscope_bandwidth_tp ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___g_y_r_o_s_c_o_p_e_1ga04ffd09c3a4e659b70b556683d8d75a1" kindref="member">Gyroscope_getBandwidth(Gyroscope_HandlePtr_T , Gyroscope_BandwidthPtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t gyroscopeSetRange(GyroscopeHandle_t , gyroscope_range_t ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___g_y_r_o_s_c_o_p_e_1ga535fd310efa7ef77418e083c56af125b" kindref="member">Gyroscope_setRange(Gyroscope_HandlePtr_T , Gyroscope_Range_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t gyroscopeGetRange(GyroscopeHandle_t , gyroscope_range_tp ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___g_y_r_o_s_c_o_p_e_1ga47c812193cc91cfd76b46ebf70a6f389" kindref="member">Gyroscope_getRange(Gyroscope_HandlePtr_T , Gyroscope_RangePtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t gyroscopeSetSleepDuration(GyroscopeHandle_t , uint8_t ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___g_y_r_o_s_c_o_p_e_1ga2fda2f3e9d87e4c45beab3830eab5799" kindref="member">Gyroscope_setSleepDuration(Gyroscope_HandlePtr_T , Gyroscope_SleepDuration_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t gyroscopeSetAutoSleepDuration(GyroscopeHandle_t , uint8_t ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___g_y_r_o_s_c_o_p_e_1ga1cfe684ee693e24616fbe9a3d898f550" kindref="member">Gyroscope_setAutoSleepDuration(Gyroscope_HandlePtr_T , Gyroscope_AutoSleepDuration_T , Gyroscope_Bandwidth_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t gyroscopeSetMode(GyroscopeHandle_t , gyroscope_powermode_t ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___g_y_r_o_s_c_o_p_e_1ga639775cb56f0576b49c9153631cc969e" kindref="member">Gyroscope_setMode(Gyroscope_HandlePtr_T , Gyroscope_Powermode_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t gyroscopeGetMode(GyroscopeHandle_t , gyroscope_powermode_tp ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___g_y_r_o_s_c_o_p_e_1gaabe4b32dc48fd5cf62c265be7112dd07" kindref="member">Gyroscope_getMode(Gyroscope_HandlePtr_T , Gyroscope_PowermodePtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t gyroscopeReadXyzValue(GyroscopeHandle_t , gyro_xyzData_tp ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___g_y_r_o_s_c_o_p_e_1ga1af96bdf44f4c9b72af3a9c83c49d234" kindref="member">Gyroscope_readXyzValue(Gyroscope_HandlePtr_T , Gyroscope_XyzDataPtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t gyroscopeReadXyzDegreeValue(GyroscopeHandle_t , gyro_xyzData_tp ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___g_y_r_o_s_c_o_p_e_1ga2f39d95a90398b2998b26dba51665c7d" kindref="member">Gyroscope_readXyzDegreeValue(Gyroscope_HandlePtr_T , Gyroscope_XyzDataPtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>Not Available </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___g_y_r_o_s_c_o_p_e_1gae535c68b0ad78ba4facefb44cf0cb365" kindref="member">Gyroscope_deInit(Gyroscope_HandlePtr_T)</ref> </para></entry></row>
+</table>
+</para></sect2>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_XDK_MAG_MODULE">
+<title>Magnetometer Module</title>
+<para>Summary of Changes for Magnetometer Module:<itemizedlist>
+<listitem><para>API: Function names changed to make them more uniform</para></listitem><listitem><para>API: Return types changed</para></listitem><listitem><para>API: Few function signatures changed</para></listitem><listitem><para>API: Input parameters type changed</para></listitem><listitem><para>API: <ref refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1ga43cfc8f1215a003fe6176d8a1e45d4a3" kindref="member">Magnetometer_deInit()</ref> added to power OFF the sensor when not in use</para></listitem><listitem><para>ENUMs: Names changed to make them more uniform</para></listitem><listitem><para>ENUMs: Element names in each of those are changed</para></listitem></itemizedlist>
+</para><para><table rows="3" cols="3"><row>
+<entry thead="yes"><para>Version Name </para></entry><entry thead="yes"><para>Module Interface Name </para></entry><entry thead="yes"><para>Module Interface Path  </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.3.0 </para></entry><entry thead="no"><para><ref refid="_magnetometer_8h" kindref="compound">magnetometer.h</ref> </para></entry><entry thead="no"><para>platform/device/sensors/Magnetometer/include </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.5.0 &amp; above </para></entry><entry thead="no"><para><ref refid="_b_c_d_s___magnetometer_8h" kindref="compound">BCDS_Magnetometer.h</ref> </para></entry><entry thead="no"><para>Platform/Sensors/include </para></entry></row>
+</table>
+Table to capture the difference between version XDK-1.3.0 and XDK-1.5.0 &amp; above</para><para><table rows="11" cols="2"><row>
+<entry thead="yes"><para>XDK-1.3.0 API </para></entry><entry thead="yes"><para>XDK-1.5.0 &amp; above API  </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t magnetometerInit(MagnetometerHandle_t ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1gaf40245eb686e93e500e099a2a6b8cc96" kindref="member">Magnetometer_init(Magnetometer_HandlePtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t magnetometerGetDataRate(MagnetometerHandle_t , magnetometer_datarate_tp ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1gaef7d12d92efc37972cdc3c64dead649a" kindref="member">Magnetometer_getDataRate(Magnetometer_HandlePtr_T , Magnetometer_DataRatePtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t magnetometerGetPresetMode(MagnetometerHandle_t , magnetometer_presetmode_tp ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1ga34262b75df9cc64e4be0eefcfa34c435" kindref="member">Magnetometer_getPresetMode(Magnetometer_HandlePtr_T , Magnetometer_PresetModePtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t magnetometerSetDataRate(MagnetometerHandle_t , magnetometer_datarate_t ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1gaefdb2fe3bfe409cee62ed9027a06d9a8" kindref="member">Magnetometer_setDataRate(Magnetometer_HandlePtr_T , Magnetometer_DataRate_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t magnetometerSetPresetMode(MagnetometerHandle_t , magnetometer_presetmode_t ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1ga2282c34c9edd3218270de1da4291e91f" kindref="member">Magnetometer_setPresetMode(Magnetometer_HandlePtr_T , Magnetometer_PresetMode_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t magnetometerSetMode(MagnetometerHandle_t , magnetometer_powermode_t ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1ga814223a8dcfad143f9947d2377bb5bae" kindref="member">Magnetometer_setPowerMode(Magnetometer_HandlePtr_T , Magnetometer_PowerMode_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t magnetometerGetMode(MagnetometerHandle_t , magnetometer_powermode_tp ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1ga3ad1ff8cf577dd856fba8135b1a8d6bc" kindref="member">Magnetometer_getPowerMode(Magnetometer_HandlePtr_T , Magnetometer_PowerModePtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t magnetometerReadXyzLsbData(MagnetometerHandle_t , magnetometer_xyzData_tp ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1ga0cec30e7bfc8cb941272bf952358c1da" kindref="member">Magnetometer_readXyzLsbData(Magnetometer_HandlePtr_T , Magnetometer_XyzDataPtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t magnetometerReadXyzTeslaData(MagnetometerHandle_t , magnetometer_xyzData_tp ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1gacd41dcea2e551fea5ab4d225d17c6e0e" kindref="member">Magnetometer_readXyzTeslaData(Magnetometer_HandlePtr_T , Magnetometer_XyzDataPtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>Not Available </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1ga43cfc8f1215a003fe6176d8a1e45d4a3" kindref="member">Magnetometer_deInit(Magnetometer_HandlePtr_T)</ref> </para></entry></row>
+</table>
+</para></sect2>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_XDK_LIGHT_MODULE">
+<title>Lightsensor Module</title>
+<para>Summary of Changes for Lightsensor Module:<itemizedlist>
+<listitem><para>API: Function names changed to make them more uniform</para></listitem><listitem><para>API: Return types changed</para></listitem><listitem><para>API: Few function signatures changed</para></listitem><listitem><para>API: Input parameters type changed</para></listitem><listitem><para>API: <ref refid="group___l_i_g_h_t_s_e_n_s_o_r_1ga3f9f8c33a566b1b596abe7b4876292a7" kindref="member">LightSensor_deInit()</ref> added to power OFF the sensor when not in use</para></listitem><listitem><para>API: lightsensorUnregisterCallback() deprecated instead use <linebreak/>
+</para></listitem><listitem><para>API: <ref refid="group___l_i_g_h_t_s_e_n_s_o_r_1ga36eaa34f6790894c2512b349e974b102" kindref="member">LightSensor_disableInterrupt()</ref> method</para></listitem><listitem><para>ENUMs: Names changed to make them more uniform</para></listitem><listitem><para>ENUMs: Element names in each of those are changed</para></listitem></itemizedlist>
+</para><para><table rows="3" cols="3"><row>
+<entry thead="yes"><para>Version Name </para></entry><entry thead="yes"><para>Module Interface Name </para></entry><entry thead="yes"><para>Module Interface Path  </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.3.0 </para></entry><entry thead="no"><para>lightsensor.h </para></entry><entry thead="no"><para>platform/device/sensors/lightsensor/include </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.5.0 &amp; above </para></entry><entry thead="no"><para><ref refid="_b_c_d_s___light_sensor_8h" kindref="compound">BCDS_LightSensor.h</ref> </para></entry><entry thead="no"><para>Platform/Sensors/include </para></entry></row>
+</table>
+Table to capture the difference between version XDK-1.3.0 and XDK-1.5.0 &amp; above</para><para><table rows="15" cols="2"><row>
+<entry thead="yes"><para>XDK-1.3.0 API </para></entry><entry thead="yes"><para>XDK-1.5.0 &amp; above API  </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t lightsensorInit(lightsensorHandle_t ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___l_i_g_h_t_s_e_n_s_o_r_1ga8dfdab1da8964962072f8dc80670eed3" kindref="member">LightSensor_init(LightSensor_HandlePtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t lightsensorRegisterRealTimeCallback(lightsensorHandle_t , interruptCallback ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___l_i_g_h_t_s_e_n_s_o_r_1ga3f710e2ff25449b9fac6a0b3b818804d" kindref="member">LightSensor_registerRealTimeCallback(LightSensor_HandlePtr_T , interruptCallback)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t lightsensorRegisterDeferredCallback(lightsensorHandle_t ,deferredInterruptCallback) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___l_i_g_h_t_s_e_n_s_o_r_1ga210788a263cd6a7500cd28e0d6d79f93" kindref="member">LightSensor_registerDeferredCallback(LightSensor_HandlePtr_T , deferredInterruptCallback)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t lightsensorUnregisterCallback(lightsensorHandle_t ) </para></entry><entry thead="no"><para>Not Available </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t lightsensorConfigureThresholdInterrupt(lightsensorHandle_t , uint32_t , uint32_t , uint32_t )</para></entry><entry thead="no"><para>Retcode_T <ref refid="group___l_i_g_h_t_s_e_n_s_o_r_1ga4b97ce5f66085d87fd7a47e6536ffb8c" kindref="member">LightSensor_configureThresholdInterrupt(LightSensor_HandlePtr_T , uint32_t ,uint32_t , uint32_t)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t lightsensorGetInterruptStatus(lightsensorHandle_t , lightsensor_configInterrupt_tp ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___l_i_g_h_t_s_e_n_s_o_r_1ga26988871dc18cc236f0ea4327f4e5877" kindref="member">LightSensor_getInterruptStatus(LightSensor_HandlePtr_T , LightSensor_ConfigInterruptPtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t lightsensorReadRawData(lightsensorHandle_t , lightsensor_data_tp ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___l_i_g_h_t_s_e_n_s_o_r_1gacb720f60e7a9c7c9ec89cfc83f411fa7" kindref="member">LightSensor_readRawData(LightSensor_HandlePtr_T ,uint16_t *)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t lightsensorReadLuxData(lightsensorHandle_t , lightsensor_data_tp ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___l_i_g_h_t_s_e_n_s_o_r_1ga9dd4ba9d7d78711481682560904157e1" kindref="member">LightSensor_readLuxData(LightSensor_HandlePtr_T ,uint32_t *)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t lightsensorSetManualMode(lightsensorHandle_t ,lightsensor_configMode_t ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___l_i_g_h_t_s_e_n_s_o_r_1gabac6a8be79ef059f61992e0a75af3510" kindref="member">LightSensor_setManualMode(LightSensor_HandlePtr_T , LightSensor_ConfigMode_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t lightsensorSetContinuousMode(lightsensorHandle_t ,lightsensor_configMode_t ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___l_i_g_h_t_s_e_n_s_o_r_1gae1d9256af3559f86bc4f22483e875067" kindref="member">LightSensor_setContinuousMode(LightSensor_HandlePtr_T , LightSensor_ConfigMode_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t lightsensorSetIntegrationTime(lightsensorHandle_t ,lightsensor_integrationTime_t ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___l_i_g_h_t_s_e_n_s_o_r_1gab89dfabc33b9db7bc753d5d02b0eb7ce" kindref="member">LightSensor_setIntegrationTime(LightSensor_HandlePtr_T ,LightSensor_IntegrationTime_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>ensor_errorType_t lightsensorSetBrightness(lightsensorHandle_t ,lightsensor_configBrightness_t ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___l_i_g_h_t_s_e_n_s_o_r_1ga58b1505830f6f3b15855449c8e542864" kindref="member">LightSensor_setBrightness(LightSensor_HandlePtr_T ,LightSensor_ConfigBrightness_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>Not Available </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___l_i_g_h_t_s_e_n_s_o_r_1ga3f9f8c33a566b1b596abe7b4876292a7" kindref="member">LightSensor_deInit(LightSensor_HandlePtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>Not Available </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___l_i_g_h_t_s_e_n_s_o_r_1ga36eaa34f6790894c2512b349e974b102" kindref="member">LightSensor_disableInterrupt(LightSensor_HandlePtr_T)</ref> </para></entry></row>
+</table>
+</para></sect2>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_XDK_ENV_SENSOR_MODULE">
+<title>Environmental Sensor Module</title>
+<para>Summary of Changes for Environmental Sensor Module:<itemizedlist>
+<listitem><para>API: Function names changed to make them more uniform</para></listitem><listitem><para>API: Return types changed</para></listitem><listitem><para>API: Few function signatures changed</para></listitem><listitem><para>API: Input parameters type changed</para></listitem><listitem><para>API: <ref refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ga3bcc760a8a3052c6dc0ce2ca866e95d3" kindref="member">Environmental_deInit()</ref> added to power OFF the sensor when not in use</para></listitem><listitem><para>ENUMs: Names changed to make them more uniform</para></listitem><listitem><para>ENUMs: Element names in each of those are changed</para></listitem></itemizedlist>
+</para><para><table rows="3" cols="3"><row>
+<entry thead="yes"><para>Version Name </para></entry><entry thead="yes"><para>Module Interface Name </para></entry><entry thead="yes"><para>Module Interface Path  </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.3.0 </para></entry><entry thead="no"><para>environmentalSensor.h </para></entry><entry thead="no"><para>platform/device/sensors/Environmental/include </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.5.0 &amp; above </para></entry><entry thead="no"><para><ref refid="_b_c_d_s___environmental_8h" kindref="compound">BCDS_Environmental.h</ref> </para></entry><entry thead="no"><para>Platform/Sensors/include </para></entry></row>
+</table>
+Table to capture the difference between version XDK-1.3.0 and XDK-1.5.0 &amp; above</para><para><table rows="20" cols="2"><row>
+<entry thead="yes"><para>XDK-1.3.0 API </para></entry><entry thead="yes"><para>XDK-1.5.0 &amp; above API  </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t environmentalInit(EnvironmentalHandle_t ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ga9081d552aa95071cee5d1924c5cfa8aa" kindref="member">Environmental_init(Environmental_HandlePtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t environmentalSetPowerMode(EnvironmentalHandle_t ,environmental_powerModes_t ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1gab2f7d424ab25601ff61a961bd20d2076" kindref="member">Environmental_setPowerMode(Environmental_HandlePtr_T ,Environmental_PowerModes_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t environmentalGetPowerMode(EnvironmentalHandle_t ,environmental_powerModes_tp ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ga0e9ccfe4b09fbb04684377b36655ef1d" kindref="member">Environmental_getPowerMode(Environmental_HandlePtr_T ,Environmental_PowerModesPtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t environmentalChipID(EnvironmentalHandle_t , uint8_t *) </para></entry><entry thead="no"><para>Not Available </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t environmentalReadData(EnvironmentalHandle_t , environmental_data_tp ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ga30122a20296806248fe942f37f3ac42a" kindref="member">Environmental_readData(Environmental_HandlePtr_T ,Environmental_DataPtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t environmentalReadDataLSB(EnvironmentalHandle_t , environmental_lsbData_tp ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1gaa30f140197c482cecacb434f9934fdb4" kindref="member">Environmental_readDataLSB(Environmental_HandlePtr_T ,Environmental_LsbDataPtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t environmentalReadTemperatureLSB(EnvironmentalHandle_t , int32_t *) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ga40f4de19b86cd4dd54190d850909debe" kindref="member">Environmental_readTemperatureLSB(Environmental_HandlePtr_T ,int32_t *)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t environmentalReadPressureLSB(EnvironmentalHandle_t ,int32_t *) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ga8c4e04774311cb6369aacfd28e6eefd3" kindref="member">Environmental_readPressureLSB(Environmental_HandlePtr_T ,int32_t *)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t environmentalReadHumidityLSB(EnvironmentalHandle_t ,int32_t *) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1gaa134b7ebb4784e525de4a042f51265c5" kindref="member">Environmental_readHumidityLSB(Environmental_HandlePtr_T ,int32_t *)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t environmentalReadTemperature(EnvironmentalHandle_t ,int32_t *) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ga942b519c8b24df40042b0ef8ce9e0e23" kindref="member">Environmental_readTemperature(Environmental_HandlePtr_T ,int32_t *)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t environmentalReadPressure(EnvironmentalHandle_t ,uint32_t *) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1gaccc3e89c3dd3f3b14150c0643e3f2fb7" kindref="member">Environmental_readPressure(Environmental_HandlePtr_T ,uint32_t *)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t environmentalReadHumidity(EnvironmentalHandle_t , uint32_t *) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ga614e3797262d87a27766b13697c7f025" kindref="member">Environmental_readHumidity(Environmental_HandlePtr_T ,uint32_t *)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t environmentalSetStandbyDuration(EnvironmentalHandle_t , environmental_standbyTime_t ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1gab7a881570ce0c3b6dbb09908916c8886" kindref="member">Environmental_setStandbyDuration(Environmental_HandlePtr_T ,Environmental_StandbyTime_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t environmentalGetStandbyDuration(EnvironmentalHandle_t , environmental_standbyTime_tp ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1gae370b245b0220e8fcd3543e4c1030347" kindref="member">Environmental_getStandbyDuration(Environmental_HandlePtr_T ,Environmental_StandbyTimePtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t environmentalSetFilterCoefficient(EnvironmentalHandle_t , environmental_filterCoefficient_t ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1gac12d7c21055e45a3816faba7126ab899" kindref="member">Environmental_setFilterCoefficient(Environmental_HandlePtr_T , Environmental_FilterCoefficient_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t environmentalSetOverSamplingTemperature(EnvironmentalHandle_t , environmental_overSampling_t ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ga7dcd589e8f66d194ee33817cf6a07f5c" kindref="member">Environmental_setOverSamplingTemperature(Environmental_HandlePtr_T , Environmental_OverSampling_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t environmentalSetOverSamplingPressure(EnvironmentalHandle_t , environmental_overSampling_t ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1gad2daa7b91fbe03289f0e571453d83805" kindref="member">Environmental_setOverSamplingPressure(Environmental_HandlePtr_T , Environmental_OverSampling_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t environmentalSetOverSamplingHumidity(EnvironmentalHandle_t , environmental_overSampling_t ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ga3cb35c9dce9d1f619f8beae9fc566e91" kindref="member">Environmental_setOverSamplingHumidity(Environmental_HandlePtr_T , Environmental_OverSampling_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>Not Available </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ga3bcc760a8a3052c6dc0ce2ca866e95d3" kindref="member">Environmental_deInit(Environmental_HandlePtr_T)</ref> </para></entry></row>
+</table>
+</para></sect2>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_XDK_ToolBoxHumidity">
+<title>Sensor ToolBox Absolute Humidity</title>
+<para>Summary of Changes for Sensor ToolBox Absolute Humidity Module:<itemizedlist>
+<listitem><para>API: Function names changed to make them more uniform</para></listitem><listitem><para>API: Return types changed</para></listitem><listitem><para>API: Few function signatures changed</para></listitem><listitem><para>API: Input parameters type changed</para></listitem><listitem><para>ENUMs: Names changed to make them more uniform</para></listitem><listitem><para>ENUMs: Element names in each of those are changed</para></listitem></itemizedlist>
+</para><para><table rows="3" cols="3"><row>
+<entry thead="yes"><para>Version Name </para></entry><entry thead="yes"><para>Module Interface Name </para></entry><entry thead="yes"><para>Module Interface Path  </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.3.0 </para></entry><entry thead="no"><para>absoluteHumidity.h </para></entry><entry thead="no"><para>platform/SensorToolbox/include </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.5.0 &amp; above </para></entry><entry thead="no"><para><ref refid="_b_c_d_s___absolute_humidity_8h" kindref="compound">BCDS_AbsoluteHumidity.h</ref> </para></entry><entry thead="no"><para>Platform/SensorToolbox/include </para></entry></row>
+</table>
+Table to capture the difference between version XDK-1.3.0 and XDK-1.5.0 &amp; above</para><para><table rows="4" cols="2"><row>
+<entry thead="yes"><para>XDK-1.3.0 API </para></entry><entry thead="yes"><para>XDK-1.5.0 &amp; above API  </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t humidityInit(HumiditySensorHandle_t) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___a_b_s_o_l_u_t_e_h_u_m_i_d_i_t_y_1gac8e12516af9413804490d202ec432567" kindref="member">AbsoluteHumidity_init(AbsoluteHumidity_HandlePtr_T)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t humidityAbsoluteValue(HumiditySensorHandle_t ,absHumidity_tp ) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___a_b_s_o_l_u_t_e_h_u_m_i_d_i_t_y_1ga38795ce3b00eb7d6f4d27bb0b14bbf14" kindref="member">AbsoluteHumidity_readValue(AbsoluteHumidity_HandlePtr_T ,AbsoluteHumidity_ValuePtr_T )</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t humidityDeinit(void); </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___a_b_s_o_l_u_t_e_h_u_m_i_d_i_t_y_1gac269a668a24b7811b6407171cd8da437" kindref="member">AbsoluteHumidity_deInit(void)</ref> </para></entry></row>
+</table>
+</para></sect2>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_XDK_ToolBoxStepCounter">
+<title>Sensor ToolBox Step Counter</title>
+<para>Summary of Changes for Sensor ToolBox Step Counter Module:<itemizedlist>
+<listitem><para>API: Function names changed to make them more uniform</para></listitem><listitem><para>API: Return types changed</para></listitem><listitem><para>API: Few function signatures changed</para></listitem><listitem><para>API: Input parameters type changed</para></listitem><listitem><para>ENUMs: Names changed to make them more uniform</para></listitem><listitem><para>ENUMs: Element names in each of those are changed</para></listitem></itemizedlist>
+</para><para><table rows="3" cols="3"><row>
+<entry thead="yes"><para>Version Name </para></entry><entry thead="yes"><para>Module Interface Name </para></entry><entry thead="yes"><para>Module Interface Path  </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.3.0 </para></entry><entry thead="no"><para>stepCounter.h </para></entry><entry thead="no"><para>platform/SensorToolbox/include </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.5.0 &amp; above </para></entry><entry thead="no"><para><ref refid="_b_c_d_s___step_counter_8h" kindref="compound">BCDS_StepCounter.h</ref> </para></entry><entry thead="no"><para>Platform/SensorToolbox/include </para></entry></row>
+</table>
+Table to capture the difference between version XDK-1.3.0 and XDK-1.5.0 &amp; above</para><para><table rows="6" cols="2"><row>
+<entry thead="yes"><para>XDK-1.3.0 API </para></entry><entry thead="yes"><para>XDK-1.5.0 &amp; above API  </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t stepCounterInit(StepCounterHandle_t handle) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___s_t_e_p_c_o_u_n_t_e_r_1ga6b54fe0852fa0cd15834e41f389e944a" kindref="member">StepCounter_init(StepCounter_HandlePtr_T handle)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t stepCounterSetMode(StepCounterHandle_t handle,stepCounterMode_t stepCounterMode) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___s_t_e_p_c_o_u_n_t_e_r_1ga39dc1e529067af918512aedc48589cbd" kindref="member">StepCounter_setMode(StepCounter_HandlePtr_T handle, StepCounter_Mode_T stepCounterMode)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t stepCounterClear(StepCounterHandle_t handle) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___s_t_e_p_c_o_u_n_t_e_r_1ga7948e37ade2bcc93084ebd02fcc9018b" kindref="member">StepCounter_clear(StepCounter_HandlePtr_T handle)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t stepCounterRead(StepCounterHandle_t handle,int16_t * stepCounterValue) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___s_t_e_p_c_o_u_n_t_e_r_1gabffda1336ddccef55682e94d233abd9d" kindref="member">StepCounter_read(StepCounter_HandlePtr_T handle, int16_t * stepCounterValue)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t stepCounterDeinit(StepCounterHandle_t handle) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___s_t_e_p_c_o_u_n_t_e_r_1ga50a8130e1c5f0d0c19cdd6fd80e4aaa0" kindref="member">StepCounter_deInit(StepCounter_HandlePtr_T handle)</ref> </para></entry></row>
+</table>
+</para></sect2>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_XDK_ToolBoxFingerPrint">
+<title>Sensor ToolBox Finger Print</title>
+<para>Summary of Changes for Sensor ToolBox Finger Print Module:<itemizedlist>
+<listitem><para>API: Function names changed to make them more uniform</para></listitem><listitem><para>API: Return types changed</para></listitem><listitem><para>API: Few function signatures changed</para></listitem><listitem><para>API: Input parameters type changed</para></listitem><listitem><para>ENUMs: Names changed to make them more uniform</para></listitem><listitem><para>ENUMs: Element names in each of those are changed</para></listitem></itemizedlist>
+</para><para><table rows="3" cols="3"><row>
+<entry thead="yes"><para>Version Name </para></entry><entry thead="yes"><para>Module Interface Name </para></entry><entry thead="yes"><para>Module Interface Path  </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.3.0 </para></entry><entry thead="no"><para>fingerPrint.h </para></entry><entry thead="no"><para>platform/SensorToolbox/include </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.5.0 &amp; above </para></entry><entry thead="no"><para><ref refid="_b_c_d_s___finger_print_8h" kindref="compound">BCDS_FingerPrint.h</ref> </para></entry><entry thead="no"><para>Platform/SensorToolbox/include </para></entry></row>
+</table>
+Table to capture the difference between version XDK-1.3.0 and XDK-1.5.0 &amp; above</para><para><table rows="7" cols="2"><row>
+<entry thead="yes"><para>XDK-1.3.0 API </para></entry><entry thead="yes"><para>XDK-1.5.0 &amp; above API  </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t fingerprintInit(FingerprintHandle_t handle) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___f_i_n_g_e_r_p_r_i_n_t_1ga5900eeb91399c113d0360658aed5f5a3" kindref="member">FingerPrint_init(FingerPrint_HandlePtr_T handle)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t fingerprintSetValue(fingerprint_number_t fingerPrintNum) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___f_i_n_g_e_r_p_r_i_n_t_1ga448b1ff792de3652bebc7c64668bc6f4" kindref="member">FingerPrint_setValue(FingerPrint_Number_T fingerPrintNum)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t fingerprintResetValue(fingerprint_number_t fingerPrintNum) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___f_i_n_g_e_r_p_r_i_n_t_1ga43f85d7858d6f987d9ac8bbcce9a0b57" kindref="member">FingerPrint_resetValue(FingerPrint_Number_T fingerPrintNum)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t fingerprintCheckStoredValue(fingerprint_number_t fingerPrintNum,fingerprint_storageStatus_tp fingerPrintValueStatus) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___f_i_n_g_e_r_p_r_i_n_t_1gad847b03d72da5028851dd1ee12bb4fcd" kindref="member">FingerPrint_checkStoredValue(FingerPrint_Number_T fingerPrintNum, FingerPrint_StorageStatusPtr_T fingerPrintValueStatus)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t fingerprintMonitoring(fingerprint_result_Data_tp fingerPrintResult) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___f_i_n_g_e_r_p_r_i_n_t_1gab350e1b381c837b2c6465929ed2d8458" kindref="member">FingerPrint_monitoring(FingerPrint_Monitor_DataPtr_T fingerPrintResult)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t fingerprintDeinit(void) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___f_i_n_g_e_r_p_r_i_n_t_1gaacdb81f1b984d110c2f9dfc97c57eed5" kindref="member">FingerPrint_deInit(void)</ref> </para></entry></row>
+</table>
+</para></sect2>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_XDK_ToolBoxOrientation">
+<title>Sensor ToolBox Orientation</title>
+<para>Summary of Changes for Sensor ToolBox Orientation Module:<itemizedlist>
+<listitem><para>API: Function names changed to make them more uniform</para></listitem><listitem><para>API: Return types changed</para></listitem><listitem><para>API: Few function signatures changed</para></listitem><listitem><para>API: Input parameters type changed</para></listitem><listitem><para>ENUMs: Names changed to make them more uniform</para></listitem><listitem><para>ENUMs: Element names in each of those are changed</para></listitem></itemizedlist>
+</para><para><table rows="3" cols="3"><row>
+<entry thead="yes"><para>Version Name </para></entry><entry thead="yes"><para>Module Interface Name </para></entry><entry thead="yes"><para>Module Interface Path  </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.3.0 </para></entry><entry thead="no"><para>orientation.h </para></entry><entry thead="no"><para>platform/SensorToolbox/include </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.5.0 &amp; above </para></entry><entry thead="no"><para><ref refid="_b_c_d_s___orientation_8h" kindref="compound">BCDS_Orientation.h</ref> </para></entry><entry thead="no"><para>Platform/SensorToolbox/include </para></entry></row>
+</table>
+Table to capture the difference between version XDK-1.3.0 and XDK-1.5.0 &amp; above</para><para><table rows="6" cols="2"><row>
+<entry thead="yes"><para>XDK-1.3.0 API </para></entry><entry thead="yes"><para>XDK-1.5.0 &amp; above API  </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t orientationInit(OrientationHandle_t handle) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___o_r_i_e_n_t_a_t_i_o_n_1ga7d37f740ae578c031eebffd155d19e7c" kindref="member">Orientation_init(Orientation_HandlePtr_T handle)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t orientationReadQuaternionValue(orientation_quaternionData_tp quaternionValue) </para></entry><entry thead="no"><para>Retcode_T Orientation_readQuaternionValue(Orientation_QuaternionDataPtr_T quaternionValue) </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t orientationReadEulerValueInRadian(orientation_eulerData_tp eulerValueInRadian) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___o_r_i_e_n_t_a_t_i_o_n_1gacde31626f0dac27b56b6c02f4b10b77e" kindref="member">Orientation_readEulerRadianVal(Orientation_EulerDataPtr_T eulerValueInRadian)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t orientationReadEulerValueInDegree(orientation_eulerData_tp eulerValueInDegree) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___o_r_i_e_n_t_a_t_i_o_n_1ga206b22a8982bac2f42fde41cde9647fc" kindref="member">Orientation_readEulerDegreeVal(Orientation_EulerDataPtr_T eulerValueInDegree)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t orientationDeinit(void) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___o_r_i_e_n_t_a_t_i_o_n_1gac3f3da6d3eaa4f75fdf7ffc48cff190b" kindref="member">Orientation_deInit(void)</ref> </para></entry></row>
+</table>
+</para></sect2>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_XDK_ToolBoxCalibratedMag">
+<title>Sensor ToolBox Calibrated Magnetometer</title>
+<para>Summary of Changes for Sensor ToolBox Calibrated Magnetometer Module:<itemizedlist>
+<listitem><para>API: Function names changed to make them more uniform</para></listitem><listitem><para>API: Return types changed</para></listitem><listitem><para>API: Few function signatures changed</para></listitem><listitem><para>API: Input parameters type changed</para></listitem><listitem><para>ENUMs: Names changed to make them more uniform</para></listitem><listitem><para>ENUMs: Element names in each of those are changed</para></listitem></itemizedlist>
+</para><para><table rows="3" cols="3"><row>
+<entry thead="yes"><para>Version Name </para></entry><entry thead="yes"><para>Module Interface Name </para></entry><entry thead="yes"><para>Module Interface Path  </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.3.0 </para></entry><entry thead="no"><para>calibratedMagnetometer.h </para></entry><entry thead="no"><para>platform/SensorToolbox/include </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.5.0 &amp; above </para></entry><entry thead="no"><para><ref refid="_b_c_d_s___calibrated_mag_8h" kindref="compound">BCDS_CalibratedMag.h</ref> </para></entry><entry thead="no"><para>Platform/SensorToolbox/include </para></entry></row>
+</table>
+Table to capture the difference between version XDK-1.3.0 and XDK-1.5.0 &amp; above</para><para><table rows="7" cols="2"><row>
+<entry thead="yes"><para>XDK-1.3.0 API </para></entry><entry thead="yes"><para>XDK-1.5.0 &amp; above API  </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t calibratedMagnetometerInit(CalibratedMagnetometerHandle_t handle) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___c_a_l_i_b_r_a_t_e_d_m_a_g_n_e_t_o_m_e_t_e_r_1gac56ec357ac10948401e8fc90256855e4" kindref="member">CalibratedMag_init(CalibratedMag_HandlePtr_T handle)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t calibratedMagnetometerReadXyzLsbValue(calibratedMagnetometer_xyzLsbData_tp calibMagData) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___c_a_l_i_b_r_a_t_e_d_m_a_g_n_e_t_o_m_e_t_e_r_1gad36307daf96af48a1271b115a2d7660b" kindref="member">CalibratedMag_readXyzLsbVal(CalibratedMag_XyzLsbDataPtr_T calibMagData)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t calibratedMagnetometerReadXyzMicroTeslaValue(calibratedMagnetometer_xyzMicroTeslaData_tp calibMagData) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___c_a_l_i_b_r_a_t_e_d_m_a_g_n_e_t_o_m_e_t_e_r_1gae267bc08f07170ff5eb561193e31ca7e" kindref="member">CalibratedMag_readMicroTeslaVal(CalibMag_XyzMicroTeslaDataPtr_T calibMagData)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t calibratedMagnetometerReadXyzGaussValue(calibratedMagnetometer_xyzGaussData_tp calibMagData) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___c_a_l_i_b_r_a_t_e_d_m_a_g_n_e_t_o_m_e_t_e_r_1gaaff0574c37ef7db267b909028a3298c5" kindref="member">CalibratedMag_readXyzGaussVal(CalibratedMag_XyzGaussDataPtr_T calibMagData)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t calibratedMagnetometerGetCalibrationStatus(calibratedMagnetometer_calibStatus_tp calibMagStatus) </para></entry><entry thead="no"><para>Retcode_T CalibratedMag_getStatus(CalibratedMag_CalibStatusPtr_T calibMagStatus) </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t calibratedMagnetometerDeinit(void) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___c_a_l_i_b_r_a_t_e_d_m_a_g_n_e_t_o_m_e_t_e_r_1ga5339f9ba53f763785f5ba9b2f47bedfe" kindref="member">CalibratedMag_deInit(void)</ref> </para></entry></row>
+</table>
+</para></sect2>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_XDK_ToolBoxCalibratedGyro">
+<title>Sensor ToolBox Calibrated Gyroscope</title>
+<para>Summary of Changes for Sensor ToolBox Calibrated Gyroscope Module:<itemizedlist>
+<listitem><para>API: Function names changed to make them more uniform</para></listitem><listitem><para>API: Return types changed</para></listitem><listitem><para>API: Few function signatures changed</para></listitem><listitem><para>API: Input parameters type changed</para></listitem><listitem><para>ENUMs: Names changed to make them more uniform</para></listitem><listitem><para>ENUMs: Element names in each of those are changed</para></listitem></itemizedlist>
+</para><para><table rows="3" cols="3"><row>
+<entry thead="yes"><para>Version Name </para></entry><entry thead="yes"><para>Module Interface Name </para></entry><entry thead="yes"><para>Module Interface Path  </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.3.0 </para></entry><entry thead="no"><para>calibratedGyroscope.h </para></entry><entry thead="no"><para>platform/SensorToolbox/include </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.5.0 &amp; above </para></entry><entry thead="no"><para><ref refid="_b_c_d_s___calibrated_gyro_8h" kindref="compound">BCDS_CalibratedGyro.h</ref> </para></entry><entry thead="no"><para>Platform/SensorToolbox/include </para></entry></row>
+</table>
+Table to capture the difference between version XDK-1.3.0 and XDK-1.5.0 &amp; above</para><para><table rows="7" cols="2"><row>
+<entry thead="yes"><para>XDK-1.3.0 API </para></entry><entry thead="yes"><para>XDK-1.5.0 &amp; above API  </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t calibratedGyroscopeInit(CalibratedGyroscopeHandle_t handle) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___c_a_l_i_b_r_a_t_e_d_g_y_r_o_s_c_o_p_e_1ga158664b2ab7ea2c7f1d9046ba2ec2a8d" kindref="member">CalibratedGyro_init(CalibratedGyro_HandlePtr_T handle)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t calibratedGyroscopeReadXyzLsbValue(calibratedGyroscope_xyzLsbData_tp calibGyroData) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___c_a_l_i_b_r_a_t_e_d_g_y_r_o_s_c_o_p_e_1gae9ee8cf1ec178df21b71bf1d458a9968" kindref="member">CalibratedGyro_readXyzLsbValue(CalibratedGyro_XyzLsbDataPtr_T calibGyroData)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t calibratedGyroscopeReadXyzRpsValue(calibratedGyroscope_xyzRpsData_tp calibGyroData) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___c_a_l_i_b_r_a_t_e_d_g_y_r_o_s_c_o_p_e_1ga97a282df724a5f42ca2c4bd0ae23d90d" kindref="member">CalibratedGyro_readXyzRpsValue(CalibratedGyro_XyzRpsDataPtr_T calibGyroData)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t calibratedGyroscopeReadXyzDpsValue(calibratedGyroscope_xyzDpsData_tp calibGyroData) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___c_a_l_i_b_r_a_t_e_d_g_y_r_o_s_c_o_p_e_1gab0c09c310a39b1617356c8592743f709" kindref="member">CalibratedGyro_readXyzDpsValue(CalibratedGyro_XyzDpsDataPtr_T calibGyroData)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t calibratedGyroscopeGetCalibrationStatus(calibratedGyroscope_calibStatus_tp calibGyroStatus) </para></entry><entry thead="no"><para>Retcode_T CalibratedGyro_getStatus(CalibratedGyro_CalibStatusPtr_T calibGyroStatus) </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t calibratedGyroscopeDeinit(void) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___c_a_l_i_b_r_a_t_e_d_g_y_r_o_s_c_o_p_e_1gadf5ebceca7375436b3abf551b97538ee" kindref="member">CalibratedGyro_deInit(void)</ref> </para></entry></row>
+</table>
+</para></sect2>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_XDK_ToolBoxCalibratedAccel">
+<title>Sensor ToolBox Calibrated Accelerometer</title>
+<para>Summary of Changes for Sensor ToolBox Calibrated Accelerometer Module:<itemizedlist>
+<listitem><para>API: Function names changed to make them more uniform</para></listitem><listitem><para>API: Return types changed</para></listitem><listitem><para>API: Few function signatures changed</para></listitem><listitem><para>API: Input parameters type changed</para></listitem><listitem><para>ENUMs: Names changed to make them more uniform</para></listitem><listitem><para>ENUMs: Element names in each of those are changed</para></listitem></itemizedlist>
+</para><para><table rows="3" cols="3"><row>
+<entry thead="yes"><para>Version Name </para></entry><entry thead="yes"><para>Module Interface Name </para></entry><entry thead="yes"><para>Module Interface Path  </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.3.0 </para></entry><entry thead="no"><para>calibratedAccelerometer.h </para></entry><entry thead="no"><para>platform/SensorToolbox/include </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.5.0 &amp; above</para></entry><entry thead="no"><para><ref refid="_b_c_d_s___calibrated_accel_8h" kindref="compound">BCDS_CalibratedAccel.h</ref> </para></entry><entry thead="no"><para>Platform/SensorToolbox/include </para></entry></row>
+</table>
+Table to capture the difference between version XDK-1.3.0 and XDK-1.5.0 &amp; above</para><para><table rows="7" cols="2"><row>
+<entry thead="yes"><para>XDK-1.3.0 API </para></entry><entry thead="yes"><para>XDK-1.5.0 &amp; above API  </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t calibratedAccelerometerInit(CalibratedAccelerometerHandle_t handle) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___c_a_l_i_b_r_a_t_e_d_a_c_c_e_l_e_r_o_m_e_t_e_r_1gaf255b79fea95a66d253039fcbd6d0bac" kindref="member">CalibratedAccel_init(CalibratedAccel_HandlePtr_T handle)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t calibratedAccelerometerReadXyzLsbValue(calibratedAccelerometer_xyzLsbData_tp calibAccelData) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___c_a_l_i_b_r_a_t_e_d_a_c_c_e_l_e_r_o_m_e_t_e_r_1ga6468cbab509993b8e770dd1672f24dfd" kindref="member">CalibratedAccel_readXyzLsbValue(CalibratedAccel_XyzLsbDataPtr_T calibAccelData)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t calibratedAccelerometerReadXyzMps2Value(calibratedAccelerometer_xyzMps2Data_tp calibAccelData) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___c_a_l_i_b_r_a_t_e_d_a_c_c_e_l_e_r_o_m_e_t_e_r_1ga4ba1739968ef662531bc0514ffd01b68" kindref="member">CalibratedAccel_readXyzMps2Value(CalibratedAccel_XyzMps2DataPtr_T calibAccelData)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t calibratedAccelerometerReadXyzGValue(calibratedAccelerometer_xyzGData_tp calibAccelData) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___c_a_l_i_b_r_a_t_e_d_a_c_c_e_l_e_r_o_m_e_t_e_r_1ga99bbcf3297f8e793a6b74112f3974e40" kindref="member">CalibratedAccel_readXyzGValue(CalibratedAccel_XyzGDataPtr_T calibAccelData)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t calibratedAccelerometerGetCalibrationStatus(calibratedAccelerometer_calibStatus_tp calibAccelStatus) </para></entry><entry thead="no"><para>Retcode_T CalibratedAccel_getStatus(CalibratedAccel_StatusPtr_T calibAccelStatus) </para></entry></row>
+<row>
+<entry thead="no"><para>sensor_errorType_t calibratedAccelerometerDeinit(void) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___c_a_l_i_b_r_a_t_e_d_a_c_c_e_l_e_r_o_m_e_t_e_r_1gaf797557556f3a1ca8a9057b7c3659866" kindref="member">CalibratedAccel_deInit(void)</ref> </para></entry></row>
+</table>
+</para></sect2>
+</sect1>
+<sect1 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_DEPRICATED_LIST">
+<title>Deprecated,Renamed,moved packages/file list between the version XDK-1.3.0,XDK-1.5.0,XDK-1.5.2 &amp; above</title>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_Deprecated">
+<title>Deprecated/New platform Package list</title>
+<para><table rows="7" cols="6"><row>
+<entry thead="yes"><para>Description </para></entry><entry thead="yes"><para>XDK-1.3.0 </para></entry><entry thead="yes"><para>XDK-1.5.0 </para></entry><entry thead="yes"><para>XDK-1.5.2 </para></entry><entry thead="yes"><para>XDK-1.8.0 &amp; above </para></entry><entry thead="yes"><para>Comments  </para></entry></row>
+<row>
+<entry thead="no"><para>Platform/BST </para></entry><entry thead="no"><para>Not Deprecated </para></entry><entry thead="no"><para>Deprecated </para></entry><entry thead="no"><para>Deprecated </para></entry><entry thead="no"><para>Deprecated </para></entry><entry thead="no"><para>Platform/SensorUtils does this function now </para></entry></row>
+<row>
+<entry thead="no"><para>Platform/OS </para></entry><entry thead="no"><para>Not Deprecated </para></entry><entry thead="no"><para>Not Deprecated </para></entry><entry thead="no"><para>Deprecated </para></entry><entry thead="no"><para>Deprecated </para></entry><entry thead="no"><para>Direct usage of Free RTOS Library API recommended </para></entry></row>
+<row>
+<entry thead="no"><para>Platform/Power </para></entry><entry thead="no"><para>Not present </para></entry><entry thead="no"><para>Not present </para></entry><entry thead="no"><para>Newly Added </para></entry><entry thead="no"><para>Present </para></entry><entry thead="no"><para>Implemented FreeRTOS Sleep Management </para></entry></row>
+<row>
+<entry thead="no"><para>Platform/Utils/source/Userpage </para></entry><entry thead="no"><para>Not Present </para></entry><entry thead="no"><para>Not Present </para></entry><entry thead="no"><para>Present </para></entry><entry thead="no"><para>Deprecated </para></entry><entry thead="no"><para>Userpage has been deprecated from the Utils Package </para></entry></row>
+<row>
+<entry thead="no"><para>Platform/MiscDrivers/Source/NVM </para></entry><entry thead="no"><para>Not Present </para></entry><entry thead="no"><para>Not Present </para></entry><entry thead="no"><para>Not Present </para></entry><entry thead="no"><para>Newly Added </para></entry><entry thead="no"><para>NVM has been newly implemented instead of userpage </para></entry></row>
+<row>
+<entry thead="no"><para>Platform/Utils/URU </para></entry><entry thead="no"><para>Not Present </para></entry><entry thead="no"><para>Not Present </para></entry><entry thead="no"><para>Present </para></entry><entry thead="no"><para>Removed </para></entry><entry thead="no"><para>Moved to workbench under the folder &quot;SDK\xdk110\Common\source&quot; </para></entry></row>
+</table>
+</para></sect2>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_Deprecated_moved_Renamed">
+<title>Renamed/Moved Platform Package List</title>
+<para><table rows="3" cols="3"><row>
+<entry thead="yes"><para>Description </para></entry><entry thead="yes"><para>XDK-1.3.0 </para></entry><entry thead="yes"><para>XDK-1.5.0 &amp; above  </para></entry></row>
+<row>
+<entry thead="no"><para>Platform/WIFI </para></entry><entry thead="no"><para>Not Renamed </para></entry><entry thead="no"><para>Renamed as <bold>Platform/Wlan</bold> </para></entry></row>
+<row>
+<entry thead="no"><para>Platform/SDcard </para></entry><entry thead="no"><para>Not Moved </para></entry><entry thead="no"><para>Moved under <bold>Platform/MiscDrivers</bold> </para></entry></row>
+</table>
+</para></sect2>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_Deprecated_filelist">
+<title>Deprecated file list</title>
+<para><table rows="6" cols="3"><row>
+<entry thead="yes"><para>Description </para></entry><entry thead="yes"><para>XDK-1.3.0 </para></entry><entry thead="yes"><para>XDK-1.5.0 &amp; above  </para></entry></row>
+<row>
+<entry thead="no"><para>Interface header for the sensorsSupport file </para></entry><entry thead="no"><para>sensorsSupport.h </para></entry><entry thead="no"><para>Deprecated </para></entry></row>
+<row>
+<entry thead="no"><para>Servalstack Integrator Module config file </para></entry><entry thead="no"><para>SVI_servalInterface_ph.h </para></entry><entry thead="no"><para>Deprecated </para></entry></row>
+<row>
+<entry thead="no"><para>RTOS sleep cofiguration file </para></entry><entry thead="no"><para>OS_operatingSystem_ph.h </para></entry><entry thead="no"><para>Deprecated </para></entry></row>
+<row>
+<entry thead="no"><para>RTOS Abstraction header file </para></entry><entry thead="no"><para>OS_operatingSystem_ih.h </para></entry><entry thead="no"><para>Deprecated </para></entry></row>
+<row>
+<entry thead="no"><para>RTOS sleep management header file </para></entry><entry thead="no"><para>OS_SleepMgt_ih.h </para></entry><entry thead="no"><para>Deprecated </para></entry></row>
+</table>
+</para></sect2>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_fileNameChangelist">
+<title>File name change list</title>
+<para><table rows="11" cols="3"><row>
+<entry thead="yes"><para>Description </para></entry><entry thead="yes"><para>XDK-1.3.0 </para></entry><entry thead="yes"><para>XDK-1.5.0 &amp; above  </para></entry></row>
+<row>
+<entry thead="no"><para>XDK device handles header file </para></entry><entry thead="no"><para>xdk_board.h </para></entry><entry thead="no"><para>XdkBoardHandle.h </para></entry></row>
+<row>
+<entry thead="no"><para>XDK device handles source file </para></entry><entry thead="no"><para>xdk_board.c </para></entry><entry thead="no"><para>BoardHandle.c </para></entry></row>
+<row>
+<entry thead="no"><para>XDK custom startup source file </para></entry><entry thead="no"><para>CSU_chipStartUp_cc.c </para></entry><entry thead="no"><para>BoardInitialization.c </para></entry></row>
+<row>
+<entry thead="no"><para>XDK custom startup header file </para></entry><entry thead="no"><para>CSU_chipStartUp_ih.h </para></entry><entry thead="no"><para>XdkBoardInitialization.h </para></entry></row>
+<row>
+<entry thead="no"><para>XDK gpio configuration source file </para></entry><entry thead="no"><para>PDC_pinDefaultConfig_ih.h </para></entry><entry thead="no"><para>XdkGpioConfig.h </para></entry></row>
+<row>
+<entry thead="no"><para>XDK sensor handles header file </para></entry><entry thead="no"><para>xdk_sensors.h </para></entry><entry thead="no"><para><ref refid="_xdk_sensor_handle_8h" kindref="compound">XdkSensorHandle.h</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>XDK system startup header file </para></entry><entry thead="no"><para>SSU_systemStartUp_ch.h </para></entry><entry thead="no"><para><ref refid="_xdk_system_startup_8h" kindref="compound">XdkSystemStartup.h</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>XDK sensor handles source file </para></entry><entry thead="no"><para>xdk_sensors.c </para></entry><entry thead="no"><para><ref refid="_sensor_handle_8c" kindref="compound">SensorHandle.c</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>XDK system startup source file </para></entry><entry thead="no"><para>SSU_systemStartUp_cc.c </para></entry><entry thead="no"><para><ref refid="_system_startup_8c" kindref="compound">SystemStartup.c</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>XDK gpio configuration header file </para></entry><entry thead="no"><para>PDC_pinDefaultConfig_cc.c </para></entry><entry thead="no"><para>GpioConfig.c </para></entry></row>
+</table>
+</para></sect2>
+</sect1>
+<sect1 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_FREERTOS_API_USAGE_GUIDE">
+<title>Usage guide explaining how to use FreeRTOS API instead of OS abstraction API&apos;s</title>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_FreeRtos_API_usage_guide">
+<title>How to use FreeRTOS API instead of using Deprecated OS abstraction API&apos;s</title>
+<para><table rows="6" cols="4"><row>
+<entry thead="yes"><para>Description </para></entry><entry thead="yes"><para>XDK-1.3.0/XDK-1.5.0 </para></entry><entry thead="yes"><para>XDK-1.5.2 &amp; above </para></entry><entry thead="yes"><para>Remarks  </para></entry></row>
+<row>
+<entry thead="no"><para>RTOS Timer Creation </para></entry><entry thead="no"><para>OS_timerCreate((const int8_t *) &quot;Timername&quot;, 2 , 1, NULL, AppHandler) </para></entry><entry thead="no"><para>xTimerCreate((const char * const ) &quot;Timername&quot;, Ticks, 1, NULL, AppHandler) </para></entry><entry thead="no"><para>In XDK-1.3.0 the RTOS timer ticks is converted as part of abstraction </para></entry></row>
+<row>
+<entry thead="no"><para>Return type of Timer create </para></entry><entry thead="no"><para>OS_timerHandle_tp </para></entry><entry thead="no"><para>xTimerHandle </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Pend using timer </para></entry><entry thead="no"><para>OS_timerPendFunctionCallFromISR(appDeferredISRCallback, NULL, UINT32_C(0)) </para></entry><entry thead="no"><para>xTimerPendFunctionCallFromISR(appDeferredISRCallback, NULL, UINT8_C(0), &amp;xHigherPriorityTaskWoken) </para></entry><entry thead="no"><para>In XDK-1.3.0 the task yeidl from ISR is done as part of abstraction </para></entry></row>
+<row>
+<entry thead="no"><para>Timer Start </para></entry><entry thead="no"><para>OS_timerStart(printTimerHandle,3) </para></entry><entry thead="no"><para>xTimerStart(printTimerHandle, 3/portTICK_RATE_MS) </para></entry><entry thead="no"><para>In XDK-1.3.0 the RTOS timer ticks is converted as part of abstraction </para></entry></row>
+<row>
+<entry thead="no"><para>Timer Stop </para></entry><entry thead="no"><para>OS_timerStop(printTimerHandle, 3) </para></entry><entry thead="no"><para>xTimerStop(printTimerHandle, 3/portTICK_RATE_MS) </para></entry><entry thead="no"><para>In XDK-1.3.0 the RTOS timer ticks is converted as part of abstraction </para></entry></row>
+</table>
+When timer ticks need to be specified as input to FreeRtos API then it has to be explicitly converted as shown below <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>Ticks<sp/>=<sp/>2;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(Ticks<sp/>!=<sp/>UINT32_MAX)<sp/>/*<sp/>Validated<sp/>for<sp/>portMAX_DELAY<sp/>to<sp/>assist<sp/>the<sp/>task<sp/>to<sp/>wait<sp/>Infinitely<sp/>(without<sp/>timing<sp/>out)<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Ticks<sp/>/=<sp/>portTICK_RATE_MS;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(UINT32_C(0)<sp/>==<sp/>Ticks)<sp/>/*<sp/>ticks<sp/>cannot<sp/>be<sp/>0<sp/>in<sp/>FreeRTOS<sp/>timer.<sp/>So<sp/>ticks<sp/>is<sp/>assigned<sp/>to<sp/>1<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Ticks<sp/>=<sp/>UINT32_C(1);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">xTimerStop(printTimerHandle,<sp/>Ticks);</highlight></codeline>
+</programlisting></para><para>When using the FreeRTOS API to defer from ISR using pend timer refer the example for this case as mentioned below <programlisting><codeline><highlight class="normal">portBASE_TYPE<sp/>xHigherPriorityTaskWoken<sp/>=<sp/>pdFALSE;</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>(xTimerPendFunctionCallFromISR(appDeferredISRCallback,<sp/>NULL,<sp/>UINT8_C(0),<sp/>&amp;xHigherPriorityTaskWoken)<sp/>==<sp/>pdPASS)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>returnValue<sp/>=<sp/>INT32_C(0);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>portYIELD_FROM_ISR(xHigherPriorityTaskWoken);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">else</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Retcode_raiseError(returnValue);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para><table rows="6" cols="4"><row>
+<entry thead="yes"><para>Description </para></entry><entry thead="yes"><para>XDK-1.3.0/XDK-1.5.0 </para></entry><entry thead="yes"><para>XDK-1.5.2 &amp; above </para></entry><entry thead="yes"><para>Remarks  </para></entry></row>
+<row>
+<entry thead="no"><para>RTOS Task Creation </para></entry><entry thead="no"><para>OS_taskCreate((OS_taskCode_tp) AppHandler, (const int8_t *) &quot;Timername&quot;, 1024, (uint32_t) 2, &amp;TaskHandle) </para></entry><entry thead="no"><para>xTaskCreate(AppHandler, (const char * const ) &quot;Timername&quot;, 1024, NULL, (uint32_t) 2, &amp;TaskHandle) </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return type of Task create </para></entry><entry thead="no"><para>OS_taskHandle_tp </para></entry><entry thead="no"><para>xTaskHandle </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Task Suspend </para></entry><entry thead="no"><para>OS_taskSuspend(&amp;TaskHandle) </para></entry><entry thead="no"><para>vTaskSuspend(&amp;TaskHandle) </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Task Delay </para></entry><entry thead="no"><para>OS_taskDelay(1) </para></entry><entry thead="no"><para>vTaskDelay((portTickType) 1 / portTICK_RATE_MS) </para></entry><entry thead="no"><para>In XDK-1.3.0 the RTOS ticks is converted as part of abstraction </para></entry></row>
+<row>
+<entry thead="no"><para>Task Delay until </para></entry><entry thead="no"><para>OS_taskDelayUntil(&amp;timeToDelayTask, OS_getMsDelayTimeInSystemTicks(100)) </para></entry><entry thead="no"><para>vTaskDelayUntil(&amp;timeToDelayTask, PowerMgt_GetMsDelayTimeInSystemTicks(100)) </para></entry><entry thead="no"><para>In XDK-1.3.0 to get time in milliseconds OS_getMsDelayTimeInSystemTicks() is used , but in XDK-1.5.2 &amp; above PowerMgt_GetMsDelayTimeInSystemTicks() present in Platform/Power package is used </para></entry></row>
+</table>
+In the above example when using the FreeRTOS Task delay until API refer the example for this case as mentioned below</para><para><programlisting><codeline><highlight class="normal">#include<sp/>&quot;BCDS_PowerMgt.h&quot;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;FreeRTOS.h&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;task.h&gt;</highlight></codeline>
+<codeline><highlight class="normal">static<sp/>uint32_t<sp/>timeToDelayTask<sp/>=<sp/>UINT32_C(0);<sp/>/**&lt;<sp/>variable<sp/>to<sp/>delay<sp/>OS<sp/>task<sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>Task_mainProcess(void<sp/>*pvParameters)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>timeToDelayTask<sp/>=<sp/>xTaskGetTickCount();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(;;)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>vTaskDelayUntil(&amp;timeToDelayTask,<sp/>PowerMgt_GetMsDelayTimeInSystemTicks(100));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>}</highlight></codeline>
+</programlisting></para><para><table rows="5" cols="3"><row>
+<entry thead="yes"><para>Description </para></entry><entry thead="yes"><para>XDK-1.3.0/XDK-1.5.0 </para></entry><entry thead="yes"><para>XDK-1.5.2 &amp; above  </para></entry></row>
+<row>
+<entry thead="no"><para>RTOS Semaphore Handle </para></entry><entry thead="no"><para>OS_semaphoreHandle_tp </para></entry><entry thead="no"><para>SemaphoreHandle_t </para></entry></row>
+<row>
+<entry thead="no"><para>RTOS Semaphore Create </para></entry><entry thead="no"><para>OS_semaphoreCreate() </para></entry><entry thead="no"><para>xSemaphoreCreateMutex() </para></entry></row>
+<row>
+<entry thead="no"><para>RTOS Semaphore Take </para></entry><entry thead="no"><para>OS_semaphoreTake(*handle, OS_MAX_DELAY) </para></entry><entry thead="no"><para><ref refid="semphr_8h_1af116e436d2a5ae5bd72dbade2b5ea930" kindref="member">xSemaphoreTake(*handle, UINT32_MAX)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>RTOS Semaphore Give </para></entry><entry thead="no"><para>OS_semaphoreGive(*handle) </para></entry><entry thead="no"><para><ref refid="semphr_8h_1aae55761cabfa9bf85c8f4430f78c0953" kindref="member">xSemaphoreGive(*handle)</ref> </para></entry></row>
+</table>
+</para></sect2>
+</sect1>
+<sect1 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_API_V1_5_2">
+<title>Changes for the existing modules between the version XDK-1.5.0 and XDK-1.5.2 &amp; above</title>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_XDK_SD_Card_Driver">
+<title>MiscDriver SD Card driver module</title>
+<para>Summary of Changes for SD card driver Module:<itemizedlist>
+<listitem><para>API: Function names changed to make them more uniform</para></listitem><listitem><para>API: Return types changed</para></listitem><listitem><para>API: Few function signatures changed</para></listitem><listitem><para>API: Input parameters type changed</para></listitem><listitem><para>ENUMs: Names changed to make them more uniform</para></listitem><listitem><para>ENUMs: Element names in each of those are changed</para></listitem></itemizedlist>
+</para><para><table rows="3" cols="3"><row>
+<entry thead="yes"><para>Version Name </para></entry><entry thead="yes"><para>Module Interface Name </para></entry><entry thead="yes"><para>Module Interface Path  </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.3.0/XDK-1.5.0 </para></entry><entry thead="no"><para>SDC_sdCardDriver_ih.h </para></entry><entry thead="no"><para>Platform/MiscDrivers/include </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-1.5.2 &amp; above </para></entry><entry thead="no"><para>BCDS_SDCardDriver.h </para></entry><entry thead="no"><para>Platform/MiscDrivers/include </para></entry></row>
+</table>
+Table to capture the difference between version XDK-1.3.0,XDK-1.5.0 and XDK-1.5.2 &amp; above</para><para><table rows="10" cols="2"><row>
+<entry thead="yes"><para>XDK-1.3.0/XDK-1.5.0 API </para></entry><entry thead="yes"><para>XDK-1.5.2 &amp; above API  </para></entry></row>
+<row>
+<entry thead="no"><para>SDC_return_t SDC_init(void) </para></entry><entry thead="no"><para>Retcode_T SDCardDriver_Init(void) </para></entry></row>
+<row>
+<entry thead="no"><para>SDC_Status_t SDC_getSdCardDetectStatus(void) </para></entry><entry thead="no"><para>SDCardDriver_Status_T <ref refid="group___s_d_c_a_r_d___d_r_i_v_e_r_1gaa49501d9b65522e0f353bde30b0e0faa" kindref="member">SDCardDriver_GetDetectStatus(void)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>void SDC_sdCardDisconnect(void) </para></entry><entry thead="no"><para>void SDCardDriver_Disconnect(void) </para></entry></row>
+<row>
+<entry thead="no"><para>SDC_return_t SDC_sdCardConnect(void) </para></entry><entry thead="no"><para>Retcode_T SDCardDriver_Connect(void) </para></entry></row>
+<row>
+<entry thead="no"><para>SDC_diskStatus_t SDC_diskInitialize(uint8_t sdDrive) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___s_d_c_a_r_d___d_r_i_v_e_r_1ga51605ef2862b0c5b8c5acc97b95f52c5" kindref="member">SDCardDriver_DiskInitialize(uint8_t sdDrive)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>SDC_diskResult_t SDC_sdCardDiskWrite(uint8_t drive, const uint8_t *writeBuffer,uint32_t sector, uint8_t writeCount) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___s_d_c_a_r_d___d_r_i_v_e_r_1gaab90bc8af8c109f206cf6f7affaa92ea" kindref="member">SDCardDriver_DiskWrite(uint8_t drive, const uint8_t *writeBuffer,uint32_t sector, uint32_t writeCount)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>SDC_diskResult_t SDC_sdCardDiskRead(uint8_t drive, uint8_t *readBuffer,uint32_t sector, uint8_t readCount) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___s_d_c_a_r_d___d_r_i_v_e_r_1ga6ee0eaf3a04c14143f34d89d6d7ab19b" kindref="member">SDCardDriver_DiskRead(uint8_t drive, uint8_t *readBuffer,uint32_t sector, uint32_t readCount)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>SDC_diskResult_t SDC_diskIoctl(uint8_t drive, uint8_t control, void *buffer) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___s_d_c_a_r_d___d_r_i_v_e_r_1gaaf88c928fd61e39938bba3cbd0874a1a" kindref="member">SDCardDriver_DiskIoctl(uint8_t drive, uint8_t control, void *buffer)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>SDC_diskStatus_t SDC_getDiskStatus(uint8_t drive) </para></entry><entry thead="no"><para>Retcode_T <ref refid="group___s_d_c_a_r_d___d_r_i_v_e_r_1gaffcffaff393bced96149a613bec539af" kindref="member">SDCardDriver_GetDiskStatus(uint8_t drive)</ref> </para></entry></row>
+</table>
+</para></sect2>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_XDK_FatFs_Library">
+<title>FatFs LIbrary API</title>
+<para>Summary of Changes for FatFs Library Files:<itemizedlist>
+<listitem><para>API: Few function signatures changed</para></listitem><listitem><para>API: Input parameters type changed</para></listitem></itemizedlist>
+</para><para>Table to capture the major difference between version XDK-1.3.0,XDK-1.5.0 and XDK-1.5.2 &amp; above</para><para><table rows="2" cols="2"><row>
+<entry thead="yes"><para>XDK-1.3.0 / XDK-1.5.0 API </para></entry><entry thead="yes"><para>XDK-1.5.2 &amp; above API  </para></entry></row>
+<row>
+<entry thead="no"><para>FRESULT f_mount (BYTE, FATFS*) </para></entry><entry thead="no"><para>FRESULT f_mount (FATFS* fs, const TCHAR* path, BYTE opt) </para></entry></row>
+</table>
+<bold> Note: For further changes refer the FatFs library files for more details </bold></para></sect2>
+</sect1>
+<sect1 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_API_V1_6_0">
+<title>Changes for the existing modules between the version XDK-1.3.0,XDK-1.5.x,XDK-1.6.0 and XDK-1.6.1 &amp; above</title>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_XDK_WLAN">
+<title>Wlan module</title>
+<para>Summary of Changes for Wlan Module:<itemizedlist>
+<listitem><para>API: Function names changed to make them more uniform</para></listitem><listitem><para>API: Return types changed</para></listitem><listitem><para>API: Input parameters type changed</para></listitem><listitem><para>ENUMs: Names changed to make them more uniform</para></listitem><listitem><para>ENUMs: Element names in each of those are changed</para></listitem></itemizedlist>
+</para><para>Table to capture the difference between version XDK-1.3.0,XDK-1.5.x,XDK-1.6.0 and XDK-1.6.1 &amp; above</para><para><table rows="19" cols="2"><row>
+<entry thead="yes"><para>XDK-1.3.0,XDK-1.5.x,XDK-1.6.0 API </para></entry><entry thead="yes"><para>XDK-1.6.1 &amp; above API  </para></entry></row>
+<row>
+<entry thead="no"><para>WLI_return_t WLI_init(void) </para></entry><entry thead="no"><para>Retcode_T <ref refid="_wlan_connect_8c_1aedc3e3e198474548cde441070dff7f52" kindref="member">WlanConnect_Init(void)</ref>; </para></entry></row>
+<row>
+<entry thead="no"><para>WLI_deinit WLI_deinit(void) </para></entry><entry thead="no"><para>Retcode_T <ref refid="_wlan_connect_8c_1a3c710b947527d86a6347634340353237" kindref="member">WlanConnect_DeInit(void)</ref>; </para></entry></row>
+<row>
+<entry thead="no"><para>WLI_return_t WLI_connectOpen(WLI_connectSSID_t connectSSID,WLI_connectCallback_t connectCallback); </para></entry><entry thead="no"><para>Retcode_T <ref refid="_wlan_connect_8c_1a465235bdbbcd96b17389fb9a12875b6a" kindref="member">WlanConnect_Open(WlanConnect_SSID_T connectSSID, WlanConnect_Callback_T connectCallback)</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>WLI_return_t WLI_connectWEP_Open(WLI_connectSSID_t connectSSID,WLI_connectPassPhrase_t connectPass,WLI_connectCallback_t connectCallback); </para></entry><entry thead="no"><para>Retcode_T <ref refid="_wlan_connect_8c_1af65d9ac0f02489ae99a5e40e5bd38588" kindref="member">WlanConnect_WEP_Open(WlanConnect_SSID_T connectSSID, WlanConnect_PassPhrase_T connectPass,uint8_t passPhraseLength, WlanConnect_Callback_T connectCallback)</ref>; </para></entry></row>
+<row>
+<entry thead="no"><para>WLI_return_t WLI_connectWPA(WLI_connectSSID_t connectSSID, WLI_connectPassPhrase_t connectPass,WLI_connectCallback_t connectCallback); </para></entry><entry thead="no"><para>Retcode_T <ref refid="_wlan_connect_8c_1ac52437d88ce199ce1d49baba8938af8d" kindref="member">WlanConnect_WPA(WlanConnect_SSID_T connectSSID,WlanConnect_PassPhrase_T connectPass,WlanConnect_Callback_T connectCallback)</ref>; </para></entry></row>
+<row>
+<entry thead="no"><para>WLI_return_t WLI_connectWPS_PBC(WLI_connectCallback_t connectCallback); </para></entry><entry thead="no"><para>Retcode_T <ref refid="_wlan_connect_8c_1a5d20c403ef7d79b6ce38888545501643" kindref="member">WlanConnect_WPS_PBC(WlanConnect_Callback_T connectCallback)</ref>; </para></entry></row>
+<row>
+<entry thead="no"><para>WLI_return_t WLI_connectWPS_PIN(WLI_connectCallback_t connectCallback); </para></entry><entry thead="no"><para>Retcode_T <ref refid="_wlan_connect_8c_1aef0cbcc48d0069bdc3f8fe30133864a9" kindref="member">WlanConnect_WPS_PIN(WlanConnect_Callback_T connectCallback)</ref>; </para></entry></row>
+<row>
+<entry thead="no"><para>WLI_return_t WLI_deleteAllProfiles(void); </para></entry><entry thead="no"><para>Retcode_T <ref refid="_wlan_connect_8c_1a4e9d8d1671b1a81d2c677e506eed20e0" kindref="member">WlanConnect_DeleteAllProfiles(void)</ref>; </para></entry></row>
+<row>
+<entry thead="no"><para>WLI_return_t WLI_disconnect(WLI_disconnectCallback_t disconnectCallback); </para></entry><entry thead="no"><para>Retcode_T <ref refid="_wlan_connect_8c_1aea24a59e30c0ff0fce2beeb63af11e55" kindref="member">WlanConnect_Disconnect(WlanConnect_DisconnectCallback_T disconnectCallback)</ref>; </para></entry></row>
+<row>
+<entry thead="no"><para>WLI_scanReturnCode_t WLI_scanNetworks(WLI_scanInterval_t f_scanInterval, WLI_scanList_t* f_scanList); </para></entry><entry thead="no"><para>Retcode_T <ref refid="_wlan_connect_8c_1abbdb496ce3db76ba6ad9a3882e1a41cc" kindref="member">WlanConnect_ScanNetworks(WlanConnect_ScanInterval_T scanInterval, WlanConnect_ScanList_T* scanList)</ref>; </para></entry></row>
+<row>
+<entry thead="no"><para>WLI_currentStatus_t WLI_getCurrentNetworkStatus(WLI_disconnectCallback_t allDisconnectCallback); </para></entry><entry thead="no"><para>WlanConnect_CurrentNwStatus_T <ref refid="_wlan_connect_8c_1a6a914b5a1194727e7856a12b76566974" kindref="member">WlanConnect_GetCurrentNwStatus(void)</ref>; </para></entry></row>
+<row>
+<entry thead="no"><para>WLI_connectStatus_t WLI_getConnectionStatus(void); </para></entry><entry thead="no"><para>WlanConnect_Status_T <ref refid="_wlan_connect_8c_1a0b1e8ed24b54dff3dcc6df9af99d1868" kindref="member">WlanConnect_GetStatus(void)</ref>; </para></entry></row>
+<row>
+<entry thead="no"><para>NCI_return_t NCI_getIpSettings(NCI_ipSettings_t* myIpSettings); </para></entry><entry thead="no"><para>Retcode_T <ref refid="_network_config_8c_1affdb5da672927ad5fd6d35a56d921577" kindref="member">NetworkConfig_GetIpSettings(NetworkConfig_IpSettings_T* myIpSettings)</ref>; </para></entry></row>
+<row>
+<entry thead="no"><para>NCI_return_t NCI_setIpStatic(NCI_ipSettings_t myIpSettings); </para></entry><entry thead="no"><para>Retcode_T <ref refid="_network_config_8c_1a072cdf65943a1214359ae1518920fe12" kindref="member">NetworkConfig_SetIpStatic(NetworkConfig_IpSettings_T myIpSettings)</ref>; </para></entry></row>
+<row>
+<entry thead="no"><para>NCI_return_t NCI_setIpDhcp(NCI_ipCallback_t myIpCallback); </para></entry><entry thead="no"><para>Retcode_T <ref refid="_network_config_8c_1a7fec08671de13287000a0b3a1a251ae2" kindref="member">NetworkConfig_SetIpDhcp(NetworkConfig_IpCallback_T myIpCallback)</ref>; </para></entry></row>
+<row>
+<entry thead="no"><para>uint32_t NCI_ipv4Value(uint32_t add3, uint32_t add2, uint32_t add1, uint32_t add0); </para></entry><entry thead="no"><para>uint32_t <ref refid="_network_config_8c_1a8554c7606a45da5381eaede87f115e58" kindref="member">NetworkConfig_Ipv4Value(uint8_t add3, uint8_t add2, uint8_t add1, uint8_t add0)</ref>; </para></entry></row>
+<row>
+<entry thead="no"><para>uint32_t NCI_ipv4Byte(uint32_t ipValue, uint8_t index); </para></entry><entry thead="no"><para>uint8_t <ref refid="_network_config_8c_1a6a88bcd364720b00e24ba5a6ef3578f3" kindref="member">NetworkConfig_Ipv4Byte(uint32_t ipValue, uint8_t index)</ref>; </para></entry></row>
+<row>
+<entry thead="no"><para>NCI_ipStatus_t NCI_getIpObtainedStatus(void); </para></entry><entry thead="no"><para>NetworkConfig_IpStatus_T <ref refid="_network_config_8c_1a153675bb415f07cf9c8fe6a3c3d988bc" kindref="member">NetworkConfig_GetIpStatus(void)</ref>; </para></entry></row>
+</table>
+</para></sect2>
+</sect1>
+<sect1 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1Changes">
+<title>since version XDK-3.5.0</title>
+<sect2 id="_x_d_k__m_i_g_r_a_t_i_o_n__g_u_i_d_e_1XDK_MIGRATION_GUIDE_XDK_COMMON">
+<title>Common module</title>
+<para><itemizedlist>
+<listitem><para>WLAN reconnect feature in Common </para></listitem></itemizedlist>
+</para></sect2>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

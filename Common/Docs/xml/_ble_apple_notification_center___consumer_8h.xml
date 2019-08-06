@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_ble_apple_notification_center___consumer_8h" kind="file">
+    <compoundname>BleAppleNotificationCenter_Consumer.h</compoundname>
+    <includes refid="_ble_types_8h" local="yes">BleTypes.h</includes>
+    <includes refid="_ble_gatt_8h" local="yes">BleGatt.h</includes>
+    <incdepgraph>
+      <node id="28097">
+        <label>SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_AppleNotificationCenter/Interfaces/BleAppleNotificationCenter_Consumer.h</label>
+        <link refid="BleAppleNotificationCenter_Consumer.h"/>
+        <childnode refid="28098" relation="include">
+        </childnode>
+        <childnode refid="28101" relation="include">
+        </childnode>
+      </node>
+      <node id="28102">
+        <label>ATT/att.h</label>
+        <link refid="_att_8h"/>
+        <childnode refid="28103" relation="include">
+        </childnode>
+        <childnode refid="28104" relation="include">
+        </childnode>
+      </node>
+      <node id="28101">
+        <label>BleGatt.h</label>
+        <link refid="_ble_gatt_8h"/>
+        <childnode refid="28098" relation="include">
+        </childnode>
+        <childnode refid="28102" relation="include">
+        </childnode>
+      </node>
+      <node id="28105">
+        <label>ATT/atttypes.h</label>
+        <link refid="atttypes_8h"/>
+        <childnode refid="28103" relation="include">
+        </childnode>
+      </node>
+      <node id="28098">
+        <label>BleTypes.h</label>
+        <link refid="_ble_types_8h"/>
+        <childnode refid="28099" relation="include">
+        </childnode>
+      </node>
+      <node id="28104">
+        <label>ATT/AttBase.h</label>
+        <link refid="_att_base_8h"/>
+        <childnode refid="28103" relation="include">
+        </childnode>
+        <childnode refid="28105" relation="include">
+        </childnode>
+      </node>
+      <node id="28100">
+        <label>BLECustomConfig.h</label>
+        <link refid="_common_2config_2_b_l_e_custom_config_8h"/>
+      </node>
+      <node id="28099">
+        <label>BleConfig.h</label>
+        <link refid="_ble_config_8h"/>
+        <childnode refid="28100" relation="include">
+        </childnode>
+      </node>
+      <node id="28103">
+        <label>ATT/AttConfig.h</label>
+        <link refid="_att_config_8h"/>
+        <childnode refid="28098" relation="include">
+        </childnode>
+        <childnode refid="28099" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_ble_apple_notification_center___consumer_8h_1ae0f8d181345206bccc51d224b6427c91" prot="public" static="no">
+        <name>BLEAPPLENOTIFICATIONCENTER_SUPPORT_CONSUMER</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>BLEAPPLENOTIFICATIONCENTER_SUPPORT_CONSUMER Defines if the BLE AppleNotificationCenter Profile implementation supports the CONSUMER Role. If enabled ( set to 1 ) it enables all the following BleAppleNotificationCenter Consumer configuration and Application Interface. The default value for this option is disabled (0). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_AppleNotificationCenter/Interfaces/BleAppleNotificationCenter_Consumer.h" line="40" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_AppleNotificationCenter/Interfaces/BleAppleNotificationCenter_Consumer.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__BLEAPPLENOTIFICATIONCENTER_CONSUMER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__BLEAPPLENOTIFICATIONCENTER_CONSUMER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>This<sp/>software<sp/>is<sp/>copyrighted<sp/>by<sp/>Alpwise,<sp/>2016.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>The<sp/>use<sp/>of<sp/>this<sp/>software<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>XDK<sp/>SDK<sp/>EULA</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleAppleNotificationCenter_Consumer.h</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Description:<sp/><sp/><sp/>Contains<sp/>interfaces<sp/>definition<sp/>for<sp/>Apple<sp/>Notification<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Center<sp/>Profile<sp/>when<sp/>the<sp/>local<sp/>device<sp/>operates<sp/>in<sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>the<sp/>CONSUMER<sp/>role.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>Created:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>December,<sp/>2103</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>Version:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0.1</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>File<sp/>Revision:<sp/>$Rev:<sp/>2825<sp/>$</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>$Project$</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ble_types_8h" kindref="compound">BleTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ble_gatt_8h" kindref="compound">BleGatt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/>Overidible<sp/>CONSTANT</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>***************************************************************************/</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor">#ifndef<sp/>BLEAPPLENOTIFICATIONCENTER_SUPPORT_CONSUMER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="_ble_apple_notification_center___consumer_8h_1ae0f8d181345206bccc51d224b6427c91" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEAPPLENOTIFICATIONCENTER_SUPPORT_CONSUMER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//BLEAPPLENOTIFICATIONCENTER_SUPPORT_CONSUMER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLEAPPLENOTIFICATIONCENTER_SUPPORT_CONSUMER<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/>*<sp/>OPTIONAL<sp/>FEATURES</highlight></codeline>
+<codeline lineno="46"><highlight class="comment">\***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(GENERIC_ATTRIBUTE_PROFILE<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>GENERIC_ATTRIBUTE_PROFILE<sp/>shall<sp/>be<sp/>enabled<sp/>when<sp/>AppleNotificationCenter<sp/>CONSUMER<sp/>Role<sp/>is<sp/>enabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(GENERIC_ATTRIBUTE_PROFILE<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(ATT_ROLE_CLIENT<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>ATT_ROLE_CLIENT<sp/>shall<sp/>be<sp/>enabled<sp/>when<sp/>AppleNotificationCenter<sp/>CONSUMER<sp/>Role<sp/>is<sp/>enabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(ATT_ROLE_CLIENT<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLEGATT_SUPPORT_SINGLE_SERVICE_DISCOVERY<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>BLEGATT_SUPPORT_SINGLE_SERVICE_DISCOVERY<sp/>shall<sp/>be<sp/>enabled<sp/>when<sp/>AppleNotificationCenter<sp/>CONSUMER<sp/>Role<sp/>is<sp/>enabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLEGATT_SUPPORT_SINGLE_SERVICE_DISCOVERY<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLEGATT_SUPPORT_ALL_CHARACTERISTIC_DISCOVERY<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>BLEGATT_SUPPORT_ALL_CHARACTERISTIC_DISCOVERY<sp/>shall<sp/>be<sp/>enabled<sp/>when<sp/>AppleNotificationCenter<sp/>CONSUMER<sp/>Role<sp/>is<sp/>enabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLEGATT_SUPPORT_ALL_CHARACTERISTIC_DISCOVERY<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLEGATT_SUPPORT_WRITE_CHARACTERISTIC_VALUE<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>BLEGATT_SUPPORT_WRITE_CHARACTERISTIC_VALUE<sp/>shall<sp/>be<sp/>enabled<sp/>when<sp/>when<sp/>HEALTH<sp/>THERMOMETER<sp/>Profile<sp/>COLLECTOR<sp/>Role<sp/>is<sp/>enabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLEGATT_SUPPORT_WRITE_CHARACTERISTIC_VALUE<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GATT<sp/>notifiable<sp/>required</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLEGATT_SUPPORT_GET_CHARACTERISTIC_DESCRIPTOR_LIST<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>BLEGATT_SUPPORT_GET_CHARACTERISTIC_DESCRIPTOR_LIST<sp/>shall<sp/>be<sp/>enabled<sp/>when<sp/>APPLE<sp/>NOTIFICATION<sp/>CENTER<sp/>Service<sp/>CONSUMER<sp/>Role<sp/>is<sp/>enabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLEGATT_SUPPORT_GET_CHARACTERISTIC_DESCRIPTOR_LIST<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLE_SECURITY<sp/>==<sp/>1<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="preprocessor">#ifndef<sp/>BLEAPPLENOTIFICATIONCENTER_SUPPORT_SAVINGINFORMATION<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEAPPLENOTIFICATIONCENTER_SUPPORT_SAVINGINFORMATION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//BLEAPPLENOTIFICATIONCENTER_SUPPORT_SAVINGINFORMATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEINFOTYPE_APPLENOTIFICATIONCENTER_NOTIFICATIONSOURCEHANDLE<sp/><sp/><sp/><sp/>0x9C<sp/><sp/><sp/><sp/>//2<sp/>bytes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLE_SECURITY<sp/>==<sp/>1<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Otherwise<sp/>if<sp/>BLE_SECURITY<sp/>is<sp/>not<sp/>supported<sp/>force<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>BLEAPPLENOTIFICATIONCENTER_SUPPORT_SAVINGINFORMATION<sp/>to<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLE_SECURITY<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>BLEAPPLENOTIFICATIONCENTER_SUPPORT_SAVINGINFORMATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEAPPLENOTIFICATIONCENTER_SUPPORT_SAVINGINFORMATION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(<sp/>BLE_SECURITY<sp/>==<sp/>0)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="110"><highlight class="comment"><sp/>*<sp/><sp/>Type<sp/>definition</highlight></codeline>
+<codeline lineno="111"><highlight class="comment">\***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/>BleAppleNotificationCenterConsumerEvent;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="preprocessor">#define<sp/>BLEAPPLENOTIFICATIONCENTERCONSUMER_EVENT_LINKED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xD9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="preprocessor">#define<sp/>BLEAPPLENOTIFICATIONCENTERCONSUMER_EVENT_UNLINKED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xDA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="preprocessor">#define<sp/>BLEAPPLENOTIFICATIONCENTERCONSUMER_EVENT_NOTIFICATIONSOURCE<sp/><sp/><sp/><sp/><sp/>0xDB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*BleAppleNotificationCenterConsumerCallBack)(</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleAppleNotificationCenterConsumerEvent<sp/>event,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/>status,</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>parms);<sp/></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/>BleAppleNotificationCenterConsumerNotificationEventID;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEAPPLENOTIFICATIONCENTERCONSUMER_EVENTID_NOTIFICATIONADDED<sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEAPPLENOTIFICATIONCENTERCONSUMER_EVENTID_NOTIFICATIONMODIFIED<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEAPPLENOTIFICATIONCENTERCONSUMER_EVENTID_NOTIFICATIONREMOVED<sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/>BleAppleNotificationCenterConsumerNotificationEventFlags;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEAPPLENOTIFICATIONCENTERCONSUMER_EVENTFLAGS_SILENT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEAPPLENOTIFICATIONCENTERCONSUMER_EVENTFLAGS_IMPORTANT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/>BleAppleNotificationCenterConsumerNotificationCategoryID;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEAPPLENOTIFICATIONCENTERCONSUMER_CATEGORYID_OTHER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEAPPLENOTIFICATIONCENTERCONSUMER_CATEGORYID_INCOMINGCALL<sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEAPPLENOTIFICATIONCENTERCONSUMER_CATEGORYID_MISSEDCALL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEAPPLENOTIFICATIONCENTERCONSUMER_CATEGORYID_VOICEMAIL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEAPPLENOTIFICATIONCENTERCONSUMER_CATEGORYID_SOCIAL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEAPPLENOTIFICATIONCENTERCONSUMER_CATEGORYID_SCHEDULE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEAPPLENOTIFICATIONCENTERCONSUMER_CATEGORYID_EMAIL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEAPPLENOTIFICATIONCENTERCONSUMER_CATEGORYID_NEWS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEAPPLENOTIFICATIONCENTERCONSUMER_CATEGORYID_HEALTHANDFITNESS<sp/><sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEAPPLENOTIFICATIONCENTERCONSUMER_CATEGORYID_BUSINESSANDFINANCE<sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEAPPLENOTIFICATIONCENTERCONSUMER_CATEGORYID_LOCATION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEAPPLENOTIFICATIONCENTERCONSUMER_CATEGORYID_ENTERTAINMENT<sp/><sp/><sp/><sp/><sp/><sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/>BleAppleNotificationCenterConsumerNotificationCategoryCount;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="_ble_types_8h_1a811024d35b9b8a41095b1f583b649e56" kindref="member">U32</ref><sp/>BleAppleNotificationCenterConsumerNotificationUID;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>BleGattCommand<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gattCommand;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>connHandle;</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>linked;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>targetFeatures;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>AttHandle<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ancServiceStartingHandle;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>AttHandle<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ancServiceEndingHandle;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>AttHandle<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>notificationSourceCharacteristicHandle;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>AttHandle<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>notificationSourceCharacteristicConfigHandle;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>configValue[2];</highlight></codeline>
+<codeline lineno="270"><highlight class="normal">}<sp/>BleAppleNotificationCenterConsumer;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>BleAppleNotificationCenterConsumer<sp/><sp/>*bleAppleNotificationCenterConsumer;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>connHandle;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal">}<sp/>BleAppleNotificationCenterConsumerLinkUpInfo;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/>BleAppleNotificationCenterConsumerLinkMode;</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEAPPLENOTIFICATIONCENTER_CONSUMER_LINKUP_COMPLETE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEAPPLENOTIFICATIONCENTER_CONSUMER_LINKUP_RESTORE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="327"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>link<sp/>with<sp/>the<sp/>remote<sp/>Sensor<sp/>for<sp/>which<sp/>this<sp/></highlight></codeline>
+<codeline lineno="328"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>event<sp/>has<sp/>been<sp/>received.</highlight></codeline>
+<codeline lineno="329"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>BleAppleNotificationCenterConsumer<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*bleAppleNotificationCenterConsumer;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="334"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>connection<sp/>handle<sp/>from<sp/>which<sp/>the<sp/>measurement<sp/>information</highlight></codeline>
+<codeline lineno="335"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>is<sp/>coming.</highlight></codeline>
+<codeline lineno="336"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>connHandle;</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="340"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>event<sp/>id.</highlight></codeline>
+<codeline lineno="341"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/>BleAppleNotificationCenterConsumerNotificationEventID<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eventId;</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="346"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>event<sp/>flags.</highlight></codeline>
+<codeline lineno="347"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/>BleAppleNotificationCenterConsumerNotificationEventFlags<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eventFlags;</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="352"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>category<sp/>id.</highlight></codeline>
+<codeline lineno="353"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/>BleAppleNotificationCenterConsumerNotificationCategoryID<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>categoryID;</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="358"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>category<sp/>count.</highlight></codeline>
+<codeline lineno="359"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/>BleAppleNotificationCenterConsumerNotificationCategoryCount<sp/></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>categoryCount;</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="364"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>notification<sp/>UID.</highlight></codeline>
+<codeline lineno="365"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/>BleAppleNotificationCenterConsumerNotificationUID<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>notificationUID;</highlight></codeline>
+<codeline lineno="368"><highlight class="normal">}<sp/>BleAppleNotificationCenterConsumerNotification;</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************\</highlight></codeline>
+<codeline lineno="371"><highlight class="comment"><sp/>*<sp/><sp/>APPLICATION<sp/>INTERFACE<sp/>functions<sp/>definition</highlight></codeline>
+<codeline lineno="372"><highlight class="comment">\****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/>BLEAPPLENOTIFICATIONCENTER_CONSUMER_Init(</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleAppleNotificationCenterConsumerCallBack<sp/>callback);</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/>BLEAPPLENOTIFICATIONCENTER_CONSUMER_Deinit(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"></highlight></codeline>
+<codeline lineno="416"><highlight class="normal"></highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/>BLEAPPLENOTIFICATIONCENTER_CONSUMER_LinkUpAppleNotificationCenterProfile(</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/>BleAppleNotificationCenterConsumer<sp/>*bleAppleNotificationCenterConsumer,</highlight></codeline>
+<codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/>connHandle,</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/>BleAppleNotificationCenterConsumerLinkMode<sp/>mode);</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"></highlight></codeline>
+<codeline lineno="506"><highlight class="normal"><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/>BLEAPPLENOTIFICATIONCENTER_CONSUMER_UnLinkAppleNotificationCenterProfile(</highlight></codeline>
+<codeline lineno="507"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleAppleNotificationCenterConsumer<sp/>*bleAppleNotificationCenterConsumer);</highlight></codeline>
+<codeline lineno="508"><highlight class="normal"></highlight></codeline>
+<codeline lineno="509"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLEAPPLENOTIFICATIONCENTER_SUPPORT_CONSUMER==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="510"><highlight class="normal"></highlight></codeline>
+<codeline lineno="511"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//__BLEAPPLENOTIFICATIONCENTER_CONSUMER_H</highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_AppleNotificationCenter/Interfaces/BleAppleNotificationCenter_Consumer.h"/>
+  </compounddef>
+</doxygen>

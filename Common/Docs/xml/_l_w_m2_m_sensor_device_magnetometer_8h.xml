@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_l_w_m2_m_sensor_device_magnetometer_8h" kind="file">
+    <compoundname>LWM2MSensorDeviceMagnetometer.h</compoundname>
+    <includes refid="_l_w_m2_m_sensor_device_util_8h" local="yes">LWM2MSensorDeviceUtil.h</includes>
+    <includedby refid="_l_w_m2_m_object_sensor_device_8c" local="yes">SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectSensorDevice.c</includedby>
+    <includedby refid="_l_w_m2_m_sensor_device_magnetometer_8c" local="yes">SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceMagnetometer.c</includedby>
+    <incdepgraph>
+      <node id="27022">
+        <label>stdbool.h</label>
+      </node>
+      <node id="27021">
+        <label>LWM2MSensorDeviceUtil.h</label>
+        <link refid="_l_w_m2_m_sensor_device_util_8h"/>
+        <childnode refid="27022" relation="include">
+        </childnode>
+      </node>
+      <node id="27020">
+        <label>SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceMagnetometer.h</label>
+        <link refid="LWM2MSensorDeviceMagnetometer.h"/>
+        <childnode refid="27021" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="27024">
+        <label>SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectSensorDevice.c</label>
+        <link refid="_l_w_m2_m_object_sensor_device_8c"/>
+      </node>
+      <node id="27025">
+        <label>SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceMagnetometer.c</label>
+        <link refid="_l_w_m2_m_sensor_device_magnetometer_8c"/>
+      </node>
+      <node id="27023">
+        <label>SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceMagnetometer.h</label>
+        <link refid="LWM2MSensorDeviceMagnetometer.h"/>
+        <childnode refid="27024" relation="include">
+        </childnode>
+        <childnode refid="27025" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_l_w_m2_m_sensor_device_magnetometer_8h_1a6e770018878c3ed31d5e8738988a58d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LWM2MSensorDeviceMagnetometer_Activate</definition>
+        <argsstring>(bool enable)</argsstring>
+        <name>LWM2MSensorDeviceMagnetometer_Activate</name>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>Initialize sensor. Initialize sensor, setting it active or inactive and initialize the lwm2m object accordingly. Intended to be only called by the sensors timer thread. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true, activate sensor false, disable sensor</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceMagnetometer.h" line="61" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceMagnetometer.c" bodystart="66" bodyend="89"/>
+        <references refid="struct_sensor_device_process_data_float_1a8740ba80e30dd75e71d09fa1dcf04f3d" compoundref="_l_w_m2_m_sensor_device_util_8h" startline="89">SensorDeviceProcessDataFloat::enabled</references>
+        <references refid="_l_w_m2_m_sensor_device_util_8c_1a6d710c06c751aa1b054aab062a1e9e01" compoundref="_l_w_m2_m_sensor_device_util_8c" startline="60" endline="68">LWM2MSensorDeviceUtil_ResetProcessDataFloat</references>
+        <references refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1gaf40245eb686e93e500e099a2a6b8cc96" compoundref="_magnetometer_8c" startline="187" endline="229">Magnetometer_init</references>
+        <references refid="group___sensors_handles_1ga020a7ea71374eb9b2ae6e941f22c4464" compoundref="_sensor_handle_8c" startline="167">XdkMagnetometer_BMM150_Handle</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="_l_w_m2_m_object_magnetometer_8c_1ad9a9444863d21e2d2f871be9a5ffe50d" compoundref="_l_w_m2_m_object_magnetometer_8c" startline="175" endline="178">LWM2MObjectMagnetometer_Enable</references>
+        <references refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1ga43cfc8f1215a003fe6176d8a1e45d4a3" compoundref="_magnetometer_8c" startline="601" endline="632">Magnetometer_deInit</references>
+        <references refid="_l_w_m2_m_object_magnetometer_8c_1a1eb9fa274003ca0935e3d4cbdbda8e4c" compoundref="_l_w_m2_m_object_magnetometer_8c" startline="181" endline="184">LWM2MObjectMagnetometer_Disable</references>
+        <referencedby refid="_l_w_m2_m_object_sensor_device_8c_1a151a15f45e12b28318fbd9deb13733f1" compoundref="_l_w_m2_m_object_sensor_device_8c" startline="123" endline="200">SensorTimerHandler</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_l_w_m2_m_sensor_device_magnetometer_8h_1a6dd3debbc5946788b7e685886510c88c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LWM2MSensorDeviceMagnetometer_Update</definition>
+        <argsstring>(enum ProcessingMode mode, bool notify)</argsstring>
+        <name>LWM2MSensorDeviceMagnetometer_Update</name>
+        <param>
+          <type>enum <ref refid="_l_w_m2_m_sensor_device_util_8h_1a1c2b96eed57c1a07443e4877a8e53f12" kindref="member">ProcessingMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>notify</declname>
+        </param>
+        <briefdescription>
+<para>Read sensor values and process them. Read the values from the sensor, process them according the provided mode and transfer them to lwm2m objects, when notify indicates that. Intended to be only called by the sensors timer thread. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>processing mode</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">notify</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true, transfer values to lwm2m objects false, no transfer, process only</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceMagnetometer.h" line="76" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceMagnetometer.c" bodystart="92" bodyend="118"/>
+        <references refid="struct_sensor_device_process_data_float_1a8740ba80e30dd75e71d09fa1dcf04f3d" compoundref="_l_w_m2_m_sensor_device_util_8h" startline="89">SensorDeviceProcessDataFloat::enabled</references>
+        <references refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1gacd41dcea2e551fea5ab4d225d17c6e0e" compoundref="_magnetometer_8c" startline="552" endline="598">Magnetometer_readXyzTeslaData</references>
+        <references refid="group___sensors_handles_1ga020a7ea71374eb9b2ae6e941f22c4464" compoundref="_sensor_handle_8c" startline="167">XdkMagnetometer_BMM150_Handle</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="struct_sensor_device_sample_data_float_1a399421fbb0c25a2f744f4d6a55905795" compoundref="_l_w_m2_m_sensor_device_util_8h" startline="76">SensorDeviceSampleDataFloat::values</references>
+        <references refid="struct_magnetometer___xyz_data___s_1a0ce3ac9cbd662334c4bf9aa63a74405f" compoundref="_b_c_d_s___magnetometer_8h" startline="107">Magnetometer_XyzData_S::xAxisData</references>
+        <references refid="struct_magnetometer___xyz_data___s_1a0dcf2e5f14c8ab1e4c671be741b88ce6" compoundref="_b_c_d_s___magnetometer_8h" startline="108">Magnetometer_XyzData_S::yAxisData</references>
+        <references refid="struct_magnetometer___xyz_data___s_1ac71d7f95bd9dd9607df1f7d3ad4b89b1" compoundref="_b_c_d_s___magnetometer_8h" startline="109">Magnetometer_XyzData_S::zAxisData</references>
+        <references refid="_l_w_m2_m_sensor_device_util_8c_1ad4475c7cf47f81acf4827826881d0ecb" compoundref="_l_w_m2_m_sensor_device_util_8c" startline="71" endline="119">LWM2MSensorDeviceUtil_ProcessDataFloat</references>
+        <references refid="_l_w_m2_m_sensor_device_util_8c_1a1f403a0df9270d147484bfc33ea8c969" compoundref="_l_w_m2_m_sensor_device_util_8c" startline="122" endline="149">LWM2MSensorDeviceUtil_GetDataFloat</references>
+        <references refid="_l_w_m2_m_object_magnetometer_8c_1a781f511e74eb5f48ae4559ceb5a3a434" compoundref="_l_w_m2_m_object_magnetometer_8c" startline="187" endline="190">LWM2MObjectMagnetometer_SetValues</references>
+        <referencedby refid="_l_w_m2_m_object_sensor_device_8c_1a151a15f45e12b28318fbd9deb13733f1" compoundref="_l_w_m2_m_object_sensor_device_8c" startline="123" endline="200">SensorTimerHandler</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface header for SensorDeviceMagnetometer file. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>Licensee’s<sp/>application<sp/>development.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>Licensee’s<sp/>applications<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">*<sp/>Contributors:</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">*<sp/>Bosch<sp/>Software<sp/>Innovations<sp/>GmbH</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor">#ifndef<sp/>LWM2MSENSORDEVICEMAGNETOMETER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LWM2MSENSORDEVICEMAGNETOMETER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_l_w_m2_m_sensor_device_util_8h" kindref="compound">LWM2MSensorDeviceUtil.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_l_w_m2_m_sensor_device_magnetometer_8h_1a6e770018878c3ed31d5e8738988a58d9" kindref="member">LWM2MSensorDeviceMagnetometer_Activate</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_l_w_m2_m_sensor_device_magnetometer_8h_1a6dd3debbc5946788b7e685886510c88c" kindref="member">LWM2MSensorDeviceMagnetometer_Update</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_l_w_m2_m_sensor_device_util_8h_1a1c2b96eed57c1a07443e4877a8e53f12" kindref="member">ProcessingMode</ref><sp/>mode,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>notify);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LWM2MSENSORDEVICEMAGNETOMETER_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceMagnetometer.h"/>
+  </compounddef>
+</doxygen>

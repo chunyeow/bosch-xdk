@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_b_s_p___test_interface_8c" kind="file">
+    <compoundname>BSP_TestInterface.c</compoundname>
+    <includes refid="_b_c_d_s___b_s_p_8h" local="yes">BCDS_BSP.h</includes>
+    <includes refid="_b_c_d_s___h_a_l_8h" local="yes">BCDS_HAL.h</includes>
+    <incdepgraph>
+      <node id="35452">
+        <label>stdbool.h</label>
+      </node>
+      <node id="35457">
+        <label>BCDS_HALConfig.h</label>
+        <link refid="_b_c_d_s___h_a_l_config_8h"/>
+      </node>
+      <node id="35451">
+        <label>stdint.h</label>
+      </node>
+      <node id="35449">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="35450" relation="include">
+        </childnode>
+      </node>
+      <node id="35454">
+        <label>stdlib.h</label>
+      </node>
+      <node id="35453">
+        <label>string.h</label>
+      </node>
+      <node id="35450">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="35451" relation="include">
+        </childnode>
+        <childnode refid="35452" relation="include">
+        </childnode>
+        <childnode refid="35453" relation="include">
+        </childnode>
+        <childnode refid="35454" relation="include">
+        </childnode>
+      </node>
+      <node id="35447">
+        <label>SDK/xdk110/Platform/BSP/source/BSP_TestInterface.c</label>
+        <link refid="BSP_TestInterface.c"/>
+        <childnode refid="35448" relation="include">
+        </childnode>
+        <childnode refid="35456" relation="include">
+        </childnode>
+      </node>
+      <node id="35456">
+        <label>BCDS_HAL.h</label>
+        <link refid="_b_c_d_s___h_a_l_8h"/>
+        <childnode refid="35449" relation="include">
+        </childnode>
+        <childnode refid="35457" relation="include">
+        </childnode>
+      </node>
+      <node id="35448">
+        <label>BCDS_BSP.h</label>
+        <link refid="_b_c_d_s___b_s_p_8h"/>
+        <childnode refid="35449" relation="include">
+        </childnode>
+        <childnode refid="35455" relation="include">
+        </childnode>
+      </node>
+      <node id="35455">
+        <label>BCDS_Essentials.h</label>
+        <link refid="_b_c_d_s___essentials_8h"/>
+        <childnode refid="35451" relation="include">
+        </childnode>
+        <childnode refid="35452" relation="include">
+        </childnode>
+        <childnode refid="35453" relation="include">
+        </childnode>
+        <childnode refid="35454" relation="include">
+        </childnode>
+        <childnode refid="35456" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_b_s_p___test_interface_8c_1abff8f3a204e79671b98fabaa652198c3" prot="public" static="no">
+        <name>BCDS_MODULE_ID</name>
+        <initializer><ref refid="_b_c_d_s___b_s_p_8h_1a557f5b440a4210273c8cae4a124c4084a1bb1c8d6b553f63f86d6e67b93efcda5" kindref="member">BCDS_BSP_MODULE_ID_TEST_INTERFACE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_TestInterface.c" line="22" column="11" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_TestInterface.c" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implementation of test interface BSP functions. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>Bosch<sp/>Connected<sp/>Devices<sp/>and<sp/>Solutions<sp/>GmbH.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>All<sp/>Rights<sp/>Reserved.<sp/>Confidential.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Distribution<sp/>only<sp/>to<sp/>people<sp/>who<sp/>need<sp/>to<sp/>know<sp/>this<sp/>information<sp/>in</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>order<sp/>to<sp/>do<sp/>their<sp/>job.(Need-to-know<sp/>principle).</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Distribution<sp/>to<sp/>persons<sp/>outside<sp/>the<sp/>company,<sp/>only<sp/>if<sp/>these<sp/>persons</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>signed<sp/>a<sp/>non-disclosure<sp/>agreement.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Electronic<sp/>transmission,<sp/>e.g.<sp/>via<sp/>electronic<sp/>mail,<sp/>must<sp/>be<sp/>made<sp/>in</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>encrypted<sp/>form.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___b_s_p_8h" kindref="compound">BCDS_BSP.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>BCDS_MODULE_ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="_b_s_p___test_interface_8c_1abff8f3a204e79671b98fabaa652198c3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BCDS_MODULE_ID<sp/>BCDS_BSP_MODULE_ID_TEST_INTERFACE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___h_a_l_8h" kindref="compound">BCDS_HAL.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>BCDS_FEATURE_BSP_TEST_INTERFACE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_s_p___test_interface_8h" kindref="compound">BSP_TestInterface.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_s_p___board_shared_8h" kindref="compound">BSP_BoardShared.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___u_s_b_8h" kindref="compound">BCDS_USB.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_b_c_d_s___u_s_b_8h_1a2ffcdb62ade4bd4ec00c2aba30403e42" kindref="member">USB_lineCoding_tp</ref><sp/>BSP_TestIF_USB_Handle<sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_b_c_d_s___u_s_b_8h_1ab3772f65ab04d0f68069f37172001922" kindref="member">USB_rxCallback</ref><sp/>TestIF_USB_ISRCallback<sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/>Refer<sp/>to<sp/>interface<sp/>header<sp/>for<sp/>description</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>BSP_TestInterface_Connect(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>BSP_TestIF_USB_Handle<sp/>=<sp/>&amp;USB_lineCoding_mds;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>*<sp/>Refer<sp/>to<sp/>interface<sp/>header<sp/>for<sp/>description</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>BSP_TestInterface_Enable(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Dont<sp/>enable<sp/>if<sp/>the<sp/>callback<sp/>has<sp/>not<sp/>been<sp/>registered<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>BSP_TestIF_USB_Handle<sp/>||<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>BSP_TestIF_USB_Handle-&gt;usbRxCallback)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" kindref="member">RETCODE_UNINITIALIZED</ref>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>TestIF_USB_ISRCallback<sp/>=<sp/>BSP_TestIF_USB_Handle-&gt;usbRxCallback;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/>*<sp/>Refer<sp/>to<sp/>interface<sp/>header<sp/>for<sp/>description</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>BSP_TestInterface_Disable(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>)<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba1c69bb324e036003b8f566f0b54da99e" kindref="member">RETCODE_NOT_SUPPORTED</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/>*<sp/>Refer<sp/>to<sp/>interface<sp/>header<sp/>for<sp/>description</highlight></codeline>
+<codeline lineno="70"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>BSP_TestInterface_Disconnect(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>)<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba1c69bb324e036003b8f566f0b54da99e" kindref="member">RETCODE_NOT_SUPPORTED</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/>*<sp/>Refer<sp/>to<sp/>interface<sp/>header<sp/>for<sp/>description</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><ref refid="group___b_c_d_s___h_a_l_1ga39fd157e78cb1535814fe63af2f3e1ee" kindref="member">HWHandle_T</ref><sp/>BSP_TestInterface_GetUSBHandle(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>BSP_TestIF_USB_Handle)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___h_a_l_1ga39fd157e78cb1535814fe63af2f3e1ee" kindref="member">HWHandle_T</ref>)<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___h_a_l_1ga39fd157e78cb1535814fe63af2f3e1ee" kindref="member">HWHandle_T</ref>)<sp/>BSP_TestIF_USB_Handle;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>BCDS_FEATURE_BSP_TEST_INTERFACE<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_TestInterface.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,757 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___l_e_a_n_b2_c_a_p" kind="group">
+    <compoundname>LEANB2CAP</compoundname>
+    <title>LeanB2CAP</title>
+    <innerfile refid="_b_c_d_s___lean_b2_c_a_p_8h">BCDS_LeanB2CAP.h</innerfile>
+    <innerclass refid="struct_lean_b2_c_a_p___frame_data___s" prot="public">LeanB2CAP_FrameData_S</innerclass>
+    <innerclass refid="struct_lean_b2_c_a_p___overhead___s" prot="public">LeanB2CAP_Overhead_S</innerclass>
+    <innerclass refid="struct_lean_b2_c_a_p___raw_data___s" prot="public">LeanB2CAP_RawData_S</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___l_e_a_n_b2_c_a_p_1ga90779defafdb724eb6dd69ef105032a8" prot="public" static="no">
+        <name>LeanB2CAP_CommandType_E</name>
+        <enumvalue id="group___l_e_a_n_b2_c_a_p_1gga90779defafdb724eb6dd69ef105032a8ab16f094f2a6e62cab9ff2f32051363fe" prot="public">
+          <name>LEAN_B2CAP_CMD_READ</name>
+          <initializer>= &apos;R&apos;</initializer>
+          <briefdescription>
+<para>Enum to represent the LeanB2CAP command types. </para>          </briefdescription>
+          <detaileddescription>
+<para>Read command. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___l_e_a_n_b2_c_a_p_1gga90779defafdb724eb6dd69ef105032a8a73ac9216d6c5c7d7f95b4f9b65889de3" prot="public">
+          <name>LEAN_B2CAP_CMD_READ_LONG</name>
+          <initializer>= &apos;R&apos; + &apos;L&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Long read command. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___l_e_a_n_b2_c_a_p_1gga90779defafdb724eb6dd69ef105032a8a9e50475a19c363784b6bf116479e597f" prot="public">
+          <name>LEAN_B2CAP_CMD_WRITE</name>
+          <initializer>= &apos;W&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Write command. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___l_e_a_n_b2_c_a_p_1gga90779defafdb724eb6dd69ef105032a8a26c58ad66665727504f8ffb2347eb73f" prot="public">
+          <name>LEAN_B2CAP_CMD_WRITE_WITH_CONFIRMATION</name>
+          <initializer>= &apos;W&apos; + &apos;C&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Write with confirmation command. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___l_e_a_n_b2_c_a_p_1gga90779defafdb724eb6dd69ef105032a8ae64f8b9f85f8751c3a4073e90acbbede" prot="public">
+          <name>LEAN_B2CAP_CMD_WRITE_LONG</name>
+          <initializer>= &apos;W&apos; + &apos;L&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Long write command. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___l_e_a_n_b2_c_a_p_1gga90779defafdb724eb6dd69ef105032a8a14ae29dab69b8ce32e8c28d2a98c6c91" prot="public">
+          <name>LEAN_B2CAP_CMD_WRITE_LONG_WITH_CONFIRMATION</name>
+          <initializer>= &apos;W&apos; + &apos;L&apos; + &apos;C&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Long write with confirmation command. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___l_e_a_n_b2_c_a_p_1gga90779defafdb724eb6dd69ef105032a8ab4a9d27f8346c8758aec03ba633392b7" prot="public">
+          <name>LEAN_B2CAP_CMD_CONFIRMATION</name>
+          <initializer>= &apos;C&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Confirmation command. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___l_e_a_n_b2_c_a_p_1gga90779defafdb724eb6dd69ef105032a8a925bcead318796efbd76775fa063d989" prot="public">
+          <name>LEAN_B2CAP_CMD_INFO_CHANNEL0</name>
+          <initializer>= &apos;I&apos; + &apos;0&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Information command from Channel 0. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___l_e_a_n_b2_c_a_p_1gga90779defafdb724eb6dd69ef105032a8a7cbfb0f32e87208b82d99c574b5b628f" prot="public">
+          <name>LEAN_B2CAP_CMD_INFO_CHANNEL1</name>
+          <initializer>= &apos;I&apos; + &apos;1&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Information command from Channel 1. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___l_e_a_n_b2_c_a_p_1gga90779defafdb724eb6dd69ef105032a8a2ff3740ba06bcf5d6d5559f926f2aefe" prot="public">
+          <name>LEAN_B2CAP_CMD_INFO_CHANNEL2</name>
+          <initializer>= &apos;I&apos; + &apos;2&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Information command from Channel 2. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___l_e_a_n_b2_c_a_p_1gga90779defafdb724eb6dd69ef105032a8a89b7abfc38726530b5d7d1cd2a429710" prot="public">
+          <name>LEAN_B2CAP_CMD_INFO_CHANNEL3</name>
+          <initializer>= &apos;I&apos; + &apos;3&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Information command from Channel 3. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" line="217" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" bodystart="216" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___l_e_a_n_b2_c_a_p_1ga3fffb3d0c8253c393dacbc83e782ea91" prot="public" static="no">
+        <name>LeanB2CAP_Event_E</name>
+        <enumvalue id="group___l_e_a_n_b2_c_a_p_1gga3fffb3d0c8253c393dacbc83e782ea91a84f8ac1d4178832cebcd7b7e16b6a145" prot="public">
+          <name>LEAN_B2CAP_EVENT_FRAME_RX_COMPLETE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>A valid LeanB2CAP frame is received </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___l_e_a_n_b2_c_a_p_1gga3fffb3d0c8253c393dacbc83e782ea91a1fbb76ae11cf545c505ceb264ffd0283" prot="public">
+          <name>LEAN_B2CAP_EVENT_FRAME_RX_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>An invalid LeanB2CAP frame is encountered </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum to represent the LeanB2CAP events. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" line="156" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" bodystart="155" bodyend="159"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___l_e_a_n_b2_c_a_p_1ga1bdf91f7fc59968d408171e50ec58734" prot="public" static="no">
+        <type>enum <ref refid="group___l_e_a_n_b2_c_a_p_1ga90779defafdb724eb6dd69ef105032a8" kindref="member">LeanB2CAP_CommandType_E</ref></type>
+        <definition>typedef enum LeanB2CAP_CommandType_E LeanB2CAP_CommandType_T</definition>
+        <argsstring></argsstring>
+        <name>LeanB2CAP_CommandType_T</name>
+        <briefdescription>
+<para>Type definition to represent the LeanB2CAP command type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" line="73" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___l_e_a_n_b2_c_a_p_1ga00a2619f83610e9ef931dd12d847e273" prot="public" static="no">
+        <type>enum <ref refid="group___l_e_a_n_b2_c_a_p_1ga3fffb3d0c8253c393dacbc83e782ea91" kindref="member">LeanB2CAP_Event_E</ref></type>
+        <definition>typedef enum LeanB2CAP_Event_E LeanB2CAP_Event_T</definition>
+        <argsstring></argsstring>
+        <name>LeanB2CAP_Event_T</name>
+        <briefdescription>
+<para>Type definition to represent the LeanB2CAP event. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" line="73" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___l_e_a_n_b2_c_a_p_1ga7b69e8f9d278f5a22770bffcc859f5cf" prot="public" static="no">
+        <type>struct <ref refid="struct_lean_b2_c_a_p___frame_data___s" kindref="compound">LeanB2CAP_FrameData_S</ref></type>
+        <definition>typedef struct LeanB2CAP_FrameData_S LeanB2CAP_FrameData_T</definition>
+        <argsstring></argsstring>
+        <name>LeanB2CAP_FrameData_T</name>
+        <briefdescription>
+<para>Type definition to represent any common data frames. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" line="73" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___l_e_a_n_b2_c_a_p_1gab5e67ee11b893f965cef149d029b9b17" prot="public" static="no">
+        <type>struct LeanB2CAP_HandleDescriptor_S *</type>
+        <definition>typedef struct LeanB2CAP_HandleDescriptor_S* LeanB2CAP_HandlePtr_T</definition>
+        <argsstring></argsstring>
+        <name>LeanB2CAP_HandlePtr_T</name>
+        <briefdescription>
+<para>Typedef for the LeanB2CAP handle. </para>        </briefdescription>
+        <detaileddescription>
+<para>The actual handle context informations are hidden from the interface user. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" line="296" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" bodystart="296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___l_e_a_n_b2_c_a_p_1ga61feff63764e7370c917a327c46f7c7a" prot="public" static="no">
+        <type>struct <ref refid="struct_lean_b2_c_a_p___overhead___s" kindref="compound">LeanB2CAP_Overhead_S</ref></type>
+        <definition>typedef struct LeanB2CAP_Overhead_S LeanB2CAP_Overhead_T</definition>
+        <argsstring></argsstring>
+        <name>LeanB2CAP_Overhead_T</name>
+        <briefdescription>
+<para>Type definition to represent LeanB2CAP payload overhead (header and footer). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" line="73" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___l_e_a_n_b2_c_a_p_1ga2723df20430bdfcc22f2bb8043e75731" prot="public" static="no">
+        <type>struct <ref refid="struct_lean_b2_c_a_p___raw_data___s" kindref="compound">LeanB2CAP_RawData_S</ref></type>
+        <definition>typedef struct LeanB2CAP_RawData_S LeanB2CAP_RawData_T</definition>
+        <argsstring></argsstring>
+        <name>LeanB2CAP_RawData_T</name>
+        <briefdescription>
+<para>Type definition to represent the raw data for LeanB2CAP frame building. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" line="73" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___l_e_a_n_b2_c_a_p_1gad561188f2cfe221168d03d504b4607b8" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* LeanB2CAPCallback)(LeanB2CAP_Event_T Event, void *Data)</definition>
+        <argsstring>)(LeanB2CAP_Event_T Event, void *Data)</argsstring>
+        <name>LeanB2CAPCallback</name>
+        <briefdescription>
+<para>This is the data type for the LeanB2CAP event callback function. </para>        </briefdescription>
+        <detaileddescription>
+<para>The callback is registered at the initialization. It is invoked by the LeanB2CAP received data processing API to notify the application about any LeanB2CAP events.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event information.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data based on the event. This shall be cast to appropriate data type to retrieve valid information.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Below are the Event to corresponding Data cast mapping. <table rows="3" cols="2"><row>
+<entry thead="yes"><para>Event </para></entry><entry thead="yes"><para>Data  </para></entry></row>
+<row>
+<entry thead="no"><para>LEAN_B2CAP_EVENT_FRAME_RX_COMPLETE </para></entry><entry thead="no"><para>LeanB2CAP_RawData_T </para></entry></row>
+<row>
+<entry thead="no"><para>LEAN_B2CAP_EVENT_FRAME_RX_ERROR </para></entry><entry thead="no"><para>Retcode_T </para></entry></row>
+</table>
+</para></simplesect>
+<simplesect kind="see"><para><ref refid="group___l_e_a_n_b2_c_a_p_1ga3fffb3d0c8253c393dacbc83e782ea91" kindref="member">LeanB2CAP_Event_E</ref>, <ref refid="struct_lean_b2_c_a_p___frame_data___s" kindref="compound">LeanB2CAP_FrameData_S</ref>, <ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>, <ref refid="group___u_t_i_l_s_1gaf6e34e978b1294a3773f02f5ca7894d8" kindref="member">Utils_Retcode_E</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" line="288" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___l_e_a_n_b2_c_a_p_1ga106295096493500fd28deaac7ab2fd10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LeanB2CAP_Builder</definition>
+        <argsstring>(LeanB2CAP_FrameData_T *LeanB2CAPBuildOuput, LeanB2CAP_RawData_T *RawDataInput)</argsstring>
+        <name>LeanB2CAP_Builder</name>
+        <param>
+          <type><ref refid="group___l_e_a_n_b2_c_a_p_1ga7b69e8f9d278f5a22770bffcc859f5cf" kindref="member">LeanB2CAP_FrameData_T</ref> *</type>
+          <declname>LeanB2CAPBuildOuput</declname>
+        </param>
+        <param>
+          <type><ref refid="group___l_e_a_n_b2_c_a_p_1ga2723df20430bdfcc22f2bb8043e75731" kindref="member">LeanB2CAP_RawData_T</ref> *</type>
+          <declname>RawDataInput</declname>
+        </param>
+        <briefdescription>
+<para>Builds the LeanB2CAP payload. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This is completely independent of the handle. Also, the input and output data buffers must be provided by the interface user.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">LeanB2CAPBuildOuput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LeanB2CAP payload that is built based on the input data information. Internally the output buffer size is validated against the input payload based on Lean B2CAP overhead.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">RawDataInput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input data information based on which the resultant LeanB2CAP payload is to be built.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if successful </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if internal CRC calculation failed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___u_t_i_l_s_1ggaf6e34e978b1294a3773f02f5ca7894d8a18c383d23f907f4c6aa06139571b2f51" kindref="member">RETCODE_LEANB2CAP_CMD_TYPE_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if invalid command type was provided </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___u_t_i_l_s_1ggaf6e34e978b1294a3773f02f5ca7894d8a062b8ea822faf06a8f94fd92c8ac3a5b" kindref="member">RETCODE_LEANB2CAP_LENGTH_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if invalid length was provided </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>NULL has been passed instead of a valid input / output payload pointer </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" line="375" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___l_e_a_n_b2_c_a_p_1gad3618fcfae3168b7227d76a12b486cf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LeanB2CAP_Deinitialize</definition>
+        <argsstring>(LeanB2CAP_HandlePtr_T *Handle)</argsstring>
+        <name>LeanB2CAP_Deinitialize</name>
+        <param>
+          <type><ref refid="group___l_e_a_n_b2_c_a_p_1gab5e67ee11b893f965cef149d029b9b17" kindref="member">LeanB2CAP_HandlePtr_T</ref> *</type>
+          <declname>Handle</declname>
+        </param>
+        <briefdescription>
+<para>Deinitializes an LeanB2CAP instance. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The handle must be initialized prior to this by making use of the LeanB2CAP_Initialize API.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LeanB2CAP handle.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if successful </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if Unknown Handle is passed instead of a valid Handle </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>NULL has been passed instead of a valid Handle </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" line="432" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___l_e_a_n_b2_c_a_p_1ga3c20f9cb317107df042bfdd2219cf48d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LeanB2CAP_Initialize</definition>
+        <argsstring>(LeanB2CAP_HandlePtr_T *Handle, LeanB2CAP_FrameData_T *ValidOutputDataStorageBufferInfo, LeanB2CAPCallback Callback)</argsstring>
+        <name>LeanB2CAP_Initialize</name>
+        <param>
+          <type><ref refid="group___l_e_a_n_b2_c_a_p_1gab5e67ee11b893f965cef149d029b9b17" kindref="member">LeanB2CAP_HandlePtr_T</ref> *</type>
+          <declname>Handle</declname>
+        </param>
+        <param>
+          <type><ref refid="group___l_e_a_n_b2_c_a_p_1ga7b69e8f9d278f5a22770bffcc859f5cf" kindref="member">LeanB2CAP_FrameData_T</ref> *</type>
+          <declname>ValidOutputDataStorageBufferInfo</declname>
+        </param>
+        <param>
+          <type><ref refid="group___l_e_a_n_b2_c_a_p_1gad561188f2cfe221168d03d504b4607b8" kindref="member">LeanB2CAPCallback</ref></type>
+          <declname>Callback</declname>
+        </param>
+        <briefdescription>
+<para>Initializes an LeanB2CAP instance. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">Handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LeanB2CAP handle. Use a void pointer to save the handle context address as the Handle descriptor is hidden from the user. this shall be used for further reference.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ValidOutputDataStorageBufferInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Valid output data/payload storage buffer information. Must not be NULL.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Callback to intimate any LeanB2CAP Receive Process event. Must not be NULL.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if successful </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba497273b2285191edc1cda8648b67250a" kindref="member">RETCODE_OUT_OF_RESOURCES</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if no free handle is available </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if NULL has been passed instead of a valid Callback </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" line="319" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___l_e_a_n_b2_c_a_p_1ga04c430cbbabd22792e587707235eeef3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LeanB2CAP_OverheadBuilder</definition>
+        <argsstring>(LeanB2CAP_Overhead_T *OutputOverhead, LeanB2CAP_RawData_T *RawDataInput)</argsstring>
+        <name>LeanB2CAP_OverheadBuilder</name>
+        <param>
+          <type><ref refid="group___l_e_a_n_b2_c_a_p_1ga61feff63764e7370c917a327c46f7c7a" kindref="member">LeanB2CAP_Overhead_T</ref> *</type>
+          <declname>OutputOverhead</declname>
+        </param>
+        <param>
+          <type><ref refid="group___l_e_a_n_b2_c_a_p_1ga2723df20430bdfcc22f2bb8043e75731" kindref="member">LeanB2CAP_RawData_T</ref> *</type>
+          <declname>RawDataInput</declname>
+        </param>
+        <briefdescription>
+<para>Builds the LeanB2CAP payload overhead (header and footer). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This is completely independent of the handle. Also, the input and output data buffers must be provided by the interface user.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in/out]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>OutputOverhead LeanB2CAP overhead that is created based on the input data information. The HeaderPointer pointer must point to buffer of size equalent to atleast LEANB2CAP_HEADER_OVERHEAD. Similarly, the FooterPointer pointer must point to buffer of size equalent to atleast LEANB2CAP_FOOTER_OVERHEAD.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">RawDataInput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input data information based on which the resultant LeanB2CAP payload is to be built.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if successful </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if internal CRC calculation failed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___u_t_i_l_s_1ggaf6e34e978b1294a3773f02f5ca7894d8a18c383d23f907f4c6aa06139571b2f51" kindref="member">RETCODE_LEANB2CAP_CMD_TYPE_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if invalid command type was provided </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>NULL has been passed instead of a valid input / output payload pointer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if invalid output buffer sizes or unsupported raw data length is provided </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" line="401" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___l_e_a_n_b2_c_a_p_1gaaba19a422961f97b6ee1df5d3545ec08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LeanB2CAP_ResetRxDataProcessor</definition>
+        <argsstring>(LeanB2CAP_HandlePtr_T *Handle)</argsstring>
+        <name>LeanB2CAP_ResetRxDataProcessor</name>
+        <param>
+          <type><ref refid="group___l_e_a_n_b2_c_a_p_1gab5e67ee11b893f965cef149d029b9b17" kindref="member">LeanB2CAP_HandlePtr_T</ref> *</type>
+          <declname>Handle</declname>
+        </param>
+        <briefdescription>
+<para>Resets the LeanB2CAP received data process informations. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The handle must be initialized prior to this by making use of the LeanB2CAP_Initialize API.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LeanB2CAP handle.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if successful </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if Unknown Handle is passed instead of a valid Handle </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>NULL has been passed instead of a valid Handle </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" line="416" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___l_e_a_n_b2_c_a_p_1gabfe9b12a394e16e543ddf1b46741cc72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LeanB2CAP_RxDataProcessor</definition>
+        <argsstring>(LeanB2CAP_HandlePtr_T *Handle, LeanB2CAP_FrameData_T *PayLoad)</argsstring>
+        <name>LeanB2CAP_RxDataProcessor</name>
+        <param>
+          <type><ref refid="group___l_e_a_n_b2_c_a_p_1gab5e67ee11b893f965cef149d029b9b17" kindref="member">LeanB2CAP_HandlePtr_T</ref> *</type>
+          <declname>Handle</declname>
+        </param>
+        <param>
+          <type><ref refid="group___l_e_a_n_b2_c_a_p_1ga7b69e8f9d278f5a22770bffcc859f5cf" kindref="member">LeanB2CAP_FrameData_T</ref> *</type>
+          <declname>PayLoad</declname>
+        </param>
+        <briefdescription>
+<para>Handles the LeanB2CAP received data processing. </para>        </briefdescription>
+        <detaileddescription>
+<para>The processed data results are intimated to the user in the same processing context via the registered callback.</para><para><simplesect kind="note"><para>The handle must be initialized prior to this by making use of the LeanB2CAP_Initialize API.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LeanB2CAP handle.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">PayLoad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Payload information consisting of the received serial line data pointer and its size.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if successful </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___u_t_i_l_s_1ggaf6e34e978b1294a3773f02f5ca7894d8aa2d843a9cae051efd7aec8b5af1cc654" kindref="member">RETCODE_LEANB2CAP_RX_PROCESSOR_FAIL</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unknown/un-handled application logic was encountered </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if internal CRC calculation failed in the last byte processed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___u_t_i_l_s_1ggaf6e34e978b1294a3773f02f5ca7894d8a6fb5d9ec596392ae8d8458b449bf0b14" kindref="member">RETCODE_LEANB2CAP_SD_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if invalid start delimiter error was encountered in the last byte processed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___u_t_i_l_s_1ggaf6e34e978b1294a3773f02f5ca7894d8a062b8ea822faf06a8f94fd92c8ac3a5b" kindref="member">RETCODE_LEANB2CAP_LENGTH_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if invalid length was encountered in the last byte processed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___u_t_i_l_s_1ggaf6e34e978b1294a3773f02f5ca7894d8a18c383d23f907f4c6aa06139571b2f51" kindref="member">RETCODE_LEANB2CAP_CMD_TYPE_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if invalid command type was encountered in the last byte processed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___u_t_i_l_s_1ggaf6e34e978b1294a3773f02f5ca7894d8a9edd623d10aab999f24642b62a664af1" kindref="member">RETCODE_LEANB2CAP_CRC_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if invalid CRC was encountered in the last byte processed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___u_t_i_l_s_1ggaf6e34e978b1294a3773f02f5ca7894d8acfc0ce96a954fa3cbcb4237a4adb6022" kindref="member">RETCODE_LEANB2CAP_FRAME_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unknown/un-handled frame state was encountered </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___u_t_i_l_s_1ggaf6e34e978b1294a3773f02f5ca7894d8acec2dbd38995f71eb558f596e645929d" kindref="member">RETCODE_LEANB2CAP_INVALID_CALLBACK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Callback for Lean B2CAP is NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if Unknown Handle is passed instead of a valid Handle </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>NULL has been passed instead of a valid Handle </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" line="350" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___l_e_a_n_b2_c_a_p_1gaeaaba590867b6a478df4155f5ef66af4" prot="public" static="no">
+        <name>LEANB2CAP_FOOTER_OVERHEAD</name>
+        <initializer>(1UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>LeanB2CAP footer size </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" line="150" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___l_e_a_n_b2_c_a_p_1gad7d8cfa0940e0501041a4b31559d5d18" prot="public" static="no">
+        <name>LEANB2CAP_HEADER_OVERHEAD</name>
+        <initializer>(5UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>LeanB2CAP header size </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" line="149" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_LeanB2CAP.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>LeanB2CAP API for CoSP. </para>    </briefdescription>
+    <detaileddescription>
+<para>The LeanB2CAP is a binary framing protocol to transmit payload data over a serial transport layer. The protocol is mainly designed to be used together with stateless Client - Server architectures.</para><para>The goal for the serial transport layer is to find bit errors and to be able to resend corrupted frames. To achieve this goal LeanB2CAP has the following frame classifications.</para><para><table rows="2" cols="6"><row>
+<entry thead="yes"><para>Start Delimiter </para></entry><entry thead="yes"><para>Length </para></entry><entry thead="yes"><para>Command Type </para></entry><entry thead="yes"><para>Check Sum 1 </para></entry><entry thead="yes"><para>Payload </para></entry><entry thead="yes"><para>Check Sum 2  </para></entry></row>
+<row>
+<entry thead="no"><para>1 byte </para></entry><entry thead="no"><para>2 bytes </para></entry><entry thead="no"><para>1 byte </para></entry><entry thead="no"><para>1 byte </para></entry><entry thead="no"><para>1 - 65533 bytes </para></entry><entry thead="no"><para>1 byte </para></entry></row>
+</table>
+The LeanB2CAP frame format is explained below.</para><para>Start Delimiter is an unique byte identifying the start of a new LeanB2CAP frame. The fixed value is 0x55.</para><para>Length indicates the number of bytes to follow. It includes the sum of the following. Length of Command Type Length of Check Sum 1 Length of Payload Length of Check Sum 2</para><para>Command Type is any one of the protocol supported commands. It is used to categorise and handle a mixture of important / unimportant data packets.</para><para>Check Sum 1 is 8-bit CRC (polynomial value - 2) of the the following. Start Delimiter Length Command Type</para><para>Payload is the actual data to be sent across the serial transport layer. It must be at-least a byte long. And a maximum of 65533 bytes.</para><para>Check Sum 2 is 8-bit CRC (polynomial value - 2) of the the following. Check Sum 1 Payload</para><para>A typical use of these API set would start with initializing the LeanB2CAP instance. Then, a frame can be build to be sent in the serial line using the builder. The received data&apos;s shall be sent to the receive processor to trigger events based on data integrity.</para><para><programlisting><codeline><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LeanB2CAP_EventCallback(<ref refid="group___l_e_a_n_b2_c_a_p_1ga00a2619f83610e9ef931dd12d847e273" kindref="member">LeanB2CAP_Event_T</ref><sp/>Event,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>Data)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(Event)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group___l_e_a_n_b2_c_a_p_1gga3fffb3d0c8253c393dacbc83e782ea91a84f8ac1d4178832cebcd7b7e16b6a145" kindref="member">LEAN_B2CAP_EVENT_FRAME_RX_COMPLETE</ref>:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_lean_b2_c_a_p___raw_data___s" kindref="compound">LeanB2CAP_RawData_T</ref><sp/>*<sp/>PayloadInfo<sp/>=<sp/>(<ref refid="struct_lean_b2_c_a_p___raw_data___s" kindref="compound">LeanB2CAP_RawData_T</ref><sp/>*)<sp/>Data;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Payload<sp/>information<sp/>is<sp/>available<sp/>in<sp/>PayloadInfo</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group___l_e_a_n_b2_c_a_p_1gga3fffb3d0c8253c393dacbc83e782ea91a1fbb76ae11cf545c505ceb264ffd0283" kindref="member">LEAN_B2CAP_EVENT_FRAME_RX_ERROR</ref>:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>*<sp/>ErrorInfo<sp/>=<sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>*)<sp/>Data;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Error<sp/>information<sp/>is<sp/>available<sp/>in<sp/>ErrorInfo</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>...</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LeanB2CAP_UsageExample()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>Rc<sp/>=<sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref>;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___l_e_a_n_b2_c_a_p_1gab5e67ee11b893f965cef149d029b9b17" kindref="member">LeanB2CAP_HandlePtr_T</ref><sp/>LeanB2CAPHandle;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Lean<sp/>B2CAP<sp/>handle<sp/>instantiation</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Rc<sp/>=<sp/><ref refid="group___l_e_a_n_b2_c_a_p_1ga3c20f9cb317107df042bfdd2219cf48d" kindref="member">LeanB2CAP_Initialize</ref>(&amp;LeanB2CAPHandle,<sp/>&amp;LeanB2CAPEventCallback);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Lean<sp/>B2CAP<sp/>data<sp/>serialization</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_lean_b2_c_a_p___raw_data___s" kindref="compound">LeanB2CAP_RawData_T</ref><sp/>RawData;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>RawData.<ref refid="struct_lean_b2_c_a_p___raw_data___s_1a088b039b63bb7ae1ea3a6890aaefd274" kindref="member">CommandType</ref><sp/>=<sp/><ref refid="group___l_e_a_n_b2_c_a_p_1gga90779defafdb724eb6dd69ef105032a8a9e50475a19c363784b6bf116479e597f" kindref="member">LEAN_B2CAP_CMD_WRITE</ref>;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>RawData.<ref refid="struct_lean_b2_c_a_p___raw_data___s_1aa286b056d92f2f0e9423fcd77b4de516" kindref="member">DataPointer</ref><sp/>=<sp/>PtrToDataForSerialization;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>RawData.<ref refid="struct_lean_b2_c_a_p___raw_data___s_1a8b937c433cad1b26446b7313c5cb10f9" kindref="member">DataSize</ref><sp/>=<sp/>LengthOfDataToSerialization;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_lean_b2_c_a_p___frame_data___s" kindref="compound">LeanB2CAP_FrameData_T</ref><sp/>OutputData;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>OutputData.<ref refid="struct_lean_b2_c_a_p___frame_data___s_1ab168d39af6312827d26db153e3bcfd1e" kindref="member">FrameDataPointer</ref><sp/>=<sp/>LeanB2CAPTransmitBuffer;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Rc<sp/>=<sp/><ref refid="group___l_e_a_n_b2_c_a_p_1ga106295096493500fd28deaac7ab2fd10" kindref="member">LeanB2CAP_Builder</ref>(&amp;RawData,&amp;OutputData);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>UartSend(OutputData.<ref refid="struct_lean_b2_c_a_p___frame_data___s_1ab168d39af6312827d26db153e3bcfd1e" kindref="member">FrameDataPointer</ref>,<sp/>OutputData.<ref refid="struct_lean_b2_c_a_p___frame_data___s_1a3d62768645ecaed31eee54c97c058c80" kindref="member">FrameDataSize</ref>);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Lean<sp/>B2CAP<sp/>data<sp/>reception</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_lean_b2_c_a_p___frame_data___s" kindref="compound">LeanB2CAP_FrameData_T</ref><sp/>FrameData;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>FrameData.<ref refid="struct_lean_b2_c_a_p___frame_data___s_1ab168d39af6312827d26db153e3bcfd1e" kindref="member">FrameDataPointer</ref><sp/>=<sp/>&amp;LeanB2CAPReceiveBuffer;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>FrameData.<ref refid="struct_lean_b2_c_a_p___frame_data___s_1a3d62768645ecaed31eee54c97c058c80" kindref="member">FrameDataSize</ref><sp/>=<sp/>UartReceive(LeanB2CAPReceiveBuffer,<sp/>LEAN_B2CAP_RX_BUFFER_LEN);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>would<sp/>internally<sp/>call<sp/>the<sp/>Lean<sp/>B2CAP<sp/>Event<sp/>callback<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___l_e_a_n_b2_c_a_p_1gabfe9b12a394e16e543ddf1b46741cc72" kindref="member">LeanB2CAP_RxDataProcessor</ref>(&amp;LeanB2CAPHandle,&amp;FrameData);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

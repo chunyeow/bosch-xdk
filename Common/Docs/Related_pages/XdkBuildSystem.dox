@@ -1,0 +1,82 @@
+/** 
+@page XDK_Build_System XDK Build System
+@brief Explains the build system of XDK
+<hr>
+
+XDK uses a [make](https://en.wikipedia.org/wiki/Make_%28software%29)-based build system. Make is a powerful tool, that uses so-called makefiles to specify, which files are required to compile a project. The [Manual of Make](http://www.gnu.org/software/make/manual/make.html) contains all the details that may be required to understand the behaviour and inner workings of make.
+
+Each XDK application contains the "Makefile". The makefile triggers "xdk110/Common/application.mk", which contains all the common elements of the application makefiles. While the overall build system of XDK works out of the box, certain modifications to the makefile of your applications may be required as outlined in this page.
+
+\section XDK_Build_System_Variables Which variables should I touch in the Makefile?
+
+Here you see an exemplary excerpt from an XDK application makefile:
+
+\code
+
+# Macro to define Start-up method. change this macro to "CUSTOM_STARTUP" to have custom start-up.
+export BCDS_SYSTEM_STARTUP_METHOD = DEFAULT_STARTUP
+
+export BCDS_APP_NAME = XDK110_myExample
+export BCDS_APP_DIR = $(CURDIR)
+export BCDS_APP_SOURCE_DIR = $(BCDS_APP_DIR)/source
+
+
+# Make a note the relative path for the below variable is present in  xdk110/Common/application.mk
+export BCDS_CFLAGS_COMMON = -DMY_DEFINE
+
+# Make a note MY_APP_INCLUDE_DIR is the user application include directory. If there is nothing then leave empty
+BCDS_XDK_INCLUDES = \
+	-I $(MY_APP_INCLUDE_DIR) 
+
+# By default all the feature macros are enabled in common_feature.mk.
+# This macro is used to select the features needed by application
+# ALL    ----> All the features will be enabled
+# NONE   ----> All the features will be disabled
+# SELECT ----> Application has to select the required features
+XDK_FEATURE_SET ?='ALL'
+
+# Selection of features is done in application of xdk110/Apps
+
+# Application Files :Add the Source file
+BCDS_XDK_APP_SOURCE_FILES = \
+	$(BCDS_APP_SOURCE_DIR)/myExample.c
+\endcode
+
+In this example, the following variables may need changing:
+
+Variable              	       | Meaning                      
+-------------------------------|-----------------------------------------
+XDK_FEATURE_SET    	       	   | Defines selection of features need by application
+BCDS_CFLAGS_COMMON    	       | Defines application-specific CFLAGS (see below)
+BCDS_APP_NAME                  | Defines the project name, which is used to determine the name of your executable file
+BCDS_XDK_INCLUDES              | Defines the search path' for include files (see @ref XDK_Build_System_Add_Source)
+BCDS_XDK_APP_SOURCE_FILES      | Defines the c-files that are taken into account when compiling your project (see @ref XDK_Build_System_Add_Source)
+BCDS_SYSTEM_STARTUP_METHOD     | Defines whether XDK uses the standard or a custom initialization routine (see @ref XDK_SOFTWARE_STARTUP_GUIDE for detailed information)
+
+\section XDK_Build_System_Add_Source How to add a new source file to my project?
+
+When adding or removing files from your project, you have to reflect this change in the Makefile. Please update the BCDS_XDK_APP_SOURCE_FILES variable to include all files that you want to compile. Furthermore, please update the BCDS_XDK_INCLUDES variable to include all path' in which include files may be residing. After adding new include path', please make sure to reflect the change in the XDK Workbench project configuration (see below).
+
+\image html XDK_Workbench_Includepath.png
+
+\section XDK_Build_System_Change_Cflags How to change CFLAGS in my project?
+
+[CFLAGS](https://en.wikipedia.org/wiki/CFLAGS) are flags passed on to the compiler, that allow you to configure various things in your software and in the behaviour of the compiler. To add add specific CFLAGS for your application, please create a new line in the makefile of your project:
+
+\code
+BCDS_CFLAGS_COMMON = -DMY_DEFINE
+\endcode 
+
+In this line, you can add your own cflags. 
+
+\section XDK_Build_System_Rename How to rename a project in XDK Workbench?
+
+If you rename a project in XDK workbench, the project configuration as well as the makefile have to be modified.
+
+First of all, right-click your project in XDK Workbench and select "Properties". Go into the "C/C++ Build" Tab and update the "Build Directory". To do this, click on "Workspace" and select the "make" folder inside your renamed application.
+
+\image html XDK_Workbench_Build_Directory.png
+
+Now, open up the Makefile in your renamed application. You may want to modify the BCDS_APP_NAME, as it defines the name of your executable file afterwards. Furthermore, you may want to add and/or change the files listed in BCDS_XDK_APP_SOURCE_FILES. 
+
+*/

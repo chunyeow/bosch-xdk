@@ -1,0 +1,351 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_ble_blood_pressure___collector_8h" kind="file">
+    <compoundname>BleBloodPressure_Collector.h</compoundname>
+    <includes refid="_ble_types_8h" local="yes">BleTypes.h</includes>
+    <includes refid="_ble_gatt_8h" local="yes">BleGatt.h</includes>
+    <includes refid="_ble_engine_8h" local="yes">BleEngine.h</includes>
+    <incdepgraph>
+      <node id="28114">
+        <label>ATT/att.h</label>
+        <link refid="_att_8h"/>
+        <childnode refid="28115" relation="include">
+        </childnode>
+        <childnode refid="28116" relation="include">
+        </childnode>
+      </node>
+      <node id="28113">
+        <label>BleGatt.h</label>
+        <link refid="_ble_gatt_8h"/>
+        <childnode refid="28110" relation="include">
+        </childnode>
+        <childnode refid="28114" relation="include">
+        </childnode>
+      </node>
+      <node id="28118">
+        <label>BleEngine.h</label>
+        <link refid="_ble_engine_8h"/>
+        <childnode refid="28110" relation="include">
+        </childnode>
+      </node>
+      <node id="28117">
+        <label>ATT/atttypes.h</label>
+        <link refid="atttypes_8h"/>
+        <childnode refid="28115" relation="include">
+        </childnode>
+      </node>
+      <node id="28110">
+        <label>BleTypes.h</label>
+        <link refid="_ble_types_8h"/>
+        <childnode refid="28111" relation="include">
+        </childnode>
+      </node>
+      <node id="28116">
+        <label>ATT/AttBase.h</label>
+        <link refid="_att_base_8h"/>
+        <childnode refid="28115" relation="include">
+        </childnode>
+        <childnode refid="28117" relation="include">
+        </childnode>
+      </node>
+      <node id="28112">
+        <label>BLECustomConfig.h</label>
+        <link refid="_common_2config_2_b_l_e_custom_config_8h"/>
+      </node>
+      <node id="28111">
+        <label>BleConfig.h</label>
+        <link refid="_ble_config_8h"/>
+        <childnode refid="28112" relation="include">
+        </childnode>
+      </node>
+      <node id="28109">
+        <label>SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_BloodPressure/Interfaces/BleBloodPressure_Collector.h</label>
+        <link refid="BleBloodPressure_Collector.h"/>
+        <childnode refid="28110" relation="include">
+        </childnode>
+        <childnode refid="28113" relation="include">
+        </childnode>
+        <childnode refid="28118" relation="include">
+        </childnode>
+      </node>
+      <node id="28115">
+        <label>ATT/AttConfig.h</label>
+        <link refid="_att_config_8h"/>
+        <childnode refid="28110" relation="include">
+        </childnode>
+        <childnode refid="28111" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_ble_blood_pressure___collector_8h_1a0bfc17ca1434caf10564fddf84ef7dc1" prot="public" static="no">
+        <name>BLEBLOODPRESSURE_SUPPORT_COLLECTOR</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>BLEBLOODPRESSURE_SUPPORT_COLLECTOR Defines if the BLE BLOOD PRESSURE Profile implementation supports the COLLECTOR Role If enabled ( set to 1 ) it enables all the following BLE BLOOD PRESSURE Profile COLLECTOR configurations and Application Interfaces. The default value for this option is disabled (0). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_BloodPressure/Interfaces/BleBloodPressure_Collector.h" line="41" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_BloodPressure/Interfaces/BleBloodPressure_Collector.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__BLEBLOODPRESSURE_COLLECTOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__BLEBLOODPRESSURE_COLLECTOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>This<sp/>software<sp/>is<sp/>copyrighted<sp/>by<sp/>Alpwise,<sp/>2016.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>The<sp/>use<sp/>of<sp/>this<sp/>software<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>XDK<sp/>SDK<sp/>EULA</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleBloodPressure_Collector.h</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Description:<sp/><sp/><sp/>Contains<sp/>interfaces<sp/>definition<sp/>for<sp/>Blood<sp/>Pressure<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Profile<sp/>when<sp/>the<sp/>local<sp/>device<sp/>operates<sp/>in<sp/>the<sp/>COLLECTOR</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>role.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>Created:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>August,<sp/>2012</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>Version:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0.1</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>File<sp/>Revision:<sp/>$Rev:<sp/>2720<sp/>$</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>$Project$</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ble_types_8h" kindref="compound">BleTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ble_gatt_8h" kindref="compound">BleGatt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ble_engine_8h" kindref="compound">BleEngine.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/><sp/>CONFIGURATION</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">\***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor">#ifndef<sp/>BLEBLOODPRESSURE_SUPPORT_COLLECTOR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="_ble_blood_pressure___collector_8h_1a0bfc17ca1434caf10564fddf84ef7dc1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEBLOODPRESSURE_SUPPORT_COLLECTOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//BLEBLOODPRESSURE_SUPPORT_COLLECTOR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLEBLOODPRESSURE_SUPPORT_COLLECTOR<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*<sp/>OPTIONAL<sp/>FEATURES</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">\***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(GENERIC_ATTRIBUTE_PROFILE<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>GENERIC_ATTRIBUTE_PROFILE<sp/>shall<sp/>be<sp/>enabled<sp/>when<sp/>BLOOD<sp/>PRESSURE<sp/>Profile<sp/>COLLECTOR<sp/>Role<sp/>is<sp/>enabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(GENERIC_ATTRIBUTE_PROFILE<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(ATT_ROLE_CLIENT<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>ATT_ROLE_CLIENT<sp/>shall<sp/>be<sp/>enabled<sp/>when<sp/>BLOOD<sp/>PRESSURE<sp/>Profile<sp/>COLLECTOR<sp/>Role<sp/>is<sp/>enabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(ATT_ROLE_CLIENT<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLEGATT_SUPPORT_SINGLE_SERVICE_DISCOVERY<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>BLEGATT_SUPPORT_SINGLE_SERVICE_DISCOVERY<sp/>shall<sp/>be<sp/>enabled<sp/>when<sp/>BLOOD<sp/>PRESSURE<sp/>Profile<sp/>COLLECTOR<sp/>Role<sp/>is<sp/>enabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLEGATT_SUPPORT_SINGLE_SERVICE_DISCOVERY<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLEGATT_SUPPORT_ALL_CHARACTERISTIC_DISCOVERY<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>BLEGATT_SUPPORT_ALL_CHARACTERISTIC_DISCOVERY<sp/>shall<sp/>be<sp/>enabled<sp/>when<sp/>BLOOD<sp/>PRESSURE<sp/>Profile<sp/>COLLECTOR<sp/>Role<sp/>is<sp/>enabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLEGATT_SUPPORT_ALL_CHARACTERISTIC_DISCOVERY<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLEGATT_SUPPORT_WRITE_CHARACTERISTIC_VALUE<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>BLEGATT_SUPPORT_WRITE_CHARACTERISTIC_VALUE<sp/>shall<sp/>be<sp/>enabled<sp/>when<sp/>when<sp/>BLOOD<sp/>PRESSURE<sp/>Profile<sp/>COLLECTOR<sp/>Role<sp/>is<sp/>enabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLEGATT_SUPPORT_WRITE_CHARACTERISTIC_VALUE<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLEGATT_SUPPORT_READ_CHARACTERISTIC_VALUE_BY_HANDLE<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>BLEGATT_SUPPORT_READ_CHARACTERISTIC_VALUE_BY_HANDLE<sp/>shall<sp/>be<sp/>enabled<sp/>when<sp/>BLOOD<sp/>PRESSURE<sp/>Profile<sp/>COLLECTOR<sp/>Role<sp/>is<sp/>enabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLEGATT_SUPPORT_READ_CHARACTERISTIC_VALUE_BY_TYPE<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLEGATT_SUPPORT_GET_CHARACTERISTIC_DESCRIPTOR_LIST<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>BLEGATT_SUPPORT_GET_CHARACTERISTIC_DESCRIPTOR_LIST<sp/>shall<sp/>be<sp/>enabled<sp/>when<sp/>BLOOD<sp/>PRESSURE<sp/>Profile<sp/>COLLECTOR<sp/>Role<sp/>is<sp/>enabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLEGATT_SUPPORT_GET_CHARACTERISTIC_DESCRIPTOR_LIST<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLE_SECURITY<sp/>==<sp/>1<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="preprocessor">#ifndef<sp/>BLEBLOODPRESSURECOLLECTOR_SUPPORT_SAVINGINFORMATION<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEBLOODPRESSURECOLLECTOR_SUPPORT_SAVINGINFORMATION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//BLEBLOODPRESSURECOLLECTOR_SUPPORT_SAVINGINFORMATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEINFOTYPE_BLOODPRESSURE_REMOTEFEATURES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x57<sp/><sp/><sp/><sp/>//1<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEINFOTYPE_BLOODPRESSURE_BLOODPRESSUREMEASUREMENTHANDLE<sp/><sp/><sp/><sp/>0x58<sp/><sp/><sp/><sp/>//2<sp/>bytes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEINFOTYPE_BLOODPRESSURE_BLOODPRESSUREFEATUREHANDLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x59<sp/><sp/><sp/><sp/>//2<sp/>bytes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLE_SECURITY<sp/>==<sp/>1<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Otherwise<sp/>if<sp/>BLE_SECURITY<sp/>is<sp/>not<sp/>supported<sp/>and<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="comment">//<sp/>BLEBLOODPRESSURECOLLECTOR_SUPPORT_SAVINGINFORMATION<sp/>is<sp/>not<sp/>supported<sp/>force<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>BLEBLOODPRESSURECOLLECTOR_SUPPORT_SAVINGINFORMATION<sp/>to<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLE_SECURITY<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>BLEBLOODPRESSURECOLLECTOR_SUPPORT_SAVINGINFORMATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEBLOODPRESSURECOLLECTOR_SUPPORT_SAVINGINFORMATION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(<sp/>BLE_SECURITY<sp/>==<sp/>0)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/>*<sp/>CONSTANTS<sp/>Definition</highlight></codeline>
+<codeline lineno="122"><highlight class="comment">\***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/>*<sp/><sp/>TYPES<sp/>definition</highlight></codeline>
+<codeline lineno="127"><highlight class="comment">\***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="comment">//TOCHANGE<sp/>:<sp/>Event<sp/>numbers<sp/></highlight></codeline>
+<codeline lineno="134"><highlight class="comment"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/>BleBloodPressureCollectorEvent;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="preprocessor">#define<sp/>BLEBLOODPRESSURECOLLECTOR_EVENT_LINKED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x9A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="preprocessor">#define<sp/>BLEBLOODPRESSURECOLLECTOR_EVENT_UNLINKED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x9B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="preprocessor">#define<sp/>BLEBLOODPRESSURECOLLECTOR_EVENT_BLOODPRESSUREMEASUREMENT<sp/><sp/><sp/><sp/>0x9C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="preprocessor">#define<sp/>BLEBLOODPRESSURECOLLECTOR_EVENT_BLOODPRESSUREFEATURE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x9D</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/>BleBloodPressureCollectorMeasurementFlag;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEBLOODPRESSURE_MEASUREMENT_FLAG_UNIT_VALUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x01u)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEBLOODPRESSURE_MEASUREMENT_FLAG_TIMESTAMP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x02u)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEBLOODPRESSURE_MEASUREMENT_FLAG_PULSE_RATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x04u)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEBLOODPRESSURE_MEASUREMENT_FLAG_USER_ID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x08u)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEBLOODPRESSURE_MEASUREMENT_FLAG_MEASUREMENT_STATUS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x10u)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/>BleBloodPressureCollectorFeatureBitfield;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEBLOODPRESSURECOLLECTOR_FEATUREBITMASK_BODYMOVEMENT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0001</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEBLOODPRESSURECOLLECTOR_FEATUREBITMASK_CUFFFIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0002</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEBLOODPRESSURECOLLECTOR_FEATUREBITMASK_IRREGULARPULSE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0004</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEBLOODPRESSURECOLLECTOR_FEATUREBITMASK_PULSERATERANGE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0008</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEBLOODPRESSURECOLLECTOR_FEATUREBITMASK_MEASUREMENTPOSITION<sp/><sp/><sp/><sp/>0x0010</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEBLOODPRESSURECOLLECTOR_FEATUREBITMASK_MULTIPLEBOND<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0020</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*BleBloodPressureCollectorCallBack)(</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>BleBloodPressureCollectorEvent<sp/><sp/>event,</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status,</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*parms);<sp/></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>BleGattCommand<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gattCommand;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>BleGattCommand<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gattCnfCommand;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>connHandle;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>linked;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>AttHandle<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bloodPressureServiceStartingHandle;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>AttHandle<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bloodPressureServiceEndingHandle;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>AttHandle<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bloodPressureMeasurementValueHandle;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>AttHandle<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bloodPressureMeasurementConfigHandle;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_b_l_e_s_w___cycling_power_01_release_notes_8txt_1a5cad1470ef119e32b6400227eeaa8b18" kindref="member">value</ref>[2];</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>AttHandle<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bloodPressureIntermediateCuffPressureHandle;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>AttHandle<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bloodPressureFeatureValueHandle;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bloodPressureSensorFeatures;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal">}<sp/>BleBloodPressureCollector;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>BleBloodPressureCollector<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*bleBloodPressureCollector;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>connHandle;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remoteSensorFeatures;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal">}<sp/>BleBloodPressureCollectorLinkUPInfo;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>BleBloodPressureCollector<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*bleBloodPressureCollector;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>connHandle;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/>BleBloodPressureCollectorFeatureBitfield<sp/><sp/><sp/><sp/>bloodPressureCollectorFeatureBitfield;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal">}<sp/>BleBloodPressureCollectorBloodPressureFeatureInfo;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="302"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>link<sp/>with<sp/>the<sp/>remote<sp/>Sensor<sp/>for<sp/>which<sp/>this<sp/></highlight></codeline>
+<codeline lineno="303"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/>event<sp/>has<sp/>been<sp/>received.</highlight></codeline>
+<codeline lineno="304"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/>BleBloodPressureCollector<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*bleBloodPressureCollector;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="308"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>connection<sp/>handle<sp/>from<sp/>which<sp/>the<sp/>measurement<sp/>information</highlight></codeline>
+<codeline lineno="309"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/>is<sp/>coming</highlight></codeline>
+<codeline lineno="310"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>connHandle;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/>BleBloodPressureCollectorMeasurementFlag<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flags;</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>systolicCompoundValue;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diastolicCompoundValue;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mapCompoundValue;</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*timeStamp;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="322"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>the<sp/>pulse<sp/>Rate<sp/>measurement<sp/>Value,<sp/>in<sp/>beats<sp/>per<sp/>minute<sp/>(bpm)</highlight></codeline>
+<codeline lineno="323"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pulseRateValue;</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="328"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>The<sp/>measurement<sp/>status<sp/>field<sp/>is<sp/>a<sp/>bitfield<sp/>representing<sp/>the<sp/>blood<sp/>pressure</highlight></codeline>
+<codeline lineno="329"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>measurement<sp/>flags</highlight></codeline>
+<codeline lineno="330"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>measurementStatusValue;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>userIdValue;</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal">}<sp/>BleBloodPressureCollectorBloodPressureMeasurementInfo;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/>BleBloodPressureCollectorLinkMode;</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEBLOODPRESSURE_COLLECTOR_LINKUP_COMPLETE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLEBLOODPRESSURE_COLLECTOR_LINKUP_RESTORE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="355"><highlight class="comment"><sp/>*<sp/><sp/>APPLICATION<sp/>INTERFACE<sp/>functions<sp/>definition</highlight></codeline>
+<codeline lineno="356"><highlight class="comment"><sp/>****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/>BLEBLOODPRESSURE_COLLECTOR_Init(</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleBloodPressureCollectorCallBack<sp/>callback);</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/>BLEBLOODPRESSURE_COLLECTOR_Deinit(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/>;</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/>BLEBLOODPRESSURE_COLLECTOR_LinkUpBloodPressureProfile(</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleBloodPressureCollector<sp/>*collector,</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/>connHandle,</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleBloodPressureCollectorLinkMode<sp/>linkUpMode,</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleBloodPressureCollectorLinkUPInfo<sp/>*info</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"></highlight></codeline>
+<codeline lineno="494"><highlight class="normal"><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/>BLEBLOODPRESSURE_COLLECTOR_UnLinkBloodPressureProfile(</highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleBloodPressureCollector<sp/>*collector);</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"></highlight></codeline>
+<codeline lineno="497"><highlight class="normal"></highlight></codeline>
+<codeline lineno="528"><highlight class="normal"><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/>BLEBLOODPRESSURE_COLLECTOR_ReadBloodPressureFeature(<sp/></highlight></codeline>
+<codeline lineno="529"><highlight class="normal"><sp/><sp/><sp/><sp/>BleBloodPressureCollector<sp/>*collector<sp/>);</highlight></codeline>
+<codeline lineno="530"><highlight class="normal"></highlight></codeline>
+<codeline lineno="531"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="532"><highlight class="comment"><sp/>*<sp/>OPTIONAL<sp/>APPLICATION<sp/>INTERFACE<sp/>functions<sp/>definition</highlight></codeline>
+<codeline lineno="533"><highlight class="comment">\***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="534"><highlight class="normal"></highlight></codeline>
+<codeline lineno="535"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLEBLOODPRESSURE_SUPPORT_COLLECTOR==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="536"><highlight class="normal"></highlight></codeline>
+<codeline lineno="537"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*__BLEBLOODPRESSURE_COLLECTOR_H*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_BloodPressure/Interfaces/BleBloodPressure_Collector.h"/>
+  </compounddef>
+</doxygen>

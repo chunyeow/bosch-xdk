@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___u_s_b___r_e_s_e_t___u_t_i_l_i_t_y" kind="group">
+    <compoundname>USB_RESET_UTILITY</compoundname>
+    <title>USB Utility</title>
+    <innerfile refid="_xdk_usb_reset_utility_8h">XdkUsbResetUtility.h</innerfile>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___u_s_b___r_e_s_e_t___u_t_i_l_i_t_y_1gada2977583f211a3a898aceefc029199b" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* UsbResetUtility_UsbAppCallback_T)(uint8_t *, uint32_t)</definition>
+        <argsstring>)(uint8_t *, uint32_t)</argsstring>
+        <name>UsbResetUtility_UsbAppCallback_T</name>
+        <briefdescription>
+<para>Typedef to define the function prototype to notify the data received information via. the USB interface. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/XdkUsbResetUtility.h" line="61" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/XdkUsbResetUtility.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___u_s_b___r_e_s_e_t___u_t_i_l_i_t_y_1ga6699f687380b06a642157f32d44c09e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T UsbResetUtility_DeInit</definition>
+        <argsstring>(void)</argsstring>
+        <name>UsbResetUtility_DeInit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This API will de-initialize this module. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para><ref refid="group___u_s_b___r_e_s_e_t___u_t_i_l_i_t_y_1gacc631c8d8cf919b924269233c20398cd" kindref="member">UsbResetUtility_Init</ref> must have been successful prior. </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/XdkUsbResetUtility.h" line="96" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b___r_e_s_e_t___u_t_i_l_i_t_y_1gacc631c8d8cf919b924269233c20398cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T UsbResetUtility_Init</definition>
+        <argsstring>(void)</argsstring>
+        <name>UsbResetUtility_Init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This API will initialize this module by allocating the necessary resources. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/XdkUsbResetUtility.h" line="72" column="1"/>
+        <referencedby refid="group___s_y_s_t_e_m_s_t_a_r_t_u_p_1gab3bf0967da05629b9d5b23b21d15aeb1" compoundref="_system_startup_8c" startline="297" endline="388">systemStartup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b___r_e_s_e_t___u_t_i_l_i_t_y_1ga1c685085c786e0caf69ed1dee1f57200" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T UsbResetUtility_RegAppISR</definition>
+        <argsstring>(UsbResetUtility_UsbAppCallback_T usbAppCallback)</argsstring>
+        <name>UsbResetUtility_RegAppISR</name>
+        <param>
+          <type><ref refid="group___u_s_b___r_e_s_e_t___u_t_i_l_i_t_y_1gada2977583f211a3a898aceefc029199b" kindref="member">UsbResetUtility_UsbAppCallback_T</ref></type>
+          <declname>usbAppCallback</declname>
+        </param>
+        <briefdescription>
+<para>This API is used to register the application callback. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">UsbResetUtility_UsbAppCallback_T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User defined function to be notified of the USB data received.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para><ref refid="group___u_s_b___r_e_s_e_t___u_t_i_l_i_t_y_1gacc631c8d8cf919b924269233c20398cd" kindref="member">UsbResetUtility_Init</ref> must have been successful prior.</para></listitem><listitem><para>usbAppCallback is called from deferred ISR and user should consider this in application handling </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/XdkUsbResetUtility.h" line="86" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is used to map the USB interrupts. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,488 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_b_c_d_s___c_r_c_8h" kind="file">
+    <compoundname>BCDS_CRC.h</compoundname>
+    <includes refid="_b_c_d_s___utils_8h" local="yes">BCDS_Utils.h</includes>
+    <includes refid="_b_c_d_s___retcode_8h" local="yes">BCDS_Retcode.h</includes>
+    <includedby refid="_f_o_t_a_8c" local="yes">SDK/xdk110/Common/source/Utility/FOTA.c</includedby>
+    <incdepgraph>
+      <node id="39399">
+        <label>stdbool.h</label>
+      </node>
+      <node id="39398">
+        <label>stdint.h</label>
+      </node>
+      <node id="39396">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="39397" relation="include">
+        </childnode>
+      </node>
+      <node id="39401">
+        <label>stdlib.h</label>
+      </node>
+      <node id="39393">
+        <label>SDK/xdk110/Platform/Utils/include/BCDS_CRC.h</label>
+        <link refid="BCDS_CRC.h"/>
+        <childnode refid="39394" relation="include">
+        </childnode>
+        <childnode refid="39396" relation="include">
+        </childnode>
+      </node>
+      <node id="39395">
+        <label>BCDS_UtilsConfig.h</label>
+        <link refid="_b_c_d_s___utils_config_8h"/>
+      </node>
+      <node id="39400">
+        <label>string.h</label>
+      </node>
+      <node id="39394">
+        <label>BCDS_Utils.h</label>
+        <link refid="_b_c_d_s___utils_8h"/>
+        <childnode refid="39395" relation="include">
+        </childnode>
+        <childnode refid="39396" relation="include">
+        </childnode>
+      </node>
+      <node id="39397">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="39398" relation="include">
+        </childnode>
+        <childnode refid="39399" relation="include">
+        </childnode>
+        <childnode refid="39400" relation="include">
+        </childnode>
+        <childnode refid="39401" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="39402">
+        <label>SDK/xdk110/Platform/Utils/include/BCDS_CRC.h</label>
+        <link refid="BCDS_CRC.h"/>
+        <childnode refid="39403" relation="include">
+        </childnode>
+      </node>
+      <node id="39403">
+        <label>SDK/xdk110/Common/source/Utility/FOTA.c</label>
+        <link refid="_f_o_t_a_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___c_r_c_1gae3ea9807bb392bedf360aa815c0bbd67" prot="public" static="no">
+        <name>CRC32_EATH_STD_INIT</name>
+        <param><defname>x</defname></param>
+        <initializer>(x = (~0UL))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CRC.h" line="78" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CRC.h" bodystart="78" bodyend="-1"/>
+        <referencedby refid="_f_o_t_a_8c_1a287949f2b79c91baba97f89d80c835c0" compoundref="_f_o_t_a_8c" startline="84" endline="127">VerifyHeader</referencedby>
+        <referencedby refid="_f_o_t_a_8c_1a097478fcf96e268decbc6b9d276b4ea1" compoundref="_f_o_t_a_8c" startline="143" endline="236">VerifyImage</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___c_r_c_1ga5fe5ae39f8fdc4d56d0c959f3597db83" prot="public" static="no">
+        <name>CRC32_ETHERNET_REVERSE_POLYNOMIAL</name>
+        <initializer>UINT32_C(0xEDB88320)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>CRC32 polynomial for Ethernet standard IEEE 802.3 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CRC.h" line="80" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CRC.h" bodystart="80" bodyend="-1"/>
+        <referencedby refid="_f_o_t_a_8c_1a287949f2b79c91baba97f89d80c835c0" compoundref="_f_o_t_a_8c" startline="84" endline="127">VerifyHeader</referencedby>
+        <referencedby refid="_f_o_t_a_8c_1a097478fcf96e268decbc6b9d276b4ea1" compoundref="_f_o_t_a_8c" startline="143" endline="236">VerifyImage</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___c_r_c_1ga6907cdb47b3ca90bb7e975ce46e3b8ee" prot="public" static="no">
+        <name>CRC32_INVERSE</name>
+        <param><defname>x</defname></param>
+        <initializer>(x = x ^ (~0UL))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CRC.h" line="79" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CRC.h" bodystart="79" bodyend="-1"/>
+        <referencedby refid="_f_o_t_a_8c_1a287949f2b79c91baba97f89d80c835c0" compoundref="_f_o_t_a_8c" startline="84" endline="127">VerifyHeader</referencedby>
+        <referencedby refid="_f_o_t_a_8c_1a097478fcf96e268decbc6b9d276b4ea1" compoundref="_f_o_t_a_8c" startline="143" endline="236">VerifyImage</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___c_r_c_1gad3f9f0f97bbc31cfae023fa59218302d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T CRC_16</definition>
+        <argsstring>(uint16_t poly, uint16_t *shifter, uint8_t *data_p, uint16_t len)</argsstring>
+        <name>CRC_16</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>poly</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>shifter</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data_p</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Calculates CRC16 for a given message, or data, using a a given polynomial and initial value. No frills: no bit-reversing, no final XOR. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">poly</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- polynomial to be used </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">shifter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- initial value when called; calculated CRC16 when done </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data_p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- pointer to start of data CRC16 shall be calculated for </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- number of octets in data</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when successful </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when any of the input pointers is NULL </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CRC.h" line="109" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_r_c_1ga1af85f7937e1f2da9d76a7f365c3afa9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T CRC_32</definition>
+        <argsstring>(uint32_t poly, uint32_t *shifter, uint8_t *data_p, uint16_t len)</argsstring>
+        <name>CRC_32</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>poly</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>shifter</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data_p</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Calculates CRC32 for a given message, or data, using a a given polynomial and initial value. No frills: no bit-reversing, no final XOR. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">poly</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- polynomial to be used </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">shifter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- initial value when called; calculated CRC32 when done </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data_p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- pointer to start of data CRC32 shall be calculated for </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- number of octets in data</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when successful </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when any of the input pointers is NULL </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CRC.h" line="123" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_r_c_1gaff2d7dffebb2cbef4452186bfd775c01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T CRC_32_Reverse</definition>
+        <argsstring>(uint32_t poly, uint32_t *shifter, uint8_t *data_p, uint16_t len)</argsstring>
+        <name>CRC_32_Reverse</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>poly</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>shifter</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data_p</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Calculates CRC32 with reverse polynomial for a given message, or data and initial value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">poly</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- polynomial to be used </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">shifter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- initial value when called; calculated CRC32 when done </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data_p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- pointer to start of data CRC32 shall be calculated for </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- number of octets in data</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when successful </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when any of the input pointers is NULL</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>For the first time shifter value will initialize with 0xFFFFFFFF, Call <ref refid="group___c_r_c_1gae3ea9807bb392bedf360aa815c0bbd67" kindref="member">CRC32_EATH_STD_INIT(shifter)</ref> macro for initialize This api won&apos;t support final CRC32 inversion, manually to do the final CRC32 inversion in application. Call <ref refid="group___c_r_c_1ga6907cdb47b3ca90bb7e975ce46e3b8ee" kindref="member">CRC32_INVERSE(shifter)</ref> macro for invert the final CRC32 value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CRC.h" line="141" column="1"/>
+        <referencedby refid="_f_o_t_a_8c_1a287949f2b79c91baba97f89d80c835c0" compoundref="_f_o_t_a_8c" startline="84" endline="127">VerifyHeader</referencedby>
+        <referencedby refid="_f_o_t_a_8c_1a097478fcf96e268decbc6b9d276b4ea1" compoundref="_f_o_t_a_8c" startline="143" endline="236">VerifyImage</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___c_r_c_1gad966c410d684358cc4ad1d7310f6b280" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T CRC_8</definition>
+        <argsstring>(uint8_t poly, uint8_t *shifter, uint8_t *data_p, uint16_t len)</argsstring>
+        <name>CRC_8</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>poly</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>shifter</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data_p</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Calculates CRC8 for a given message, or data, using a a given polynomial and initial value. No frills: no bit-reversing, no final XOR. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">poly</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- polynomial to be used </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">shifter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- initial value when called; calculated CRC8 when done </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data_p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- pointer to start of data CRC8 shall be calculated for </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- number of octets in data</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when successful </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when any of the input pointers is NULL </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CRC.h" line="95" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor">#ifndef<sp/>BCDS_CRC_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BCDS_CRC_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>additional<sp/>interface<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___utils_8h" kindref="compound">BCDS_Utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>BCDS_FEATURE_CRC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___retcode_8h" kindref="compound">BCDS_Retcode.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>public<sp/>interface<sp/>declaration<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>public<sp/>type<sp/>and<sp/>macro<sp/>definitions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="group___c_r_c_1gae3ea9807bb392bedf360aa815c0bbd67" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CRC32_EATH_STD_INIT(x)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(x<sp/>=<sp/>(~0UL))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="group___c_r_c_1ga6907cdb47b3ca90bb7e975ce46e3b8ee" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CRC32_INVERSE(x)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(x<sp/>=<sp/>x<sp/>^<sp/>(~0UL))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="group___c_r_c_1ga5fe5ae39f8fdc4d56d0c959f3597db83" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CRC32_ETHERNET_REVERSE_POLYNOMIAL<sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT32_C(0xEDB88320)<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>public<sp/>function<sp/>prototype<sp/>declarations<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___c_r_c_1gad966c410d684358cc4ad1d7310f6b280" kindref="member">CRC_8</ref>(uint8_t<sp/>poly,<sp/>uint8_t<sp/>*<sp/>shifter,<sp/>uint8_t<sp/>*<sp/>data_p,<sp/>uint16_t<sp/>len);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___c_r_c_1gad3f9f0f97bbc31cfae023fa59218302d" kindref="member">CRC_16</ref>(uint16_t<sp/>poly,<sp/>uint16_t<sp/>*<sp/>shifter,<sp/>uint8_t<sp/>*<sp/>data_p,<sp/>uint16_t<sp/>len);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___c_r_c_1ga1af85f7937e1f2da9d76a7f365c3afa9" kindref="member">CRC_32</ref>(uint32_t<sp/>poly,<sp/>uint32_t<sp/>*<sp/>shifter,<sp/>uint8_t<sp/>*<sp/>data_p,<sp/>uint16_t<sp/>len);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___c_r_c_1gaff2d7dffebb2cbef4452186bfd775c01" kindref="member">CRC_32_Reverse</ref>(uint32_t<sp/>poly,<sp/>uint32_t<sp/>*<sp/>shifter,<sp/>uint8_t<sp/>*<sp/>data_p,<sp/>uint16_t<sp/>len);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>if<sp/>BCDS_FEATURE_CRC<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>BCDS_CRC_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CRC.h"/>
+  </compounddef>
+</doxygen>

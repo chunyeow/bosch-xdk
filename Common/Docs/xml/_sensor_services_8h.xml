@@ -1,0 +1,334 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_sensor_services_8h" kind="file">
+    <compoundname>SensorServices.h</compoundname>
+    <includes refid="_x_d_k___sensor_services_8h" local="yes">XDK_SensorServices.h</includes>
+    <includedby refid="_sensor_services_8c" local="yes">SDK/xdk110/Common/source/Connectivity/BLE/SensorServices.c</includedby>
+    <incdepgraph>
+      <node id="24227">
+        <label>stdbool.h</label>
+      </node>
+      <node id="24226">
+        <label>stdint.h</label>
+      </node>
+      <node id="24229">
+        <label>stdlib.h</label>
+      </node>
+      <node id="24228">
+        <label>string.h</label>
+      </node>
+      <node id="24225">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="24226" relation="include">
+        </childnode>
+        <childnode refid="24227" relation="include">
+        </childnode>
+        <childnode refid="24228" relation="include">
+        </childnode>
+        <childnode refid="24229" relation="include">
+        </childnode>
+      </node>
+      <node id="24223">
+        <label>SDK/xdk110/Common/source/Connectivity/BLE/SensorServices.h</label>
+        <link refid="SensorServices.h"/>
+        <childnode refid="24224" relation="include">
+        </childnode>
+      </node>
+      <node id="24224">
+        <label>XDK_SensorServices.h</label>
+        <link refid="_x_d_k___sensor_services_8h"/>
+        <childnode refid="24225" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="24231">
+        <label>SDK/xdk110/Common/source/Connectivity/BLE/SensorServices.c</label>
+        <link refid="_sensor_services_8c"/>
+      </node>
+      <node id="24230">
+        <label>SDK/xdk110/Common/source/Connectivity/BLE/SensorServices.h</label>
+        <link refid="SensorServices.h"/>
+        <childnode refid="24231" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_sensor_services_8h_1a0e600b57ac94f247641725250db070dd" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SensorServices_DataReceivedCallBack)(uint8_t *rxBuffer, uint8_t rxDataLength, SensorServices_Info_T *sensorServicesInfo)</definition>
+        <argsstring>)(uint8_t *rxBuffer, uint8_t rxDataLength, SensorServices_Info_T *sensorServicesInfo)</argsstring>
+        <name>SensorServices_DataReceivedCallBack</name>
+        <briefdescription>
+<para>Typedef to notify the application about any incoming data for any of the registered sensor services. </para>        </briefdescription>
+        <detaileddescription>
+<para>Typedef to notify the application about any incoming data for any of the registered sensor services.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">rxBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the received data buffer</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">rxDataLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the received data</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">sensorServicesInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Consists of the necessary service information of the received characteristic. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/SensorServices.h" line="62" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/SensorServices.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_sensor_services_8h_1ae983287ffd2789b3e16298241fb11553" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SensorServices_SendEventCallback)(Retcode_T sendStatus)</definition>
+        <argsstring>)(Retcode_T sendStatus)</argsstring>
+        <name>SensorServices_SendEventCallback</name>
+        <briefdescription>
+<para>Typedef to send status notification. </para>        </briefdescription>
+        <detaileddescription>
+<para>Typedef to send status notification.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sendStatus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Status of the send operation</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>For every single SensorServices_SendData, this must be synchronized before triggering a new send. If the interface user wants to have a queuing mechanism for sending data where the user need not worry about this notification and shall load the send API per need, it is excepted to be implemented as a wrapper at the application end on top of this. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/SensorServices.h" line="77" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/SensorServices.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_sensor_services_8h_1a7eb1fe5795add73c93a3edfd156d29a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T SensorServices_Init</definition>
+        <argsstring>(SensorServices_DataReceivedCallBack readCallback, SensorServices_SendEventCallback sendCallback)</argsstring>
+        <name>SensorServices_Init</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___b_l_e___s_e_n_s_o_r___s_e_r_v_i_c_e_s_1ga6cbc26a67df0ed8f7e52717f0c49dc96" kindref="member">SensorServices_DataReceivedCallBack</ref></type>
+          <declname>readCallback</declname>
+        </param>
+        <param>
+          <type><ref refid="group___b_c_d_s___b_l_e___s_e_n_s_o_r___s_e_r_v_i_c_e_s_1gae983287ffd2789b3e16298241fb11553" kindref="member">SensorServices_SendEventCallback</ref></type>
+          <declname>sendCallback</declname>
+        </param>
+        <briefdescription>
+<para>Initialize application callback to intimate for events from sensor services. </para>        </briefdescription>
+        <detaileddescription>
+<para>Initialize application callback to intimate for events from sensor services</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">readCallback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Application Callback that will be called on data reception for any sensor services characteristics</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">sendCallback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Application Callback that will be notified about the data send status.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise. Refer <ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf6fb6f6ae1be4277d38a8684e1be9acb" kindref="member">Retcode_General_E</ref> and <ref refid="group___b_c_d_s___b_l_e_1ga0f2731d56101ae023851508c9293df01" kindref="member">Ble_Retcode_E</ref> for other values.</para></simplesect>
+<simplesect kind="see"><para><ref refid="_sensor_services_8h_1a61db389b5d188944d179d935f1bde8bb" kindref="member">SensorServices_SendData</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/SensorServices.h" line="94" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/SensorServices.c" bodystart="1508" bodyend="1520"/>
+      </memberdef>
+      <memberdef kind="function" id="_sensor_services_8h_1a660b53058c2a01f9d8b83076954a5552" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T SensorServices_Register</definition>
+        <argsstring>(void)</argsstring>
+        <name>SensorServices_Register</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function registers the Sensor Services at the ATT server. This must be done during the boot phase of the stack. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function registers the Sensor Services at the ATT server. This must be done during the boot phase of the stack.</para><para><simplesect kind="see"><para><ref refid="group___b_c_d_s___b_l_e___p_e_r_i_p_h_e_r_a_l_1ga8151e909a16f5aa075b42ebcaacb463e" kindref="member">BlePeripheral_ServiceRegistryCallback</ref></para></simplesect>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise. Refer <ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf6fb6f6ae1be4277d38a8684e1be9acb" kindref="member">Retcode_General_E</ref> and <ref refid="group___b_c_d_s___b_l_e_1ga0f2731d56101ae023851508c9293df01" kindref="member">Ble_Retcode_E</ref> for other values.</para></simplesect>
+<simplesect kind="note"><para>Sensor Services must have been successfully initialized prior. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/SensorServices.h" line="108" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/SensorServices.c" bodystart="1522" bodyend="1579"/>
+        <references refid="_ble_types_8h_1ad14b20a1135ee7821fa32d0bb0d7b2fc" compoundref="_ble_types_8h" startline="69">BLESTATUS_SUCCESS</references>
+        <references refid="_sensor_services_8c_1aa826b7fe19ab49ee065d5d4b56c2c91b" compoundref="_sensor_services_8c" startline="474" endline="514">SensorServicesRegisterAccelerometer</references>
+        <references refid="_ble_types_8h_1aa58680b13e0898b074410ae3f133c6ab" compoundref="_ble_types_8h" startline="70">BLESTATUS_FAILED</references>
+        <references refid="_sensor_services_8c_1af2768daa6b96177225b3ef41404eeced" compoundref="_sensor_services_8c" startline="580" endline="620">SensorServicesRegisterGyro</references>
+        <references refid="_sensor_services_8c_1a4590ccbcf01444682d906bcb1959847c" compoundref="_sensor_services_8c" startline="674" endline="707">SensorServicesRegisterLightSensor</references>
+        <references refid="_sensor_services_8c_1ac4f84643e792ccb52845d842ee115a20" compoundref="_sensor_services_8c" startline="738" endline="770">SensorServicesRegisterNoiseSensor</references>
+        <references refid="_sensor_services_8c_1a06f461cc929395fbb3cc989effc4f19d" compoundref="_sensor_services_8c" startline="776" endline="817">SensorServicesRegisterMagnetometerSensor</references>
+        <references refid="_sensor_services_8c_1a2b34eb30545508bfd65f5e873b1034b2" compoundref="_sensor_services_8c" startline="823" endline="899">SensorServicesRegisterEnvironmentSensor</references>
+        <references refid="_sensor_services_8c_1ac100dca8491caf86f129ac731a6bc9a6" compoundref="_sensor_services_8c" startline="960" endline="1000">SensorServicesRegisterHighDataRateService</references>
+        <references refid="_sensor_services_8c_1a39e6bc4e47fce0d1e89a8de17c04d9fc" compoundref="_sensor_services_8c" startline="1069" endline="1176">SensorServicesRegisterControlSensor</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8baf50f8c9fde47ca37c05db7b86be9e906" compoundref="_xdk_common_info_8h" startline="197">RETCODE_SENSORSERVICES_REGISTRATION_FAIL</references>
+      </memberdef>
+      <memberdef kind="function" id="_sensor_services_8h_1a61db389b5d188944d179d935f1bde8bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T SensorServices_SendData</definition>
+        <argsstring>(uint8_t *payload, uint8_t payloadLen, SensorServices_Info_T *sensorServiceInfo)</argsstring>
+        <name>SensorServices_SendData</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>payloadLen</declname>
+        </param>
+        <param>
+          <type><ref refid="group___b_l_e_1gad31342fe3ba822820e944bbb7cc2ddff" kindref="member">SensorServices_Info_T</ref> *</type>
+          <declname>sensorServiceInfo</declname>
+        </param>
+        <briefdescription>
+<para>This function sends data to the client. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function sends data to the client</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dataToSend</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The payload to be sent</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dataToSendLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the payload to be sent</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Provides the service characteristics information</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise. Refer <ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf6fb6f6ae1be4277d38a8684e1be9acb" kindref="member">Retcode_General_E</ref> and <ref refid="group___b_c_d_s___b_l_e_1ga0f2731d56101ae023851508c9293df01" kindref="member">Ble_Retcode_E</ref> for other values.</para></simplesect>
+<simplesect kind="note"><para>Sensor Services must have been successfully initialized and registered prior. SensorServices_SendEventCallback will be triggered to provide the status of every individual send&apos;s.</para></simplesect>
+<simplesect kind="see"><para><ref refid="_sensor_services_8h_1ae983287ffd2789b3e16298241fb11553" kindref="member">SensorServices_SendEventCallback</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/SensorServices.h" line="131" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/SensorServices.c" bodystart="1582" bodyend="1645"/>
+      </memberdef>
+      <memberdef kind="function" id="_sensor_services_8h_1a453d34add01f685814e6ded01465aa1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorServices_UpdateConnectionStatus</definition>
+        <argsstring>(bool connectionStatus)</argsstring>
+        <name>SensorServices_UpdateConnectionStatus</name>
+        <param>
+          <type>bool</type>
+          <declname>connectionStatus</declname>
+        </param>
+        <briefdescription>
+<para>This function notifies the BLE connection status. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function notifies the BLE connection status</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">connectionStatus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BLE connection status </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/SensorServices.h" line="141" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/SensorServices.c" bodystart="1648" bodyend="1658"/>
+        <references refid="_sensor_services_8c_1a897888d0761ab066a504b1081340526c" compoundref="_sensor_services_8c" startline="66">IsFirstSendPending</references>
+        <references refid="_sensor_services_8c_1accdd5f73169a43d83bbc9854fe6d1248" compoundref="_sensor_services_8c" startline="67">BleLastWakeTimeUponConnect</references>
+        <references refid="task_8h_1a753ecfe23e7386066ecccad5d16422f7" compoundref="tasks_8c" startline="2226" endline="2238">xTaskGetTickCount</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SENSORSERVICES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SENSORSERVICES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Include<sp/>all<sp/>headers<sp/>which<sp/>are<sp/>needed<sp/>by<sp/>this<sp/>file.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_x_d_k___sensor_services_8h" kindref="compound">XDK_SensorServices.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>the<sp/>type<sp/>and<sp/>macro<sp/>definitions<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="_sensor_services_8h_1a0e600b57ac94f247641725250db070dd" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="_sensor_services_8h_1a0e600b57ac94f247641725250db070dd" kindref="member">SensorServices_DataReceivedCallBack</ref>)(uint8_t<sp/>*rxBuffer,<sp/>uint8_t<sp/>rxDataLength,<sp/><ref refid="struct_sensor_services___info___s" kindref="compound">SensorServices_Info_T</ref><sp/>*<sp/>sensorServicesInfo);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="_sensor_services_8h_1ae983287ffd2789b3e16298241fb11553" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="_sensor_services_8h_1ae983287ffd2789b3e16298241fb11553" kindref="member">SensorServices_SendEventCallback</ref>)(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>sendStatus);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_sensor_services_8h_1a7eb1fe5795add73c93a3edfd156d29a8" kindref="member">SensorServices_Init</ref>(<ref refid="_sensor_services_8h_1a0e600b57ac94f247641725250db070dd" kindref="member">SensorServices_DataReceivedCallBack</ref><sp/>readCallback,<sp/><ref refid="_sensor_services_8h_1ae983287ffd2789b3e16298241fb11553" kindref="member">SensorServices_SendEventCallback</ref><sp/>sendCallback);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_sensor_services_8h_1a660b53058c2a01f9d8b83076954a5552" kindref="member">SensorServices_Register</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_sensor_services_8h_1a61db389b5d188944d179d935f1bde8bb" kindref="member">SensorServices_SendData</ref>(uint8_t*<sp/>payload,<sp/>uint8_t<sp/>payloadLen,<sp/><ref refid="struct_sensor_services___info___s" kindref="compound">SensorServices_Info_T</ref><sp/>*<sp/>sensorServiceInfo);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_sensor_services_8h_1a453d34add01f685814e6ded01465aa1f" kindref="member">SensorServices_UpdateConnectionStatus</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>connectionStatus);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>XDK_SENSORSERVICES_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/SensorServices.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,435 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t" kind="group">
+    <compoundname>HTTP_EXAMPLE_CLIENT</compoundname>
+    <title>HttpExampleClient</title>
+    <innerfile refid="_http_example_client_2source_2_app_controller_8c">AppController.c</innerfile>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga90ce7b07b4530c957f9f83201d8dc8bc" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga41a2f220f03970c1857bd96528307a81" kindref="member">CmdProcessor_T</ref> *</type>
+        <definition>CmdProcessor_T* AppCmdProcessor</definition>
+        <argsstring></argsstring>
+        <name>AppCmdProcessor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle to store the main Command processor handle to be reused by ServalPAL thread </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" line="177" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga6fa700b048407619b5309da95dcce5dd" prot="public" static="yes" mutable="no">
+        <type><ref refid="_free_r_t_o_s_8h_1af7cd8f53b62f0c497b442b504c30f2ec" kindref="member">xTaskHandle</ref></type>
+        <definition>xTaskHandle AppControllerHandle</definition>
+        <argsstring></argsstring>
+        <name>AppControllerHandle</name>
+        <initializer>= <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>OS thread handle for Application controller </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" line="175" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" bodystart="175" bodyend="-1"/>
+        <referencedby refid="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_http_example_client_2source_2_app_controller_8c" startline="321" endline="356">AppControllerEnable</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga135901bea19405bb54b239f696e26cb4" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___h_t_t_p_r_e_s_t_c_l_i_e_n_t_1ga9fcd7503395aa65821f564b870f68d57" kindref="member">HTTPRestClient_Config_T</ref></type>
+        <definition>HTTPRestClient_Config_T HTTPRestClientConfigInfo</definition>
+        <argsstring></argsstring>
+        <name>HTTPRestClientConfigInfo</name>
+        <initializer>=
+        {
+                .IsSecure = <ref refid="_http_example_client_2source_2_app_controller_8h_1a315c01ceb9c162f047f3e1e0399b91d5" kindref="member">HTTP_SECURE_ENABLE</ref>,
+                .DestinationServerUrl = <ref refid="_http_example_client_2source_2_app_controller_8h_1a7c77655d3da5ade44aa3e9ffbe0b21d2" kindref="member">DEST_SERVER_HOST</ref>,
+                .DestinationServerPort = <ref refid="_send_data_over_udp_2source_2_app_controller_8h_1a6a056424832570ae47640d85e5dbb778" kindref="member">DEST_SERVER_PORT</ref>,
+                .RequestMaxDownloadSize = <ref refid="_http_example_client_2source_2_app_controller_8h_1acc4e9aef15c3af7fe039c3593d9a7bfc" kindref="member">REQUEST_MAX_DOWNLOAD_SIZE</ref>,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>HTTP rest client configuration parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" line="137" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga7fc8c31a7c96f66db3ef9a6ec1754605" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___h_t_t_p_r_e_s_t_c_l_i_e_n_t_1gac726481ed73699a2a2669830f1525b45" kindref="member">HTTPRestClient_Get_T</ref></type>
+        <definition>HTTPRestClient_Get_T HTTPRestClientGetInfo</definition>
+        <argsstring></argsstring>
+        <name>HTTPRestClientGetInfo</name>
+        <initializer>=
+        {
+                .Url = <ref refid="_http_example_client_2source_2_app_controller_8h_1a720842358aabc06428cb73f6344fc861" kindref="member">DEST_GET_PATH</ref>,
+                .GetCB = <ref refid="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga02bea3f77597146a6e8125019961d851" kindref="member">HTTPRestClientGetCB</ref>,
+                .GetOffset = 0UL,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>HTTP rest client GET parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" line="168" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga4a574d51f266992ebcc9c18eb2034020" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___h_t_t_p_r_e_s_t_c_l_i_e_n_t_1gabbd89e8fbac9dea48da5ae69940ed473" kindref="member">HTTPRestClient_Post_T</ref></type>
+        <definition>HTTPRestClient_Post_T HTTPRestClientPostInfo</definition>
+        <argsstring></argsstring>
+        <name>HTTPRestClientPostInfo</name>
+        <initializer>=
+        {
+                .Payload = <ref refid="_http_example_client_2source_2_app_controller_8h_1a115f609f4aca0af75c7e5922f4aa8a5b" kindref="member">POST_REQUEST_BODY</ref>,
+                .PayloadLength = (sizeof(<ref refid="_http_example_client_2source_2_app_controller_8h_1a115f609f4aca0af75c7e5922f4aa8a5b" kindref="member">POST_REQUEST_BODY</ref>) - 1U),
+                .Url = DEST_POST_PATH,
+                .RequestCustomHeader0 = POST_REQUEST_CUSTOM_HEADER_0,
+                .RequestCustomHeader1 = POST_REQUEST_CUSTOM_HEADER_1,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>HTTP rest client POST parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" line="145" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1gabaa00b9c49ee745bd168c1d45af60a2c" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___h_t_t_p_r_e_s_t_c_l_i_e_n_t_1gab60e9896e7923c3a6e2272a52e71fbfc" kindref="member">HTTPRestClient_Setup_T</ref></type>
+        <definition>HTTPRestClient_Setup_T HTTPRestClientSetupInfo</definition>
+        <argsstring></argsstring>
+        <name>HTTPRestClientSetupInfo</name>
+        <initializer>=
+        {
+                .IsSecure = <ref refid="_http_example_client_2source_2_app_controller_8h_1a315c01ceb9c162f047f3e1e0399b91d5" kindref="member">HTTP_SECURE_ENABLE</ref>,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>HTTP rest client setup parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" line="121" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga0e412a42d216de0f4feb72dfc0dfa51d" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___w_l_a_n_1ga0e6768bd91dfe20a7c6e5c6ce49533af" kindref="member">WLAN_Setup_T</ref></type>
+        <definition>WLAN_Setup_T WLANSetupInfo</definition>
+        <argsstring></argsstring>
+        <name>WLANSetupInfo</name>
+        <initializer>=
+        {
+                .IsEnterprise = <ref refid="_serval___types_8h_1a65e9886d74aaee76545e83dd09011727" kindref="member">false</ref>,
+                .IsHostPgmEnabled = <ref refid="_serval___types_8h_1a65e9886d74aaee76545e83dd09011727" kindref="member">false</ref>,
+                .SSID = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1af8d23ae6c17168a7ce76f565959a7100" kindref="member">WLAN_SSID</ref>,
+                .Username = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a7595c51ecaebc052ebb16bfee33ef064" kindref="member">WLAN_PSK</ref>, 
+                .Password = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a7595c51ecaebc052ebb16bfee33ef064" kindref="member">WLAN_PSK</ref>,
+                .IsStatic = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a3b7cbbe0cc99913db8a349bf04cb7648" kindref="member">WLAN_STATIC_IP</ref>,
+                .IpAddr = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1af8b956915d3648203d2db609f103d400" kindref="member">WLAN_IP_ADDR</ref>,
+                .GwAddr = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1aabe89318c85014d96791cdb2cd9263a8" kindref="member">WLAN_GW_ADDR</ref>,
+                .DnsAddr = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a91bfddd64e54251da5ca4e7b2d4b5774" kindref="member">WLAN_DNS_ADDR</ref>,
+                .Mask = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a408301af8a45e844e60c3be81a51a5e7" kindref="member">WLAN_MASK</ref>,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>WLAN setup parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" line="99" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga22919ee3de6947c4b6616a9231e71f67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AppController_Init</definition>
+        <argsstring>(void *cmdProcessorHandle, uint32_t param2)</argsstring>
+        <name>AppController_Init</name>
+        <param>
+          <type>void *</type>
+          <declname>cmdProcessorHandle</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>Gives control to the Application controller. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a template function where the user can write his custom application.</para><para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" line="406" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" bodystart="406" bodyend="427"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e">CmdProcessor_Enqueue</references>
+        <references refid="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_http_example_client_2source_2_app_controller_8c" startline="371" endline="401">AppControllerSetup</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+      </memberdef>
+      <memberdef kind="function" id="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ef9cc8f277726dc19c525c8049d388f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerEnable</definition>
+        <argsstring>(void *param1, uint32_t param2)</argsstring>
+        <name>AppControllerEnable</name>
+        <param>
+          <type>void *</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>To enable the necessary modules for the application. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>WLAN</para></listitem><listitem><para>ServalPAL</para></listitem><listitem><para>SNTP (if HTTPS)</para></listitem><listitem><para>HTTP rest client</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" line="321" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" bodystart="321" bodyend="356"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___w_l_a_n_1gade1d0097361a009766b934f25111dd8b">WLAN_Enable</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___s_e_r_v_a_l_p_a_l_1ga5c486b056c82b352bd487143e7ca7633">ServalPAL_Enable</references>
+        <references refid="group___s_n_t_p_1gaec27b2582b486a4b87a4ab217abd1f15">SNTP_Enable</references>
+        <references refid="group___h_t_t_p_r_e_s_t_c_l_i_e_n_t_1ga520428bed1560dc49c1f31e0b897a654">HTTPRestClient_Enable</references>
+        <references refid="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_http_example_client_2source_2_app_controller_8c" startline="249" endline="306">AppControllerFire</references>
+        <references refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1af793604cd2dbedfc6b69f10936fe7c41" compoundref="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h" startline="61">TASK_STACK_SIZE_APP_CONTROLLER</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1a4651501b886d4de331b9f06b37265177" compoundref="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h" startline="59">TASK_PRIO_APP_CONTROLLER</references>
+        <references refid="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga6fa700b048407619b5309da95dcce5dd" compoundref="_http_example_client_2source_2_app_controller_8c" startline="175">AppControllerHandle</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba497273b2285191edc1cda8648b67250a" compoundref="_b_c_d_s___retcode_8h" startline="107">RETCODE_OUT_OF_RESOURCES</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+        <references refid="group___x_d_k_u_t_i_l_s_1ga7ffe38d38314b5301a4ddd04f4fa7ca6" compoundref="_utils_8c" startline="277" endline="284">Utils_PrintResetCause</references>
+        <referencedby refid="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_http_example_client_2source_2_app_controller_8c" startline="371" endline="401">AppControllerSetup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerFire</definition>
+        <argsstring>(void *pvParameters)</argsstring>
+        <name>AppControllerFire</name>
+        <param>
+          <type>void *</type>
+          <declname>pvParameters</declname>
+        </param>
+        <briefdescription>
+<para>Responsible for controlling the HTTP Example application control flow. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Synchronize the node with the SNTP server for time-stamp (if HTTPS)</para></listitem><listitem><para>Check whether the WLAN network connection is available</para></listitem><listitem><para>Do a HTTP rest client POST</para></listitem><listitem><para>Wait for INTER_REQUEST_INTERVAL if POST was successful</para></listitem><listitem><para>Do a HTTP rest client GET if POST was successful</para></listitem><listitem><para>Wait for INTER_REQUEST_INTERVAL if GET was successful</para></listitem><listitem><para>Redo the last 5 steps</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pvParameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" line="249" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" bodystart="249" bodyend="306"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___s_n_t_p_1ga524d9a28f1943d999fe94951b268cc1f">SNTP_GetTimeFromServer</references>
+        <references refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga1cfc98de5e09b225abf287dd632ccf31" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="126">APP_RESPONSE_FROM_SNTP_SERVER_TIMEOUT</references>
+        <references refid="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1gab59acc7b7dbee4dcdbc84fa610fac328" compoundref="_http_example_client_2source_2_app_controller_8c" startline="203" endline="233">AppControllerValidateWLANConnectivity</references>
+        <references refid="group___h_t_t_p_r_e_s_t_c_l_i_e_n_t_1ga3c2df1e0766bfe6c35f7b11d39fc4472">HTTPRestClient_Post</references>
+        <references refid="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga56e65111a0e2145506b91a6c71e527f5" compoundref="_http_example_client_2source_2_app_controller_8c" startline="93">APP_RESPONSE_FROM_HTTP_SERVER_POST_TIMEOUT</references>
+        <references refid="task_8h_1aa154068cecd7f31446a7a84af44ab1a3">vTaskDelay</references>
+        <references refid="_http_example_client_2source_2_app_controller_8h_1aa8194f3d89e0f793163c4a1ed0b4cebf" compoundref="_http_example_client_2source_2_app_controller_8h" startline="165">INTER_REQUEST_INTERVAL</references>
+        <references refid="group___h_t_t_p_r_e_s_t_c_l_i_e_n_t_1gaecb101f4d3de7a995edc043a6d89640b">HTTPRestClient_Get</references>
+        <references refid="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1gaf3c2790c9366be968198ab97cf1e9d94" compoundref="_http_example_client_2source_2_app_controller_8c" startline="95">APP_RESPONSE_FROM_HTTP_SERVER_GET_TIMEOUT</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <referencedby refid="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_http_example_client_2source_2_app_controller_8c" startline="321" endline="356">AppControllerEnable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ca12481e985f2cd2437fe712e08c9b7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerSetup</definition>
+        <argsstring>(void *param1, uint32_t param2)</argsstring>
+        <name>AppControllerSetup</name>
+        <param>
+          <type>void *</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>To setup the necessary modules for the application. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>WLAN</para></listitem><listitem><para>ServalPAL</para></listitem><listitem><para>SNTP (if HTTPS)</para></listitem><listitem><para>HTTP rest client</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" line="371" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" bodystart="371" bodyend="401"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___w_l_a_n_1ga5e86721c894549287a387d49af37b1e3">WLAN_Setup</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___s_e_r_v_a_l_p_a_l_1gab722469d5c22a0211799fd3d5a5073bc">ServalPAL_Setup</references>
+        <references refid="group___s_n_t_p_1ga4aff8a89750e6d74f5b8053ebb66ca77">SNTP_Setup</references>
+        <references refid="group___h_t_t_p_r_e_s_t_c_l_i_e_n_t_1ga6f6ed69c1dc39ed43a01b5f710a31d04">HTTPRestClient_Setup</references>
+        <references refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e">CmdProcessor_Enqueue</references>
+        <references refid="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_http_example_client_2source_2_app_controller_8c" startline="321" endline="356">AppControllerEnable</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+        <referencedby refid="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga22919ee3de6947c4b6616a9231e71f67" compoundref="_http_example_client_2source_2_app_controller_8c" startline="406" endline="427">AppController_Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1gab59acc7b7dbee4dcdbc84fa610fac328" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>static Retcode_T AppControllerValidateWLANConnectivity</definition>
+        <argsstring>(void)</argsstring>
+        <name>AppControllerValidateWLANConnectivity</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This will validate the WLAN network connectivity. </para>        </briefdescription>
+        <detaileddescription>
+<para>If there is no connectivity then it will scan for the given network and try to reconnect</para><para><simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" line="203" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" bodystart="203" bodyend="233"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gae501bfe35eecb13b627779b1ef52a14d">WlanNetworkConnect_GetIpStatus</references>
+        <references refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga59e805ac62f3860ed3de3cf83206d0a5a13e90103cd4c170fe84bdceb5ecf5eb4" compoundref="_b_c_d_s___wlan_network_connect_8h" startline="129">WLANNWCT_IPSTATUS_CT_AQRD</references>
+        <references refid="group___s_n_t_p_1gaec80b221bdd585c1a08580f498973a80">SNTP_Disable</references>
+        <references refid="group___w_l_a_n_1gabf173491fd6f551a2a0383b317d43352">WLAN_Reconnect</references>
+        <references refid="group___s_n_t_p_1gaec27b2582b486a4b87a4ab217abd1f15">SNTP_Enable</references>
+        <referencedby refid="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_http_example_client_2source_2_app_controller_8c" startline="249" endline="306">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga02bea3f77597146a6e8125019961d851" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HTTPRestClientGetCB</definition>
+        <argsstring>(const char *responseContent, uint32_t responseContentLen, bool isLastMessage)</argsstring>
+        <name>HTTPRestClientGetCB</name>
+        <param>
+          <type>const char *</type>
+          <declname>responseContent</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>responseContentLen</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isLastMessage</declname>
+        </param>
+        <briefdescription>
+<para>The HTTP GET request response callback. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">responseContent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the GET request response</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">responseContentLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the GET request response</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">isLastMessage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Boolean to represent if it is the last part of the ongoing message</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Refer function definition for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" line="166" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" bodystart="186" bodyend="194"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1gaf3c2790c9366be968198ab97cf1e9d94" prot="public" static="no">
+        <name>APP_RESPONSE_FROM_HTTP_SERVER_GET_TIMEOUT</name>
+        <initializer>UINT32_C(25000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Timeout for completion of HTTP rest client GET </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" line="95" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" bodystart="95" bodyend="-1"/>
+        <referencedby refid="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_http_example_client_2source_2_app_controller_8c" startline="249" endline="306">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga56e65111a0e2145506b91a6c71e527f5" prot="public" static="no">
+        <name>APP_RESPONSE_FROM_HTTP_SERVER_POST_TIMEOUT</name>
+        <initializer>UINT32_C(25000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Timeout for completion of HTTP rest client POST </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" line="93" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" bodystart="93" bodyend="-1"/>
+        <referencedby refid="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_http_example_client_2source_2_app_controller_8c" startline="249" endline="306">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1gabff8f3a204e79671b98fabaa652198c3" prot="public" static="no">
+        <name>BCDS_MODULE_ID</name>
+        <initializer><ref refid="_xdk_extension_port_2source_2_xdk_app_info_8h_1a58c5197225b08cbce9809ee5d9b3ae74ac664b9d7c9367aef22abcb23812b6f33" kindref="member">XDK_APP_MODULE_ID_APP_CONTROLLER</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" line="64" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/HttpExampleClient/source/AppController.c" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Demo application for communicating with the HTTP to GET and POST content on the Server and demonstrate the use of custom headers. </para>    </briefdescription>
+    <detaileddescription>
+<para>This example shows how to use the network stack to perform an HTTP Client Request.</para><para>The example connects to the server <ulink url="DEST_SERVER_HOST"></ulink> and establishes a connection to the server.</para><para>To view your posts, browse to the directory name DEST_POST_PATH:</para><para>You need to add your WLAN-Credentials in <ref refid="_xdk_extension_port_2source_2_app_controller_8h" kindref="compound">AppController.h</ref><linebreak/>
+When running the program keep the USB plugged in to the PC. You can see in the console output of the XDK-Workbench the content of the GET request. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

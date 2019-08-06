@@ -1,0 +1,279 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_b_c_d_s___h_a_l___mutex_8h" kind="file">
+    <compoundname>BCDS_HAL_Mutex.h</compoundname>
+    <includes refid="_b_c_d_s___basics_8h" local="yes">BCDS_Basics.h</includes>
+    <includes refid="_b_c_d_s___assert_8h" local="yes">BCDS_Assert.h</includes>
+    <incdepgraph>
+      <node id="36575">
+        <label>stdbool.h</label>
+      </node>
+      <node id="36578">
+        <label>BCDS_Assert.h</label>
+        <link refid="_b_c_d_s___assert_8h"/>
+        <childnode refid="36579" relation="include">
+        </childnode>
+      </node>
+      <node id="36579">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="36573" relation="include">
+        </childnode>
+      </node>
+      <node id="36574">
+        <label>stdint.h</label>
+      </node>
+      <node id="36577">
+        <label>stdlib.h</label>
+      </node>
+      <node id="36572">
+        <label>SDK/xdk110/Platform/Essentials/include/BCDS_HAL_Mutex.h</label>
+        <link refid="BCDS_HAL_Mutex.h"/>
+        <childnode refid="36573" relation="include">
+        </childnode>
+        <childnode refid="36578" relation="include">
+        </childnode>
+      </node>
+      <node id="36576">
+        <label>string.h</label>
+      </node>
+      <node id="36573">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="36574" relation="include">
+        </childnode>
+        <childnode refid="36575" relation="include">
+        </childnode>
+        <childnode refid="36576" relation="include">
+        </childnode>
+        <childnode refid="36577" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="user-defined">
+      <memberdef kind="define" id="_b_c_d_s___h_a_l___mutex_8h_1a140bcf1440f371fdf6b92d7849e9a8c5" prot="public" static="no">
+        <name>HAL_MUTEX_UNINITIALIZED</name>
+        <initializer><ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL_Mutex.h" line="60" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL_Mutex.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_b_c_d_s___h_a_l___mutex_8h_1a519d16fb69a4dc5677004e4f29a0cffb" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* HAL_Mutex_T</definition>
+        <argsstring></argsstring>
+        <name>HAL_Mutex_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL_Mutex.h" line="62" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL_Mutex.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_b_c_d_s___h_a_l___mutex_8h_1a1ecb0bb402da7ea21351a87def7d14ee" prot="public" static="no">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>(*</type>
+        <definition>typedef Retcode_T(* HAL_Mutex_Hook_T)(HAL_Mutex_T *mutex)</definition>
+        <argsstring>)(HAL_Mutex_T *mutex)</argsstring>
+        <name>HAL_Mutex_Hook_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL_Mutex.h" line="65" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL_Mutex.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="_b_c_d_s___h_a_l___mutex_8h_1af2ee0ea997885259c97771b557989b72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T HAL_Mutex_SetHooks</definition>
+        <argsstring>(HAL_Mutex_Hook_T lockHook, HAL_Mutex_Hook_T unlockHook)</argsstring>
+        <name>HAL_Mutex_SetHooks</name>
+        <param>
+          <type><ref refid="_b_c_d_s___h_a_l___mutex_8h_1a1ecb0bb402da7ea21351a87def7d14ee" kindref="member">HAL_Mutex_Hook_T</ref></type>
+          <declname>lockHook</declname>
+        </param>
+        <param>
+          <type><ref refid="_b_c_d_s___h_a_l___mutex_8h_1a1ecb0bb402da7ea21351a87def7d14ee" kindref="member">HAL_Mutex_Hook_T</ref></type>
+          <declname>unlockHook</declname>
+        </param>
+        <briefdescription>
+<para>a function to set RTOS hooks </para>        </briefdescription>
+        <detaileddescription>
+<para>If an RTOS is used, then hooks should be set to provide proper mutex functions based on RTOS mechanisms such as mutexSemaphores.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lockHook</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the hook for the lock function</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unlockHook</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the hook for the unlock function</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when successful </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when any one of the param has been NULL</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>a new wait Function Hook must implement a initialization or the used resource at first call </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL_Mutex.h" line="84" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="_b_c_d_s___h_a_l___mutex_8h_1a74fe27abb8f6e49027baedc207513d77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T HAL_Mutex_Lock</definition>
+        <argsstring>(HAL_Mutex_T *mutex)</argsstring>
+        <name>HAL_Mutex_Lock</name>
+        <param>
+          <type><ref refid="_b_c_d_s___h_a_l___mutex_8h_1a519d16fb69a4dc5677004e4f29a0cffb" kindref="member">HAL_Mutex_T</ref> *</type>
+          <declname>mutex</declname>
+        </param>
+        <briefdescription>
+<para>Lock the HAL mutex. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when successful </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when <ref refid="_b_c_d_s___h_a_l___mutex_8h_1af2ee0ea997885259c97771b557989b72" kindref="member">HAL_Mutex_SetHooks()</ref> is not initialized. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL_Mutex.h" line="93" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="_b_c_d_s___h_a_l___mutex_8h_1a45882c483d953bb4af2d6490060fb84c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T HAL_Mutex_Unlock</definition>
+        <argsstring>(HAL_Mutex_T *mutex)</argsstring>
+        <name>HAL_Mutex_Unlock</name>
+        <param>
+          <type><ref refid="_b_c_d_s___h_a_l___mutex_8h_1a519d16fb69a4dc5677004e4f29a0cffb" kindref="member">HAL_Mutex_T</ref> *</type>
+          <declname>mutex</declname>
+        </param>
+        <briefdescription>
+<para>Unlock the HAL mutex. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when successful </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when <ref refid="_b_c_d_s___h_a_l___mutex_8h_1af2ee0ea997885259c97771b557989b72" kindref="member">HAL_Mutex_SetHooks()</ref> is not initialized. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL_Mutex.h" line="102" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>API to support Mutual Exclusion to protect a code segments in HAL and BSPs. </para>    </briefdescription>
+    <detaileddescription>
+<para>The original state of the mutex is unlocked.</para><para><simplesect kind="note"><para>This mutex must not be used in the ISR context.</para></simplesect>
+By default, the mutex functions are empty because the mutex is only needed if the RTOS is active. In this case, RTOS hooks should be set using the function HAL_Lock_SetHooks() to provide a proper mutex implementation. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor">#ifndef<sp/>BCDS_HAL_MUTEX_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BCDS_HAL_MUTEX_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___basics_8h" kindref="compound">BCDS_Basics.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___assert_8h" kindref="compound">BCDS_Assert.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="_b_c_d_s___h_a_l___mutex_8h_1a140bcf1440f371fdf6b92d7849e9a8c5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HAL_MUTEX_UNINITIALIZED<sp/><sp/><sp/><sp/><sp/>NULL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="_b_c_d_s___h_a_l___mutex_8h_1a519d16fb69a4dc5677004e4f29a0cffb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/><ref refid="_b_c_d_s___h_a_l___mutex_8h_1a519d16fb69a4dc5677004e4f29a0cffb" kindref="member">HAL_Mutex_T</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Function<sp/>data<sp/>type<sp/>for<sp/>to<sp/>handle<sp/>different<sp/>os<sp/>Functions<sp/>by<sp/>setting<sp/>a<sp/>new<sp/>Function*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="_b_c_d_s___h_a_l___mutex_8h_1a1ecb0bb402da7ea21351a87def7d14ee" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>(*<ref refid="_b_c_d_s___h_a_l___mutex_8h_1a1ecb0bb402da7ea21351a87def7d14ee" kindref="member">HAL_Mutex_Hook_T</ref>)(<ref refid="_b_c_d_s___h_a_l___mutex_8h_1a519d16fb69a4dc5677004e4f29a0cffb" kindref="member">HAL_Mutex_T</ref><sp/>*mutex);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_b_c_d_s___h_a_l___mutex_8h_1af2ee0ea997885259c97771b557989b72" kindref="member">HAL_Mutex_SetHooks</ref>(<ref refid="_b_c_d_s___h_a_l___mutex_8h_1a1ecb0bb402da7ea21351a87def7d14ee" kindref="member">HAL_Mutex_Hook_T</ref><sp/>lockHook,<sp/><ref refid="_b_c_d_s___h_a_l___mutex_8h_1a1ecb0bb402da7ea21351a87def7d14ee" kindref="member">HAL_Mutex_Hook_T</ref><sp/>unlockHook);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_b_c_d_s___h_a_l___mutex_8h_1a74fe27abb8f6e49027baedc207513d77" kindref="member">HAL_Mutex_Lock</ref>(<ref refid="_b_c_d_s___h_a_l___mutex_8h_1a519d16fb69a4dc5677004e4f29a0cffb" kindref="member">HAL_Mutex_T</ref><sp/>*mutex);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_b_c_d_s___h_a_l___mutex_8h_1a45882c483d953bb4af2d6490060fb84c" kindref="member">HAL_Mutex_Unlock</ref>(<ref refid="_b_c_d_s___h_a_l___mutex_8h_1a519d16fb69a4dc5677004e4f29a0cffb" kindref="member">HAL_Mutex_T</ref><sp/>*mutex);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>BCDS_HAL_MUTEX_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_HAL_Mutex.h"/>
+  </compounddef>
+</doxygen>

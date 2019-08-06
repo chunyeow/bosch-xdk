@@ -1,0 +1,618 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___e_r_r_o_r_l_o_g_g_e_r" kind="group">
+    <compoundname>ERRORLOGGER</compoundname>
+    <title>ErrorLogger</title>
+    <innerfile refid="_b_c_d_s___error_logger_8h">BCDS_ErrorLogger.h</innerfile>
+    <innerclass refid="struct_error_logger___log_entry___s" prot="public">ErrorLogger_LogEntry_S</innerclass>
+    <innerclass refid="struct_error_logger_config___s" prot="public">ErrorLoggerConfig_S</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___e_r_r_o_r_l_o_g_g_e_r_1gaffff88ccca240d5933f75de3a794a2c3" prot="public" static="no">
+        <name>ErrorLogger_StorageMedium_E</name>
+        <enumvalue id="group___e_r_r_o_r_l_o_g_g_e_r_1ggaffff88ccca240d5933f75de3a794a2c3a24c760ba610166e4d2cff65886cbf8cc" prot="public">
+          <name>STORAGE_TYPE_SDCARD</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___e_r_r_o_r_l_o_g_g_e_r_1ggaffff88ccca240d5933f75de3a794a2c3a7f4d3b60d9c0484ba081f4fe0335a47d" prot="public">
+          <name>STORAGE_TYPE_EXT_FLASH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___e_r_r_o_r_l_o_g_g_e_r_1ggaffff88ccca240d5933f75de3a794a2c3ac2183d11d8155f1ab60e43ef44d028b2" prot="public">
+          <name>STORAGE_TYPE_NVM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___e_r_r_o_r_l_o_g_g_e_r_1ggaffff88ccca240d5933f75de3a794a2c3a06173b8a4f544c4cbc8c52f58e7124f7" prot="public">
+          <name>STORAGE_TYPE_OTHERS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum for different storage medium. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" line="91" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" bodystart="90" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___e_r_r_o_r_l_o_g_g_e_r_1gaa70695b2ceaef201e3d44685f71ac3f9" prot="public" static="no">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>(*</type>
+        <definition>typedef Retcode_T(* ErrorLogger_EraseFunc_T)(ErrorLogger_StorageMedium_T storageSelect, void *value, uint32_t StartAddr, uint32_t numOfBytes)</definition>
+        <argsstring>)(ErrorLogger_StorageMedium_T storageSelect, void *value, uint32_t StartAddr, uint32_t numOfBytes)</argsstring>
+        <name>ErrorLogger_EraseFunc_T</name>
+        <briefdescription>
+<para>This function writes the data from the specified partition of the storage medium. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Before calling this function ensure ErrorLogger_Init has been done. Also the caller of this function has to ensure the valid position &amp; no of bytes to erase from the medium.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">partition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Type of the storage medium to erase. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to destination value to hold the data. This pointer should have enough room to place no of bytes that is mentioned in argument numOfBytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">StartAddr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>offset from the start of the partition. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">numOfBytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to erase from the storage medium.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the erase was successful else an error code is returned. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" line="149" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___e_r_r_o_r_l_o_g_g_e_r_1gadd2ee7e30325e81a499a69e3da6f7d35" prot="public" static="no">
+        <type>uint32_t(*</type>
+        <definition>typedef uint32_t(* ErrorLogger_GetTime)(void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>ErrorLogger_GetTime</name>
+        <briefdescription>
+<para>This function is used to provide the time stamp and unit will be based on application perspective. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Current time stamp. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" line="157" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___e_r_r_o_r_l_o_g_g_e_r_1gaa2f63669f21980ff602e55dea242f427" prot="public" static="no">
+        <type>struct <ref refid="struct_error_logger___log_entry___s" kindref="compound">ErrorLogger_LogEntry_S</ref></type>
+        <definition>typedef struct ErrorLogger_LogEntry_S ErrorLogger_LogEntry_T</definition>
+        <argsstring></argsstring>
+        <name>ErrorLogger_LogEntry_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" line="141" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___e_r_r_o_r_l_o_g_g_e_r_1ga8bc8deb6dde35b8ce63b8c1e6fbc74ed" prot="public" static="no">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>(*</type>
+        <definition>typedef Retcode_T(* ErrorLogger_ReadFunc_T)(ErrorLogger_StorageMedium_T storageSelect, void *value, uint32_t StartAddr, uint32_t numOfBytes)</definition>
+        <argsstring>)(ErrorLogger_StorageMedium_T storageSelect, void *value, uint32_t StartAddr, uint32_t numOfBytes)</argsstring>
+        <name>ErrorLogger_ReadFunc_T</name>
+        <briefdescription>
+<para>This function reads the data from the specified partition of the storage medium. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Before calling this function ensure ErrorLogger_Init has been done. Also the caller of this function has to ensure the valid position &amp; no of bytes to read from the medium.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">partition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the storage medium to read. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to destination value to hold the data. This pointer should have enough room to place no of bytes that is mentioned in argument numOfBytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">StartAddr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>offset from the start of the partition. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">numOfBytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to read from the storage medium.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the read was successful, else an error code is returned. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" line="115" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___e_r_r_o_r_l_o_g_g_e_r_1gab6e73a87804160e9d93502b4d0942e6d" prot="public" static="no">
+        <type>enum <ref refid="group___e_r_r_o_r_l_o_g_g_e_r_1gaffff88ccca240d5933f75de3a794a2c3" kindref="member">ErrorLogger_StorageMedium_E</ref></type>
+        <definition>typedef enum ErrorLogger_StorageMedium_E ErrorLogger_StorageMedium_T</definition>
+        <argsstring></argsstring>
+        <name>ErrorLogger_StorageMedium_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" line="141" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___e_r_r_o_r_l_o_g_g_e_r_1gaa20ba016f4a40d08c110970754a8fa79" prot="public" static="no">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>(*</type>
+        <definition>typedef Retcode_T(* ErrorLogger_WriteFunc_T)(ErrorLogger_StorageMedium_T storageSelect, void *value, uint32_t StartAddr, uint32_t numOfBytes)</definition>
+        <argsstring>)(ErrorLogger_StorageMedium_T storageSelect, void *value, uint32_t StartAddr, uint32_t numOfBytes)</argsstring>
+        <name>ErrorLogger_WriteFunc_T</name>
+        <briefdescription>
+<para>This function writes the data from the specified partition of the storage medium. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Before calling this function ensure ErrorLogger_Init has been done. Also the caller of this function has to ensure the valid position &amp; no of bytes to write from the medium.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">partition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the storage medium to write. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to destination value to hold the data. This pointer should have enough room to place no of bytes that is mentioned in argument numOfBytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">StartAddr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>offset from the start of the partition. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">numOfBytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to write from the storage medium.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the write was successful, else an error code is returned. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" line="132" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___e_r_r_o_r_l_o_g_g_e_r_1ga8c66954996ba6cb64edc6479dacc4e79" prot="public" static="no">
+        <type>struct <ref refid="struct_error_logger_config___s" kindref="compound">ErrorLoggerConfig_S</ref></type>
+        <definition>typedef struct ErrorLoggerConfig_S ErrorLoggerConfig_T</definition>
+        <argsstring></argsstring>
+        <name>ErrorLoggerConfig_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" line="157" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___e_r_r_o_r_l_o_g_g_e_r_1gaa47ac9e1d251512419a4dbc1053e47f2" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="group___e_r_r_o_r_l_o_g_g_e_r_1gaffff88ccca240d5933f75de3a794a2c3" kindref="member">ErrorLogger_StorageMedium_E</ref></type>
+        <definition>enum ErrorLogger_StorageMedium_E __attribute__</definition>
+        <argsstring></argsstring>
+        <name>__attribute__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" line="96" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___e_r_r_o_r_l_o_g_g_e_r_1gafc21ea20f3e8e88e9d77e85c78d813e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="struct_error_logger___log_entry___s" kindref="compound">ErrorLogger_LogEntry_S</ref></type>
+        <definition>struct ErrorLogger_LogEntry_S __attribute__</definition>
+        <argsstring>((packed))</argsstring>
+        <name>__attribute__</name>
+        <param>
+          <type>(packed)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The serial port LINE CODING data structure, used to carry information about serial port baudrate, parity etc. between host and device. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" line="141" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___e_r_r_o_r_l_o_g_g_e_r_1gae88750b4751e194a0db6344bae822cd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T ErrorLogger_ClearAllErrorLogs</definition>
+        <argsstring>(void)</argsstring>
+        <name>ErrorLogger_ClearAllErrorLogs</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>API to clear all the error in the user page. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when all the errors have been erased successfully and the error logger is reinitialized successfully </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>errors from either the erase operation (see <ref refid="struct_error_logger_config___s_1a132cbe391cabbb0df599b29d2f3283ff" kindref="member">ErrorLoggerConfig_T.EraseLogs</ref>) or the error logger initialization (see <ref refid="group___e_r_r_o_r_l_o_g_g_e_r_1ga9e9349b6ab1a8dc137622ee2dd934bd5" kindref="member">ErrorLogger_Init</ref>) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" line="267" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___e_r_r_o_r_l_o_g_g_e_r_1ga59a97f92be589d7d265448a5a8d4687f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t ErrorLogger_GetCurrentErrors</definition>
+        <argsstring>(void)</argsstring>
+        <name>ErrorLogger_GetCurrentErrors</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>API to query numbers of errors available in the storage medium. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>numbers of errors in the storage medium. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" line="244" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___e_r_r_o_r_l_o_g_g_e_r_1gad46f42602c7b30a9f174b24c22f0480d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T ErrorLogger_GetErrorAt</definition>
+        <argsstring>(uint8_t index, ErrorLogger_LogEntry_T *LogEntry)</argsstring>
+        <name>ErrorLogger_GetErrorAt</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type><ref refid="group___e_r_r_o_r_l_o_g_g_e_r_1gaa2f63669f21980ff602e55dea242f427" kindref="member">ErrorLogger_LogEntry_T</ref> *</type>
+          <declname>LogEntry</declname>
+        </param>
+        <briefdescription>
+<para>API to get the error at particular index. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Index of the error to be queried </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">LogEntry</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- If there is an error at this index, it will be filled with that error.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when there is an error at this index and it is successfully read </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba497273b2285191edc1cda8648b67250a" kindref="member">RETCODE_OUT_OF_RESOURCES</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the index is bigger than number of error that can be stored </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when there is no error at this index </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" line="257" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___e_r_r_o_r_l_o_g_g_e_r_1gaebbb4b3583786780ab59fc3a579d7393" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T ErrorLogger_GetLastErrorLog</definition>
+        <argsstring>(ErrorLogger_LogEntry_T *LogEntry)</argsstring>
+        <name>ErrorLogger_GetLastErrorLog</name>
+        <param>
+          <type><ref refid="group___e_r_r_o_r_l_o_g_g_e_r_1gaa2f63669f21980ff602e55dea242f427" kindref="member">ErrorLogger_LogEntry_T</ref> *</type>
+          <declname>LogEntry</declname>
+        </param>
+        <briefdescription>
+<para>API to get the most recent error happened in the system. </para>        </briefdescription>
+        <detaileddescription>
+<para>Using this API, one can get the most recent error in the system.</para><para><simplesect kind="note"><para>if there is an error, LogEntry is filled with most recent error, else it is left untouched</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">LogEntry</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- pointer to be filled with last logged error</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the last error is read successfully </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the LogEntry pointer is NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba497273b2285191edc1cda8648b67250a" kindref="member">RETCODE_OUT_OF_RESOURCES</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when no error was logged yet </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" line="217" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___e_r_r_o_r_l_o_g_g_e_r_1ga2579e58139e7f7af688b52c2e2cd77f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t ErrorLogger_GetTotalErrors</definition>
+        <argsstring>(void)</argsstring>
+        <name>ErrorLogger_GetTotalErrors</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>API to query total number of errors occurred in the system. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The total number of errors logged can be bigger than the maximum number of entries as the errors are logged in a cyclical manner</para></simplesect>
+<simplesect kind="return"><para>numbers of errors in the system. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" line="237" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___e_r_r_o_r_l_o_g_g_e_r_1gab78f58792439895876e354e827e3a551" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T ErrorLogger_HasError</definition>
+        <argsstring>(Retcode_T Error)</argsstring>
+        <name>ErrorLogger_HasError</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+          <declname>Error</declname>
+        </param>
+        <briefdescription>
+<para>API to query if particular error has happened in the system. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The Error code to be searched in the logs</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the queried error is present </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_FAILURE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the queried error is not present </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" line="227" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___e_r_r_o_r_l_o_g_g_e_r_1ga9e9349b6ab1a8dc137622ee2dd934bd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T ErrorLogger_Init</definition>
+        <argsstring>(ErrorLoggerConfig_T storageAgentHandle)</argsstring>
+        <name>ErrorLogger_Init</name>
+        <param>
+          <type><ref refid="group___e_r_r_o_r_l_o_g_g_e_r_1ga8c66954996ba6cb64edc6479dacc4e79" kindref="member">ErrorLoggerConfig_T</ref></type>
+          <declname>storageAgentHandle</declname>
+        </param>
+        <briefdescription>
+<para>API for initialize the ErrorLogger module. </para>        </briefdescription>
+        <detaileddescription>
+<para>The current configuration of error logger is that it can store up to 120 bytes where one error log entry is 12 bytes. Thus 10 logs could be stored. This can be modified based on the application requirements.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">storageAgentHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- data structure handling the information required for error logging</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the ErrorLogger module is successfully initialized </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the read operation of the storage agent failed </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" line="185" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___e_r_r_o_r_l_o_g_g_e_r_1gad4bed19669ab2fc3748293979f718a35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T ErrorLogger_LogError</definition>
+        <argsstring>(Retcode_T Error)</argsstring>
+        <name>ErrorLogger_LogError</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+          <declname>Error</declname>
+        </param>
+        <briefdescription>
+<para>API for logging error to the storage medium. </para>        </briefdescription>
+        <detaileddescription>
+<para>This API is not thread-safe and the priority has to be handled in the application.</para><para>It logs the errors to the storage medium along with timestamp. It also counts and numbers all the errors.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Error code to be logged.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when error is logged successfully </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when trying to log a RETCODE_OK value for error (which is not an error...) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>when writing failed, the actual error code is the one returned by the #WriteLogs function (see <ref refid="group___e_r_r_o_r_l_o_g_g_e_r_1ga8c66954996ba6cb64edc6479dacc4e79" kindref="member">ErrorLoggerConfig_T</ref>) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" line="202" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___e_r_r_o_r_l_o_g_g_e_r_1ga22fe3ee2fc8ade2d04834eb2b207dbd6" prot="public" static="no">
+        <name>ERRORLOGGER_SIZE</name>
+        <initializer>(UINT8_C(120))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" line="83" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_r_r_o_r_l_o_g_g_e_r_1ga23f81cd5f3c2519fe08a044ffcc9f4a0" prot="public" static="no">
+        <name>MAXENTRIES</name>
+        <initializer>(<ref refid="group___e_r_r_o_r_l_o_g_g_e_r_1ga22fe3ee2fc8ade2d04834eb2b207dbd6" kindref="member">ERRORLOGGER_SIZE</ref>/<ref refid="group___e_r_r_o_r_l_o_g_g_e_r_1gad6bcee49c2e7c1cb83b74eaab1ec5ab0" kindref="member">SIZEOF_LOGENTRY</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" line="85" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_r_r_o_r_l_o_g_g_e_r_1gad6bcee49c2e7c1cb83b74eaab1ec5ab0" prot="public" static="no">
+        <name>SIZEOF_LOGENTRY</name>
+        <initializer>(UINT8_C(12))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This item needs to be updated whenever the log entry structure changes!! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" line="81" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_ErrorLogger.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file contains public interface for ErrorLogger module. </para>    </briefdescription>
+    <detaileddescription>
+<para>This file exposes the public interface of the ErrorLogger Module. Mostly call <ref refid="group___e_r_r_o_r_l_o_g_g_e_r_1gad4bed19669ab2fc3748293979f718a35" kindref="member">ErrorLogger_LogError()</ref> with Retcode_T to log the error to a persistent memory such as Userpage, SD card etc. Each time the <ref refid="group___e_r_r_o_r_l_o_g_g_e_r_1gad4bed19669ab2fc3748293979f718a35" kindref="member">ErrorLogger_LogError()</ref> is called, error will be logged with time stamp following the ring buffer model. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

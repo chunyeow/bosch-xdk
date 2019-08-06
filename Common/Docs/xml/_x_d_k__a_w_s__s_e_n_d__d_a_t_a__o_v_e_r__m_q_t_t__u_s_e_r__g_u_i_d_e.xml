@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_x_d_k__a_w_s__s_e_n_d__d_a_t_a__o_v_e_r__m_q_t_t__u_s_e_r__g_u_i_d_e" kind="page">
+    <compoundname>XDK_AWS_SEND_DATA_OVER_MQTT_USER_GUIDE</compoundname>
+    <title>XDK AwsSendDataOverMQTT Application User Guide</title>
+    <detaileddescription>
+<para>XDK AwsSendDataOverMQTT application shows how to use the MQTT protocol to transfer the sensor data to an AWS server using Amazon FreeRTOS.</para><sect1 id="_x_d_k__a_w_s__s_e_n_d__d_a_t_a__o_v_e_r__m_q_t_t__u_s_e_r__g_u_i_d_e_1XDK_AWS_SEND_DATA_OVER_MQTT_USER_GUIDE_USAGE">
+<title>XDK AwsSendDataOverMQTT Application User Guide</title>
+<para><hruler/>
+<orderedlist>
+<listitem><para>Find the files placed under AwsSendDataOverMQTT(4 files) <programlisting><codeline><highlight class="normal">config.txt<sp/>–<sp/>Configuration<sp/>file</highlight></codeline>
+<codeline><highlight class="normal">rootCA.der<sp/>–<sp/>Root<sp/>Certificate</highlight></codeline>
+<codeline><highlight class="normal">xdk-cert.der<sp/>-<sp/>A<sp/>certificate<sp/>for<sp/>this<sp/>thing</highlight></codeline>
+<codeline><highlight class="normal">xdk-priv.der<sp/>–<sp/>Private<sp/>Certificate</highlight></codeline>
+</programlisting></para></listitem><listitem><para>Modify the config.txt with ssid, password , serverurl, serverport , brokerurl and broker port as shown below in config.txt. <simplesect kind="note"><para>brokerurl - Go to IoT core available under Internet of Things of Home page after logging into <ulink url="http://console.aws.amazon.com/">http://console.aws.amazon.com/</ulink> brokerurl you can get from Settings under Endpoint <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;wlan&quot;:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;isenterprise&quot;<sp/>:<sp/>0,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;ishostpgmenabled&quot;<sp/>:<sp/>0,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;ssid&quot;<sp/>:<sp/>&quot;xxxxx&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;username&quot;<sp/>:<sp/>&quot;xxxxx&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;password&quot;<sp/>:<sp/>&quot;xxxxx&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;isstatic&quot;<sp/>:<sp/>0,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;ipaddr&quot;<sp/>:<sp/>&quot;0.0.0.0&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;gwaddr&quot;<sp/>:<sp/>&quot;0.0.0.0&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;dnsaddr&quot;<sp/>:<sp/>&quot;0.0.0.0&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;mask&quot;<sp/>:<sp/>&quot;0.0.0.0&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;sntp&quot;:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;serverurl&quot;:<sp/>&quot;0.de.pool.ntp.org&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;serverport&quot;:<sp/>123</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;mqtt&quot;:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;clientid&quot;:<sp/>&quot;xyz&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;brokerurl&quot;:<sp/>&quot;xyz.iot.eu-central-1.amazonaws.com&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;brokerport&quot;:<sp/>8883</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para></simplesect>
+</para></listitem><listitem><para>Go to IoT core after looging into <ulink url="http://console.aws.amazon.com/">http://console.aws.amazon.com/</ulink> The Home page will open as shown below</para></listitem></orderedlist>
+</para><para><image type="html" name="AwsSendDataOverMqtt-1.png" width="\textwidth">Home Page for Aws</image>
+</para><para>brokerurl can be get from Settings under Endpoint field <image type="html" name="AwsSendDataOverMqtt-2.png" width="\textwidth">Brokerurl for the config.txt</image>
+</para><sect2 id="_x_d_k__a_w_s__s_e_n_d__d_a_t_a__o_v_e_r__m_q_t_t__u_s_e_r__g_u_i_d_e_1XDK_AWS_SEND_DATA_OVER_MQTT_USER_GUIDE_SUBSECTION1">
+<title>Steps to Generate certificate</title>
+<para><orderedlist>
+<listitem><para>To create the certificate follow the below steps Go to IoT core page available under Internet of Things <itemizedlist>
+<listitem>
+<para>Go to Manage -&gt;Things <image type="html" name="AwsSendDataOverMqtt-3.png"></image>
+</para><para></para></listitem>
+<listitem>
+<para>Create a Device under Things <image type="html" name="AwsSendDataOverMqtt-4.png"></image>
+</para><para></para></listitem>
+<listitem>
+<para>Click on &quot;Create a single thing&quot; <image type="html" name="AwsSendDataOverMqtt-5.png"></image>
+</para><para></para></listitem>
+<listitem>
+<para>Name your device under “Name” and click next <image type="html" name="AwsSendDataOverMqtt-6.png"></image>
+</para><para></para></listitem>
+<listitem>
+<para>Creating certificate have two possibilities <itemizedlist>
+<listitem>
+<para>For the newly created device <image type="html" name="AwsSendDataOverMqtt-7.png"></image>
+ </para></listitem>
+<listitem>
+<para>If your device is already created then go to the created device for example XDK-Custom -&gt; Go to Security -&gt; create certificate <image type="html" name="AwsSendDataOverMqtt-8.png"></image>
+ &lt;&gt; </para></listitem>
+<listitem>
+<para>Download the certificate and key 1,2 and 3 as per the image given below and afterwards click on Activate. If not activated then the device will not subscribe. So everytime the device should be activated when you flash the code&lt;<itemizedlist>
+<listitem><para>&gt; <image type="html" name="AwsSendDataOverMqtt-9.png"></image>
+</para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Downloaded certificates will be in .pem format which should be converted to .der format  After downloading the certificate -&gt; go to the place where it is saved -&gt; open git bash and use the command given below <programlisting><codeline><highlight class="normal">$<sp/>openssl<sp/>x509<sp/>-outform<sp/>der<sp/>-in<sp/>downloaded_cert.pem<sp/>-out<sp/>output.der<sp/>-&gt;<sp/>for<sp/>certificate<sp/>(.cert.pem<sp/>/<sp/>root<sp/>CA<sp/>)</highlight></codeline>
+<codeline><highlight class="normal">$<sp/>openssl<sp/>rsa<sp/>-outform<sp/>der<sp/>-in<sp/>key.pem<sp/>-out<sp/>private.der<sp/>-&gt;<sp/>for<sp/>converting<sp/>the<sp/>private<sp/>key</highlight></codeline>
+</programlisting></para><para><simplesect kind="note"><para>Downloaded_cert .pem is the downloaded file name and output .der which can be named anything. </para></simplesect>
+<simplesect kind="note"><para>Save as a .pem in local system (Kindly remove space while saving the certificate) </para></simplesect>
+</para></listitem>
+</itemizedlist>
+</para><para></para></listitem>
+</itemizedlist>
+</para></listitem></orderedlist>
+</para></sect2>
+<sect2 id="_x_d_k__a_w_s__s_e_n_d__d_a_t_a__o_v_e_r__m_q_t_t__u_s_e_r__g_u_i_d_e_1XDK_AWS_SEND_DATA_OVER_MQTT_USER_GUIDE_SUBSECTION2">
+<title>Steps to flash the application and see the data sent over Mqtt</title>
+<para><orderedlist>
+<listitem><para>Modified the AppController.c file with the above modified certificate name <programlisting><codeline><highlight class="normal">APP_ROOT_CA_FILE_NAME-<sp/>created<sp/>by<sp/>RSA<sp/>2048<sp/>bit<sp/>key:<sp/>VeriSign<sp/>Class<sp/>3<sp/>Public<sp/>Primary<sp/>G5<sp/><sp/><sp/><sp/>root<sp/>CA<sp/>certificate<sp/>file<sp/>name</highlight></codeline>
+<codeline><highlight class="normal">APP_PRIVATE_KEY_FILE_NAME<sp/>–<sp/>created<sp/>by<sp/>Private<sp/>Key<sp/>file<sp/>name</highlight></codeline>
+<codeline><highlight class="normal">APP_CLIENT_CERT_KEY_FILE_NAME<sp/>–created<sp/>by<sp/>-<sp/>A<sp/>certificate<sp/>for<sp/>this<sp/>thing<sp/>(.pem.cert)<sp/>file<sp/>name</highlight></codeline>
+</programlisting></para></listitem><listitem><para>Place the generated certificates after converting to der format along with config.txt file in the SD Card and after modified as per point 4 compile and flash the Application, after the SNTP is success and the data can be seen in TeraTerm or in any console window <image type="html" name="AwsSendDataOverMqtt-10.png"></image>
+</para></listitem><listitem><para>Go to Test -&gt; and specify the topic for eg : “BCDS/XDK110/example/out” as mention in application and subscribe to the topic <image type="html" name="AwsSendDataOverMqtt-11.png"></image>
+</para></listitem><listitem><para>After subscribing you can see the data streaming as per the below picture <image type="html" name="AwsSendDataOverMqtt-12.png"></image>
+</para></listitem><listitem><para>Once the Application run the files in the SD card is converted to .bkp . The files can be modified again by placing the .der in the SD Card whichever file is required <image type="html" name="AwsSendDataOverMqtt-13.png"></image>
+ </para></listitem></orderedlist>
+</para></sect2>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

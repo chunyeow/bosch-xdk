@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___r_i_n_g_b_u_f_f_e_r" kind="group">
+    <compoundname>RINGBUFFER</compoundname>
+    <title>Ring Buffer</title>
+    <innerfile refid="_b_c_d_s___ring_buffer_8h">BCDS_RingBuffer.h</innerfile>
+    <innerclass refid="struct_ring_buffer___s" prot="public">RingBuffer_S</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___r_i_n_g_b_u_f_f_e_r_1ga94f9784a0739428ba99a3b5a9a3a4fb3" prot="public" static="no">
+        <type>struct <ref refid="struct_ring_buffer___s" kindref="compound">RingBuffer_S</ref></type>
+        <definition>typedef struct RingBuffer_S  RingBuffer_T</definition>
+        <argsstring></argsstring>
+        <name>RingBuffer_T</name>
+        <briefdescription>
+<para>Describes a circular buffer - this implementation expects a single consumer and a single producer. </para>        </briefdescription>
+        <detaileddescription>
+<para>Reading and writing to the buffer can be done independently. The read function only returns data unless the buffer is empty The write function only writes data when the buffer is not full.</para><para>Definition:<itemizedlist>
+<listitem><para>WriteIndex: the location where data is stored to</para></listitem><listitem><para>ReadIndex: the location from where to read from </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_RingBuffer.h" line="80" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___r_i_n_g_b_u_f_f_e_r_1ga4060ee5ec8e5980901c33b757c61e6f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RingBuffer_Initialize</definition>
+        <argsstring>(RingBuffer_T *ringBuffer, uint8_t *bufferSpace, uint32_t size)</argsstring>
+        <name>RingBuffer_Initialize</name>
+        <param>
+          <type><ref refid="group___r_i_n_g_b_u_f_f_e_r_1ga94f9784a0739428ba99a3b5a9a3a4fb3" kindref="member">RingBuffer_T</ref> *</type>
+          <declname>ringBuffer</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>bufferSpace</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a ring-buffer to empty state with a given buffer and buffer size. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ringBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the ring-buffer descriptor. MUST NOT be NULL</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bufferSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the circular buffer. This buffer must be created and maintained by the caller. The reason the buffer is separate from the descriptor is to allow for buffers of different sizes while using the same descriptor to manage any buffer MUST NOT be NULL</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the circular buffer. Must be known to the caller and will get stored inside the descriptor. MUST BE &gt; 1 NOTE: the actual number of bytes that can be stored is size -1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_RingBuffer.h" line="102" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___r_i_n_g_b_u_f_f_e_r_1gaf37dbfacbc836229fc519734cc247f8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t RingBuffer_Read</definition>
+        <argsstring>(RingBuffer_T *ringBuffer, uint8_t *data, uint32_t length)</argsstring>
+        <name>RingBuffer_Read</name>
+        <param>
+          <type><ref refid="group___r_i_n_g_b_u_f_f_e_r_1ga94f9784a0739428ba99a3b5a9a3a4fb3" kindref="member">RingBuffer_T</ref> *</type>
+          <declname>ringBuffer</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Removes the specified number of bytes from the circular buffer and stores them in the user supplied buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The number of bytes may be different depending on the actual fill-level of the buffer.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ringBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the ring-buffer descriptor MUST NOT be NULL</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the user supplied buffer into which the data has to be copied. Must be large enough to hold the specific number of bytes MUST NOT be NULL</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to copy</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Actual number of bytes read </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_RingBuffer.h" line="154" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___r_i_n_g_b_u_f_f_e_r_1gab79bade4e874f57df2d9675ea3e2de43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RingBuffer_Reset</definition>
+        <argsstring>(RingBuffer_T *ringBuffer)</argsstring>
+        <name>RingBuffer_Reset</name>
+        <param>
+          <type><ref refid="group___r_i_n_g_b_u_f_f_e_r_1ga94f9784a0739428ba99a3b5a9a3a4fb3" kindref="member">RingBuffer_T</ref> *</type>
+          <declname>ringBuffer</declname>
+        </param>
+        <briefdescription>
+<para>Resets the ring-buffer. All the saved / available data will be lost, if any at the time of trigger. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>We do not guard the buffer. Application is expected to take care of this if needed.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ringBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the ring-buffer descriptor MUST NOT be NULL </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_RingBuffer.h" line="171" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___r_i_n_g_b_u_f_f_e_r_1gaa11997ed9964ebc717d349672904ca47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t RingBuffer_Write</definition>
+        <argsstring>(RingBuffer_T *ringBuffer, uint8_t *data, uint32_t length)</argsstring>
+        <name>RingBuffer_Write</name>
+        <param>
+          <type><ref refid="group___r_i_n_g_b_u_f_f_e_r_1ga94f9784a0739428ba99a3b5a9a3a4fb3" kindref="member">RingBuffer_T</ref> *</type>
+          <declname>ringBuffer</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Copies specified number of bytes into the circular buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The actual number of bytes written may be different depending on the fill-level of the buffer.</para></simplesect>
+<simplesect kind="note"><para>It is the responsibility of the interface user to provide valid input parameters. Since this API is often used in ISR context, we minimize the internal validations.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ringBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the ring-buffer descriptor</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+MUST NOT be NULL</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the user data that is to be copied into the circular buffer MUST NOT be NULL</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to copy</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>actual number of bytes written </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_RingBuffer.h" line="129" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Ring Buffer Interface. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

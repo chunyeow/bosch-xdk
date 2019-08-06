@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___e_x_t_b_u_s___t_e_m_p___i_o___b_o_a_r_d" kind="group">
+    <compoundname>EXTBUS_TEMP_IO_BOARD</compoundname>
+    <title>ExtensionBusTemperatureIOBoard</title>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___e_x_t_b_u_s___t_e_m_p___i_o___b_o_a_r_d_1ga90ce7b07b4530c957f9f83201d8dc8bc" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga41a2f220f03970c1857bd96528307a81" kindref="member">CmdProcessor_T</ref> *</type>
+        <definition>CmdProcessor_T* AppCmdProcessor</definition>
+        <argsstring></argsstring>
+        <name>AppCmdProcessor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle to store the main Command processor handle to be used by run-time event driven threads </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/ExtensionBusTemperatureIOBoard/source/AppController.c" line="80" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/ExtensionBusTemperatureIOBoard/source/AppController.c" bodystart="80" bodyend="-1"/>
+        <referencedby refid="group___e_x_t_b_u_s___t_e_m_p___i_o___b_o_a_r_d_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_extension_bus_temperature_i_o_board_2source_2_app_controller_8c" startline="257" endline="279">AppControllerSetup</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group___e_x_t_b_u_s___t_e_m_p___i_o___b_o_a_r_d_1ga6fa700b048407619b5309da95dcce5dd" prot="public" static="yes" mutable="no">
+        <type><ref refid="_free_r_t_o_s_8h_1af7cd8f53b62f0c497b442b504c30f2ec" kindref="member">xTaskHandle</ref></type>
+        <definition>xTaskHandle AppControllerHandle</definition>
+        <argsstring></argsstring>
+        <name>AppControllerHandle</name>
+        <initializer>= <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>OS thread handle for Application controller to be used by run-time blocking threads </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/ExtensionBusTemperatureIOBoard/source/AppController.c" line="82" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/ExtensionBusTemperatureIOBoard/source/AppController.c" bodystart="82" bodyend="-1"/>
+        <referencedby refid="group___e_x_t_b_u_s___t_e_m_p___i_o___b_o_a_r_d_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_extension_bus_temperature_i_o_board_2source_2_app_controller_8c" startline="220" endline="245">AppControllerEnable</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group___e_x_t_b_u_s___t_e_m_p___i_o___b_o_a_r_d_1ga1f28f00ef01039ad9d07d80f009afdf7" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___e_x_t_e_r_n_a_l_s_e_n_s_o_r_1ga55f733767b742cb69b2e0a88fba6be2f" kindref="member">ExternalSensor_Setup_T</ref></type>
+        <definition>ExternalSensor_Setup_T ExternalSensorSetup</definition>
+        <argsstring></argsstring>
+        <name>ExternalSensorSetup</name>
+        <initializer>=
+        {
+                .CmdProcessorHandle = <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,
+                .Enable =
+                        {
+                                .LemCurrent = <ref refid="_serval___types_8h_1a65e9886d74aaee76545e83dd09011727" kindref="member">false</ref>,
+                                .LemVoltage = <ref refid="_serval___types_8h_1a65e9886d74aaee76545e83dd09011727" kindref="member">false</ref>,
+                                .MaxTemp = <ref refid="_serval___types_8h_1a41f9c5fb8b08eb5dc3edce4dcb37fee7" kindref="member">true</ref>,
+                                .MaxResistance = <ref refid="_serval___types_8h_1a41f9c5fb8b08eb5dc3edce4dcb37fee7" kindref="member">true</ref>,
+                        },
+                .LemConfig =
+                        {
+                                .<ref refid="_lem_8c_1a7cd032d722dcb3832ab3018187c76833" kindref="member">CurrentRatedTransformationRatio</ref> = <ref refid="_virtual_xdk_demo_2source_2_app_controller_8h_1af6e46d1100a240b42d1d19c0d28f482a" kindref="member">APP_CURRENT_RATED_TRANSFORMATION_RATIO</ref>,
+                        },
+                .Max31865Config =
+                        {
+                                .TempType = <ref refid="group___e_x_t_e_r_n_a_l_s_e_n_s_o_r_1ggae8bb2e298acbc4c3604c27a396f85923a5202ad4680e40e8c5e976c6a743ab0c6" kindref="member">SENSOR_TEMPERATURE_PT100</ref>,
+                        },
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External Sensor setup parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/ExtensionBusTemperatureIOBoard/source/AppController.c" line="129" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/ExtensionBusTemperatureIOBoard/source/AppController.c" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___e_x_t_b_u_s___t_e_m_p___i_o___b_o_a_r_d_1ga30f9cefc6d3484ef7c8aafac99310abe" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___i_n_b_u_i_l_d_s_e_n_s_o_r_1ga7769593edd2c8739a3debfe559ad6ff8" kindref="member">Sensor_Setup_T</ref></type>
+        <definition>Sensor_Setup_T SensorSetup</definition>
+        <argsstring></argsstring>
+        <name>SensorSetup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sensor setup parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/ExtensionBusTemperatureIOBoard/source/AppController.c" line="84" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/ExtensionBusTemperatureIOBoard/source/AppController.c" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___e_x_t_b_u_s___t_e_m_p___i_o___b_o_a_r_d_1ga22919ee3de6947c4b6616a9231e71f67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AppController_Init</definition>
+        <argsstring>(void *cmdProcessorHandle, uint32_t param2)</argsstring>
+        <name>AppController_Init</name>
+        <param>
+          <type>void *</type>
+          <declname>cmdProcessorHandle</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>Gives control to the Application controller. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a template function where the user can write his custom application.</para><para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/ExtensionBusTemperatureIOBoard/source/AppController.c" line="284" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/ExtensionBusTemperatureIOBoard/source/AppController.c" bodystart="284" bodyend="306"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e">CmdProcessor_Enqueue</references>
+        <references refid="group___e_x_t_b_u_s___t_e_m_p___i_o___b_o_a_r_d_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_extension_bus_temperature_i_o_board_2source_2_app_controller_8c" startline="257" endline="279">AppControllerSetup</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+      </memberdef>
+      <memberdef kind="function" id="group___e_x_t_b_u_s___t_e_m_p___i_o___b_o_a_r_d_1ga5ef9cc8f277726dc19c525c8049d388f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerEnable</definition>
+        <argsstring>(void *param1, uint32_t param2)</argsstring>
+        <name>AppControllerEnable</name>
+        <param>
+          <type>void *</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>To enable the necessary modules for the application. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Sensor</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/ExtensionBusTemperatureIOBoard/source/AppController.c" line="220" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/ExtensionBusTemperatureIOBoard/source/AppController.c" bodystart="220" bodyend="245"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___i_n_b_u_i_l_d_s_e_n_s_o_r_1ga098f1e2f6e287146591b8ff5886c6820">Sensor_Enable</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___e_x_t_e_r_n_a_l_s_e_n_s_o_r_1gaf8750e0b8079b1a11d4b6b3d1dd3b112">ExternalSensor_Enable</references>
+        <references refid="group___e_x_t_b_u_s___t_e_m_p___i_o___b_o_a_r_d_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_extension_bus_temperature_i_o_board_2source_2_app_controller_8c" startline="168" endline="208">AppControllerFire</references>
+        <references refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1af793604cd2dbedfc6b69f10936fe7c41" compoundref="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h" startline="61">TASK_STACK_SIZE_APP_CONTROLLER</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1a4651501b886d4de331b9f06b37265177" compoundref="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h" startline="59">TASK_PRIO_APP_CONTROLLER</references>
+        <references refid="group___e_x_t_b_u_s___t_e_m_p___i_o___b_o_a_r_d_1ga6fa700b048407619b5309da95dcce5dd" compoundref="_extension_bus_temperature_i_o_board_2source_2_app_controller_8c" startline="82">AppControllerHandle</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba497273b2285191edc1cda8648b67250a" compoundref="_b_c_d_s___retcode_8h" startline="107">RETCODE_OUT_OF_RESOURCES</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+        <references refid="group___x_d_k_u_t_i_l_s_1ga7ffe38d38314b5301a4ddd04f4fa7ca6" compoundref="_utils_8c" startline="277" endline="284">Utils_PrintResetCause</references>
+        <referencedby refid="group___e_x_t_b_u_s___t_e_m_p___i_o___b_o_a_r_d_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_extension_bus_temperature_i_o_board_2source_2_app_controller_8c" startline="257" endline="279">AppControllerSetup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___e_x_t_b_u_s___t_e_m_p___i_o___b_o_a_r_d_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerFire</definition>
+        <argsstring>(void *pvParameters)</argsstring>
+        <name>AppControllerFire</name>
+        <param>
+          <type>void *</type>
+          <declname>pvParameters</declname>
+        </param>
+        <briefdescription>
+<para>This function controls the application flow. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Triggers Sensor data sampling</para></listitem><listitem><para>Read the sampled Sensor data</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pvParameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Internal Temperature sensor, external temperature sensor and external resistance is enabled. The external temperature sensor is connected to the XDK which gives the temperature value based on the resistance provided. The internal temperature sensor uses BME280 sensor and gives the temperature value </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/ExtensionBusTemperatureIOBoard/source/AppController.c" line="168" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/ExtensionBusTemperatureIOBoard/source/AppController.c" bodystart="168" bodyend="208"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___i_n_b_u_i_l_d_s_e_n_s_o_r_1ga79fa92353c8d9e30f05d957755a48f24">Sensor_GetData</references>
+        <references refid="group___e_x_t_e_r_n_a_l_s_e_n_s_o_r_1ga9e42e074f71255466425f56d04501c8a">ExternalSensor_GetData</references>
+        <references refid="struct_sensor___setup___s_1a1579b951b8f83858b9a235f60f12cd33" compoundref="_x_d_k___sensor_8h" startline="209">Sensor_Setup_S::Enable</references>
+        <references refid="struct_sensor___enable___s_1a88e8fa49564879a3723fde34ab8ee5e8" compoundref="_x_d_k___sensor_8h" startline="69">Sensor_Enable_S::Temp</references>
+        <references refid="struct_sensor___value___s_1a30b2ceb495b99ab029b438563e5f22fa" compoundref="_x_d_k___sensor_8h" startline="266">Sensor_Value_S::Temp</references>
+        <references refid="struct_external_sensor___setup___s_1a814f7d83b7919759a6a307f921bc5792" compoundref="_x_d_k___external_sensor_8h" startline="110">ExternalSensor_Setup_S::Enable</references>
+        <references refid="struct_external_sensor___enable___s_1a787bc116e540a1bf4b12f88a7fbc5949" compoundref="_x_d_k___external_sensor_8h" startline="81">ExternalSensor_Enable_S::MaxTemp</references>
+        <references refid="struct_external_sensor___enable___s_1add0baef3d5250288a92b8fef5d892a7b" compoundref="_x_d_k___external_sensor_8h" startline="82">ExternalSensor_Enable_S::MaxResistance</references>
+        <references refid="struct_external_sensor___value___s_1a09ae8369bb105eff021255bad9f8068c" compoundref="_x_d_k___external_sensor_8h" startline="127">ExternalSensor_Value_S::XMaxT</references>
+        <references refid="struct_external_sensor___value___s_1ac1c058fba7f23ca404b8c091825cfb3c" compoundref="_x_d_k___external_sensor_8h" startline="128">ExternalSensor_Value_S::XMaxR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="task_8h_1aa154068cecd7f31446a7a84af44ab1a3">vTaskDelay</references>
+        <references refid="_extension_bus_temperature_i_o_board_2source_2_app_controller_8h_1a44368be68211e6a0071eb285cd11bbcf" compoundref="_extension_bus_temperature_i_o_board_2source_2_app_controller_8h" startline="62">APP_CONTROLLER_SAMPLING_DELAY</references>
+        <referencedby refid="group___e_x_t_b_u_s___t_e_m_p___i_o___b_o_a_r_d_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_extension_bus_temperature_i_o_board_2source_2_app_controller_8c" startline="220" endline="245">AppControllerEnable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___e_x_t_b_u_s___t_e_m_p___i_o___b_o_a_r_d_1ga5ca12481e985f2cd2437fe712e08c9b7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerSetup</definition>
+        <argsstring>(void *param1, uint32_t param2)</argsstring>
+        <name>AppControllerSetup</name>
+        <param>
+          <type>void *</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>To setup the necessary modules for the application. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Sensor</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/ExtensionBusTemperatureIOBoard/source/AppController.c" line="257" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/ExtensionBusTemperatureIOBoard/source/AppController.c" bodystart="257" bodyend="279"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="struct_sensor___setup___s_1a4b767178f176a51f1c1c6abc68069ece" compoundref="_x_d_k___sensor_8h" startline="208">Sensor_Setup_S::CmdProcessorHandle</references>
+        <references refid="group___e_x_t_b_u_s___t_e_m_p___i_o___b_o_a_r_d_1ga90ce7b07b4530c957f9f83201d8dc8bc" compoundref="_extension_bus_temperature_i_o_board_2source_2_app_controller_8c" startline="80">AppCmdProcessor</references>
+        <references refid="group___i_n_b_u_i_l_d_s_e_n_s_o_r_1ga128512064ba3f94f8d0157cc1e87db22">Sensor_Setup</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="struct_external_sensor___setup___s_1a4b767178f176a51f1c1c6abc68069ece" compoundref="_x_d_k___external_sensor_8h" startline="109">ExternalSensor_Setup_S::CmdProcessorHandle</references>
+        <references refid="group___e_x_t_e_r_n_a_l_s_e_n_s_o_r_1gaef94120641478e1f57a88474de0d52b0">ExternalSensor_Setup</references>
+        <references refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e">CmdProcessor_Enqueue</references>
+        <references refid="group___e_x_t_b_u_s___t_e_m_p___i_o___b_o_a_r_d_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_extension_bus_temperature_i_o_board_2source_2_app_controller_8c" startline="220" endline="245">AppControllerEnable</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+        <referencedby refid="group___e_x_t_b_u_s___t_e_m_p___i_o___b_o_a_r_d_1ga22919ee3de6947c4b6616a9231e71f67" compoundref="_extension_bus_temperature_i_o_board_2source_2_app_controller_8c" startline="284" endline="306">AppController_Init</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___e_x_t_b_u_s___t_e_m_p___i_o___b_o_a_r_d_1gabff8f3a204e79671b98fabaa652198c3" prot="public" static="no">
+        <name>BCDS_MODULE_ID</name>
+        <initializer><ref refid="_xdk_extension_port_2source_2_xdk_app_info_8h_1a58c5197225b08cbce9809ee5d9b3ae74ac664b9d7c9367aef22abcb23812b6f33" kindref="member">XDK_APP_MODULE_ID_APP_CONTROLLER</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/ExtensionBusTemperatureIOBoard/source/AppController.c" line="60" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/ExtensionBusTemperatureIOBoard/source/AppController.c" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Extension Temperature IO Board provides the Implementation of Extension Temperature IO Board(MAX31865) prints Temperature Data from PT100/1000 to Serial Console. </para>    </briefdescription>
+    <detaileddescription>
+<para>External Temperature Sensor and Digital I/O The XDK External Temperature Sensor and Digital I/O extension board consists of three main elements: the external temperature, two digital inputs and two digital outputs. Please have a look into the extension of the <bold> <ulink url="https://xdk.bosch-connectivity.com/extensions">External Temperature Sensor and Digital I/O Board</ulink></bold>.This web page will go over how to use each element of the board and the maximum rating of each element. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,970 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_lwm2m_example_client_2source_2_app_controller_8c" kind="file">
+    <compoundname>AppController.c</compoundname>
+    <includes refid="_lwm2m_example_client_2source_2_xdk_app_info_8h" local="yes">XdkAppInfo.h</includes>
+    <includes refid="_lwm2m_example_client_2source_2_app_controller_8h" local="yes">AppController.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes refid="_x_d_k___l_e_d_8h" local="yes">XDK_LED.h</includes>
+    <includes refid="_x_d_k___w_l_a_n_8h" local="yes">XDK_WLAN.h</includes>
+    <includes refid="_x_d_k___l_w_m2_m_8h" local="yes">XDK_LWM2M.h</includes>
+    <includes refid="_x_d_k___serval_p_a_l_8h" local="yes">XDK_ServalPAL.h</includes>
+    <includes refid="_x_d_k___s_n_t_p_8h" local="yes">XDK_SNTP.h</includes>
+    <includes refid="_b_c_d_s___wlan_network_config_8h" local="yes">BCDS_WlanNetworkConfig.h</includes>
+    <includes refid="_b_c_d_s___cmd_processor_8h" local="yes">BCDS_CmdProcessor.h</includes>
+    <includes refid="_b_c_d_s___b_s_p___board_8h" local="yes">BCDS_BSP_Board.h</includes>
+    <includes refid="_b_c_d_s___assert_8h" local="yes">BCDS_Assert.h</includes>
+    <includes refid="_x_d_k___utils_8h" local="yes">XDK_Utils.h</includes>
+    <includes refid="_free_r_t_o_s_8h" local="yes">FreeRTOS.h</includes>
+    <includes refid="task_8h" local="yes">task.h</includes>
+    <incdepgraph>
+      <node id="20164">
+        <label>stdbool.h</label>
+      </node>
+      <node id="20182">
+        <label>BCDS_HALConfig.h</label>
+        <link refid="_b_c_d_s___h_a_l_config_8h"/>
+      </node>
+      <node id="20179">
+        <label>BCDS_WlanNetworkConfig.h</label>
+        <link refid="_b_c_d_s___wlan_network_config_8h"/>
+        <childnode refid="20162" relation="include">
+        </childnode>
+        <childnode refid="20161" relation="include">
+        </childnode>
+      </node>
+      <node id="20177">
+        <label>XDK_ServalPAL.h</label>
+        <link refid="_x_d_k___serval_p_a_l_8h"/>
+        <childnode refid="20161" relation="include">
+        </childnode>
+        <childnode refid="20171" relation="include">
+        </childnode>
+      </node>
+      <node id="20190">
+        <label>list.h</label>
+      </node>
+      <node id="20171">
+        <label>BCDS_CmdProcessor.h</label>
+        <link refid="_b_c_d_s___cmd_processor_8h"/>
+        <childnode refid="20172" relation="include">
+        </childnode>
+        <childnode refid="20162" relation="include">
+        </childnode>
+        <childnode refid="20161" relation="include">
+        </childnode>
+      </node>
+      <node id="20178">
+        <label>XDK_SNTP.h</label>
+        <link refid="_x_d_k___s_n_t_p_8h"/>
+        <childnode refid="20161" relation="include">
+        </childnode>
+      </node>
+      <node id="20170">
+        <label>BCDS_Assert.h</label>
+        <link refid="_b_c_d_s___assert_8h"/>
+        <childnode refid="20161" relation="include">
+        </childnode>
+      </node>
+      <node id="20160">
+        <label>XdkCommonInfo.h</label>
+        <link refid="_xdk_common_info_8h"/>
+        <childnode refid="20161" relation="include">
+        </childnode>
+      </node>
+      <node id="20163">
+        <label>stdint.h</label>
+      </node>
+      <node id="20161">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="20162" relation="include">
+        </childnode>
+      </node>
+      <node id="20175">
+        <label>XDK_WLAN.h</label>
+        <link refid="_x_d_k___w_l_a_n_8h"/>
+        <childnode refid="20161" relation="include">
+        </childnode>
+      </node>
+      <node id="20166">
+        <label>stdlib.h</label>
+      </node>
+      <node id="20186">
+        <label>BCDS_TaskConfig.h</label>
+        <link refid="_b_c_d_s___task_config_8h"/>
+      </node>
+      <node id="20159">
+        <label>XdkAppInfo.h</label>
+        <link refid="_lwm2m_example_client_2source_2_xdk_app_info_8h"/>
+        <childnode refid="20160" relation="include">
+        </childnode>
+        <childnode refid="20161" relation="include">
+        </childnode>
+      </node>
+      <node id="20184">
+        <label>stddef.h</label>
+      </node>
+      <node id="20168">
+        <label>XDK_Utils.h</label>
+        <link refid="_x_d_k___utils_8h"/>
+        <childnode refid="20169" relation="include">
+        </childnode>
+        <childnode refid="20170" relation="include">
+        </childnode>
+        <childnode refid="20162" relation="include">
+        </childnode>
+        <childnode refid="20161" relation="include">
+        </childnode>
+        <childnode refid="20171" relation="include">
+        </childnode>
+      </node>
+      <node id="20174">
+        <label>XDK_LED.h</label>
+        <link refid="_x_d_k___l_e_d_8h"/>
+        <childnode refid="20161" relation="include">
+        </childnode>
+      </node>
+      <node id="20188">
+        <label>portable.h</label>
+      </node>
+      <node id="20173">
+        <label>BCDS_UtilsConfig.h</label>
+        <link refid="_b_c_d_s___utils_config_8h"/>
+      </node>
+      <node id="20165">
+        <label>string.h</label>
+      </node>
+      <node id="20172">
+        <label>BCDS_Utils.h</label>
+        <link refid="_b_c_d_s___utils_8h"/>
+        <childnode refid="20173" relation="include">
+        </childnode>
+        <childnode refid="20161" relation="include">
+        </childnode>
+      </node>
+      <node id="20162">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="20163" relation="include">
+        </childnode>
+        <childnode refid="20164" relation="include">
+        </childnode>
+        <childnode refid="20165" relation="include">
+        </childnode>
+        <childnode refid="20166" relation="include">
+        </childnode>
+      </node>
+      <node id="20187">
+        <label>projdefs.h</label>
+      </node>
+      <node id="20181">
+        <label>BCDS_HAL.h</label>
+        <link refid="_b_c_d_s___h_a_l_8h"/>
+        <childnode refid="20161" relation="include">
+        </childnode>
+        <childnode refid="20182" relation="include">
+        </childnode>
+      </node>
+      <node id="20180">
+        <label>BCDS_BSP_Board.h</label>
+        <link refid="_b_c_d_s___b_s_p___board_8h"/>
+        <childnode refid="20181" relation="include">
+        </childnode>
+      </node>
+      <node id="20158">
+        <label>SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c</label>
+        <link refid="Lwm2mExampleClient/source/AppController.c"/>
+        <childnode refid="20159" relation="include">
+        </childnode>
+        <childnode refid="20167" relation="include">
+        </childnode>
+        <childnode refid="20169" relation="include">
+        </childnode>
+        <childnode refid="20174" relation="include">
+        </childnode>
+        <childnode refid="20175" relation="include">
+        </childnode>
+        <childnode refid="20176" relation="include">
+        </childnode>
+        <childnode refid="20177" relation="include">
+        </childnode>
+        <childnode refid="20178" relation="include">
+        </childnode>
+        <childnode refid="20179" relation="include">
+        </childnode>
+        <childnode refid="20171" relation="include">
+        </childnode>
+        <childnode refid="20180" relation="include">
+        </childnode>
+        <childnode refid="20170" relation="include">
+        </childnode>
+        <childnode refid="20168" relation="include">
+        </childnode>
+        <childnode refid="20183" relation="include">
+        </childnode>
+        <childnode refid="20189" relation="include">
+        </childnode>
+      </node>
+      <node id="20167">
+        <label>AppController.h</label>
+        <link refid="_lwm2m_example_client_2source_2_app_controller_8h"/>
+        <childnode refid="20168" relation="include">
+        </childnode>
+      </node>
+      <node id="20189">
+        <label>task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="20190" relation="include">
+        </childnode>
+      </node>
+      <node id="20185">
+        <label>FreeRTOSConfig.h</label>
+        <link refid="_free_r_t_o_s_config_8h"/>
+        <childnode refid="20163" relation="include">
+        </childnode>
+        <childnode refid="20170" relation="include">
+        </childnode>
+        <childnode refid="20186" relation="include">
+        </childnode>
+      </node>
+      <node id="20183">
+        <label>FreeRTOS.h</label>
+        <link refid="_free_r_t_o_s_8h"/>
+        <childnode refid="20184" relation="include">
+        </childnode>
+        <childnode refid="20163" relation="include">
+        </childnode>
+        <childnode refid="20185" relation="include">
+        </childnode>
+        <childnode refid="20187" relation="include">
+        </childnode>
+        <childnode refid="20188" relation="include">
+        </childnode>
+      </node>
+      <node id="20169">
+        <label>stdio.h</label>
+      </node>
+      <node id="20176">
+        <label>XDK_LWM2M.h</label>
+        <link refid="_x_d_k___l_w_m2_m_8h"/>
+        <childnode refid="20161" relation="include">
+        </childnode>
+        <childnode refid="20171" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga1cfc98de5e09b225abf287dd632ccf31" prot="public" static="no">
+        <name>APP_RESPONSE_FROM_SNTP_SERVER_TIMEOUT</name>
+        <initializer>UINT32_C(10000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Timeout for SNTP server time sync </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="95" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="95" bodyend="-1"/>
+        <referencedby refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga13cd7228522dd0317118b20aa81a1f0a" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="225" endline="241">AppControllerSyncSNTP</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga1aa49fa5385a3028b6cbe7556c695bb9" prot="public" static="no">
+        <name>APP_SYNC_TIME_INTERVAL_MAX_MS</name>
+        <initializer>UINT32_C(1800000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>APP_SYNC_TIME_INTERVAL_MAX_MS is the synchronization time with SNTP server. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="93" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="93" bodyend="-1"/>
+        <referencedby refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="249" endline="270">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1gabff8f3a204e79671b98fabaa652198c3" prot="public" static="no">
+        <name>BCDS_MODULE_ID</name>
+        <initializer><ref refid="_xdk_extension_port_2source_2_xdk_app_info_8h_1a58c5197225b08cbce9809ee5d9b3ae74ac664b9d7c9367aef22abcb23812b6f33" kindref="member">XDK_APP_MODULE_ID_APP_CONTROLLER</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="66" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga90ce7b07b4530c957f9f83201d8dc8bc" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga41a2f220f03970c1857bd96528307a81" kindref="member">CmdProcessor_T</ref> *</type>
+        <definition>CmdProcessor_T* AppCmdProcessor</definition>
+        <argsstring></argsstring>
+        <name>AppCmdProcessor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle to store the main Command processor handle to be reused by ServalPAL thread </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="99" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="99" bodyend="-1"/>
+        <referencedby refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="339" endline="372">AppControllerSetup</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga6fa700b048407619b5309da95dcce5dd" prot="public" static="yes" mutable="no">
+        <type><ref refid="_free_r_t_o_s_8h_1af7cd8f53b62f0c497b442b504c30f2ec" kindref="member">xTaskHandle</ref></type>
+        <definition>xTaskHandle AppControllerHandle</definition>
+        <argsstring></argsstring>
+        <name>AppControllerHandle</name>
+        <initializer>= <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>OS thread handle for Application controller to be used by run-time blocking threads </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="101" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="101" bodyend="-1"/>
+        <referencedby refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="286" endline="323">AppControllerEnable</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga8dd7d646ca7d1ad2fc229ce9a2f986d0" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___l_w_m2_m_1ga16484e7e661031ac083e827b121c49c0" kindref="member">LWM2M_Setup_T</ref></type>
+        <definition>LWM2M_Setup_T Lwm2mSetup</definition>
+        <argsstring></argsstring>
+        <name>Lwm2mSetup</name>
+        <initializer>=
+        {
+                .CmdProcessorHandle = <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,
+                .IsSecure = <ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1ae1405e5ca0194821db6eef41361302de" kindref="member">APP_LWM2M_SECURITY_ENABLE</ref>,
+                .SecurityMode = <ref refid="group___l_w_m2_m_1gga799b84e69ed8edba6241d395af36be40a8928ef4eaac3d38d78d10c811b096075" kindref="member">LWM2M_SECURITY_MODE_PRE_SHARED_KEY</ref>,
+                .SecurityPreSharedKey =
+                        {
+                                .Identity = <ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1afcab362465a4bed46de41c3066d6ad9a" kindref="member">APP_LWM2M_DTLS_PSK_IDENTITY</ref>,
+                                .Key = <ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1a432d649e6bb235c461a3e78496576ffa" kindref="member">APP_LWM2M_DTLS_PSK_KEY</ref>,
+                                .KeyLength = <ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1aff05f62c00feb1a4bdda4edeb440cf78" kindref="member">APP_LWM2M_DTLS_PSK_KEY_LENGTH</ref>,
+                        },
+                .EndPointName = <ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1a1a6395b6a67095806d7be39d6ebca1e3" kindref="member">APP_LWM2M_END_POINT_NAME</ref>,
+                .Binding = &quot;U&quot;,
+                .Lifetime = <ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1a987d5fddeaf58b6ea798cfed6670c150" kindref="member">APP_LWM2M_LIFETIME_IN_SECONDS</ref>,
+                .ConfirmableNotification = <ref refid="_serval___types_8h_1a65e9886d74aaee76545e83dd09011727" kindref="member">false</ref>,
+                .MACAddr = <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,
+                .TestMode = <ref refid="group___l_w_m2_m_1gga4eedbf331041e6f0e983739568a99397abe974359bd7777e3c284d359059d8be5" kindref="member">LWM2M_TEST_MODE_YES</ref>,
+                .ServerURL = <ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1a0db427c9bf1f7dfb73433c25a1c8b743" kindref="member">APP_LWM2M_SERVER_URL</ref>,
+                .ServerPort = <ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1ac0ae98b679714a1f6f3b494da5a50440" kindref="member">APP_LWM2M_SERVER_PORT</ref>,
+                .ClientPort = <ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1a5349ea16d94c498fc219d6fe46bd3616" kindref="member">APP_LWM2M_CLIENT_PORT</ref>,
+                .StatusNotificationCB = <ref refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga997745c6da28920bec4229c0b9b0be01" kindref="member">AppLWM2MStatusNotificationCB</ref>,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Lwm2m setup parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="125" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga62d7996cafb989f27d906c6ab4823e15" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___s_n_t_p_1gaa31240c500f1b41b43b0367c694c570a" kindref="member">SNTP_Setup_T</ref></type>
+        <definition>SNTP_Setup_T SNTPSetupInfo</definition>
+        <argsstring></argsstring>
+        <name>SNTPSetupInfo</name>
+        <initializer>=
+        {
+                .ServerUrl = <ref refid="_send_data_over_m_q_t_t_2source_2_app_controller_8h_1a27dec0587f6fe92077449a4b3324cd95" kindref="member">SNTP_SERVER_URL</ref>,
+                .ServerPort = <ref refid="_send_data_over_m_q_t_t_2source_2_app_controller_8h_1a0c65edee974d3e3bdb4e01a4d8b58764" kindref="member">SNTP_SERVER_PORT</ref>,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SNTP setup parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="117" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga0e412a42d216de0f4feb72dfc0dfa51d" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___w_l_a_n_1ga0e6768bd91dfe20a7c6e5c6ce49533af" kindref="member">WLAN_Setup_T</ref></type>
+        <definition>WLAN_Setup_T WLANSetupInfo</definition>
+        <argsstring></argsstring>
+        <name>WLANSetupInfo</name>
+        <initializer>=
+        {
+                .IsEnterprise = <ref refid="_serval___types_8h_1a65e9886d74aaee76545e83dd09011727" kindref="member">false</ref>,
+                .IsHostPgmEnabled = <ref refid="_serval___types_8h_1a65e9886d74aaee76545e83dd09011727" kindref="member">false</ref>,
+                .SSID = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1af8d23ae6c17168a7ce76f565959a7100" kindref="member">WLAN_SSID</ref>,
+                .Username = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a7595c51ecaebc052ebb16bfee33ef064" kindref="member">WLAN_PSK</ref>, 
+                .Password = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a7595c51ecaebc052ebb16bfee33ef064" kindref="member">WLAN_PSK</ref>,
+                .IsStatic = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a3b7cbbe0cc99913db8a349bf04cb7648" kindref="member">WLAN_STATIC_IP</ref>,
+                .IpAddr = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1af8b956915d3648203d2db609f103d400" kindref="member">WLAN_IP_ADDR</ref>,
+                .GwAddr = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1aabe89318c85014d96791cdb2cd9263a8" kindref="member">WLAN_GW_ADDR</ref>,
+                .DnsAddr = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a91bfddd64e54251da5ca4e7b2d4b5774" kindref="member">WLAN_DNS_ADDR</ref>,
+                .Mask = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a408301af8a45e844e60c3be81a51a5e7" kindref="member">WLAN_MASK</ref>,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>WLAN setup parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="103" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga22919ee3de6947c4b6616a9231e71f67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AppController_Init</definition>
+        <argsstring>(void *cmdProcessorHandle, uint32_t param2)</argsstring>
+        <name>AppController_Init</name>
+        <param>
+          <type>void *</type>
+          <declname>cmdProcessorHandle</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>Gives control to the Application controller. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a template function where the user can write his custom application.</para><para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="377" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="377" bodyend="399"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e">CmdProcessor_Enqueue</references>
+        <references refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="339" endline="372">AppControllerSetup</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+      </memberdef>
+      <memberdef kind="function" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ef9cc8f277726dc19c525c8049d388f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerEnable</definition>
+        <argsstring>(void *param1, uint32_t param2)</argsstring>
+        <name>AppControllerEnable</name>
+        <param>
+          <type>void *</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>To enable the necessary modules for the application. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>LED</para></listitem><listitem><para>WLAN</para></listitem><listitem><para>ServalPAL</para></listitem><listitem><para>SNTP</para></listitem><listitem><para>Lwm2m</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="286" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="286" bodyend="323"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___l_e_d_1gae3a60da7a90139abb54f4ddb36456756">LED_Enable</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___w_l_a_n_1gade1d0097361a009766b934f25111dd8b">WLAN_Enable</references>
+        <references refid="group___s_e_r_v_a_l_p_a_l_1ga5c486b056c82b352bd487143e7ca7633">ServalPAL_Enable</references>
+        <references refid="group___s_n_t_p_1gaec27b2582b486a4b87a4ab217abd1f15">SNTP_Enable</references>
+        <references refid="group___l_w_m2_m_1ga293d21237804efe67e6da3f9d6a6a7f0">LWM2M_Enable</references>
+        <references refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="249" endline="270">AppControllerFire</references>
+        <references refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1af793604cd2dbedfc6b69f10936fe7c41" compoundref="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h" startline="61">TASK_STACK_SIZE_APP_CONTROLLER</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1a4651501b886d4de331b9f06b37265177" compoundref="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h" startline="59">TASK_PRIO_APP_CONTROLLER</references>
+        <references refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga6fa700b048407619b5309da95dcce5dd" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="101">AppControllerHandle</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba497273b2285191edc1cda8648b67250a" compoundref="_b_c_d_s___retcode_8h" startline="107">RETCODE_OUT_OF_RESOURCES</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+        <references refid="group___x_d_k_u_t_i_l_s_1ga7ffe38d38314b5301a4ddd04f4fa7ca6" compoundref="_utils_8c" startline="277" endline="284">Utils_PrintResetCause</references>
+        <referencedby refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="339" endline="372">AppControllerSetup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerFire</definition>
+        <argsstring>(void *pvParameters)</argsstring>
+        <name>AppControllerFire</name>
+        <param>
+          <type>void *</type>
+          <declname>pvParameters</declname>
+        </param>
+        <briefdescription>
+<para>Responsible for controlling the LWM2M Example client control flow. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pvParameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FreeRTOS task handle. Could be used if more than one thread is using this function block. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="249" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="249" bodyend="270"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_o_s_c_h___x_d_k___c_l_o_u_d___c_o_n_n_e_c_t_i_v_i_t_y_1ga13cd7228522dd0317118b20aa81a1f0a" compoundref="_bosch_x_d_k_cloud_connectivity_2source_2_app_controller_8c" startline="523" endline="539">AppControllerSyncSNTP</references>
+        <references refid="group___l_w_m2_m_1ga1db9f69f0009e52e04f87744772bdf25">LWM2M_Register</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="task_8h_1aa154068cecd7f31446a7a84af44ab1a3">vTaskDelay</references>
+        <references refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga1aa49fa5385a3028b6cbe7556c695bb9" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="93">APP_SYNC_TIME_INTERVAL_MAX_MS</references>
+        <referencedby refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="286" endline="323">AppControllerEnable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ca12481e985f2cd2437fe712e08c9b7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerSetup</definition>
+        <argsstring>(void *param1, uint32_t param2)</argsstring>
+        <name>AppControllerSetup</name>
+        <param>
+          <type>void *</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>To setup the necessary modules for the application. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>LED</para></listitem><listitem><para>WLAN</para></listitem><listitem><para>ServalPAL</para></listitem><listitem><para>SNTP</para></listitem><listitem><para>Lwm2m</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="339" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="339" bodyend="372"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___l_e_d_1gaec11150ded6e8967d64145a758af0616">LED_Setup</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___w_l_a_n_1ga5e86721c894549287a387d49af37b1e3">WLAN_Setup</references>
+        <references refid="group___s_e_r_v_a_l_p_a_l_1gab722469d5c22a0211799fd3d5a5073bc">ServalPAL_Setup</references>
+        <references refid="group___s_n_t_p_1ga4aff8a89750e6d74f5b8053ebb66ca77">SNTP_Setup</references>
+        <references refid="struct_l_w_m2_m___setup___s_1a4b767178f176a51f1c1c6abc68069ece" compoundref="_x_d_k___l_w_m2_m_8h" startline="175">LWM2M_Setup_S::CmdProcessorHandle</references>
+        <references refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga90ce7b07b4530c957f9f83201d8dc8bc" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="99">AppCmdProcessor</references>
+        <references refid="group___l_w_m2_m_1ga10a55388243ab04a367ec4e68b6ef9d3">LWM2M_Setup</references>
+        <references refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e">CmdProcessor_Enqueue</references>
+        <references refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="286" endline="323">AppControllerEnable</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+        <referencedby refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga22919ee3de6947c4b6616a9231e71f67" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="377" endline="399">AppController_Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga13cd7228522dd0317118b20aa81a1f0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AppControllerSyncSNTP</definition>
+        <argsstring>(void)</argsstring>
+        <name>AppControllerSyncSNTP</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This will synchronizing the SNTP server time with the node. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="225" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="225" bodyend="241"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___s_n_t_p_1ga524d9a28f1943d999fe94951b268cc1f">SNTP_GetTimeFromServer</references>
+        <references refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga1cfc98de5e09b225abf287dd632ccf31" compoundref="_lwm2m_example_client_2source_2_app_controller_8c" startline="95">APP_RESPONSE_FROM_SNTP_SERVER_TIMEOUT</references>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+      </memberdef>
+      <memberdef kind="function" id="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga997745c6da28920bec4229c0b9b0be01" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppLWM2MStatusNotificationCB</definition>
+        <argsstring>(LWM2M_StatusNotification_T status)</argsstring>
+        <name>AppLWM2MStatusNotificationCB</name>
+        <param>
+          <type><ref refid="group___l_w_m2_m_1gab795bfb86b6a2ae1dffac0f6adb4f572" kindref="member">LWM2M_StatusNotification_T</ref></type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Refer function prototype for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" line="123" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c" bodystart="155" bodyend="220"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___l_w_m2_m_1gga1d6f3bae29cdee718e19bfb51c2613ada6660fb5b533fd084fa4cdc9ce2aa33f7" compoundref="_x_d_k___l_w_m2_m_8h" startline="110">LWM2M_REGISTRATION_SUCCESS</references>
+        <references refid="group___l_e_d_1ga017ce6b05845f8ea5f91e0103cf025a6">LED_Off</references>
+        <references refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a2b719feebe5e5a744315a07766e16af2" compoundref="_x_d_k___l_e_d_8h" startline="64">LED_INBUILT_RED</references>
+        <references refid="group___l_e_d_1gaa08f7e9c416b666b93efadee96284629">LED_On</references>
+        <references refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a9ef5f00f3a78db87b6b039fcc52f82bd" compoundref="_x_d_k___l_e_d_8h" startline="66">LED_INBUILT_ORANGE</references>
+        <references refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a9563b16cb4e0808638f4838b21350347" compoundref="_x_d_k___l_e_d_8h" startline="65">LED_INBUILT_YELLOW</references>
+        <references refid="group___l_w_m2_m_1gga1d6f3bae29cdee718e19bfb51c2613adafca7ab0245c00ba468bb7f4af30d00f7" compoundref="_x_d_k___l_w_m2_m_8h" startline="111">LWM2M_REGISTRATION_FAILURE</references>
+        <references refid="group___l_w_m2_m_1gga1d6f3bae29cdee718e19bfb51c2613ada5541f4af4b7d3cc93df323035f7b8daa" compoundref="_x_d_k___l_w_m2_m_8h" startline="112">LWM2M_REGISTRATION_UPDATE_SUCCESS</references>
+        <references refid="group___l_w_m2_m_1gga1d6f3bae29cdee718e19bfb51c2613adac25aa49a0e74e7aaf1a526822c8c1329" compoundref="_x_d_k___l_w_m2_m_8h" startline="113">LWM2M_REGISTRATION_UPDATE_FAILURE</references>
+        <references refid="group___l_w_m2_m_1gga1d6f3bae29cdee718e19bfb51c2613ada07ec51d895bc4a64db8f28e30192738f" compoundref="_x_d_k___l_w_m2_m_8h" startline="114">LWM2M_DEREGISTRATION_SUCCESS</references>
+        <references refid="group___l_w_m2_m_1gga1d6f3bae29cdee718e19bfb51c2613ada3cc64031884401a8bf9bc37ad061465c" compoundref="_x_d_k___l_w_m2_m_8h" startline="115">LWM2M_DEREGISTRATION_FAILURE</references>
+        <references refid="group___l_w_m2_m_1gga1d6f3bae29cdee718e19bfb51c2613ada488d122dc321480d8ea5f781606af616" compoundref="_x_d_k___l_w_m2_m_8h" startline="116">LWM2M_NOTIFICATION_SUCCESS</references>
+        <references refid="group___l_w_m2_m_1gga1d6f3bae29cdee718e19bfb51c2613ada99728396ab4879c5b9e422488e297b2f" compoundref="_x_d_k___l_w_m2_m_8h" startline="117">LWM2M_NOTIFICATION_FAILURE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="comment">/*<sp/>module<sp/>includes<sp/>**********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>own<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_lwm2m_example_client_2source_2_xdk_app_info_8h" kindref="compound">XdkAppInfo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>BCDS_MODULE_ID<sp/><sp/></highlight><highlight class="comment">/*<sp/>Module<sp/>ID<sp/>define<sp/>before<sp/>including<sp/>Basics<sp/>package*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1gabff8f3a204e79671b98fabaa652198c3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BCDS_MODULE_ID<sp/>XDK_APP_MODULE_ID_APP_CONTROLLER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>own<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_lwm2m_example_client_2source_2_app_controller_8h" kindref="compound">AppController.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>system<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>additional<sp/>interface<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_x_d_k___l_e_d_8h" kindref="compound">XDK_LED.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_x_d_k___w_l_a_n_8h" kindref="compound">XDK_WLAN.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_x_d_k___l_w_m2_m_8h" kindref="compound">XDK_LWM2M.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_x_d_k___serval_p_a_l_8h" kindref="compound">XDK_ServalPAL.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_x_d_k___s_n_t_p_8h" kindref="compound">XDK_SNTP.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___wlan_network_config_8h" kindref="compound">BCDS_WlanNetworkConfig.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___cmd_processor_8h" kindref="compound">BCDS_CmdProcessor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___b_s_p___board_8h" kindref="compound">BCDS_BSP_Board.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___assert_8h" kindref="compound">BCDS_Assert.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_x_d_k___utils_8h" kindref="compound">XDK_Utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_free_r_t_o_s_8h" kindref="compound">FreeRTOS.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="task_8h" kindref="compound">task.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>constant<sp/>definitions<sp/>*****************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga1aa49fa5385a3028b6cbe7556c695bb9" refkind="member"><highlight class="preprocessor">#define<sp/>APP_SYNC_TIME_INTERVAL_MAX_MS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT32_C(1800000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga1cfc98de5e09b225abf287dd632ccf31" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>APP_RESPONSE_FROM_SNTP_SERVER_TIMEOUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT32_C(10000)</highlight></codeline>
+<codeline lineno="97"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>local<sp/>variables<sp/>**********************************************************<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga90ce7b07b4530c957f9f83201d8dc8bc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct___cmd_processor___s" kindref="compound">CmdProcessor_T</ref><sp/>*<ref refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga90ce7b07b4530c957f9f83201d8dc8bc" kindref="member">AppCmdProcessor</ref>;</highlight></codeline>
+<codeline lineno="101" refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga6fa700b048407619b5309da95dcce5dd" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_free_r_t_o_s_8h_1af7cd8f53b62f0c497b442b504c30f2ec" kindref="member">xTaskHandle</ref><sp/><ref refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga6fa700b048407619b5309da95dcce5dd" kindref="member">AppControllerHandle</ref><sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="103" refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga0e412a42d216de0f4feb72dfc0dfa51d" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_w_l_a_n___setup___s" kindref="compound">WLAN_Setup_T</ref><sp/><ref refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga0e412a42d216de0f4feb72dfc0dfa51d" kindref="member">WLANSetupInfo</ref><sp/>=</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="struct_w_l_a_n___setup___s_1a40164d63ccea3f297ea14ba442d98748" kindref="member">IsEnterprise</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.IsHostPgmEnabled<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.SSID<sp/>=<sp/><ref refid="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8h_1af8d23ae6c17168a7ce76f565959a7100" kindref="member">WLAN_SSID</ref>,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Username<sp/>=<sp/><ref refid="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8h_1a7595c51ecaebc052ebb16bfee33ef064" kindref="member">WLAN_PSK</ref>,<sp/></highlight><highlight class="comment">/*<sp/>Unused<sp/>for<sp/>Personal<sp/>WPA2<sp/>connection<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Password<sp/>=<sp/><ref refid="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8h_1a7595c51ecaebc052ebb16bfee33ef064" kindref="member">WLAN_PSK</ref>,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.IsStatic<sp/>=<sp/><ref refid="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8h_1a3b7cbbe0cc99913db8a349bf04cb7648" kindref="member">WLAN_STATIC_IP</ref>,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.IpAddr<sp/>=<sp/><ref refid="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8h_1af8b956915d3648203d2db609f103d400" kindref="member">WLAN_IP_ADDR</ref>,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.GwAddr<sp/>=<sp/><ref refid="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8h_1aabe89318c85014d96791cdb2cd9263a8" kindref="member">WLAN_GW_ADDR</ref>,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.DnsAddr<sp/>=<sp/><ref refid="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8h_1a91bfddd64e54251da5ca4e7b2d4b5774" kindref="member">WLAN_DNS_ADDR</ref>,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Mask<sp/>=<sp/><ref refid="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8h_1a408301af8a45e844e60c3be81a51a5e7" kindref="member">WLAN_MASK</ref>,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="117" refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga62d7996cafb989f27d906c6ab4823e15" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_s_n_t_p___setup___s" kindref="compound">SNTP_Setup_T</ref><sp/><ref refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga62d7996cafb989f27d906c6ab4823e15" kindref="member">SNTPSetupInfo</ref><sp/>=</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="struct_s_n_t_p___setup___s_1a7e80f5c8211020645eae5af008c4fb47" kindref="member">ServerUrl</ref><sp/>=<sp/><ref refid="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8h_1a27dec0587f6fe92077449a4b3324cd95" kindref="member">SNTP_SERVER_URL</ref>,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.ServerPort<sp/>=<sp/><ref refid="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8h_1a0c65edee974d3e3bdb4e01a4d8b58764" kindref="member">SNTP_SERVER_PORT</ref>,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="123"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga997745c6da28920bec4229c0b9b0be01" kindref="member">AppLWM2MStatusNotificationCB</ref>(<ref refid="group___l_w_m2_m_1gab795bfb86b6a2ae1dffac0f6adb4f572" kindref="member">LWM2M_StatusNotification_T</ref><sp/>status);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga8dd7d646ca7d1ad2fc229ce9a2f986d0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_l_w_m2_m___setup___s" kindref="compound">LWM2M_Setup_T</ref><sp/><ref refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga8dd7d646ca7d1ad2fc229ce9a2f986d0" kindref="member">Lwm2mSetup</ref><sp/>=</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="struct_l_w_m2_m___setup___s_1a4b767178f176a51f1c1c6abc68069ece" kindref="member">CmdProcessorHandle</ref><sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.IsSecure<sp/>=<sp/><ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1ae1405e5ca0194821db6eef41361302de" kindref="member">APP_LWM2M_SECURITY_ENABLE</ref>,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.SecurityMode<sp/>=<sp/><ref refid="group___l_w_m2_m_1gga799b84e69ed8edba6241d395af36be40a8928ef4eaac3d38d78d10c811b096075" kindref="member">LWM2M_SECURITY_MODE_PRE_SHARED_KEY</ref>,</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.SecurityPreSharedKey<sp/>=</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Identity<sp/>=<sp/><ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1afcab362465a4bed46de41c3066d6ad9a" kindref="member">APP_LWM2M_DTLS_PSK_IDENTITY</ref>,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Key<sp/>=<sp/><ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1a432d649e6bb235c461a3e78496576ffa" kindref="member">APP_LWM2M_DTLS_PSK_KEY</ref>,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.KeyLength<sp/>=<sp/><ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1aff05f62c00feb1a4bdda4edeb440cf78" kindref="member">APP_LWM2M_DTLS_PSK_KEY_LENGTH</ref>,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.EndPointName<sp/>=<sp/><ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1a1a6395b6a67095806d7be39d6ebca1e3" kindref="member">APP_LWM2M_END_POINT_NAME</ref>,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Binding<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;U&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Lifetime<sp/>=<sp/><ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1a987d5fddeaf58b6ea798cfed6670c150" kindref="member">APP_LWM2M_LIFETIME_IN_SECONDS</ref>,</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.ConfirmableNotification<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.MACAddr<sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.TestMode<sp/>=<sp/><ref refid="group___l_w_m2_m_1gga4eedbf331041e6f0e983739568a99397abe974359bd7777e3c284d359059d8be5" kindref="member">LWM2M_TEST_MODE_YES</ref>,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.ServerURL<sp/>=<sp/><ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1a0db427c9bf1f7dfb73433c25a1c8b743" kindref="member">APP_LWM2M_SERVER_URL</ref>,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.ServerPort<sp/>=<sp/><ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1ac0ae98b679714a1f6f3b494da5a50440" kindref="member">APP_LWM2M_SERVER_PORT</ref>,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.ClientPort<sp/>=<sp/><ref refid="_lwm2m_example_client_2source_2_app_controller_8h_1a5349ea16d94c498fc219d6fe46bd3616" kindref="member">APP_LWM2M_CLIENT_PORT</ref>,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.StatusNotificationCB<sp/>=<sp/><ref refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga997745c6da28920bec4229c0b9b0be01" kindref="member">AppLWM2MStatusNotificationCB</ref>,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="148"><highlight class="comment">/*<sp/>global<sp/>variables<sp/>*********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>inline<sp/>functions<sp/>*********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>local<sp/>functions<sp/>**********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga997745c6da28920bec4229c0b9b0be01" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga997745c6da28920bec4229c0b9b0be01" kindref="member">AppLWM2MStatusNotificationCB</ref>(<ref refid="group___l_w_m2_m_1gab795bfb86b6a2ae1dffac0f6adb4f572" kindref="member">LWM2M_StatusNotification_T</ref><sp/>status)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(status)</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group___l_w_m2_m_1gga1d6f3bae29cdee718e19bfb51c2613ada6660fb5b533fd084fa4cdc9ce2aa33f7" kindref="member">LWM2M_REGISTRATION_SUCCESS</ref>:</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;AppLWM2MStatusNotificationCB<sp/>:<sp/>Registration<sp/>succeeded<sp/>\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___l_e_d_1ga017ce6b05845f8ea5f91e0103cf025a6" kindref="member">LED_Off</ref>(<ref refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a2b719feebe5e5a744315a07766e16af2" kindref="member">LED_INBUILT_RED</ref>);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___l_e_d_1gaa08f7e9c416b666b93efadee96284629" kindref="member">LED_On</ref>(<ref refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a9ef5f00f3a78db87b6b039fcc52f82bd" kindref="member">LED_INBUILT_ORANGE</ref>);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___l_e_d_1ga017ce6b05845f8ea5f91e0103cf025a6" kindref="member">LED_Off</ref>(<ref refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a9563b16cb4e0808638f4838b21350347" kindref="member">LED_INBUILT_YELLOW</ref>);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group___l_w_m2_m_1gga1d6f3bae29cdee718e19bfb51c2613adafca7ab0245c00ba468bb7f4af30d00f7" kindref="member">LWM2M_REGISTRATION_FAILURE</ref>:</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;AppLWM2MStatusNotificationCB<sp/>:<sp/>Registration<sp/>failed<sp/>\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___l_e_d_1gaa08f7e9c416b666b93efadee96284629" kindref="member">LED_On</ref>(<ref refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a2b719feebe5e5a744315a07766e16af2" kindref="member">LED_INBUILT_RED</ref>);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___l_e_d_1ga017ce6b05845f8ea5f91e0103cf025a6" kindref="member">LED_Off</ref>(<ref refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a9ef5f00f3a78db87b6b039fcc52f82bd" kindref="member">LED_INBUILT_ORANGE</ref>);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___l_e_d_1ga017ce6b05845f8ea5f91e0103cf025a6" kindref="member">LED_Off</ref>(<ref refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a9563b16cb4e0808638f4838b21350347" kindref="member">LED_INBUILT_YELLOW</ref>);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group___l_w_m2_m_1gga1d6f3bae29cdee718e19bfb51c2613ada5541f4af4b7d3cc93df323035f7b8daa" kindref="member">LWM2M_REGISTRATION_UPDATE_SUCCESS</ref>:</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;AppLWM2MStatusNotificationCB<sp/>:<sp/>Registration<sp/>update<sp/>succeeded<sp/>\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group___l_w_m2_m_1gga1d6f3bae29cdee718e19bfb51c2613adac25aa49a0e74e7aaf1a526822c8c1329" kindref="member">LWM2M_REGISTRATION_UPDATE_FAILURE</ref>:</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;AppLWM2MStatusNotificationCB<sp/>:<sp/>Registration<sp/>update<sp/>failed<sp/>\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group___l_w_m2_m_1gga1d6f3bae29cdee718e19bfb51c2613ada07ec51d895bc4a64db8f28e30192738f" kindref="member">LWM2M_DEREGISTRATION_SUCCESS</ref>:</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;AppLWM2MStatusNotificationCB<sp/>:<sp/>Registration<sp/>de-registration<sp/>succeeded<sp/>\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group___l_w_m2_m_1gga1d6f3bae29cdee718e19bfb51c2613ada3cc64031884401a8bf9bc37ad061465c" kindref="member">LWM2M_DEREGISTRATION_FAILURE</ref>:</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;AppLWM2MStatusNotificationCB<sp/>:<sp/>Registration<sp/>de-registration<sp/>failed<sp/>\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group___l_w_m2_m_1gga1d6f3bae29cdee718e19bfb51c2613ada488d122dc321480d8ea5f781606af616" kindref="member">LWM2M_NOTIFICATION_SUCCESS</ref>:</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;AppLWM2MStatusNotificationCB<sp/>:<sp/>Registration<sp/>notification<sp/>succeeded<sp/>\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group___l_w_m2_m_1gga1d6f3bae29cdee718e19bfb51c2613ada99728396ab4879c5b9e422488e297b2f" kindref="member">LWM2M_NOTIFICATION_FAILURE</ref>:</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;AppLWM2MStatusNotificationCB<sp/>:<sp/>Registration<sp/>notification<sp/>failed<sp/>\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Application<sp/>is<sp/>not<sp/>interested<sp/>on<sp/>other<sp/>events<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retcode<sp/>!=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>)</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2" kindref="member">Retcode_RaiseError</ref>(retcode);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225" refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga13cd7228522dd0317118b20aa81a1f0a" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___b_o_s_c_h___x_d_k___c_l_o_u_d___c_o_n_n_e_c_t_i_v_i_t_y_1ga13cd7228522dd0317118b20aa81a1f0a" kindref="member">AppControllerSyncSNTP</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="226"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>sntpTimeStampFromServer<sp/>=<sp/>0UL;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>We<sp/>Synchronize<sp/>the<sp/>node<sp/>with<sp/>the<sp/>SNTP<sp/>server<sp/>for<sp/>time-stamp.</highlight></codeline>
+<codeline lineno="231"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Since<sp/>accurate<sp/>time<sp/>is<sp/>the<sp/>most<sp/>important<sp/>part<sp/>of<sp/>real<sp/>time<sp/>communication.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint32_t<sp/>sntpTimeSyncIndex<sp/>=<sp/>0;<sp/>((sntpTimeStampFromServer<sp/>==<sp/>0)<sp/>&amp;&amp;<sp/>(sntpTimeSyncIndex<sp/>&lt;<sp/>UINT32_MAX));<sp/>sntpTimeSyncIndex++)</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___s_n_t_p_1ga524d9a28f1943d999fe94951b268cc1f" kindref="member">SNTP_GetTimeFromServer</ref>(&amp;sntpTimeStampFromServer,<sp/><ref refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga1cfc98de5e09b225abf287dd632ccf31" kindref="member">APP_RESPONSE_FROM_SNTP_SERVER_TIMEOUT</ref>);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>!=<sp/>retcode)<sp/>||<sp/>(0UL<sp/>==<sp/>sntpTimeStampFromServer))</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;AppControllerFire<sp/>:<sp/>SNTP<sp/>server<sp/>time<sp/>was<sp/>not<sp/>synchronized<sp/>for<sp/>&apos;%d&apos;<sp/>time.<sp/>Retrying...\r\n&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>(sntpTimeSyncIndex<sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" kindref="member">BCDS_UNUSED</ref>(sntpTimeStampFromServer);<sp/></highlight><highlight class="comment">/*<sp/>Copy<sp/>of<sp/>sntpTimeStampFromServer<sp/>will<sp/>be<sp/>used<sp/>be<sp/>LWM2M<sp/>when<sp/>ever<sp/>real-time<sp/>is<sp/>needed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249" refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" kindref="member">AppControllerFire</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pvParameters)</highlight></codeline>
+<codeline lineno="250"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" kindref="member">BCDS_UNUSED</ref>(pvParameters);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_o_s_c_h___x_d_k___c_l_o_u_d___c_o_n_n_e_c_t_i_v_i_t_y_1ga13cd7228522dd0317118b20aa81a1f0a" kindref="member">AppControllerSyncSNTP</ref>();</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___l_w_m2_m_1ga1db9f69f0009e52e04f87744772bdf25" kindref="member">LWM2M_Register</ref>();</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>!=<sp/>retcode)</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2" kindref="member">Retcode_RaiseError</ref>(retcode);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="task_8h_1aa154068cecd7f31446a7a84af44ab1a3" kindref="member">vTaskDelay</ref>(pdMS_TO_TICKS(<ref refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga1aa49fa5385a3028b6cbe7556c695bb9" kindref="member">APP_SYNC_TIME_INTERVAL_MAX_MS</ref>));</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___b_o_s_c_h___x_d_k___c_l_o_u_d___c_o_n_n_e_c_t_i_v_i_t_y_1ga13cd7228522dd0317118b20aa81a1f0a" kindref="member">AppControllerSyncSNTP</ref>();</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="270"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286" refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ef9cc8f277726dc19c525c8049d388f" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ef9cc8f277726dc19c525c8049d388f" kindref="member">AppControllerEnable</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>param1,<sp/>uint32_t<sp/>param2)</highlight></codeline>
+<codeline lineno="287"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" kindref="member">BCDS_UNUSED</ref>(param1);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" kindref="member">BCDS_UNUSED</ref>(param2);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___l_e_d_1gae3a60da7a90139abb54f4ddb36456756" kindref="member">LED_Enable</ref>();</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___w_l_a_n_1gade1d0097361a009766b934f25111dd8b" kindref="member">WLAN_Enable</ref>();</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___s_e_r_v_a_l_p_a_l_1ga5c486b056c82b352bd487143e7ca7633" kindref="member">ServalPAL_Enable</ref>();</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___s_n_t_p_1gaec27b2582b486a4b87a4ab217abd1f15" kindref="member">SNTP_Enable</ref>();</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___l_w_m2_m_1ga293d21237804efe67e6da3f9d6a6a7f0" kindref="member">LWM2M_Enable</ref>();</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pdPASS<sp/>!=<sp/>xTaskCreate(<ref refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" kindref="member">AppControllerFire</ref>,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>)<sp/></highlight><highlight class="stringliteral">&quot;AppController&quot;</highlight><highlight class="normal">,<sp/><ref refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1af793604cd2dbedfc6b69f10936fe7c41" kindref="member">TASK_STACK_SIZE_APP_CONTROLLER</ref>,<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,<sp/><ref refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1a4651501b886d4de331b9f06b37265177" kindref="member">TASK_PRIO_APP_CONTROLLER</ref>,<sp/>&amp;<ref refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga6fa700b048407619b5309da95dcce5dd" kindref="member">AppControllerHandle</ref>))</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba497273b2285191edc1cda8648b67250a" kindref="member">RETCODE_OUT_OF_RESOURCES</ref>);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>!=<sp/>retcode)</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;AppControllerEnable<sp/>:<sp/>Failed<sp/>\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2" kindref="member">Retcode_RaiseError</ref>(retcode);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" kindref="member">assert</ref>(0);<sp/></highlight><highlight class="comment">/*<sp/>To<sp/>provide<sp/>LED<sp/>indication<sp/>for<sp/>the<sp/>user<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___x_d_k_u_t_i_l_s_1ga7ffe38d38314b5301a4ddd04f4fa7ca6" kindref="member">Utils_PrintResetCause</ref>();</highlight></codeline>
+<codeline lineno="323"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339" refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ca12481e985f2cd2437fe712e08c9b7" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ca12481e985f2cd2437fe712e08c9b7" kindref="member">AppControllerSetup</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>param1,<sp/>uint32_t<sp/>param2)</highlight></codeline>
+<codeline lineno="340"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" kindref="member">BCDS_UNUSED</ref>(param1);</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" kindref="member">BCDS_UNUSED</ref>(param2);</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___l_e_d_1gaec11150ded6e8967d64145a758af0616" kindref="member">LED_Setup</ref>();</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___w_l_a_n_1ga5e86721c894549287a387d49af37b1e3" kindref="member">WLAN_Setup</ref>(&amp;WLANSetupInfo);</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___s_e_r_v_a_l_p_a_l_1gab722469d5c22a0211799fd3d5a5073bc" kindref="member">ServalPAL_Setup</ref>(AppCmdProcessor);</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___s_n_t_p_1ga4aff8a89750e6d74f5b8053ebb66ca77" kindref="member">SNTP_Setup</ref>(&amp;SNTPSetupInfo);</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Lwm2mSetup.<ref refid="struct_l_w_m2_m___setup___s_1a4b767178f176a51f1c1c6abc68069ece" kindref="member">CmdProcessorHandle</ref><sp/>=<sp/><ref refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga90ce7b07b4530c957f9f83201d8dc8bc" kindref="member">AppCmdProcessor</ref>;</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___l_w_m2_m_1ga10a55388243ab04a367ec4e68b6ef9d3" kindref="member">LWM2M_Setup</ref>(&amp;Lwm2mSetup);</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e" kindref="member">CmdProcessor_Enqueue</ref>(AppCmdProcessor,<sp/><ref refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ef9cc8f277726dc19c525c8049d388f" kindref="member">AppControllerEnable</ref>,<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,<sp/>UINT32_C(0));</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>!=<sp/>retcode)</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;AppControllerSetup<sp/>:<sp/>Failed<sp/>\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2" kindref="member">Retcode_RaiseError</ref>(retcode);</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" kindref="member">assert</ref>(0);<sp/></highlight><highlight class="comment">/*<sp/>To<sp/>provide<sp/>LED<sp/>indication<sp/>for<sp/>the<sp/>user<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="372"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>global<sp/>functions<sp/>**********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"></highlight></codeline>
+<codeline lineno="377" refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga22919ee3de6947c4b6616a9231e71f67" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga22919ee3de6947c4b6616a9231e71f67" kindref="member">AppController_Init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>cmdProcessorHandle,<sp/>uint32_t<sp/>param2)</highlight></codeline>
+<codeline lineno="378"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" kindref="member">BCDS_UNUSED</ref>(param2);</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cmdProcessorHandle<sp/>==<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>)</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;AppController_Init<sp/>:<sp/>Command<sp/>processor<sp/>handle<sp/>is<sp/>NULL<sp/>\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref>);</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AppCmdProcessor<sp/>=<sp/>(<ref refid="struct___cmd_processor___s" kindref="compound">CmdProcessor_T</ref><sp/>*)<sp/>cmdProcessorHandle;</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e" kindref="member">CmdProcessor_Enqueue</ref>(AppCmdProcessor,<sp/><ref refid="group___l_w_m2_m___e_x_a_m_p_l_e___c_l_i_e_n_t_1ga5ca12481e985f2cd2437fe712e08c9b7" kindref="member">AppControllerSetup</ref>,<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,<sp/>UINT32_C(0));</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>!=<sp/>retcode)</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2" kindref="member">Retcode_RaiseError</ref>(retcode);</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" kindref="member">assert</ref>(0);<sp/></highlight><highlight class="comment">/*<sp/>To<sp/>provide<sp/>LED<sp/>indication<sp/>for<sp/>the<sp/>user<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="399"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/Lwm2mExampleClient/source/AppController.c"/>
+  </compounddef>
+</doxygen>

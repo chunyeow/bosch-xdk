@@ -1,0 +1,417 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___b_c_d_s___h_a_l___b_s_p___w_i_f_i___c_c3100_m_o_d" kind="group">
+    <compoundname>BCDS_HAL_BSP_WIFI_CC3100MOD</compoundname>
+    <title>WIFI_CC3100MOD</title>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___b_c_d_s___h_a_l___b_s_p___w_i_f_i___c_c3100_m_o_d_1ga37bbc91f150fe1849ac27c155bc79ac9" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* BSP_WiFi_CC3100MOD_InterruptCallback_T)(void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>BSP_WiFi_CC3100MOD_InterruptCallback_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type definition for the wlan interrupt callback The application should then pass the callback at the <ref refid="group___b_c_d_s___h_a_l___b_s_p___w_i_f_i___c_c3100_m_o_d_1ga09fcd8842ecdd3811532b084bbad508f" kindref="member">BSP_WiFi_CC3100MOD_Enable()</ref> function.</para><para>During call the BSP will this function whenever a rising edge occurs in the module interrupt line Refer to the implementation for more details. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/bsp/BCDS_BSP_WiFi_CC3100MOD.h" line="91" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/bsp/BCDS_BSP_WiFi_CC3100MOD.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___b_c_d_s___h_a_l___b_s_p___w_i_f_i___c_c3100_m_o_d_1ga54c268229472b0db9d28b4fe5ecf2da8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T BSP_WiFi_CC3100MOD_Connect</definition>
+        <argsstring>(void)</argsstring>
+        <name>BSP_WiFi_CC3100MOD_Connect</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Maps the GPIO pins to their desired function. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function once called will map the GPIO pins to their desired functions to drive the TI(R) CC3100MOD WIFI peripheral. It is needed to call this function prior to the BSP_WIFI_CC3100MOD_Enable().</para><para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in the case of success or an error code otherwise. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/bsp/BCDS_BSP_WiFi_CC3100MOD.h" line="102" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_WiFi_cc3100mod.c" bodystart="97" bodyend="140"/>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga9b408b840613b5cc21089b5fa0e593ff" compoundref="_b_s_p___board_settings_8h" startline="614">VDD_WIFI_EN_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga43460f1dbe58e257063252a4eddf00f4" compoundref="_b_s_p___board_settings_8h" startline="613">VDD_WIFI_EN_PIN</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1gadf3c397940604d60845cdb44bbfb22a6" compoundref="_b_s_p___board_settings_8h" startline="615">VDD_WIFI_EN_MODE</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga541ea4d2150ac5bf8df63f23582f2cdd" compoundref="_b_s_p___board_settings_8h" startline="632">WIFI_NRESET_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga996d7886c6f6e362120a7320ffca67df" compoundref="_b_s_p___board_settings_8h" startline="631">WIFI_NRESET_PIN</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga10b9a00bb4e897d12564e0dc0ed5c235" compoundref="_b_s_p___board_settings_8h" startline="633">WIFI_NRESET_MODE</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1gadae5da9fb08120338716a536721de518" compoundref="_b_s_p___board_settings_8h" startline="618">WIFI_CSN_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga3db7fb025c834bfb3ce690661cca6f78" compoundref="_b_s_p___board_settings_8h" startline="617">WIFI_CSN_PIN</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga9e43ed0056ccc304e55c231a2900fa25" compoundref="_b_s_p___board_settings_8h" startline="619">WIFI_CSN_MODE</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga1b0a3e336569849e3d6bb26d23ac1416" compoundref="_b_s_p___board_settings_8h" startline="622">WIFI_INT_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga1adf1076283c15980ff0a244173a15b2" compoundref="_b_s_p___board_settings_8h" startline="621">WIFI_INT_PIN</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga6ba003936c93a619cbf79b78d977ea92" compoundref="_b_s_p___board_settings_8h" startline="623">WIFI_INT_MODE</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga1a4b46c7abf121d7184579efa7e663f2" compoundref="_b_s_p___board_settings_8h" startline="628">WIFI_NHIB_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1gad381286bda0aa4957ea7c91636eb56ef" compoundref="_b_s_p___board_settings_8h" startline="627">WIFI_NHIB_PIN</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1gafeda209137c52b14d531d87b95499763" compoundref="_b_s_p___board_settings_8h" startline="629">WIFI_NHIB_MODE</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga430ead78aa2401f85acb221f1fe74b5a" compoundref="_b_s_p___board_settings_8h" startline="636">WIFI_SPI0_MISO_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga5cfead88dffbf8ec574c6854fb7240a3" compoundref="_b_s_p___board_settings_8h" startline="635">WIFI_SPI0_MISO_PIN</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1gae7d318460c80fef83071bfe4f7f882d3" compoundref="_b_s_p___board_settings_8h" startline="637">WIFI_SPI0_MISO_MODE</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga726c3c185f7bfbe872193a88e8785323" compoundref="_b_s_p___board_settings_8h" startline="640">WIFI_SPI0_MOSI_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga8c86b712aa08b3afd8dc82b0ec44729d" compoundref="_b_s_p___board_settings_8h" startline="639">WIFI_SPI0_MOSI_PIN</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga11cf8a2a41edd21c8fbe53f3e3121de4" compoundref="_b_s_p___board_settings_8h" startline="641">WIFI_SPI0_MOSI_MODE</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga2a00c714cc68ce7c725ca31c74496128" compoundref="_b_s_p___board_settings_8h" startline="644">WIFI_SPI0_SCK_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga8be66b82bec165859d8b6b2bf95df5a9" compoundref="_b_s_p___board_settings_8h" startline="643">WIFI_SPI0_SCK_PIN</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga9309fb41aefb01393d5a62740944a1c8" compoundref="_b_s_p___board_settings_8h" startline="645">WIFI_SPI0_SCK_MODE</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1gadaaf689582272cbc61e69924876727c7" compoundref="_b_s_p___board_settings_8h" startline="586">WIFI_SPI0_CLOCK</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1gaa95140ad4f685aed244421020326bf2d" compoundref="_b_s_p___board_settings_8h" startline="583">WIFI_SERIAL_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1gafb7966f088f59f05afafd5464006b583" compoundref="_b_s_p___board_settings_8h" startline="605">WIFI_SPI_TX_DMA_CHANNEL</references>
+        <references refid="_b_s_p___wi_fi__cc3100mod_8h_1a8357cbef629e8a943938e7f3f5f7bde6">WiFi_CC3100MOD_SPI_TxDMAComplete</references>
+        <references refid="_b_s_p___wi_fi__cc3100mod_8c_1a6c2c1bb05186e5f73bfb8d52797c2508" compoundref="_b_s_p___wi_fi__cc3100mod_8c" startline="68">BSP_WiFi_CC3100MOD_SPI_Handle</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga86846df874bfa4e7f63243b56e93d34b" compoundref="_b_s_p___board_settings_8h" startline="606">WIFI_SPI_RX_DMA_CHANNEL</references>
+        <references refid="_b_s_p___wi_fi__cc3100mod_8h_1ae10c6803f17e08688986f7efc3eeaa81">WiFi_CC3100MOD_SPI_RxDMAComplete</references>
+        <references refid="group___b_c_d_s___h_a_l_1gga3010d030959afeb41b86bee2d9e810ecaeb375f7888a2ec7bbf0a03d4a0c74e0f" compoundref="_b_c_d_s___h_a_l_8h" startline="162">BCDS_HAL_TRANSFER_MODE_DMA</references>
+        <references refid="group___b_c_d_s___h_a_l_1gga3010d030959afeb41b86bee2d9e810ecad0de3c31ea65828411efa7123f81f3fb" compoundref="_b_c_d_s___h_a_l_8h" startline="161">BCDS_HAL_TRANSFER_MODE_INTERRUPT</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___h_a_l___b_s_p___w_i_f_i___c_c3100_m_o_d_1ga6d3668f47bf10f8ca2b80d5f7cb76180" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T BSP_WiFi_CC3100MOD_Disable</definition>
+        <argsstring>(void)</argsstring>
+        <name>BSP_WiFi_CC3100MOD_Disable</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Disables the control over the peripheral. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function once called will disable control over the TI(R) CC3100MOD WIFI peripheral by executing the disabling procedure as prescribed in the vendor datasheet.</para><para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in the case of success or an error code otherwise. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/bsp/BCDS_BSP_WiFi_CC3100MOD.h" line="125" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_WiFi_cc3100mod.c" bodystart="205" bodyend="232"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1gadaaf689582272cbc61e69924876727c7" compoundref="_b_s_p___board_settings_8h" startline="586">WIFI_SPI0_CLOCK</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga923cdeb44e4389f8bb7d907e08844a06" compoundref="_b_s_p___board_settings_8h" startline="599">WIFI_RX_IRQN</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1gaf8a23a84ca256221435b8dff518df625" compoundref="_b_s_p___board_settings_8h" startline="603">WIFI_TX_IRQN</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga1adf1076283c15980ff0a244173a15b2" compoundref="_b_s_p___board_settings_8h" startline="621">WIFI_INT_PIN</references>
+        <references refid="_b_s_p___board_shared_8h_1a6982c8f98efb545509933d74282b9237" compoundref="_b_s_p___board_shared_8h" startline="278" endline="281">Board_GPIOInterruptUnregisterCallback</references>
+        <references refid="_b_s_p___wi_fi__cc3100mod_8c_1a40f4e15cf1dee8ed9dd98053748cca90" compoundref="_b_s_p___wi_fi__cc3100mod_8c" startline="76">WiFi_CC3100MOD_SPI_RxISRCallback</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="_b_s_p___wi_fi__cc3100mod_8c_1ae6293c79590d002292e36d2af7ac9602" compoundref="_b_s_p___wi_fi__cc3100mod_8c" startline="78">WiFi_CC3100MOD_SPI_TxISRCallback</references>
+        <references refid="_b_s_p___wi_fi__cc3100mod_8c_1a258ec78fd069287b11123d04ce3d1493" compoundref="_b_s_p___wi_fi__cc3100mod_8c" startline="80">WiFi_CC3100MOD_ISRCallback</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga541ea4d2150ac5bf8df63f23582f2cdd" compoundref="_b_s_p___board_settings_8h" startline="632">WIFI_NRESET_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga996d7886c6f6e362120a7320ffca67df" compoundref="_b_s_p___board_settings_8h" startline="631">WIFI_NRESET_PIN</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga1a4b46c7abf121d7184579efa7e663f2" compoundref="_b_s_p___board_settings_8h" startline="628">WIFI_NHIB_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1gad381286bda0aa4957ea7c91636eb56ef" compoundref="_b_s_p___board_settings_8h" startline="627">WIFI_NHIB_PIN</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga9b408b840613b5cc21089b5fa0e593ff" compoundref="_b_s_p___board_settings_8h" startline="614">VDD_WIFI_EN_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga43460f1dbe58e257063252a4eddf00f4" compoundref="_b_s_p___board_settings_8h" startline="613">VDD_WIFI_EN_PIN</references>
+        <references refid="_b_s_p___board_8c_1a020117ef816fbaa56ea21db43e5d2f39" compoundref="_b_s_p___board_8c" startline="638" endline="651">Board_SnoozePowerSupply2V5</references>
+        <references refid="_b_s_p___board_shared_8h_1a363f84ef9ec49fb78723dab902e8e570a2ebcbace8bbd3da1f93560875879ee97" compoundref="_b_s_p___board_shared_8h" startline="74">WIFI_CC3100MOD</references>
+        <references refid="_b_s_p___board_8c_1af5faa3e971e07ea00faa7ea0d6e09902" compoundref="_b_s_p___board_8c" startline="877" endline="884">Board_Delay</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga98e6b863a33cf1759f23630067824f5f" compoundref="_b_s_p___board_settings_8h" startline="594">WIFI_POWER_OFF_DELAY_MS</references>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___h_a_l___b_s_p___w_i_f_i___c_c3100_m_o_d_1gae6524f389d591edc5326c758a11d8890" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T BSP_WiFi_CC3100MOD_Disconnect</definition>
+        <argsstring>(void)</argsstring>
+        <name>BSP_WiFi_CC3100MOD_Disconnect</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Disconnects the WIFI peripheral. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function disconnects the GPIO pins dedicated to the TI(R) CC3100MOD WIFI peripheral and put them into low power consumption status.</para><para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in the case of success or an error code otherwise. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/bsp/BCDS_BSP_WiFi_CC3100MOD.h" line="135" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_WiFi_cc3100mod.c" bodystart="236" bodyend="252"/>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga9b408b840613b5cc21089b5fa0e593ff" compoundref="_b_s_p___board_settings_8h" startline="614">VDD_WIFI_EN_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga43460f1dbe58e257063252a4eddf00f4" compoundref="_b_s_p___board_settings_8h" startline="613">VDD_WIFI_EN_PIN</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1gadae5da9fb08120338716a536721de518" compoundref="_b_s_p___board_settings_8h" startline="618">WIFI_CSN_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga3db7fb025c834bfb3ce690661cca6f78" compoundref="_b_s_p___board_settings_8h" startline="617">WIFI_CSN_PIN</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga1b0a3e336569849e3d6bb26d23ac1416" compoundref="_b_s_p___board_settings_8h" startline="622">WIFI_INT_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga1adf1076283c15980ff0a244173a15b2" compoundref="_b_s_p___board_settings_8h" startline="621">WIFI_INT_PIN</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga1a4b46c7abf121d7184579efa7e663f2" compoundref="_b_s_p___board_settings_8h" startline="628">WIFI_NHIB_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1gad381286bda0aa4957ea7c91636eb56ef" compoundref="_b_s_p___board_settings_8h" startline="627">WIFI_NHIB_PIN</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga541ea4d2150ac5bf8df63f23582f2cdd" compoundref="_b_s_p___board_settings_8h" startline="632">WIFI_NRESET_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga996d7886c6f6e362120a7320ffca67df" compoundref="_b_s_p___board_settings_8h" startline="631">WIFI_NRESET_PIN</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga430ead78aa2401f85acb221f1fe74b5a" compoundref="_b_s_p___board_settings_8h" startline="636">WIFI_SPI0_MISO_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga5cfead88dffbf8ec574c6854fb7240a3" compoundref="_b_s_p___board_settings_8h" startline="635">WIFI_SPI0_MISO_PIN</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga726c3c185f7bfbe872193a88e8785323" compoundref="_b_s_p___board_settings_8h" startline="640">WIFI_SPI0_MOSI_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga8c86b712aa08b3afd8dc82b0ec44729d" compoundref="_b_s_p___board_settings_8h" startline="639">WIFI_SPI0_MOSI_PIN</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga2a00c714cc68ce7c725ca31c74496128" compoundref="_b_s_p___board_settings_8h" startline="644">WIFI_SPI0_SCK_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga8be66b82bec165859d8b6b2bf95df5a9" compoundref="_b_s_p___board_settings_8h" startline="643">WIFI_SPI0_SCK_PIN</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1gadaaf689582272cbc61e69924876727c7" compoundref="_b_s_p___board_settings_8h" startline="586">WIFI_SPI0_CLOCK</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___h_a_l___b_s_p___w_i_f_i___c_c3100_m_o_d_1ga09fcd8842ecdd3811532b084bbad508f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T BSP_WiFi_CC3100MOD_Enable</definition>
+        <argsstring>(BSP_WiFi_CC3100MOD_InterruptCallback_T callback)</argsstring>
+        <name>BSP_WiFi_CC3100MOD_Enable</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___h_a_l___b_s_p___w_i_f_i___c_c3100_m_o_d_1ga37bbc91f150fe1849ac27c155bc79ac9" kindref="member">BSP_WiFi_CC3100MOD_InterruptCallback_T</ref></type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+<para>Enables the control over the peripheral. </para>        </briefdescription>
+        <detaileddescription>
+<para>A prior call to MCU_&lt;RESOURCE&gt;_Initialize() is necessary for this function in order to operate.This function once called will allow the TI(R) CC3100MOD WIFI peripheral to receive, execute commands and transmit process data. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: function to be called whenever an interrupt occurs on the line </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in the case of success or an error code otherwise. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/bsp/BCDS_BSP_WiFi_CC3100MOD.h" line="115" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_WiFi_cc3100mod.c" bodystart="145" bodyend="200"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="_b_s_p___wi_fi__cc3100mod_8c_1a6c2c1bb05186e5f73bfb8d52797c2508" compoundref="_b_s_p___wi_fi__cc3100mod_8c" startline="68">BSP_WiFi_CC3100MOD_SPI_Handle</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="_b_s_p___wi_fi__cc3100mod_8c_1a4e36b1c8fd9853ac1d3d533af7c0e04caeb6fee2aff4d7fb97ff4fd0b4b3e7e78" compoundref="_b_s_p___wi_fi__cc3100mod_8c" startline="64">RETCODE_BSP_WIFI_SERIAL_NOT_INITIALIZED</references>
+        <references refid="_b_s_p___board_8c_1a43a88dd2bacbfa6b21b32b3e0fb2c3eb" compoundref="_b_s_p___board_8c" startline="617" endline="633">Board_WakeupPowerSupply2V5</references>
+        <references refid="_b_s_p___board_shared_8h_1a363f84ef9ec49fb78723dab902e8e570a2ebcbace8bbd3da1f93560875879ee97" compoundref="_b_s_p___board_shared_8h" startline="74">WIFI_CC3100MOD</references>
+        <references refid="_b_s_p___wi_fi__cc3100mod_8c_1a258ec78fd069287b11123d04ce3d1493" compoundref="_b_s_p___wi_fi__cc3100mod_8c" startline="80">WiFi_CC3100MOD_ISRCallback</references>
+        <references refid="_b_s_p___board_8c_1a8c8939e285582d5622f3b0ff20852814" compoundref="_b_s_p___board_8c" startline="452" endline="464">Board_GPIOInterruptRegisterCallback</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga1adf1076283c15980ff0a244173a15b2" compoundref="_b_s_p___board_settings_8h" startline="621">WIFI_INT_PIN</references>
+        <references refid="_b_s_p___wi_fi__cc3100mod_8c_1a7134e2a8ba3354802162926df4f4a113" compoundref="_b_s_p___wi_fi__cc3100mod_8c" startline="380" endline="384">WiFi_INT_InterruptCallback</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga1b0a3e336569849e3d6bb26d23ac1416" compoundref="_b_s_p___board_settings_8h" startline="622">WIFI_INT_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga8d2f582e9b7ae2c2edf233dc0de776c8" compoundref="_b_s_p___board_settings_8h" startline="624">WIFI_INT_EDGE_RISING</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga969aa355a16aa0c559bee07df6dfe60a" compoundref="_b_s_p___board_settings_8h" startline="625">WIFI_INT_EDGE_FALLING</references>
+        <references refid="group___b_s_p___b_o_a_r_d_s_e_t_t_i_n_g_s_1gad20f8b081d913848130c3fcf90c86a22" compoundref="_b_s_p___board_settings_8h" startline="81">BSP_ENABLE</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga9b408b840613b5cc21089b5fa0e593ff" compoundref="_b_s_p___board_settings_8h" startline="614">VDD_WIFI_EN_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga43460f1dbe58e257063252a4eddf00f4" compoundref="_b_s_p___board_settings_8h" startline="613">VDD_WIFI_EN_PIN</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga1a4b46c7abf121d7184579efa7e663f2" compoundref="_b_s_p___board_settings_8h" startline="628">WIFI_NHIB_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1gad381286bda0aa4957ea7c91636eb56ef" compoundref="_b_s_p___board_settings_8h" startline="627">WIFI_NHIB_PIN</references>
+        <references refid="_b_s_p___board_8c_1af5faa3e971e07ea00faa7ea0d6e09902" compoundref="_b_s_p___board_8c" startline="877" endline="884">Board_Delay</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga695dcc7154cf14e03b076c6cbd006e13" compoundref="_b_s_p___board_settings_8h" startline="588">WIFI_SUPPLY_SETTING_DELAY_MS</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga541ea4d2150ac5bf8df63f23582f2cdd" compoundref="_b_s_p___board_settings_8h" startline="632">WIFI_NRESET_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga996d7886c6f6e362120a7320ffca67df" compoundref="_b_s_p___board_settings_8h" startline="631">WIFI_NRESET_PIN</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga36c6ae90bbd44133fa0794bfd8074a24" compoundref="_b_s_p___board_settings_8h" startline="593">WIFI_MIN_RESET_DELAY_MS</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga2dbc6b3d2b75199d76876833985dcff4" compoundref="_b_s_p___board_settings_8h" startline="589">WIFI_PWRON_HW_WAKEUP_DELAY_MS</references>
+        <references refid="_b_s_p___board_8c_1a737d0834d153632eadfbb8e77007b178" compoundref="_b_s_p___board_8c" startline="70">OStoBSPdelayFunc</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga5d1086a16e7e1c88605d8a25a5928aa1" compoundref="_b_s_p___board_settings_8h" startline="590">WIFI_INIT_DELAY_MS</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1gadaaf689582272cbc61e69924876727c7" compoundref="_b_s_p___board_settings_8h" startline="586">WIFI_SPI0_CLOCK</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1gaa95140ad4f685aed244421020326bf2d" compoundref="_b_s_p___board_settings_8h" startline="583">WIFI_SERIAL_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga923cdeb44e4389f8bb7d907e08844a06" compoundref="_b_s_p___board_settings_8h" startline="599">WIFI_RX_IRQN</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga2fe66c4c1738d075724b5e4ed637fd89" compoundref="_b_s_p___board_settings_8h" startline="600">WIFI_RX_INTERRUPT_PRIORITY</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1gaf8a23a84ca256221435b8dff518df625" compoundref="_b_s_p___board_settings_8h" startline="603">WIFI_TX_IRQN</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1gaa9d5a9bab9fda159da0f6c1d75a8dc33" compoundref="_b_s_p___board_settings_8h" startline="602">WIFI_TX_INTERRUPT_PRIORITY</references>
+        <references refid="_b_s_p___wi_fi__cc3100mod_8c_1a40f4e15cf1dee8ed9dd98053748cca90" compoundref="_b_s_p___wi_fi__cc3100mod_8c" startline="76">WiFi_CC3100MOD_SPI_RxISRCallback</references>
+        <references refid="_b_s_p___wi_fi__cc3100mod_8c_1ae6293c79590d002292e36d2af7ac9602" compoundref="_b_s_p___wi_fi__cc3100mod_8c" startline="78">WiFi_CC3100MOD_SPI_TxISRCallback</references>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___h_a_l___b_s_p___w_i_f_i___c_c3100_m_o_d_1ga48b04d8fd9a58646b66287ba603705cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___h_a_l_1ga39fd157e78cb1535814fe63af2f3e1ee" kindref="member">HWHandle_T</ref></type>
+        <definition>HWHandle_T BSP_WiFi_CC3100MOD_GetSPIHandle</definition>
+        <argsstring>(void)</argsstring>
+        <name>BSP_WiFi_CC3100MOD_GetSPIHandle</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the SPI handle of the communication interfaces used by the peripheral. </para>        </briefdescription>
+        <detaileddescription>
+<para>After successful execution of BSP_Board_Initialize(param1, param2), the application is free to call this function in order to get the handle needed by the resources drivers. This handle will be used by the MCU drivers for the intended resource. <simplesect kind="return"><para>HWHandle_T: Handle for the used MCU resource. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/bsp/BCDS_BSP_WiFi_CC3100MOD.h" line="147" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_WiFi_cc3100mod.c" bodystart="291" bodyend="297"/>
+        <references refid="_b_s_p___wi_fi__cc3100mod_8c_1a6c2c1bb05186e5f73bfb8d52797c2508" compoundref="_b_s_p___wi_fi__cc3100mod_8c" startline="68">BSP_WiFi_CC3100MOD_SPI_Handle</references>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___h_a_l___b_s_p___w_i_f_i___c_c3100_m_o_d_1ga834396f7e10ba9249fb506860c755a80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___h_a_l_1ga39fd157e78cb1535814fe63af2f3e1ee" kindref="member">HWHandle_T</ref></type>
+        <definition>HWHandle_T BSP_WiFi_CC3100MOD_GetUartHandle</definition>
+        <argsstring>(void)</argsstring>
+        <name>BSP_WiFi_CC3100MOD_GetUartHandle</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the UART handle of the communication interfaces used by the peripheral. </para>        </briefdescription>
+        <detaileddescription>
+<para>After successful execution of BSP_Board_Initialize(param1, param2), the application is free to call this function in order to get the handle needed by the resources drivers. This handle will be used by the MCU drivers for the intended resource. <simplesect kind="return"><para>HWHandle_T: Handle for the used MCU resource. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/bsp/BCDS_BSP_WiFi_CC3100MOD.h" line="159" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_WiFi_cc3100mod.c" bodystart="302" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___h_a_l___b_s_p___w_i_f_i___c_c3100_m_o_d_1gaf7b9fe9bd3cd936fd611e2148ae55aca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T BSP_WiFi_CC3100MOD_Hibernate</definition>
+        <argsstring>(void)</argsstring>
+        <name>BSP_WiFi_CC3100MOD_Hibernate</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Hibernates the WIFI module. </para>        </briefdescription>
+        <detaileddescription>
+<para>this function will execute the instruction sequence in order to put the WIFI module into hibernated state.</para><para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in the case of success or an error code otherwise. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/bsp/BCDS_BSP_WiFi_CC3100MOD.h" line="179" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_WiFi_cc3100mod.c" bodystart="268" bodyend="274"/>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga1a4b46c7abf121d7184579efa7e663f2" compoundref="_b_s_p___board_settings_8h" startline="628">WIFI_NHIB_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1gad381286bda0aa4957ea7c91636eb56ef" compoundref="_b_s_p___board_settings_8h" startline="627">WIFI_NHIB_PIN</references>
+        <references refid="_b_s_p___board_8c_1af5faa3e971e07ea00faa7ea0d6e09902" compoundref="_b_s_p___board_8c" startline="877" endline="884">Board_Delay</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga787effde61e7fb23e5e741cfafb651c4" compoundref="_b_s_p___board_settings_8h" startline="591">WIFI_MIN_HIB_DELAY_MS</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___h_a_l___b_s_p___w_i_f_i___c_c3100_m_o_d_1ga72fd6342072f72853ecad11b46aed6b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T BSP_WiFi_CC3100MOD_Reset</definition>
+        <argsstring>(void)</argsstring>
+        <name>BSP_WiFi_CC3100MOD_Reset</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Resets the WIFI module. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function will execute the sequence to reset the CC3100MOD device</para><para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in the case of success or an error code otherwise. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/bsp/BCDS_BSP_WiFi_CC3100MOD.h" line="188" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_WiFi_cc3100mod.c" bodystart="279" bodyend="286"/>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga541ea4d2150ac5bf8df63f23582f2cdd" compoundref="_b_s_p___board_settings_8h" startline="632">WIFI_NRESET_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga996d7886c6f6e362120a7320ffca67df" compoundref="_b_s_p___board_settings_8h" startline="631">WIFI_NRESET_PIN</references>
+        <references refid="_b_s_p___board_8c_1af5faa3e971e07ea00faa7ea0d6e09902" compoundref="_b_s_p___board_8c" startline="877" endline="884">Board_Delay</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga36c6ae90bbd44133fa0794bfd8074a24" compoundref="_b_s_p___board_settings_8h" startline="593">WIFI_MIN_RESET_DELAY_MS</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___h_a_l___b_s_p___w_i_f_i___c_c3100_m_o_d_1gaa09e3ede488ca767a648458c6d4d66f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T BSP_WiFi_CC3100MOD_SetCSHigh</definition>
+        <argsstring>(void)</argsstring>
+        <name>BSP_WiFi_CC3100MOD_SetCSHigh</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Sets the CS pin to high i.e. device deselected. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in the case of success or an error code otherwise. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/bsp/BCDS_BSP_WiFi_CC3100MOD.h" line="202" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_WiFi_cc3100mod.c" bodystart="312" bodyend="316"/>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1gadae5da9fb08120338716a536721de518" compoundref="_b_s_p___board_settings_8h" startline="618">WIFI_CSN_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga3db7fb025c834bfb3ce690661cca6f78" compoundref="_b_s_p___board_settings_8h" startline="617">WIFI_CSN_PIN</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___h_a_l___b_s_p___w_i_f_i___c_c3100_m_o_d_1ga95b23a4edab3ef5701559eae58a9dd4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T BSP_WiFi_CC3100MOD_SetCSLow</definition>
+        <argsstring>(void)</argsstring>
+        <name>BSP_WiFi_CC3100MOD_SetCSLow</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Sets the CS pin to Low i.e. device selected. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in the case of success or an error code otherwise. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/bsp/BCDS_BSP_WiFi_CC3100MOD.h" line="195" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_WiFi_cc3100mod.c" bodystart="307" bodyend="311"/>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1gadae5da9fb08120338716a536721de518" compoundref="_b_s_p___board_settings_8h" startline="618">WIFI_CSN_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga3db7fb025c834bfb3ce690661cca6f78" compoundref="_b_s_p___board_settings_8h" startline="617">WIFI_CSN_PIN</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___h_a_l___b_s_p___w_i_f_i___c_c3100_m_o_d_1ga1d4ec7604abd555500bb474a13ae1926" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T BSP_WiFi_CC3100MOD_Wakeup</definition>
+        <argsstring>(void)</argsstring>
+        <name>BSP_WiFi_CC3100MOD_Wakeup</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Wakes the module from hibernate mode. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the WIFI peripheral is hibernated this function will execute the wake-up sequence with respect to the timing specified in the component data-sheet.</para><para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in the case of success or an error code otherwise. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/bsp/BCDS_BSP_WiFi_CC3100MOD.h" line="169" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_WiFi_cc3100mod.c" bodystart="257" bodyend="263"/>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga1a4b46c7abf121d7184579efa7e663f2" compoundref="_b_s_p___board_settings_8h" startline="628">WIFI_NHIB_PORT</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1gad381286bda0aa4957ea7c91636eb56ef" compoundref="_b_s_p___board_settings_8h" startline="627">WIFI_NHIB_PIN</references>
+        <references refid="_b_s_p___board_8c_1af5faa3e971e07ea00faa7ea0d6e09902" compoundref="_b_s_p___board_8c" startline="877" endline="884">Board_Delay</references>
+        <references refid="group___w_i_f_i___m_o_d_u_l_e___s_e_t_t_i_n_g_s_1ga8c37eb274b4a6d1c4e2a36590c3e5600" compoundref="_b_s_p___board_settings_8h" startline="592">WIFI_HIB_WAKEUP_DELAY_MS</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Generic interface to the WIFI CC3100MOD BSP API. </para>    </briefdescription>
+    <detaileddescription>
+<para>A prior call to BSP_Board_Initialize(param1, param2) function is necessary to initialize the MCU resources needed by the WIFI device.</para><para>Once the WIFI is requested a call to BSP_WIFI_CC3100MOD_Connect() function is required to map the internal MCU resources to their associated function.</para><para>The application needs get the handle for the MCU resource driver via BSP_WIFI_CC3100MOD_GetHandle() and to initialize the MCU resource driver by calling the MCU_&lt;RESOURCE&gt;_Initialize() and providing it with the previously acquired handle and an event callback function.</para><para>Then a call to BSP_WIFI_CC3100MOD_Enable() will execute the required sequence to enable the WIFI peripheral and the MCU resources dedicated for it (UART, SPI, I2C, etc.) and will associate the interrupt requests to their appropriate service routines.</para><para>The BSP_WIFI_CC3100MOD_Disable() will revert back what the BSP_WIFI_CC3100MOD_Enable() has done and set the WIFI and the MCU resource into disabled state.</para><para>The BSP_WIFI_CC3100MOD_Disconnect() will put the GPIO pins associated to the WIFI peripheral in analog mode to further reduce the consumption. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

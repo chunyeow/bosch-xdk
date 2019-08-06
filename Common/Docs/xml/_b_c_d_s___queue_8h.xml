@@ -1,0 +1,583 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_b_c_d_s___queue_8h" kind="file">
+    <compoundname>BCDS_Queue.h</compoundname>
+    <includes refid="_b_c_d_s___utils_8h" local="yes">BCDS_Utils.h</includes>
+    <includes refid="_b_c_d_s___basics_8h" local="yes">BCDS_Basics.h</includes>
+    <includes refid="_b_c_d_s___retcode_8h" local="yes">BCDS_Retcode.h</includes>
+    <includes refid="_free_r_t_o_s_8h" local="yes">FreeRTOS.h</includes>
+    <includes refid="semphr_8h" local="yes">semphr.h</includes>
+    <incdepgraph>
+      <node id="39505">
+        <label>stdbool.h</label>
+      </node>
+      <node id="39511">
+        <label>BCDS_Assert.h</label>
+        <link refid="_b_c_d_s___assert_8h"/>
+        <childnode refid="39502" relation="include">
+        </childnode>
+      </node>
+      <node id="39504">
+        <label>stdint.h</label>
+      </node>
+      <node id="39502">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="39503" relation="include">
+        </childnode>
+      </node>
+      <node id="39507">
+        <label>stdlib.h</label>
+      </node>
+      <node id="39512">
+        <label>BCDS_TaskConfig.h</label>
+        <link refid="_b_c_d_s___task_config_8h"/>
+      </node>
+      <node id="39515">
+        <label>semphr.h</label>
+        <link refid="semphr_8h"/>
+        <childnode refid="39516" relation="include">
+        </childnode>
+      </node>
+      <node id="39499">
+        <label>SDK/xdk110/Platform/Utils/include/BCDS_Queue.h</label>
+        <link refid="BCDS_Queue.h"/>
+        <childnode refid="39500" relation="include">
+        </childnode>
+        <childnode refid="39503" relation="include">
+        </childnode>
+        <childnode refid="39502" relation="include">
+        </childnode>
+        <childnode refid="39508" relation="include">
+        </childnode>
+        <childnode refid="39515" relation="include">
+        </childnode>
+      </node>
+      <node id="39509">
+        <label>stddef.h</label>
+      </node>
+      <node id="39514">
+        <label>portable.h</label>
+      </node>
+      <node id="39501">
+        <label>BCDS_UtilsConfig.h</label>
+        <link refid="_b_c_d_s___utils_config_8h"/>
+      </node>
+      <node id="39506">
+        <label>string.h</label>
+      </node>
+      <node id="39500">
+        <label>BCDS_Utils.h</label>
+        <link refid="_b_c_d_s___utils_8h"/>
+        <childnode refid="39501" relation="include">
+        </childnode>
+        <childnode refid="39502" relation="include">
+        </childnode>
+      </node>
+      <node id="39503">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="39504" relation="include">
+        </childnode>
+        <childnode refid="39505" relation="include">
+        </childnode>
+        <childnode refid="39506" relation="include">
+        </childnode>
+        <childnode refid="39507" relation="include">
+        </childnode>
+      </node>
+      <node id="39513">
+        <label>projdefs.h</label>
+      </node>
+      <node id="39516">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+      </node>
+      <node id="39510">
+        <label>FreeRTOSConfig.h</label>
+        <link refid="_free_r_t_o_s_config_8h"/>
+        <childnode refid="39504" relation="include">
+        </childnode>
+        <childnode refid="39511" relation="include">
+        </childnode>
+        <childnode refid="39512" relation="include">
+        </childnode>
+      </node>
+      <node id="39508">
+        <label>FreeRTOS.h</label>
+        <link refid="_free_r_t_o_s_8h"/>
+        <childnode refid="39509" relation="include">
+        </childnode>
+        <childnode refid="39504" relation="include">
+        </childnode>
+        <childnode refid="39510" relation="include">
+        </childnode>
+        <childnode refid="39513" relation="include">
+        </childnode>
+        <childnode refid="39514" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="struct_queue___t" prot="public">Queue_T</innerclass>
+    <innerclass refid="struct_queue_item___t" prot="public">QueueItem_T</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___q_u_e_u_e_1ga813207e2a71f68f4f286aa7cd638a517" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Queue_Clear</definition>
+        <argsstring>(Queue_T *Queue)</argsstring>
+        <name>Queue_Clear</name>
+        <param>
+          <type><ref refid="struct_queue___t" kindref="compound">Queue_T</ref> *</type>
+          <declname>Queue</declname>
+        </param>
+        <briefdescription>
+<para>Cleans the queue buffer from all messages. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The queue structure (must not be equal to NULL). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_Queue.h" line="232" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___q_u_e_u_e_1ga9f13f163df33a4c1367b8cee4cd40eeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t Queue_Count</definition>
+        <argsstring>(const Queue_T *Queue)</argsstring>
+        <name>Queue_Count</name>
+        <param>
+          <type>const <ref refid="struct_queue___t" kindref="compound">Queue_T</ref> *</type>
+          <declname>Queue</declname>
+        </param>
+        <briefdescription>
+<para>Gets number of messages available for receiving from the queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The queue structure (must not be equal to NULL).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of messages available in the queue </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_Queue.h" line="225" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___q_u_e_u_e_1ga92380bae59b995ad1caa5d8141b7f0a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Queue_Create</definition>
+        <argsstring>(Queue_T *Queue, uint8_t *Buffer, uint32_t BufferSize)</argsstring>
+        <name>Queue_Create</name>
+        <param>
+          <type><ref refid="struct_queue___t" kindref="compound">Queue_T</ref> *</type>
+          <declname>Queue</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>Buffer</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>BufferSize</declname>
+        </param>
+        <briefdescription>
+<para>Creates a queue by initializing its structure with provided buffer where queue items to be stored. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">Queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The queue structure to be initialized (must not be equal to NULL). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to be used for storing queue items (must not be equal to NULL). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">BufferSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of provided buffer (must not be equal to zero).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the queue was successfully initialized </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If one of the parameters is invalid (NULL pointer or 0 as Buffer Size) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba497273b2285191edc1cda8648b67250a" kindref="member">RETCODE_OUT_OF_RESOURCES</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the Queue associated semaphores (Lock and Wakeup, see <ref refid="struct_queue___t" kindref="compound">Queue_T</ref>) can&apos;t be created </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_Queue.h" line="168" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___q_u_e_u_e_1ga92859dfff313b66af9cb013e0a88ac6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Queue_Delete</definition>
+        <argsstring>(Queue_T *Queue)</argsstring>
+        <name>Queue_Delete</name>
+        <param>
+          <type><ref refid="struct_queue___t" kindref="compound">Queue_T</ref> *</type>
+          <declname>Queue</declname>
+        </param>
+        <briefdescription>
+<para>Deletes a queue by deinitializing its structure members. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The queue structure to be deleted (must not be equal to NULL).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the queue was successfully deleted </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the Queue pointer parameter is NULL </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_Queue.h" line="178" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___q_u_e_u_e_1ga5c5dbd3103c425c49e814b313db9f6b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Queue_Get</definition>
+        <argsstring>(Queue_T *Queue, void **Data, uint32_t *DataSize, uint32_t Timeout)</argsstring>
+        <name>Queue_Get</name>
+        <param>
+          <type><ref refid="struct_queue___t" kindref="compound">Queue_T</ref> *</type>
+          <declname>Queue</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>Data</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>DataSize</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>Timeout</declname>
+        </param>
+        <briefdescription>
+<para>Gets an item with payload from the queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The queue structure (must not be equal to NULL). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data (item including payload) received from the queue (must not be equal to NULL). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">DataSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of received data (must not be equal to NULL). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time to wait for a data from the queue in tick periods</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the data was successfully received from the queue </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba281b77d7bbd0b11781de864c12f32fd9" kindref="member">RETCODE_SEMAPHORE_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If no data was received within the waiting time </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba78de1a3b6af06d147bff0ca273ac0b17" kindref="member">RETCODE_UNEXPECTED_BEHAVIOR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If queue is empty </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_Queue.h" line="206" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___q_u_e_u_e_1gaa92386ca018a7b7f2202b4a44607b523" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Queue_Purge</definition>
+        <argsstring>(Queue_T *Queue)</argsstring>
+        <name>Queue_Purge</name>
+        <param>
+          <type><ref refid="struct_queue___t" kindref="compound">Queue_T</ref> *</type>
+          <declname>Queue</declname>
+        </param>
+        <briefdescription>
+<para>Purges a room in the queue buffer (dequeues message) occupied by received data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The queue structure (must not be equal to NULL).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If received data was successfully purged from the queue </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If no data left to be purged </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_Queue.h" line="216" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___q_u_e_u_e_1ga8ebfafd9c37804a40b3c5971dbb63223" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Queue_Put</definition>
+        <argsstring>(Queue_T *Queue, const void *Item, uint32_t ItemSize, const void *Payload, uint32_t PayloadSize)</argsstring>
+        <name>Queue_Put</name>
+        <param>
+          <type><ref refid="struct_queue___t" kindref="compound">Queue_T</ref> *</type>
+          <declname>Queue</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>Item</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>ItemSize</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>Payload</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>PayloadSize</declname>
+        </param>
+        <briefdescription>
+<para>Puts an item with/without payload to the queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The queue structure (must not be equal to NULL). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The item to be added to the queue (must not be equal to NULL) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ItemSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of given item (must not be equal to zero) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Payload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The item payload (can be NULL) to be added to the queue </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">PayloadSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The payload size (can be zero)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the item with payload was successfully added to the queue </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba497273b2285191edc1cda8648b67250a" kindref="member">RETCODE_OUT_OF_RESOURCES</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If there is no room in the queue buffer to store the item with the payload </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_Queue.h" line="192" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="preprocessor">#ifndef<sp/>BCDS_QUEUE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BCDS_QUEUE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___utils_8h" kindref="compound">BCDS_Utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>BCDS_FEATURE_QUEUE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___basics_8h" kindref="compound">BCDS_Basics.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___retcode_8h" kindref="compound">BCDS_Retcode.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_free_r_t_o_s_8h" kindref="compound">FreeRTOS.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="semphr_8h" kindref="compound">semphr.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="struct_queue_item___t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="137" refid="struct_queue_item___t_1a513cead92770c38ef36a16b47a6799ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*<ref refid="struct_queue_item___t_1a513cead92770c38ef36a16b47a6799ad" kindref="member">Next</ref>;</highlight></codeline>
+<codeline lineno="138" refid="struct_queue_item___t_1a1f5ab05b3305a959d954b796c63807c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_queue_item___t_1a1f5ab05b3305a959d954b796c63807c4" kindref="member">Size</ref>;</highlight></codeline>
+<codeline lineno="139" refid="struct_queue_item___t_1a7cc5bf2d6acfe691173d65234114e2cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>Data[];</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">}<sp/><ref refid="struct_queue_item___t" kindref="compound">QueueItem_T</ref>;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="struct_queue___t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="147" refid="struct_queue___t_1a095175dabcb7cd83bddf2bea50371121" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*<ref refid="struct_queue___t_1a095175dabcb7cd83bddf2bea50371121" kindref="member">Buffer</ref>;</highlight></codeline>
+<codeline lineno="148" refid="struct_queue___t_1ae73a396046113c6706cefd8ef7324416" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_queue___t_1ae73a396046113c6706cefd8ef7324416" kindref="member">BufferSize</ref>;</highlight></codeline>
+<codeline lineno="149" refid="struct_queue___t_1a741294f04220c9538b1fa0589c29695a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*<ref refid="struct_queue___t_1a741294f04220c9538b1fa0589c29695a" kindref="member">PosRead</ref>;</highlight></codeline>
+<codeline lineno="150" refid="struct_queue___t_1a2994997a9bef09f660096f83f3d48697" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*<ref refid="struct_queue___t_1a2994997a9bef09f660096f83f3d48697" kindref="member">PosWrite</ref>;</highlight></codeline>
+<codeline lineno="151" refid="struct_queue___t_1ad3fa7da84ce75c8b58d9251838377e8f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_queue___t_1ad3fa7da84ce75c8b58d9251838377e8f" kindref="member">Count</ref>;</highlight></codeline>
+<codeline lineno="152" refid="struct_queue___t_1ab638ada0fbf6062d2131ecc529c4b5d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_queue_item___t" kindref="compound">QueueItem_T</ref><sp/>*<ref refid="struct_queue___t_1ab638ada0fbf6062d2131ecc529c4b5d9" kindref="member">Last</ref>;</highlight></codeline>
+<codeline lineno="153" refid="struct_queue___t_1acd221611b004a9dd7300f74034527bd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_free_r_t_o_s_8h_1a520d8cf032327581ece00e5bd8e03a75" kindref="member">xSemaphoreHandle</ref><sp/><ref refid="struct_queue___t_1acd221611b004a9dd7300f74034527bd3" kindref="member">Lock</ref>;</highlight></codeline>
+<codeline lineno="154" refid="struct_queue___t_1afa6ba6b9c1a05087b017354bd7f2744a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_free_r_t_o_s_8h_1a520d8cf032327581ece00e5bd8e03a75" kindref="member">xSemaphoreHandle</ref><sp/><ref refid="struct_queue___t_1afa6ba6b9c1a05087b017354bd7f2744a" kindref="member">Wakeup</ref>;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}<sp/><ref refid="struct_queue___t" kindref="compound">Queue_T</ref>;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___q_u_e_u_e_1ga92380bae59b995ad1caa5d8141b7f0a0" kindref="member">Queue_Create</ref>(<ref refid="struct_queue___t" kindref="compound">Queue_T</ref><sp/>*Queue,<sp/>uint8_t<sp/>*Buffer,<sp/>uint32_t<sp/>BufferSize);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___q_u_e_u_e_1ga92859dfff313b66af9cb013e0a88ac6b" kindref="member">Queue_Delete</ref>(<ref refid="struct_queue___t" kindref="compound">Queue_T</ref><sp/>*Queue);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___q_u_e_u_e_1ga8ebfafd9c37804a40b3c5971dbb63223" kindref="member">Queue_Put</ref>(<ref refid="struct_queue___t" kindref="compound">Queue_T</ref><sp/>*Queue,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*Item,<sp/>uint32_t<sp/>ItemSize,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*Payload,<sp/>uint32_t<sp/>PayloadSize);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___q_u_e_u_e_1ga5c5dbd3103c425c49e814b313db9f6b2" kindref="member">Queue_Get</ref>(<ref refid="struct_queue___t" kindref="compound">Queue_T</ref><sp/>*Queue,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**Data,<sp/>uint32_t<sp/>*DataSize,<sp/>uint32_t<sp/>Timeout);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___q_u_e_u_e_1gaa92386ca018a7b7f2202b4a44607b523" kindref="member">Queue_Purge</ref>(<ref refid="struct_queue___t" kindref="compound">Queue_T</ref><sp/>*Queue);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal">uint32_t<sp/><ref refid="group___q_u_e_u_e_1ga9f13f163df33a4c1367b8cee4cd40eeb" kindref="member">Queue_Count</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_queue___t" kindref="compound">Queue_T</ref><sp/>*Queue);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___q_u_e_u_e_1ga813207e2a71f68f4f286aa7cd638a517" kindref="member">Queue_Clear</ref>(<ref refid="struct_queue___t" kindref="compound">Queue_T</ref><sp/>*Queue);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>if<sp/>BCDS_FEATURE_QUEUE<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>BCDS_QUEUE_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_Queue.h"/>
+  </compounddef>
+</doxygen>

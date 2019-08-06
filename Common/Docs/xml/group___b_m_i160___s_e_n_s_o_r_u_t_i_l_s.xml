@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___b_m_i160___s_e_n_s_o_r_u_t_i_l_s" kind="group">
+    <compoundname>BMI160_SENSORUTILS</compoundname>
+    <title>BMI160_SensorUtils</title>
+    <innerfile refid="_b_c_d_s___bmi160_utils_8h">BCDS_Bmi160Utils.h</innerfile>
+    <innerclass refid="struct_bmi160_utils___info___s" prot="public">Bmi160Utils_Info_S</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___b_m_i160___s_e_n_s_o_r_u_t_i_l_s_1ga3f4b5f2ec9feaef1f07746e5186bd97a" prot="public" static="no">
+        <type>struct <ref refid="struct_bmi160_utils___info___s" kindref="compound">Bmi160Utils_Info_S</ref></type>
+        <definition>typedef struct Bmi160Utils_Info_S Bmi160Utils_Info_T</definition>
+        <argsstring></argsstring>
+        <name>Bmi160Utils_Info_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/include/BCDS_Bmi160Utils.h" line="66" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/include/BCDS_Bmi160Utils.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_m_i160___s_e_n_s_o_r_u_t_i_l_s_1gace8957c51d48da7dc3edacadfe4dbf1a" prot="public" static="no">
+        <type>struct <ref refid="struct_bmi160_utils___info___s" kindref="compound">Bmi160Utils_Info_S</ref> *</type>
+        <definition>typedef struct Bmi160Utils_Info_S * Bmi160Utils_InfoPtr_T</definition>
+        <argsstring></argsstring>
+        <name>Bmi160Utils_InfoPtr_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/include/BCDS_Bmi160Utils.h" line="67" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/include/BCDS_Bmi160Utils.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___b_m_i160___s_e_n_s_o_r_u_t_i_l_s_1gaedce44090027fbdb1af3dcefde689b26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Bmi160Utils_initialize</definition>
+        <argsstring>(Bmi160Utils_InfoPtr_T bmi160Info)</argsstring>
+        <name>Bmi160Utils_initialize</name>
+        <param>
+          <type><ref refid="group___b_m_i160___s_e_n_s_o_r_u_t_i_l_s_1gace8957c51d48da7dc3edacadfe4dbf1a" kindref="member">Bmi160Utils_InfoPtr_T</ref></type>
+          <declname>bmi160Info</declname>
+        </param>
+        <briefdescription>
+<para>Function to initialize bmi160.This needs to be called before calling any other API. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">bmi160Info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>:structure holding the bmi160 specific configurations</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>:callback that will be called in deferred context when an registered interrupt occurs</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BMI160 initialized successfully </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when any of the input parameter(bmi160Info or bmi160Info-&gt;ISRCallback) is NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___s_e_n_s_o_r___u_t_i_l_s_1ggadb78aed5ac68b65e2fec1ca81ba8f13ea6e58ef167cfeaa21fe57f2a05380aab7" kindref="member">RETCODE_LIB_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when any of the input parameter for BST library API is NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___s_e_n_s_o_r___u_t_i_l_s_1ggadb78aed5ac68b65e2fec1ca81ba8f13eafb7882dd07f47c23fff9d3dcffc68f86" kindref="member">RETCODE_BST_BMI160_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when error is returned from BST library API. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gabed20789ada55c303bb4ef8e0669a4ac" kindref="member">RETCODE_DOPPLE_INITIALIZATION</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>When initialization is already done.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>In case of other failures refer <ref refid="group___b_c_d_s___h_a_l___b_s_p___sensor___node_1ga311d37af892ea5672b90ddac5d658440" kindref="member">BSP_SensorNode_Enable</ref> or #I2CSensorTransceiver_Init API&apos;s.</para></simplesect>
+<simplesect kind="note"><para>1) The return value consist of (First MSB Byte represents Package ID,Next Byte represents Severity and Last 2LSB Bytes represents error code). </para></simplesect>
+<simplesect kind="note"><para>2) The support of multiple instances is not possible due to the limitation in the BST library. </para></simplesect>
+<simplesect kind="note"><para>3) Calling Bmi160 initialization API present in sensorUtils (Bmi160Utils_initialize) and BST library (bmi160_init) concurrently will lead to unexpected behaviour. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/include/BCDS_Bmi160Utils.h" line="91" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bmi160Utils/Bmi160Utils.c" bodystart="111" bodyend="168"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6acec8ccdc2bb7d9c1e4806729ea2acb76" compoundref="_b_c_d_s___retcode_8h" startline="130">RETCODE_SEVERITY_FATAL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gada44fddcce4df8b6f4d19fcd06b0f0f3" compoundref="_accelerometer_8c" startline="288" endline="350">Accelerometer_init</referencedby>
+        <referencedby refid="group___g_y_r_o_s_c_o_p_e_1gaa2458d131568a5310168493c8de4b008" compoundref="_gyroscope_8c" startline="253" endline="311">Gyroscope_init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___b_m_i160___s_e_n_s_o_r_u_t_i_l_s_1ga448a33506d894b5f181ec6ca72cc558a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Bmi160Utils_remapAxis</definition>
+        <argsstring>(Bmi160Utils_InfoPtr_T bmi160Info, AxisRemap_Data_T *bmiData)</argsstring>
+        <name>Bmi160Utils_remapAxis</name>
+        <param>
+          <type><ref refid="group___b_m_i160___s_e_n_s_o_r_u_t_i_l_s_1gace8957c51d48da7dc3edacadfe4dbf1a" kindref="member">Bmi160Utils_InfoPtr_T</ref></type>
+          <declname>bmi160Info</declname>
+        </param>
+        <param>
+          <type><ref refid="group___a_x_i_s___r_e_m_a_p_1ga47fb10054907791a22486da605dc02fc" kindref="member">AxisRemap_Data_T</ref> *</type>
+          <declname>bmiData</declname>
+        </param>
+        <briefdescription>
+<para>Function to read remapped bmi160 data . </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">bmi160Info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>:structure holding the bmi160 specific configurations</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">bmiData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>:structure to hold the remapped bmi160 data</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BMI160 initialized successfully </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when any of the input parameter is NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" kindref="member">RETCODE_UNINITIALIZED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when this api is called before initializing Bma280 sensor.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>In case of other failures refer <ref refid="_axis_remap_8c_1aa5483f1ef3e297e895b29bb26745c578" kindref="member">AxisRemap_remapSensorData</ref> API.</para></simplesect>
+<simplesect kind="note"><para>The return value consist of (First MSB Byte represents Package ID,Next Byte represents Severity and Last 2LSB Bytes represents error code). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>copying the actual sensor data into a local variable </para>        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/include/BCDS_Bmi160Utils.h" line="109" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bmi160Utils/Bmi160Utils.c" bodystart="171" bodyend="195"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" compoundref="_b_c_d_s___retcode_8h" startline="106">RETCODE_FAILURE</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6acec8ccdc2bb7d9c1e4806729ea2acb76" compoundref="_b_c_d_s___retcode_8h" startline="130">RETCODE_SEVERITY_FATAL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="_bmi160_utils_8c_1af2cc74878676abb62a86f1ac7db56447" compoundref="_bmi160_utils_8c" startline="64">initializationStatus</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" compoundref="_b_c_d_s___retcode_8h" startline="111">RETCODE_UNINITIALIZED</references>
+        <references refid="struct_axis_remap___data___s_1af6d3062751bd565decb1a2cd3b63bdb2" compoundref="_b_c_d_s___axis_remap_8h" startline="60">AxisRemap_Data_S::x</references>
+        <references refid="struct_axis_remap___data___s_1af64066d134a77e01b3d6eb8da813627a" compoundref="_b_c_d_s___axis_remap_8h" startline="61">AxisRemap_Data_S::y</references>
+        <references refid="struct_axis_remap___data___s_1ac2fb30be1b894e32b31b68bb513262a3" compoundref="_b_c_d_s___axis_remap_8h" startline="62">AxisRemap_Data_S::z</references>
+        <references refid="_axis_remap_8c_1aa5483f1ef3e297e895b29bb26745c578" compoundref="_axis_remap_8c" startline="77" endline="186">AxisRemap_remapSensorData</references>
+        <references refid="struct_bmi160_utils___info___s_1a148dc427778c71272cb0de06c4c4630d" compoundref="_b_c_d_s___bmi160_utils_8h" startline="63">Bmi160Utils_Info_S::remap</references>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga5dcaf1b81b63ccce1a85ab649b920aca" compoundref="_accelerometer_8c" startline="874" endline="947">Accelerometer_readXyzLsbValue</referencedby>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga0db11ba711c71c40c97a971065f02fef" compoundref="_accelerometer_8c" startline="950" endline="1038">Accelerometer_readXyzGValue</referencedby>
+        <referencedby refid="group___g_y_r_o_s_c_o_p_e_1ga1af96bdf44f4c9b72af3a9c83c49d234" compoundref="_gyroscope_8c" startline="713" endline="782">Gyroscope_readXyzValue</referencedby>
+        <referencedby refid="group___g_y_r_o_s_c_o_p_e_1ga2f39d95a90398b2998b26dba51665c7d" compoundref="_gyroscope_8c" startline="785" endline="864">Gyroscope_readXyzDegreeValue</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___b_m_i160___s_e_n_s_o_r_u_t_i_l_s_1ga784f5bf72f2373007f7a3cbe75a6f955" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Bmi160Utils_uninitialize</definition>
+        <argsstring>(Bmi160Utils_InfoPtr_T bmi160Info)</argsstring>
+        <name>Bmi160Utils_uninitialize</name>
+        <param>
+          <type><ref refid="group___b_m_i160___s_e_n_s_o_r_u_t_i_l_s_1gace8957c51d48da7dc3edacadfe4dbf1a" kindref="member">Bmi160Utils_InfoPtr_T</ref></type>
+          <declname>bmi160Info</declname>
+        </param>
+        <briefdescription>
+<para>Function to uninitialize bmi160.After calling this API sensor is no more usable without initializing it again by calling initialize API. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">bmi160Info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>:structure holding the bmi160 specific configurations</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BMI160 initialized successfully </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when bmi160Info is NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" kindref="member">RETCODE_UNINITIALIZED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when this api is called before initializing Bma280 sensor.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>In case of other failures refer <ref refid="group___b_c_d_s___h_a_l___b_s_p___sensor___node_1ga5af05449409434d39749e474f3c1096c" kindref="member">BSP_SensorNode_Disable</ref> or <ref refid="group___b_c_d_s___h_a_l___b_s_p___sensor___node_1ga0d143eb863c1549f0433cfe3e852bd77" kindref="member">BSP_SensorNode_IsAllNodesDisabled</ref> or #I2CSensorTransceiver_Deinit API.</para></simplesect>
+<simplesect kind="note"><para>The return value consist of (First MSB Byte represents Package ID,Next Byte represents Severity and Last 2LSB Bytes represents error code). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/include/BCDS_Bmi160Utils.h" line="127" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bmi160Utils/Bmi160Utils.c" bodystart="198" bodyend="225"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6acec8ccdc2bb7d9c1e4806729ea2acb76" compoundref="_b_c_d_s___retcode_8h" startline="130">RETCODE_SEVERITY_FATAL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gaddf51f53b785d82dd8232b7f94e676f8" compoundref="_accelerometer_8c" startline="1041" endline="1076">Accelerometer_deInit</referencedby>
+        <referencedby refid="group___g_y_r_o_s_c_o_p_e_1gae535c68b0ad78ba4facefb44cf0cb365" compoundref="_gyroscope_8c" startline="960" endline="997">Gyroscope_deInit</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>SensorUtils Interfaces of BMI160. </para>    </briefdescription>
+    <detaileddescription>
+<para>The interface header exports High-level Sensor API&apos;s which are used to Initialize sensor, and re-map the axis for the BMI160. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

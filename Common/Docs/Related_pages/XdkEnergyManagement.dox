@@ -1,0 +1,35 @@
+/** 
+@page XDK_ENERGY_MANAGMENT XDK Energy Management
+@brief Outlines XDKs Energy Management approach
+<hr>
+
+XDK uses a reactive energy management approach. In general, components are only activated, once they are needed. The XDK API makes sure, that when you call the initialize function of a software module, all relevant hardware components and modules are powered up. In turn this means, that as long as you do not initialize a component (e.g. a sensor), this component does not consume power.
+
+However, some uC peripherals are always powered up, when XDK boots. The following components are considered vital to XDKs operation and hence are always initialized:
+<ul>
+	<li>GPIO Pins (including potential pull-up resistor)</li>
+	<li>I2C Module</li>
+	<li>USB Module</li>
+</ul>
+
+Additional peripherals (such as the SPI module) are only initialized, when they are required (e.g. when initializing Wlan or the SD Card). The default initialization of the XDK SDK can be replaced, as outlined in @ref XDK_SOFTWARE_STARTUP_GUIDE.
+
+
+\section XDK_ENERGY_MANAGMENT_Sleeping Sleep Management
+
+XDK SDK currently does not support putting the MCU of XDK to sleep. While there is a software module called @ref OS_SleepMgt, this module is neither used on XDK SDK nor has it been tested on XDK. Therefore, using it is at your own risk and may potentially be very frustrating.
+
+
+\section XDK_ENERGY_MANAGMENT_Battery XDK Battery Status
+
+To determine the battery voltage of XDK, the battery is connected to pin PD7 of the MCU. This pin can be configured with the @ref ADC_Driver software module to allow sampling the battery voltage. XDK uses a typical [lithium-ion battery](https://en.wikipedia.org/wiki/Lithium-ion_battery). 
+
+The battery charger of XDK gives information about the current charging mode via the green LED of XDK. However, this pin is not connected to the MCU. Determining the current charging mode in the software running on XDK is therefore not possible. The green LED only shows the charging status and cannot be controlled by software.
+
+Green LED  | Charging Mode
+-----------|----------------------------------------------------------------------------------------------
+Continuous | Charging/Charging suspended by thermal loop
+Flashing   | Safety timers expired
+Off        | Charging done/Recharging after termination/IC disabled or no valid input power/Battery absent
+
+*/

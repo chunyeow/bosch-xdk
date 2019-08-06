@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_x_d_k__build__system" kind="page">
+    <compoundname>XDK_Build_System</compoundname>
+    <title>XDK Build System</title>
+    <detaileddescription>
+<para>Explains the build system of XDK</para><para><hruler/>
+</para><para>XDK uses a <ulink url="https://en.wikipedia.org/wiki/Make_%28software%29">make</ulink>-based build system. Make is a powerful tool, that uses so-called makefiles to specify, which files are required to compile a project. The <ulink url="http://www.gnu.org/software/make/manual/make.html">Manual of Make</ulink> contains all the details that may be required to understand the behaviour and inner workings of make.</para><para>Each XDK application contains the &quot;Makefile&quot;. The makefile triggers &quot;xdk110/Common/application.mk&quot;, which contains all the common elements of the application makefiles. While the overall build system of XDK works out of the box, certain modifications to the makefile of your applications may be required as outlined in this page.</para><sect1 id="_x_d_k__build__system_1XDK_Build_System_Variables">
+<title>Which variables should I touch in the Makefile?</title>
+<para>Here you see an exemplary excerpt from an XDK application makefile:</para><para><programlisting><codeline><highlight class="normal">#<sp/>Macro<sp/>to<sp/>define<sp/>Start-up<sp/>method.<sp/>change<sp/>this<sp/>macro<sp/>to<sp/>&quot;CUSTOM_STARTUP&quot;<sp/>to<sp/>have<sp/>custom<sp/>start-up.</highlight></codeline>
+<codeline><highlight class="normal">export<sp/>BCDS_SYSTEM_STARTUP_METHOD<sp/>=<sp/>DEFAULT_STARTUP</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">export<sp/>BCDS_APP_NAME<sp/>=<sp/>XDK110_myExample</highlight></codeline>
+<codeline><highlight class="normal">export<sp/>BCDS_APP_DIR<sp/>=<sp/>$(CURDIR)</highlight></codeline>
+<codeline><highlight class="normal">export<sp/>BCDS_APP_SOURCE_DIR<sp/>=<sp/>$(BCDS_APP_DIR)/source</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Make<sp/>a<sp/>note<sp/>the<sp/>relative<sp/>path<sp/>for<sp/>the<sp/>below<sp/>variable<sp/>is<sp/>present<sp/>in<sp/><sp/>xdk110/Common/application.mk</highlight></codeline>
+<codeline><highlight class="normal">export<sp/>BCDS_CFLAGS_COMMON<sp/>=<sp/>-DMY_DEFINE</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Make<sp/>a<sp/>note<sp/>MY_APP_INCLUDE_DIR<sp/>is<sp/>the<sp/>user<sp/>application<sp/>include<sp/>directory.<sp/>If<sp/>there<sp/>is<sp/>nothing<sp/>then<sp/>leave<sp/>empty</highlight></codeline>
+<codeline><highlight class="normal">BCDS_XDK_INCLUDES<sp/>=<sp/>\</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-I<sp/>$(MY_APP_INCLUDE_DIR)<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>By<sp/>default<sp/>all<sp/>the<sp/>feature<sp/>macros<sp/>are<sp/>enabled<sp/>in<sp/>common_feature.mk.</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>This<sp/>macro<sp/>is<sp/>used<sp/>to<sp/>select<sp/>the<sp/>features<sp/>needed<sp/>by<sp/>application</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>ALL<sp/><sp/><sp/><sp/>----&gt;<sp/>All<sp/>the<sp/>features<sp/>will<sp/>be<sp/>enabled</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>NONE<sp/><sp/><sp/>----&gt;<sp/>All<sp/>the<sp/>features<sp/>will<sp/>be<sp/>disabled</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>SELECT<sp/>----&gt;<sp/>Application<sp/>has<sp/>to<sp/>select<sp/>the<sp/>required<sp/>features</highlight></codeline>
+<codeline><highlight class="normal">XDK_FEATURE_SET<sp/>?=&apos;ALL&apos;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Selection<sp/>of<sp/>features<sp/>is<sp/>done<sp/>in<sp/>application<sp/>of<sp/>xdk110/Apps</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Application<sp/>Files<sp/>:Add<sp/>the<sp/>Source<sp/>file</highlight></codeline>
+<codeline><highlight class="normal">BCDS_XDK_APP_SOURCE_FILES<sp/>=<sp/>\</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$(BCDS_APP_SOURCE_DIR)/myExample.c</highlight></codeline>
+</programlisting></para><para>In this example, the following variables may need changing:</para><para><table rows="7" cols="2"><row>
+<entry thead="yes"><para>Variable </para></entry><entry thead="yes"><para>Meaning  </para></entry></row>
+<row>
+<entry thead="no"><para>XDK_FEATURE_SET </para></entry><entry thead="no"><para>Defines selection of features need by application </para></entry></row>
+<row>
+<entry thead="no"><para>BCDS_CFLAGS_COMMON </para></entry><entry thead="no"><para>Defines application-specific CFLAGS (see below) </para></entry></row>
+<row>
+<entry thead="no"><para>BCDS_APP_NAME </para></entry><entry thead="no"><para>Defines the project name, which is used to determine the name of your executable file </para></entry></row>
+<row>
+<entry thead="no"><para>BCDS_XDK_INCLUDES </para></entry><entry thead="no"><para>Defines the search path&apos; for include files (see <ref refid="_x_d_k__build__system_1XDK_Build_System_Add_Source" kindref="member">How to add a new source file to my project?</ref>) </para></entry></row>
+<row>
+<entry thead="no"><para>BCDS_XDK_APP_SOURCE_FILES </para></entry><entry thead="no"><para>Defines the c-files that are taken into account when compiling your project (see <ref refid="_x_d_k__build__system_1XDK_Build_System_Add_Source" kindref="member">How to add a new source file to my project?</ref>) </para></entry></row>
+<row>
+<entry thead="no"><para>BCDS_SYSTEM_STARTUP_METHOD </para></entry><entry thead="no"><para>Defines whether XDK uses the standard or a custom initialization routine (see <ref refid="_x_d_k__s_o_f_t_w_a_r_e__s_t_a_r_t_u_p__g_u_i_d_e" kindref="compound">XDK Software Startup Guide</ref> for detailed information) </para></entry></row>
+</table>
+</para></sect1>
+<sect1 id="_x_d_k__build__system_1XDK_Build_System_Add_Source">
+<title>How to add a new source file to my project?</title>
+<para>When adding or removing files from your project, you have to reflect this change in the Makefile. Please update the BCDS_XDK_APP_SOURCE_FILES variable to include all files that you want to compile. Furthermore, please update the BCDS_XDK_INCLUDES variable to include all path&apos; in which include files may be residing. After adding new include path&apos;, please make sure to reflect the change in the XDK Workbench project configuration (see below).</para><para><image type="html" name="XDK_Workbench_Includepath.png"></image>
+</para></sect1>
+<sect1 id="_x_d_k__build__system_1XDK_Build_System_Change_Cflags">
+<title>How to change CFLAGS in my project?</title>
+<para><ulink url="https://en.wikipedia.org/wiki/CFLAGS">CFLAGS</ulink> are flags passed on to the compiler, that allow you to configure various things in your software and in the behaviour of the compiler. To add add specific CFLAGS for your application, please create a new line in the makefile of your project:</para><para><programlisting><codeline><highlight class="normal">BCDS_CFLAGS_COMMON<sp/>=<sp/>-DMY_DEFINE</highlight></codeline>
+</programlisting></para><para>In this line, you can add your own cflags.</para></sect1>
+<sect1 id="_x_d_k__build__system_1XDK_Build_System_Rename">
+<title>How to rename a project in XDK Workbench?</title>
+<para>If you rename a project in XDK workbench, the project configuration as well as the makefile have to be modified.</para><para>First of all, right-click your project in XDK Workbench and select &quot;Properties&quot;. Go into the &quot;C/C++ Build&quot; Tab and update the &quot;Build Directory&quot;. To do this, click on &quot;Workspace&quot; and select the &quot;make&quot; folder inside your renamed application.</para><para><image type="html" name="XDK_Workbench_Build_Directory.png"></image>
+</para><para>Now, open up the Makefile in your renamed application. You may want to modify the BCDS_APP_NAME, as it defines the name of your executable file afterwards. Furthermore, you may want to add and/or change the files listed in BCDS_XDK_APP_SOURCE_FILES. </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

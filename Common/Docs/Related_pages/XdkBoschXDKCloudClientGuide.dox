@@ -1,0 +1,180 @@
+/** 
+@page XDK_BOSCH_XDK_CLOUD_CONNECTIVITY_USER_GUIDE XDK BoschXDKCloudConnectivity Application Guide 
+@brief The XDK BoschXDKCloudConnectivity application for the XDK implements a simple client, which enables a LWM2M server to read and receive sensor data from the XDK.
+
+<hr>
+Use the XDK example application <b>BoschXDKCloudConnectivity</b>.
+
+To be able to use this example application , several pre-requirements must be fulfilled which are mentioned below
+
+- IP connectivity via WLAN to the LWM2M server must be ensured (i.e) XDK must connect to valid Access Point and acquired dynamic IP address.
+- The XDK uses its internal standard WLAN module to communicate with the LWM2M server via UDP.
+- Please check with other proper utilities (other client, e.g. Leshan Client on a Notebook connected via WLAN), that the communication via WLAN / UDP is working. 
+  The LWM2M XDK client doesn't offer a "rich test functionality" therefore something else must be used to ensure that communication.
+- To ensure proper secured(encrypted) data communication between XDK LwM2M client and Lwm2M server,please check for the standard UDP port 5684(DTLS-secured CoAP)which ever is configured in the config.txt configuration file.
+
+\section XDK_SENSOR_LWM2M_APP_USER_GUIDE_USAGE 1.List of configurations to be in SD card:
+
+In order to ensure  XDK Bosch XDK Cloud Connectivity application proper operation user needs to supply minimum configurations via 
+proper configuration copied into the in SD card <b>config.txt</b>, which are described below
+
+\subsection XDK_SENSOR_LWM2M_APP_USER_GUIDE_SUBSECTION1 1.1 Parameter to configure the WLAN adapter
+ 
+ User needs to provide the WiFi Access point SSID and password ,via which the XDK will get connected to Lwm2m Server,in <b>config.txt</b> file. <br>
+<b>Example Settings required for connecting XDK via External Access point </b> 
+\code{.unparsed}
+SSID = Your-SSID
+PASSWORD  = Your-WPA2-PW 
+\endcode
+
+XDK's Wlan adapter can be configured to have various IP addressing mechanism. It can be either configured as <b>Static or Dynamic ip addressing</b>.
+Additional care needs to be taken care by the user in case of static IP addressing mode,in providing appropriate STATICIP ,DNSSERVER ,GATEWAY, MASK values in the  <b>config.txt</b> file.
+By default XDK's Wlan adapter is configured for dynamic IP addressing mode 
+
+<b>Example Settings required if Static IP addressing mode for XDK's wlan adapter </b> 
+\code{.unparsed}
+   STATIC=YES
+   STATICIP=192.168.1.5
+   DNSSERVER=192.168.1.1
+   GATEWAY=192.168.1.1
+   MASK=255.255.255.0
+\endcode
+
+> Note:
+> To have default Dynamic IP addressing mode the user can delete the entries STATICIP ,DNSSERVER ,GATEWAY, MASK in the <b>config.txt</b> file if it is already present and make sure "STATIC" value is NO.
+
+
+\subsection XDK_SENSOR_LWM2M_APP_USER_GUIDE_SUBSECTION2 1.2 Parameter to configure the LWM2M client
+ 
+ User needs to provide atleaset these two information regarding LWM2M default server(LWM2MDEFSRV) and LWM2M endpoint name of device (LWM2MENDPOINT).
+ Other optional parameters like LWM2M lifetime(LWM2MLIFETIME) in seconds,and enable CON notifies (LWM2MCONNOTIFIES) for mostly all resources.  
+   
+<b>Example mandatory Settings required for configuring Lwm2m client </b>    
+\code{.unparsed}
+ LWM2MDEFSRV = coap://leshan.eclipse.org:5683
+ LWM2MENDPOINT = MY_ENDPOINT_NAME
+ \endcode
+> Note1:
+> If the LWM2MENDPOINT name entry contains, #---MAC----# , this will be expanded to the WiFi MAC. 
+> E.g. "lwm2m:#---MAC----#-1" will be expanded to "lwm2m:001122334455-1", if the MAC is 001122334455.
+<br> 
+<b>Example Optional Settings for configuring Lwm2m client </b> 
+ \code{.unparsed}
+ LWM2MLIFETIME = 240
+ LWM2MCONNOTIFIES = YES
+\endcode
+> Note:
+> Default value for LWM2MLIFETIME is 240 seconds ,Default value for LWM2MCONNOTIFIES is NO
+<br> 
+
+\subsection XDK_SENSOR_LWM2M_APP_USER_GUIDE_SUBSECTION3 1.3 Parameter to configure the DTLS encryption
+ 
+User needs to provide these mandatory information regarding LWM2M default server (LWM2MDEFSRV) , e.g coaps:// means DTLS is enabled ,  PSK identity(DTLSPSKIDENTITY) and PSK secret key in plain ASCII (DTLSPSKSECRETKEY).
+Other optional parameter like PSK secret key in hexadecimal format(DTLSPSKSECRETKEYHEX).
+If DTLSPSKIDENTITY value contains backslash, replace the backslash "\" (ex: xdk\123) with "\\" (ex: xdk\\123).
+   
+<b>Example mandatory Settings required for configuring the DTLS encryption </b>    
+\code{.unparsed}
+  LWM2MDEFSRV = coaps://leshan.eclipse.org:5684 
+  DTLSPSKIDENTITY = MY_PSK_IDENTITY_NAME
+  DTLSPSKSECRETKEY = XOMIRAREACE
+\endcode
+
+> Note1:
+> If the DTLSPSKIDENTITY name is empty or missing and say DTLS/PSK is enabled, in this case the lwm2m endpoint name is used.
+> #---MAC----# expanding is also supported. 
+>  Additionally the token "#-LWM2M-EP-#" is expanded into the LWM2M endpoint name 
+<br>
+> Note2:
+> DTLSPSKSECRETKEY = PSK secret key. Not used, if DTLSPSKSECRETKEYHEX is provided. Plain ASCII encoded secret key.
+
+<br>  
+<b>Example Optional Settings for configuring the DTLS encryption </b> 
+ \code{.unparsed}
+ DTLSPSKSECRETKEYHEX = AA55AA55AF
+\endcode
+> Note1:
+> If PSK secret key in hexadecimal format (DTLSPSKSECRETKEYHEX) provided as optional parameter, then DTLSPSKSECRETKEY is ignored.
+
+\subsection XDK_SENSOR_LWM2M_APP_USER_GUIDE_SUBSECTION4 1.4 Example SD configuration file content 
+
+<b>Example "config.txt"to communicate with Eclipse sandbox LWM2M Server without encryption</b> 
+
+Example: "config.txt"
+
+    SSID = Your-SSID
+    PASSWORD = Your-WPA2-PW
+    # Eclipse sandbox LWM2M Server without encryption
+    LWM2MDEFSRV = coap://leshan.eclipse.org:5683
+	LWM2MENDPOINT = MY_ENDPOINT_NAME
+
+<br>
+<b>Example "config.txt" to communicate with Eclipse sandbox LWM2M Server with encryption</b> 
+
+    SSID = Your-SSID
+    PASSWORD = Your-WPA2-PW
+	 # Eclipse sandbox LWM2M Server with encryption
+    LWM2MDEFSRV = coaps://leshan.eclipse.org:5684
+    DTLSPSKIDENTITY = MY_PSK_IDENTITY_NAME
+    LWM2MENDPOINT = MY_ENDPOINT_NAME
+    DTLSPSKSECRETKEYHEX = 01020304
+\endcode
+
+\section XDK_SENSOR_LWM2M_APP_USER_GUIDE_USAGE2 2.Usage of HMI LED and Buttons:
+
+This section explains the usage of the LED's and Buttons with respect to this application
+
+\subsection XDK_SENSOR_LWM2M_APP_USER_GUIDE_SUBSECTION2_1 2.1 Signals of the XDK Sensor LWM2M Client
+
+The XDK offers 3 LEDs which are used to indicate the LWM2M registration state.
+
+|LED    | OFF | ON 											    | blinking (1s/1s)                                            |
+|-------|-----|-------------------------------------------------|-------------------------------------------------------------|
+|Yellow | x   | x                                               | XDK is running                                              | 
+|Orange | x   | Device is registering with the LWM2M server     | Device is updating the registration with the LWM2M server   |
+|Red    | x   | Device is not registered with the LWM2M server  | Device is registering with the LWM2M server                 |
+
+> Note1:
+> All 3 LEDs are blinking: serious error occurred! Please restart the device.
+
+> Note2:
+> All 3 LEDs ON: fatal error occurred! Please restart the device.
+
+\subsection XDK_SENSOR_LWM2M_APP_USER_GUIDE_SUBSECTION2_2 2.2 Buttons of the XDK Sensor LWM2M Client
+
+Button 1 has mixed functionality   
+- During start of device: Button-1: is used to force to go into the bootloader mode
+- During execution of XDK Sensor LWM2M Client: It is used to notify alert message to server
+
+
+Below table gives various combinations of button events
+|BUTTON     | PRESSED | RELEASED | MODE                         | SD card Entry in config.txt file | EVENT|LED STATUS | 
+|-----------|---------|----------|------------------------------|----------------------------------|-------|----------|
+|Button-1   | YES     |       NA |     TESTMODE ON              | TESTMODE = YES                   |Pressed event with instantaneous time stamp message sent to server | RED ON 
+|Button-1   | NA      |      YES |     TESTMODE ON              | TESTMODE = YES                   |Released event with instantaneous time stamp message sent to server|RED OFF
+|Button-1   | YES     |       NA |     TESTMODE MIX             | TESTMODE = MIX                   |Pressed event with instantaneous time stamp message sent to server | RED ON
+|Button-1   | NA      |      YES |     TESTMODE MIX             | TESTMODE = MIX                   |Released event with instantaneous time stamp message sent to server |RED OFF
+|Button-1   | YES     |      NA  |     TESTMODE OFF             | TESTMODE = NO                    | No Message sent to server |NA
+|Button-1   | NA      |      YES |     TESTMODE OFF             | TESTMODE = NO                    |No Message sent to server |NA
+|Button-2   | YES     |  NA      |     TESTMODE ON              | TESTMODE = YES                   |No Message sent to server | ORANGE OFF
+|Button-2   | NA      |  YES     |     TESTMODE ON              | TESTMODE = YES                   |No Message sent to server |ORANGE ON
+|Button-2   | YES     |  NA      |     TESTMODE MIX             | TESTMODE = MIX                   |No Message sent to server | ORANGE OFF
+|Button-2   | NA      |  YES     |     TESTMODE MIX             | TESTMODE = MIX                   |No Message sent to server|ORANGE ON
+|Button-2   | YES     |  NA      |     TESTMODE OFF             | TESTMODE = NO                    | No Message sent to server |NA
+|Button-2   | NA      |  YES     |     TESTMODE OFF             | TESTMODE = NO                    |No Message sent to server |NA
+|Button1 & Button-2   | YES      |  NA                          |     TESTMODE ON                  | TESTMODE = YES |triggers registration / update registration  | NA
+|Button1 & Button-2   | YES      |  NA                          |     TESTMODE MIX                 | TESTMODE = MIX|triggers registration / update registration | NA
+|Button1 & Button-2   | YES      |  NA                          |     TESTMODE OFF                 | TESTMODE = NO |No Message sent to server | NA
+
+> Note1: Please note the LED STATUs mentioned in the above table are instantaneous state values at that moment, hence the may change due to the scenarios mentioned below.
+
+> Scenario 1: If TESTMODE is set to ON ,Button 1 pressed long the expected behaviour is RED_LED must be ON.
+> But since the TESTMODE is ON LED's are also got changed  for various senario's like on successful registration it may be switched OFF.
+
+> Scenario 2: If TESTMODE is set to MIX ,Button 1 pressed long the expected behaviour is RED_LED must be ON.
+> But at this instance if server writes to the RED_LED an value 'false' , in that case the RED_LED Will be OFF
+
+> Note2:
+> If TESTMODE is set to OFF , LED's behaviour can only be controlled by  the server , in this case the trigger to any buttons will not affect the LED's behaviour 
+
+*/

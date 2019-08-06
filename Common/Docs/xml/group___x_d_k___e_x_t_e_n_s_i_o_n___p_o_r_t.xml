@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___x_d_k___e_x_t_e_n_s_i_o_n___p_o_r_t" kind="group">
+    <compoundname>XDK_EXTENSION_PORT</compoundname>
+    <title>XdkExtensionPort</title>
+    <innergroup refid="group___x_d_k___extension___port___gpio">XdkExtensionPortGpio</innergroup>
+    <innergroup refid="group___x_d_k___extension___port___i2c">XdkExtensionPortI2c</innergroup>
+    <innergroup refid="group___x_d_k___extension___port___spi">XdkExtensionPortSpi</innergroup>
+    <innergroup refid="group___x_d_k___extension___port___uart">XdkExtensionPortUart</innergroup>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___x_d_k___e_x_t_e_n_s_i_o_n___p_o_r_t_1ga90ce7b07b4530c957f9f83201d8dc8bc" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga41a2f220f03970c1857bd96528307a81" kindref="member">CmdProcessor_T</ref> *</type>
+        <definition>CmdProcessor_T* AppCmdProcessor</definition>
+        <argsstring></argsstring>
+        <name>AppCmdProcessor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle to store the main Command processor handle to be reused by ServalPAL thread </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/AppController.c" line="101" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/AppController.c" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___x_d_k___e_x_t_e_n_s_i_o_n___p_o_r_t_1ga6fa700b048407619b5309da95dcce5dd" prot="public" static="yes" mutable="no">
+        <type><ref refid="_free_r_t_o_s_8h_1af7cd8f53b62f0c497b442b504c30f2ec" kindref="member">xTaskHandle</ref></type>
+        <definition>xTaskHandle AppControllerHandle</definition>
+        <argsstring></argsstring>
+        <name>AppControllerHandle</name>
+        <initializer>= <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>OS thread handle for Application controller </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/AppController.c" line="99" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/AppController.c" bodystart="99" bodyend="-1"/>
+        <referencedby refid="group___x_d_k___e_x_t_e_n_s_i_o_n___p_o_r_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_xdk_extension_port_2source_2_app_controller_8c" startline="179" endline="203">AppControllerEnable</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___x_d_k___e_x_t_e_n_s_i_o_n___p_o_r_t_1ga22919ee3de6947c4b6616a9231e71f67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AppController_Init</definition>
+        <argsstring>(void *cmdProcessorHandle, uint32_t param2)</argsstring>
+        <name>AppController_Init</name>
+        <param>
+          <type>void *</type>
+          <declname>cmdProcessorHandle</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>Gives control to the Application controller. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a template function where the user can write his custom application.</para><para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/AppController.c" line="266" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/AppController.c" bodystart="266" bodyend="288"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e">CmdProcessor_Enqueue</references>
+        <references refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="817" endline="870">AppControllerSetup</references>
+        <references refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gadbc2272d3cd702fa7fab1df165beb802" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="98">APP_CONTROLLER_STEP1</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+      </memberdef>
+      <memberdef kind="function" id="group___x_d_k___e_x_t_e_n_s_i_o_n___p_o_r_t_1ga5ef9cc8f277726dc19c525c8049d388f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerEnable</definition>
+        <argsstring>(void *param1, uint32_t param2)</argsstring>
+        <name>AppControllerEnable</name>
+        <param>
+          <type>void *</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>To enable the necessary modules for the application. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>GPIO pin PA0 as both edge triggered if EXTENSION_PORT_GPIO_FEATURE is enabled</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/AppController.c" line="179" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/AppController.c" bodystart="179" bodyend="203"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___x_d_k___extension___port___gpio_1ga90baef8256d1b2cd0765ec00ff0b3d92" compoundref="_extension_gpio_example_8c" startline="134" endline="157">ExtensionGpioExample_InitGpioIntBothEdge</references>
+        <references refid="group___x_d_k___e_x_t_e_n_s_i_o_n___p_o_r_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_xdk_extension_port_2source_2_app_controller_8c" startline="116" endline="167">AppControllerFire</references>
+        <references refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1af793604cd2dbedfc6b69f10936fe7c41" compoundref="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h" startline="61">TASK_STACK_SIZE_APP_CONTROLLER</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1a4651501b886d4de331b9f06b37265177" compoundref="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h" startline="59">TASK_PRIO_APP_CONTROLLER</references>
+        <references refid="group___x_d_k___e_x_t_e_n_s_i_o_n___p_o_r_t_1ga6fa700b048407619b5309da95dcce5dd" compoundref="_xdk_extension_port_2source_2_app_controller_8c" startline="99">AppControllerHandle</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba497273b2285191edc1cda8648b67250a" compoundref="_b_c_d_s___retcode_8h" startline="107">RETCODE_OUT_OF_RESOURCES</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+        <references refid="group___x_d_k_u_t_i_l_s_1ga7ffe38d38314b5301a4ddd04f4fa7ca6" compoundref="_utils_8c" startline="277" endline="284">Utils_PrintResetCause</references>
+        <referencedby refid="group___x_d_k___e_x_t_e_n_s_i_o_n___p_o_r_t_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_xdk_extension_port_2source_2_app_controller_8c" startline="219" endline="263">AppControllerSetup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___x_d_k___e_x_t_e_n_s_i_o_n___p_o_r_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerFire</definition>
+        <argsstring>(void *pvParameters)</argsstring>
+        <name>AppControllerFire</name>
+        <param>
+          <type>void *</type>
+          <declname>pvParameters</declname>
+        </param>
+        <briefdescription>
+<para>Responsible for controlling the XDK Extension Port application control flow. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Validate the I2C communication if EXTENSION_PORT_I2C_FEATURE is enabled</para></listitem><listitem><para>Validate the SPI communication if EXTENSION_PORT_SPI_FEATURE is enabled</para></listitem><listitem><para>Validate the GPIO feature by configuring pin PA1 as output and toggling it twice if EXTENSION_PORT_GPIO_FEATURE is enabled</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pvParameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/AppController.c" line="116" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/AppController.c" bodystart="116" bodyend="167"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___x_d_k___extension___port___i2c_1ga89b5b3b7bd4284f2ad363d77f3260e4c" compoundref="_extension_i2c_example_8c" startline="140" endline="171">ExtensionI2cExample_ValidateChip</references>
+        <references refid="group___x_d_k___extension___port___spi_1gafd2b9bd34f0053ecac0c84ed336b699c" compoundref="_extension_spi_example_8c" startline="198" endline="223">ExtensionSpiExample_ValidateChip</references>
+        <references refid="group___x_d_k___extension___port___gpio_1gac80620d8d76b8d91c391adfe18d01fb0" compoundref="_extension_gpio_example_8c" startline="160" endline="177">ExtensionGpioExample_InitGpioOutputMode</references>
+        <references refid="task_8h_1aa154068cecd7f31446a7a84af44ab1a3">vTaskDelay</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="task_8h_1a84d4e660b04630be2939d91b3c2412f8">vTaskSuspend</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <referencedby refid="group___x_d_k___e_x_t_e_n_s_i_o_n___p_o_r_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_xdk_extension_port_2source_2_app_controller_8c" startline="179" endline="203">AppControllerEnable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___x_d_k___e_x_t_e_n_s_i_o_n___p_o_r_t_1ga5ca12481e985f2cd2437fe712e08c9b7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerSetup</definition>
+        <argsstring>(void *param1, uint32_t param2)</argsstring>
+        <name>AppControllerSetup</name>
+        <param>
+          <type>void *</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>To setup the necessary modules for the application. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>BSP for Extension Port</para></listitem><listitem><para>Extension Port UART if EXTENSION_PORT_UART_FEATURE</para></listitem><listitem><para>Extension Port I2C if EXTENSION_PORT_I2C_FEATURE</para></listitem><listitem><para>Extension Port SPI if EXTENSION_PORT_SPI_FEATURE</para></listitem><listitem><para>Extension Port GPIO if EXTENSION_PORT_GPIO_FEATURE</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/AppController.c" line="219" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/AppController.c" bodystart="219" bodyend="263"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___x_d_k___extension___port___uart_1ga24130a88a54fc2a1767f7887c77318d9" compoundref="_extension_uart_example_8c" startline="202" endline="266">ExtensionUartExample_Initialize</references>
+        <references refid="group___x_d_k___extension___port___i2c_1ga37e6acdd295cfd357fe7455f0c0c5dbb" compoundref="_extension_i2c_example_8c" startline="92" endline="125">ExtensionI2cExample_Initialize</references>
+        <references refid="group___x_d_k___extension___port___spi_1ga970c2061323a4966fdbfed2f25e3bd15" compoundref="_extension_spi_example_8c" startline="132" endline="151">ExtensionSpiExample_Initialize</references>
+        <references refid="group___x_d_k___extension___port___gpio_1ga43878ea6891d400977c664a051563761" compoundref="_extension_gpio_example_8c" startline="119" endline="131">ExtensionGpioExample_Initialize</references>
+        <references refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e">CmdProcessor_Enqueue</references>
+        <references refid="group___x_d_k___e_x_t_e_n_s_i_o_n___p_o_r_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_xdk_extension_port_2source_2_app_controller_8c" startline="179" endline="203">AppControllerEnable</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+        <referencedby refid="group___x_d_k___e_x_t_e_n_s_i_o_n___p_o_r_t_1ga22919ee3de6947c4b6616a9231e71f67" compoundref="_xdk_extension_port_2source_2_app_controller_8c" startline="266" endline="288">AppController_Init</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___x_d_k___e_x_t_e_n_s_i_o_n___p_o_r_t_1gabff8f3a204e79671b98fabaa652198c3" prot="public" static="no">
+        <name>BCDS_MODULE_ID</name>
+        <initializer><ref refid="_xdk_extension_port_2source_2_xdk_app_info_8h_1a58c5197225b08cbce9809ee5d9b3ae74ac664b9d7c9367aef22abcb23812b6f33" kindref="member">XDK_APP_MODULE_ID_APP_CONTROLLER</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/AppController.c" line="74" column="10" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/AppController.c" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Demo application for Explaining the usage of Extension Bus Supported peripherals like SPI , I2C , UART &amp; GPIO. </para>    </briefdescription>
+    <detaileddescription>
+<para>This module contains example application for the Interfaces like SPI, I2C, UART &amp; GPIO. The user has a flexibility to remove the certain peripheral application code like I2C, SPI, etc. before compilation using the feature macros provided in AppController.h header file</para><para>UART Demo application description In this demo application, whatever data received in RX of UART is echoed (transmitted) back to the TX of UART</para><para>I2C Demo application description In this demo application, our device is interfaced to extension port I2C pins and basic read and write to the device registers is performed. The user is requested to use this application for reference purpose only and can modify based on their needs.</para><para>SPI Demo application description In this demo application, our device is interfaced to extension port SPI pins and basic read and write to the device registers is performed. The user is requested to use this application for reference purpose only and can modify based on their needs.</para><para>GPIO Demo application description In this application both Input and Output GPIO operations are demonstrated. In this example, initially PA0 GPIO pin is programmed for generating interrupt on both raising edge and falling edge. PA1 GPIO Pin is configured as output and toggled the of the pin for a couple of times The user is requested to use this application for reference purpose only and can modify based on their needs. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,380 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___s_d___c_a_r_d___e_x_a_m_p_l_e" kind="group">
+    <compoundname>SD_CARD_EXAMPLE</compoundname>
+    <title>SdCardExample</title>
+    <innerfile refid="_sd_card_example_2source_2_app_controller_8c">AppController.c</innerfile>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1ga90ce7b07b4530c957f9f83201d8dc8bc" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga41a2f220f03970c1857bd96528307a81" kindref="member">CmdProcessor_T</ref> *</type>
+        <definition>CmdProcessor_T* AppCmdProcessor</definition>
+        <argsstring></argsstring>
+        <name>AppCmdProcessor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle to store the main Command processor handle to be used by run-time event driven threads </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" line="95" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1ga6fa700b048407619b5309da95dcce5dd" prot="public" static="yes" mutable="no">
+        <type><ref refid="_free_r_t_o_s_8h_1af7cd8f53b62f0c497b442b504c30f2ec" kindref="member">xTaskHandle</ref></type>
+        <definition>xTaskHandle AppControllerHandle</definition>
+        <argsstring></argsstring>
+        <name>AppControllerHandle</name>
+        <initializer>= <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>OS thread handle for Application controller to be used by run-time blocking threads </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" line="97" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" bodystart="97" bodyend="-1"/>
+        <referencedby refid="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_sd_card_example_2source_2_app_controller_8c" startline="360" endline="399">AppControllerEnable</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1ga369b0fdf7c70dcce8e2beac50177e6af" prot="public" static="no" mutable="no">
+        <type><ref refid="group___s_t_o_r_a_g_e_1ga0a3630a4977c65faf188ae7ffd12364e" kindref="member">Storage_Setup_T</ref></type>
+        <definition>Storage_Setup_T StorageSetupInfo</definition>
+        <argsstring></argsstring>
+        <name>StorageSetupInfo</name>
+        <initializer>=
+        {
+                .SDCard = <ref refid="_serval___types_8h_1a41f9c5fb8b08eb5dc3edce4dcb37fee7" kindref="member">true</ref>,
+                .WiFiFileSystem = <ref refid="_serval___types_8h_1a65e9886d74aaee76545e83dd09011727" kindref="member">false</ref>
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Storage setup parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" line="89" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1ga22919ee3de6947c4b6616a9231e71f67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AppController_Init</definition>
+        <argsstring>(void *cmdProcessorHandle, uint32_t param2)</argsstring>
+        <name>AppController_Init</name>
+        <param>
+          <type>void *</type>
+          <declname>cmdProcessorHandle</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>Gives control to the Application controller. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a template function where the user can write his custom application.</para><para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" line="438" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" bodystart="438" bodyend="460"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e">CmdProcessor_Enqueue</references>
+        <references refid="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_sd_card_example_2source_2_app_controller_8c" startline="412" endline="433">AppControllerSetup</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+      </memberdef>
+      <memberdef kind="function" id="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1ga5ef9cc8f277726dc19c525c8049d388f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerEnable</definition>
+        <argsstring>(void *param1, uint32_t param2)</argsstring>
+        <name>AppControllerEnable</name>
+        <param>
+          <type>void *</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>To enable the necessary modules for the application. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>SD Card</para></listitem><listitem><para>LED</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" line="360" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" bodystart="360" bodyend="399"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___s_t_o_r_a_g_e_1ga942029eca2abd902ea45626fab4d0dcd">Storage_Enable</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8ba0758d35ca98027eed1c0b47b946feca3" compoundref="_xdk_common_info_8h" startline="215">RETCODE_STORAGE_SDCARD_NOT_AVAILABLE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gad609de2b5ec721b86e52effc2d1dd574" compoundref="_b_c_d_s___retcode_8h" startline="309" endline="312">Retcode_GetCode</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___s_t_o_r_a_g_e_1ga1611d74fdf8169714651ccf84fc8f46d">Storage_Delete</references>
+        <references refid="group___s_t_o_r_a_g_e_1gga7c9527c473ba04ca1adca71dfd3d0cd6af8592ed1e35cbefa066b578c0afc9d5d" compoundref="_x_d_k___storage_8h" startline="81">STORAGE_MEDIUM_SD_CARD</references>
+        <references refid="_sd_card_example_2source_2_app_controller_8h_1a0016584446222bb7d76b1f76db680625" compoundref="_sd_card_example_2source_2_app_controller_8h" startline="46">TEST_FILENAME</references>
+        <references refid="group___l_e_d_1gae3a60da7a90139abb54f4ddb36456756">LED_Enable</references>
+        <references refid="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_sd_card_example_2source_2_app_controller_8c" startline="259" endline="347">AppControllerFire</references>
+        <references refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1af793604cd2dbedfc6b69f10936fe7c41" compoundref="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h" startline="61">TASK_STACK_SIZE_APP_CONTROLLER</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1a4651501b886d4de331b9f06b37265177" compoundref="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h" startline="59">TASK_PRIO_APP_CONTROLLER</references>
+        <references refid="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1ga6fa700b048407619b5309da95dcce5dd" compoundref="_sd_card_example_2source_2_app_controller_8c" startline="97">AppControllerHandle</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba497273b2285191edc1cda8648b67250a" compoundref="_b_c_d_s___retcode_8h" startline="107">RETCODE_OUT_OF_RESOURCES</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+        <references refid="group___x_d_k_u_t_i_l_s_1ga7ffe38d38314b5301a4ddd04f4fa7ca6" compoundref="_utils_8c" startline="277" endline="284">Utils_PrintResetCause</references>
+        <referencedby refid="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_sd_card_example_2source_2_app_controller_8c" startline="412" endline="433">AppControllerSetup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1gae8bb7f509ed9f6c4b1e637fe89b1b09a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>static Retcode_T AppControllerFatFileSystemWriteRead</definition>
+        <argsstring>(void)</argsstring>
+        <name>AppControllerFatFileSystemWriteRead</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>ThIS API uses the FAT file system library calls. This API will write and read files and it will compare the contents which has been written and read. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- All the file operations are success</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="_sd_card_example_2source_2_xdk_app_info_8h_1a085cdb1a14d17a5446ada2a66d166432af4be1da2520e923046339249a0e3089b" kindref="member">SDCARD_APP_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- when there is a mismatch in read and write buffer</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="_sd_card_example_2source_2_xdk_app_info_8h_1a085cdb1a14d17a5446ada2a66d166432a48c4ba85d5ee73f67a14a3362b9bb3cc" kindref="member">FILE_WRITE_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- when file system write is failed</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="_sd_card_example_2source_2_xdk_app_info_8h_1a085cdb1a14d17a5446ada2a66d166432a08e594c1afff0b7a6fc5a16b80801215" kindref="member">FILE_READ_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- when file system read is failed </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" line="124" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" bodystart="124" bodyend="191"/>
+        <references refid="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1ga6b20d41d6252e9871430c242cb1a56e7" compoundref="_sd_card_example_2source_2_app_controller_8c" startline="81">BUFFER_SIZE</references>
+        <references refid="_sd_card_example_2source_2_app_controller_8h_1ad42aa0a6f6caac8c9088179527d9fc9d" compoundref="_sd_card_example_2source_2_app_controller_8h" startline="49">DATA_TO_WRITE_IN_SDCARD</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="struct_storage___read___s_1a3492983b8d236919d67f418b8ebba429" compoundref="_x_d_k___storage_8h" startline="95">Storage_Read_S::FileName</references>
+        <references refid="_sd_card_example_2source_2_app_controller_8h_1a0016584446222bb7d76b1f76db680625" compoundref="_sd_card_example_2source_2_app_controller_8h" startline="46">TEST_FILENAME</references>
+        <references refid="struct_storage___write___s_1a3492983b8d236919d67f418b8ebba429" compoundref="_x_d_k___storage_8h" startline="112">Storage_Write_S::FileName</references>
+        <references refid="struct_storage___write___s_1a674f76759cbcc4b3efb7f8db8aed67bb" compoundref="_x_d_k___storage_8h" startline="116">Storage_Write_S::Offset</references>
+        <references refid="group___s_t_o_r_a_g_e_1ga552b931bf8ae08bb91e8d1366ee89b66">Storage_Write</references>
+        <references refid="group___s_t_o_r_a_g_e_1gga7c9527c473ba04ca1adca71dfd3d0cd6af8592ed1e35cbefa066b578c0afc9d5d" compoundref="_x_d_k___storage_8h" startline="81">STORAGE_MEDIUM_SD_CARD</references>
+        <references refid="struct_storage___write___s_1a492e32e04c27ba71fc914606cc5159ef" compoundref="_x_d_k___storage_8h" startline="114">Storage_Write_S::BytesToWrite</references>
+        <references refid="struct_storage___write___s_1ae4a87262782fa15d68ea54738ea3ece3" compoundref="_x_d_k___storage_8h" startline="115">Storage_Write_S::ActualBytesWritten</references>
+        <references refid="struct_storage___read___s_1a674f76759cbcc4b3efb7f8db8aed67bb" compoundref="_x_d_k___storage_8h" startline="99">Storage_Read_S::Offset</references>
+        <references refid="group___s_t_o_r_a_g_e_1gae487ac6d88ef258f00717bf48bd76d54">Storage_Read</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="_sd_card_example_2source_2_xdk_app_info_8h_1a085cdb1a14d17a5446ada2a66d166432a48c4ba85d5ee73f67a14a3362b9bb3cc" compoundref="_sd_card_example_2source_2_xdk_app_info_8h" startline="79">FILE_WRITE_ERROR</references>
+        <references refid="struct_storage___read___s_1af9cf78a657f24523340dfb7dacb116c8" compoundref="_x_d_k___storage_8h" startline="97">Storage_Read_S::BytesToRead</references>
+        <references refid="struct_storage___read___s_1a27f5fc57429144d05519349d79c9add3" compoundref="_x_d_k___storage_8h" startline="98">Storage_Read_S::ActualBytesRead</references>
+        <references refid="_sd_card_example_2source_2_xdk_app_info_8h_1a085cdb1a14d17a5446ada2a66d166432a08e594c1afff0b7a6fc5a16b80801215" compoundref="_sd_card_example_2source_2_xdk_app_info_8h" startline="78">FILE_READ_ERROR</references>
+        <references refid="_sd_card_example_2source_2_xdk_app_info_8h_1a085cdb1a14d17a5446ada2a66d166432af4be1da2520e923046339249a0e3089b" compoundref="_sd_card_example_2source_2_xdk_app_info_8h" startline="77">SDCARD_APP_ERROR</references>
+        <referencedby refid="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_sd_card_example_2source_2_app_controller_8c" startline="259" endline="347">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerFire</definition>
+        <argsstring>(void *pvParameters)</argsstring>
+        <name>AppControllerFire</name>
+        <param>
+          <type>void *</type>
+          <declname>pvParameters</declname>
+        </param>
+        <briefdescription>
+<para>Responsible for controlling the SD card example flow. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Check whether the storage medium (SD Card)is available or not</para></listitem><listitem><para>if FAT_FILE_SYSTEM==1 then will write and read files and it will compare the contents which has been written and read.</para></listitem><listitem><para>if FAT_FILE_SYSTEM==0 then it will write some string and read the string. then validate the written and read string.</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pvParameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" line="259" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" bodystart="259" bodyend="347"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___s_t_o_r_a_g_e_1ga7ba540e994283041d1649880dc411de7">Storage_IsAvailable</references>
+        <references refid="group___s_t_o_r_a_g_e_1gga7c9527c473ba04ca1adca71dfd3d0cd6af8592ed1e35cbefa066b578c0afc9d5d" compoundref="_x_d_k___storage_8h" startline="81">STORAGE_MEDIUM_SD_CARD</references>
+        <references refid="group___l_e_d_1gaa08f7e9c416b666b93efadee96284629">LED_On</references>
+        <references refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a2b719feebe5e5a744315a07766e16af2" compoundref="_x_d_k___l_e_d_8h" startline="64">LED_INBUILT_RED</references>
+        <references refid="group___s_t_o_r_a_g_e_1gacffdfe925a56d080c3954eb100396c4e">Storage_Disable</references>
+        <references refid="group___s_t_o_r_a_g_e_1ga942029eca2abd902ea45626fab4d0dcd">Storage_Enable</references>
+        <references refid="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1gae8bb7f509ed9f6c4b1e637fe89b1b09a" compoundref="_sd_card_example_2source_2_app_controller_8c" startline="124" endline="191">AppControllerFatFileSystemWriteRead</references>
+        <references refid="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1ga40c98744aa4f0deae1111af32516bafa" compoundref="_sd_card_example_2source_2_app_controller_8c" startline="84">SECTOR_VALUE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gad609de2b5ec721b86e52effc2d1dd574" compoundref="_b_c_d_s___retcode_8h" startline="309" endline="312">Retcode_GetCode</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8ba1edf6d0bedcc957db083221f42ccbd87" compoundref="_xdk_common_info_8h" startline="214">RETCODE_STORAGE_SDCARD_UNINITIALIZED</references>
+        <references refid="group___l_e_d_1ga017ce6b05845f8ea5f91e0103cf025a6">LED_Off</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="task_8h_1aa154068cecd7f31446a7a84af44ab1a3">vTaskDelay</references>
+        <references refid="_sd_card_example_2source_2_app_controller_8h_1aceaa4c94ca4b905d5391ad834055fef7" compoundref="_sd_card_example_2source_2_app_controller_8h" startline="48">WRITEREAD_DELAY</references>
+        <referencedby refid="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_sd_card_example_2source_2_app_controller_8c" startline="360" endline="399">AppControllerEnable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1ga5ca12481e985f2cd2437fe712e08c9b7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerSetup</definition>
+        <argsstring>(void *param1, uint32_t param2)</argsstring>
+        <name>AppControllerSetup</name>
+        <param>
+          <type>void *</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>To setup the necessary modules for the application. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>SD Card</para></listitem><listitem><para>LED</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" line="412" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" bodystart="412" bodyend="433"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___s_t_o_r_a_g_e_1gac6798a3d0f8457a7deb43fe8034476a3">Storage_Setup</references>
+        <references refid="group___l_e_d_1gaec11150ded6e8967d64145a758af0616">LED_Setup</references>
+        <references refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e">CmdProcessor_Enqueue</references>
+        <references refid="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_sd_card_example_2source_2_app_controller_8c" startline="360" endline="399">AppControllerEnable</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+        <referencedby refid="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1ga22919ee3de6947c4b6616a9231e71f67" compoundref="_sd_card_example_2source_2_app_controller_8c" startline="438" endline="460">AppController_Init</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1gabff8f3a204e79671b98fabaa652198c3" prot="public" static="no">
+        <name>BCDS_MODULE_ID</name>
+        <initializer><ref refid="_xdk_extension_port_2source_2_xdk_app_info_8h_1a58c5197225b08cbce9809ee5d9b3ae74ac664b9d7c9367aef22abcb23812b6f33" kindref="member">XDK_APP_MODULE_ID_APP_CONTROLLER</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" line="59" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1ga6b20d41d6252e9871430c242cb1a56e7" prot="public" static="no">
+        <name>BUFFER_SIZE</name>
+        <initializer>UINT16_C(512)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" line="81" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" bodystart="81" bodyend="-1"/>
+        <referencedby refid="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1gae8bb7f509ed9f6c4b1e637fe89b1b09a" compoundref="_sd_card_example_2source_2_app_controller_8c" startline="124" endline="191">AppControllerFatFileSystemWriteRead</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1gae7fe46befea5cfa77637ebf0b2918403" prot="public" static="no">
+        <name>DRIVE_ZERO</name>
+        <initializer>UINT8_C(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SD Card Drive 0 location </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" line="83" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1ga40c98744aa4f0deae1111af32516bafa" prot="public" static="no">
+        <name>SECTOR_VALUE</name>
+        <initializer>UINT8_C(6)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SDC Disk sector value </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" line="84" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" bodystart="84" bodyend="-1"/>
+        <referencedby refid="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_sd_card_example_2source_2_app_controller_8c" startline="259" endline="347">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1gabac7edcced24b0d737778726dc30ed1f" prot="public" static="no">
+        <name>SINGLE_BLOCK</name>
+        <initializer>UINT8_C(1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SD- Card Single block write or read </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" line="82" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1ga57088e69468ec570f1fc34a63812994d" prot="public" static="no">
+        <name>SINGLE_SECTOR_LEN</name>
+        <initializer>UINT32_C(512)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Single sector size in SDcard </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" line="85" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SdCardExample/source/AppController.c" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Demo application shows how to write a file to the SD card and later read back the file. </para>    </briefdescription>
+    <detaileddescription>
+<para>The example will read the presence of an SD Card in the SD Card slot and turn on the Red LED if one is present. The device will then create and write to the text file TEST_XDK.TXT the text. This content is created by SD card Read/Write functionality using FAT32 file system. The will continue to write the SD Card again and again. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

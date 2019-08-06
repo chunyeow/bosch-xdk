@@ -1,0 +1,361 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___c_r_c" kind="group">
+    <compoundname>CRC</compoundname>
+    <title>CRC</title>
+    <innerfile refid="_b_c_d_s___c_r_c_8h">BCDS_CRC.h</innerfile>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___c_r_c_1gad3f9f0f97bbc31cfae023fa59218302d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T CRC_16</definition>
+        <argsstring>(uint16_t poly, uint16_t *shifter, uint8_t *data_p, uint16_t len)</argsstring>
+        <name>CRC_16</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>poly</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>shifter</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data_p</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Calculates CRC16 for a given message, or data, using a a given polynomial and initial value. No frills: no bit-reversing, no final XOR. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">poly</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- polynomial to be used </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">shifter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- initial value when called; calculated CRC16 when done </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data_p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- pointer to start of data CRC16 shall be calculated for </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- number of octets in data</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when successful </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when any of the input pointers is NULL </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CRC.h" line="109" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_r_c_1ga1af85f7937e1f2da9d76a7f365c3afa9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T CRC_32</definition>
+        <argsstring>(uint32_t poly, uint32_t *shifter, uint8_t *data_p, uint16_t len)</argsstring>
+        <name>CRC_32</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>poly</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>shifter</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data_p</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Calculates CRC32 for a given message, or data, using a a given polynomial and initial value. No frills: no bit-reversing, no final XOR. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">poly</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- polynomial to be used </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">shifter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- initial value when called; calculated CRC32 when done </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data_p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- pointer to start of data CRC32 shall be calculated for </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- number of octets in data</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when successful </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when any of the input pointers is NULL </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CRC.h" line="123" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_r_c_1gaff2d7dffebb2cbef4452186bfd775c01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T CRC_32_Reverse</definition>
+        <argsstring>(uint32_t poly, uint32_t *shifter, uint8_t *data_p, uint16_t len)</argsstring>
+        <name>CRC_32_Reverse</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>poly</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>shifter</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data_p</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Calculates CRC32 with reverse polynomial for a given message, or data and initial value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">poly</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- polynomial to be used </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">shifter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- initial value when called; calculated CRC32 when done </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data_p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- pointer to start of data CRC32 shall be calculated for </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- number of octets in data</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when successful </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when any of the input pointers is NULL</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>For the first time shifter value will initialize with 0xFFFFFFFF, Call <ref refid="group___c_r_c_1gae3ea9807bb392bedf360aa815c0bbd67" kindref="member">CRC32_EATH_STD_INIT(shifter)</ref> macro for initialize This api won&apos;t support final CRC32 inversion, manually to do the final CRC32 inversion in application. Call <ref refid="group___c_r_c_1ga6907cdb47b3ca90bb7e975ce46e3b8ee" kindref="member">CRC32_INVERSE(shifter)</ref> macro for invert the final CRC32 value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CRC.h" line="141" column="1"/>
+        <referencedby refid="_f_o_t_a_8c_1a287949f2b79c91baba97f89d80c835c0" compoundref="_f_o_t_a_8c" startline="84" endline="127">VerifyHeader</referencedby>
+        <referencedby refid="_f_o_t_a_8c_1a097478fcf96e268decbc6b9d276b4ea1" compoundref="_f_o_t_a_8c" startline="143" endline="236">VerifyImage</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___c_r_c_1gad966c410d684358cc4ad1d7310f6b280" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T CRC_8</definition>
+        <argsstring>(uint8_t poly, uint8_t *shifter, uint8_t *data_p, uint16_t len)</argsstring>
+        <name>CRC_8</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>poly</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>shifter</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data_p</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Calculates CRC8 for a given message, or data, using a a given polynomial and initial value. No frills: no bit-reversing, no final XOR. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">poly</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- polynomial to be used </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">shifter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- initial value when called; calculated CRC8 when done </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data_p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- pointer to start of data CRC8 shall be calculated for </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- number of octets in data</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when successful </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when any of the input pointers is NULL </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CRC.h" line="95" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___c_r_c_1gae3ea9807bb392bedf360aa815c0bbd67" prot="public" static="no">
+        <name>CRC32_EATH_STD_INIT</name>
+        <param><defname>x</defname></param>
+        <initializer>(x = (~0UL))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CRC.h" line="78" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CRC.h" bodystart="78" bodyend="-1"/>
+        <referencedby refid="_f_o_t_a_8c_1a287949f2b79c91baba97f89d80c835c0" compoundref="_f_o_t_a_8c" startline="84" endline="127">VerifyHeader</referencedby>
+        <referencedby refid="_f_o_t_a_8c_1a097478fcf96e268decbc6b9d276b4ea1" compoundref="_f_o_t_a_8c" startline="143" endline="236">VerifyImage</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___c_r_c_1ga5fe5ae39f8fdc4d56d0c959f3597db83" prot="public" static="no">
+        <name>CRC32_ETHERNET_REVERSE_POLYNOMIAL</name>
+        <initializer>UINT32_C(0xEDB88320)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>CRC32 polynomial for Ethernet standard IEEE 802.3 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CRC.h" line="80" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CRC.h" bodystart="80" bodyend="-1"/>
+        <referencedby refid="_f_o_t_a_8c_1a287949f2b79c91baba97f89d80c835c0" compoundref="_f_o_t_a_8c" startline="84" endline="127">VerifyHeader</referencedby>
+        <referencedby refid="_f_o_t_a_8c_1a097478fcf96e268decbc6b9d276b4ea1" compoundref="_f_o_t_a_8c" startline="143" endline="236">VerifyImage</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___c_r_c_1ga6907cdb47b3ca90bb7e975ce46e3b8ee" prot="public" static="no">
+        <name>CRC32_INVERSE</name>
+        <param><defname>x</defname></param>
+        <initializer>(x = x ^ (~0UL))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CRC.h" line="79" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CRC.h" bodystart="79" bodyend="-1"/>
+        <referencedby refid="_f_o_t_a_8c_1a287949f2b79c91baba97f89d80c835c0" compoundref="_f_o_t_a_8c" startline="84" endline="127">VerifyHeader</referencedby>
+        <referencedby refid="_f_o_t_a_8c_1a097478fcf96e268decbc6b9d276b4ea1" compoundref="_f_o_t_a_8c" startline="143" endline="236">VerifyImage</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>routines for CRC8, CRC16 and CRC32 </para>    </briefdescription>
+    <detaileddescription>
+<para>General desciption of how CRC is calculated: source: <ulink url="https://en.wikipedia.org/wiki/Cyclic_redundancy_check">https://en.wikipedia.org/wiki/Cyclic_redundancy_check</ulink> (2017-08-14)</para><para><programlisting><codeline><highlight class="normal">Always<sp/>start<sp/>with<sp/>a<sp/>common<sp/>&apos;1&apos;</highlight></codeline>
+<codeline><highlight class="normal">Shifter<sp/>set<sp/>to<sp/>zero<sp/>(or<sp/>initial<sp/>value)</highlight></codeline>
+<codeline><highlight class="normal"><sp/>as<sp/>long<sp/>as<sp/>bits<sp/>remain<sp/>in<sp/>data<sp/>stream:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>if<sp/>leftmost<sp/>bit<sp/>(that<sp/>is<sp/>set<sp/>to<sp/>1)<sp/>in<sp/>shifter<sp/>a<sp/>is<sp/>not<sp/>equal<sp/>to<sp/>next<sp/>bit<sp/>in<sp/>data<sp/>stream</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shifter<sp/>:=<sp/>(left<sp/>shift<sp/>shifter<sp/>by<sp/>one)<sp/>xor<sp/>crc<sp/>polynomial</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>else</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shifter<sp/>:=<sp/>(left<sp/>shift<sp/>shifter<sp/>by<sp/>one)</highlight></codeline>
+<codeline><highlight class="normal"><sp/>next<sp/>bit<sp/>in<sp/>data<sp/>stream</highlight></codeline>
+<codeline><highlight class="normal">result<sp/>in<sp/>shifter</highlight></codeline>
+</programlisting> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,731 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_sigfox_data_example_2source_2_app_controller_8c" kind="file">
+    <compoundname>AppController.c</compoundname>
+    <includes refid="_sigfox_data_example_2source_2_xdk_app_info_8h" local="yes">XdkAppInfo.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes refid="_free_r_t_o_s_8h" local="yes">FreeRTOS.h</includes>
+    <includes refid="timers_8h" local="yes">timers.h</includes>
+    <includes refid="_sigfox_data_example_2source_2_app_controller_8h" local="yes">AppController.h</includes>
+    <includes refid="_b_c_d_s___cmd_processor_8h" local="yes">BCDS_CmdProcessor.h</includes>
+    <includes refid="_b_c_d_s___assert_8h" local="yes">BCDS_Assert.h</includes>
+    <includes refid="_x_d_k___utils_8h" local="yes">XDK_Utils.h</includes>
+    <includes refid="_x_d_k___sensor_8h" local="yes">XDK_Sensor.h</includes>
+    <includes refid="_x_d_k___cayenne_l_p_p_serializer_8h" local="yes">XDK_CayenneLPPSerializer.h</includes>
+    <includes refid="_b_c_d_s___b_s_p___board_8h" local="yes">BCDS_BSP_Board.h</includes>
+    <includes refid="_b_s_p___extension_port_8h" local="yes">BSP_ExtensionPort.h</includes>
+    <includes refid="_sigfox_8h" local="yes">Sigfox.h</includes>
+    <incdepgraph>
+      <node id="20431">
+        <label>stdbool.h</label>
+      </node>
+      <node id="20454">
+        <label>BCDS_HALConfig.h</label>
+        <link refid="_b_c_d_s___h_a_l_config_8h"/>
+      </node>
+      <node id="20450">
+        <label>XDK_Sensor.h</label>
+        <link refid="_x_d_k___sensor_8h"/>
+        <childnode refid="20428" relation="include">
+        </childnode>
+        <childnode refid="20447" relation="include">
+        </childnode>
+      </node>
+      <node id="20451">
+        <label>XDK_CayenneLPPSerializer.h</label>
+        <link refid="_x_d_k___cayenne_l_p_p_serializer_8h"/>
+        <childnode refid="20428" relation="include">
+        </childnode>
+      </node>
+      <node id="20444">
+        <label>list.h</label>
+      </node>
+      <node id="20447">
+        <label>BCDS_CmdProcessor.h</label>
+        <link refid="_b_c_d_s___cmd_processor_8h"/>
+        <childnode refid="20448" relation="include">
+        </childnode>
+        <childnode refid="20429" relation="include">
+        </childnode>
+        <childnode refid="20428" relation="include">
+        </childnode>
+      </node>
+      <node id="20438">
+        <label>BCDS_Assert.h</label>
+        <link refid="_b_c_d_s___assert_8h"/>
+        <childnode refid="20428" relation="include">
+        </childnode>
+      </node>
+      <node id="20426">
+        <label>XdkAppInfo.h</label>
+        <link refid="_sigfox_data_example_2source_2_xdk_app_info_8h"/>
+        <childnode refid="20427" relation="include">
+        </childnode>
+        <childnode refid="20428" relation="include">
+        </childnode>
+      </node>
+      <node id="20427">
+        <label>XdkCommonInfo.h</label>
+        <link refid="_xdk_common_info_8h"/>
+        <childnode refid="20428" relation="include">
+        </childnode>
+      </node>
+      <node id="20430">
+        <label>stdint.h</label>
+      </node>
+      <node id="20428">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="20429" relation="include">
+        </childnode>
+      </node>
+      <node id="20433">
+        <label>stdlib.h</label>
+      </node>
+      <node id="20442">
+        <label>timers.h</label>
+        <link refid="timers_8h"/>
+        <childnode refid="20443" relation="include">
+        </childnode>
+      </node>
+      <node id="20439">
+        <label>BCDS_TaskConfig.h</label>
+        <link refid="_b_c_d_s___task_config_8h"/>
+      </node>
+      <node id="20436">
+        <label>stddef.h</label>
+      </node>
+      <node id="20446">
+        <label>XDK_Utils.h</label>
+        <link refid="_x_d_k___utils_8h"/>
+        <childnode refid="20434" relation="include">
+        </childnode>
+        <childnode refid="20438" relation="include">
+        </childnode>
+        <childnode refid="20429" relation="include">
+        </childnode>
+        <childnode refid="20428" relation="include">
+        </childnode>
+        <childnode refid="20447" relation="include">
+        </childnode>
+      </node>
+      <node id="20441">
+        <label>portable.h</label>
+      </node>
+      <node id="20449">
+        <label>BCDS_UtilsConfig.h</label>
+        <link refid="_b_c_d_s___utils_config_8h"/>
+      </node>
+      <node id="20432">
+        <label>string.h</label>
+      </node>
+      <node id="20448">
+        <label>BCDS_Utils.h</label>
+        <link refid="_b_c_d_s___utils_8h"/>
+        <childnode refid="20449" relation="include">
+        </childnode>
+        <childnode refid="20428" relation="include">
+        </childnode>
+      </node>
+      <node id="20429">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="20430" relation="include">
+        </childnode>
+        <childnode refid="20431" relation="include">
+        </childnode>
+        <childnode refid="20432" relation="include">
+        </childnode>
+        <childnode refid="20433" relation="include">
+        </childnode>
+      </node>
+      <node id="20440">
+        <label>projdefs.h</label>
+      </node>
+      <node id="20456">
+        <label>Sigfox.h</label>
+        <link refid="_sigfox_8h"/>
+        <childnode refid="20453" relation="include">
+        </childnode>
+        <childnode refid="20428" relation="include">
+        </childnode>
+        <childnode refid="20457" relation="include">
+        </childnode>
+      </node>
+      <node id="20453">
+        <label>BCDS_HAL.h</label>
+        <link refid="_b_c_d_s___h_a_l_8h"/>
+        <childnode refid="20428" relation="include">
+        </childnode>
+        <childnode refid="20454" relation="include">
+        </childnode>
+      </node>
+      <node id="20457">
+        <label>SigfoxConfig.h</label>
+        <link refid="_sigfox_config_8h"/>
+        <childnode refid="20429" relation="include">
+        </childnode>
+      </node>
+      <node id="20425">
+        <label>SDK/xdk110/Apps/SigfoxDataExample/source/AppController.c</label>
+        <link refid="SigfoxDataExample/source/AppController.c"/>
+        <childnode refid="20426" relation="include">
+        </childnode>
+        <childnode refid="20434" relation="include">
+        </childnode>
+        <childnode refid="20435" relation="include">
+        </childnode>
+        <childnode refid="20442" relation="include">
+        </childnode>
+        <childnode refid="20445" relation="include">
+        </childnode>
+        <childnode refid="20447" relation="include">
+        </childnode>
+        <childnode refid="20438" relation="include">
+        </childnode>
+        <childnode refid="20446" relation="include">
+        </childnode>
+        <childnode refid="20450" relation="include">
+        </childnode>
+        <childnode refid="20451" relation="include">
+        </childnode>
+        <childnode refid="20452" relation="include">
+        </childnode>
+        <childnode refid="20455" relation="include">
+        </childnode>
+        <childnode refid="20456" relation="include">
+        </childnode>
+      </node>
+      <node id="20452">
+        <label>BCDS_BSP_Board.h</label>
+        <link refid="_b_c_d_s___b_s_p___board_8h"/>
+        <childnode refid="20453" relation="include">
+        </childnode>
+      </node>
+      <node id="20445">
+        <label>AppController.h</label>
+        <link refid="_sigfox_data_example_2source_2_app_controller_8h"/>
+        <childnode refid="20446" relation="include">
+        </childnode>
+      </node>
+      <node id="20443">
+        <label>task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="20444" relation="include">
+        </childnode>
+      </node>
+      <node id="20437">
+        <label>FreeRTOSConfig.h</label>
+        <link refid="_free_r_t_o_s_config_8h"/>
+        <childnode refid="20430" relation="include">
+        </childnode>
+        <childnode refid="20438" relation="include">
+        </childnode>
+        <childnode refid="20439" relation="include">
+        </childnode>
+      </node>
+      <node id="20435">
+        <label>FreeRTOS.h</label>
+        <link refid="_free_r_t_o_s_8h"/>
+        <childnode refid="20436" relation="include">
+        </childnode>
+        <childnode refid="20430" relation="include">
+        </childnode>
+        <childnode refid="20437" relation="include">
+        </childnode>
+        <childnode refid="20440" relation="include">
+        </childnode>
+        <childnode refid="20441" relation="include">
+        </childnode>
+      </node>
+      <node id="20455">
+        <label>BSP_ExtensionPort.h</label>
+        <link refid="_b_s_p___extension_port_8h"/>
+        <childnode refid="20453" relation="include">
+        </childnode>
+      </node>
+      <node id="20434">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_sigfox_data_example_2source_2_app_controller_8c_1ae720c49dae8eaca1d0fa48edf9092305" prot="public" static="no">
+        <name>APP_SIGFOX_SEND_INTERVAL_IN_MS</name>
+        <initializer>(((24 * 60 * 60 * 1000) /* 24 hours per day * 60 minutes per hour * 60 seconds per minute * 1000 milli-seconds per second */ \
+                                                        * ((<ref refid="_sigfox_data_example_2source_2_app_controller_8h_1a4c479ef381ad142151d6d2869f3a9336" kindref="member">APP_SENSOR_ACCEL</ref> + <ref refid="_sigfox_data_example_2source_2_app_controller_8h_1a69d8e886ebf2be012a18c8d1bf967a9d" kindref="member">APP_SENSOR_GYRO</ref> + <ref refid="_sigfox_data_example_2source_2_app_controller_8h_1ae60be440b03d73de8abd899b1a2fa8ae" kindref="member">APP_SENSOR_HUMIDITY</ref> \
+                                                        + <ref refid="_sigfox_data_example_2source_2_app_controller_8h_1a8777119d11fddd38a0401ca2b4098bc4" kindref="member">APP_SENSOR_TEMP</ref> + <ref refid="_sigfox_data_example_2source_2_app_controller_8h_1a2e439a68ed83205a2e4087a9421cafa6" kindref="member">APP_SENSOR_PRESSURE</ref> + <ref refid="_sigfox_data_example_2source_2_app_controller_8h_1a7afbb01d9f00f3bae470ce472df27401" kindref="member">APP_SENSOR_LIGHT</ref>)) / 140)) /* The maximum number of SIGFOX data transmission is limited to 140 */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/AppController.c" line="102" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_i_g_f_o_x___d_a_t_a___e_x_a_m_p_l_e_1ga596a04fd8d0329c54f640ec10100a298" prot="public" static="no">
+        <name>APP_SIGFOX_WAKEUP_INTERVAL_IN_MS</name>
+        <initializer>UINT32_C(10000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>APP_SIGFOX_WAKEUP_INTERVAL_IN_MS is the chip wakeup interval exceeding which if the chip is idle, it would go to sleep mode.  </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/AppController.c" line="92" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/AppController.c" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_i_g_f_o_x___d_a_t_a___e_x_a_m_p_l_e_1gabff8f3a204e79671b98fabaa652198c3" prot="public" static="no">
+        <name>BCDS_MODULE_ID</name>
+        <initializer><ref refid="_xdk_extension_port_2source_2_xdk_app_info_8h_1a58c5197225b08cbce9809ee5d9b3ae74ac664b9d7c9367aef22abcb23812b6f33" kindref="member">XDK_APP_MODULE_ID_APP_CONTROLLER</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/AppController.c" line="63" column="10" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/AppController.c" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="comment">/*<sp/>module<sp/>includes<sp/>**********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_sigfox_data_example_2source_2_xdk_app_info_8h" kindref="compound">XdkAppInfo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>BCDS_MODULE_ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="group___s_i_g_f_o_x___d_a_t_a___e_x_a_m_p_l_e_1gabff8f3a204e79671b98fabaa652198c3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BCDS_MODULE_ID<sp/>XDK_APP_MODULE_ID_APP_CONTROLLER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>system<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>additional<sp/>interface<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_free_r_t_o_s_8h" kindref="compound">FreeRTOS.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="timers_8h" kindref="compound">timers.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>own<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_sigfox_data_example_2source_2_app_controller_8h" kindref="compound">AppController.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>additional<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___cmd_processor_8h" kindref="compound">BCDS_CmdProcessor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___assert_8h" kindref="compound">BCDS_Assert.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_x_d_k___utils_8h" kindref="compound">XDK_Utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_x_d_k___sensor_8h" kindref="compound">XDK_Sensor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_x_d_k___cayenne_l_p_p_serializer_8h" kindref="compound">XDK_CayenneLPPSerializer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___b_s_p___board_8h" kindref="compound">BCDS_BSP_Board.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_s_p___extension_port_8h" kindref="compound">BSP_ExtensionPort.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_sigfox_8h" kindref="compound">Sigfox.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>constant<sp/>definitions<sp/>*****************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="group___s_i_g_f_o_x___d_a_t_a___e_x_a_m_p_l_e_1ga596a04fd8d0329c54f640ec10100a298" refkind="member"><highlight class="preprocessor">#define<sp/>APP_SIGFOX_WAKEUP_INTERVAL_IN_MS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT32_C(10000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><ref refid="group___a_s_s_e_r_t_1ga92da053d05db23c922b5f4184f22bff3" kindref="member">static_assert</ref>((<ref refid="_ppmp_unide_2source_2_app_controller_8h_1a4c479ef381ad142151d6d2869f3a9336" kindref="member">APP_SENSOR_ACCEL</ref><sp/>+<sp/><ref refid="_ppmp_unide_2source_2_app_controller_8h_1a69d8e886ebf2be012a18c8d1bf967a9d" kindref="member">APP_SENSOR_GYRO</ref><sp/>+<sp/><ref refid="_ppmp_unide_2source_2_app_controller_8h_1ae60be440b03d73de8abd899b1a2fa8ae" kindref="member">APP_SENSOR_HUMIDITY</ref><sp/>+<sp/><ref refid="_ppmp_unide_2source_2_app_controller_8h_1a8777119d11fddd38a0401ca2b4098bc4" kindref="member">APP_SENSOR_TEMP</ref><sp/>+<sp/><ref refid="_ppmp_unide_2source_2_app_controller_8h_1a2e439a68ed83205a2e4087a9421cafa6" kindref="member">APP_SENSOR_PRESSURE</ref><sp/>+<sp/><ref refid="_ppmp_unide_2source_2_app_controller_8h_1a7afbb01d9f00f3bae470ce472df27401" kindref="member">APP_SENSOR_LIGHT</ref>),<sp/></highlight><highlight class="stringliteral">&quot;Atleast<sp/>one<sp/>sensor<sp/>must<sp/>be<sp/>enabled&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="preprocessor">#define<sp/>APP_SIGFOX_SEND_INTERVAL_IN_MS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((24<sp/>*<sp/>60<sp/>*<sp/>60<sp/>*<sp/>1000)<sp/></highlight><highlight class="comment">/*<sp/>24<sp/>hours<sp/>per<sp/>day<sp/>*<sp/>60<sp/>minutes<sp/>per<sp/>hour<sp/>*<sp/>60<sp/>seconds<sp/>per<sp/>minute<sp/>*<sp/>1000<sp/>milli-seconds<sp/>per<sp/>second<sp/>*/</highlight><highlight class="preprocessor"><sp/>\</highlight></codeline>
+<codeline lineno="103"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>((APP_SENSOR_ACCEL<sp/>+<sp/>APP_SENSOR_GYRO<sp/>+<sp/>APP_SENSOR_HUMIDITY<sp/>\</highlight></codeline>
+<codeline lineno="104"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>APP_SENSOR_TEMP<sp/>+<sp/>APP_SENSOR_PRESSURE<sp/>+<sp/>APP_SENSOR_LIGHT))<sp/>/<sp/>140))<sp/></highlight><highlight class="comment">/*<sp/>The<sp/>maximum<sp/>number<sp/>of<sp/>SIGFOX<sp/>data<sp/>transmission<sp/>is<sp/>limited<sp/>to<sp/>140<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>local<sp/>variables<sp/>**********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_free_r_t_o_s_8h_1af7cd8f53b62f0c497b442b504c30f2ec" kindref="member">xTaskHandle</ref><sp/><ref refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga6fa700b048407619b5309da95dcce5dd" kindref="member">AppControllerHandle</ref><sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct___cmd_processor___s" kindref="compound">CmdProcessor_T</ref><sp/>*<sp/><ref refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga90ce7b07b4530c957f9f83201d8dc8bc" kindref="member">AppCmdProcessor</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_sensor___setup___s" kindref="compound">Sensor_Setup_T</ref><sp/><ref refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga30f9cefc6d3484ef7c8aafac99310abe" kindref="member">SensorSetup</ref><sp/>=</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="struct_sensor___setup___s_1a4b767178f176a51f1c1c6abc68069ece" kindref="member">CmdProcessorHandle</ref><sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Enable<sp/>=</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Accel<sp/>=<sp/><ref refid="_ppmp_unide_2source_2_app_controller_8h_1a4c479ef381ad142151d6d2869f3a9336" kindref="member">APP_SENSOR_ACCEL</ref>,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Mag<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Gyro<sp/>=<sp/><ref refid="_ppmp_unide_2source_2_app_controller_8h_1a69d8e886ebf2be012a18c8d1bf967a9d" kindref="member">APP_SENSOR_GYRO</ref>,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Humidity<sp/>=<sp/><ref refid="_ppmp_unide_2source_2_app_controller_8h_1ae60be440b03d73de8abd899b1a2fa8ae" kindref="member">APP_SENSOR_HUMIDITY</ref>,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Temp<sp/>=<sp/><ref refid="_ppmp_unide_2source_2_app_controller_8h_1a8777119d11fddd38a0401ca2b4098bc4" kindref="member">APP_SENSOR_TEMP</ref>,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Pressure<sp/>=<sp/><ref refid="_ppmp_unide_2source_2_app_controller_8h_1a2e439a68ed83205a2e4087a9421cafa6" kindref="member">APP_SENSOR_PRESSURE</ref>,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Light<sp/>=<sp/><ref refid="_ppmp_unide_2source_2_app_controller_8h_1a7afbb01d9f00f3bae470ce472df27401" kindref="member">APP_SENSOR_LIGHT</ref>,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Noise<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Config<sp/>=</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Accel<sp/>=</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Type<sp/>=<sp/><ref refid="group___i_n_b_u_i_l_d_s_e_n_s_o_r_1gga1089567230931d89fc3975057d9c0a2ca67c27e5a9a738a87bd3522bc849df190" kindref="member">SENSOR_ACCEL_BMA280</ref>,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.IsRawData<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.IsInteruptEnabled<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Callback<sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Gyro<sp/>=</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Type<sp/>=<sp/><ref refid="group___i_n_b_u_i_l_d_s_e_n_s_o_r_1gga8d69aa20ff68f476d5a419124634fce2af2d91ea25f470d2d8ea95fe8bb031719" kindref="member">SENSOR_GYRO_BMG160</ref>,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.IsRawData<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Mag<sp/>=</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.IsRawData<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Light<sp/>=</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.IsInteruptEnabled<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Callback<sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Temp<sp/>=</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.OffsetCorrection<sp/>=<sp/><ref refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga09172068262a168884b86e26a8122080" kindref="member">APP_TEMPERATURE_OFFSET_CORRECTION</ref>,</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="156"><highlight class="comment">/*<sp/>global<sp/>variables<sp/>*********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>inline<sp/>functions<sp/>*********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>local<sp/>functions<sp/>**********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>global<sp/>functions<sp/>*********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gab69e900037ff919feff8de34718fd2f5" kindref="member">AppControllerFire</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pvParameters)</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" kindref="member">BCDS_UNUSED</ref>(pvParameters);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_sensor___value___s" kindref="compound">Sensor_Value_T</ref><sp/>sensorData;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>payloadToBeSent[11U]<sp/>=<sp/>{<sp/>0<sp/>};<sp/></highlight><highlight class="comment">/*<sp/>11U<sp/>is<sp/>the<sp/>maximum<sp/>size<sp/>of<sp/>payload<sp/>that<sp/>would<sp/>be<sp/>utilized<sp/>for<sp/>serializer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>wakeChip<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_cayenne_l_p_p_serializer___input___s" kindref="compound">CayenneLPPSerializer_Input_T</ref><sp/>cayenneLPPSerializerInput;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_cayenne_l_p_p_serializer___output___s" kindref="compound">CayenneLPPSerializer_Output_T</ref><sp/>cayenneLPPSerializerOutput;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>cayenneLPPSerializerOutput.<ref refid="struct_cayenne_l_p_p_serializer___output___s_1a96b5ab6cb65b9119c915f37c4f587f20" kindref="member">BufferPointer</ref><sp/>=<sp/>payloadToBeSent;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>cayenneLPPSerializerOutput.<ref refid="struct_cayenne_l_p_p_serializer___output___s_1ae1d7039acb24324331f29b356e48602d" kindref="member">BufferLength</ref><sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(payloadToBeSent);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="_sigfox_8c_1a3978d698fb372ec1b92947bfe5ad2b5f" kindref="member">Sigfox_GetInfo</ref>();</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Sigfox_SetPublicKey();<sp/>//<sp/>to<sp/>use<sp/>with<sp/>SNEK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>For<sp/>radio<sp/>zone<sp/>1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="_sigfox_8c_1a718b5714982eab93db9709e2f8d6b18c" kindref="member">Sigfox_SetRCZ1</ref>();</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>for<sp/>Radio<sp/>Zone<sp/>2<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>retcode<sp/>=<sp/>Sigfox_SetRCZ2();<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>for<sp/>Radio<sp/>Zone<sp/>3<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>retcode<sp/>=<sp/>Sigfox_SetRCZ3();<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>for<sp/>Radio<sp/>Zone<sp/>4<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>retcode<sp/>=<sp/>Sigfox_SetRCZ4();<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>A1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="209"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>if<sp/>(RETCODE_OK<sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="210"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>//<sp/>Example<sp/>to<sp/>set<sp/>FCC<sp/>Macro<sp/>Channel<sp/>for<sp/>US<sp/>zone<sp/>(channel<sp/>1<sp/>-<sp/>902.2<sp/>MHz<sp/>only)<sp/>-<sp/>Disabled<sp/>currently.</highlight></codeline>
+<codeline lineno="212"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>configWords[3]<sp/>=<sp/>{0x00000001,<sp/>0x00000000,<sp/>0x00000000};</highlight></codeline>
+<codeline lineno="213"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>Sigfox_SetFCCMacroChannel(configWords,<sp/>1);</highlight></codeline>
+<codeline lineno="214"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>if<sp/>(RETCODE_OK<sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="215"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="216"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>Sigfox_UpdatePACurve(4);<sp/>//<sp/>Example<sp/>to<sp/>update<sp/>PA<sp/>Curve<sp/>for<sp/>FCC</highlight></codeline>
+<codeline lineno="217"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="comment"></highlight></codeline>
+<codeline lineno="219"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>if<sp/>(RETCODE_OK<sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="220"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>Sigfox_ReadPACurve(3);</highlight></codeline>
+<codeline lineno="222"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="224"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="_sigfox_8c_1a49a23c077e7c8d4290a1f5056849319d" kindref="member">Sigfox_UpdatePACurve</ref>(1);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="_sigfox_8c_1af71688526c96c5bbe053cad466739d58" kindref="member">Sigfox_ReadPACurve</ref>(0);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retcode<sp/>!=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>)</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Report<sp/>the<sp/>error<sp/>and<sp/>suspend<sp/>since<sp/>Sigfox<sp/>SX<sp/>module<sp/>was<sp/>not<sp/>configured<sp/>properly<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2" kindref="member">Retcode_RaiseError</ref>(retcode);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="task_8h_1a84d4e660b04630be2939d91b3c2412f8" kindref="member">vTaskSuspend</ref>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>@todo<sp/>-<sp/>Need<sp/>to<sp/>do<sp/>data<sp/>conversions<sp/>as<sp/>per<sp/>Cayenne<sp/>LLP<sp/>units.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Resetting<sp/>/<sp/>clearing<sp/>the<sp/>necessary<sp/>buffers<sp/>/<sp/>variables<sp/>for<sp/>re-use<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memset(&amp;sensorData,<sp/>0UL,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_sensor___value___s" kindref="compound">Sensor_Value_T</ref>));</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memset(&amp;payloadToBeSent,<sp/>0U,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(payloadToBeSent));</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cayenneLPPSerializerOutput.<ref refid="struct_cayenne_l_p_p_serializer___output___s_1ab588ca1ae25d4fe7235547896ef6e966" kindref="member">BufferFilledLength</ref><sp/>=<sp/>0U;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/>Sample<sp/>and<sp/>Get<sp/>the<sp/>necessary<sp/>live<sp/>node<sp/>data<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___i_n_b_u_i_l_d_s_e_n_s_o_r_1ga79fa92353c8d9e30f05d957755a48f24" kindref="member">Sensor_GetData</ref>(&amp;sensorData);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(SensorSetup.<ref refid="struct_sensor___setup___s_1a1579b951b8f83858b9a235f60f12cd33" kindref="member">Enable</ref>.<ref refid="struct_sensor___enable___s_1a88e8fa49564879a3723fde34ab8ee5e8" kindref="member">Temp</ref>)</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sensorData.<ref refid="struct_sensor___value___s_1a30b2ceb495b99ab029b438563e5f22fa" kindref="member">Temp</ref><sp/>/=<sp/>1000;<sp/></highlight><highlight class="comment">/*<sp/>To<sp/>degree<sp/>conversion<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Wake<sp/>Up<sp/>the<sp/>module<sp/>if<sp/>sleeping<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(wakeChip)</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="_sigfox_8c_1ae9ae38f96aa6a4a3d48b817689ba2ce7" kindref="member">Sigfox_SendWakeUp</ref>();</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wakeChip<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(SensorSetup.<ref refid="struct_sensor___setup___s_1a1579b951b8f83858b9a235f60f12cd33" kindref="member">Enable</ref>.<ref refid="struct_sensor___enable___s_1a81be76b206e99faedd19928a8ad9e9b6" kindref="member">Accel</ref>)</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Construct<sp/>Cayenne<sp/>LLP<sp/>Accelerometer<sp/>payload<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cayenneLPPSerializerInput.<ref refid="struct_cayenne_l_p_p_serializer___input___s_1a7e82ad34172a15efc14f9486b984a278" kindref="member">DataType</ref><sp/>=<sp/><ref refid="group___c_a_y_e_n_n_e_l_p_p_s_e_r_i_a_l_i_z_e_r_1gga75a77a12f1c7b9f0ddee92bdf7dccf49aff8c4964df3575e484eb2195a3691013" kindref="member">CAYENNE_LLP_SERIALIZER_ACCELEROMETER</ref>;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cayenneLPPSerializerInput.<ref refid="struct_cayenne_l_p_p_serializer___input___s_1a9935ea48f6f3fb8f1db6a87f90d3e05f" kindref="member">DataChannel</ref><sp/>=<sp/>0U;<sp/></highlight><highlight class="comment">/*<sp/>For<sp/>SENSOR_ACCEL_BMA280<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cayenneLPPSerializerInput.<ref refid="struct_cayenne_l_p_p_serializer___input___s_1ac08d2bad56cf39aea261e19f7786eed2" kindref="member">Data</ref>.Accelerometer.<ref refid="union_cayenne_l_p_p_serializer___data___u_1a1b7c7562b4b889d1cf8fcca95a80b1c0" kindref="member">AccelerometerXValue</ref><sp/>=<sp/>(int16_t)<sp/>sensorData.<ref refid="struct_sensor___value___s_1ada258b06ad553f95562a284548558138" kindref="member">Accel</ref>.<ref refid="struct_sensor___axis_value___s_1a15a78e2c6057c34f33a3e3ba9d4a2655" kindref="member">X</ref>;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cayenneLPPSerializerInput.<ref refid="struct_cayenne_l_p_p_serializer___input___s_1ac08d2bad56cf39aea261e19f7786eed2" kindref="member">Data</ref>.Accelerometer.<ref refid="union_cayenne_l_p_p_serializer___data___u_1a4ea8bb5a0427c75d65c7c669ca1a913f" kindref="member">AccelerometerYValue</ref><sp/>=<sp/>(int16_t)<sp/>sensorData.<ref refid="struct_sensor___value___s_1ada258b06ad553f95562a284548558138" kindref="member">Accel</ref>.<ref refid="struct_sensor___axis_value___s_1a98de3e2097facbbea557f864201e435d" kindref="member">Y</ref>;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cayenneLPPSerializerInput.<ref refid="struct_cayenne_l_p_p_serializer___input___s_1ac08d2bad56cf39aea261e19f7786eed2" kindref="member">Data</ref>.Accelerometer.<ref refid="union_cayenne_l_p_p_serializer___data___u_1a34309ebcf8515543e495fcc0527ad43a" kindref="member">AccelerometerZValue</ref><sp/>=<sp/>(int16_t)<sp/>sensorData.<ref refid="struct_sensor___value___s_1ada258b06ad553f95562a284548558138" kindref="member">Accel</ref>.<ref refid="struct_sensor___axis_value___s_1a3b7b3697003e0a1383b4b26fab9ae68a" kindref="member">Z</ref>;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___c_a_y_e_n_n_e_l_p_p_s_e_r_i_a_l_i_z_e_r_1gab007bc6739b50da0ee4d30be1ec6f48c" kindref="member">CayenneLPPSerializer_SingleInstance</ref>(&amp;cayenneLPPSerializerInput,<sp/>&amp;cayenneLPPSerializerOutput);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Send<sp/>Cayenne<sp/>LLP<sp/>Accelerometer<sp/>payload<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="_sigfox_8c_1a5675010bb267dc9eaa10bb70e63cef5b" kindref="member">Sigfox_SendPayload</ref>(payloadToBeSent,<sp/>cayenneLPPSerializerOutput.<ref refid="struct_cayenne_l_p_p_serializer___output___s_1ab588ca1ae25d4fe7235547896ef6e966" kindref="member">BufferFilledLength</ref>,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>send<sp/>payload<sp/>-<sp/>uplink<sp/>only</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(SensorSetup.<ref refid="struct_sensor___setup___s_1a1579b951b8f83858b9a235f60f12cd33" kindref="member">Enable</ref>.<ref refid="struct_sensor___enable___s_1a08451a2f48341a57a201e6fca088f25a" kindref="member">Gyro</ref>)</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Construct<sp/>Cayenne<sp/>LLP<sp/>Gyrometer<sp/>payload<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cayenneLPPSerializerInput.<ref refid="struct_cayenne_l_p_p_serializer___input___s_1a7e82ad34172a15efc14f9486b984a278" kindref="member">DataType</ref><sp/>=<sp/><ref refid="group___c_a_y_e_n_n_e_l_p_p_s_e_r_i_a_l_i_z_e_r_1gga75a77a12f1c7b9f0ddee92bdf7dccf49a3bf74857e69980a8abbea15b753f8870" kindref="member">CAYENNE_LLP_SERIALIZER_GYROMETER</ref>;</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cayenneLPPSerializerInput.<ref refid="struct_cayenne_l_p_p_serializer___input___s_1a9935ea48f6f3fb8f1db6a87f90d3e05f" kindref="member">DataChannel</ref><sp/>=<sp/>0U;<sp/></highlight><highlight class="comment">/*<sp/>For<sp/>SENSOR_GYRO_BMG160<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cayenneLPPSerializerInput.<ref refid="struct_cayenne_l_p_p_serializer___input___s_1ac08d2bad56cf39aea261e19f7786eed2" kindref="member">Data</ref>.Gyrometer.<ref refid="union_cayenne_l_p_p_serializer___data___u_1a6640683502aae0cf96841d23d622bb31" kindref="member">GyrometerXValue</ref><sp/>=<sp/>(int16_t)<sp/>sensorData.<ref refid="struct_sensor___value___s_1aa8d415aa05a271298295d1d9166c3aea" kindref="member">Gyro</ref>.<ref refid="struct_sensor___axis_value___s_1a15a78e2c6057c34f33a3e3ba9d4a2655" kindref="member">X</ref>;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cayenneLPPSerializerInput.<ref refid="struct_cayenne_l_p_p_serializer___input___s_1ac08d2bad56cf39aea261e19f7786eed2" kindref="member">Data</ref>.Gyrometer.<ref refid="union_cayenne_l_p_p_serializer___data___u_1a1511ce4a6cbaec409c4bf5b1eaf68133" kindref="member">GyrometerYValue</ref><sp/>=<sp/>(int16_t)<sp/>sensorData.<ref refid="struct_sensor___value___s_1aa8d415aa05a271298295d1d9166c3aea" kindref="member">Gyro</ref>.<ref refid="struct_sensor___axis_value___s_1a98de3e2097facbbea557f864201e435d" kindref="member">Y</ref>;</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cayenneLPPSerializerInput.<ref refid="struct_cayenne_l_p_p_serializer___input___s_1ac08d2bad56cf39aea261e19f7786eed2" kindref="member">Data</ref>.Gyrometer.<ref refid="union_cayenne_l_p_p_serializer___data___u_1a300ab3ed760a11165a058f9e497e9686" kindref="member">GyrometerZValue</ref><sp/>=<sp/>(int16_t)<sp/>sensorData.<ref refid="struct_sensor___value___s_1aa8d415aa05a271298295d1d9166c3aea" kindref="member">Gyro</ref>.<ref refid="struct_sensor___axis_value___s_1a3b7b3697003e0a1383b4b26fab9ae68a" kindref="member">Z</ref>;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___c_a_y_e_n_n_e_l_p_p_s_e_r_i_a_l_i_z_e_r_1gab007bc6739b50da0ee4d30be1ec6f48c" kindref="member">CayenneLPPSerializer_SingleInstance</ref>(&amp;cayenneLPPSerializerInput,<sp/>&amp;cayenneLPPSerializerOutput);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Send<sp/>Cayenne<sp/>LLP<sp/>Gyrometer<sp/>payload<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="_sigfox_8c_1a5675010bb267dc9eaa10bb70e63cef5b" kindref="member">Sigfox_SendPayload</ref>(payloadToBeSent,<sp/>cayenneLPPSerializerOutput.<ref refid="struct_cayenne_l_p_p_serializer___output___s_1ab588ca1ae25d4fe7235547896ef6e966" kindref="member">BufferFilledLength</ref>,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>send<sp/>payload<sp/>-<sp/>uplink<sp/>only</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(SensorSetup.<ref refid="struct_sensor___setup___s_1a1579b951b8f83858b9a235f60f12cd33" kindref="member">Enable</ref>.<ref refid="struct_sensor___enable___s_1a3f201bb445bf74356ae7117505f97f48" kindref="member">Light</ref>)</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Construct<sp/>Cayenne<sp/>LLP<sp/>Illuminance<sp/>payload<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cayenneLPPSerializerInput.<ref refid="struct_cayenne_l_p_p_serializer___input___s_1a7e82ad34172a15efc14f9486b984a278" kindref="member">DataType</ref><sp/>=<sp/><ref refid="group___c_a_y_e_n_n_e_l_p_p_s_e_r_i_a_l_i_z_e_r_1gga75a77a12f1c7b9f0ddee92bdf7dccf49acdf73fbbe12f0cf0a0a046dfbd1c29b6" kindref="member">CAYENNE_LLP_SERIALIZER_ILLUMINANCE_SENSOR</ref>;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cayenneLPPSerializerInput.<ref refid="struct_cayenne_l_p_p_serializer___input___s_1a9935ea48f6f3fb8f1db6a87f90d3e05f" kindref="member">DataChannel</ref><sp/>=<sp/>0U;</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cayenneLPPSerializerInput.<ref refid="struct_cayenne_l_p_p_serializer___input___s_1ac08d2bad56cf39aea261e19f7786eed2" kindref="member">Data</ref>.IlluminanceSensor.<ref refid="union_cayenne_l_p_p_serializer___data___u_1a1a16f4c40a3019b0ec16c444faa466d3" kindref="member">IlluminanceSensorValue</ref><sp/>=<sp/>(uint16_t)<sp/>sensorData.<ref refid="struct_sensor___value___s_1a9023a95854456ae95ede28f80751a3b1" kindref="member">Light</ref>;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___c_a_y_e_n_n_e_l_p_p_s_e_r_i_a_l_i_z_e_r_1gab007bc6739b50da0ee4d30be1ec6f48c" kindref="member">CayenneLPPSerializer_SingleInstance</ref>(&amp;cayenneLPPSerializerInput,<sp/>&amp;cayenneLPPSerializerOutput);</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Send<sp/>Cayenne<sp/>LLP<sp/>Illuminance<sp/>payload<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="_sigfox_8c_1a5675010bb267dc9eaa10bb70e63cef5b" kindref="member">Sigfox_SendPayload</ref>(payloadToBeSent,<sp/>cayenneLPPSerializerOutput.<ref refid="struct_cayenne_l_p_p_serializer___output___s_1ab588ca1ae25d4fe7235547896ef6e966" kindref="member">BufferFilledLength</ref>,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>send<sp/>payload<sp/>-<sp/>uplink<sp/>only</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(SensorSetup.<ref refid="struct_sensor___setup___s_1a1579b951b8f83858b9a235f60f12cd33" kindref="member">Enable</ref>.<ref refid="struct_sensor___enable___s_1ab5948d7f22bb9b3fb64df9a843d65865" kindref="member">Humidity</ref>)</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Construct<sp/>Cayenne<sp/>LLP<sp/>Humidity<sp/>payload<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cayenneLPPSerializerInput.<ref refid="struct_cayenne_l_p_p_serializer___input___s_1a7e82ad34172a15efc14f9486b984a278" kindref="member">DataType</ref><sp/>=<sp/><ref refid="group___c_a_y_e_n_n_e_l_p_p_s_e_r_i_a_l_i_z_e_r_1gga75a77a12f1c7b9f0ddee92bdf7dccf49a5bddc50be18efe41bcb04a2dcaec85a3" kindref="member">CAYENNE_LLP_SERIALIZER_HUMIDITY_SENSOR</ref>;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cayenneLPPSerializerInput.<ref refid="struct_cayenne_l_p_p_serializer___input___s_1a9935ea48f6f3fb8f1db6a87f90d3e05f" kindref="member">DataChannel</ref><sp/>=<sp/>0U;</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cayenneLPPSerializerInput.<ref refid="struct_cayenne_l_p_p_serializer___input___s_1ac08d2bad56cf39aea261e19f7786eed2" kindref="member">Data</ref>.HumiditySensor.<ref refid="union_cayenne_l_p_p_serializer___data___u_1abb20b2b6bfe3e7bc9c90d3207abefab4" kindref="member">HumiditySensorValue</ref><sp/>=<sp/>(uint8_t)<sp/>sensorData.<ref refid="struct_sensor___value___s_1a547107fb9bde20fd87dedc23ae5b2be5" kindref="member">RH</ref>;</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___c_a_y_e_n_n_e_l_p_p_s_e_r_i_a_l_i_z_e_r_1gab007bc6739b50da0ee4d30be1ec6f48c" kindref="member">CayenneLPPSerializer_SingleInstance</ref>(&amp;cayenneLPPSerializerInput,<sp/>&amp;cayenneLPPSerializerOutput);</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Send<sp/>Cayenne<sp/>LLP<sp/>Humidity<sp/>payload<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="_sigfox_8c_1a5675010bb267dc9eaa10bb70e63cef5b" kindref="member">Sigfox_SendPayload</ref>(payloadToBeSent,<sp/>cayenneLPPSerializerOutput.<ref refid="struct_cayenne_l_p_p_serializer___output___s_1ab588ca1ae25d4fe7235547896ef6e966" kindref="member">BufferFilledLength</ref>,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>send<sp/>payload<sp/>-<sp/>uplink<sp/>only</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(SensorSetup.<ref refid="struct_sensor___setup___s_1a1579b951b8f83858b9a235f60f12cd33" kindref="member">Enable</ref>.<ref refid="struct_sensor___enable___s_1a88e8fa49564879a3723fde34ab8ee5e8" kindref="member">Temp</ref>)</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Construct<sp/>Cayenne<sp/>LLP<sp/>Temperature<sp/>payload<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cayenneLPPSerializerInput.<ref refid="struct_cayenne_l_p_p_serializer___input___s_1a7e82ad34172a15efc14f9486b984a278" kindref="member">DataType</ref><sp/>=<sp/><ref refid="group___c_a_y_e_n_n_e_l_p_p_s_e_r_i_a_l_i_z_e_r_1gga75a77a12f1c7b9f0ddee92bdf7dccf49a27b9ad9a31d9dee2667abf2a40c808b4" kindref="member">CAYENNE_LLP_SERIALIZER_TEMPERATURE_SENSOR</ref>;</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cayenneLPPSerializerInput.<ref refid="struct_cayenne_l_p_p_serializer___input___s_1a9935ea48f6f3fb8f1db6a87f90d3e05f" kindref="member">DataChannel</ref><sp/>=<sp/>0U;</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cayenneLPPSerializerInput.<ref refid="struct_cayenne_l_p_p_serializer___input___s_1ac08d2bad56cf39aea261e19f7786eed2" kindref="member">Data</ref>.TemperatureSensor.<ref refid="union_cayenne_l_p_p_serializer___data___u_1a35d7e5fd0e2c6a4fd6aec704e1f369e9" kindref="member">TemperatureSensorValue</ref><sp/>=<sp/>(uint8_t)<sp/>sensorData.<ref refid="struct_sensor___value___s_1a30b2ceb495b99ab029b438563e5f22fa" kindref="member">Temp</ref>;</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___c_a_y_e_n_n_e_l_p_p_s_e_r_i_a_l_i_z_e_r_1gab007bc6739b50da0ee4d30be1ec6f48c" kindref="member">CayenneLPPSerializer_SingleInstance</ref>(&amp;cayenneLPPSerializerInput,<sp/>&amp;cayenneLPPSerializerOutput);</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Send<sp/>Cayenne<sp/>LLP<sp/>Temperature<sp/>payload<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="_sigfox_8c_1a5675010bb267dc9eaa10bb70e63cef5b" kindref="member">Sigfox_SendPayload</ref>(payloadToBeSent,<sp/>cayenneLPPSerializerOutput.<ref refid="struct_cayenne_l_p_p_serializer___output___s_1ab588ca1ae25d4fe7235547896ef6e966" kindref="member">BufferFilledLength</ref>,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>send<sp/>payload<sp/>-<sp/>uplink<sp/>only</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(SensorSetup.<ref refid="struct_sensor___setup___s_1a1579b951b8f83858b9a235f60f12cd33" kindref="member">Enable</ref>.<ref refid="struct_sensor___enable___s_1ab8ddefb20d75c5b9747270d17df92a06" kindref="member">Pressure</ref>)</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Construct<sp/>Cayenne<sp/>LLP<sp/>Barometer<sp/>payload<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cayenneLPPSerializerInput.<ref refid="struct_cayenne_l_p_p_serializer___input___s_1a7e82ad34172a15efc14f9486b984a278" kindref="member">DataType</ref><sp/>=<sp/><ref refid="group___c_a_y_e_n_n_e_l_p_p_s_e_r_i_a_l_i_z_e_r_1gga75a77a12f1c7b9f0ddee92bdf7dccf49a46d7b29203882539a76049b6a86e344f" kindref="member">CAYENNE_LLP_SERIALIZER_BAROMETER</ref>;</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cayenneLPPSerializerInput.<ref refid="struct_cayenne_l_p_p_serializer___input___s_1a9935ea48f6f3fb8f1db6a87f90d3e05f" kindref="member">DataChannel</ref><sp/>=<sp/>0U;</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cayenneLPPSerializerInput.<ref refid="struct_cayenne_l_p_p_serializer___input___s_1ac08d2bad56cf39aea261e19f7786eed2" kindref="member">Data</ref>.Barometer.<ref refid="union_cayenne_l_p_p_serializer___data___u_1a74fc139b4a846394f9e1b4760c67df1c" kindref="member">BarometerValue</ref><sp/>=<sp/>(uint16_t)<sp/>sensorData.<ref refid="struct_sensor___value___s_1aab91169cc86c5a56fe7def7cebd4fba6" kindref="member">Pressure</ref>;</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___c_a_y_e_n_n_e_l_p_p_s_e_r_i_a_l_i_z_e_r_1gab007bc6739b50da0ee4d30be1ec6f48c" kindref="member">CayenneLPPSerializer_SingleInstance</ref>(&amp;cayenneLPPSerializerInput,<sp/>&amp;cayenneLPPSerializerOutput);</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Send<sp/>Cayenne<sp/>LLP<sp/>Barometer<sp/>payload<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="_sigfox_8c_1a5675010bb267dc9eaa10bb70e63cef5b" kindref="member">Sigfox_SendPayload</ref>(payloadToBeSent,<sp/>cayenneLPPSerializerOutput.<ref refid="struct_cayenne_l_p_p_serializer___output___s_1ab588ca1ae25d4fe7235547896ef6e966" kindref="member">BufferFilledLength</ref>,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>send<sp/>payload<sp/>-<sp/>uplink<sp/>only</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Reset<sp/>the<sp/>channel<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="_sigfox_8c_1a28f08c031875f43e62790f48de640e2a" kindref="member">Sigfox_ResetMacroChannel</ref>();</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retcode<sp/>!=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>)</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Report<sp/>the<sp/>error<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2" kindref="member">Retcode_RaiseError</ref>(retcode);</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_sigfox_data_example_2source_2_app_controller_8h_1afd883fedd660c8e8d8398510949685cc" kindref="member">APP_IS_SIGFOX_DATA_EXCHANGE_SINGLE_SHOT</ref>)</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>data<sp/>exchange<sp/>is<sp/>single-shot<sp/>then<sp/>suspend<sp/>ourself<sp/>as<sp/>the<sp/>expectation<sp/>is<sp/>done<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="task_8h_1a84d4e660b04630be2939d91b3c2412f8" kindref="member">vTaskSuspend</ref>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>);</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"></highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Await<sp/>the<sp/>re-transmission<sp/>time<sp/>based<sp/>on<sp/>user<sp/>configuration<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="task_8h_1aa154068cecd7f31446a7a84af44ab1a3" kindref="member">vTaskDelay</ref>(pdMS_TO_TICKS(<ref refid="_sigfox_data_example_2source_2_app_controller_8c_1ae720c49dae8eaca1d0fa48edf9092305" kindref="member">APP_SIGFOX_SEND_INTERVAL_IN_MS</ref>));</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="_sigfox_data_example_2source_2_app_controller_8c_1ae720c49dae8eaca1d0fa48edf9092305" kindref="member">APP_SIGFOX_SEND_INTERVAL_IN_MS</ref><sp/>&gt;<sp/><ref refid="group___s_i_g_f_o_x___d_a_t_a___e_x_a_m_p_l_e_1ga596a04fd8d0329c54f640ec10100a298" kindref="member">APP_SIGFOX_WAKEUP_INTERVAL_IN_MS</ref>)<sp/>&amp;&amp;<sp/>(</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>!=<sp/>wakeChip))</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wakeChip<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="400"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight></codeline>
+<codeline lineno="412"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga5ef9cc8f277726dc19c525c8049d388f" kindref="member">AppControllerEnable</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>param1,<sp/>uint32_t<sp/>param2)</highlight></codeline>
+<codeline lineno="413"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" kindref="member">BCDS_UNUSED</ref>(param1);</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" kindref="member">BCDS_UNUSED</ref>(param2);</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"></highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___i_n_b_u_i_l_d_s_e_n_s_o_r_1ga098f1e2f6e287146591b8ff5886c6820" kindref="member">Sensor_Enable</ref>();</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="_sigfox_8c_1adf4c2764f3e88491faf2fcc472625cb0" kindref="member">Sigfox_Enable</ref>();</highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pdPASS<sp/>!=<sp/>xTaskCreate(<ref refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gab69e900037ff919feff8de34718fd2f5" kindref="member">AppControllerFire</ref>,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>)<sp/></highlight><highlight class="stringliteral">&quot;AppController&quot;</highlight><highlight class="normal">,<sp/><ref refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1af793604cd2dbedfc6b69f10936fe7c41" kindref="member">TASK_STACK_SIZE_APP_CONTROLLER</ref>,<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,<sp/><ref refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1a4651501b886d4de331b9f06b37265177" kindref="member">TASK_PRIO_APP_CONTROLLER</ref>,<sp/>&amp;AppControllerHandle))</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba497273b2285191edc1cda8648b67250a" kindref="member">RETCODE_OUT_OF_RESOURCES</ref>);</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>!=<sp/>retcode)</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;AppControllerEnable<sp/>:<sp/>Failed<sp/>\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2" kindref="member">Retcode_RaiseError</ref>(retcode);</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" kindref="member">assert</ref>(0);<sp/></highlight><highlight class="comment">/*<sp/>To<sp/>provide<sp/>LED<sp/>indication<sp/>for<sp/>the<sp/>user<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___x_d_k_u_t_i_l_s_1ga7ffe38d38314b5301a4ddd04f4fa7ca6" kindref="member">Utils_PrintResetCause</ref>();</highlight></codeline>
+<codeline lineno="436"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"></highlight></codeline>
+<codeline lineno="449"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga5ca12481e985f2cd2437fe712e08c9b7" kindref="member">AppControllerSetup</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>param1,<sp/>uint32_t<sp/>param2)</highlight></codeline>
+<codeline lineno="450"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" kindref="member">BCDS_UNUSED</ref>(param1);</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" kindref="member">BCDS_UNUSED</ref>(param2);</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"></highlight></codeline>
+<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/>BSP_ExtensionPort_Connect();</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SensorSetup.<ref refid="struct_sensor___setup___s_1a4b767178f176a51f1c1c6abc68069ece" kindref="member">CmdProcessorHandle</ref><sp/>=<sp/><ref refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga90ce7b07b4530c957f9f83201d8dc8bc" kindref="member">AppCmdProcessor</ref>;</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___i_n_b_u_i_l_d_s_e_n_s_o_r_1ga128512064ba3f94f8d0157cc1e87db22" kindref="member">Sensor_Setup</ref>(&amp;SensorSetup);</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="_sigfox_8c_1a6a711a7ae9c2e33edfcfcd045e0db5e1" kindref="member">Sigfox_Setup</ref>();</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e" kindref="member">CmdProcessor_Enqueue</ref>(AppCmdProcessor,<sp/><ref refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga5ef9cc8f277726dc19c525c8049d388f" kindref="member">AppControllerEnable</ref>,<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,<sp/>UINT32_C(0));</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>!=<sp/>retcode)</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;AppControllerSetup<sp/>:<sp/>Failed<sp/>\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2" kindref="member">Retcode_RaiseError</ref>(retcode);</highlight></codeline>
+<codeline lineno="472"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" kindref="member">assert</ref>(0);<sp/></highlight><highlight class="comment">/*<sp/>To<sp/>provide<sp/>LED<sp/>indication<sp/>for<sp/>the<sp/>user<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="474"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"></highlight></codeline>
+<codeline lineno="477"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga22919ee3de6947c4b6616a9231e71f67" kindref="member">AppController_Init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>cmdProcessorHandle,<sp/>uint32_t<sp/>param2)</highlight></codeline>
+<codeline lineno="478"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" kindref="member">BCDS_UNUSED</ref>(param2);</highlight></codeline>
+<codeline lineno="480"><highlight class="normal"></highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"></highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cmdProcessorHandle<sp/>==<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>)</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;AppController_Init<sp/>:<sp/>Command<sp/>processor<sp/>handle<sp/>is<sp/>NULL<sp/>\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref>);</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="489"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AppCmdProcessor<sp/>=<sp/>(<ref refid="struct___cmd_processor___s" kindref="compound">CmdProcessor_T</ref><sp/>*)<sp/>cmdProcessorHandle;</highlight></codeline>
+<codeline lineno="491"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e" kindref="member">CmdProcessor_Enqueue</ref>(AppCmdProcessor,<sp/><ref refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga5ca12481e985f2cd2437fe712e08c9b7" kindref="member">AppControllerSetup</ref>,<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,<sp/>UINT32_C(0));</highlight></codeline>
+<codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"></highlight></codeline>
+<codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>!=<sp/>retcode)</highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2" kindref="member">Retcode_RaiseError</ref>(retcode);</highlight></codeline>
+<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" kindref="member">assert</ref>(0);<sp/></highlight><highlight class="comment">/*<sp/>To<sp/>provide<sp/>LED<sp/>indication<sp/>for<sp/>the<sp/>user<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="499"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/AppController.c"/>
+  </compounddef>
+</doxygen>

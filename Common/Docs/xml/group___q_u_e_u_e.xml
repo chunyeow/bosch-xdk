@@ -1,0 +1,438 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___q_u_e_u_e" kind="group">
+    <compoundname>QUEUE</compoundname>
+    <title>Queue</title>
+    <innerfile refid="_b_c_d_s___queue_8h">BCDS_Queue.h</innerfile>
+    <innerclass refid="struct_queue___t" prot="public">Queue_T</innerclass>
+    <innerclass refid="struct_queue_item___t" prot="public">QueueItem_T</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___q_u_e_u_e_1ga813207e2a71f68f4f286aa7cd638a517" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Queue_Clear</definition>
+        <argsstring>(Queue_T *Queue)</argsstring>
+        <name>Queue_Clear</name>
+        <param>
+          <type><ref refid="struct_queue___t" kindref="compound">Queue_T</ref> *</type>
+          <declname>Queue</declname>
+        </param>
+        <briefdescription>
+<para>Cleans the queue buffer from all messages. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The queue structure (must not be equal to NULL). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_Queue.h" line="232" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___q_u_e_u_e_1ga9f13f163df33a4c1367b8cee4cd40eeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t Queue_Count</definition>
+        <argsstring>(const Queue_T *Queue)</argsstring>
+        <name>Queue_Count</name>
+        <param>
+          <type>const <ref refid="struct_queue___t" kindref="compound">Queue_T</ref> *</type>
+          <declname>Queue</declname>
+        </param>
+        <briefdescription>
+<para>Gets number of messages available for receiving from the queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The queue structure (must not be equal to NULL).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of messages available in the queue </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_Queue.h" line="225" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___q_u_e_u_e_1ga92380bae59b995ad1caa5d8141b7f0a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Queue_Create</definition>
+        <argsstring>(Queue_T *Queue, uint8_t *Buffer, uint32_t BufferSize)</argsstring>
+        <name>Queue_Create</name>
+        <param>
+          <type><ref refid="struct_queue___t" kindref="compound">Queue_T</ref> *</type>
+          <declname>Queue</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>Buffer</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>BufferSize</declname>
+        </param>
+        <briefdescription>
+<para>Creates a queue by initializing its structure with provided buffer where queue items to be stored. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">Queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The queue structure to be initialized (must not be equal to NULL). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to be used for storing queue items (must not be equal to NULL). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">BufferSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of provided buffer (must not be equal to zero).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the queue was successfully initialized </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If one of the parameters is invalid (NULL pointer or 0 as Buffer Size) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba497273b2285191edc1cda8648b67250a" kindref="member">RETCODE_OUT_OF_RESOURCES</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the Queue associated semaphores (Lock and Wakeup, see <ref refid="struct_queue___t" kindref="compound">Queue_T</ref>) can&apos;t be created </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_Queue.h" line="168" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___q_u_e_u_e_1ga92859dfff313b66af9cb013e0a88ac6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Queue_Delete</definition>
+        <argsstring>(Queue_T *Queue)</argsstring>
+        <name>Queue_Delete</name>
+        <param>
+          <type><ref refid="struct_queue___t" kindref="compound">Queue_T</ref> *</type>
+          <declname>Queue</declname>
+        </param>
+        <briefdescription>
+<para>Deletes a queue by deinitializing its structure members. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The queue structure to be deleted (must not be equal to NULL).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the queue was successfully deleted </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the Queue pointer parameter is NULL </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_Queue.h" line="178" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___q_u_e_u_e_1ga5c5dbd3103c425c49e814b313db9f6b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Queue_Get</definition>
+        <argsstring>(Queue_T *Queue, void **Data, uint32_t *DataSize, uint32_t Timeout)</argsstring>
+        <name>Queue_Get</name>
+        <param>
+          <type><ref refid="struct_queue___t" kindref="compound">Queue_T</ref> *</type>
+          <declname>Queue</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>Data</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>DataSize</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>Timeout</declname>
+        </param>
+        <briefdescription>
+<para>Gets an item with payload from the queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The queue structure (must not be equal to NULL). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data (item including payload) received from the queue (must not be equal to NULL). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">DataSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of received data (must not be equal to NULL). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time to wait for a data from the queue in tick periods</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the data was successfully received from the queue </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba281b77d7bbd0b11781de864c12f32fd9" kindref="member">RETCODE_SEMAPHORE_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If no data was received within the waiting time </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba78de1a3b6af06d147bff0ca273ac0b17" kindref="member">RETCODE_UNEXPECTED_BEHAVIOR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If queue is empty </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_Queue.h" line="206" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___q_u_e_u_e_1gaa92386ca018a7b7f2202b4a44607b523" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Queue_Purge</definition>
+        <argsstring>(Queue_T *Queue)</argsstring>
+        <name>Queue_Purge</name>
+        <param>
+          <type><ref refid="struct_queue___t" kindref="compound">Queue_T</ref> *</type>
+          <declname>Queue</declname>
+        </param>
+        <briefdescription>
+<para>Purges a room in the queue buffer (dequeues message) occupied by received data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The queue structure (must not be equal to NULL).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If received data was successfully purged from the queue </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If no data left to be purged </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_Queue.h" line="216" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___q_u_e_u_e_1ga8ebfafd9c37804a40b3c5971dbb63223" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Queue_Put</definition>
+        <argsstring>(Queue_T *Queue, const void *Item, uint32_t ItemSize, const void *Payload, uint32_t PayloadSize)</argsstring>
+        <name>Queue_Put</name>
+        <param>
+          <type><ref refid="struct_queue___t" kindref="compound">Queue_T</ref> *</type>
+          <declname>Queue</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>Item</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>ItemSize</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>Payload</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>PayloadSize</declname>
+        </param>
+        <briefdescription>
+<para>Puts an item with/without payload to the queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The queue structure (must not be equal to NULL). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The item to be added to the queue (must not be equal to NULL) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ItemSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of given item (must not be equal to zero) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Payload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The item payload (can be NULL) to be added to the queue </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">PayloadSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The payload size (can be zero)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the item with payload was successfully added to the queue </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba497273b2285191edc1cda8648b67250a" kindref="member">RETCODE_OUT_OF_RESOURCES</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If there is no room in the queue buffer to store the item with the payload </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_Queue.h" line="192" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines the interface for message queue (FIFO data structure) with variable size of elements. </para>    </briefdescription>
+    <detaileddescription>
+<para>This queue is thread safe, so can be used with multiple senders and receivers. Though, the most efficient design should have only one receiver and one/multiple senders. There is no ISR API extension, so the queue should not be used from interrupts. A message data is copied only once, i.e. when it is added to the queue. When the message data is received from the queue with <ref refid="group___q_u_e_u_e_1ga5c5dbd3103c425c49e814b313db9f6b2" kindref="member">Queue_Get()</ref>, the receiver must release (dequeue) the message from the queue by <ref refid="group___q_u_e_u_e_1gaa92386ca018a7b7f2202b4a44607b523" kindref="member">Queue_Purge()</ref> when it is no longer used, this will make next message available for receiver. The message data can have two variable size parts: item and payload. The item can be fixed size header where a length of variable size payload is stored.</para><para><programlisting><codeline><highlight class="normal">//<sp/>example<sp/>of<sp/>usage<sp/>the<sp/>queue</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">typedef<sp/>struct</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>Type;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>PayloadSize;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/>Payload[];</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>ItemHead_T;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">static<sp/>Queue_T<sp/>Queue;</highlight></codeline>
+<codeline><highlight class="normal">static<sp/>uint8_t<sp/>QueueBuffer[128];</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>sender_task()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ItemHead_T<sp/>m;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>while(1)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Get<sp/>some<sp/>data<sp/>(type,<sp/>payload<sp/>etc.)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m.Type<sp/>=<sp/>type;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m.PayloadSize<sp/>=<sp/>payloadSize;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Send<sp/>the<sp/>message</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(Queue_Put(&amp;q,<sp/>&amp;m,<sp/>sizeof(m),<sp/>payload,<sp/>payloadSize)<sp/>!=<sp/>RETCODE_OK)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Do<sp/>error<sp/>handling</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>receiver_task()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ItemHead_T<sp/>*m;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>size;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>while(1)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Receive<sp/>a<sp/>message</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Queue_Get(&amp;Queue,<sp/>&amp;m,<sp/>&amp;size,<sp/>portMAX_DELAY);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Process<sp/>received<sp/>message</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(m-&gt;type<sp/>==<sp/>something)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process_message(m-&gt;Payload,<sp/>m-&gt;PayloadSize);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Free<sp/>the<sp/>message</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Queue_Purge(&amp;Queue);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>init()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Create<sp/>the<sp/>queue</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Queue_Create(&amp;Queue,<sp/>QueueBuffer,<sp/>sizeof(QueueBuffer));</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Create<sp/>sender_task()<sp/>and<sp/>receiver_task()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___b_c_d_s___f_o_t_a___d_o_w_n_l_o_a_d_a_g_e_n_t" kind="group">
+    <compoundname>BCDS_FOTA_DOWNLOADAGENT</compoundname>
+    <title>FotaDownloadAgent</title>
+    <innerfile refid="_b_c_d_s___fota_download_agent_8h">BCDS_FotaDownloadAgent.h</innerfile>
+    <innerclass refid="struct_fota_download_agent___s" prot="public">FotaDownloadAgent_S</innerclass>
+    <innergroup refid="group___b_c_d_s___f_o_t_a___c_o_a_p_d_o_w_n_l_o_a_d_a_g_e_n_t">CoapDownloadAgent</innergroup>
+    <innergroup refid="group___b_c_d_s___f_o_t_a___o_a_d_d_o_w_n_l_o_a_d_a_g_e_n_t">OadDownloadAgent</innergroup>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___b_c_d_s___f_o_t_a___d_o_w_n_l_o_a_d_a_g_e_n_t_1gab2d8720d37873f8e7eb1830384e47b11" prot="public" static="no">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>(*</type>
+        <definition>typedef Retcode_T(* FotaDownloadAgent_Deinitialize_T)(void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>FotaDownloadAgent_Deinitialize_T</name>
+        <briefdescription>
+<para>Deinitialize the agent. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> Deinit successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaDownloadAgent.h" line="127" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaDownloadAgent.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___f_o_t_a___d_o_w_n_l_o_a_d_a_g_e_n_t_1ga175efce9ad4cd91619e7aeb7b3963c3a" prot="public" static="no">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>(*</type>
+        <definition>typedef Retcode_T(* FotaDownloadAgent_InitalizeDownload_T)(void *configuration)</definition>
+        <argsstring>)(void *configuration)</argsstring>
+        <name>FotaDownloadAgent_InitalizeDownload_T</name>
+        <briefdescription>
+<para>When this method is called, the downloadAgent will start the download (connection to back-end, requests, etc...) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>* configuration possible configuration to start the download. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref> A null pointer was provided. </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2af0dbb18159f3f1458ea5a8ce733ccd2b" kindref="member">FOTA_DL_DOWNLOAD_INPROGRESS</ref> When FOTA download is in progress </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" kindref="member">RETCODE_UNINITIALIZED</ref> If the download agent context is uninitialized </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref> If CmdProcessorHandle is null / PackageUrl string length is greater than or equal to size of PackageUrl </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a99e3554523b6b218890b7fe791e84fd2" kindref="member">FOTA_FAILED_TO_SETUP_NEW_DOWNLOAD</ref> when setting new download fails </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref> when the queue is full (Refer CmdProcessor_Enqueue for more information) </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> Initialize download was successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaDownloadAgent.h" line="86" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaDownloadAgent.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___f_o_t_a___d_o_w_n_l_o_a_d_a_g_e_n_t_1ga45c88599706b791a4d8f9f34ae4be72f" prot="public" static="no">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>(*</type>
+        <definition>typedef Retcode_T(* FotaDownloadAgent_Initialize_T)(FotaPartitionAgent_T *partitionAgent, FotaRegistryAgent_T *registryAgent, EventHub_T *hub)</definition>
+        <argsstring>)(FotaPartitionAgent_T *partitionAgent, FotaRegistryAgent_T *registryAgent, EventHub_T *hub)</argsstring>
+        <name>FotaDownloadAgent_Initialize_T</name>
+        <briefdescription>
+<para>Initialization function of the downloadAgent. It will initialize all what it needs to run. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">FotaPartitionAgent_T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>* downloadPartitionAgent This agent handle the download partition (where we will store our new firmware after a fota). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">FotaRegistryAgent_T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>* registryAgent This agent is used to save the internal state of the agent before a reboot. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">EventHub_T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>* hub This hub allows to the agent to communicate in an asynchrony way with the application using it. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref> A null pointer was provided. </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref> Description depend of the used agent. </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> Initialization was successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaDownloadAgent.h" line="70" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaDownloadAgent.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___f_o_t_a___d_o_w_n_l_o_a_d_a_g_e_n_t_1ga6322f505491eea277da8612600ccb628" prot="public" static="no">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>(*</type>
+        <definition>typedef Retcode_T(* FotaDownloadAgent_ResumeDownload_T)(void *configuration)</definition>
+        <argsstring>)(void *configuration)</argsstring>
+        <name>FotaDownloadAgent_ResumeDownload_T</name>
+        <briefdescription>
+<para>When this method is called, the downloadAgent will resume the download (connection to back-end, requests, etc...) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>* configuration possible configuration to start the download. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref> A null pointer was provided. </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2af0dbb18159f3f1458ea5a8ce733ccd2b" kindref="member">FOTA_DL_DOWNLOAD_INPROGRESS</ref> when the fota download status is true </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" kindref="member">RETCODE_UNINITIALIZED</ref> If the download agent context is uninitialized </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref> when the queue is full (Refer CmdProcessor_Enqueue for more information) Description depend of the used agent. </para></simplesect>
+<simplesect kind="return"><para>Based on the status of Erase operation on selected partition </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> Resume download was successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaDownloadAgent.h" line="101" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaDownloadAgent.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___f_o_t_a___d_o_w_n_l_o_a_d_a_g_e_n_t_1ga2b98b0efc6a788321d2150a8b5286e15" prot="public" static="no">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>(*</type>
+        <definition>typedef Retcode_T(* FotaDownloadAgent_StopDownload_T)(void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>FotaDownloadAgent_StopDownload_T</name>
+        <briefdescription>
+<para>When this method is called, the downloadAgent will stop the download. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" kindref="member">RETCODE_UNINITIALIZED</ref> If the download agent context is uninitialized </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a5c47101eef495a99433afa303d2615d2" kindref="member">FOTA_DL_DOWNLOAD_NOT_INPROGRESS</ref> When the fota download is not in progress </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref> when the queue is full (Refer CmdProcessor_Enqueue for more information) </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> stop download was successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaDownloadAgent.h" line="112" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaDownloadAgent.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___f_o_t_a___d_o_w_n_l_o_a_d_a_g_e_n_t_1gacbe529324031857e2bc18c53c2ee9794" prot="public" static="no">
+        <type>struct <ref refid="struct_fota_download_agent___s" kindref="compound">FotaDownloadAgent_S</ref></type>
+        <definition>typedef struct FotaDownloadAgent_S FotaDownloadAgent_T</definition>
+        <argsstring></argsstring>
+        <name>FotaDownloadAgent_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaDownloadAgent.h" line="127" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaDownloadAgent.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___f_o_t_a___d_o_w_n_l_o_a_d_a_g_e_n_t_1ga451c16950e47b33b132d5779d50462ee" prot="public" static="no">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>(*</type>
+        <definition>typedef Retcode_T(* FotaDownloadAgent_UpdateStatus_T)(void *status)</definition>
+        <argsstring>)(void *status)</argsstring>
+        <name>FotaDownloadAgent_UpdateStatus_T</name>
+        <briefdescription>
+<para>When this method is called, the downloadAgent will update the status to the server/gateway. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref> A null pointer was provided. </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> update of status was successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaDownloadAgent.h" line="120" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaDownloadAgent.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>API of the DonwloadAgent. </para>    </briefdescription>
+    <detaileddescription>
+<para>It&apos;s role is to download a firmware. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_ble_l2cap_8h" kind="file">
+    <compoundname>BleL2cap.h</compoundname>
+    <includes refid="_ble_types_8h" local="yes">BleTypes.h</includes>
+    <incdepgraph>
+      <node id="28432">
+        <label>BleTypes.h</label>
+        <link refid="_ble_types_8h"/>
+        <childnode refid="28433" relation="include">
+        </childnode>
+      </node>
+      <node id="28434">
+        <label>BLECustomConfig.h</label>
+        <link refid="_common_2config_2_b_l_e_custom_config_8h"/>
+      </node>
+      <node id="28433">
+        <label>BleConfig.h</label>
+        <link refid="_ble_config_8h"/>
+        <childnode refid="28434" relation="include">
+        </childnode>
+      </node>
+      <node id="28431">
+        <label>SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/BleL2cap.h</label>
+        <link refid="BleL2cap.h"/>
+        <childnode refid="28432" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_ble_l2cap_8h_1acbecddc9a7ca82071dfacf7ef090df68" prot="public" static="no">
+        <name>BLEL2CAP_MINIMUM_MTU</name>
+        <initializer>(0x17u)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>BLEL2CAP_MINIMUM_MTU The minimum L2CAP MTU allowed by the Bluetooth Specification is 23 octets </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/BleL2cap.h" line="170" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/BleL2cap.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_ble_l2cap_8h_1af7d18d007f92107efaa51e56a91cebc6" prot="public" static="no">
+        <type><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref></type>
+        <definition>typedef U8 BleL2capEvent</definition>
+        <argsstring></argsstring>
+        <name>BleL2capEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>BleL2capEvent This type is used as event received in the BleL2capCallback callback registered during the call of BLEL2CAP_RegisterChannelHandler() function. The possible values are described below: </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/BleL2cap.h" line="182" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/BleL2cap.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="_ble_l2cap_8h_1BleL2cap">
+<title>Connection Oriented channels Introduction</title>
+<para>The Bluetooth 4.1 specification brings the LE L2CAP connection oriented channels allowing two devices ( Through L2CAP Upper layer protocols or services) to exchange L2CAP frames. The LE L2CAP connection oriented Channels specification allows a device, called INITIATOR to create a LE L2CAP connection oriented to a remote device called RESPONDER. As INITIATOR, The LE L2CAP connection targets a remote LE L2CAP upper layer protocol/profile defined by the PSM (Protocol Service Multiplier). As RESPONDER, the LE L2CAP is listening for an incoming connection on a given PSM. During the connection the devices L2CAP capabilities are exchanged. An important remote device L2CAP capability information is the application MTU supported by the remote device. It defines the maximum length of the data packet that can be send to the remote device. Once connected, the device can exchange data packets ( with a length up to the remote device MTU size).</para><para>A device may act as both INITIATOR and RESPONDER at a same time.</para></sect1>
+<sect1 id="_ble_l2cap_8h_1BleL2cap">
+<title>Connection Oriented channels Introduction</title>
+</sect1>
+<sect1 id="_ble_l2cap_8h_1Handlers">
+<title>Handlers</title>
+<para>This implementation is using specific Handler of BleL2capHandler type, these handlers allow an Upper layer Protocol/ or Profile to provide its local capabilities to the LE l2CAP layer. The Handler shall be initiated and filled with local capabilities during when initiating a connection for the INITIATOR (BLEL2CAP_Connect) or when listening for an incoming connection as RESPONDER (BLEL2CAP_RegisterListenningHandler).</para></sect1>
+<sect1 id="_ble_l2cap_8h_1Initiating">
+<title>connection</title>
+<para>As INITIATOR, The following fields are mandatory and shall be filled during BLEL2CAP_Connect for a connecting BleL2capHandler : bleL2capCallback: The Callback that will receive the LE L2CAP connection oriented channel event. connHandle: the physical connection handle identifying the remote device for which the LE L2CAP connection will be established. psm: The Protocol Service Multiplier (PSM) identifying the Upper layer/Upper protocol for which the local device is connecting t the remote device. rxBufferLen: The size of the Receiving buffer that may be allocated later using BLEL2CAP_AllocateReceiveBuffer, it will also be the local Maximum Payload Size (PSM) that a remote device will be able to send to the local device. If the local device is not able (or does not want) to receive data, it could set rxBufferLen to 0, otherwise the minimum allowed buffer length is BLEL2CAP_MINIMUM_MTU. (RxBufferLen == 0) or (RxBufferLen &gt;= BLEL2CAP_MINIMUM_MTU) hciTxCredits : The number of HCI TX DATA packet allowed to be used by this handler, depending of the number additional HCI TX DATA buffers allocated with the NUM_TX_DATA_PACKETS configuration. If multiple HciBuffer are allowed then the L2CAP will queue in HCI buffer, the packet to send. More HCI data buffers are allocated more the bit-rate will be high.</para><para>Once connected the BLEL2CAPEVENT_CONNECTED event is reported in the LE L2CAP callback given in the L2CAP handler. During this event the parms field is a pointer to the impacted BleL2capHandler, the remoteUpperLayerMTU field of the BleL2capHandler have been filled by the L2CAP layer and represent the maximum size of data (MTU) that the remote device is able to receive(i.e. the maximum size that the local device will be then allowed to send to the remote device using BLEL2CAP_SendData).</para></sect1>
+<sect1 id="_ble_l2cap_8h_1Listening">
+<title>for an incoming connection</title>
+<para>As RESPONDER, The following fields are mandatory and shall be filled during BLEL2CAP_RegisterListenningHandler for a listening LE L2CAP handler: bleL2capCallback: The Callback that will receive the LE L2CAP connection oriented channel event. psm: The Protocol Service Multiplier (PSM) identifying the Upper layer/Upper protocol for which the local device is listening an incoming connection. rxBufferLen: The size of the Receiving buffer that may be allocated later using BLEL2CAP_AllocateReceiveBuffer, it will also be the local Maximum Payload Size (PSM) that a remote device will be able to send to the local device. If the local device is not able (or does not want) to receive data, it could set rxBufferLen to 0, otherwise the minimum allowed buffer length is BLEL2CAP_MINIMUM_MTU. (RxBufferLen == 0) or (RxBufferLen &gt;= BLEL2CAP_MINIMUM_MTU) hciTxCredits : The number of HCI TX DATA packet allowed to be used by this handler, depending of the number additional HCI TX DATA buffers allocated with the NUM_TX_DATA_PACKETS configuration. If multiple HciBuffer are allowed then the L2CAP will queue in HCI buffer, the packet to send. More HCI data buffers are allocated more the bit-rate will be high.</para><para>Once connected the BLEL2CAPEVENT_CONNECTED event is reported in the LE L2CAP callback given in the L2CAP handler. During this event the parms field is a pointer to the impacted BleL2capHandler, the remoteUpperLayerMTU field of the BleL2capHandler have been filled by the L2CAp layer and represent the maximum size of data (MTU) that the remote device is able to receive(i.e. the maximum size that the local device will be then allowed to send to the remote device using BLEL2CAP_SendData).</para></sect1>
+<sect1 id="_ble_l2cap_8h_1Receiving">
+<title>Data.</title>
+<para>It is up to the LE L2CAP layer to reassemble the complete LE L2CAP upper layer protocol or profile packet (named SDU in the Bluetooth Specification). The layer protocol or profile just allocate and give buffers to the L2CAP layer, then the L2CAP layer is in charge of filling these buffers upon data reception. The buffer are allocated for a given handler thanks to the BLEL2CAP_AllocateReceiveBuffer API, all the buffer allocated have the same length, which is the length provided during Handler initialisation (Connecting or listening) trough the rxBufferLen handler field. Once a complete packet is received the BLEL2CAPEVENT_LEFRAME_RXCOMPLETE event is reported in the LE L2CAP callback given in the L2CAP handler. During this event the parms field is containing a pointer to the impacted BleL2capHandler and a pointer to the receive buffer which is containing the received data, the received data length is provided as well and is from 1 byte to rxBufferLen bytes. Note that a receive buffer length cannot be less than 23 bytes.</para></sect1>
+<sect1 id="_ble_l2cap_8h_1Sending">
+<title>Data.</title>
+<para>Data are sent using the BLEL2CAP_SendData API, data are sent to a connected handler. The number of data bytes to send cannot exceed the remote device LE L2CAP MTU, provided in the remoteUpperLayerMTU field of the BleL2capHandler. It is up to the LE L2CAP layer to segment the complete LE L2CAP upper layer protocol or profile packet to send into several packet that could fill in the Bluetooth Low energy controllers. The segmentation is using HCI DATA transmit buffers and more HCI buffers are dedicated for the LE L2CAP upper layer protocol or profile, more segments can be sent to the Bluetooth Low energy controller, more the bit-rate will be high. Allocating HCI TX data buffer for this handler is done during handler initialisation. </para></sect1>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__BLEL2CAP_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__BLEL2CAP_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleL2cap.h</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Description:<sp/><sp/><sp/>Contains<sp/>Application<sp/>interfaces<sp/>routines<sp/>for<sp/>BLEL2CAP.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Created:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>September,<sp/>2008</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Version:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0.1</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>File<sp/>Revision:<sp/>$Rev:<sp/>3299<sp/>$</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>$Project$</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>ALL<sp/>RIGHTS<sp/>RESERVED.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>Unpublished<sp/>Confidential<sp/>Information<sp/>of<sp/>ALPWISE.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>Do<sp/>Not<sp/>Disclose.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>No<sp/>part<sp/>of<sp/>this<sp/>work<sp/>may<sp/>be<sp/>used<sp/>or<sp/>reproduced<sp/>in<sp/>any<sp/>form<sp/>or<sp/>by<sp/>any</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>means,<sp/>or<sp/>stored<sp/>in<sp/>a<sp/>database<sp/>or<sp/>retrieval<sp/>system,<sp/>without<sp/>prior<sp/>written</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>permission<sp/>of<sp/>ALPWISE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>Use<sp/>of<sp/>this<sp/>work<sp/>is<sp/>governed<sp/>by<sp/>a<sp/>license<sp/>granted<sp/>ALPWISE.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>This<sp/>work<sp/>contains<sp/>confidential<sp/>and<sp/>proprietary<sp/>information<sp/>of</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>ALPWISE.<sp/>which<sp/>is<sp/>protected<sp/>by<sp/>copyright,<sp/>trade<sp/>secret,</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>trademark<sp/>and<sp/>other<sp/>intellectual<sp/>property<sp/>rights.</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ble_types_8h" kindref="compound">BleTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLE_CONNECTION_SUPPORT<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************\</highlight></codeline>
+<codeline lineno="165"><highlight class="comment"><sp/>*<sp/>CONSTANTS</highlight></codeline>
+<codeline lineno="166"><highlight class="comment">\****************************************************************************/</highlight></codeline>
+<codeline lineno="170" refid="_ble_l2cap_8h_1acbecddc9a7ca82071dfacf7ef090df68" refkind="member"><highlight class="preprocessor">#define<sp/>BLEL2CAP_MINIMUM_MTU<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x17u)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************\</highlight></codeline>
+<codeline lineno="173"><highlight class="comment"><sp/>*<sp/><sp/>Type<sp/>definition</highlight></codeline>
+<codeline lineno="174"><highlight class="comment">\****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="_ble_l2cap_8h_1af7d18d007f92107efaa51e56a91cebc6" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><ref refid="_ble_l2cap_8h_1af7d18d007f92107efaa51e56a91cebc6" kindref="member">BleL2capEvent</ref>;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLEL2CAP_CONNECTION_ORIENTED_CHANNELS<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="preprocessor">#define<sp/>BLEL2CAPEVENT_CONNECTED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x04u)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="preprocessor">#define<sp/>BLEL2CAPEVENT_DISCONNECTED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x05u)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="preprocessor">#define<sp/>BLEL2CAPEVENT_LEFRAME_TXCOMPLETE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x06u)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="preprocessor">#define<sp/>BLEL2CAPEVENT_LEFRAME_RXCOMPLETE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x07u)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*BleL2capCallback)(<sp/><ref refid="_ble_l2cap_8h_1af7d18d007f92107efaa51e56a91cebc6" kindref="member">BleL2capEvent</ref><sp/><sp/><sp/><sp/><sp/>event,</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status,</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*parms<sp/>);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/>BleL2capPSM;</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>callback<sp/>in<sp/>which<sp/>the<sp/>events<sp/>will<sp/>be<sp/>received.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Shall<sp/>Be<sp/>set<sp/>during<sp/>CONNECT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Shall<sp/>Be<sp/>set<sp/>during<sp/>REGISTER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>BleL2capCallback<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bleL2capCallback;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>remote<sp/>device<sp/>connection<sp/>Handle.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Shall<sp/>Be<sp/>set<sp/>during<sp/>CONNECT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>connHandle;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>PSM<sp/>identifying<sp/>the<sp/>protocol/service<sp/>registering<sp/>the<sp/>Handler.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Shall<sp/>Be<sp/>set<sp/>during<sp/>CONNECT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Shall<sp/>Be<sp/>set<sp/>during<sp/>REGISTER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>BleL2capPSM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>psm;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>Receive<sp/>Buffers<sp/>length,<sp/>it<sp/>describes<sp/>the<sp/>length<sp/>of<sp/>the<sp/>receive</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>buffers<sp/>that<sp/>are<sp/>allocated<sp/>using<sp/>BLEL2CAP_AllocateReceiveBuffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>This<sp/>is<sp/>as<sp/>well<sp/>the<sp/>local<sp/>device<sp/>upper<sp/>layer<sp/>MTU.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Shall<sp/>Be<sp/>set<sp/>during<sp/>CONNECT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Shall<sp/>Be<sp/>set<sp/>during<sp/>REGISTER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rxBufferLen;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>number<sp/>of<sp/>HCI<sp/>Transmit<sp/>buffers<sp/>that<sp/>this<sp/>handler<sp/>is<sp/>allowed<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>fill<sp/>when<sp/>sending<sp/>data.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Shall<sp/>Be<sp/>set<sp/>during<sp/>CONNECT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Shall<sp/>Be<sp/>set<sp/>during<sp/>REGISTER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hciTxCredits;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>Maximum<sp/>size<sp/>of<sp/>the<sp/>payload<sp/>allowed<sp/>to<sp/>be<sp/>sent<sp/>to<sp/>the<sp/>remote</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>device.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remoteUpperLayerMTU;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>remote<sp/>channel<sp/>Allocated<sp/>to<sp/>this<sp/>Connection.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remoteChannelID;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>local<sp/>available<sp/>credits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>localCredits;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>number<sp/>of<sp/>buffer(s)<sp/>available<sp/>in<sp/>the<sp/>remote<sp/>device</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>protocol/service.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remoteCredits;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>RX<sp/>Buffers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*rxBufferPool;</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>RX<sp/>current<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rxOffset;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>RX<sp/>SDU<sp/>Length</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rxSDULength;</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Used<sp/>to<sp/>save<sp/>he<sp/>Transmit<sp/>data<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>transmit<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*txBuffer;</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>length<sp/>of<sp/>data<sp/>remaining</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>txLeft;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>length<sp/>of<sp/>data<sp/>already<sp/>transmitted</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>txDone;</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>total<sp/>number<sp/>of<sp/>data<sp/>to<sp/>transmit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>txSDULength;</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLEL2CAP_MTU<sp/>&gt;<sp/>BLEL2CAP_MINIMUM_MTU)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>negotiated<sp/>MTU;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>negociatedL2CAPMPS;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLEL2CAP_MTU<sp/>&gt;<sp/>BLEL2CAP_MINIMUM_MTU)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>local<sp/>channel<sp/>Allocated<sp/>to<sp/>this<sp/>Connection.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>localChannelID;</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>internal<sp/>use<sp/>only,<sp/>Do<sp/>not<sp/>USE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight><highlight class="keyword">internal</highlight><highlight class="normal">[2];</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal">}<sp/>BleL2capHandler;</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>pointer<sp/>to<sp/>the<sp/>L2CAPLEFrameBuffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><sp/><sp/>*rxL2CapLEFrameBuffer;</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>internal<sp/>use<sp/>only,<sp/>Do<sp/>not<sp/>USE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/>*</highlight><highlight class="keyword">internal</highlight><highlight class="normal">[2];</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal">}<sp/>BleL2capRxBuffer;</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>L2CAP<sp/>handler<sp/>for<sp/>which<sp/>the<sp/>data<sp/>have<sp/>been<sp/>received<sp/>or<sp/>sent</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/>BleL2capHandler<sp/><sp/><sp/><sp/><sp/>*l2capHandler;</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"></highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Valid<sp/>only<sp/>during<sp/>BLEL2CAPEVENT_LEFRAME_RXCOMPLETE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>pointer<sp/>to<sp/>the<sp/>BleL2capRxBuffer<sp/>indicating<sp/>which<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>have<sp/>been<sp/>received</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleL2capRxBuffer<sp/><sp/><sp/><sp/>*rxL2CapLEFrameBuffer;</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Valid<sp/>only<sp/>during<sp/>BLEL2CAPEVENT_LEFRAME_TXCOMPLETE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>pointer<sp/>indicating<sp/>which<sp/>buffer<sp/>have<sp/>been<sp/>sent</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*txBuffer;</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>buffer;</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"></highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>size<sp/>of<sp/>the<sp/>received<sp/>buffer<sp/>/<sp/>sent<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/>bufferLen;</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="407"><highlight class="normal">}<sp/>BleL2capLEFrameInformation;</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"></highlight></codeline>
+<codeline lineno="409"><highlight class="normal"></highlight></codeline>
+<codeline lineno="410"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************\</highlight></codeline>
+<codeline lineno="411"><highlight class="comment"><sp/>*<sp/><sp/>APPLICATION<sp/>INTERFACE<sp/>functions<sp/>definition</highlight></codeline>
+<codeline lineno="412"><highlight class="comment">\****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="413"><highlight class="normal"></highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/>BLEL2CAP_RegisterListenningHandler(</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleL2capHandler<sp/>*bleL2capHandler<sp/>);</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"></highlight></codeline>
+<codeline lineno="470"><highlight class="normal"></highlight></codeline>
+<codeline lineno="494"><highlight class="normal"><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/>BLEL2CAP_DeregisterListenningHandler(</highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleL2capHandler<sp/>*bleL2capHandler<sp/>);</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"></highlight></codeline>
+<codeline lineno="497"><highlight class="normal"></highlight></codeline>
+<codeline lineno="533"><highlight class="normal"><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/>BLEL2CAP_AllocateReceiveBuffer(</highlight></codeline>
+<codeline lineno="534"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleL2capHandler<sp/><sp/><sp/><sp/><sp/>*bleL2capHandler,</highlight></codeline>
+<codeline lineno="535"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleL2capRxBuffer<sp/><sp/><sp/><sp/>*bleL2capBuffer);</highlight></codeline>
+<codeline lineno="536"><highlight class="normal"></highlight></codeline>
+<codeline lineno="537"><highlight class="normal"></highlight></codeline>
+<codeline lineno="566"><highlight class="normal"><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/>BLEL2CAP_SendData(</highlight></codeline>
+<codeline lineno="567"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleL2capHandler<sp/>*bleL2capHandler,</highlight></codeline>
+<codeline lineno="568"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/>*dataToSend,</highlight></codeline>
+<codeline lineno="569"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/>dataLen);</highlight></codeline>
+<codeline lineno="570"><highlight class="normal"></highlight></codeline>
+<codeline lineno="571"><highlight class="normal"></highlight></codeline>
+<codeline lineno="630"><highlight class="normal"><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/>BLEL2CAP_Connect(</highlight></codeline>
+<codeline lineno="631"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleL2capHandler<sp/>*bleL2capHandler);</highlight></codeline>
+<codeline lineno="632"><highlight class="normal"></highlight></codeline>
+<codeline lineno="633"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLEL2CAP_CONNECTION_ORIENTED_CHANNELS<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="634"><highlight class="normal"></highlight></codeline>
+<codeline lineno="635"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLE_CONNECTION_SUPPORT<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="636"><highlight class="normal"></highlight></codeline>
+<codeline lineno="637"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*__BLEL2CAP_H*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/BleL2cap.h"/>
+  </compounddef>
+</doxygen>

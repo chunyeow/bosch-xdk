@@ -1,0 +1,577 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_w_l_a_n_host_pgm_8c" kind="file">
+    <compoundname>WLANHostPgm.c</compoundname>
+    <includes refid="_xdk_common_info_8h" local="yes">XdkCommonInfo.h</includes>
+    <includes refid="_w_l_a_n_host_pgm_8h" local="yes">WLANHostPgm.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes refid="_b_c_d_s___assert_8h" local="yes">BCDS_Assert.h</includes>
+    <includes refid="_b_c_d_s___cmd_processor_8h" local="yes">BCDS_CmdProcessor.h</includes>
+    <includes refid="_free_r_t_o_s_8h" local="yes">FreeRTOS.h</includes>
+    <includes refid="task_8h" local="yes">task.h</includes>
+    <includes refid="timers_8h" local="yes">timers.h</includes>
+    <includes refid="simplelink_8h" local="yes">simplelink.h</includes>
+    <includes local="yes">XDKDummyCA.h</includes>
+    <incdepgraph>
+      <node id="27251">
+        <label>stdbool.h</label>
+      </node>
+      <node id="27278">
+        <label>netcfg.h</label>
+        <link refid="netcfg_8h"/>
+        <childnode refid="27269" relation="include">
+        </childnode>
+      </node>
+      <node id="27267">
+        <label>list.h</label>
+      </node>
+      <node id="27257">
+        <label>BCDS_CmdProcessor.h</label>
+        <link refid="_b_c_d_s___cmd_processor_8h"/>
+        <childnode refid="27258" relation="include">
+        </childnode>
+        <childnode refid="27249" relation="include">
+        </childnode>
+        <childnode refid="27248" relation="include">
+        </childnode>
+      </node>
+      <node id="27256">
+        <label>BCDS_Assert.h</label>
+        <link refid="_b_c_d_s___assert_8h"/>
+        <childnode refid="27248" relation="include">
+        </childnode>
+      </node>
+      <node id="27247">
+        <label>XdkCommonInfo.h</label>
+        <link refid="_xdk_common_info_8h"/>
+        <childnode refid="27248" relation="include">
+        </childnode>
+      </node>
+      <node id="27250">
+        <label>stdint.h</label>
+      </node>
+      <node id="27248">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="27249" relation="include">
+        </childnode>
+      </node>
+      <node id="27253">
+        <label>stdlib.h</label>
+      </node>
+      <node id="27268">
+        <label>timers.h</label>
+        <link refid="timers_8h"/>
+        <childnode refid="27266" relation="include">
+        </childnode>
+      </node>
+      <node id="27263">
+        <label>BCDS_TaskConfig.h</label>
+        <link refid="_b_c_d_s___task_config_8h"/>
+      </node>
+      <node id="27270">
+        <label>user.h</label>
+      </node>
+      <node id="27271">
+        <label>../source/objInclusion.h</label>
+        <link refid="obj_inclusion_8h"/>
+        <childnode refid="27269" relation="include">
+        </childnode>
+      </node>
+      <node id="27261">
+        <label>stddef.h</label>
+      </node>
+      <node id="27273">
+        <label>fs.h</label>
+        <link refid="fs_8h"/>
+        <childnode refid="27269" relation="include">
+        </childnode>
+      </node>
+      <node id="27281">
+        <label>XDKDummyCA.h</label>
+      </node>
+      <node id="27265">
+        <label>portable.h</label>
+      </node>
+      <node id="27259">
+        <label>BCDS_UtilsConfig.h</label>
+        <link refid="_b_c_d_s___utils_config_8h"/>
+      </node>
+      <node id="27252">
+        <label>string.h</label>
+      </node>
+      <node id="27258">
+        <label>BCDS_Utils.h</label>
+        <link refid="_b_c_d_s___utils_8h"/>
+        <childnode refid="27259" relation="include">
+        </childnode>
+        <childnode refid="27248" relation="include">
+        </childnode>
+      </node>
+      <node id="27249">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="27250" relation="include">
+        </childnode>
+        <childnode refid="27251" relation="include">
+        </childnode>
+        <childnode refid="27252" relation="include">
+        </childnode>
+        <childnode refid="27253" relation="include">
+        </childnode>
+      </node>
+      <node id="27264">
+        <label>projdefs.h</label>
+      </node>
+      <node id="27280">
+        <label>../source/nonos.h</label>
+        <link refid="nonos_8h"/>
+      </node>
+      <node id="27279">
+        <label>wlan_rx_filters.h</label>
+        <link refid="wlan__rx__filters_8h"/>
+        <childnode refid="27269" relation="include">
+        </childnode>
+      </node>
+      <node id="27275">
+        <label>netapp.h</label>
+        <link refid="netapp_8h"/>
+        <childnode refid="27269" relation="include">
+        </childnode>
+      </node>
+      <node id="27276">
+        <label>wlan.h</label>
+        <link refid="_libraries_2_wi_fi_23rd-party_2_t_i_2simplelink_2include_2_w_l_a_n_8h"/>
+        <childnode refid="27269" relation="include">
+        </childnode>
+      </node>
+      <node id="27274">
+        <label>socket.h</label>
+        <link refid="socket_8h"/>
+        <childnode refid="27269" relation="include">
+        </childnode>
+      </node>
+      <node id="27266">
+        <label>task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="27267" relation="include">
+        </childnode>
+      </node>
+      <node id="27277">
+        <label>device.h</label>
+        <link refid="device_8h"/>
+        <childnode refid="27269" relation="include">
+        </childnode>
+      </node>
+      <node id="27262">
+        <label>FreeRTOSConfig.h</label>
+        <link refid="_free_r_t_o_s_config_8h"/>
+        <childnode refid="27250" relation="include">
+        </childnode>
+        <childnode refid="27256" relation="include">
+        </childnode>
+        <childnode refid="27263" relation="include">
+        </childnode>
+      </node>
+      <node id="27260">
+        <label>FreeRTOS.h</label>
+        <link refid="_free_r_t_o_s_8h"/>
+        <childnode refid="27261" relation="include">
+        </childnode>
+        <childnode refid="27250" relation="include">
+        </childnode>
+        <childnode refid="27262" relation="include">
+        </childnode>
+        <childnode refid="27264" relation="include">
+        </childnode>
+        <childnode refid="27265" relation="include">
+        </childnode>
+      </node>
+      <node id="27246">
+        <label>SDK/xdk110/Common/source/Connectivity/WLANHostPgm.c</label>
+        <link refid="WLANHostPgm.c"/>
+        <childnode refid="27247" relation="include">
+        </childnode>
+        <childnode refid="27254" relation="include">
+        </childnode>
+        <childnode refid="27255" relation="include">
+        </childnode>
+        <childnode refid="27256" relation="include">
+        </childnode>
+        <childnode refid="27257" relation="include">
+        </childnode>
+        <childnode refid="27260" relation="include">
+        </childnode>
+        <childnode refid="27266" relation="include">
+        </childnode>
+        <childnode refid="27268" relation="include">
+        </childnode>
+        <childnode refid="27269" relation="include">
+        </childnode>
+        <childnode refid="27281" relation="include">
+        </childnode>
+      </node>
+      <node id="27254">
+        <label>WLANHostPgm.h</label>
+        <link refid="_w_l_a_n_host_pgm_8h"/>
+        <childnode refid="27248" relation="include">
+        </childnode>
+      </node>
+      <node id="27255">
+        <label>stdio.h</label>
+      </node>
+      <node id="27272">
+        <label>trace.h</label>
+        <link refid="trace_8h"/>
+        <childnode refid="27269" relation="include">
+        </childnode>
+      </node>
+      <node id="27269">
+        <label>simplelink.h</label>
+        <link refid="simplelink_8h"/>
+        <childnode refid="27270" relation="include">
+        </childnode>
+        <childnode refid="27271" relation="include">
+        </childnode>
+        <childnode refid="27272" relation="include">
+        </childnode>
+        <childnode refid="27273" relation="include">
+        </childnode>
+        <childnode refid="27274" relation="include">
+        </childnode>
+        <childnode refid="27275" relation="include">
+        </childnode>
+        <childnode refid="27276" relation="include">
+        </childnode>
+        <childnode refid="27277" relation="include">
+        </childnode>
+        <childnode refid="27278" relation="include">
+        </childnode>
+        <childnode refid="27279" relation="include">
+        </childnode>
+        <childnode refid="27280" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_w_l_a_n_host_pgm_8c_1abff8f3a204e79671b98fabaa652198c3" prot="public" static="no">
+        <name>BCDS_MODULE_ID</name>
+        <initializer><ref refid="_xdk_common_info_8h_1a7d550569e587db8903a47a7044e6e935a691cd0563a9a9bdb120cca9c10207038" kindref="member">XDK_COMMON_ID_WLANHOSTPGM</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/WLANHostPgm.c" line="52" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/WLANHostPgm.c" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_w_l_a_n_host_pgm_8c_1a2426915707808f6e0c9a231f4535964c" prot="public" static="no">
+        <name>WLAN_HOST_PGM_CA_CHUNK_LEN</name>
+        <initializer>(1024)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/WLANHostPgm.c" line="71" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/WLANHostPgm.c" bodystart="71" bodyend="-1"/>
+        <referencedby refid="_w_l_a_n_host_pgm_8c_1a46b5b32ad9c6331e5d5a4f34de6b9a4b" compoundref="_w_l_a_n_host_pgm_8c" startline="85" endline="171">WLANHostPgmUploadCertificate</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_w_l_a_n_host_pgm_8c_1ae445deaf125abfaa74975a6ee5a63e94" prot="public" static="no">
+        <name>WLAN_HOST_PGM_CA_FIND_MIN</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>(((a) &lt; (b)) ? (a) : (b))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/WLANHostPgm.c" line="73" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/WLANHostPgm.c" bodystart="73" bodyend="-1"/>
+        <referencedby refid="_w_l_a_n_host_pgm_8c_1a46b5b32ad9c6331e5d5a4f34de6b9a4b" compoundref="_w_l_a_n_host_pgm_8c" startline="85" endline="171">WLANHostPgmUploadCertificate</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_w_l_a_n_host_pgm_8c_1a315b0526210bd3e761f1cdf067575e86" prot="public" static="no">
+        <name>WLAN_HOST_PGM_CA_LEN_128KB</name>
+        <initializer>(131072)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/WLANHostPgm.c" line="72" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/WLANHostPgm.c" bodystart="72" bodyend="-1"/>
+        <referencedby refid="_w_l_a_n_host_pgm_8c_1a46b5b32ad9c6331e5d5a4f34de6b9a4b" compoundref="_w_l_a_n_host_pgm_8c" startline="85" endline="171">WLANHostPgmUploadCertificate</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_w_l_a_n_host_pgm_8c_1a618b2bf5eb88cfa2b4c955488bdb8fcf" prot="public" static="yes" mutable="no">
+        <type>const unsigned char</type>
+        <definition>const unsigned char WLANHostPgmXdkDummyCertificate[]</definition>
+        <argsstring>[]</argsstring>
+        <name>WLANHostPgmXdkDummyCertificate</name>
+        <initializer>= { XDK_DUMMY_CA }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt; XDK dummy certificate to be flashed for enabling Enterprise WPA2 connection </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/WLANHostPgm.c" line="78" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/WLANHostPgm.c" bodystart="78" bodyend="-1"/>
+        <referencedby refid="_w_l_a_n_host_pgm_8c_1a46b5b32ad9c6331e5d5a4f34de6b9a4b" compoundref="_w_l_a_n_host_pgm_8c" startline="85" endline="171">WLANHostPgmUploadCertificate</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_w_l_a_n_host_pgm_8c_1a0080a0f8bebe80919c4b1c72f503823d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WLANHostPgm_Enable</definition>
+        <argsstring>(void)</argsstring>
+        <name>WLANHostPgm_Enable</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This will enable the WLAN host programming. </para>        </briefdescription>
+        <detaileddescription>
+<para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/WLANHostPgm.c" line="180" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/WLANHostPgm.c" bodystart="180" bodyend="183"/>
+        <references refid="_w_l_a_n_host_pgm_8c_1a46b5b32ad9c6331e5d5a4f34de6b9a4b" compoundref="_w_l_a_n_host_pgm_8c" startline="85" endline="171">WLANHostPgmUploadCertificate</references>
+      </memberdef>
+      <memberdef kind="function" id="_w_l_a_n_host_pgm_8c_1a4883bbb99b76ae79ea1c0ef04358a536" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WLANHostPgm_Setup</definition>
+        <argsstring>(void)</argsstring>
+        <name>WLANHostPgm_Setup</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This will setup the WLAN host programming. </para>        </briefdescription>
+        <detaileddescription>
+<para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/WLANHostPgm.c" line="174" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/WLANHostPgm.c" bodystart="174" bodyend="177"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+      </memberdef>
+      <memberdef kind="function" id="_w_l_a_n_host_pgm_8c_1a46b5b32ad9c6331e5d5a4f34de6b9a4b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>static Retcode_T WLANHostPgmUploadCertificate</definition>
+        <argsstring>(void)</argsstring>
+        <name>WLANHostPgmUploadCertificate</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>WLANHostPgmUploadCertificate will upload the WLANHostPgmXdkDummyCertificate to the WLAN chip. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/WLANHostPgm.c" line="85" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/WLANHostPgm.c" bodystart="85" bodyend="171"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="simplelink_8h_1ada9f3b59b3a217b8f8e5d281ae55a19e" compoundref="simplelink_8h" startline="227">_i32</references>
+        <references refid="simplelink_8h_1a87886b60e61f791da9953f573bc83d8d" compoundref="simplelink_8h" startline="226">_u32</references>
+        <references refid="_w_l_a_n_host_pgm_8h_1a51ee2c225197b1b4a1b0d8f1380fc8ee" compoundref="_w_l_a_n_host_pgm_8h" startline="58">WLAN_HOST_PGM_CERT_FILE_NAME</references>
+        <references refid="simplelink_8h_1a44f20b191bdb85d44eabe758192d7f11" compoundref="simplelink_8h" startline="222">_u8</references>
+        <references refid="group___file_system_1gaaf27b73d19f8e86eed797eb8ff91d565" compoundref="fs_8h" startline="157">FS_MODE_OPEN_CREATE</references>
+        <references refid="_w_l_a_n_host_pgm_8c_1a315b0526210bd3e761f1cdf067575e86" compoundref="_w_l_a_n_host_pgm_8c" startline="72">WLAN_HOST_PGM_CA_LEN_128KB</references>
+        <references refid="group___file_system_1gga555c24f3e1071fa13f8772a0b95cc7d4a0f1428da2bc548e1be547f39c4758a25" compoundref="fs_8h" startline="180">_FS_FILE_OPEN_FLAG_COMMIT</references>
+        <references refid="group___file_system_1gga555c24f3e1071fa13f8772a0b95cc7d4aa460f21229bcbd834e878c6bf6531e75" compoundref="fs_8h" startline="185">_FS_FILE_PUBLIC_WRITE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8ba1e0d295f38f53231db01eebc9a02a2d7" compoundref="_xdk_common_info_8h" startline="235">RETCODE_WLAN_HOST_PGM_FS_OPEN_FAILED</references>
+        <references refid="_w_l_a_n_host_pgm_8c_1a618b2bf5eb88cfa2b4c955488bdb8fcf" compoundref="_w_l_a_n_host_pgm_8c" startline="78">WLANHostPgmXdkDummyCertificate</references>
+        <references refid="_w_l_a_n_host_pgm_8c_1ae445deaf125abfaa74975a6ee5a63e94" compoundref="_w_l_a_n_host_pgm_8c" startline="73">WLAN_HOST_PGM_CA_FIND_MIN</references>
+        <references refid="_w_l_a_n_host_pgm_8c_1a2426915707808f6e0c9a231f4535964c" compoundref="_w_l_a_n_host_pgm_8c" startline="71">WLAN_HOST_PGM_CA_CHUNK_LEN</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8ba8c587a3385e2f413b2a93cbd0c2e2d59" compoundref="_xdk_common_info_8h" startline="236">RETCODE_WLAN_HOST_PGM_FS_WRITE_FAILED</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8bab9f61924f60141688748b8ac7097aa42" compoundref="_xdk_common_info_8h" startline="237">RETCODE_WLAN_HOST_PGM_FS_CLOSE_FAILED</references>
+        <references refid="group__device_1ga1e30957d5b7720918fb206d44f373613">sl_Stop</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8ba0752dd0407ecdbaf53295df2ee1fd304" compoundref="_xdk_common_info_8h" startline="238">RETCODE_WLAN_HOST_PGM_SL_STOP_FAILED</references>
+        <references refid="task_8h_1aa154068cecd7f31446a7a84af44ab1a3">vTaskDelay</references>
+        <references refid="simplelink_8h_1afcc951421dee921a20980010117583de" compoundref="simplelink_8h" startline="225">_i16</references>
+        <references refid="group__wlan_1gga14f655c6dccc422443a415969aa31a10a2340ff80c8deb594bfbb3a6dec34c4aa" compoundref="_libraries_2_wi_fi_23rd-party_2_t_i_2simplelink_2include_2_w_l_a_n_8h" startline="497">ROLE_STA</references>
+        <references refid="group__device_1ga5869df658d2c9fe3c2baa50503a1a8dd">sl_Start</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8ba946eae5e48951b0a68acfb856f4411fc" compoundref="_xdk_common_info_8h" startline="239">RETCODE_WLAN_HOST_PGM_SL_START_FAILED</references>
+        <referencedby refid="_w_l_a_n_host_pgm_8h_1a0080a0f8bebe80919c4b1c72f503823d" compoundref="_w_l_a_n_host_pgm_8c" startline="180" endline="183">WLANHostPgm_Enable</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This module handles the WLAN Host Programming services. (Flashing XDK dummy certificate for Enterprise WPA2 connection onto the WLAN chip) </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="comment">/*<sp/>module<sp/>includes<sp/>**********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>own<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_xdk_common_info_8h" kindref="compound">XdkCommonInfo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>BCDS_MODULE_ID<sp/><sp/></highlight><highlight class="comment">/*<sp/>Module<sp/>ID<sp/>define<sp/>before<sp/>including<sp/>Basics<sp/>package*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="_w_l_a_n_host_pgm_8c_1abff8f3a204e79671b98fabaa652198c3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BCDS_MODULE_ID<sp/>XDK_COMMON_ID_WLANHOSTPGM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>own<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_w_l_a_n_host_pgm_8h" kindref="compound">WLANHostPgm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>system<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>additional<sp/>interface<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___assert_8h" kindref="compound">BCDS_Assert.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___cmd_processor_8h" kindref="compound">BCDS_CmdProcessor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_free_r_t_o_s_8h" kindref="compound">FreeRTOS.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="task_8h" kindref="compound">task.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="timers_8h" kindref="compound">timers.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="simplelink_8h" kindref="compound">simplelink.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;XDKDummyCA.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>constant<sp/>definitions<sp/>*****************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="_w_l_a_n_host_pgm_8c_1a2426915707808f6e0c9a231f4535964c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WLAN_HOST_PGM_CA_CHUNK_LEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1024)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="_w_l_a_n_host_pgm_8c_1a315b0526210bd3e761f1cdf067575e86" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WLAN_HOST_PGM_CA_LEN_128KB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(131072)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="_w_l_a_n_host_pgm_8c_1ae445deaf125abfaa74975a6ee5a63e94" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WLAN_HOST_PGM_CA_FIND_MIN(a,b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((a)<sp/>&lt;<sp/>(b))<sp/>?<sp/>(a)<sp/>:<sp/>(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>local<sp/>variables<sp/>**********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="_w_l_a_n_host_pgm_8c_1a618b2bf5eb88cfa2b4c955488bdb8fcf" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="_w_l_a_n_host_pgm_8c_1a618b2bf5eb88cfa2b4c955488bdb8fcf" kindref="member">WLANHostPgmXdkDummyCertificate</ref>[]<sp/>=<sp/>{<sp/>XDK_DUMMY_CA<sp/>};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="_w_l_a_n_host_pgm_8c_1a46b5b32ad9c6331e5d5a4f34de6b9a4b" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_w_l_a_n_host_pgm_8c_1a46b5b32ad9c6331e5d5a4f34de6b9a4b" kindref="member">WLANHostPgmUploadCertificate</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="simplelink_8h_1ada9f3b59b3a217b8f8e5d281ae55a19e" kindref="member">_i32</ref><sp/>fileHandle<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="simplelink_8h_1a87886b60e61f791da9953f573bc83d8d" kindref="member">_u32</ref><sp/>token<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="simplelink_8h_1ada9f3b59b3a217b8f8e5d281ae55a19e" kindref="member">_i32</ref><sp/>retVal;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="simplelink_8h_1a87886b60e61f791da9953f573bc83d8d" kindref="member">_u32</ref><sp/>remainingLen,<sp/>movingOffset,<sp/>chunkLen;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;WLANHostPgmUploadCertificate<sp/>:<sp/>writing<sp/>certificate<sp/>%s\r\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="_w_l_a_n_host_pgm_8h_1a51ee2c225197b1b4a1b0d8f1380fc8ee" kindref="member">WLAN_HOST_PGM_CERT_FILE_NAME</ref>);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>retVal<sp/>=<sp/>sl_FsOpen((<ref refid="simplelink_8h_1a44f20b191bdb85d44eabe758192d7f11" kindref="member">_u8</ref><sp/>*)<sp/><ref refid="_w_l_a_n_host_pgm_8h_1a51ee2c225197b1b4a1b0d8f1380fc8ee" kindref="member">WLAN_HOST_PGM_CERT_FILE_NAME</ref>,<sp/><ref refid="group___file_system_1gaaf27b73d19f8e86eed797eb8ff91d565" kindref="member">FS_MODE_OPEN_CREATE</ref>(<ref refid="_w_l_a_n_host_pgm_8c_1a315b0526210bd3e761f1cdf067575e86" kindref="member">WLAN_HOST_PGM_CA_LEN_128KB</ref>,<sp/>(<ref refid="simplelink_8h_1a87886b60e61f791da9953f573bc83d8d" kindref="member">_u32</ref>)<sp/><ref refid="group___file_system_1gga555c24f3e1071fa13f8772a0b95cc7d4a0f1428da2bc548e1be547f39c4758a25" kindref="member">_FS_FILE_OPEN_FLAG_COMMIT</ref><sp/>|<sp/>(<ref refid="simplelink_8h_1a87886b60e61f791da9953f573bc83d8d" kindref="member">_u32</ref>)<ref refid="group___file_system_1gga555c24f3e1071fa13f8772a0b95cc7d4aa460f21229bcbd834e878c6bf6531e75" kindref="member">_FS_FILE_PUBLIC_WRITE</ref>),<sp/>&amp;token,<sp/>&amp;fileHandle);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retVal<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>open<sp/>failed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8ba1e0d295f38f53231db01eebc9a02a2d7" kindref="member">RETCODE_WLAN_HOST_PGM_FS_OPEN_FAILED</ref>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>program<sp/>the<sp/>Certificate<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remainingLen<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="_w_l_a_n_host_pgm_8c_1a618b2bf5eb88cfa2b4c955488bdb8fcf" kindref="member">WLANHostPgmXdkDummyCertificate</ref>);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>movingOffset<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chunkLen<sp/>=<sp/>(<ref refid="simplelink_8h_1a87886b60e61f791da9953f573bc83d8d" kindref="member">_u32</ref>)<sp/><ref refid="_w_l_a_n_host_pgm_8c_1ae445deaf125abfaa74975a6ee5a63e94" kindref="member">WLAN_HOST_PGM_CA_FIND_MIN</ref>(<ref refid="_w_l_a_n_host_pgm_8c_1a2426915707808f6e0c9a231f4535964c" kindref="member">WLAN_HOST_PGM_CA_CHUNK_LEN</ref>,<sp/>remainingLen);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;WLANHostPgmUploadCertificate<sp/>:<sp/>Programming<sp/>certificate<sp/>file\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Flashing<sp/>must<sp/>be<sp/>done<sp/>in<sp/>1024<sp/>bytes<sp/>chunks<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retVal<sp/>=<sp/>sl_FsWrite(fileHandle,<sp/>movingOffset,<sp/>(<ref refid="simplelink_8h_1a44f20b191bdb85d44eabe758192d7f11" kindref="member">_u8</ref><sp/>*)<sp/>&amp;<ref refid="_w_l_a_n_host_pgm_8c_1a618b2bf5eb88cfa2b4c955488bdb8fcf" kindref="member">WLANHostPgmXdkDummyCertificate</ref>[movingOffset],<sp/>chunkLen);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retVal<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>write<sp/>failed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8ba8c587a3385e2f413b2a93cbd0c2e2d59" kindref="member">RETCODE_WLAN_HOST_PGM_FS_WRITE_FAILED</ref>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remainingLen<sp/>-=<sp/>chunkLen;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>movingOffset<sp/>+=<sp/>chunkLen;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chunkLen<sp/>=<sp/>(<ref refid="simplelink_8h_1a87886b60e61f791da9953f573bc83d8d" kindref="member">_u32</ref>)<sp/><ref refid="_w_l_a_n_host_pgm_8c_1ae445deaf125abfaa74975a6ee5a63e94" kindref="member">WLAN_HOST_PGM_CA_FIND_MIN</ref>(<ref refid="_w_l_a_n_host_pgm_8c_1a2426915707808f6e0c9a231f4535964c" kindref="member">WLAN_HOST_PGM_CA_CHUNK_LEN</ref>,<sp/>remainingLen);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(chunkLen<sp/>&gt;<sp/>0);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>close<sp/>the<sp/>certificateImage<sp/>file<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;WLANHostPgmUploadCertificate<sp/>:<sp/>Closing<sp/>certificateImage<sp/>file\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retVal<sp/>=<sp/>sl_FsClose(fileHandle,<sp/>0,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retVal<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>close<sp/>failed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8bab9f61924f60141688748b8ac7097aa42" kindref="member">RETCODE_WLAN_HOST_PGM_FS_CLOSE_FAILED</ref>);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;WLANHostPgmUploadCertificate<sp/>:<sp/>Certificate<sp/>successfully<sp/>programmed\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;WLANHostPgmUploadCertificate<sp/>:<sp/>Restarting<sp/>CC3100...<sp/>\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Stop<sp/>the<sp/>CC3100<sp/>device<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(0<sp/>!=<sp/><ref refid="group__device_1ga1e30957d5b7720918fb206d44f373613" kindref="member">sl_Stop</ref>(0xFF))</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8ba0752dd0407ecdbaf53295df2ee1fd304" kindref="member">RETCODE_WLAN_HOST_PGM_SL_STOP_FAILED</ref>);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="task_8h_1aa154068cecd7f31446a7a84af44ab1a3" kindref="member">vTaskDelay</ref>(pdMS_TO_TICKS(1000));</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Initializing<sp/>the<sp/>CC3100<sp/>device<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="simplelink_8h_1afcc951421dee921a20980010117583de" kindref="member">_i16</ref>)<sp/><ref refid="group__wlan_1gga14f655c6dccc422443a415969aa31a10a2340ff80c8deb594bfbb3a6dec34c4aa" kindref="member">ROLE_STA</ref><sp/>!=<sp/><ref refid="group__device_1ga5869df658d2c9fe3c2baa50503a1a8dd" kindref="member">sl_Start</ref>(0,<sp/>0,<sp/>0))</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8ba946eae5e48951b0a68acfb856f4411fc" kindref="member">RETCODE_WLAN_HOST_PGM_SL_START_FAILED</ref>);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;WLANHostPgmUploadCertificate<sp/>:<sp/>Restart<sp/>was<sp/>successful.<sp/>\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="task_8h_1aa154068cecd7f31446a7a84af44ab1a3" kindref="member">vTaskDelay</ref>(pdMS_TO_TICKS(1000));<sp/></highlight><highlight class="comment">/*<sp/>Needed<sp/>for<sp/>Bootup<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retcode;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="_w_l_a_n_host_pgm_8h_1a4883bbb99b76ae79ea1c0ef04358a536" refkind="member"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_w_l_a_n_host_pgm_8c_1a4883bbb99b76ae79ea1c0ef04358a536" kindref="member">WLANHostPgm_Setup</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="_w_l_a_n_host_pgm_8h_1a0080a0f8bebe80919c4b1c72f503823d" refkind="member"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_w_l_a_n_host_pgm_8c_1a0080a0f8bebe80919c4b1c72f503823d" kindref="member">WLANHostPgm_Enable</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_w_l_a_n_host_pgm_8c_1a46b5b32ad9c6331e5d5a4f34de6b9a4b" kindref="member">WLANHostPgmUploadCertificate</ref>();</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/WLANHostPgm.c"/>
+  </compounddef>
+</doxygen>

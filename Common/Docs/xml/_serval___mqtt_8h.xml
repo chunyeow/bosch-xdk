@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_serval___mqtt_8h" kind="file">
+    <compoundname>Serval_Mqtt.h</compoundname>
+    <includes refid="_serval___defines_8h" local="no">Serval_Defines.h</includes>
+    <includedby refid="_serval___resources_8h" local="no">SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Resources.h</includedby>
+    <incdepgraph>
+      <node id="30717">
+        <label>Serval_Defines.h</label>
+        <link refid="_serval___defines_8h"/>
+      </node>
+      <node id="30716">
+        <label>SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Mqtt.h</label>
+        <link refid="Serval_Mqtt.h"/>
+        <childnode refid="30717" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="30719">
+        <label>SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Resources.h</label>
+        <link refid="_serval___resources_8h"/>
+      </node>
+      <node id="30718">
+        <label>SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Mqtt.h</label>
+        <link refid="Serval_Mqtt.h"/>
+        <childnode refid="30719" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_serval___mqtt_8h_1a84d3d30c6bb82e4518cade303f7de6ef" prot="public" static="no">
+        <name>SERVAL_MQTT_MAX_NUM_SESSIONS</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Max number of MQTT connections that can be handled </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Mqtt.h" line="77" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Mqtt.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implementation of the MQTT protocol. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="since"><para>1.9</para></simplesect>
+WARNING: This implementation is experimental in order to obtain feedback about the API. It is still subject to change.</para><para>The MQTT API is designed around the idea of one or more MQTT sessions. The application defines a MqttSession_T structure and fills it with all necessary information to connect to a MQTT server.</para><para>The interaction with the session occurs via the remaining Mqtt_* functions, incoming data and confirmation of other events, e.g. subscription or connection, are communicated to the application via the onMqttEvent callback in the session.</para><para>Each event will carry with it event-specific data which allow the application to understand the context of the event.</para><para>The API is straightforward: <programlisting><codeline><highlight class="normal">MqttSession_T<sp/>session;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">retcode_t<sp/>onMqttEvent(MqttSession_T*<sp/>session,<sp/>MqttEvent_t<sp/>eventType,<sp/>const<sp/>MqttEventData_t*<sp/>eventData)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//handle<sp/>incoming<sp/>events,<sp/>session<sp/>established,<sp/>incoming<sp/>published,<sp/>etc.<sp/>here.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>RC_OK;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>mqttExample(void)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>retcode_t<sp/>rc<sp/>=<sp/>Mqtt_initialize();</highlight></codeline>
+<codeline><highlight class="normal"><sp/>if<sp/>(<sp/>rc<sp/>!=<sp/>RC_OK<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_ERROR(&quot;Could<sp/>not<sp/>initialize<sp/>mqtt,<sp/>error<sp/>0x%04x\n&quot;,<sp/>rc);</highlight></codeline>
+<codeline><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>memset(&amp;session,<sp/>0,<sp/>sizeof(session));</highlight></codeline>
+<codeline><highlight class="normal"><sp/>Mqtt_initializeInternalSession(&amp;session);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>session.onMqttEvent<sp/>=<sp/>onMqttEvent;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>//fill<sp/>remaining<sp/>session<sp/>structure,<sp/>e.g.<sp/>using</highlight></codeline>
+<codeline><highlight class="normal"><sp/>//SupportedUrl_fromString(destination,<sp/>strlen(destination),<sp/>&amp;session.target);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>rc<sp/>=<sp/>Mqtt_connect(&amp;session);</highlight></codeline>
+<codeline><highlight class="normal"><sp/>if<sp/>(<sp/>rc<sp/>!=<sp/>RC_OK<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_ERROR(&quot;Could<sp/>not<sp/>connect,<sp/>error<sp/>0x%04x\n&quot;,<sp/>rc);</highlight></codeline>
+<codeline><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>//<sp/>call<sp/>Mqtt_subscribe<sp/>and<sp/>Mqtt_publish<sp/>as<sp/>required</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/********************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2010-2018<sp/>Contributors<sp/>to<sp/>this<sp/>project</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>NOTICE<sp/>file(s)<sp/>distributed<sp/>with<sp/>this<sp/>work<sp/>for<sp/>additional</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>information<sp/>regarding<sp/>copyright<sp/>ownership.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>This<sp/>program<sp/>and<sp/>the<sp/>accompanying<sp/>materials<sp/>are<sp/>made<sp/>available<sp/>under<sp/>the</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>terms<sp/>of<sp/>the<sp/>Eclipse<sp/>Public<sp/>License<sp/>2.0<sp/>which<sp/>is<sp/>available<sp/>at</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>http://www.eclipse.org/legal/epl-2.0</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>EPL-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="preprocessor">#ifndef<sp/>SERVAL_MQTT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVAL_MQTT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SERVAL_MQTT_MAX_NUM_SESSIONS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="_serval___mqtt_8h_1a84d3d30c6bb82e4518cade303f7de6ef" refkind="member"><highlight class="preprocessor">#define<sp/>SERVAL_MQTT_MAX_NUM_SESSIONS<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_serval___defines_8h" kindref="compound">Serval_Defines.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>SERVAL_ENABLE_MQTT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SERVAL_MQTT_MAX_SUPPORTED_QOS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="preprocessor">#define<sp/>SERVAL_MQTT_MAX_SUPPORTED_QOS<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_serval___types_8h" kindref="compound">Serval_Types.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_serval___string_descr_8h" kindref="compound">Serval_StringDescr.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_serval___url_8h" kindref="compound">Serval_Url.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_serval___callable_8h" kindref="compound">Serval_Callable.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">MqttSession_S<sp/>MqttSession_T;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>MQTT_QOS_AT_MOST_ONE<sp/><sp/><sp/><sp/><sp/>=<sp/>0x00,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>MQTT_QOS_AT_LEAST_ONCE<sp/><sp/><sp/>=<sp/>0x01,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>MQTT_QOS_EXACTLY_ONCE<sp/><sp/><sp/><sp/>=<sp/>0x02,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>MQTT_QOS_REPLY_FAILURE<sp/><sp/><sp/>=<sp/>0x80</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}<sp/>Mqtt_qos_t;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>connectReturnCode;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>sessionPresentFlag;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}<sp/>MqttConnectionEstablishedEvent_T;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>count;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_string_descr___s" kindref="compound">StringDescr_T</ref><sp/>*<sp/>topics;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>Mqtt_qos_t*<sp/>qos;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}<sp/>MqttSubscriptionData_T;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_string_descr___s" kindref="compound">StringDescr_T</ref><sp/>topic;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*<sp/>payload;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>length;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>Mqtt_qos_t<sp/>qos;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>retained;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">}<sp/>MqttPublishData_T;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">MqttEventData_u<sp/>MqttEventData_t;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>MqttEvent_e</highlight></codeline>
+<codeline lineno="178"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>MQTT_CONNECTION_ESTABLISHED,</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>MQTT_CONNECTION_ERROR,</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>MQTT_CONNECT_SEND_FAILED,</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>MQTT_CONNECT_TIMEOUT,</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>MQTT_CONNECTION_CLOSED,</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>MQTT_DISCONNECT_SEND_FAILED,</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>MQTT_PING_RESPONSE_RECEIVED,</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>MQTT_PING_SEND_FAILED,</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>MQTT_SUBSCRIPTION_ACKNOWLEDGED,</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>MQTT_SUBSCRIBE_SEND_FAILED,</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>MQTT_SUBSCRIBE_TIMEOUT,</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>MQTT_SUBSCRIPTION_REMOVED,</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>MQTT_UNSUBSCRIBE_SEND_FAILED,</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>MQTT_UNSUBSCRIBE_TIMEOUT,</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>MQTT_INCOMING_PUBLISH,</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>MQTT_PUBLISHED_DATA,</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>MQTT_PUBLISH_TIMEOUT,</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Triggered<sp/>if<sp/>sending<sp/>the<sp/>publish<sp/>or<sp/>release<sp/>message<sp/>caused<sp/>an<sp/>error.<sp/>Only<sp/>_either_<sp/>MQTT_PUBLISHED_DATA<sp/>or<sp/>MQTT_PUBLISH_SEND_FAILED<sp/>are<sp/>triggered<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>MQTT_PUBLISH_SEND_FAILED,</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Triggered<sp/>if<sp/>sending<sp/>an<sp/>acknowledgement<sp/>to<sp/>a<sp/>server<sp/>side<sp/>publish<sp/>or<sp/>release<sp/>message<sp/>failed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>MQTT_PUBLISH_SEND_ACK_FAILED,</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>MQTT_SERVER_DID_NOT_RELEASE,</highlight></codeline>
+<codeline lineno="219"><highlight class="normal">}<sp/>MqttEvent_t;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="_serval___types_8h_1a473797d61ec6d5f5a4f91d1d8b56b198" kindref="member">retcode_t</ref><sp/>(*MqttEventCallback_T)(MqttSession_T*<sp/>session,<sp/>MqttEvent_t<sp/>eventType,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MqttEventData_t*<sp/>eventData);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>---<sp/>Internal<sp/>data<sp/>structures<sp/>for<sp/>MQTT<sp/>---<sp/>*/</highlight></codeline>
+<codeline lineno="229"><highlight class="preprocessor">#define<sp/>MQTT_INTERNAL_MAX_SIZE_FIXED_HEADER<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint8_t<sp/>MqttInternalSessionStatus_t;</highlight></codeline>
+<codeline lineno="234"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint8_t<sp/>MqttInternalFragmentType_t;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>expectedLength;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_basics_8h_1a77e5973480645dc927598cee9a08beca" kindref="member">CommBuff_T</ref><sp/>buffer;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>partial;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>currentHeaderSize;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>use<sp/>to<sp/>store<sp/>bytes<sp/>of<sp/>the<sp/>header<sp/>directly<sp/>in<sp/>case<sp/>we<sp/>get<sp/>a<sp/>very<sp/>short<sp/>fragment.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>header[MQTT_INTERNAL_MAX_SIZE_FIXED_HEADER];</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>onlyHeader;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal">}<sp/>MqttInternalStoredFragment_T;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>MqttInternalSessionStatus_t<sp/>status;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>MqttInternalFragmentType_t<sp/>fragmentType;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>packetIdCounter;<sp/></highlight><highlight class="comment">//must<sp/>be<sp/>unsigned.<sp/>see<sp/>MqttSession_setNewPacketId</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_p_ip_8h_1afed1528da870730b59c4f58ea77bc5ae" kindref="member">Tcp_Socket_T</ref><sp/>socket;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>MqttInternalStoredFragment_T<sp/>fragment;</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_callable___s" kindref="compound">Callable_T</ref><sp/>onIncomingMessage;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal">}<sp/>MqttInternalSessionData_T;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>---<sp/>End<sp/>of<sp/>Internal<sp/>data<sp/>structures<sp/>---<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="keyword">struct<sp/></highlight><highlight class="normal">MqttSession_S</highlight></codeline>
+<codeline lineno="270"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>MQTTVersion;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_string_descr___s" kindref="compound">StringDescr_T</ref><sp/>clientID;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_string_descr___s" kindref="compound">StringDescr_T</ref><sp/>username;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_string_descr___s" kindref="compound">StringDescr_T</ref><sp/>password;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>keepAliveInterval;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>cleanSession;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>haveWill;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>retained;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_string_descr___s" kindref="compound">StringDescr_T</ref><sp/>topic;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_string_descr___s" kindref="compound">StringDescr_T</ref><sp/>message;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mqtt_qos_t<sp/>qos;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>will;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_serval___supported___url___s" kindref="compound">Serval_Supported_Url_T</ref><sp/>target;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/>MqttEventCallback_T<sp/>onMqttEvent;</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/>MqttInternalSessionData_T<sp/></highlight><highlight class="keyword">internal</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="keyword">union<sp/></highlight><highlight class="normal">MqttEventData_u</highlight></codeline>
+<codeline lineno="309"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/>MqttConnectionEstablishedEvent_T<sp/>connect;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/>MqttSubscriptionData_T<sp/>subscription;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>MqttPublishData_T<sp/>publish;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/>MqttSession_T<sp/>session;</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_serval___types_8h_1a473797d61ec6d5f5a4f91d1d8b56b198" kindref="member">retcode_t</ref><sp/>status;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><ref refid="_serval___types_8h_1a473797d61ec6d5f5a4f91d1d8b56b198" kindref="member">retcode_t</ref><sp/>Mqtt_initialize(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><ref refid="_serval___types_8h_1a473797d61ec6d5f5a4f91d1d8b56b198" kindref="member">retcode_t</ref><sp/>Mqtt_initializeInternalSession(MqttSession_T*<sp/>session);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><ref refid="_serval___types_8h_1a473797d61ec6d5f5a4f91d1d8b56b198" kindref="member">retcode_t</ref><sp/>Mqtt_connect(MqttSession_T*<sp/>session);</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Mqtt_isConnected(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MqttSession_T*<sp/>session);</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><ref refid="_serval___types_8h_1a473797d61ec6d5f5a4f91d1d8b56b198" kindref="member">retcode_t</ref><sp/>Mqtt_disconnect(MqttSession_T*<sp/>session);</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><ref refid="_serval___types_8h_1a473797d61ec6d5f5a4f91d1d8b56b198" kindref="member">retcode_t</ref><sp/>Mqtt_ping(MqttSession_T*<sp/>session);</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"></highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><ref refid="_serval___types_8h_1a473797d61ec6d5f5a4f91d1d8b56b198" kindref="member">retcode_t</ref><sp/>Mqtt_subscribe(MqttSession_T*<sp/>session,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_string_descr___s" kindref="compound">StringDescr_T</ref><sp/>topics[],<sp/>Mqtt_qos_t<sp/>qos[]);</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"></highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><ref refid="_serval___types_8h_1a473797d61ec6d5f5a4f91d1d8b56b198" kindref="member">retcode_t</ref><sp/>Mqtt_unsubscribe(MqttSession_T*<sp/>session,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_string_descr___s" kindref="compound">StringDescr_T</ref><sp/>topics[]);</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"></highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><ref refid="_serval___types_8h_1a473797d61ec6d5f5a4f91d1d8b56b198" kindref="member">retcode_t</ref><sp/>Mqtt_publish(MqttSession_T*<sp/>session,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_string_descr___s" kindref="compound">StringDescr_T</ref><sp/>topic,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>payload,<sp/>uint16_t<sp/>length,<sp/>uint8_t<sp/>qos,<sp/>uint8_t<sp/>retained);</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SERVAL_ENABLE_MQTT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="457"><highlight class="normal"></highlight></codeline>
+<codeline lineno="458"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SERVAL_MQTT_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Mqtt.h"/>
+  </compounddef>
+</doxygen>

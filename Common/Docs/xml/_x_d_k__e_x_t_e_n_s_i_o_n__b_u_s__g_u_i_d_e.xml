@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_x_d_k__e_x_t_e_n_s_i_o_n__b_u_s__g_u_i_d_e" kind="page">
+    <compoundname>XDK_EXTENSION_BUS_GUIDE</compoundname>
+    <title>XDK Extension Bus User Guide</title>
+    <detaileddescription>
+<para>Outlines the implementation of additional functionality to the XDK main board, like radios or sensors.</para><sect1 id="_x_d_k__e_x_t_e_n_s_i_o_n__b_u_s__g_u_i_d_e_1XDK">
+<title>General Information</title>
+<para><hruler/>
+ The extension bus allows the implementation of additional functionality to the XDK main board, like radios or sensors. This way, developers can use the hardware and software of XDK for testing out new components with minimal application effort.</para><para><simplesect kind="note"><para>Extension bus documentation updated as per the XDK user Guide documentation section 4.2.5 Errata. This Documentation is applicable for XDK Gateway V1.0 extension board</para></simplesect>
+</para></sect1>
+<sect1 id="_x_d_k__e_x_t_e_n_s_i_o_n__b_u_s__g_u_i_d_e_1XDK_EXTENSION_BUS_GUIDE_Assignments">
+<title>Extension header pin assignment</title>
+<para>Please find the mapping of the XDK extension connector in the following table.</para><para><table rows="27" cols="4"><row>
+<entry thead="yes"><para>pin on connector </para></entry><entry thead="yes"><para>pin on MCU </para></entry><entry thead="yes"><para>Suggested Usage </para></entry><entry thead="yes"><para>Macro  </para></entry></row>
+<row>
+<entry thead="no"><para>A1 </para></entry><entry thead="no"><para>PA0 </para></entry><entry thead="no"><para>Timer0 compare operations </para></entry><entry thead="no"><para>EXTENSION_TIM0_CC0 </para></entry></row>
+<row>
+<entry thead="no"><para>A2 </para></entry><entry thead="no"><para>PC0 </para></entry><entry thead="no"><para>Timer0 compare operations </para></entry><entry thead="no"><para>EXTENSION_TIM0_CC1 </para></entry></row>
+<row>
+<entry thead="no"><para>A3 </para></entry><entry thead="no"><para>PC1 </para></entry><entry thead="no"><para>Timer0 compare operations </para></entry><entry thead="no"><para>EXTENSION_TIM0_CC2 </para></entry></row>
+<row>
+<entry thead="no"><para>A4 </para></entry><entry thead="no"><para>PC2 </para></entry><entry thead="no"><para>Timer0 Dead time insertion operations </para></entry><entry thead="no"><para>EXTENSION_TIM0_CDTI0 </para></entry></row>
+<row>
+<entry thead="no"><para>A5 </para></entry><entry thead="no"><para>PC3 </para></entry><entry thead="no"><para>Timer0 Dead time insertion operations </para></entry><entry thead="no"><para>EXTENSION_TIM0_CDTI1 </para></entry></row>
+<row>
+<entry thead="no"><para>A6 </para></entry><entry thead="no"><para>PC4 </para></entry><entry thead="no"><para>Timer0 Dead time insertion operations </para></entry><entry thead="no"><para>EXTENSION_TIM0_CDTI2 </para></entry></row>
+<row>
+<entry thead="no"><para>A7 </para></entry><entry thead="no"><para>PC8 </para></entry><entry thead="no"><para>Timer2 Capture operations </para></entry><entry thead="no"><para>EXTENSION_TIM2_CC0 </para></entry></row>
+<row>
+<entry thead="no"><para>A8 </para></entry><entry thead="no"><para>PC9 </para></entry><entry thead="no"><para>Timer2 Capture operations </para></entry><entry thead="no"><para>EXTENSION_TIM2_CC1 </para></entry></row>
+<row>
+<entry thead="no"><para>A9 </para></entry><entry thead="no"><para>PC10 </para></entry><entry thead="no"><para>Timer2 Capture operations </para></entry><entry thead="no"><para>EXTENSION_TIM2_CC2 </para></entry></row>
+<row>
+<entry thead="no"><para>A10 </para></entry><entry thead="no"><para>PD6 </para></entry><entry thead="no"><para>ADC0 operations </para></entry><entry thead="no"><para>EXTENSION_ADC0_CH5 </para></entry></row>
+<row>
+<entry thead="no"><para>A11 </para></entry><entry thead="no"><para>PD5 </para></entry><entry thead="no"><para>ADC0 operations </para></entry><entry thead="no"><para>EXTENSION_ADC0_CH6 </para></entry></row>
+<row>
+<entry thead="no"><para>A12 </para></entry><entry thead="no"><para>PA1 </para></entry><entry thead="no"><para>General purpose I/O </para></entry><entry thead="no"><para>EXTENSION_GPIO_IN_OUT_0 </para></entry></row>
+<row>
+<entry thead="no"><para>A13 </para></entry><entry thead="no"><para>PE2 </para></entry><entry thead="no"><para>General purpose I/O </para></entry><entry thead="no"><para>EXTENSION_GPIO_IN_OUT_1 </para></entry></row>
+<row>
+<entry thead="no"><para>B1 </para></entry><entry thead="no"><para>PB9 </para></entry><entry thead="no"><para>UART1_TX operations </para></entry><entry thead="no"><para>EXTENSION_UART1_TX </para></entry></row>
+<row>
+<entry thead="no"><para>B2 </para></entry><entry thead="no"><para>PB10 </para></entry><entry thead="no"><para>UART1_RX operations </para></entry><entry thead="no"><para>EXTENSION_UART1_RX </para></entry></row>
+<row>
+<entry thead="no"><para>B3 </para></entry><entry thead="no"><para>PB2 </para></entry><entry thead="no"><para>UART1_RTS operations </para></entry><entry thead="no"><para>EXTENSION_UART1_RTS </para></entry></row>
+<row>
+<entry thead="no"><para>B4 </para></entry><entry thead="no"><para>PF6 </para></entry><entry thead="no"><para>UART1_CTS operations </para></entry><entry thead="no"><para>EXTENSION_UART1_CTS </para></entry></row>
+<row>
+<entry thead="no"><para>B5 </para></entry><entry thead="no"><para>PB4 </para></entry><entry thead="no"><para>US2 MISO operations </para></entry><entry thead="no"><para>EXTENSION_US2_MISO </para></entry></row>
+<row>
+<entry thead="no"><para>B6 </para></entry><entry thead="no"><para>PB3 </para></entry><entry thead="no"><para>US2 MOSI operations </para></entry><entry thead="no"><para>EXTENSION_US2_MOSI </para></entry></row>
+<row>
+<entry thead="no"><para>B7 </para></entry><entry thead="no"><para>PB5 </para></entry><entry thead="no"><para>US2 clock operations </para></entry><entry thead="no"><para>EXTENSION_US2_SCK </para></entry></row>
+<row>
+<entry thead="no"><para>B8 </para></entry><entry thead="no"><para>PD8 </para></entry><entry thead="no"><para>US2 chip select </para></entry><entry thead="no"><para>EXTENSION_US2_CS </para></entry></row>
+<row>
+<entry thead="no"><para>B9 </para></entry><entry thead="no"><para>PB11 </para></entry><entry thead="no"><para>I2C1 data line </para></entry><entry thead="no"><para>EXTENSION_I2C1_SDA </para></entry></row>
+<row>
+<entry thead="no"><para>B10 </para></entry><entry thead="no"><para>PB12 </para></entry><entry thead="no"><para>I2C1 clock line </para></entry><entry thead="no"><para>EXTENSION_I2C1_SCL </para></entry></row>
+<row>
+<entry thead="no"><para>B11 </para></entry><entry thead="no"><para>2V5 </para></entry><entry thead="no"><para>Power Limit 100mA continuous/ peak </para></entry><entry thead="no"><para>- </para></entry></row>
+<row>
+<entry thead="no"><para>B12 </para></entry><entry thead="no"><para>3V3 </para></entry><entry thead="no"><para>Power Limit 100mA continuous/ peak </para></entry><entry thead="no"><para>- </para></entry></row>
+<row>
+<entry thead="no"><para>B13 </para></entry><entry thead="no"><para>GND </para></entry><entry thead="no"><para>Power </para></entry><entry thead="no"><para>- </para></entry></row>
+</table>
+The extension bus connector of XDK is a 26-pin male connector of type <ulink url="https://www.erni-x-press.com/en/artikel/steckverbinder/smc/zweireihige-smc/054595-smc-male-26-pins-right-angle.html">ERNI Male 054595</ulink>. For your extension boards, please use the same connector and use the flat ribbon cable to connect your extension board to XDK.</para><para>The MCU pins refer to the Giant Gecko microcontroller on the XDK. For details on the configuration, please refer to the <ulink url="https://www.silabs.com/Support%20Documents/TechnicalDocs/EFM32GG390.pdf">MCU datasheet</ulink> and <ulink url="http://www.silabs.com/Support%20Documents/TechnicalDocs/EFM32GG-RM.pdf">MCU Reference Manual</ulink>.</para><para><simplesect kind="warning"><para>I2C1 data pin (PB11) and I2C clock pin (PB12) have an internal pull up resistor of 3.32k and hence cannot be used as GPIO. </para></simplesect>
+<simplesect kind="note"><para>For XDK Worbench 1.3.0, extension bus can be configured with below mentioned file. For XDK Worbench 1.5.2 and above, use BSP to configure extension bus</para></simplesect>
+Any pin that you want to use will have to be configured accordingly. Please refer to the GPIO_Driver and PTD_portDriver modules for doing so. All pins are assigned with default modes and values in file xdk110/HWconfig/HW_XDK_v1/PDC_pinDefaultConfig\PDC_pinDefaultConfig_cc.c. Please refer to the code for further information.</para><para>The example XdkExtensionPort outlines the usage of external interface I2C, SPI, UART and GPIO device to XDK via extension Bus. Refer XdkExtensionPort in xdk110/Apps </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,589 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_mbedtls_config_t_l_s_8h" kind="file">
+    <compoundname>MbedtlsConfigTLS.h</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2006-2018,<sp/>ARM<sp/>Limited,<sp/>All<sp/>Rights<sp/>Reserved</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);<sp/>you<sp/>may</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/><sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,<sp/>WITHOUT</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/><sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/><sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>mbed<sp/>TLS<sp/>(https://tls.mbed.org)</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_CONFIG_TLS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CONFIG_TLS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>SERVAL_ENABLE_TLS<sp/>&amp;&amp;<sp/>SERVAL_TLS_MBEDTLS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_MSC_VER)<sp/>&amp;&amp;<sp/>!defined(_CRT_SECURE_NO_DEPRECATE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_CRT_SECURE_NO_DEPRECATE<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor">#define<sp/>MBEDTLS_HAVE_ASM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="comment">//#define<sp/>MBEDTLS_NO_UDBL_DIVISION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="comment">//#define<sp/>MBEDTLS_NO_64BIT_MULTIPLICATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="comment">//#define<sp/>MBEDTLS_HAVE_SSE2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="comment">//#define<sp/>MBEDTLS_HAVE_TIME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="comment">//#define<sp/>MBEDTLS_HAVE_TIME_DATE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_MEMORY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PLATFORM_MEMORY)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>XdkMbedCalloc(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>num,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>XdkMbedFree(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>ptr);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PLATFORM_MEMORY<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_FREE_MACRO<sp/><sp/><sp/><sp/><sp/>XdkMbedFree</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_CALLOC_MACRO<sp/><sp/><sp/>XdkMbedCalloc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_NO_STD_FUNCTIONS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_EXIT_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_TIME_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_FPRINTF_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_PRINTF_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_SNPRINTF_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_NV_SEED_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_SETUP_TEARDOWN_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="comment">//#define<sp/>MBEDTLS_DEPRECATED_WARNING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="comment">//#define<sp/>MBEDTLS_DEPRECATED_REMOVED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>\}<sp/>name<sp/>SECTION:<sp/>System<sp/>support<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="comment">//#define<sp/>MBEDTLS_TIMING_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="comment">//#define<sp/>MBEDTLS_AES_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ARC4_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ARIA_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_BLOWFISH_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_CAMELLIA_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_CCM_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_CHACHA20_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_CHACHAPOLY_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_CMAC_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_DES_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_DHM_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECJPAKE_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_GCM_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_NIST_KW_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_MD2_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_MD4_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_MD5_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_POLY1305_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_RIPEMD160_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_RSA_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_SHA1_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_SHA256_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_SHA512_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_XTEA_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="330"><highlight class="comment"><sp/>*<sp/>When<sp/>replacing<sp/>the<sp/>elliptic<sp/>curve<sp/>module,<sp/>pleace<sp/>consider,<sp/>that<sp/>it<sp/>is</highlight></codeline>
+<codeline lineno="331"><highlight class="comment"><sp/>*<sp/>implemented<sp/>with<sp/>two<sp/>.c<sp/>files:</highlight></codeline>
+<codeline lineno="332"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>ecp.c</highlight></codeline>
+<codeline lineno="333"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>ecp_curves.c</highlight></codeline>
+<codeline lineno="334"><highlight class="comment"><sp/>*<sp/>You<sp/>can<sp/>replace<sp/>them<sp/>very<sp/>much<sp/>like<sp/>all<sp/>the<sp/>other<sp/>MBEDTLS__MODULE_NAME__ALT</highlight></codeline>
+<codeline lineno="335"><highlight class="comment"><sp/>*<sp/>macros<sp/>as<sp/>described<sp/>above.<sp/>The<sp/>only<sp/>difference<sp/>is<sp/>that<sp/>you<sp/>have<sp/>to<sp/>make<sp/>sure</highlight></codeline>
+<codeline lineno="336"><highlight class="comment"><sp/>*<sp/>that<sp/>you<sp/>provide<sp/>functionality<sp/>for<sp/>both<sp/>.c<sp/>files.</highlight></codeline>
+<codeline lineno="337"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECP_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="comment">//#define<sp/>MBEDTLS_MD2_PROCESS_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_MD4_PROCESS_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_MD5_PROCESS_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_RIPEMD160_PROCESS_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_SHA1_PROCESS_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_SHA256_PROCESS_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_SHA512_PROCESS_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_DES_SETKEY_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_DES_CRYPT_ECB_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_DES3_CRYPT_ECB_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_AES_SETKEY_ENC_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_AES_SETKEY_DEC_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_AES_ENCRYPT_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="388"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_AES_DECRYPT_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECDH_GEN_PUBLIC_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECDH_COMPUTE_SHARED_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECDSA_VERIFY_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="392"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECDSA_SIGN_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="393"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECDSA_GENKEY_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight></codeline>
+<codeline lineno="435"><highlight class="comment">/*<sp/>Required<sp/>for<sp/>all<sp/>the<sp/>functions<sp/>in<sp/>this<sp/>section<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="436"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECP_INTERNAL_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="437"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Support<sp/>for<sp/>Weierstrass<sp/>curves<sp/>with<sp/>Jacobi<sp/>representation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="438"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECP_RANDOMIZE_JAC_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECP_ADD_MIXED_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="440"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECP_DOUBLE_JAC_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="441"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECP_NORMALIZE_JAC_MANY_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="442"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECP_NORMALIZE_JAC_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="443"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Support<sp/>for<sp/>curves<sp/>with<sp/>Montgomery<sp/>arithmetic<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="444"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECP_DOUBLE_ADD_MXZ_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="445"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECP_RANDOMIZE_MXZ_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="446"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECP_NORMALIZE_MXZ_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="447"><highlight class="normal"></highlight></codeline>
+<codeline lineno="463"><highlight class="comment">//#define<sp/>MBEDTLS_TEST_NULL_ENTROPY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="464"><highlight class="normal"></highlight></codeline>
+<codeline lineno="476"><highlight class="comment">//#define<sp/>MBEDTLS_ENTROPY_HARDWARE_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="477"><highlight class="normal"></highlight></codeline>
+<codeline lineno="496"><highlight class="comment">//#define<sp/>MBEDTLS_AES_ROM_TABLES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="497"><highlight class="normal"></highlight></codeline>
+<codeline lineno="518"><highlight class="comment">//#define<sp/>MBEDTLS_AES_FEWER_TABLES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="519"><highlight class="normal"></highlight></codeline>
+<codeline lineno="527"><highlight class="comment">//#define<sp/>MBEDTLS_CAMELLIA_SMALL_MEMORY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="528"><highlight class="normal"></highlight></codeline>
+<codeline lineno="529"><highlight class="normal"></highlight></codeline>
+<codeline lineno="535"><highlight class="preprocessor">#define<sp/>MBEDTLS_CIPHER_MODE_CBC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="536"><highlight class="normal"></highlight></codeline>
+<codeline lineno="542"><highlight class="comment">//#define<sp/>MBEDTLS_CIPHER_MODE_CFB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="543"><highlight class="normal"></highlight></codeline>
+<codeline lineno="549"><highlight class="comment">//#define<sp/>MBEDTLS_CIPHER_MODE_CTR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="550"><highlight class="normal"></highlight></codeline>
+<codeline lineno="556"><highlight class="comment">//#define<sp/>MBEDTLS_CIPHER_MODE_OFB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="557"><highlight class="normal"></highlight></codeline>
+<codeline lineno="563"><highlight class="comment">//#define<sp/>MBEDTLS_CIPHER_MODE_XTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="564"><highlight class="normal"></highlight></codeline>
+<codeline lineno="596"><highlight class="comment">//#define<sp/>MBEDTLS_CIPHER_NULL_CIPHER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="597"><highlight class="normal"></highlight></codeline>
+<codeline lineno="609"><highlight class="comment">//#define<sp/>MBEDTLS_CIPHER_PADDING_PKCS7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="610"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_CIPHER_PADDING_ONE_AND_ZEROS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="611"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_CIPHER_PADDING_ZEROS_AND_LEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="612"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_CIPHER_PADDING_ZEROS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="613"><highlight class="normal"></highlight></codeline>
+<codeline lineno="630"><highlight class="comment">//#define<sp/>MBEDTLS_ENABLE_WEAK_CIPHERSUITES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="631"><highlight class="normal"></highlight></codeline>
+<codeline lineno="643"><highlight class="comment">//#define<sp/>MBEDTLS_REMOVE_ARC4_CIPHERSUITES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="644"><highlight class="normal"></highlight></codeline>
+<codeline lineno="645"><highlight class="normal"></highlight></codeline>
+<codeline lineno="646"><highlight class="normal"></highlight></codeline>
+<codeline lineno="655"><highlight class="comment">//#define<sp/>MBEDTLS_ECP_DP_SECP192R1_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="656"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECP_DP_SECP224R1_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="657"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECP_DP_SECP521R1_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="658"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECP_DP_SECP192K1_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="659"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECP_DP_SECP224K1_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="660"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECP_DP_SECP256K1_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="661"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECP_DP_BP256R1_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="662"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ECP_DP_BP384R1_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="663"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECP_DP_BP512R1_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="664"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECP_DP_CURVE25519_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="665"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECP_DP_CURVE448_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="666"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECP_DP_SECP256R1_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="667"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECP_DP_SECP384R1_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="668"><highlight class="normal"></highlight></codeline>
+<codeline lineno="678"><highlight class="preprocessor">#define<sp/>MBEDTLS_ECP_NIST_OPTIM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="679"><highlight class="normal"></highlight></codeline>
+<codeline lineno="692"><highlight class="preprocessor">#define<sp/>MBEDTLS_ECDSA_DETERMINISTIC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="693"><highlight class="normal"></highlight></codeline>
+<codeline lineno="714"><highlight class="preprocessor">#define<sp/>MBEDTLS_KEY_EXCHANGE_PSK_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="715"><highlight class="normal"></highlight></codeline>
+<codeline lineno="745"><highlight class="comment">//#define<sp/>MBEDTLS_KEY_EXCHANGE_DHE_PSK_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="746"><highlight class="normal"></highlight></codeline>
+<codeline lineno="765"><highlight class="comment">//#define<sp/>MBEDTLS_KEY_EXCHANGE_ECDHE_PSK_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="766"><highlight class="normal"></highlight></codeline>
+<codeline lineno="790"><highlight class="comment">//#define<sp/>MBEDTLS_KEY_EXCHANGE_RSA_PSK_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="791"><highlight class="normal"></highlight></codeline>
+<codeline lineno="818"><highlight class="preprocessor">#define<sp/>MBEDTLS_KEY_EXCHANGE_RSA_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="819"><highlight class="normal"></highlight></codeline>
+<codeline lineno="850"><highlight class="comment">//#define<sp/>MBEDTLS_KEY_EXCHANGE_DHE_RSA_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="851"><highlight class="normal"></highlight></codeline>
+<codeline lineno="875"><highlight class="comment">//#define<sp/>MBEDTLS_KEY_EXCHANGE_ECDHE_RSA_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="876"><highlight class="normal"></highlight></codeline>
+<codeline lineno="899"><highlight class="comment">//#define<sp/>MBEDTLS_KEY_EXCHANGE_ECDHE_ECDSA_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="900"><highlight class="normal"></highlight></codeline>
+<codeline lineno="923"><highlight class="comment">//#define<sp/>MBEDTLS_KEY_EXCHANGE_ECDH_ECDSA_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="924"><highlight class="normal"></highlight></codeline>
+<codeline lineno="947"><highlight class="comment">//#define<sp/>MBEDTLS_KEY_EXCHANGE_ECDH_RSA_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="948"><highlight class="normal"></highlight></codeline>
+<codeline lineno="966"><highlight class="comment">//#define<sp/>MBEDTLS_KEY_EXCHANGE_ECJPAKE_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="967"><highlight class="normal"></highlight></codeline>
+<codeline lineno="980"><highlight class="comment">//#define<sp/>MBEDTLS_PK_PARSE_EC_EXTENDED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="981"><highlight class="normal"></highlight></codeline>
+<codeline lineno="995"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERROR_STRERROR_DUMMY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="996"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1004"><highlight class="comment">//#define<sp/>MBEDTLS_GENPRIME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1005"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1011"><highlight class="comment">//#define<sp/>MBEDTLS_FS_IO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1012"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1024"><highlight class="comment">//#define<sp/>MBEDTLS_NO_DEFAULT_ENTROPY_SOURCES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1025"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1035"><highlight class="preprocessor">#define<sp/>MBEDTLS_NO_PLATFORM_ENTROPY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1036"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1051"><highlight class="comment">//#define<sp/>MBEDTLS_ENTROPY_FORCE_SHA256</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1052"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1079"><highlight class="comment">//#define<sp/>MBEDTLS_ENTROPY_NV_SEED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1080"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1092"><highlight class="comment">//#define<sp/>MBEDTLS_MEMORY_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1093"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1104"><highlight class="comment">//#define<sp/>MBEDTLS_MEMORY_BACKTRACE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1113"><highlight class="comment">//#define<sp/>MBEDTLS_PK_RSA_ALT_SUPPORT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1124"><highlight class="preprocessor">#define<sp/>MBEDTLS_PKCS1_V15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1135"><highlight class="preprocessor">#define<sp/>MBEDTLS_PKCS1_V21</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1146"><highlight class="comment">//#define<sp/>MBEDTLS_RSA_NO_CRT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1153"><highlight class="preprocessor">#define<sp/>MBEDTLS_SELF_TEST</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1169"><highlight class="comment">//#define<sp/>MBEDTLS_SHA256_SMALLER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1183"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_ALL_ALERT_MESSAGES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1194"><highlight class="comment">//#define<sp/>MBEDTLS_SSL_ASYNC_PRIVATE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1210"><highlight class="comment">//#define<sp/>MBEDTLS_SSL_DEBUG_ALL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1230"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_ENCRYPT_THEN_MAC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1248"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_EXTENDED_MASTER_SECRET</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1265"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_FALLBACK_SCSV</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1275"><highlight class="comment">//#define<sp/>MBEDTLS_SSL_HW_RECORD_ACCEL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1287"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_CBC_RECORD_SPLITTING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1309"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_RENEGOTIATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1319"><highlight class="comment">//#define<sp/>MBEDTLS_SSL_SRV_SUPPORT_SSLV2_CLIENT_HELLO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1329"><highlight class="comment">//#define<sp/>MBEDTLS_SSL_SRV_RESPECT_CLIENT_PREFERENCE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1338"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_MAX_FRAGMENT_LENGTH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1350"><highlight class="comment">//#define<sp/>MBEDTLS_SSL_PROTO_SSL3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1362"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_PROTO_TLS1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1374"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_PROTO_TLS1_1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1375"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1386"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_PROTO_TLS1_2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1387"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1395"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_ALPN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1396"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1409"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_SESSION_TICKETS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1410"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1419"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_EXPORT_KEYS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1420"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1430"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_SERVER_NAME_INDICATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1431"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1439"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_TRUNCATED_HMAC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1440"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1441"><highlight class="normal"></highlight><highlight class="comment">//#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1442"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1465"><highlight class="comment">//#define<sp/>MBEDTLS_SSL_TRUNCATED_HMAC_COMPAT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1466"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1476"><highlight class="preprocessor">#define<sp/>MBEDTLS_THREADING_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1477"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1487"><highlight class="comment">//#define<sp/>MBEDTLS_THREADING_PTHREAD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1488"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1500"><highlight class="comment">//#define<sp/>MBEDTLS_VERSION_FEATURES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1501"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1510"><highlight class="comment">//#define<sp/>MBEDTLS_X509_ALLOW_EXTENSIONS_NON_V3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1511"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1522"><highlight class="comment">//#define<sp/>MBEDTLS_X509_ALLOW_UNSUPPORTED_CRITICAL_EXTENSION</highlight></codeline>
+<codeline lineno="1535"><highlight class="comment"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_X509_CHECK_KEY_USAGE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1536"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1548"><highlight class="preprocessor">#define<sp/>MBEDTLS_X509_CHECK_EXTENDED_KEY_USAGE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1549"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1558"><highlight class="preprocessor">#define<sp/>MBEDTLS_X509_RSASSA_PSS_SUPPORT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1559"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1582"><highlight class="comment">//#define<sp/>MBEDTLS_ZLIB_SUPPORT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1583"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>\}<sp/>name<sp/>SECTION:<sp/>mbed<sp/>TLS<sp/>feature<sp/>support<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1584"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1604"><highlight class="preprocessor">#define<sp/>MBEDTLS_AESNI_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1605"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1679"><highlight class="preprocessor">#define<sp/>MBEDTLS_AES_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1680"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1707"><highlight class="comment">//#define<sp/>MBEDTLS_ARC4_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1708"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1721"><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_PARSE_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1722"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1735"><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_WRITE_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1736"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1747"><highlight class="preprocessor">#define<sp/>MBEDTLS_BASE64_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1748"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1764"><highlight class="preprocessor">#define<sp/>MBEDTLS_BIGNUM_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1765"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1773"><highlight class="comment">//#define<sp/>MBEDTLS_BLOWFISH_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1774"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1828"><highlight class="comment">//#define<sp/>MBEDTLS_CAMELLIA_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1829"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1880"><highlight class="comment">//#define<sp/>MBEDTLS_ARIA_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1881"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1894"><highlight class="preprocessor">#define<sp/>MBEDTLS_CCM_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1895"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1906"><highlight class="comment">//#define<sp/>MBEDTLS_CERTS_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1907"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1915"><highlight class="comment">//#define<sp/>MBEDTLS_CHACHA20_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1916"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1926"><highlight class="comment">//#define<sp/>MBEDTLS_CHACHAPOLY_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1927"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1938"><highlight class="preprocessor">#define<sp/>MBEDTLS_CIPHER_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1939"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1951"><highlight class="comment">//#define<sp/>MBEDTLS_CMAC_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1952"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1965"><highlight class="preprocessor">#define<sp/>MBEDTLS_CTR_DRBG_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1966"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1979"><highlight class="preprocessor">#define<sp/>MBEDTLS_DEBUG_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1980"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2008"><highlight class="comment">//#define<sp/>MBEDTLS_DES_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2009"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2029"><highlight class="comment">//#define<sp/>MBEDTLS_DHM_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2030"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2045"><highlight class="comment">//#define<sp/>MBEDTLS_ECDH_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2046"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2060"><highlight class="comment">//#define<sp/>MBEDTLS_ECDSA_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2061"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2079"><highlight class="comment">//#define<sp/>MBEDTLS_ECJPAKE_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2080"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2093"><highlight class="comment">//#define<sp/>MBEDTLS_ECP_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2094"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2107"><highlight class="preprocessor">#define<sp/>MBEDTLS_ENTROPY_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2119"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERROR_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2133"><highlight class="comment">//#define<sp/>MBEDTLS_GCM_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2156"><highlight class="comment">//#define<sp/>MBEDTLS_HAVEGE_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2171"><highlight class="preprocessor">#define<sp/>MBEDTLS_HKDF_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2185"><highlight class="preprocessor">#define<sp/>MBEDTLS_HMAC_DRBG_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2198"><highlight class="comment">//#define<sp/>MBEDTLS_NIST_KW_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2210"><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2227"><highlight class="comment">//#define<sp/>MBEDTLS_MD2_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2244"><highlight class="comment">//#define<sp/>MBEDTLS_MD4_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2266"><highlight class="preprocessor">#define<sp/>MBEDTLS_MD5_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2282"><highlight class="comment">//#define<sp/>MBEDTLS_MEMORY_BUFFER_ALLOC_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2301"><highlight class="comment">//#define<sp/>MBEDTLS_NET_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2324"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2338"><highlight class="preprocessor">#define<sp/>MBEDTLS_PADLOCK_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2356"><highlight class="preprocessor">#define<sp/>MBEDTLS_PEM_PARSE_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2372"><highlight class="comment">//#define<sp/>MBEDTLS_PEM_WRITE_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2373"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2388"><highlight class="preprocessor">#define<sp/>MBEDTLS_PK_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2389"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2403"><highlight class="preprocessor">#define<sp/>MBEDTLS_PK_PARSE_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2404"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2417"><highlight class="comment">//#define<sp/>MBEDTLS_PK_WRITE_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2418"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2430"><highlight class="preprocessor">#define<sp/>MBEDTLS_PKCS5_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2431"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2445"><highlight class="comment">//#define<sp/>MBEDTLS_PKCS11_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2446"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2461"><highlight class="preprocessor">#define<sp/>MBEDTLS_PKCS12_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2462"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2481"><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2482"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2491"><highlight class="preprocessor">#define<sp/>MBEDTLS_POLY1305_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2492"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2502"><highlight class="comment">//#define<sp/>MBEDTLS_RIPEMD160_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2503"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2521"><highlight class="preprocessor">#define<sp/>MBEDTLS_RSA_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2522"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2543"><highlight class="preprocessor">#define<sp/>MBEDTLS_SHA1_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2544"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2560"><highlight class="preprocessor">#define<sp/>MBEDTLS_SHA256_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2561"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2575"><highlight class="preprocessor">#define<sp/>MBEDTLS_SHA512_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2576"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2587"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_CACHE_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2588"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2597"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_COOKIE_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2598"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2609"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_TICKET_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2610"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2623"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_CLI_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2624"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2637"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_SRV_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2638"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2653"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_TLS_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2654"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2655"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2656"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_KEY_EXCHANGE__SOME__PSK_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2657"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2658"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2679"><highlight class="preprocessor">#define<sp/>MBEDTLS_THREADING_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2680"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2702"><highlight class="comment">//#define<sp/>MBEDTLS_TIMING_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2703"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2713"><highlight class="comment">//#define<sp/>MBEDTLS_VERSION_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2714"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2715"><highlight class="normal"></highlight><highlight class="comment">//#if<sp/>SERVAL_ENABLE_TLS<sp/>&amp;&amp;<sp/>SERVAL_TLS_MBEDTLS</highlight></codeline>
+<codeline lineno="2731"><highlight class="comment"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_X509_USE_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2732"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2747"><highlight class="preprocessor">#define<sp/>MBEDTLS_X509_CRT_PARSE_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2748"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2761"><highlight class="preprocessor">#define<sp/>MBEDTLS_X509_CRL_PARSE_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2762"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2775"><highlight class="preprocessor">#define<sp/>MBEDTLS_X509_CSR_PARSE_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2776"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2788"><highlight class="comment">//#define<sp/>MBEDTLS_X509_CREATE_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2789"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2801"><highlight class="comment">//#define<sp/>MBEDTLS_X509_CRT_WRITE_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2802"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2814"><highlight class="comment">//#define<sp/>MBEDTLS_X509_CSR_WRITE_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2815"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2816"><highlight class="normal"></highlight><highlight class="comment">//#endif<sp/>/*<sp/>#if<sp/>SERVAL_ENABLE_TLS<sp/>&amp;&amp;<sp/>SERVAL_TLS_MBEDTLS<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2817"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2826"><highlight class="comment">//#define<sp/>MBEDTLS_XTEA_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2827"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2828"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>\}<sp/>name<sp/>SECTION:<sp/>mbed<sp/>TLS<sp/>modules<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2829"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2845"><highlight class="comment">/*<sp/>MPI<sp/>/<sp/>BIGNUM<sp/>options<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2846"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MPI_WINDOW_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1<sp/></highlight></codeline>
+<codeline lineno="2847"><highlight class="preprocessor">#define<sp/>MBEDTLS_MPI_MAX_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>512<sp/></highlight></codeline>
+<codeline lineno="2849"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>CTR_DRBG<sp/>options<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2850"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_CTR_DRBG_ENTROPY_LEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>48<sp/>/**&lt;<sp/>Amount<sp/>of<sp/>entropy<sp/>used<sp/>per<sp/>seed<sp/>by<sp/>default<sp/>(48<sp/>with<sp/>SHA-512,<sp/>32<sp/>with<sp/>SHA-256)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2851"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_CTR_DRBG_RESEED_INTERVAL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>10000<sp/>/**&lt;<sp/>Interval<sp/>before<sp/>reseed<sp/>is<sp/>performed<sp/>by<sp/>default<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2852"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_CTR_DRBG_MAX_INPUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>256<sp/>/**&lt;<sp/>Maximum<sp/>number<sp/>of<sp/>additional<sp/>input<sp/>bytes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2853"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_CTR_DRBG_MAX_REQUEST<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1024<sp/>/**&lt;<sp/>Maximum<sp/>number<sp/>of<sp/>requested<sp/>bytes<sp/>per<sp/>call<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2854"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_CTR_DRBG_MAX_SEED_INPUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>384<sp/>/**&lt;<sp/>Maximum<sp/>size<sp/>of<sp/>(re)seed<sp/>buffer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2855"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2856"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>HMAC_DRBG<sp/>options<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2857"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_HMAC_DRBG_RESEED_INTERVAL<sp/><sp/><sp/>10000<sp/>/**&lt;<sp/>Interval<sp/>before<sp/>reseed<sp/>is<sp/>performed<sp/>by<sp/>default<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2858"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_HMAC_DRBG_MAX_INPUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>256<sp/>/**&lt;<sp/>Maximum<sp/>number<sp/>of<sp/>additional<sp/>input<sp/>bytes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2859"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_HMAC_DRBG_MAX_REQUEST<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1024<sp/>/**&lt;<sp/>Maximum<sp/>number<sp/>of<sp/>requested<sp/>bytes<sp/>per<sp/>call<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2860"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_HMAC_DRBG_MAX_SEED_INPUT<sp/><sp/><sp/><sp/><sp/><sp/>384<sp/>/**&lt;<sp/>Maximum<sp/>size<sp/>of<sp/>(re)seed<sp/>buffer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2861"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2862"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ECP<sp/>options<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2863"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECP_MAX_BITS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>521<sp/>/**&lt;<sp/>Maximum<sp/>bit<sp/>size<sp/>of<sp/>groups<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2864"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECP_WINDOW_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>6<sp/>/**&lt;<sp/>Maximum<sp/>window<sp/>size<sp/>used<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2865"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ECP_FIXED_POINT_OPTIM<sp/><sp/><sp/><sp/><sp/><sp/>1<sp/>/**&lt;<sp/>Enable<sp/>fixed-point<sp/>speed-up<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2866"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2867"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Entropy<sp/>options<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2868"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ENTROPY_MAX_SOURCES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20<sp/>/**&lt;<sp/>Maximum<sp/>number<sp/>of<sp/>sources<sp/>supported<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2869"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ENTROPY_MAX_GATHER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>128<sp/>/**&lt;<sp/>Maximum<sp/>amount<sp/>requested<sp/>from<sp/>entropy<sp/>sources<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2870"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_ENTROPY_MIN_HARDWARE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32<sp/>/**&lt;<sp/>Default<sp/>minimum<sp/>number<sp/>of<sp/>bytes<sp/>required<sp/>for<sp/>the<sp/>hardware<sp/>entropy<sp/>source<sp/>mbedtls_hardware_poll()<sp/>before<sp/>entropy<sp/>is<sp/>released<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2871"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2872"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Memory<sp/>buffer<sp/>allocator<sp/>options<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2873"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_MEMORY_ALIGN_MULTIPLE<sp/><sp/><sp/><sp/><sp/><sp/>4<sp/>/**&lt;<sp/>Align<sp/>on<sp/>multiples<sp/>of<sp/>this<sp/>value<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2874"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2875"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Platform<sp/>options<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2876"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_STD_MEM_HDR<sp/><sp/><sp/>&lt;stdlib.h&gt;<sp/>/**&lt;<sp/>Header<sp/>to<sp/>include<sp/>if<sp/>MBEDTLS_PLATFORM_NO_STD_FUNCTIONS<sp/>is<sp/>defined.<sp/>Don&apos;t<sp/>define<sp/>if<sp/>no<sp/>header<sp/>is<sp/>needed.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2877"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_STD_CALLOC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>calloc<sp/>/**&lt;<sp/>Default<sp/>allocator<sp/>to<sp/>use,<sp/>can<sp/>be<sp/>undefined<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2878"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_STD_FREE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free<sp/>/**&lt;<sp/>Default<sp/>free<sp/>to<sp/>use,<sp/>can<sp/>be<sp/>undefined<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2879"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_STD_EXIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit<sp/>/**&lt;<sp/>Default<sp/>exit<sp/>to<sp/>use,<sp/>can<sp/>be<sp/>undefined<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2880"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_STD_TIME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time<sp/>/**&lt;<sp/>Default<sp/>time<sp/>to<sp/>use,<sp/>can<sp/>be<sp/>undefined.<sp/>MBEDTLS_HAVE_TIME<sp/>must<sp/>be<sp/>enabled<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2881"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_STD_FPRINTF<sp/><sp/><sp/><sp/><sp/><sp/>fprintf<sp/>/**&lt;<sp/>Default<sp/>fprintf<sp/>to<sp/>use,<sp/>can<sp/>be<sp/>undefined<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2882"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_STD_PRINTF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf<sp/>/**&lt;<sp/>Default<sp/>printf<sp/>to<sp/>use,<sp/>can<sp/>be<sp/>undefined<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2883"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Note:<sp/>your<sp/>snprintf<sp/>must<sp/>correclty<sp/>zero-terminate<sp/>the<sp/>buffer!<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2884"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_STD_SNPRINTF<sp/><sp/><sp/><sp/>snprintf<sp/>/**&lt;<sp/>Default<sp/>snprintf<sp/>to<sp/>use,<sp/>can<sp/>be<sp/>undefined<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2885"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_STD_EXIT_SUCCESS<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0<sp/>/**&lt;<sp/>Default<sp/>exit<sp/>value<sp/>to<sp/>use,<sp/>can<sp/>be<sp/>undefined<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2886"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_STD_EXIT_FAILURE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>1<sp/>/**&lt;<sp/>Default<sp/>exit<sp/>value<sp/>to<sp/>use,<sp/>can<sp/>be<sp/>undefined<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2887"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_STD_NV_SEED_READ<sp/><sp/><sp/>mbedtls_platform_std_nv_seed_read<sp/>/**&lt;<sp/>Default<sp/>nv_seed_read<sp/>function<sp/>to<sp/>use,<sp/>can<sp/>be<sp/>undefined<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2888"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_STD_NV_SEED_WRITE<sp/><sp/>mbedtls_platform_std_nv_seed_write<sp/>/**&lt;<sp/>Default<sp/>nv_seed_write<sp/>function<sp/>to<sp/>use,<sp/>can<sp/>be<sp/>undefined<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2889"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_STD_NV_SEED_FILE<sp/><sp/>&quot;seedfile&quot;<sp/>/**&lt;<sp/>Seed<sp/>file<sp/>to<sp/>read/write<sp/>with<sp/>default<sp/>implementation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2890"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2891"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>To<sp/>Use<sp/>Function<sp/>Macros<sp/>MBEDTLS_PLATFORM_C<sp/>must<sp/>be<sp/>enabled<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2892"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>MBEDTLS_PLATFORM_XXX_MACRO<sp/>and<sp/>MBEDTLS_PLATFORM_XXX_ALT<sp/>cannot<sp/>both<sp/>be<sp/>defined<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2893"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_CALLOC_MACRO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>calloc<sp/>/**&lt;<sp/>Default<sp/>allocator<sp/>macro<sp/>to<sp/>use,<sp/>can<sp/>be<sp/>undefined<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2894"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_FREE_MACRO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free<sp/>/**&lt;<sp/>Default<sp/>free<sp/>macro<sp/>to<sp/>use,<sp/>can<sp/>be<sp/>undefined<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2895"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_EXIT_MACRO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit<sp/>/**&lt;<sp/>Default<sp/>exit<sp/>macro<sp/>to<sp/>use,<sp/>can<sp/>be<sp/>undefined<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2896"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_TIME_MACRO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time<sp/>/**&lt;<sp/>Default<sp/>time<sp/>macro<sp/>to<sp/>use,<sp/>can<sp/>be<sp/>undefined.<sp/>MBEDTLS_HAVE_TIME<sp/>must<sp/>be<sp/>enabled<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2897"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_TIME_TYPE_MACRO<sp/><sp/><sp/><sp/><sp/><sp/><sp/>time_t<sp/>/**&lt;<sp/>Default<sp/>time<sp/>macro<sp/>to<sp/>use,<sp/>can<sp/>be<sp/>undefined.<sp/>MBEDTLS_HAVE_TIME<sp/>must<sp/>be<sp/>enabled<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2898"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_FPRINTF_MACRO<sp/><sp/><sp/><sp/><sp/><sp/>fprintf<sp/>/**&lt;<sp/>Default<sp/>fprintf<sp/>macro<sp/>to<sp/>use,<sp/>can<sp/>be<sp/>undefined<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2899"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_PRINTF_MACRO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf<sp/>/**&lt;<sp/>Default<sp/>printf<sp/>macro<sp/>to<sp/>use,<sp/>can<sp/>be<sp/>undefined<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2900"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Note:<sp/>your<sp/>snprintf<sp/>must<sp/>correclty<sp/>zero-terminate<sp/>the<sp/>buffer!<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2901"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_SNPRINTF_MACRO<sp/><sp/><sp/><sp/>snprintf<sp/>/**&lt;<sp/>Default<sp/>snprintf<sp/>macro<sp/>to<sp/>use,<sp/>can<sp/>be<sp/>undefined<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2902"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_NV_SEED_READ_MACRO<sp/><sp/><sp/>mbedtls_platform_std_nv_seed_read<sp/>/**&lt;<sp/>Default<sp/>nv_seed_read<sp/>function<sp/>to<sp/>use,<sp/>can<sp/>be<sp/>undefined<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2903"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_NV_SEED_WRITE_MACRO<sp/><sp/>mbedtls_platform_std_nv_seed_write<sp/>/**&lt;<sp/>Default<sp/>nv_seed_write<sp/>function<sp/>to<sp/>use,<sp/>can<sp/>be<sp/>undefined<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2904"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2905"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>SSL<sp/>Cache<sp/>options<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2906"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_SSL_CACHE_DEFAULT_TIMEOUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>86400<sp/>/**&lt;<sp/>1<sp/>day<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2907"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_SSL_CACHE_DEFAULT_MAX_ENTRIES<sp/><sp/><sp/><sp/><sp/><sp/>50<sp/>/**&lt;<sp/>Maximum<sp/>entries<sp/>in<sp/>cache<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2908"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2909"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>SSL<sp/>options<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2910"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2921"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_MAX_CONTENT_LEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4850<sp/></highlight><highlight class="comment">/*<sp/>Used<sp/>for<sp/>storing<sp/>and<sp/>processing<sp/>server<sp/>certificate<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2922"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2929"><highlight class="comment">//#define<sp/>MBEDTLS_SSL_IN_CONTENT_LEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>16384</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2930"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2952"><highlight class="comment">//#define<sp/>MBEDTLS_SSL_OUT_CONTENT_LEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>16384</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2953"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2954"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_SSL_DEFAULT_TICKET_LIFETIME<sp/><sp/><sp/><sp/><sp/>86400<sp/>/**&lt;<sp/>Lifetime<sp/>of<sp/>session<sp/>tickets<sp/>(if<sp/>enabled)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2955"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PSK_MAX_LEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>65<sp/></highlight></codeline>
+<codeline lineno="2956"><highlight class="preprocessor">//#define<sp/>MBEDTLS_SSL_COOKIE_TIMEOUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>60<sp/></highlight></codeline>
+<codeline lineno="2970"><highlight class="preprocessor">//#define<sp/>MBEDTLS_SSL_CIPHERSUITES<sp/>MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2971"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2972"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_CIPHERSUITES<sp/>MBEDTLS_TLS_RSA_WITH_AES_128_CBC_SHA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2973"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2974"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>X509<sp/>options<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2975"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_X509_MAX_INTERMEDIATE_CA<sp/><sp/><sp/>8<sp/><sp/><sp/>/**&lt;<sp/>Maximum<sp/>number<sp/>of<sp/>intermediate<sp/>CAs<sp/>in<sp/>a<sp/>verification<sp/>chain.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2976"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MBEDTLS_X509_MAX_FILE_PATH_LEN<sp/><sp/><sp/><sp/><sp/>512<sp/>/**&lt;<sp/>Maximum<sp/>length<sp/>of<sp/>a<sp/>path/filename<sp/>string<sp/>in<sp/>bytes<sp/>including<sp/>the<sp/>null<sp/>terminator<sp/>character<sp/>(&apos;\0&apos;).<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2977"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2990"><highlight class="comment">//<sp/>#define<sp/>MBEDTLS_TLS_DEFAULT_ALLOW_SHA1_IN_CERTIFICATES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2991"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3007"><highlight class="comment">//#define<sp/>MBEDTLS_TLS_DEFAULT_ALLOW_SHA1_IN_KEY_EXCHANGE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3008"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3027"><highlight class="comment">//#define<sp/>MBEDTLS_PLATFORM_ZEROIZE_ALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3028"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3029"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>\}<sp/>name<sp/>SECTION:<sp/>Customisation<sp/>configuration<sp/>options<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3030"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3031"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Target<sp/>and<sp/>application<sp/>specific<sp/>configurations<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3032"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>YOTTA_CFG_MBEDTLS_TARGET_CONFIG_FILE<sp/>&quot;target_config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3033"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3034"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(TARGET_LIKE_MBED)<sp/>&amp;&amp;<sp/>defined(YOTTA_CFG_MBEDTLS_TARGET_CONFIG_FILE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3035"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>YOTTA_CFG_MBEDTLS_TARGET_CONFIG_FILE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3036"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3037"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3038"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3039"><highlight class="comment"><sp/>*<sp/>Allow<sp/>user<sp/>to<sp/>override<sp/>any<sp/>previous<sp/>default.</highlight></codeline>
+<codeline lineno="3040"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="3041"><highlight class="comment"><sp/>*<sp/>Use<sp/>two<sp/>macro<sp/>names<sp/>for<sp/>that,<sp/>as:</highlight></codeline>
+<codeline lineno="3042"><highlight class="comment"><sp/>*<sp/>-<sp/>with<sp/>yotta<sp/>the<sp/>prefix<sp/>YOTTA_CFG_<sp/>is<sp/>forced</highlight></codeline>
+<codeline lineno="3043"><highlight class="comment"><sp/>*<sp/>-<sp/>without<sp/>yotta<sp/>is<sp/>looks<sp/>weird<sp/>to<sp/>have<sp/>a<sp/>YOTTA<sp/>prefix.</highlight></codeline>
+<codeline lineno="3044"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3045"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(YOTTA_CFG_MBEDTLS_USER_CONFIG_FILE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3046"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>YOTTA_CFG_MBEDTLS_USER_CONFIG_FILE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3047"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(MBEDTLS_USER_CONFIG_FILE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3048"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>MBEDTLS_USER_CONFIG_FILE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3049"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3050"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3051"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;check_config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3052"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3053"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SERVAL_ENABLE_TLS<sp/>&amp;&amp;<sp/>SERVAL_TLS_MBEDTLS<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3054"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_CONFIG_TLS_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/config/MbedTLS/MbedtlsConfigTLS.h"/>
+  </compounddef>
+</doxygen>

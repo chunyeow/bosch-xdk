@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_ble_next_d_s_t_change___service_8h" kind="file">
+    <compoundname>BleNextDSTChange_Service.h</compoundname>
+    <includes refid="_ble_types_8h" local="yes">BleTypes.h</includes>
+    <includes refid="_ble_time_types_8h" local="yes">BleTimeTypes.h</includes>
+    <incdepgraph>
+      <node id="28651">
+        <label>SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleNextDSTChange_Service.h</label>
+        <link refid="BleNextDSTChange_Service.h"/>
+        <childnode refid="28652" relation="include">
+        </childnode>
+        <childnode refid="28655" relation="include">
+        </childnode>
+      </node>
+      <node id="28655">
+        <label>BleTimeTypes.h</label>
+        <link refid="_ble_time_types_8h"/>
+        <childnode refid="28652" relation="include">
+        </childnode>
+      </node>
+      <node id="28652">
+        <label>BleTypes.h</label>
+        <link refid="_ble_types_8h"/>
+        <childnode refid="28653" relation="include">
+        </childnode>
+      </node>
+      <node id="28654">
+        <label>BLECustomConfig.h</label>
+        <link refid="_common_2config_2_b_l_e_custom_config_8h"/>
+      </node>
+      <node id="28653">
+        <label>BleConfig.h</label>
+        <link refid="_ble_config_8h"/>
+        <childnode refid="28654" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="struct_ble_next_d_s_t_change_service_time_request" prot="public">BleNextDSTChangeServiceTimeRequest</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_ble_next_d_s_t_change___service_8h_1a8b30fb7b884d61c4aaa14c6cc3a097dd" prot="public" static="no">
+        <name>BLE_SUPPORT_NEXTDSTCHANGE_SERVICE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>BLE_SUPPORT_NEXTDSTCHANGE_SERVICE Defines if the BLE local device enables access to the local Next DST Change service and characteristic.</para><para>If enabled ( set to 1 ) it enables Profiles to get access to the Next DST Change Service and characteristic</para><para>The default value for this option is disabled (0). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleNextDSTChange_Service.h" line="43" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleNextDSTChange_Service.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_ble_next_d_s_t_change___service_8h_1abe69eace47809b5437ea5c2993d33c3d" prot="public" static="no">
+        <name>BLENEXTDSTCHANGESERVICE_EVENT_TIMEWITHDSTREQUEST</name>
+        <initializer>0xC0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>BLENEXTDSTCHANGESERVICE_EVENT_TIMEWITHDSTREQUEST Event received when the date of the Next DST change is requested from the server. When the remote device request the time of the next DST change the server shall answer with the exact date of the DST change. It should answer as soon as possible, because it exists a timeout. The parms field is a BleNextDSTChangeTimeRequest structure, the TimeWithDST field shall represent the Time with the next DST change and the next DST the next DSToffset when exiting of the callback. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleNextDSTChange_Service.h" line="71" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleNextDSTChange_Service.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_ble_next_d_s_t_change___service_8h_1a03a73b7b325b7eac68da5ec5aab2868e" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* BleNextDSTChangeServiceCallBack)(BleNextDSTChangeServiceEvent event, BleStatus status, void *parms)</definition>
+        <argsstring>)(BleNextDSTChangeServiceEvent event, BleStatus status, void *parms)</argsstring>
+        <name>BleNextDSTChangeServiceCallBack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>BleNextDSTChangeServiceCallBack This callback receives the NEXT DST CHANGE Service events. Each events may be assiociated with specified status and parameters. The callback is executed during the stack context, be careful to not doing heavy process in this function. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleNextDSTChange_Service.h" line="99" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleNextDSTChange_Service.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_ble_next_d_s_t_change___service_8h_1a94be8ac4216c04d4e0ac363bd7af49c1" prot="public" static="no">
+        <type><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref></type>
+        <definition>typedef U8 BleNextDSTChangeServiceEvent</definition>
+        <argsstring></argsstring>
+        <name>BleNextDSTChangeServiceEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>BleNextDSTChangeServiceEvent type Define the different kind of events that could be received by the BleNextDSTChangeServiceCallBack </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleNextDSTChange_Service.h" line="59" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleNextDSTChange_Service.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__BLENEXTDSTCHANGE_SERVICE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__BLENEXTDSTCHANGE_SERVICE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>This<sp/>software<sp/>is<sp/>copyrighted<sp/>by<sp/>Alpwise,<sp/>2016.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>The<sp/>use<sp/>of<sp/>this<sp/>software<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>XDK<sp/>SDK<sp/>EULA</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleNextDSTChange_Service.h</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Description:<sp/><sp/><sp/>Contains<sp/>routines<sp/>declaration<sp/>for<sp/>Next<sp/>DST<sp/>Change<sp/>Service.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>Created:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>November,<sp/>2011</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>Version:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0.1</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>File<sp/>Revision:<sp/>$Rev:<sp/>2724<sp/>$</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>$Project$</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ble_types_8h" kindref="compound">BleTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ble_time_types_8h" kindref="compound">BleTimeTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/><sp/>Type<sp/>definition</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">\***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/>OPTIONAL<sp/>FEATURES</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">\***************************************************************************/</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor">#ifndef<sp/>BLE_SUPPORT_NEXTDSTCHANGE_SERVICE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="_ble_next_d_s_t_change___service_8h_1a8b30fb7b884d61c4aaa14c6cc3a097dd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLE_SUPPORT_NEXTDSTCHANGE_SERVICE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//BLE_SUPPORT_NEXTDSTCHANGE_SERVICE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*<sp/>CONSTANTS</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">\***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/>*<sp/><sp/>Type<sp/>definition</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">\***************************************************************************/</highlight></codeline>
+<codeline lineno="59" refid="_ble_next_d_s_t_change___service_8h_1a94be8ac4216c04d4e0ac363bd7af49c1" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><ref refid="_ble_next_d_s_t_change___service_8h_1a94be8ac4216c04d4e0ac363bd7af49c1" kindref="member">BleNextDSTChangeServiceEvent</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="_ble_next_d_s_t_change___service_8h_1abe69eace47809b5437ea5c2993d33c3d" refkind="member"><highlight class="preprocessor">#define<sp/>BLENEXTDSTCHANGESERVICE_EVENT_TIMEWITHDSTREQUEST<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="struct_ble_next_d_s_t_change_service_time_request" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="86" refid="struct_ble_next_d_s_t_change_service_time_request_1abf232c46a6e5f32cf928e781ca0cb05e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_ble_date_time" kindref="compound">BleDateTime</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="struct_ble_next_d_s_t_change_service_time_request_1abf232c46a6e5f32cf928e781ca0cb05e" kindref="member">timeWithDST</ref>;</highlight></codeline>
+<codeline lineno="87" refid="struct_ble_next_d_s_t_change_service_time_request_1a47d2c5fb3208b444e486b476821d9629" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_time_types_8h_1ab31b26532abbbf8e1c1a2a2cb51d4384" kindref="member">BleTimeDSTOffset</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="struct_ble_next_d_s_t_change_service_time_request_1a47d2c5fb3208b444e486b476821d9629" kindref="member">nextDSTOffset</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}<sp/><ref refid="struct_ble_next_d_s_t_change_service_time_request" kindref="compound">BleNextDSTChangeServiceTimeRequest</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="_ble_next_d_s_t_change___service_8h_1a03a73b7b325b7eac68da5ec5aab2868e" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="_ble_next_d_s_t_change___service_8h_1a03a73b7b325b7eac68da5ec5aab2868e" kindref="member">BleNextDSTChangeServiceCallBack</ref>)(</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_ble_next_d_s_t_change___service_8h_1a94be8ac4216c04d4e0ac363bd7af49c1" kindref="member">BleNextDSTChangeServiceEvent</ref><sp/>event,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/>status,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*parms);<sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************\</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/>*<sp/><sp/>APPLICATION<sp/>INTERFACE<sp/>functions<sp/>definition</highlight></codeline>
+<codeline lineno="107"><highlight class="comment">\****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLE_SUPPORT_NEXTDSTCHANGE_SERVICE<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLE_SUPPORT_NEXTDSTCHANGE_SERVICE<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//__BLENEXTDSTCHANGE_SERVICE_H</highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleNextDSTChange_Service.h"/>
+  </compounddef>
+</doxygen>

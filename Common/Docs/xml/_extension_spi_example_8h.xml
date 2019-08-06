@@ -1,0 +1,370 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_extension_spi_example_8h" kind="file">
+    <compoundname>ExtensionSpiExample.h</compoundname>
+    <includes refid="_xdk_extension_port_2source_2_app_controller_8h" local="yes">AppController.h</includes>
+    <includes refid="_b_c_d_s___retcode_8h" local="yes">BCDS_Retcode.h</includes>
+    <includes refid="_b_c_d_s___cmd_processor_8h" local="yes">BCDS_CmdProcessor.h</includes>
+    <includedby refid="_xdk_extension_port_2source_2_app_controller_8c" local="yes">SDK/xdk110/Apps/XdkExtensionPort/source/AppController.c</includedby>
+    <includedby refid="_extension_spi_example_8c" local="yes">SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionSpiExample.c</includedby>
+    <incdepgraph>
+      <node id="21906">
+        <label>stdbool.h</label>
+      </node>
+      <node id="21910">
+        <label>BCDS_CmdProcessor.h</label>
+        <link refid="_b_c_d_s___cmd_processor_8h"/>
+        <childnode refid="21911" relation="include">
+        </childnode>
+        <childnode refid="21904" relation="include">
+        </childnode>
+        <childnode refid="21909" relation="include">
+        </childnode>
+      </node>
+      <node id="21909">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="21904" relation="include">
+        </childnode>
+      </node>
+      <node id="21905">
+        <label>stdint.h</label>
+      </node>
+      <node id="21908">
+        <label>stdlib.h</label>
+      </node>
+      <node id="21902">
+        <label>SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionSpiExample.h</label>
+        <link refid="ExtensionSpiExample.h"/>
+        <childnode refid="21903" relation="include">
+        </childnode>
+        <childnode refid="21909" relation="include">
+        </childnode>
+        <childnode refid="21910" relation="include">
+        </childnode>
+      </node>
+      <node id="21912">
+        <label>BCDS_UtilsConfig.h</label>
+        <link refid="_b_c_d_s___utils_config_8h"/>
+      </node>
+      <node id="21907">
+        <label>string.h</label>
+      </node>
+      <node id="21911">
+        <label>BCDS_Utils.h</label>
+        <link refid="_b_c_d_s___utils_8h"/>
+        <childnode refid="21912" relation="include">
+        </childnode>
+        <childnode refid="21909" relation="include">
+        </childnode>
+      </node>
+      <node id="21904">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="21905" relation="include">
+        </childnode>
+        <childnode refid="21906" relation="include">
+        </childnode>
+        <childnode refid="21907" relation="include">
+        </childnode>
+        <childnode refid="21908" relation="include">
+        </childnode>
+      </node>
+      <node id="21903">
+        <label>AppController.h</label>
+        <link refid="_xdk_extension_port_2source_2_app_controller_8h"/>
+        <childnode refid="21904" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="21915">
+        <label>SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionSpiExample.c</label>
+        <link refid="_extension_spi_example_8c"/>
+      </node>
+      <node id="21913">
+        <label>SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionSpiExample.h</label>
+        <link refid="ExtensionSpiExample.h"/>
+        <childnode refid="21914" relation="include">
+        </childnode>
+        <childnode refid="21915" relation="include">
+        </childnode>
+      </node>
+      <node id="21914">
+        <label>SDK/xdk110/Apps/XdkExtensionPort/source/AppController.c</label>
+        <link refid="_xdk_extension_port_2source_2_app_controller_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___x_d_k___extension___port___spi_1gacc36b6ca925e63c0b2c7acc57d619edd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T ExtensionSpiExample_DeInitialize</definition>
+        <argsstring>(void)</argsstring>
+        <name>ExtensionSpiExample_DeInitialize</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This API Deinitialize the SPI interface driver Once this called, from there-on user needs to call <ref refid="group___x_d_k___extension___port___spi_1ga970c2061323a4966fdbfed2f25e3bd15" kindref="member">ExtensionSpiExample_Initialize</ref> for using the SPI communication again. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+<simplesect kind="note"><para>The return value consist of (First 1 MSByte represents Package ID, Next byte represents Severity and Last 2 LSBytes represents error code).</para></simplesect>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionSpiExample.h" line="124" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionSpiExample.c" bodystart="226" bodyend="238"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___e_x_t_e_n_s_i_o_n_p_o_r_t_s_p_i_1gafbe088dba3b02c7cefa13e626debc69e" compoundref="_extension_port_spi_8c" startline="220" endline="259">ExtensionPortSpi_DeInitialize</references>
+        <references refid="group___x_d_k___extension___port___spi_1gaae9c6b29a2235bbbece68979548f2529" compoundref="_extension_spi_example_8c" startline="119" endline="128">SpiCSPinDeInit</references>
+      </memberdef>
+      <memberdef kind="function" id="group___x_d_k___extension___port___spi_1ga970c2061323a4966fdbfed2f25e3bd15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T ExtensionSpiExample_Initialize</definition>
+        <argsstring>(CmdProcessor_T *handle)</argsstring>
+        <name>ExtensionSpiExample_Initialize</name>
+        <param>
+          <type><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga41a2f220f03970c1857bd96528307a81" kindref="member">CmdProcessor_T</ref> *</type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+<para>This API initialize the SPI Interface Driver. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command processor handle</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+<simplesect kind="note"><para>The return value consist of (First 1 MSByte represents Package ID, Next byte represents Severity and Last 2 LSBytes represents error code).</para></simplesect>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionSpiExample.h" line="65" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionSpiExample.c" bodystart="132" bodyend="151"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="struct_extension_port_spi___config___s_1aaad609733f3fd8146c8745e953a91b2a" compoundref="_extension_port_spi_8h" startline="91">ExtensionPortSpi_Config_S::BaudRate</references>
+        <references refid="group___x_d_k___extension___port___spi_1ga39e37fee09a6da51af429ebdf2ac408e" compoundref="_extension_spi_example_8c" startline="67">SPI_DATA_TRANSFER_BAUDRATE</references>
+        <references refid="group___e_x_t_e_n_s_i_o_n_p_o_r_t_s_p_i_1gga488c56574677aed6cfc29a281bbd986eaa456d396eacdc8cbd460dd65e176f822" compoundref="_extension_port_spi_8h" startline="61">EXTENSION_PORT_SPI_BIT_ORDER_MSB_FIRST</references>
+        <references refid="group___e_x_t_e_n_s_i_o_n_p_o_r_t_s_p_i_1gga166b0819add7ae6253b6f4f1456a716eab0bf6d50b0b15535f60fde6c4f2f02d1" compoundref="_extension_port_spi_8h" startline="75">EXTENSION_PORT_SPI_CLOCK_MODE_0</references>
+        <references refid="group___x_d_k___extension___port___spi_1ga33bdece599dd3ae82c48bd271b813e75" compoundref="_extension_spi_example_8c" startline="101" endline="114">SpiCSPinInit</references>
+        <references refid="group___e_x_t_e_n_s_i_o_n_p_o_r_t_s_p_i_1gaad3ad9808efe73485bd5b05ed83460e3" compoundref="_extension_port_spi_8c" startline="111" endline="156">ExtensionPortSpi_Initialize</references>
+        <referencedby refid="group___x_d_k___e_x_t_e_n_s_i_o_n___p_o_r_t_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_xdk_extension_port_2source_2_app_controller_8c" startline="219" endline="263">AppControllerSetup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___x_d_k___extension___port___spi_1gab65634770144faad5afb7253ce252619" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T ExtensionSpiExample_ReadRegister</definition>
+        <argsstring>(uint8_t regAddr, uint8_t *readVal, uint8_t readLength)</argsstring>
+        <name>ExtensionSpiExample_ReadRegister</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>regAddr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>readVal</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>readLength</declname>
+        </param>
+        <briefdescription>
+<para>This API Read the value from the SPI interface driver. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">regAddr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Address of the register to Read</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">readVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer to hold the data received over SPI</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">readLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>No of bytes to be read over the SPI bus</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+<simplesect kind="note"><para>The return value consist of (First 1 MSByte represents Package ID, Next byte represents Severity and Last 2 LSBytes represents error code).</para></simplesect>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionSpiExample.h" line="85" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionSpiExample.c" bodystart="154" bodyend="173"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___x_d_k___extension___port___spi_1gac483da0596c443a860120f4a0cdd450a" compoundref="_extension_spi_example_8c" startline="85" endline="88">SpiSetCSLow</references>
+        <references refid="group___e_x_t_e_n_s_i_o_n_p_o_r_t_s_p_i_1ga972c4950da24b0fb48383ef8e3f037e0" compoundref="_extension_port_spi_8c" startline="190" endline="217">ExtensionPortSpi_Write</references>
+        <references refid="group___x_d_k___extension___port___spi_1gadfc3f6aa23d546d54154f2e731ea2f7f" compoundref="_extension_spi_example_8c" startline="66">SPI_DATA_TRANSFER_TIMEOUT_MILLISEC</references>
+        <references refid="group___e_x_t_e_n_s_i_o_n_p_o_r_t_s_p_i_1gadb5aa0fcb79fc02fef96ae5ba805973b" compoundref="_extension_port_spi_8c" startline="159" endline="187">ExtensionPortSpi_Read</references>
+        <references refid="group___x_d_k___extension___port___spi_1ga0fd28d01b6edc8a9acbb5fabd5a59c51" compoundref="_extension_spi_example_8c" startline="93" endline="96">SpiSetCSHigh</references>
+        <referencedby refid="group___x_d_k___extension___port___spi_1gafd2b9bd34f0053ecac0c84ed336b699c" compoundref="_extension_spi_example_8c" startline="198" endline="223">ExtensionSpiExample_ValidateChip</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___x_d_k___extension___port___spi_1gafd2b9bd34f0053ecac0c84ed336b699c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T ExtensionSpiExample_ValidateChip</definition>
+        <argsstring>(void)</argsstring>
+        <name>ExtensionSpiExample_ValidateChip</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This API is used to demonstrate read and write on the extension port SPI interface. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionSpiExample.h" line="112" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionSpiExample.c" bodystart="198" bodyend="223"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___x_d_k___extension___port___spi_1gab65634770144faad5afb7253ce252619" compoundref="_extension_spi_example_8c" startline="154" endline="173">ExtensionSpiExample_ReadRegister</references>
+        <references refid="group___x_d_k___extension___port___spi_1gae83c5a08affc7f9c0f12841d4be66076" compoundref="_extension_spi_example_8c" startline="70">EXT_PORT_SPI_REG2_ADDR</references>
+        <references refid="group___x_d_k___extension___port___spi_1gac21666c905ad16045fe172f49fc0c113" compoundref="_extension_spi_example_8c" startline="73">EXT_PORT_SPI_READ_BIT</references>
+        <references refid="group___x_d_k___extension___port___spi_1gadd08b4586653ac9e454cfc0e8ea6a524" compoundref="_extension_spi_example_8c" startline="74">EXT_PORT_SPI_REG2_ADDR_VAL</references>
+        <references refid="group___x_d_k___extension___port___spi_1gaacde410d5525899577cd3837c938f285" compoundref="_extension_spi_example_8c" startline="72">EXT_PORT_SPI_REG1_ADDR_VAL</references>
+        <references refid="group___x_d_k___extension___port___spi_1gad938231c9b57a0332a8295ca25737585" compoundref="_extension_spi_example_8c" startline="176" endline="195">ExtensionSpiExample_WriteRegister</references>
+        <references refid="group___x_d_k___extension___port___spi_1ga11be0ba41fa7534846832e836d3c19ff" compoundref="_extension_spi_example_8c" startline="69">EXT_PORT_SPI_REG1_ADDR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" compoundref="_b_c_d_s___retcode_8h" startline="106">RETCODE_FAILURE</references>
+        <referencedby refid="group___x_d_k___e_x_t_e_n_s_i_o_n___p_o_r_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_xdk_extension_port_2source_2_app_controller_8c" startline="116" endline="167">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___x_d_k___extension___port___spi_1gad938231c9b57a0332a8295ca25737585" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T ExtensionSpiExample_WriteRegister</definition>
+        <argsstring>(uint8_t regAddr, uint8_t *writeVal, uint8_t writeLength)</argsstring>
+        <name>ExtensionSpiExample_WriteRegister</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>regAddr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>writeVal</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>writeLength</declname>
+        </param>
+        <briefdescription>
+<para>This API Write the Value to the SPI interface driver. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">regAddr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Address of the register to write</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">writeVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer to hold the data to be transmitted over SPI</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">writeLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>No of bytes to be transmitted over the SPI bus</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+<simplesect kind="note"><para>The return value consist of (First 1 MSByte represents Package ID, Next byte represents Severity and Last 2 LSBytes represents error code).</para></simplesect>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionSpiExample.h" line="105" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionSpiExample.c" bodystart="176" bodyend="195"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___x_d_k___extension___port___spi_1gac483da0596c443a860120f4a0cdd450a" compoundref="_extension_spi_example_8c" startline="85" endline="88">SpiSetCSLow</references>
+        <references refid="group___e_x_t_e_n_s_i_o_n_p_o_r_t_s_p_i_1ga972c4950da24b0fb48383ef8e3f037e0" compoundref="_extension_port_spi_8c" startline="190" endline="217">ExtensionPortSpi_Write</references>
+        <references refid="group___x_d_k___extension___port___spi_1gadfc3f6aa23d546d54154f2e731ea2f7f" compoundref="_extension_spi_example_8c" startline="66">SPI_DATA_TRANSFER_TIMEOUT_MILLISEC</references>
+        <references refid="group___x_d_k___extension___port___spi_1ga0fd28d01b6edc8a9acbb5fabd5a59c51" compoundref="_extension_spi_example_8c" startline="93" endline="96">SpiSetCSHigh</references>
+        <referencedby refid="group___x_d_k___extension___port___spi_1gafd2b9bd34f0053ecac0c84ed336b699c" compoundref="_extension_spi_example_8c" startline="198" endline="223">ExtensionSpiExample_ValidateChip</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>EXTENSIONSPIEXAMPLE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTENSIONSPIEXAMPLE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Include<sp/>all<sp/>headers<sp/>which<sp/>are<sp/>needed<sp/>by<sp/>this<sp/>file.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_xdk_extension_port_2source_2_app_controller_8h" kindref="compound">AppController.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>EXTENSION_PORT_SPI_FEATURE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___retcode_8h" kindref="compound">BCDS_Retcode.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___cmd_processor_8h" kindref="compound">BCDS_CmdProcessor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>the<sp/>type<sp/>and<sp/>macro<sp/>definitions<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>the<sp/>function<sp/>declarations<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___x_d_k___extension___port___spi_1ga970c2061323a4966fdbfed2f25e3bd15" kindref="member">ExtensionSpiExample_Initialize</ref>(<ref refid="struct___cmd_processor___s" kindref="compound">CmdProcessor_T</ref><sp/>*<sp/>handle);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___x_d_k___extension___port___spi_1gab65634770144faad5afb7253ce252619" kindref="member">ExtensionSpiExample_ReadRegister</ref>(uint8_t<sp/>regAddr,<sp/>uint8_t<sp/>*readVal,<sp/>uint8_t<sp/>readLength);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___x_d_k___extension___port___spi_1gad938231c9b57a0332a8295ca25737585" kindref="member">ExtensionSpiExample_WriteRegister</ref>(uint8_t<sp/>regAddr,<sp/>uint8_t<sp/>*writeVal,<sp/>uint8_t<sp/>writeLength);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___x_d_k___extension___port___spi_1gafd2b9bd34f0053ecac0c84ed336b699c" kindref="member">ExtensionSpiExample_ValidateChip</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___x_d_k___extension___port___spi_1gacc36b6ca925e63c0b2c7acc57d619edd" kindref="member">ExtensionSpiExample_DeInitialize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>EXTENSION_PORT_SPI_FEATURE<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>EXTENSIONSPIEXAMPLE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionSpiExample.h"/>
+  </compounddef>
+</doxygen>

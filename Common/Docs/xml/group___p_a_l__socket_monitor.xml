@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___p_a_l__socket_monitor" kind="group">
+    <compoundname>PAL_socketMonitor</compoundname>
+    <title>PAL SocketMonitor</title>
+    <innerfile refid="_p_a_l__socket_monitor__ih_8h">PAL_socketMonitor_ih.h</innerfile>
+    <innerclass refid="struct_p_a_l___socket_monitor___q_data__s" prot="public">PAL_SocketMonitor_QData_s</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___p_a_l__socket_monitor_1ga014c9003ea2367b37c8f5b892e70b567" prot="public" static="no">
+        <type>struct <ref refid="struct_p_a_l___socket_monitor___q_data__s" kindref="compound">PAL_SocketMonitor_QData_s</ref></type>
+        <definition>typedef struct PAL_SocketMonitor_QData_s  PAL_SocketMonitor_QData_t</definition>
+        <argsstring></argsstring>
+        <name>PAL_SocketMonitor_QData_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/ServalPAL_WiFi/PAL_socketMonitor_ih.h" line="64" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___p_a_l__socket_monitor_1ga2121dd42518fd8d7ef01f678ebf59e76" prot="public" static="no" mutable="no">
+        <type><ref refid="_free_r_t_o_s_8h_1af7cd8f53b62f0c497b442b504c30f2ec" kindref="member">xTaskHandle</ref></type>
+        <definition>xTaskHandle PAL_socketMonitorTaskHandler_gdt</definition>
+        <argsstring></argsstring>
+        <name>PAL_socketMonitorTaskHandler_gdt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/ServalPAL_WiFi/PAL_socketMonitor_ih.h" line="66" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___p_a_l__socket_monitor_1ga18d76d1ac74abd06b43cacc97ed51a92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PAL_socketMonitorInit</definition>
+        <argsstring>(void)</argsstring>
+        <name>PAL_socketMonitorInit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initializes the structure holding socket related parameters.Presently it also creates the task which monitors the sockets. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>PAL_socketMonitoring() </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/ServalPAL_WiFi/PAL_socketMonitor_ih.h" line="85" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/source/ServalPAL_WiFi.c" bodystart="116" bodyend="128"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_c_d_s___s_e_r_v_a_l_p_a_l___w_i_f_i_1ga7f660890887454db11560519dedbb620">ServalPalWiFi_Init</references>
+        <references refid="group___b_c_d_s___s_e_r_v_a_l_p_a_l___w_i_f_i_1ga10a519bb044fed66381bcfdb9498822e">ServalPalWiFi_NotifyWiFiEvent</references>
+        <references refid="group___b_c_d_s___s_e_r_v_a_l_p_a_l___w_i_f_i_1gga0775902c912556b0bb979d1cae5e1664af535a5d7686928783cd5e6401ba44aab" compoundref="_b_c_d_s___serval_pal_wi_fi_8h" startline="95">SERVALPALWIFI_CONNECTED</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___p_a_l__socket_monitor_1gaba39b928b85f3ff929604b2258f6d7c5" prot="public" static="no">
+        <name>PAL_SOCKET_HANDLE_ERROR</name>
+        <initializer>INT8_C(-1) 	/* Error <ref refid="_b_l_e_s_w___cycling_power_01_release_notes_8txt_1a5cad1470ef119e32b6400227eeaa8b18" kindref="member">value</ref> returned when an <ref refid="_b_l_e_s_w-_core_stack_01_release_notes_8txt_1a78350fba5f7b1422cb98509c114e951e" kindref="member">API</ref> fails */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/ServalPAL_WiFi/PAL_socketMonitor_ih.h" line="70" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/ServalPAL_WiFi/PAL_socketMonitor_ih.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_a_l__socket_monitor_1gab2f82e0a12ef717e7c31669f38378b1a" prot="public" static="no">
+        <name>PAL_SOCKET_HANDLE_QUEUE_FULL</name>
+        <initializer>INT8_C(-2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/ServalPAL_WiFi/PAL_socketMonitor_ih.h" line="71" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/ServalPAL_WiFi/PAL_socketMonitor_ih.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_a_l__socket_monitor_1ga175698ae864edef3388892aaf51e816d" prot="public" static="no">
+        <name>PAL_SOCKET_HANDLE_SUCCESS</name>
+        <initializer>INT8_C(0) 	/* <ref refid="_b_l_e_s_w___cycling_power_01_release_notes_8txt_1a5cad1470ef119e32b6400227eeaa8b18" kindref="member">value</ref> returned when an <ref refid="_b_l_e_s_w-_core_stack_01_release_notes_8txt_1a78350fba5f7b1422cb98509c114e951e" kindref="member">API</ref> success */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/ServalPAL_WiFi/PAL_socketMonitor_ih.h" line="69" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/ServalPAL_WiFi/PAL_socketMonitor_ih.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_a_l__socket_monitor_1gaaa6b51825519b0b9f7f75227c7e6d26a" prot="public" static="no">
+        <name>PAL_SOCKET_MONITOR_ERR_NO_ERROR</name>
+        <initializer>(0L)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/ServalPAL_WiFi/PAL_socketMonitor_ih.h" line="72" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/ServalPAL_WiFi/PAL_socketMonitor_ih.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface header for the PAL_socketMonitor module. </para>    </briefdescription>
+    <detaileddescription>
+<para>The interface header exports the PAL SocketMonitor Interface API&apos;s which are used to PAL Socket Monitor Initialization and Configurations. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

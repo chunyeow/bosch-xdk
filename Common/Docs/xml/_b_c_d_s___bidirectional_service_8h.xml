@@ -1,0 +1,327 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_b_c_d_s___bidirectional_service_8h" kind="file">
+    <compoundname>BCDS_BidirectionalService.h</compoundname>
+    <includes refid="_b_c_d_s___basics_8h" local="yes">BCDS_Basics.h</includes>
+    <includes refid="_b_c_d_s___ble_8h" local="yes">BCDS_Ble.h</includes>
+    <includes refid="_b_c_d_s___ble_peripheral_8h" local="yes">BCDS_BlePeripheral.h</includes>
+    <includedby refid="_x_d_k___b_l_e_8h" local="yes">SDK/xdk110/Common/include/Connectivity/XDK_BLE.h</includedby>
+    <incdepgraph>
+      <node id="34682">
+        <label>stdbool.h</label>
+      </node>
+      <node id="34686">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="34680" relation="include">
+        </childnode>
+      </node>
+      <node id="34681">
+        <label>stdint.h</label>
+      </node>
+      <node id="34684">
+        <label>stdlib.h</label>
+      </node>
+      <node id="34685">
+        <label>BCDS_Ble.h</label>
+        <link refid="_b_c_d_s___ble_8h"/>
+        <childnode refid="34686" relation="include">
+        </childnode>
+      </node>
+      <node id="34683">
+        <label>string.h</label>
+      </node>
+      <node id="34687">
+        <label>BCDS_BlePeripheral.h</label>
+        <link refid="_b_c_d_s___ble_peripheral_8h"/>
+        <childnode refid="34686" relation="include">
+        </childnode>
+        <childnode refid="34685" relation="include">
+        </childnode>
+      </node>
+      <node id="34680">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="34681" relation="include">
+        </childnode>
+        <childnode refid="34682" relation="include">
+        </childnode>
+        <childnode refid="34683" relation="include">
+        </childnode>
+        <childnode refid="34684" relation="include">
+        </childnode>
+      </node>
+      <node id="34679">
+        <label>SDK/xdk110/Platform/BLE/include/services/BCDS_BidirectionalService.h</label>
+        <link refid="BCDS_BidirectionalService.h"/>
+        <childnode refid="34680" relation="include">
+        </childnode>
+        <childnode refid="34685" relation="include">
+        </childnode>
+        <childnode refid="34687" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="34691">
+        <label>SDK/xdk110/Common/source/Connectivity/BLE/BleDeviceInfoService.c</label>
+        <link refid="_ble_device_info_service_8c"/>
+      </node>
+      <node id="34690">
+        <label>SDK/xdk110/Common/source/Connectivity/BLE/BleDeviceInfoService.h</label>
+        <link refid="_ble_device_info_service_8h"/>
+        <childnode refid="34691" relation="include">
+        </childnode>
+      </node>
+      <node id="34689">
+        <label>SDK/xdk110/Common/include/Connectivity/XDK_BLE.h</label>
+        <link refid="_x_d_k___b_l_e_8h"/>
+        <childnode refid="34690" relation="include">
+        </childnode>
+        <childnode refid="34692" relation="include">
+        </childnode>
+        <childnode refid="34693" relation="include">
+        </childnode>
+        <childnode refid="34694" relation="include">
+        </childnode>
+      </node>
+      <node id="34693">
+        <label>SDK/xdk110/Apps/SendAccelerometerDataOverBle/source/AppController.c</label>
+        <link refid="_send_accelerometer_data_over_ble_2source_2_app_controller_8c"/>
+      </node>
+      <node id="34694">
+        <label>SDK/xdk110/Apps/VirtualXdkDemo/source/AppController.c</label>
+        <link refid="_virtual_xdk_demo_2source_2_app_controller_8c"/>
+      </node>
+      <node id="34688">
+        <label>SDK/xdk110/Platform/BLE/include/services/BCDS_BidirectionalService.h</label>
+        <link refid="BCDS_BidirectionalService.h"/>
+        <childnode refid="34689" relation="include">
+        </childnode>
+      </node>
+      <node id="34692">
+        <label>SDK/xdk110/Apps/SendAccelDataOverUdpAndBle/source/AppController.c</label>
+        <link refid="_send_accel_data_over_udp_and_ble_2source_2_app_controller_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___b_c_d_s___b_l_e___b_i_d_i_r_e_c_t_i_o_n_a_l___s_e_r_v_i_c_e_1gac998b046809a4420821c242b10b1d580" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* BidirectionalService_DataReceivedCallBack)(uint8_t *rxBuffer, uint8_t rxDataLength)</definition>
+        <argsstring>)(uint8_t *rxBuffer, uint8_t rxDataLength)</argsstring>
+        <name>BidirectionalService_DataReceivedCallBack</name>
+        <briefdescription>
+<para>Typedef to notify the application about any incoming data. </para>        </briefdescription>
+        <detaileddescription>
+<para>Typedef to notify the application about any incoming data</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">rxBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the received data buffer</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">rxDataLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the received data</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Do not perform any heavy processing within this function and return asap. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BLE/include/services/BCDS_BidirectionalService.h" line="74" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BLE/include/services/BCDS_BidirectionalService.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___b_l_e___b_i_d_i_r_e_c_t_i_o_n_a_l___s_e_r_v_i_c_e_1ga0dd8825934eb178cdfcaffefc25766fa" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* BidirectionalService_SendEventCallback)(Retcode_T sendStatus)</definition>
+        <argsstring>)(Retcode_T sendStatus)</argsstring>
+        <name>BidirectionalService_SendEventCallback</name>
+        <briefdescription>
+<para>Typedef to send status notification. </para>        </briefdescription>
+        <detaileddescription>
+<para>Typedef to send status notification.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sendStatus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Status of the send operation</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>For every single BidirectionalService_SendData, this must be synchronized before triggering a new send. If the interface user wants to have a queuing mechanism for sending data where the user need not worry about this notification and shall load the send API per need, it is excepted to be implemented as a wrapper at the application end on top of this.</para></simplesect>
+<simplesect kind="note"><para>Do not perform any heavy processing within this function and return asap. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BLE/include/services/BCDS_BidirectionalService.h" line="91" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BLE/include/services/BCDS_BidirectionalService.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___b_c_d_s___b_l_e___b_i_d_i_r_e_c_t_i_o_n_a_l___s_e_r_v_i_c_e_1gac78d59b7026264423eb6d18a8594602f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T BidirectionalService_Init</definition>
+        <argsstring>(BidirectionalService_DataReceivedCallBack readCallback, BidirectionalService_SendEventCallback sendCallback)</argsstring>
+        <name>BidirectionalService_Init</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___b_l_e___b_i_d_i_r_e_c_t_i_o_n_a_l___s_e_r_v_i_c_e_1gac998b046809a4420821c242b10b1d580" kindref="member">BidirectionalService_DataReceivedCallBack</ref></type>
+          <declname>readCallback</declname>
+        </param>
+        <param>
+          <type><ref refid="group___b_c_d_s___b_l_e___b_i_d_i_r_e_c_t_i_o_n_a_l___s_e_r_v_i_c_e_1ga0dd8825934eb178cdfcaffefc25766fa" kindref="member">BidirectionalService_SendEventCallback</ref></type>
+          <declname>sendCallback</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the Bidirectional Service. </para>        </briefdescription>
+        <detaileddescription>
+<para>Initializes the Bidirectional Service with a readCallback and a sendCallback to be implemented by the application.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">readCallback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Application Callback that will be called on data reception for any data reception</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">sendCallback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Application Callback that will be notified about the data send status.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise. Refer <ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf6fb6f6ae1be4277d38a8684e1be9acb" kindref="member">Retcode_General_E</ref> and <ref refid="group___b_c_d_s___b_l_e_1ga0f2731d56101ae023851508c9293df01" kindref="member">Ble_Retcode_E</ref> for other values.</para></simplesect>
+<simplesect kind="see"><para><ref refid="group___b_c_d_s___b_l_e___b_i_d_i_r_e_c_t_i_o_n_a_l___s_e_r_v_i_c_e_1ga82d39b7e6afe5777c0e8b12114d43cd9" kindref="member">BidirectionalService_SendData</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BLE/include/services/BCDS_BidirectionalService.h" line="110" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___b_l_e___b_i_d_i_r_e_c_t_i_o_n_a_l___s_e_r_v_i_c_e_1ga6404c558081be21e0f9a95d2ceb26ee1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T BidirectionalService_Register</definition>
+        <argsstring>(void)</argsstring>
+        <name>BidirectionalService_Register</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Registers the BidirectionalService at the ATT server. </para>        </briefdescription>
+        <detaileddescription>
+<para>Registers the BidirectionalService at the ATT server. This must be done during the boot phase of the stack.</para><para><simplesect kind="see"><para><ref refid="group___b_c_d_s___b_l_e___p_e_r_i_p_h_e_r_a_l_1ga8151e909a16f5aa075b42ebcaacb463e" kindref="member">BlePeripheral_ServiceRegistryCallback</ref></para></simplesect>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise. Refer <ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf6fb6f6ae1be4277d38a8684e1be9acb" kindref="member">Retcode_General_E</ref> and <ref refid="group___b_c_d_s___b_l_e_1ga0f2731d56101ae023851508c9293df01" kindref="member">Ble_Retcode_E</ref> for other values.</para></simplesect>
+<simplesect kind="note"><para>Bidirectional Services must have been successfully initialized prior to this call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BLE/include/services/BCDS_BidirectionalService.h" line="123" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___b_l_e___b_i_d_i_r_e_c_t_i_o_n_a_l___s_e_r_v_i_c_e_1ga82d39b7e6afe5777c0e8b12114d43cd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T BidirectionalService_SendData</definition>
+        <argsstring>(uint8_t *payload, uint8_t payloadLen)</argsstring>
+        <name>BidirectionalService_SendData</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>payloadLen</declname>
+        </param>
+        <briefdescription>
+<para>Sends data to the client. </para>        </briefdescription>
+        <detaileddescription>
+<para>Sends the provided data to the client</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dataToSend</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The payload to be sent</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dataToSendLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the payload to be sent</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise. Refer <ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf6fb6f6ae1be4277d38a8684e1be9acb" kindref="member">Retcode_General_E</ref> and <ref refid="group___b_c_d_s___b_l_e_1ga0f2731d56101ae023851508c9293df01" kindref="member">Ble_Retcode_E</ref> for other values.</para></simplesect>
+<simplesect kind="note"><para>Bidirectional Service must have been successfully initialized and registered prior. BidirectionalService_SendEventCallback will be triggered to provide the status of every individual send&apos;s. BidirectionalService_SendData may only be called again, when BidirectionalService_SendEventCallback has been called as a reaction to a previous call of BidirectionalService_SendData. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BLE/include/services/BCDS_BidirectionalService.h" line="142" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor">#ifndef<sp/>BCDS_BIDIRECTIONALSERVICE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BCDS_BIDIRECTIONALSERVICE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Include<sp/>all<sp/>headers<sp/>which<sp/>are<sp/>needed<sp/>by<sp/>this<sp/>file.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___basics_8h" kindref="compound">BCDS_Basics.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___ble_8h" kindref="compound">BCDS_Ble.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___ble_peripheral_8h" kindref="compound">BCDS_BlePeripheral.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>the<sp/>type<sp/>and<sp/>macro<sp/>definitions<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="group___b_c_d_s___b_l_e___b_i_d_i_r_e_c_t_i_o_n_a_l___s_e_r_v_i_c_e_1gac998b046809a4420821c242b10b1d580" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="group___b_c_d_s___b_l_e___b_i_d_i_r_e_c_t_i_o_n_a_l___s_e_r_v_i_c_e_1gac998b046809a4420821c242b10b1d580" kindref="member">BidirectionalService_DataReceivedCallBack</ref>)(uint8_t<sp/>*rxBuffer,<sp/>uint8_t<sp/>rxDataLength);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="group___b_c_d_s___b_l_e___b_i_d_i_r_e_c_t_i_o_n_a_l___s_e_r_v_i_c_e_1ga0dd8825934eb178cdfcaffefc25766fa" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="group___b_c_d_s___b_l_e___b_i_d_i_r_e_c_t_i_o_n_a_l___s_e_r_v_i_c_e_1ga0dd8825934eb178cdfcaffefc25766fa" kindref="member">BidirectionalService_SendEventCallback</ref>)(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>sendStatus);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>the<sp/>function<sp/>declarations<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___b_c_d_s___b_l_e___b_i_d_i_r_e_c_t_i_o_n_a_l___s_e_r_v_i_c_e_1gac78d59b7026264423eb6d18a8594602f" kindref="member">BidirectionalService_Init</ref>(<ref refid="group___b_c_d_s___b_l_e___b_i_d_i_r_e_c_t_i_o_n_a_l___s_e_r_v_i_c_e_1gac998b046809a4420821c242b10b1d580" kindref="member">BidirectionalService_DataReceivedCallBack</ref><sp/>readCallback,<sp/><ref refid="group___b_c_d_s___b_l_e___b_i_d_i_r_e_c_t_i_o_n_a_l___s_e_r_v_i_c_e_1ga0dd8825934eb178cdfcaffefc25766fa" kindref="member">BidirectionalService_SendEventCallback</ref><sp/>sendCallback);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___b_c_d_s___b_l_e___b_i_d_i_r_e_c_t_i_o_n_a_l___s_e_r_v_i_c_e_1ga6404c558081be21e0f9a95d2ceb26ee1" kindref="member">BidirectionalService_Register</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___b_c_d_s___b_l_e___b_i_d_i_r_e_c_t_i_o_n_a_l___s_e_r_v_i_c_e_1ga82d39b7e6afe5777c0e8b12114d43cd9" kindref="member">BidirectionalService_SendData</ref>(uint8_t*<sp/>payload,<sp/>uint8_t<sp/>payloadLen);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>BCDS_BIDIRECTIONALSERVICE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BLE/include/services/BCDS_BidirectionalService.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___b_c_d_s___h_a_l___m_c_u___i2_c" kind="group">
+    <compoundname>BCDS_HAL_MCU_I2C</compoundname>
+    <title>I2C</title>
+    <innerfile refid="_b_c_d_s___m_c_u___i2_c_8h">BCDS_MCU_I2C.h</innerfile>
+    <briefdescription>
+<para>Unified I2C Master Interface. </para>    </briefdescription>
+    <detaileddescription>
+<para>Usually the I2C hardware gets initialized by the HAL-BSP (Board support package). The application should then be able to get a handle on a fully initialized I2C device that can be used by this driver to send and receive data.</para><para>A typical use of this API would start with initializing the driver instance with a correct handle, and a callback function for the application layer in case the call mode is not blocking. This will initialize the driver and bind it to the handle of the BSP. After that it is ready to use according to settings made in the BSP.</para><para><programlisting><codeline><highlight class="normal">Retcode_T<sp/>retcode<sp/>=<sp/>MCU_I2C_Initialize(I2c2,<sp/>MyI2CCallBack);</highlight></codeline>
+<codeline><highlight class="normal">if(RETCODE_OK<sp/>==<sp/>retcode)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>//<sp/>use<sp/>the<sp/>I2C<sp/>driver</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para>Now, the I2C is configured and active such that the communication can start.</para><para><simplesect kind="note"><para>It is possible to disable the entire I2C feature in the HAL-BSP configuration file. I.e. the I2C code will only be compiled and linked if the feature <bold>BCDS_FEATURE_I2C</bold> is set to 1 in the configuration file.</para></simplesect>
+<simplesect kind="note"><para>This interface only supports the I2C master mode.</para></simplesect>
+<simplesect kind="attention"><para>This I2C interface only supports 7 bit addresses for slave addressing. </para></simplesect>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

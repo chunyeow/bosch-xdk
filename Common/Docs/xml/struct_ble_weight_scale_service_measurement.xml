@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="struct_ble_weight_scale_service_measurement" kind="struct" prot="public">
+    <compoundname>BleWeightScaleServiceMeasurement</compoundname>
+    <includes local="no">SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleWeightScale_Service.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_ble_weight_scale_service_measurement_1a48e0ec224d827d33b431f949b81617cb" prot="public" static="no" mutable="no">
+        <type><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref></type>
+        <definition>U16 bmiValue</definition>
+        <argsstring></argsstring>
+        <name>bmiValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If the BMI AND HEIGHT feature is supported, it shall be provided and valid during each call of BLEWEIGHTSCALESERVICE_setWeightMeasurement BMI or Body Mass Index is calculated as Weight in kilograms divided by the square of Height in meters. When only imperial values of weight and height are available, BMI can be calculated by dividing the Weight in pounds by the square of the Height in inches and multiplying this by a factor of approximately 703.07</para><para>The Bmi value is provided in 10-1 ratio: example: providing 820 as bmiValue, means a BMI value of 82.0 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleWeightScale_Service.h" line="216" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleWeightScale_Service.h" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_ble_weight_scale_service_measurement_1a7ec7581bf7518f012068d576034cbed2" prot="public" static="no" mutable="no">
+        <type><ref refid="union_ble_weight_scale_service_measurement_flags" kindref="compound">BleWeightScaleServiceMeasurementFlags</ref></type>
+        <definition>BleWeightScaleServiceMeasurementFlags flagValue</definition>
+        <argsstring></argsstring>
+        <name>flagValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>flagValue: The flags indicating what values are included in the measurement </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleWeightScale_Service.h" line="171" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleWeightScale_Service.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_ble_weight_scale_service_measurement_1a6d35e0582879eb785905002695a0f0f4" prot="public" static="no" mutable="no">
+        <type><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref></type>
+        <definition>U16 heightValue</definition>
+        <argsstring></argsstring>
+        <name>heightValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>heightValue field:</para><para>When Measurement Units (bit 0 of Flag) set to 1 : Imperial, =&gt; height is provided in 10-1 inch ex: providing 825 as value of heightValue means 82.5 inch</para><para>when Measurement Units (bit 0 of Flag) set to 0 : SI =&gt; height is provided in millimeter. ex: providing 1825 as value of heightValue means 182.5 cm means 1.825 m </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleWeightScale_Service.h" line="230" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleWeightScale_Service.h" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_ble_weight_scale_service_measurement_1ac7c67fc2fd7a146da9332538a7350158" prot="public" static="no" mutable="no">
+        <type><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref></type>
+        <definition>U8 userIdValue</definition>
+        <argsstring></argsstring>
+        <name>userIdValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If the Multiple User feature is supported, it shall be provided and valid during each call of BLEWEIGHTSCALESERVICE_setWeightMeasurement if the Server supports two User IDs to distinguish between two users, the Server may use User ID 1 and 2 or User ID 35 and 97 or other unique combinations. A special User ID value of 0xFF represents “unknown user”. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleWeightScale_Service.h" line="198" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleWeightScale_Service.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_ble_weight_scale_service_measurement_1ae3b82fdd905ed60d9beb536ab9a815e1" prot="public" static="no" mutable="no">
+        <type><ref refid="_ble_types_8h_1a811024d35b9b8a41095b1f583b649e56" kindref="member">U32</ref></type>
+        <definition>U32 weightValue</definition>
+        <argsstring></argsstring>
+        <name>weightValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Weight field: The Weight field shall be included in the Weight Measurement.</para><para>when Measurement Units (bit 0 of Flag) set to 1 : Imperial, =&gt; weight is provided in millipound,the final resolution of the provided value will be 10 millipound . (ex: 85642 means 85.640 Pounds)</para><para>when Measurement Units (bit 0 of Flag) set to 0 : SI =&gt; weight is provided in grammes, the final resolution of the provided value will be 5 grams. (ex: 85640 means 85.640 Kg) range form 0 to 327 Kg </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleWeightScale_Service.h" line="187" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleWeightScale_Service.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="struct_ble_weight_scale_service_measurement" kindref="compound">BleWeightScaleServiceMeasurement</ref> type Define the current Weight Scale Measurement value to be set during the call of BLEWEIGHTSCALESERVICE_SetWeightScaleMeasurement </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="2291">
+        <label>BleWeightScaleServiceMeasurement</label>
+        <link refid="struct_ble_weight_scale_service_measurement"/>
+        <childnode refid="2292" relation="usage">
+          <edgelabel>flagValue</edgelabel>
+        </childnode>
+      </node>
+      <node id="2292">
+        <label>BleWeightScaleServiceMeasurementFlags</label>
+        <link refid="union_ble_weight_scale_service_measurement_flags"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleWeightScale_Service.h" line="167" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleWeightScale_Service.h" bodystart="167" bodyend="233"/>
+    <listofallmembers>
+      <member refid="struct_ble_weight_scale_service_measurement_1a48e0ec224d827d33b431f949b81617cb" prot="public" virt="non-virtual"><scope>BleWeightScaleServiceMeasurement</scope><name>bmiValue</name></member>
+      <member refid="struct_ble_weight_scale_service_measurement_1a7ec7581bf7518f012068d576034cbed2" prot="public" virt="non-virtual"><scope>BleWeightScaleServiceMeasurement</scope><name>flagValue</name></member>
+      <member refid="struct_ble_weight_scale_service_measurement_1a6d35e0582879eb785905002695a0f0f4" prot="public" virt="non-virtual"><scope>BleWeightScaleServiceMeasurement</scope><name>heightValue</name></member>
+      <member refid="struct_ble_weight_scale_service_measurement_1ac7c67fc2fd7a146da9332538a7350158" prot="public" virt="non-virtual"><scope>BleWeightScaleServiceMeasurement</scope><name>userIdValue</name></member>
+      <member refid="struct_ble_weight_scale_service_measurement_1ae3b82fdd905ed60d9beb536ab9a815e1" prot="public" virt="non-virtual"><scope>BleWeightScaleServiceMeasurement</scope><name>weightValue</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

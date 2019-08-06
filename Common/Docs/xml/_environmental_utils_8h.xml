@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_environmental_utils_8h" kind="file">
+    <compoundname>EnvironmentalUtils.h</compoundname>
+    <includedby refid="_environmental_8c" local="yes">SDK/xdk110/Platform/Sensors/source/Environmental/Environmental.c</includedby>
+    <includedby refid="_environmental_utils_8c" local="yes">SDK/xdk110/Platform/Sensors/source/Environmental/EnvironmentalUtils.c</includedby>
+    <invincdepgraph>
+      <node id="38025">
+        <label>SDK/xdk110/Platform/Sensors/source/Environmental/Environmental.c</label>
+        <link refid="_environmental_8c"/>
+      </node>
+      <node id="38026">
+        <label>SDK/xdk110/Platform/Sensors/source/Environmental/EnvironmentalUtils.c</label>
+        <link refid="_environmental_utils_8c"/>
+      </node>
+      <node id="38024">
+        <label>SDK/xdk110/Platform/Sensors/source/Environmental/EnvironmentalUtils.h</label>
+        <link refid="EnvironmentalUtils.h"/>
+        <childnode refid="38025" relation="include">
+        </childnode>
+        <childnode refid="38026" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="_environmental_utils_8h_1acb1f2785028ad3d2ca8d6b4e5188755d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T SetAmbientTemperatureOffset</definition>
+        <argsstring>(float T_offset)</argsstring>
+        <name>SetAmbientTemperatureOffset</name>
+        <param>
+          <type>float</type>
+          <declname>T_offset</declname>
+        </param>
+        <briefdescription>
+<para>Register the ambient temperature offset in degree C. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returnCode Return code indicating state and success of the operation</para></simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>operation was successful </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_INVALID_PARAM</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Invalid Temperature offset </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Sensors/source/Environmental/EnvironmentalUtils.h" line="78" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Sensors/source/Environmental/EnvironmentalUtils.c" bodystart="107" bodyend="114"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="_environmental_utils_8c_1aa4d4dc338f69859141f42f6de7d9fb0f" compoundref="_environmental_utils_8c" startline="70">tOffset</references>
+        <referencedby refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ga9a6b48ac7c4df666714dadad9d732815" compoundref="_environmental_8c" startline="909" endline="941">Environmental_setTemperatureOffset</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_environmental_utils_8h_1a2ab10db37cc1a7efc459f54d01817c09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float GetAmbientTemperatureOffset</definition>
+        <argsstring>(void)</argsstring>
+        <name>GetAmbientTemperatureOffset</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the ambient temperature offset. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Ambient Temperature Offset </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Sensors/source/Environmental/EnvironmentalUtils.h" line="85" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Sensors/source/Environmental/EnvironmentalUtils.c" bodystart="121" bodyend="124"/>
+        <references refid="_environmental_utils_8c_1aa4d4dc338f69859141f42f6de7d9fb0f" compoundref="_environmental_utils_8c" startline="70">tOffset</references>
+      </memberdef>
+      <memberdef kind="function" id="_environmental_utils_8h_1adc935ac23bb156c2177c0caa7a84876c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float ComputeAmbientTemperature</definition>
+        <argsstring>(float T_sensor)</argsstring>
+        <name>ComputeAmbientTemperature</name>
+        <param>
+          <type>float</type>
+          <declname>T_sensor</declname>
+        </param>
+        <briefdescription>
+<para>Compute Ambient Temperature. </para>        </briefdescription>
+        <detaileddescription>
+<para>Ambient Temperature is calculated by adding an offset to the measured sensor temperature</para><para>Compensation formula:</para><para>T_offset = T_ambient - T_sensor</para><para>T_ambient = T_sensor + T_offset</para><para><simplesect kind="note"><para>This API provides a default value for the temperature offset value.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">T_sensor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Temperature in \°C measured inside </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>T_ambient Calculated ambient temperature </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Sensors/source/Environmental/EnvironmentalUtils.h" line="103" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Sensors/source/Environmental/EnvironmentalUtils.c" bodystart="126" bodyend="129"/>
+        <references refid="_environmental_utils_8c_1aa4d4dc338f69859141f42f6de7d9fb0f" compoundref="_environmental_utils_8c" startline="70">tOffset</references>
+        <referencedby refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ga27b418165fd622f9acda094c915dc4c1" compoundref="_environmental_8c" startline="844" endline="907">Environmental_compensateData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_environmental_utils_8h_1a038cec8f0ea376722dea4a6b73db654d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float ComputeAmbientHumidity</definition>
+        <argsstring>(float rH_sensor, float T_sensor, float T_ambient)</argsstring>
+        <name>ComputeAmbientHumidity</name>
+        <param>
+          <type>float</type>
+          <declname>rH_sensor</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>T_sensor</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>T_ambient</declname>
+        </param>
+        <briefdescription>
+<para>Compute Ambient Humidity. </para>        </briefdescription>
+        <detaileddescription>
+<para>Computes the ambient relative humidity using the Tetens formula for estimation of ambient vapor pressure</para><para>Compensation formula:</para><para>Rh_ambient = Ew(T_sensor) / Ew(T_ambient) * Rh_sensor</para><para><simplesect kind="note"><para>The vapor pressure of water approximation used is the Tetens formula with a validity range between -10 degree C and 75 degree C</para></simplesect>
+<simplesect kind="note"><para>Sensor values are measured inside the device housing</para></simplesect>
+<simplesect kind="warning"><para>This function has a division by zero in the case where T_sensor or T_ambient is equal to -TETENS_BETA_NEGATIVE (-265.5 degree C)</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">rH_sensor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Relative humidity measured by the sensor </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">T_sensor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Temperature in degree C measured by the sensor </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">T_ambient</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Temperature in degree C measured or estimated outside </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>rH_ambient Computed ambient relative humidity </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Sensors/source/Environmental/EnvironmentalUtils.h" line="129" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Sensors/source/Environmental/EnvironmentalUtils.c" bodystart="136" bodyend="149"/>
+        <references refid="_environmental_utils_8c_1a99ac20e3f557cb3b116413a9f30fb13b" compoundref="_environmental_utils_8c" startline="152" endline="210">ComputeCompensationFactorTetens</references>
+        <referencedby refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ga27b418165fd622f9acda094c915dc4c1" compoundref="_environmental_8c" startline="844" endline="907">Environmental_compensateData</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Environmental Sensor Utilities. </para>    </briefdescription>
+    <detaileddescription>
+<sect1 id="_environmental_utils_8h_1EnvironmentalUtils">
+<title>Environmental Sensor Utilities</title>
+<para>The environmental sensor utilities consists of APIs that aid in compensating effects due to self-heating of the XDK during normal conditions</para><para>As any electronic component, the sensor is subject to self-heating, which can be from the sensor itself, as well as from other components used at the time of measurement.</para><para>Unfortunately, this self-heating strongly depends on the usage, and as the XDK can be freely programmed, we cannot provide a universal compensation algorithm.</para><para>The accuracy of the humidity measurement is strongly related the temperature; as relative humidity is calculated using the temperature reading.</para><para>Hence, a higher temperature leads to a lower relative humidity.</para><para>Once the temperature compensation is done, the relative humidity can be calculated using the temperature difference. </para></sect1>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor">#ifndef<sp/>ENVIRONMENTAL_UTILS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ENVIRONMENTAL_UTILS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_environmental_utils_8h_1acb1f2785028ad3d2ca8d6b4e5188755d" kindref="member">SetAmbientTemperatureOffset</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>T_offset);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="_environmental_utils_8h_1a2ab10db37cc1a7efc459f54d01817c09" kindref="member">GetAmbientTemperatureOffset</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="_environmental_utils_8h_1adc935ac23bb156c2177c0caa7a84876c" kindref="member">ComputeAmbientTemperature</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>T_sensor);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="_environmental_utils_8h_1a038cec8f0ea376722dea4a6b73db654d" kindref="member">ComputeAmbientHumidity</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>rH_sensor,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>T_sensor,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>T_ambient);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ENVIRONMENTAL_UTILS_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Sensors/source/Environmental/EnvironmentalUtils.h"/>
+  </compounddef>
+</doxygen>

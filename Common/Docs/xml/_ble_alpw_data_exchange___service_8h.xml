@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_ble_alpw_data_exchange___service_8h" kind="file">
+    <compoundname>BleAlpwDataExchange_Service.h</compoundname>
+    <includes refid="_ble_types_8h" local="yes">BleTypes.h</includes>
+    <incdepgraph>
+      <node id="28563">
+        <label>BleTypes.h</label>
+        <link refid="_ble_types_8h"/>
+        <childnode refid="28564" relation="include">
+        </childnode>
+      </node>
+      <node id="28562">
+        <label>SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleAlpwDataExchange_Service.h</label>
+        <link refid="BleAlpwDataExchange_Service.h"/>
+        <childnode refid="28563" relation="include">
+        </childnode>
+      </node>
+      <node id="28565">
+        <label>BLECustomConfig.h</label>
+        <link refid="_common_2config_2_b_l_e_custom_config_8h"/>
+      </node>
+      <node id="28564">
+        <label>BleConfig.h</label>
+        <link refid="_ble_config_8h"/>
+        <childnode refid="28565" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="struct_ble_alpw_data_exchange_server_rx_data" prot="public">BleAlpwDataExchangeServerRxData</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_ble_alpw_data_exchange___service_8h_1a326907d7b5ff93d578c4861a6de92a38" prot="public" static="no">
+        <name>BLE_SUPPORT_ALPWDATAEXCHANGE_SERVICE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>BLE_SUPPORT_ALPWDATAEXCHANGE_SERVICE Defines if the BLE local device enables access to the local Data Exchange service and characteristic.</para><para>If enabled ( set to 1 ) it enables Profiles to get access to the Data Exchange Service and characteristic</para><para>The default value for this option is disabled (0). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleAlpwDataExchange_Service.h" line="41" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleAlpwDataExchange_Service.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_ble_alpw_data_exchange___service_8h_1a695a3384e42d33e89061a4bd68c99bd2" prot="public" static="no">
+        <name>BLEALPWDATAEXCHANGE_EVENT_RXDATA</name>
+        <initializer>0xA6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>BLEALPWDATAEXCHANGE_EVENT_RXDATA Event received when a new data is received from the CLIENT The status field indicate the status of the operation (BLESTATUS_SUCCESS or BLESTATUS_FAILED). The parms field indicates the data information within the BleAlpwDataExchangeRxData type. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleAlpwDataExchange_Service.h" line="77" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleAlpwDataExchange_Service.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_ble_alpw_data_exchange___service_8h_1a6692963efeeddfdecc64d96de8323115" prot="public" static="no">
+        <name>BLEALPWDATAEXCHANGE_EVENT_TXCOMPLETE</name>
+        <initializer>0xA2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>BLEALPWDATAEXCHANGE_EVENT_TXCOMPLETE Event received when the data has been transmitted (or not) to the CLIENT The status field indicate the status of the operation (BLESTATUS_SUCCESS or BLESTATUS_FAILED). The parms field is not used. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleAlpwDataExchange_Service.h" line="85" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleAlpwDataExchange_Service.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_ble_alpw_data_exchange___service_8h_1afa450f713a3ef57b1e8043be8f54b444" prot="public" static="no">
+        <name>BLEINFOTYPE_BLEALPWDATAEXCHANGE_CLIENTCONFIG</name>
+        <initializer>0x6F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>BLEINFOTYPE_BLEALPWDATAEXCHANGE_CLIENTCONFIG The Unique descriptor ID for a two Bytes length information to save in persistent memory representing the client config for a given remote bonded device. It is the Unique identifier passed in the infotype fields when the PROFILE call the system APIs SYSTEM_SetPersistentInformation(<ref refid="struct_b_d___a_d_d_r" kindref="compound">BD_ADDR</ref> addr, U8 infoType, U8* infoValue,U8 InfoLen) and SYSTEM_GetPersistentInformation(<ref refid="struct_b_d___a_d_d_r" kindref="compound">BD_ADDR</ref> addr, U8 infoType, U8 **infoValue, U8 *InfoLen). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleAlpwDataExchange_Service.h" line="58" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleAlpwDataExchange_Service.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_ble_alpw_data_exchange___service_8h_1aa8a4957199f55b186dc9ff136f0b2227" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* BleAlpwDataExchangeCallBack)(BleAlpwDataExchangeEvent event, BleStatus status, void *parms)</definition>
+        <argsstring>)(BleAlpwDataExchangeEvent event, BleStatus status, void *parms)</argsstring>
+        <name>BleAlpwDataExchangeCallBack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>BleAlpwDataExchangeCallBack This callback receives the ALPWDATAEXCHANGE SERVICE events. Each events may be associated with specified status and parameters. The callback is executed during the stack context, be careful to not doing heavy process in this function. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleAlpwDataExchange_Service.h" line="111" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleAlpwDataExchange_Service.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_ble_alpw_data_exchange___service_8h_1a3c36b6eaee0013c7fd4293ef5ed385d9" prot="public" static="no">
+        <type><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref></type>
+        <definition>typedef U8 BleAlpwDataExchangeEvent</definition>
+        <argsstring></argsstring>
+        <name>BleAlpwDataExchangeEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>BleAlpwDataExchangeEvent type Define the different kind of events that could be received by the BleAlpwDataExchangeCallBack </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleAlpwDataExchange_Service.h" line="68" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleAlpwDataExchange_Service.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__BLEALPWDATAEXCHANGE_SERVICE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__BLEALPWDATAEXCHANGE_SERVICE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>This<sp/>software<sp/>is<sp/>copyrighted<sp/>by<sp/>Alpwise,<sp/>2016.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>The<sp/>use<sp/>of<sp/>this<sp/>software<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>XDK<sp/>SDK<sp/>EULA</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleAlpwDataExchange_Service.h</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Description:<sp/><sp/><sp/>Contains<sp/>routines<sp/>declaration<sp/>for<sp/>Alpwise<sp/>Data<sp/>Exchange<sp/>Service.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>Created:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>march,<sp/>2011</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>Version:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0.1</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>File<sp/>Revision:<sp/>$Rev:<sp/>3142<sp/>$</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>$Project$</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ble_types_8h" kindref="compound">BleTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/><sp/>Macro<sp/>and<sp/>constant<sp/>definition</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">\***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/>OPTIONAL<sp/>FEATURES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">\***************************************************************************/</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor">#ifndef<sp/>BLE_SUPPORT_ALPWDATAEXCHANGE_SERVICE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="_ble_alpw_data_exchange___service_8h_1a326907d7b5ff93d578c4861a6de92a38" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLE_SUPPORT_ALPWDATAEXCHANGE_SERVICE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//BLE_SUPPORT_ALPWDATAEXCHANGE_SERVICE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>*<sp/>CONSTANTS</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">\***************************************************************************/</highlight></codeline>
+<codeline lineno="58" refid="_ble_alpw_data_exchange___service_8h_1afa450f713a3ef57b1e8043be8f54b444" refkind="member"><highlight class="preprocessor">#define<sp/>BLEINFOTYPE_BLEALPWDATAEXCHANGE_CLIENTCONFIG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x6F</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/>*<sp/><sp/>Type<sp/>definition</highlight></codeline>
+<codeline lineno="62"><highlight class="comment">\***************************************************************************/</highlight></codeline>
+<codeline lineno="68" refid="_ble_alpw_data_exchange___service_8h_1a3c36b6eaee0013c7fd4293ef5ed385d9" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><ref refid="_ble_alpw_data_exchange___service_8h_1a3c36b6eaee0013c7fd4293ef5ed385d9" kindref="member">BleAlpwDataExchangeEvent</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="_ble_alpw_data_exchange___service_8h_1a695a3384e42d33e89061a4bd68c99bd2" refkind="member"><highlight class="preprocessor">#define<sp/>BLEALPWDATAEXCHANGE_EVENT_RXDATA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xA6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="_ble_alpw_data_exchange___service_8h_1a6692963efeeddfdecc64d96de8323115" refkind="member"><highlight class="preprocessor">#define<sp/>BLEALPWDATAEXCHANGE_EVENT_TXCOMPLETE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xA2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="struct_ble_alpw_data_exchange_server_rx_data" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="struct_ble_alpw_data_exchange_server_rx_data_1ab5e4dfd369c57d0f7963fbf7ccc964e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref><sp/><ref refid="struct_ble_alpw_data_exchange_server_rx_data_1ab5e4dfd369c57d0f7963fbf7ccc964e7" kindref="member">connHandle</ref>;</highlight></codeline>
+<codeline lineno="99" refid="struct_ble_alpw_data_exchange_server_rx_data_1af46ed77f7625b38a7c8ecf5db95a91e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/>*<ref refid="struct_ble_alpw_data_exchange_server_rx_data_1af46ed77f7625b38a7c8ecf5db95a91e2" kindref="member">rxData</ref>;</highlight></codeline>
+<codeline lineno="100" refid="struct_ble_alpw_data_exchange_server_rx_data_1a309b49dd9ad8774abea76389d428d30e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><ref refid="struct_ble_alpw_data_exchange_server_rx_data_1a309b49dd9ad8774abea76389d428d30e" kindref="member">rxDataLen</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}<sp/><ref refid="struct_ble_alpw_data_exchange_server_rx_data" kindref="compound">BleAlpwDataExchangeServerRxData</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="_ble_alpw_data_exchange___service_8h_1aa8a4957199f55b186dc9ff136f0b2227" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="_ble_alpw_data_exchange___service_8h_1aa8a4957199f55b186dc9ff136f0b2227" kindref="member">BleAlpwDataExchangeCallBack</ref>)(<ref refid="_ble_alpw_data_exchange___service_8h_1a3c36b6eaee0013c7fd4293ef5ed385d9" kindref="member">BleAlpwDataExchangeEvent</ref><sp/>event,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/>status,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*parms);<sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************\</highlight></codeline>
+<codeline lineno="116"><highlight class="comment"><sp/>*<sp/><sp/>APPLICATION<sp/>INTERFACE<sp/>functions<sp/>definition</highlight></codeline>
+<codeline lineno="117"><highlight class="comment">\*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//__BLEALPWDATAEXCHANGE_SERVICE_H</highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleAlpwDataExchange_Service.h"/>
+  </compounddef>
+</doxygen>

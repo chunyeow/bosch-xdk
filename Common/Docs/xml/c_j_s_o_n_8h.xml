@@ -1,0 +1,1368 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="c_j_s_o_n_8h" kind="file">
+    <compoundname>cJSON.h</compoundname>
+    <includedby refid="c_j_s_o_n_8c" local="yes">SDK/xdk110/Common/source/cJSON.c</includedby>
+    <includedby refid="_p_p_m_p_serializer_8c" local="yes">SDK/xdk110/Common/source/Utility/PPMPSerializer.c</includedby>
+    <includedby refid="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" local="yes">SDK/xdk110/Apps/AwsSendDataOverMQTT/source/AppController.c</includedby>
+    <invincdepgraph>
+      <node id="23067">
+        <label>SDK/xdk110/Common/source/Utility/PPMPSerializer.c</label>
+        <link refid="_p_p_m_p_serializer_8c"/>
+      </node>
+      <node id="23065">
+        <label>SDK/xdk110/Common/include/cJSON.h</label>
+        <link refid="cJSON.h"/>
+        <childnode refid="23066" relation="include">
+        </childnode>
+        <childnode refid="23067" relation="include">
+        </childnode>
+        <childnode refid="23068" relation="include">
+        </childnode>
+      </node>
+      <node id="23066">
+        <label>SDK/xdk110/Common/source/cJSON.c</label>
+        <link refid="c_j_s_o_n_8c"/>
+      </node>
+      <node id="23068">
+        <label>SDK/xdk110/Apps/AwsSendDataOverMQTT/source/AppController.c</label>
+        <link refid="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structc_j_s_o_n" prot="public">cJSON</innerclass>
+    <innerclass refid="structc_j_s_o_n___hooks" prot="public">cJSON_Hooks</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="c_j_s_o_n_8h_1ae9b6c76048eda06c6b92ff5e32f2e02e" prot="public" static="no">
+        <name>cJSON_AddBoolToObject</name>
+        <param><defname>object</defname></param>
+        <param><defname>name</defname></param>
+        <param><defname>b</defname></param>
+        <initializer><ref refid="c_j_s_o_n_8c_1a096004811663311569e95aa77518959c" kindref="member">cJSON_AddItemToObject</ref>(object, name, <ref refid="c_j_s_o_n_8c_1a06b0c43427994498d770e65b0089f8a8" kindref="member">cJSON_CreateBool</ref>(b))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="137" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="c_j_s_o_n_8h_1a7069c1ed4b02a9ed2dc6063b2e62d675" prot="public" static="no">
+        <name>cJSON_AddFalseToObject</name>
+        <param><defname>object</defname></param>
+        <param><defname>name</defname></param>
+        <initializer><ref refid="c_j_s_o_n_8c_1a096004811663311569e95aa77518959c" kindref="member">cJSON_AddItemToObject</ref>(object, name, <ref refid="c_j_s_o_n_8c_1a33dcdd4d4f5da12bc91372376908c42b" kindref="member">cJSON_CreateFalse</ref>())</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="136" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="c_j_s_o_n_8h_1a7a02f3a43ca58698933294a95c90a6e6" prot="public" static="no">
+        <name>cJSON_AddNullToObject</name>
+        <param><defname>object</defname></param>
+        <param><defname>name</defname></param>
+        <initializer><ref refid="c_j_s_o_n_8c_1a096004811663311569e95aa77518959c" kindref="member">cJSON_AddItemToObject</ref>(object, name, <ref refid="c_j_s_o_n_8c_1a83ea2a0b33071a1120b9052170a2bc13" kindref="member">cJSON_CreateNull</ref>())</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="134" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="c_j_s_o_n_8h_1aedf8e7037a7332b3653f90be04519862" prot="public" static="no">
+        <name>cJSON_AddNumberToObject</name>
+        <param><defname>object</defname></param>
+        <param><defname>name</defname></param>
+        <param><defname>n</defname></param>
+        <initializer><ref refid="c_j_s_o_n_8c_1a096004811663311569e95aa77518959c" kindref="member">cJSON_AddItemToObject</ref>(object, name, <ref refid="c_j_s_o_n_8c_1a220d076d7d3a309049d6889be6d4904a" kindref="member">cJSON_CreateNumber</ref>(n))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="138" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" bodystart="138" bodyend="-1"/>
+        <referencedby refid="group___p_p_m_p_s_e_r_i_a_l_i_z_e_r_1gac6f89c07a494d40c5e1b41b0e505d8a2" compoundref="_p_p_m_p_serializer_8c" startline="106" endline="306">PPMPSerializer_PayloadSensorSelective</referencedby>
+        <referencedby refid="group___p_p_m_p_s_e_r_i_a_l_i_z_e_r_1ga31284e51a3ef72bf5c365b3039cb07c3" compoundref="_p_p_m_p_serializer_8c" startline="309" endline="374">PPMPSerializer_PayloadExternalSensorSelective</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="c_j_s_o_n_8h_1a3e2f334ba489b1c267ca40b3e046d5ee" prot="public" static="no">
+        <name>cJSON_AddStringToObject</name>
+        <param><defname>object</defname></param>
+        <param><defname>name</defname></param>
+        <param><defname>s</defname></param>
+        <initializer><ref refid="c_j_s_o_n_8c_1a096004811663311569e95aa77518959c" kindref="member">cJSON_AddItemToObject</ref>(object, name, <ref refid="c_j_s_o_n_8c_1a5987bbc1c94d9f602d719a4015ff0e6c" kindref="member">cJSON_CreateString</ref>(s))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="139" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" bodystart="139" bodyend="-1"/>
+        <referencedby refid="group___p_p_m_p_s_e_r_i_a_l_i_z_e_r_1gac6f89c07a494d40c5e1b41b0e505d8a2" compoundref="_p_p_m_p_serializer_8c" startline="106" endline="306">PPMPSerializer_PayloadSensorSelective</referencedby>
+        <referencedby refid="group___p_p_m_p_s_e_r_i_a_l_i_z_e_r_1ga31284e51a3ef72bf5c365b3039cb07c3" compoundref="_p_p_m_p_serializer_8c" startline="309" endline="374">PPMPSerializer_PayloadExternalSensorSelective</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="c_j_s_o_n_8h_1a0bb61d70afe61f6bf209999458f170ac" prot="public" static="no">
+        <name>cJSON_AddTrueToObject</name>
+        <param><defname>object</defname></param>
+        <param><defname>name</defname></param>
+        <initializer><ref refid="c_j_s_o_n_8c_1a096004811663311569e95aa77518959c" kindref="member">cJSON_AddItemToObject</ref>(object, name, <ref refid="c_j_s_o_n_8c_1a07b3d4616c5a682aa558180713ce858a" kindref="member">cJSON_CreateTrue</ref>())</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="135" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="c_j_s_o_n_8h_1a57cffa126740a8efcdcb7bcef80e8897" prot="public" static="no">
+        <name>cJSON_Array</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="37" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="c_j_s_o_n_8c_1aad22e0fc125dba829a01e575754b0602" compoundref="c_j_s_o_n_8c" startline="372" endline="403">print_value</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1a7729444034bb1c16924478e4806023af" compoundref="c_j_s_o_n_8c" startline="406" endline="431">parse_array</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1a29e5808c66c1cf1f3edbf117babe07b3" compoundref="c_j_s_o_n_8c" startline="698" endline="698">cJSON_CreateArray</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="c_j_s_o_n_8h_1a2d240682316354b5748f909ad220184b" prot="public" static="no">
+        <name>cJSON_False</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="32" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="c_j_s_o_n_8c_1aa9d7542467e921558b62ea2dbd4b9c60" compoundref="c_j_s_o_n_8c" startline="357" endline="369">parse_value</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1aad22e0fc125dba829a01e575754b0602" compoundref="c_j_s_o_n_8c" startline="372" endline="403">print_value</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1a33dcdd4d4f5da12bc91372376908c42b" compoundref="c_j_s_o_n_8c" startline="694" endline="694">cJSON_CreateFalse</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1a06b0c43427994498d770e65b0089f8a8" compoundref="c_j_s_o_n_8c" startline="695" endline="695">cJSON_CreateBool</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="c_j_s_o_n_8h_1ad3d18116aae3bfa46f13bcfd7fd6d4e7" prot="public" static="no">
+        <name>cJSON_IsReference</name>
+        <initializer>256</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="40" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" bodystart="40" bodyend="-1"/>
+        <referencedby refid="c_j_s_o_n_8c_1ab18060251de70a2b55a18dec694f8f8a" compoundref="c_j_s_o_n_8c" startline="81" endline="93">cJSON_Delete</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1a840197ebe7308bc68b2a8a108b06b004" compoundref="c_j_s_o_n_8c" startline="668" endline="668">create_reference</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1a9acb1410be711f33d7c6d39f916b2d35" compoundref="c_j_s_o_n_8c" startline="708" endline="733">cJSON_Duplicate</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="c_j_s_o_n_8h_1aeadaba63ddb68aaa518528595d503dcd" prot="public" static="no">
+        <name>cJSON_NULL</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="34" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="c_j_s_o_n_8c_1aa9d7542467e921558b62ea2dbd4b9c60" compoundref="c_j_s_o_n_8c" startline="357" endline="369">parse_value</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1aad22e0fc125dba829a01e575754b0602" compoundref="c_j_s_o_n_8c" startline="372" endline="403">print_value</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1a83ea2a0b33071a1120b9052170a2bc13" compoundref="c_j_s_o_n_8c" startline="692" endline="692">cJSON_CreateNull</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="c_j_s_o_n_8h_1a15e77e2f6457dc9b19c10ddb032af971" prot="public" static="no">
+        <name>cJSON_Number</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="35" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" bodystart="35" bodyend="-1"/>
+        <referencedby refid="c_j_s_o_n_8c_1a77cf18cc6fa5c35cb069532cb978ddee" compoundref="c_j_s_o_n_8c" startline="96" endline="115">parse_number</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1aad22e0fc125dba829a01e575754b0602" compoundref="c_j_s_o_n_8c" startline="372" endline="403">print_value</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1a220d076d7d3a309049d6889be6d4904a" compoundref="c_j_s_o_n_8c" startline="696" endline="696">cJSON_CreateNumber</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="c_j_s_o_n_8h_1a22c6e13481c090629afbd77b7cebd24c" prot="public" static="no">
+        <name>cJSON_Object</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="38" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="c_j_s_o_n_8c_1aad22e0fc125dba829a01e575754b0602" compoundref="c_j_s_o_n_8c" startline="372" endline="403">print_value</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1aae5de4fb5317314153a9791567380768" compoundref="c_j_s_o_n_8c" startline="514" endline="547">parse_object</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1a9c5f44afdd781b16dead90042fe74085" compoundref="c_j_s_o_n_8c" startline="699" endline="699">cJSON_CreateObject</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="c_j_s_o_n_8h_1a548f0c2ae589c8ea4a1bab43d198854e" prot="public" static="no">
+        <name>cJSON_SetIntValue</name>
+        <param><defname>object</defname></param>
+        <param><defname>val</defname></param>
+        <initializer>((object)?(object)-&gt;valueint=(object)-&gt;valuedouble=(val):(val))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="142" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="c_j_s_o_n_8h_1a3e23a54bc9aa6860fe74b6e882df5ef2" prot="public" static="no">
+        <name>cJSON_SetNumberValue</name>
+        <param><defname>object</defname></param>
+        <param><defname>val</defname></param>
+        <initializer>((object)?(object)-&gt;valueint=(object)-&gt;valuedouble=(val):(val))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="143" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="c_j_s_o_n_8h_1aa2cb4765308e2bbdf01988b2acdf92d9" prot="public" static="no">
+        <name>cJSON_String</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="36" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="c_j_s_o_n_8c_1ae928a03f612fd8ab2e9152dee6a1035d" compoundref="c_j_s_o_n_8c" startline="192" endline="249">parse_string</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1aad22e0fc125dba829a01e575754b0602" compoundref="c_j_s_o_n_8c" startline="372" endline="403">print_value</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1a5987bbc1c94d9f602d719a4015ff0e6c" compoundref="c_j_s_o_n_8c" startline="697" endline="697">cJSON_CreateString</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="c_j_s_o_n_8h_1a491c3484a36f3915cc4710088f55971f" prot="public" static="no">
+        <name>cJSON_StringIsConst</name>
+        <initializer>512</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="41" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="c_j_s_o_n_8c_1ab18060251de70a2b55a18dec694f8f8a" compoundref="c_j_s_o_n_8c" startline="81" endline="93">cJSON_Delete</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1af5153e89d76785c5b2ebdd0d8e8f258e" compoundref="c_j_s_o_n_8c" startline="673" endline="673">cJSON_AddItemToObjectCS</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="c_j_s_o_n_8h_1aad4e442b8095939decddfb67d87d9324" prot="public" static="no">
+        <name>cJSON_True</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="33" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="c_j_s_o_n_8c_1aa9d7542467e921558b62ea2dbd4b9c60" compoundref="c_j_s_o_n_8c" startline="357" endline="369">parse_value</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1aad22e0fc125dba829a01e575754b0602" compoundref="c_j_s_o_n_8c" startline="372" endline="403">print_value</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1a07b3d4616c5a682aa558180713ce858a" compoundref="c_j_s_o_n_8c" startline="693" endline="693">cJSON_CreateTrue</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1a06b0c43427994498d770e65b0089f8a8" compoundref="c_j_s_o_n_8c" startline="695" endline="695">cJSON_CreateBool</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="c_j_s_o_n_8h_1a417c667b0692c463cf3c6c435f1d5978" prot="public" static="no">
+        <type>struct <ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref></type>
+        <definition>typedef struct cJSON  cJSON</definition>
+        <argsstring></argsstring>
+        <name>cJSON</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="c_j_s_o_n_8h_1a4c24043be07442b38adc0ef79fcfb3f8" prot="public" static="no">
+        <type>struct <ref refid="structc_j_s_o_n___hooks" kindref="compound">cJSON_Hooks</ref></type>
+        <definition>typedef struct cJSON_Hooks  cJSON_Hooks</definition>
+        <argsstring></argsstring>
+        <name>cJSON_Hooks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="60" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a076941e875d547f20959c66de97beee5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cJSON_AddItemReferenceToArray</definition>
+        <argsstring>(cJSON *array, cJSON *item)</argsstring>
+        <name>cJSON_AddItemReferenceToArray</name>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="108" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="674" bodyend="674"/>
+        <references refid="c_j_s_o_n_8c_1a164dcefd36af8654942116c444bd0b6a" compoundref="c_j_s_o_n_8c" startline="671" endline="671">cJSON_AddItemToArray</references>
+        <references refid="c_j_s_o_n_8c_1a840197ebe7308bc68b2a8a108b06b004" compoundref="c_j_s_o_n_8c" startline="668" endline="668">create_reference</references>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a001634f84d255810784155f4c8e4e288" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cJSON_AddItemReferenceToObject</definition>
+        <argsstring>(cJSON *object, const char *string, cJSON *item)</argsstring>
+        <name>cJSON_AddItemReferenceToObject</name>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="109" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="675" bodyend="675"/>
+        <references refid="c_j_s_o_n_8c_1a096004811663311569e95aa77518959c" compoundref="c_j_s_o_n_8c" startline="672" endline="672">cJSON_AddItemToObject</references>
+        <references refid="c_j_s_o_n_8c_1a840197ebe7308bc68b2a8a108b06b004" compoundref="c_j_s_o_n_8c" startline="668" endline="668">create_reference</references>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a164dcefd36af8654942116c444bd0b6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cJSON_AddItemToArray</definition>
+        <argsstring>(cJSON *array, cJSON *item)</argsstring>
+        <name>cJSON_AddItemToArray</name>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="104" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="671" bodyend="671"/>
+        <references refid="structc_j_s_o_n_1af3da6753e4916f328721d324d62af50d" compoundref="c_j_s_o_n_8h" startline="46">cJSON::child</references>
+        <references refid="structc_j_s_o_n_1a91a95ab3a28ac01716663d0bdd7215f9" compoundref="c_j_s_o_n_8h" startline="45">cJSON::next</references>
+        <references refid="c_j_s_o_n_8c_1a5d61bcc0045ace88c2ae04f0928eeace" compoundref="c_j_s_o_n_8c" startline="666" endline="666">suffix_object</references>
+        <referencedby refid="c_j_s_o_n_8c_1a096004811663311569e95aa77518959c" compoundref="c_j_s_o_n_8c" startline="672" endline="672">cJSON_AddItemToObject</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1af5153e89d76785c5b2ebdd0d8e8f258e" compoundref="c_j_s_o_n_8c" startline="673" endline="673">cJSON_AddItemToObjectCS</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1a076941e875d547f20959c66de97beee5" compoundref="c_j_s_o_n_8c" startline="674" endline="674">cJSON_AddItemReferenceToArray</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1a26521dbb099b8247457808972930547b" compoundref="c_j_s_o_n_8c" startline="684" endline="685">cJSON_InsertItemInArray</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a096004811663311569e95aa77518959c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cJSON_AddItemToObject</definition>
+        <argsstring>(cJSON *object, const char *string, cJSON *item)</argsstring>
+        <name>cJSON_AddItemToObject</name>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="105" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="672" bodyend="672"/>
+        <references refid="structc_j_s_o_n_1aed1cfb225a5fb77461e7972691e68a72" compoundref="c_j_s_o_n_8h" startline="54">cJSON::string</references>
+        <references refid="c_j_s_o_n_8c_1a5b14d3353d354b84d67889ddb4d8bc3c" compoundref="c_j_s_o_n_8c" startline="47">cJSON_free</references>
+        <references refid="c_j_s_o_n_8c_1a52edadd0bf81e05a1fb04200388475f9" compoundref="c_j_s_o_n_8c" startline="49" endline="58">cJSON_strdup</references>
+        <references refid="c_j_s_o_n_8c_1a164dcefd36af8654942116c444bd0b6a" compoundref="c_j_s_o_n_8c" startline="671" endline="671">cJSON_AddItemToArray</references>
+        <referencedby refid="c_j_s_o_n_8c_1a001634f84d255810784155f4c8e4e288" compoundref="c_j_s_o_n_8c" startline="675" endline="675">cJSON_AddItemReferenceToObject</referencedby>
+        <referencedby refid="group___p_p_m_p_s_e_r_i_a_l_i_z_e_r_1gac6f89c07a494d40c5e1b41b0e505d8a2" compoundref="_p_p_m_p_serializer_8c" startline="106" endline="306">PPMPSerializer_PayloadSensorSelective</referencedby>
+        <referencedby refid="group___p_p_m_p_s_e_r_i_a_l_i_z_e_r_1ga31284e51a3ef72bf5c365b3039cb07c3" compoundref="_p_p_m_p_serializer_8c" startline="309" endline="374">PPMPSerializer_PayloadExternalSensorSelective</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1af5153e89d76785c5b2ebdd0d8e8f258e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cJSON_AddItemToObjectCS</definition>
+        <argsstring>(cJSON *object, const char *string, cJSON *item)</argsstring>
+        <name>cJSON_AddItemToObjectCS</name>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="106" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="673" bodyend="673"/>
+        <references refid="structc_j_s_o_n_1ac765329451135abec74c45e1897abf26" compoundref="c_j_s_o_n_8h" startline="48">cJSON::type</references>
+        <references refid="c_j_s_o_n_8h_1a491c3484a36f3915cc4710088f55971f" compoundref="c_j_s_o_n_8h" startline="41">cJSON_StringIsConst</references>
+        <references refid="structc_j_s_o_n_1aed1cfb225a5fb77461e7972691e68a72" compoundref="c_j_s_o_n_8h" startline="54">cJSON::string</references>
+        <references refid="c_j_s_o_n_8c_1a5b14d3353d354b84d67889ddb4d8bc3c" compoundref="c_j_s_o_n_8c" startline="47">cJSON_free</references>
+        <references refid="c_j_s_o_n_8c_1a164dcefd36af8654942116c444bd0b6a" compoundref="c_j_s_o_n_8c" startline="671" endline="671">cJSON_AddItemToArray</references>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a29e5808c66c1cf1f3edbf117babe07b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+        <definition>cJSON* cJSON_CreateArray</definition>
+        <argsstring>(void)</argsstring>
+        <name>cJSON_CreateArray</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="94" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="698" bodyend="698"/>
+        <references refid="c_j_s_o_n_8c_1a39a97485cfb9d19bad65a0522faea19f" compoundref="c_j_s_o_n_8c" startline="73" endline="78">cJSON_New_Item</references>
+        <references refid="structc_j_s_o_n_1ac765329451135abec74c45e1897abf26" compoundref="c_j_s_o_n_8h" startline="48">cJSON::type</references>
+        <references refid="c_j_s_o_n_8h_1a57cffa126740a8efcdcb7bcef80e8897" compoundref="c_j_s_o_n_8h" startline="37">cJSON_Array</references>
+        <referencedby refid="c_j_s_o_n_8c_1a12576edcea9baca64be6fe7a6ae8d4fa" compoundref="c_j_s_o_n_8c" startline="702" endline="702">cJSON_CreateIntArray</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1a328fe12c04efcf2073b218bbf35ac6ec" compoundref="c_j_s_o_n_8c" startline="703" endline="703">cJSON_CreateFloatArray</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1a04cb41ee475a68bd2ee63e92d8534049" compoundref="c_j_s_o_n_8c" startline="704" endline="704">cJSON_CreateDoubleArray</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1abeecb344ac9a0318cd42ac32b6e22289" compoundref="c_j_s_o_n_8c" startline="705" endline="705">cJSON_CreateStringArray</referencedby>
+        <referencedby refid="group___p_p_m_p_s_e_r_i_a_l_i_z_e_r_1gac6f89c07a494d40c5e1b41b0e505d8a2" compoundref="_p_p_m_p_serializer_8c" startline="106" endline="306">PPMPSerializer_PayloadSensorSelective</referencedby>
+        <referencedby refid="group___p_p_m_p_s_e_r_i_a_l_i_z_e_r_1ga31284e51a3ef72bf5c365b3039cb07c3" compoundref="_p_p_m_p_serializer_8c" startline="309" endline="374">PPMPSerializer_PayloadExternalSensorSelective</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a06b0c43427994498d770e65b0089f8a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+        <definition>cJSON* cJSON_CreateBool</definition>
+        <argsstring>(int b)</argsstring>
+        <name>cJSON_CreateBool</name>
+        <param>
+          <type>int</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="91" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="695" bodyend="695"/>
+        <references refid="c_j_s_o_n_8c_1a39a97485cfb9d19bad65a0522faea19f" compoundref="c_j_s_o_n_8c" startline="73" endline="78">cJSON_New_Item</references>
+        <references refid="structc_j_s_o_n_1ac765329451135abec74c45e1897abf26" compoundref="c_j_s_o_n_8h" startline="48">cJSON::type</references>
+        <references refid="c_j_s_o_n_8h_1aad4e442b8095939decddfb67d87d9324" compoundref="c_j_s_o_n_8h" startline="33">cJSON_True</references>
+        <references refid="c_j_s_o_n_8h_1a2d240682316354b5748f909ad220184b" compoundref="c_j_s_o_n_8h" startline="32">cJSON_False</references>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a04cb41ee475a68bd2ee63e92d8534049" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+        <definition>cJSON* cJSON_CreateDoubleArray</definition>
+        <argsstring>(const double *numbers, int count)</argsstring>
+        <name>cJSON_CreateDoubleArray</name>
+        <param>
+          <type>const double *</type>
+          <declname>numbers</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="100" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="704" bodyend="704"/>
+        <references refid="c_j_s_o_n_8c_1a29e5808c66c1cf1f3edbf117babe07b3" compoundref="c_j_s_o_n_8c" startline="698" endline="698">cJSON_CreateArray</references>
+        <references refid="c_j_s_o_n_8c_1a220d076d7d3a309049d6889be6d4904a" compoundref="c_j_s_o_n_8c" startline="696" endline="696">cJSON_CreateNumber</references>
+        <references refid="c_j_s_o_n_8c_1a5d61bcc0045ace88c2ae04f0928eeace" compoundref="c_j_s_o_n_8c" startline="666" endline="666">suffix_object</references>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a33dcdd4d4f5da12bc91372376908c42b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+        <definition>cJSON* cJSON_CreateFalse</definition>
+        <argsstring>(void)</argsstring>
+        <name>cJSON_CreateFalse</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="90" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="694" bodyend="694"/>
+        <references refid="c_j_s_o_n_8c_1a39a97485cfb9d19bad65a0522faea19f" compoundref="c_j_s_o_n_8c" startline="73" endline="78">cJSON_New_Item</references>
+        <references refid="structc_j_s_o_n_1ac765329451135abec74c45e1897abf26" compoundref="c_j_s_o_n_8h" startline="48">cJSON::type</references>
+        <references refid="c_j_s_o_n_8h_1a2d240682316354b5748f909ad220184b" compoundref="c_j_s_o_n_8h" startline="32">cJSON_False</references>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a328fe12c04efcf2073b218bbf35ac6ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+        <definition>cJSON* cJSON_CreateFloatArray</definition>
+        <argsstring>(const float *numbers, int count)</argsstring>
+        <name>cJSON_CreateFloatArray</name>
+        <param>
+          <type>const float *</type>
+          <declname>numbers</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="99" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="703" bodyend="703"/>
+        <references refid="c_j_s_o_n_8c_1a29e5808c66c1cf1f3edbf117babe07b3" compoundref="c_j_s_o_n_8c" startline="698" endline="698">cJSON_CreateArray</references>
+        <references refid="c_j_s_o_n_8c_1a220d076d7d3a309049d6889be6d4904a" compoundref="c_j_s_o_n_8c" startline="696" endline="696">cJSON_CreateNumber</references>
+        <references refid="c_j_s_o_n_8c_1a5d61bcc0045ace88c2ae04f0928eeace" compoundref="c_j_s_o_n_8c" startline="666" endline="666">suffix_object</references>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a12576edcea9baca64be6fe7a6ae8d4fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+        <definition>cJSON* cJSON_CreateIntArray</definition>
+        <argsstring>(const int *numbers, int count)</argsstring>
+        <name>cJSON_CreateIntArray</name>
+        <param>
+          <type>const int *</type>
+          <declname>numbers</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="98" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="702" bodyend="702"/>
+        <references refid="c_j_s_o_n_8c_1a29e5808c66c1cf1f3edbf117babe07b3" compoundref="c_j_s_o_n_8c" startline="698" endline="698">cJSON_CreateArray</references>
+        <references refid="c_j_s_o_n_8c_1a220d076d7d3a309049d6889be6d4904a" compoundref="c_j_s_o_n_8c" startline="696" endline="696">cJSON_CreateNumber</references>
+        <references refid="c_j_s_o_n_8c_1a5d61bcc0045ace88c2ae04f0928eeace" compoundref="c_j_s_o_n_8c" startline="666" endline="666">suffix_object</references>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a83ea2a0b33071a1120b9052170a2bc13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+        <definition>cJSON* cJSON_CreateNull</definition>
+        <argsstring>(void)</argsstring>
+        <name>cJSON_CreateNull</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="88" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="692" bodyend="692"/>
+        <references refid="c_j_s_o_n_8c_1a39a97485cfb9d19bad65a0522faea19f" compoundref="c_j_s_o_n_8c" startline="73" endline="78">cJSON_New_Item</references>
+        <references refid="structc_j_s_o_n_1ac765329451135abec74c45e1897abf26" compoundref="c_j_s_o_n_8h" startline="48">cJSON::type</references>
+        <references refid="c_j_s_o_n_8h_1aeadaba63ddb68aaa518528595d503dcd" compoundref="c_j_s_o_n_8h" startline="34">cJSON_NULL</references>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a220d076d7d3a309049d6889be6d4904a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+        <definition>cJSON* cJSON_CreateNumber</definition>
+        <argsstring>(double num)</argsstring>
+        <name>cJSON_CreateNumber</name>
+        <param>
+          <type>double</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="92" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="696" bodyend="696"/>
+        <references refid="c_j_s_o_n_8c_1a39a97485cfb9d19bad65a0522faea19f" compoundref="c_j_s_o_n_8c" startline="73" endline="78">cJSON_New_Item</references>
+        <references refid="structc_j_s_o_n_1ac765329451135abec74c45e1897abf26" compoundref="c_j_s_o_n_8h" startline="48">cJSON::type</references>
+        <references refid="c_j_s_o_n_8h_1a15e77e2f6457dc9b19c10ddb032af971" compoundref="c_j_s_o_n_8h" startline="35">cJSON_Number</references>
+        <references refid="structc_j_s_o_n_1a2983295369d8ff0183638d8550a22263" compoundref="c_j_s_o_n_8h" startline="52">cJSON::valuedouble</references>
+        <references refid="structc_j_s_o_n_1af69506d34291edd0be9fa15660ac01ec" compoundref="c_j_s_o_n_8h" startline="51">cJSON::valueint</references>
+        <referencedby refid="c_j_s_o_n_8c_1a12576edcea9baca64be6fe7a6ae8d4fa" compoundref="c_j_s_o_n_8c" startline="702" endline="702">cJSON_CreateIntArray</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1a328fe12c04efcf2073b218bbf35ac6ec" compoundref="c_j_s_o_n_8c" startline="703" endline="703">cJSON_CreateFloatArray</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1a04cb41ee475a68bd2ee63e92d8534049" compoundref="c_j_s_o_n_8c" startline="704" endline="704">cJSON_CreateDoubleArray</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a9c5f44afdd781b16dead90042fe74085" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+        <definition>cJSON* cJSON_CreateObject</definition>
+        <argsstring>(void)</argsstring>
+        <name>cJSON_CreateObject</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="95" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="699" bodyend="699"/>
+        <references refid="c_j_s_o_n_8c_1a39a97485cfb9d19bad65a0522faea19f" compoundref="c_j_s_o_n_8c" startline="73" endline="78">cJSON_New_Item</references>
+        <references refid="structc_j_s_o_n_1ac765329451135abec74c45e1897abf26" compoundref="c_j_s_o_n_8h" startline="48">cJSON::type</references>
+        <references refid="c_j_s_o_n_8h_1a22c6e13481c090629afbd77b7cebd24c" compoundref="c_j_s_o_n_8h" startline="38">cJSON_Object</references>
+        <referencedby refid="group___p_p_m_p_s_e_r_i_a_l_i_z_e_r_1gac6f89c07a494d40c5e1b41b0e505d8a2" compoundref="_p_p_m_p_serializer_8c" startline="106" endline="306">PPMPSerializer_PayloadSensorSelective</referencedby>
+        <referencedby refid="group___p_p_m_p_s_e_r_i_a_l_i_z_e_r_1ga31284e51a3ef72bf5c365b3039cb07c3" compoundref="_p_p_m_p_serializer_8c" startline="309" endline="374">PPMPSerializer_PayloadExternalSensorSelective</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a5987bbc1c94d9f602d719a4015ff0e6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+        <definition>cJSON* cJSON_CreateString</definition>
+        <argsstring>(const char *string)</argsstring>
+        <name>cJSON_CreateString</name>
+        <param>
+          <type>const char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="93" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="697" bodyend="697"/>
+        <references refid="c_j_s_o_n_8c_1a39a97485cfb9d19bad65a0522faea19f" compoundref="c_j_s_o_n_8c" startline="73" endline="78">cJSON_New_Item</references>
+        <references refid="structc_j_s_o_n_1ac765329451135abec74c45e1897abf26" compoundref="c_j_s_o_n_8h" startline="48">cJSON::type</references>
+        <references refid="c_j_s_o_n_8h_1aa2cb4765308e2bbdf01988b2acdf92d9" compoundref="c_j_s_o_n_8h" startline="36">cJSON_String</references>
+        <references refid="structc_j_s_o_n_1a4d2b95f0dc1f37a46452f5ddd6963455" compoundref="c_j_s_o_n_8h" startline="50">cJSON::valuestring</references>
+        <references refid="c_j_s_o_n_8c_1a52edadd0bf81e05a1fb04200388475f9" compoundref="c_j_s_o_n_8c" startline="49" endline="58">cJSON_strdup</references>
+        <referencedby refid="c_j_s_o_n_8c_1abeecb344ac9a0318cd42ac32b6e22289" compoundref="c_j_s_o_n_8c" startline="705" endline="705">cJSON_CreateStringArray</referencedby>
+        <referencedby refid="group___p_p_m_p_s_e_r_i_a_l_i_z_e_r_1gac6f89c07a494d40c5e1b41b0e505d8a2" compoundref="_p_p_m_p_serializer_8c" startline="106" endline="306">PPMPSerializer_PayloadSensorSelective</referencedby>
+        <referencedby refid="group___p_p_m_p_s_e_r_i_a_l_i_z_e_r_1ga31284e51a3ef72bf5c365b3039cb07c3" compoundref="_p_p_m_p_serializer_8c" startline="309" endline="374">PPMPSerializer_PayloadExternalSensorSelective</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1abeecb344ac9a0318cd42ac32b6e22289" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+        <definition>cJSON* cJSON_CreateStringArray</definition>
+        <argsstring>(const char **strings, int count)</argsstring>
+        <name>cJSON_CreateStringArray</name>
+        <param>
+          <type>const char **</type>
+          <declname>strings</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="101" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="705" bodyend="705"/>
+        <references refid="c_j_s_o_n_8c_1a29e5808c66c1cf1f3edbf117babe07b3" compoundref="c_j_s_o_n_8c" startline="698" endline="698">cJSON_CreateArray</references>
+        <references refid="c_j_s_o_n_8c_1a5987bbc1c94d9f602d719a4015ff0e6c" compoundref="c_j_s_o_n_8c" startline="697" endline="697">cJSON_CreateString</references>
+        <references refid="c_j_s_o_n_8c_1a5d61bcc0045ace88c2ae04f0928eeace" compoundref="c_j_s_o_n_8c" startline="666" endline="666">suffix_object</references>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a07b3d4616c5a682aa558180713ce858a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+        <definition>cJSON* cJSON_CreateTrue</definition>
+        <argsstring>(void)</argsstring>
+        <name>cJSON_CreateTrue</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="89" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="693" bodyend="693"/>
+        <references refid="c_j_s_o_n_8c_1a39a97485cfb9d19bad65a0522faea19f" compoundref="c_j_s_o_n_8c" startline="73" endline="78">cJSON_New_Item</references>
+        <references refid="structc_j_s_o_n_1ac765329451135abec74c45e1897abf26" compoundref="c_j_s_o_n_8h" startline="48">cJSON::type</references>
+        <references refid="c_j_s_o_n_8h_1aad4e442b8095939decddfb67d87d9324" compoundref="c_j_s_o_n_8h" startline="33">cJSON_True</references>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1ab18060251de70a2b55a18dec694f8f8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cJSON_Delete</definition>
+        <argsstring>(cJSON *c)</argsstring>
+        <name>cJSON_Delete</name>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="75" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="81" bodyend="93"/>
+        <references refid="structc_j_s_o_n_1a91a95ab3a28ac01716663d0bdd7215f9" compoundref="c_j_s_o_n_8h" startline="45">cJSON::next</references>
+        <references refid="structc_j_s_o_n_1ac765329451135abec74c45e1897abf26" compoundref="c_j_s_o_n_8h" startline="48">cJSON::type</references>
+        <references refid="c_j_s_o_n_8h_1ad3d18116aae3bfa46f13bcfd7fd6d4e7" compoundref="c_j_s_o_n_8h" startline="40">cJSON_IsReference</references>
+        <references refid="structc_j_s_o_n_1af3da6753e4916f328721d324d62af50d" compoundref="c_j_s_o_n_8h" startline="46">cJSON::child</references>
+        <references refid="structc_j_s_o_n_1a4d2b95f0dc1f37a46452f5ddd6963455" compoundref="c_j_s_o_n_8h" startline="50">cJSON::valuestring</references>
+        <references refid="c_j_s_o_n_8c_1a5b14d3353d354b84d67889ddb4d8bc3c" compoundref="c_j_s_o_n_8c" startline="47">cJSON_free</references>
+        <references refid="c_j_s_o_n_8h_1a491c3484a36f3915cc4710088f55971f" compoundref="c_j_s_o_n_8h" startline="41">cJSON_StringIsConst</references>
+        <references refid="structc_j_s_o_n_1aed1cfb225a5fb77461e7972691e68a72" compoundref="c_j_s_o_n_8h" startline="54">cJSON::string</references>
+        <referencedby refid="c_j_s_o_n_8c_1a9c63df4d9350bee4bd1726f8f23ad536" compoundref="c_j_s_o_n_8c" startline="323" endline="337">cJSON_ParseWithOpts</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1a2b08ee3d172cb94e9abea1e4031a366f" compoundref="c_j_s_o_n_8c" startline="679" endline="679">cJSON_DeleteItemFromArray</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1a148a56617a2a97921d9b9dfbe5dc85bf" compoundref="c_j_s_o_n_8c" startline="681" endline="681">cJSON_DeleteItemFromObject</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1a567d357a7a0c3c0c9c896d98aae3dcec" compoundref="c_j_s_o_n_8c" startline="686" endline="688">cJSON_ReplaceItemInArray</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1a9acb1410be711f33d7c6d39f916b2d35" compoundref="c_j_s_o_n_8c" startline="708" endline="733">cJSON_Duplicate</referencedby>
+        <referencedby refid="group___p_p_m_p_s_e_r_i_a_l_i_z_e_r_1gac6f89c07a494d40c5e1b41b0e505d8a2" compoundref="_p_p_m_p_serializer_8c" startline="106" endline="306">PPMPSerializer_PayloadSensorSelective</referencedby>
+        <referencedby refid="group___p_p_m_p_s_e_r_i_a_l_i_z_e_r_1ga31284e51a3ef72bf5c365b3039cb07c3" compoundref="_p_p_m_p_serializer_8c" startline="309" endline="374">PPMPSerializer_PayloadExternalSensorSelective</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a2b08ee3d172cb94e9abea1e4031a366f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cJSON_DeleteItemFromArray</definition>
+        <argsstring>(cJSON *array, int which)</argsstring>
+        <name>cJSON_DeleteItemFromArray</name>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>which</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="113" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="679" bodyend="679"/>
+        <references refid="c_j_s_o_n_8c_1ab18060251de70a2b55a18dec694f8f8a" compoundref="c_j_s_o_n_8c" startline="81" endline="93">cJSON_Delete</references>
+        <references refid="c_j_s_o_n_8c_1a68b9e0b2d984f1d873fb571425a98b9b" compoundref="c_j_s_o_n_8c" startline="677" endline="678">cJSON_DetachItemFromArray</references>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a148a56617a2a97921d9b9dfbe5dc85bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cJSON_DeleteItemFromObject</definition>
+        <argsstring>(cJSON *object, const char *string)</argsstring>
+        <name>cJSON_DeleteItemFromObject</name>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="115" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="681" bodyend="681"/>
+        <references refid="c_j_s_o_n_8c_1ab18060251de70a2b55a18dec694f8f8a" compoundref="c_j_s_o_n_8c" startline="81" endline="93">cJSON_Delete</references>
+        <references refid="c_j_s_o_n_8c_1a7010822d267256f274e0adf22be2b202" compoundref="c_j_s_o_n_8c" startline="680" endline="680">cJSON_DetachItemFromObject</references>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a68b9e0b2d984f1d873fb571425a98b9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+        <definition>cJSON* cJSON_DetachItemFromArray</definition>
+        <argsstring>(cJSON *array, int which)</argsstring>
+        <name>cJSON_DetachItemFromArray</name>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>which</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="112" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="677" bodyend="678"/>
+        <references refid="structc_j_s_o_n_1af3da6753e4916f328721d324d62af50d" compoundref="c_j_s_o_n_8h" startline="46">cJSON::child</references>
+        <references refid="structc_j_s_o_n_1a91a95ab3a28ac01716663d0bdd7215f9" compoundref="c_j_s_o_n_8h" startline="45">cJSON::next</references>
+        <references refid="structc_j_s_o_n_1ad8252b317903156cce35de2ea43e34dc" compoundref="c_j_s_o_n_8h" startline="45">cJSON::prev</references>
+        <referencedby refid="c_j_s_o_n_8c_1a2b08ee3d172cb94e9abea1e4031a366f" compoundref="c_j_s_o_n_8c" startline="679" endline="679">cJSON_DeleteItemFromArray</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1a7010822d267256f274e0adf22be2b202" compoundref="c_j_s_o_n_8c" startline="680" endline="680">cJSON_DetachItemFromObject</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a7010822d267256f274e0adf22be2b202" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+        <definition>cJSON* cJSON_DetachItemFromObject</definition>
+        <argsstring>(cJSON *object, const char *string)</argsstring>
+        <name>cJSON_DetachItemFromObject</name>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="114" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="680" bodyend="680"/>
+        <references refid="structc_j_s_o_n_1af3da6753e4916f328721d324d62af50d" compoundref="c_j_s_o_n_8h" startline="46">cJSON::child</references>
+        <references refid="c_j_s_o_n_8c_1ab6066e9a7036815e0c14b658dee3d1f5" compoundref="c_j_s_o_n_8c" startline="39" endline="44">cJSON_strcasecmp</references>
+        <references refid="structc_j_s_o_n_1aed1cfb225a5fb77461e7972691e68a72" compoundref="c_j_s_o_n_8h" startline="54">cJSON::string</references>
+        <references refid="structc_j_s_o_n_1a91a95ab3a28ac01716663d0bdd7215f9" compoundref="c_j_s_o_n_8h" startline="45">cJSON::next</references>
+        <references refid="c_j_s_o_n_8c_1a68b9e0b2d984f1d873fb571425a98b9b" compoundref="c_j_s_o_n_8c" startline="677" endline="678">cJSON_DetachItemFromArray</references>
+        <referencedby refid="c_j_s_o_n_8c_1a148a56617a2a97921d9b9dfbe5dc85bf" compoundref="c_j_s_o_n_8c" startline="681" endline="681">cJSON_DeleteItemFromObject</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a9acb1410be711f33d7c6d39f916b2d35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+        <definition>cJSON* cJSON_Duplicate</definition>
+        <argsstring>(cJSON *item, int recurse)</argsstring>
+        <name>cJSON_Duplicate</name>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>recurse</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="123" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="708" bodyend="733"/>
+        <references refid="c_j_s_o_n_8c_1a39a97485cfb9d19bad65a0522faea19f" compoundref="c_j_s_o_n_8c" startline="73" endline="78">cJSON_New_Item</references>
+        <references refid="structc_j_s_o_n_1ac765329451135abec74c45e1897abf26" compoundref="c_j_s_o_n_8h" startline="48">cJSON::type</references>
+        <references refid="c_j_s_o_n_8h_1ad3d18116aae3bfa46f13bcfd7fd6d4e7" compoundref="c_j_s_o_n_8h" startline="40">cJSON_IsReference</references>
+        <references refid="structc_j_s_o_n_1af69506d34291edd0be9fa15660ac01ec" compoundref="c_j_s_o_n_8h" startline="51">cJSON::valueint</references>
+        <references refid="structc_j_s_o_n_1a2983295369d8ff0183638d8550a22263" compoundref="c_j_s_o_n_8h" startline="52">cJSON::valuedouble</references>
+        <references refid="structc_j_s_o_n_1a4d2b95f0dc1f37a46452f5ddd6963455" compoundref="c_j_s_o_n_8h" startline="50">cJSON::valuestring</references>
+        <references refid="c_j_s_o_n_8c_1a52edadd0bf81e05a1fb04200388475f9" compoundref="c_j_s_o_n_8c" startline="49" endline="58">cJSON_strdup</references>
+        <references refid="c_j_s_o_n_8c_1ab18060251de70a2b55a18dec694f8f8a" compoundref="c_j_s_o_n_8c" startline="81" endline="93">cJSON_Delete</references>
+        <references refid="structc_j_s_o_n_1aed1cfb225a5fb77461e7972691e68a72" compoundref="c_j_s_o_n_8h" startline="54">cJSON::string</references>
+        <references refid="structc_j_s_o_n_1af3da6753e4916f328721d324d62af50d" compoundref="c_j_s_o_n_8h" startline="46">cJSON::child</references>
+        <references refid="structc_j_s_o_n_1a91a95ab3a28ac01716663d0bdd7215f9" compoundref="c_j_s_o_n_8h" startline="45">cJSON::next</references>
+        <references refid="structc_j_s_o_n_1ad8252b317903156cce35de2ea43e34dc" compoundref="c_j_s_o_n_8h" startline="45">cJSON::prev</references>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1ac48335f22f743aff913991d809e0d620" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+        <definition>cJSON* cJSON_GetArrayItem</definition>
+        <argsstring>(cJSON *array, int item)</argsstring>
+        <name>cJSON_GetArrayItem</name>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="80" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="662" bodyend="662"/>
+        <references refid="structc_j_s_o_n_1af3da6753e4916f328721d324d62af50d" compoundref="c_j_s_o_n_8h" startline="46">cJSON::child</references>
+        <references refid="structc_j_s_o_n_1a91a95ab3a28ac01716663d0bdd7215f9" compoundref="c_j_s_o_n_8h" startline="45">cJSON::next</references>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1adb5c049d3211599c90cd5a3d5e68d854" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int cJSON_GetArraySize</definition>
+        <argsstring>(cJSON *array)</argsstring>
+        <name>cJSON_GetArraySize</name>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="78" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="661" bodyend="661"/>
+        <references refid="structc_j_s_o_n_1af3da6753e4916f328721d324d62af50d" compoundref="c_j_s_o_n_8h" startline="46">cJSON::child</references>
+        <references refid="structc_j_s_o_n_1a91a95ab3a28ac01716663d0bdd7215f9" compoundref="c_j_s_o_n_8h" startline="45">cJSON::next</references>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a5e81ffc372644963c759103865b0cad1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* cJSON_GetErrorPtr</definition>
+        <argsstring>(void)</argsstring>
+        <name>cJSON_GetErrorPtr</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="85" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="37" bodyend="37"/>
+        <references refid="c_j_s_o_n_8c_1a00793ba086b417bb3d75ab79af8c83fb" compoundref="c_j_s_o_n_8c" startline="35">ep</references>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1aba766c9d2c20996e323522cbf2ba46c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+        <definition>cJSON* cJSON_GetObjectItem</definition>
+        <argsstring>(cJSON *object, const char *string)</argsstring>
+        <name>cJSON_GetObjectItem</name>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="82" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="663" bodyend="663"/>
+        <references refid="structc_j_s_o_n_1af3da6753e4916f328721d324d62af50d" compoundref="c_j_s_o_n_8h" startline="46">cJSON::child</references>
+        <references refid="c_j_s_o_n_8c_1ab6066e9a7036815e0c14b658dee3d1f5" compoundref="c_j_s_o_n_8c" startline="39" endline="44">cJSON_strcasecmp</references>
+        <references refid="structc_j_s_o_n_1aed1cfb225a5fb77461e7972691e68a72" compoundref="c_j_s_o_n_8h" startline="54">cJSON::string</references>
+        <references refid="structc_j_s_o_n_1a91a95ab3a28ac01716663d0bdd7215f9" compoundref="c_j_s_o_n_8h" startline="45">cJSON::next</references>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gad59dfe5e013298fd5be3440516ba26ea" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="325" endline="407">AppParseConfigFile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a20837ed285a3c2abf578330f2bd97ad4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cJSON_InitHooks</definition>
+        <argsstring>(cJSON_Hooks *hooks)</argsstring>
+        <name>cJSON_InitHooks</name>
+        <param>
+          <type><ref refid="structc_j_s_o_n___hooks" kindref="compound">cJSON_Hooks</ref> *</type>
+          <declname>hooks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="63" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="60" bodyend="70"/>
+        <references refid="c_j_s_o_n_8c_1a6a44d5f7b45076951879e341ef363689" compoundref="c_j_s_o_n_8c" startline="46">cJSON_malloc</references>
+        <references refid="c_j_s_o_n_8c_1a5b14d3353d354b84d67889ddb4d8bc3c" compoundref="c_j_s_o_n_8c" startline="47">cJSON_free</references>
+        <references refid="structc_j_s_o_n___hooks_1a6e14aa8df61c7a672fe0c79d655adc70" compoundref="c_j_s_o_n_8h" startline="58">cJSON_Hooks::malloc_fn</references>
+        <references refid="structc_j_s_o_n___hooks_1ab06271bcf01250a9753f9a73584c4841" compoundref="c_j_s_o_n_8h" startline="59">cJSON_Hooks::free_fn</references>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a26521dbb099b8247457808972930547b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cJSON_InsertItemInArray</definition>
+        <argsstring>(cJSON *array, int which, cJSON *newitem)</argsstring>
+        <name>cJSON_InsertItemInArray</name>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>which</declname>
+        </param>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>newitem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="118" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="684" bodyend="685"/>
+        <references refid="structc_j_s_o_n_1af3da6753e4916f328721d324d62af50d" compoundref="c_j_s_o_n_8h" startline="46">cJSON::child</references>
+        <references refid="structc_j_s_o_n_1a91a95ab3a28ac01716663d0bdd7215f9" compoundref="c_j_s_o_n_8h" startline="45">cJSON::next</references>
+        <references refid="c_j_s_o_n_8c_1a164dcefd36af8654942116c444bd0b6a" compoundref="c_j_s_o_n_8c" startline="671" endline="671">cJSON_AddItemToArray</references>
+        <references refid="structc_j_s_o_n_1ad8252b317903156cce35de2ea43e34dc" compoundref="c_j_s_o_n_8h" startline="45">cJSON::prev</references>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1afd416be779f90b6369a189437d3bcc05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cJSON_Minify</definition>
+        <argsstring>(char *json)</argsstring>
+        <name>cJSON_Minify</name>
+        <param>
+          <type>char *</type>
+          <declname>json</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="131" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="735" bodyend="750"/>
+        <referencedby refid="group___p_p_m_p_s_e_r_i_a_l_i_z_e_r_1gac6f89c07a494d40c5e1b41b0e505d8a2" compoundref="_p_p_m_p_serializer_8c" startline="106" endline="306">PPMPSerializer_PayloadSensorSelective</referencedby>
+        <referencedby refid="group___p_p_m_p_s_e_r_i_a_l_i_z_e_r_1ga31284e51a3ef72bf5c365b3039cb07c3" compoundref="_p_p_m_p_serializer_8c" startline="309" endline="374">PPMPSerializer_PayloadExternalSensorSelective</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1ad3df5f943457d4befebe4109d48e4a50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+        <definition>cJSON* cJSON_Parse</definition>
+        <argsstring>(const char *value)</argsstring>
+        <name>cJSON_Parse</name>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="67" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="339" bodyend="339"/>
+        <references refid="c_j_s_o_n_8c_1a9c63df4d9350bee4bd1726f8f23ad536" compoundref="c_j_s_o_n_8c" startline="323" endline="337">cJSON_ParseWithOpts</references>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a9c63df4d9350bee4bd1726f8f23ad536" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+        <definition>cJSON* cJSON_ParseWithOpts</definition>
+        <argsstring>(const char *value, const char **return_parse_end, int require_null_terminated)</argsstring>
+        <name>cJSON_ParseWithOpts</name>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const char **</type>
+          <declname>return_parse_end</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>require_null_terminated</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="129" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="323" bodyend="337"/>
+        <references refid="c_j_s_o_n_8c_1a39a97485cfb9d19bad65a0522faea19f" compoundref="c_j_s_o_n_8c" startline="73" endline="78">cJSON_New_Item</references>
+        <references refid="c_j_s_o_n_8c_1a00793ba086b417bb3d75ab79af8c83fb" compoundref="c_j_s_o_n_8c" startline="35">ep</references>
+        <references refid="c_j_s_o_n_8c_1aa9d7542467e921558b62ea2dbd4b9c60" compoundref="c_j_s_o_n_8c" startline="357" endline="369">parse_value</references>
+        <references refid="c_j_s_o_n_8c_1ad1c991ebe6cb88144a8e06e6443c36c9" compoundref="c_j_s_o_n_8c" startline="320" endline="320">skip</references>
+        <references refid="c_j_s_o_n_8c_1ab18060251de70a2b55a18dec694f8f8a" compoundref="c_j_s_o_n_8c" startline="81" endline="93">cJSON_Delete</references>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gad59dfe5e013298fd5be3440516ba26ea" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="325" endline="407">AppParseConfigFile</referencedby>
+        <referencedby refid="c_j_s_o_n_8c_1ad3df5f943457d4befebe4109d48e4a50" compoundref="c_j_s_o_n_8c" startline="339" endline="339">cJSON_Parse</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1aea4f15b04dba4dff2edc2bb1d387b555" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* cJSON_Print</definition>
+        <argsstring>(cJSON *item)</argsstring>
+        <name>cJSON_Print</name>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="69" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="342" bodyend="342"/>
+        <references refid="c_j_s_o_n_8c_1aad22e0fc125dba829a01e575754b0602" compoundref="c_j_s_o_n_8c" startline="372" endline="403">print_value</references>
+        <referencedby refid="group___p_p_m_p_s_e_r_i_a_l_i_z_e_r_1gac6f89c07a494d40c5e1b41b0e505d8a2" compoundref="_p_p_m_p_serializer_8c" startline="106" endline="306">PPMPSerializer_PayloadSensorSelective</referencedby>
+        <referencedby refid="group___p_p_m_p_s_e_r_i_a_l_i_z_e_r_1ga31284e51a3ef72bf5c365b3039cb07c3" compoundref="_p_p_m_p_serializer_8c" startline="309" endline="374">PPMPSerializer_PayloadExternalSensorSelective</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a4354cf61f1d9b71688c34ab626b726ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* cJSON_PrintBuffered</definition>
+        <argsstring>(cJSON *item, int prebuffer, int fmt)</argsstring>
+        <name>cJSON_PrintBuffered</name>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>prebuffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fmt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="73" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="345" bodyend="353"/>
+        <references refid="structprintbuffer_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="c_j_s_o_n_8c" startline="119">printbuffer::buffer</references>
+        <references refid="c_j_s_o_n_8c_1a6a44d5f7b45076951879e341ef363689" compoundref="c_j_s_o_n_8c" startline="46">cJSON_malloc</references>
+        <references refid="structprintbuffer_1a9f59b34b1f25fe00023291b678246bcc" compoundref="c_j_s_o_n_8c" startline="119">printbuffer::length</references>
+        <references refid="structprintbuffer_1aed7ea92f45bd273dde380a45ddced592" compoundref="c_j_s_o_n_8c" startline="119">printbuffer::offset</references>
+        <references refid="c_j_s_o_n_8c_1aad22e0fc125dba829a01e575754b0602" compoundref="c_j_s_o_n_8c" startline="372" endline="403">print_value</references>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a5539c9504a8e65390a94852707f105d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* cJSON_PrintUnformatted</definition>
+        <argsstring>(cJSON *item)</argsstring>
+        <name>cJSON_PrintUnformatted</name>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="71" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="343" bodyend="343"/>
+        <references refid="c_j_s_o_n_8c_1aad22e0fc125dba829a01e575754b0602" compoundref="c_j_s_o_n_8c" startline="372" endline="403">print_value</references>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a567d357a7a0c3c0c9c896d98aae3dcec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cJSON_ReplaceItemInArray</definition>
+        <argsstring>(cJSON *array, int which, cJSON *newitem)</argsstring>
+        <name>cJSON_ReplaceItemInArray</name>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>which</declname>
+        </param>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>newitem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="119" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="686" bodyend="688"/>
+        <references refid="structc_j_s_o_n_1af3da6753e4916f328721d324d62af50d" compoundref="c_j_s_o_n_8h" startline="46">cJSON::child</references>
+        <references refid="structc_j_s_o_n_1a91a95ab3a28ac01716663d0bdd7215f9" compoundref="c_j_s_o_n_8h" startline="45">cJSON::next</references>
+        <references refid="structc_j_s_o_n_1ad8252b317903156cce35de2ea43e34dc" compoundref="c_j_s_o_n_8h" startline="45">cJSON::prev</references>
+        <references refid="c_j_s_o_n_8c_1ab18060251de70a2b55a18dec694f8f8a" compoundref="c_j_s_o_n_8c" startline="81" endline="93">cJSON_Delete</references>
+        <referencedby refid="c_j_s_o_n_8c_1a31202ffebc9e4f86c3db12f9793b6800" compoundref="c_j_s_o_n_8c" startline="689" endline="689">cJSON_ReplaceItemInObject</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="c_j_s_o_n_8h_1a31202ffebc9e4f86c3db12f9793b6800" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cJSON_ReplaceItemInObject</definition>
+        <argsstring>(cJSON *object, const char *string, cJSON *newitem)</argsstring>
+        <name>cJSON_ReplaceItemInObject</name>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref> *</type>
+          <declname>newitem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h" line="120" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/cJSON.c" bodystart="689" bodyend="689"/>
+        <references refid="structc_j_s_o_n_1af3da6753e4916f328721d324d62af50d" compoundref="c_j_s_o_n_8h" startline="46">cJSON::child</references>
+        <references refid="c_j_s_o_n_8c_1ab6066e9a7036815e0c14b658dee3d1f5" compoundref="c_j_s_o_n_8c" startline="39" endline="44">cJSON_strcasecmp</references>
+        <references refid="structc_j_s_o_n_1aed1cfb225a5fb77461e7972691e68a72" compoundref="c_j_s_o_n_8h" startline="54">cJSON::string</references>
+        <references refid="structc_j_s_o_n_1a91a95ab3a28ac01716663d0bdd7215f9" compoundref="c_j_s_o_n_8h" startline="45">cJSON::next</references>
+        <references refid="c_j_s_o_n_8c_1a52edadd0bf81e05a1fb04200388475f9" compoundref="c_j_s_o_n_8c" startline="49" endline="58">cJSON_strdup</references>
+        <references refid="c_j_s_o_n_8c_1a567d357a7a0c3c0c9c896d98aae3dcec" compoundref="c_j_s_o_n_8c" startline="686" endline="688">cJSON_ReplaceItemInArray</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/>Copyright<sp/>(c)<sp/>2009<sp/>Dave<sp/>Gamble</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>cJSON__h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cJSON__h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>cJSON<sp/>Types:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="c_j_s_o_n_8h_1a2d240682316354b5748f909ad220184b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cJSON_False<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="c_j_s_o_n_8h_1aad4e442b8095939decddfb67d87d9324" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cJSON_True<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="c_j_s_o_n_8h_1aeadaba63ddb68aaa518528595d503dcd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cJSON_NULL<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="c_j_s_o_n_8h_1a15e77e2f6457dc9b19c10ddb032af971" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cJSON_Number<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="c_j_s_o_n_8h_1aa2cb4765308e2bbdf01988b2acdf92d9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cJSON_String<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="c_j_s_o_n_8h_1a57cffa126740a8efcdcb7bcef80e8897" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cJSON_Array<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="c_j_s_o_n_8h_1a22c6e13481c090629afbd77b7cebd24c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cJSON_Object<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40" refid="c_j_s_o_n_8h_1ad3d18116aae3bfa46f13bcfd7fd6d4e7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cJSON_IsReference<sp/>256</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="c_j_s_o_n_8h_1a491c3484a36f3915cc4710088f55971f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cJSON_StringIsConst<sp/>512</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>The<sp/>cJSON<sp/>structure:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="structc_j_s_o_n" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>{</highlight></codeline>
+<codeline lineno="45" refid="structc_j_s_o_n_1ad8252b317903156cce35de2ea43e34dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*<ref refid="structc_j_s_o_n_1a91a95ab3a28ac01716663d0bdd7215f9" kindref="member">next</ref>,*<ref refid="structc_j_s_o_n_1ad8252b317903156cce35de2ea43e34dc" kindref="member">prev</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>next/prev<sp/>allow<sp/>you<sp/>to<sp/>walk<sp/>array/object<sp/>chains.<sp/>Alternatively,<sp/>use<sp/>GetArraySize/GetArrayItem/GetObjectItem<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="structc_j_s_o_n_1af3da6753e4916f328721d324d62af50d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*<ref refid="structc_j_s_o_n_1af3da6753e4916f328721d324d62af50d" kindref="member">child</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>An<sp/>array<sp/>or<sp/>object<sp/>item<sp/>will<sp/>have<sp/>a<sp/>child<sp/>pointer<sp/>pointing<sp/>to<sp/>a<sp/>chain<sp/>of<sp/>the<sp/>items<sp/>in<sp/>the<sp/>array/object.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="structc_j_s_o_n_1ac765329451135abec74c45e1897abf26" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structc_j_s_o_n_1ac765329451135abec74c45e1897abf26" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>type<sp/>of<sp/>the<sp/>item,<sp/>as<sp/>above.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="structc_j_s_o_n_1a4d2b95f0dc1f37a46452f5ddd6963455" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structc_j_s_o_n_1a4d2b95f0dc1f37a46452f5ddd6963455" kindref="member">valuestring</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>item&apos;s<sp/>string,<sp/>if<sp/>type==cJSON_String<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="structc_j_s_o_n_1af69506d34291edd0be9fa15660ac01ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structc_j_s_o_n_1af69506d34291edd0be9fa15660ac01ec" kindref="member">valueint</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>item&apos;s<sp/>number,<sp/>if<sp/>type==cJSON_Number<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="structc_j_s_o_n_1a2983295369d8ff0183638d8550a22263" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structc_j_s_o_n_1a2983295369d8ff0183638d8550a22263" kindref="member">valuedouble</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>item&apos;s<sp/>number,<sp/>if<sp/>type==cJSON_Number<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="structc_j_s_o_n_1aed1cfb225a5fb77461e7972691e68a72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structc_j_s_o_n_1aed1cfb225a5fb77461e7972691e68a72" kindref="member">string</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>item&apos;s<sp/>name<sp/>string,<sp/>if<sp/>this<sp/>item<sp/>is<sp/>the<sp/>child<sp/>of,<sp/>or<sp/>is<sp/>in<sp/>the<sp/>list<sp/>of<sp/>subitems<sp/>of<sp/>an<sp/>object.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}<sp/><ref refid="c_j_s_o_n_8h_1a417c667b0692c463cf3c6c435f1d5978" kindref="member">cJSON</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="structc_j_s_o_n___hooks" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structc_j_s_o_n___hooks" kindref="compound">cJSON_Hooks</ref><sp/>{</highlight></codeline>
+<codeline lineno="58" refid="structc_j_s_o_n___hooks_1a6e14aa8df61c7a672fe0c79d655adc70" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*(*malloc_fn)(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sz);</highlight></codeline>
+<codeline lineno="59" refid="structc_j_s_o_n___hooks_1ab06271bcf01250a9753f9a73584c4841" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structc_j_s_o_n___hooks_1ab06271bcf01250a9753f9a73584c4841" kindref="member">free_fn</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ptr);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}<sp/><ref refid="c_j_s_o_n_8h_1a4c24043be07442b38adc0ef79fcfb3f8" kindref="member">cJSON_Hooks</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Supply<sp/>malloc,<sp/>realloc<sp/>and<sp/>free<sp/>functions<sp/>to<sp/>cJSON<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="c_j_s_o_n_8h_1a20837ed285a3c2abf578330f2bd97ad4" kindref="member">cJSON_InitHooks</ref>(<ref refid="structc_j_s_o_n___hooks" kindref="compound">cJSON_Hooks</ref>*<sp/>hooks);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Supply<sp/>a<sp/>block<sp/>of<sp/>JSON,<sp/>and<sp/>this<sp/>returns<sp/>a<sp/>cJSON<sp/>object<sp/>you<sp/>can<sp/>interrogate.<sp/>Call<sp/>cJSON_Delete<sp/>when<sp/>finished.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*<ref refid="c_j_s_o_n_8h_1ad3df5f943457d4befebe4109d48e4a50" kindref="member">cJSON_Parse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="_b_l_e_s_w___cycling_power_01_release_notes_8txt_1a5cad1470ef119e32b6400227eeaa8b18" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Render<sp/>a<sp/>cJSON<sp/>entity<sp/>to<sp/>text<sp/>for<sp/>transfer/storage.<sp/>Free<sp/>the<sp/>char*<sp/>when<sp/>finished.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*<ref refid="c_j_s_o_n_8h_1aea4f15b04dba4dff2edc2bb1d387b555" kindref="member">cJSON_Print</ref>(<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*item);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Render<sp/>a<sp/>cJSON<sp/>entity<sp/>to<sp/>text<sp/>for<sp/>transfer/storage<sp/>without<sp/>any<sp/>formatting.<sp/>Free<sp/>the<sp/>char*<sp/>when<sp/>finished.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*<ref refid="c_j_s_o_n_8h_1a5539c9504a8e65390a94852707f105d4" kindref="member">cJSON_PrintUnformatted</ref>(<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*item);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Render<sp/>a<sp/>cJSON<sp/>entity<sp/>to<sp/>text<sp/>using<sp/>a<sp/>buffered<sp/>strategy.<sp/>prebuffer<sp/>is<sp/>a<sp/>guess<sp/>at<sp/>the<sp/>final<sp/>size.<sp/>guessing<sp/>well<sp/>reduces<sp/>reallocation.<sp/>fmt=0<sp/>gives<sp/>unformatted,<sp/>=1<sp/>gives<sp/>formatted<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="c_j_s_o_n_8h_1a4354cf61f1d9b71688c34ab626b726ce" kindref="member">cJSON_PrintBuffered</ref>(<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*item,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>prebuffer,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fmt);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Delete<sp/>a<sp/>cJSON<sp/>entity<sp/>and<sp/>all<sp/>subentities.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="c_j_s_o_n_8h_1ab18060251de70a2b55a18dec694f8f8a" kindref="member">cJSON_Delete</ref>(<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*c);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Returns<sp/>the<sp/>number<sp/>of<sp/>items<sp/>in<sp/>an<sp/>array<sp/>(or<sp/>object).<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="c_j_s_o_n_8h_1adb5c049d3211599c90cd5a3d5e68d854" kindref="member">cJSON_GetArraySize</ref>(<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*array);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Retrieve<sp/>item<sp/>number<sp/>&quot;item&quot;<sp/>from<sp/>array<sp/>&quot;array&quot;.<sp/>Returns<sp/>NULL<sp/>if<sp/>unsuccessful.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*<ref refid="c_j_s_o_n_8h_1ac48335f22f743aff913991d809e0d620" kindref="member">cJSON_GetArrayItem</ref>(<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*array,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>item);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Get<sp/>item<sp/>&quot;string&quot;<sp/>from<sp/>object.<sp/>Case<sp/>insensitive.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*<ref refid="c_j_s_o_n_8h_1aba766c9d2c20996e323522cbf2ba46c6" kindref="member">cJSON_GetObjectItem</ref>(<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>For<sp/>analysing<sp/>failed<sp/>parses.<sp/>This<sp/>returns<sp/>a<sp/>pointer<sp/>to<sp/>the<sp/>parse<sp/>error.<sp/>You&apos;ll<sp/>probably<sp/>need<sp/>to<sp/>look<sp/>a<sp/>few<sp/>chars<sp/>back<sp/>to<sp/>make<sp/>sense<sp/>of<sp/>it.<sp/>Defined<sp/>when<sp/>cJSON_Parse()<sp/>returns<sp/>0.<sp/>0<sp/>when<sp/>cJSON_Parse()<sp/>succeeds.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="c_j_s_o_n_8h_1a5e81ffc372644963c759103865b0cad1" kindref="member">cJSON_GetErrorPtr</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>These<sp/>calls<sp/>create<sp/>a<sp/>cJSON<sp/>item<sp/>of<sp/>the<sp/>appropriate<sp/>type.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*<ref refid="c_j_s_o_n_8h_1a83ea2a0b33071a1120b9052170a2bc13" kindref="member">cJSON_CreateNull</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*<ref refid="c_j_s_o_n_8h_1a07b3d4616c5a682aa558180713ce858a" kindref="member">cJSON_CreateTrue</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*<ref refid="c_j_s_o_n_8h_1a33dcdd4d4f5da12bc91372376908c42b" kindref="member">cJSON_CreateFalse</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*<ref refid="c_j_s_o_n_8h_1a06b0c43427994498d770e65b0089f8a8" kindref="member">cJSON_CreateBool</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*<ref refid="c_j_s_o_n_8h_1a220d076d7d3a309049d6889be6d4904a" kindref="member">cJSON_CreateNumber</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>num);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*<ref refid="c_j_s_o_n_8h_1a5987bbc1c94d9f602d719a4015ff0e6c" kindref="member">cJSON_CreateString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*<ref refid="c_j_s_o_n_8h_1a29e5808c66c1cf1f3edbf117babe07b3" kindref="member">cJSON_CreateArray</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*<ref refid="c_j_s_o_n_8h_1a9c5f44afdd781b16dead90042fe74085" kindref="member">cJSON_CreateObject</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>These<sp/>utilities<sp/>create<sp/>an<sp/>Array<sp/>of<sp/>count<sp/>items.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*<ref refid="c_j_s_o_n_8h_1a12576edcea9baca64be6fe7a6ae8d4fa" kindref="member">cJSON_CreateIntArray</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*numbers,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*<ref refid="c_j_s_o_n_8h_1a328fe12c04efcf2073b218bbf35ac6ec" kindref="member">cJSON_CreateFloatArray</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*numbers,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*<ref refid="c_j_s_o_n_8h_1a04cb41ee475a68bd2ee63e92d8534049" kindref="member">cJSON_CreateDoubleArray</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*numbers,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*<ref refid="c_j_s_o_n_8h_1abeecb344ac9a0318cd42ac32b6e22289" kindref="member">cJSON_CreateStringArray</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**strings,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Append<sp/>item<sp/>to<sp/>the<sp/>specified<sp/>array/object.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="c_j_s_o_n_8h_1a164dcefd36af8654942116c444bd0b6a" kindref="member">cJSON_AddItemToArray</ref>(<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*array,<sp/><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*item);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="c_j_s_o_n_8h_1a096004811663311569e95aa77518959c" kindref="member">cJSON_AddItemToObject</ref>(<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*item);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="c_j_s_o_n_8h_1af5153e89d76785c5b2ebdd0d8e8f258e" kindref="member">cJSON_AddItemToObjectCS</ref>(<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*item);<sp/><sp/></highlight><highlight class="comment">/*<sp/>Use<sp/>this<sp/>when<sp/>string<sp/>is<sp/>definitely<sp/>const<sp/>(i.e.<sp/>a<sp/>literal,<sp/>or<sp/>as<sp/>good<sp/>as),<sp/>and<sp/>will<sp/>definitely<sp/>survive<sp/>the<sp/>cJSON<sp/>object<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Append<sp/>reference<sp/>to<sp/>item<sp/>to<sp/>the<sp/>specified<sp/>array/object.<sp/>Use<sp/>this<sp/>when<sp/>you<sp/>want<sp/>to<sp/>add<sp/>an<sp/>existing<sp/>cJSON<sp/>to<sp/>a<sp/>new<sp/>cJSON,<sp/>but<sp/>don&apos;t<sp/>want<sp/>to<sp/>corrupt<sp/>your<sp/>existing<sp/>cJSON.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="c_j_s_o_n_8h_1a076941e875d547f20959c66de97beee5" kindref="member">cJSON_AddItemReferenceToArray</ref>(<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*array,<sp/><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*item);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="c_j_s_o_n_8h_1a001634f84d255810784155f4c8e4e288" kindref="member">cJSON_AddItemReferenceToObject</ref>(<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*item);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Remove/Detatch<sp/>items<sp/>from<sp/>Arrays/Objects.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*<ref refid="c_j_s_o_n_8h_1a68b9e0b2d984f1d873fb571425a98b9b" kindref="member">cJSON_DetachItemFromArray</ref>(<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*array,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>which);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="c_j_s_o_n_8h_1a2b08ee3d172cb94e9abea1e4031a366f" kindref="member">cJSON_DeleteItemFromArray</ref>(<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*array,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>which);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*<ref refid="c_j_s_o_n_8h_1a7010822d267256f274e0adf22be2b202" kindref="member">cJSON_DetachItemFromObject</ref>(<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="c_j_s_o_n_8h_1a148a56617a2a97921d9b9dfbe5dc85bf" kindref="member">cJSON_DeleteItemFromObject</ref>(<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Update<sp/>array<sp/>items.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="c_j_s_o_n_8h_1a26521dbb099b8247457808972930547b" kindref="member">cJSON_InsertItemInArray</ref>(<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*array,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>which,<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*newitem);<sp/></highlight><highlight class="comment">/*<sp/>Shifts<sp/>pre-existing<sp/>items<sp/>to<sp/>the<sp/>right.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="c_j_s_o_n_8h_1a567d357a7a0c3c0c9c896d98aae3dcec" kindref="member">cJSON_ReplaceItemInArray</ref>(<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*array,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>which,<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*newitem);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="c_j_s_o_n_8h_1a31202ffebc9e4f86c3db12f9793b6800" kindref="member">cJSON_ReplaceItemInObject</ref>(<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*newitem);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Duplicate<sp/>a<sp/>cJSON<sp/>item<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*<ref refid="c_j_s_o_n_8h_1a9acb1410be711f33d7c6d39f916b2d35" kindref="member">cJSON_Duplicate</ref>(<ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*item,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>recurse);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Duplicate<sp/>will<sp/>create<sp/>a<sp/>new,<sp/>identical<sp/>cJSON<sp/>item<sp/>to<sp/>the<sp/>one<sp/>you<sp/>pass,<sp/>in<sp/>new<sp/>memory<sp/>that<sp/>will</highlight></codeline>
+<codeline lineno="125"><highlight class="comment">need<sp/>to<sp/>be<sp/>released.<sp/>With<sp/>recurse!=0,<sp/>it<sp/>will<sp/>duplicate<sp/>any<sp/>children<sp/>connected<sp/>to<sp/>the<sp/>item.</highlight></codeline>
+<codeline lineno="126"><highlight class="comment">The<sp/>item-&gt;next<sp/>and<sp/>-&gt;prev<sp/>pointers<sp/>are<sp/>always<sp/>zero<sp/>on<sp/>return<sp/>from<sp/>Duplicate.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ParseWithOpts<sp/>allows<sp/>you<sp/>to<sp/>require<sp/>(and<sp/>check)<sp/>that<sp/>the<sp/>JSON<sp/>is<sp/>null<sp/>terminated,<sp/>and<sp/>to<sp/>retrieve<sp/>the<sp/>pointer<sp/>to<sp/>the<sp/>final<sp/>byte<sp/>parsed.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref><sp/>*<ref refid="c_j_s_o_n_8h_1a9c63df4d9350bee4bd1726f8f23ad536" kindref="member">cJSON_ParseWithOpts</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="_b_l_e_s_w___cycling_power_01_release_notes_8txt_1a5cad1470ef119e32b6400227eeaa8b18" kindref="member">value</ref>,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**return_parse_end,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>require_null_terminated);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="c_j_s_o_n_8h_1afd416be779f90b6369a189437d3bcc05" kindref="member">cJSON_Minify</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*json);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Macros<sp/>for<sp/>creating<sp/>things<sp/>quickly.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="c_j_s_o_n_8h_1a7a02f3a43ca58698933294a95c90a6e6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cJSON_AddNullToObject(object,name)<sp/><sp/><sp/><sp/><sp/><sp/>cJSON_AddItemToObject(object,<sp/>name,<sp/>cJSON_CreateNull())</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="c_j_s_o_n_8h_1a0bb61d70afe61f6bf209999458f170ac" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cJSON_AddTrueToObject(object,name)<sp/><sp/><sp/><sp/><sp/><sp/>cJSON_AddItemToObject(object,<sp/>name,<sp/>cJSON_CreateTrue())</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="c_j_s_o_n_8h_1a7069c1ed4b02a9ed2dc6063b2e62d675" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cJSON_AddFalseToObject(object,name)<sp/><sp/><sp/><sp/><sp/>cJSON_AddItemToObject(object,<sp/>name,<sp/>cJSON_CreateFalse())</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="c_j_s_o_n_8h_1ae9b6c76048eda06c6b92ff5e32f2e02e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cJSON_AddBoolToObject(object,name,b)<sp/><sp/><sp/><sp/>cJSON_AddItemToObject(object,<sp/>name,<sp/>cJSON_CreateBool(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="c_j_s_o_n_8h_1aedf8e7037a7332b3653f90be04519862" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cJSON_AddNumberToObject(object,name,n)<sp/><sp/>cJSON_AddItemToObject(object,<sp/>name,<sp/>cJSON_CreateNumber(n))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="c_j_s_o_n_8h_1a3e2f334ba489b1c267ca40b3e046d5ee" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cJSON_AddStringToObject(object,name,s)<sp/><sp/>cJSON_AddItemToObject(object,<sp/>name,<sp/>cJSON_CreateString(s))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>When<sp/>assigning<sp/>an<sp/>integer<sp/>value,<sp/>it<sp/>needs<sp/>to<sp/>be<sp/>propagated<sp/>to<sp/>valuedouble<sp/>too.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="c_j_s_o_n_8h_1a548f0c2ae589c8ea4a1bab43d198854e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cJSON_SetIntValue(object,val)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((object)?(object)-&gt;valueint=(object)-&gt;valuedouble=(val):(val))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="c_j_s_o_n_8h_1a3e23a54bc9aa6860fe74b6e882df5ef2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cJSON_SetNumberValue(object,val)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((object)?(object)-&gt;valueint=(object)-&gt;valuedouble=(val):(val))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/cJSON.h"/>
+  </compounddef>
+</doxygen>

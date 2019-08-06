@@ -1,0 +1,490 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_f_i_g" kind="group">
+    <compoundname>BCDS_NETWORK_CONFIG</compoundname>
+    <title>Network Configuration Interface</title>
+    <innerfile refid="_b_c_d_s___network_config_8h">BCDS_NetworkConfig.h</innerfile>
+    <innerclass refid="struct_network_config___ip_settings___s" prot="public">NetworkConfig_IpSettings_S</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_f_i_g_1ga405edd509d1ca443f2b060306982c0a6" prot="public" static="no">
+        <name>NetworkConfig_IpStatus_E</name>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_f_i_g_1gga405edd509d1ca443f2b060306982c0a6a36cfc3ef729d209593fa279edd5303cb" prot="public">
+          <name>NETWORKCONFIG_IPV4_ACQUIRED</name>
+          <initializer>= 0x00</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>IPv4 Address Acquired </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_f_i_g_1gga405edd509d1ca443f2b060306982c0a6a04f923b7e4e959129373fa345b1bf5cd" prot="public">
+          <name>NETWORKCONFIG_IPV6_ACQUIRED</name>
+          <initializer>= 0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>IPv6 Address Acquired </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_f_i_g_1gga405edd509d1ca443f2b060306982c0a6acd12d7a3f491d708472ab06bf6c4a1db" prot="public">
+          <name>NETWORKCONFIG_IP_NOT_ACQUIRED</name>
+          <initializer>= 0x02</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>IP Address Not Acquired </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Different IP status for the Network Configuration function callback </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/BCDS_NetworkConfig.h" line="85" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/BCDS_NetworkConfig.h" bodystart="84" bodyend="89"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_f_i_g_1gab675ddadfd7b262d58d781e9f4fa81e0" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* NetworkConfig_IpCallback_T)(NetworkConfig_IpStatus_T ipStatus)</definition>
+        <argsstring>)(NetworkConfig_IpStatus_T ipStatus)</argsstring>
+        <name>NetworkConfig_IpCallback_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type defining the prototype which Set IP function call back must conform to. This call back is called to notify the user when the IP is acquired following the call of <ref refid="_network_config_8c_1a7fec08671de13287000a0b3a1a251ae2" kindref="member">NetworkConfig_SetIpDhcp()</ref>. Returns the NCI IP status as a parameter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/BCDS_NetworkConfig.h" line="107" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/BCDS_NetworkConfig.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_f_i_g_1ga65cb3430b04273ac95caffda821c95db" prot="public" static="no">
+        <type>struct <ref refid="struct_network_config___ip_settings___s" kindref="compound">NetworkConfig_IpSettings_S</ref></type>
+        <definition>typedef struct NetworkConfig_IpSettings_S NetworkConfig_IpSettings_T</definition>
+        <argsstring></argsstring>
+        <name>NetworkConfig_IpSettings_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/BCDS_NetworkConfig.h" line="65" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/BCDS_NetworkConfig.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_f_i_g_1ga387dc587ca48f529ff4257d6a35f2a9d" prot="public" static="no">
+        <type>enum <ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_f_i_g_1ga405edd509d1ca443f2b060306982c0a6" kindref="member">NetworkConfig_IpStatus_E</ref></type>
+        <definition>typedef enum NetworkConfig_IpStatus_E NetworkConfig_IpStatus_T</definition>
+        <argsstring></argsstring>
+        <name>NetworkConfig_IpStatus_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/BCDS_NetworkConfig.h" line="65" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/BCDS_NetworkConfig.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_f_i_g_1ga7d38f0f8de88ca8e062760acf031946c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BCDS_DEPRECATED</definition>
+        <argsstring>(void NetworkConfig_SetIpStatus(NetworkConfig_IpStatus_T ipStatus))</argsstring>
+        <name>BCDS_DEPRECATED</name>
+        <param>
+          <type>void </type>
+          <declname>NetworkConfig_SetIpStatus</declname>
+          <array>NetworkConfig_IpStatus_T ipStatus</array>
+        </param>
+        <briefdescription>
+<para>Function to set the IP status. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of IP that needs to be set </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/BCDS_NetworkConfig.h" line="115" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_f_i_g_1ga3a3f573334f195b51d2ea4137e765bef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BCDS_DEPRECATED</definition>
+        <argsstring>(Retcode_T NetworkConfig_GetIpSettings(NetworkConfig_IpSettings_T *myIpSettings))</argsstring>
+        <name>BCDS_DEPRECATED</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref> </type>
+          <declname>NetworkConfig_GetIpSettings</declname>
+          <array>NetworkConfig_IpSettings_T *myIpSettings</array>
+        </param>
+        <briefdescription>
+<para>Function to handle WLAN IP settings. This function gets the IP settings after a Successful connection. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">myIpSettings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Network configuration settings. Pointer contains IP address, Gateway, DNS Server and DHCP information</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref> - if the input parameter passes NULL. </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> - Settings retrieved correctly. </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" kindref="member">RETCODE_UNINITIALIZED</ref> - if WlanConnect_GetInitStatus failed by returning WLANCONNECT_NOT_INITIALZED. </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref> - if sl_NetCfgGet failed by returning NETWORKCONFIG_FAILURE .</para></simplesect>
+<simplesect kind="return"><para>The return value consist of (First 1 MSByte represents Package ID, Next Byte represents Severity and Last 2 LSBytes represents error code) Below shows the error code(last 2 Bytes) meaning</para></simplesect>
+Example usage: Getting the IP settings <programlisting><codeline><highlight class="normal">//<sp/>Local<sp/>variable<sp/>that<sp/>stores<sp/>the<sp/>IP<sp/>settings</highlight></codeline>
+<codeline><highlight class="normal">NetworkConfig_IpSettings_T<sp/>myIpGet;</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>Local<sp/>variable<sp/>for<sp/>storing<sp/>the<sp/>return<sp/>status</highlight></codeline>
+<codeline><highlight class="normal">Retcode_T<sp/>retStatus;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>retrieve<sp/>the<sp/>IP<sp/>settings</highlight></codeline>
+<codeline><highlight class="normal">retStatus<sp/>=<sp/>NetworkConfig_GetIpSettings(&amp;myIpGet);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>print<sp/>a<sp/>message<sp/>if<sp/>the<sp/>function<sp/>returned<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>(RETCODE_OK<sp/>==<sp/>retStatus)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>printf(&quot;The<sp/>IP<sp/>was<sp/>retrieved<sp/>successfully&quot;);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/BCDS_NetworkConfig.h" line="152" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_f_i_g_1ga130312514f12bd798ad9877e0a2ce527" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BCDS_DEPRECATED</definition>
+        <argsstring>(Retcode_T NetworkConfig_SetIpStatic(NetworkConfig_IpSettings_T myIpSettings))</argsstring>
+        <name>BCDS_DEPRECATED</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref> </type>
+          <declname>NetworkConfig_SetIpStatic</declname>
+          <array>NetworkConfig_IpSettings_T myIpSettings</array>
+        </param>
+        <briefdescription>
+<para>Function to handle WLAN IP settings. This function sets the static IP. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">myIpSettings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Network configuration settings structure. Contains IP address, Gateway, DNS Server and DHCP information</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> - Settings retrieved correctly. </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" kindref="member">RETCODE_UNINITIALIZED</ref> - if WlanConnect_GetInitStatus failed by returning WLANCONNECT_NOT_INITIALZED. </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref> - if sl_NetCfgGet failed by returning NETWORKCONFIG_FAILURE. </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref> - if sl_Start failed by returning other than ROLE_STA.</para></simplesect>
+<simplesect kind="return"><para>Retcode_T The return value consist of (First 1 MSByte represents Package ID, Next Byte represents Severity and Last 2 LSBytes represents error code) Below shows the error code(last 2 Bytes) meaning Example usage: Setting static IP <programlisting><codeline><highlight class="normal">//<sp/>Local<sp/>variables</highlight></codeline>
+<codeline><highlight class="normal">NetworkConfig_IpSettings_T<sp/>myIpSet;</highlight></codeline>
+<codeline><highlight class="normal">Retcode_T<sp/>retStatus;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>IP<sp/>settings<sp/>that<sp/>will<sp/>be<sp/>used.</highlight></codeline>
+<codeline><highlight class="normal">myIpSet.isDHCP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><sp/>(uint8_t)<sp/><sp/>DHCP_DISABLED;</highlight></codeline>
+<codeline><highlight class="normal">myIpSet.ipV4<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><sp/>NCI_ipv4Value(192,168,2,120);</highlight></codeline>
+<codeline><highlight class="normal">myIpSet.ipV4DnsServer<sp/>=<sp/><sp/>NCI_ipv4Value(192,168,2,1);</highlight></codeline>
+<codeline><highlight class="normal">myIpSet.ipV4Gateway<sp/><sp/><sp/>=<sp/><sp/>NCI_ipv4Value(192,168,2,1);</highlight></codeline>
+<codeline><highlight class="normal">myIpSet.ipV4Mask<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><sp/>NCI_ipv4Value(255,255,255,0);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Set<sp/>the<sp/>static<sp/>IP</highlight></codeline>
+<codeline><highlight class="normal">retStatus<sp/>=<sp/>NetworkConfig_SetIpStatic(myIpSet);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>print<sp/>a<sp/>message<sp/>if<sp/>the<sp/>function<sp/>returned<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>(RETCODE_OK<sp/>==<sp/>retStatus)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>printf(&quot;The<sp/>static<sp/>IP<sp/>was<sp/>set<sp/>successfully&quot;);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/BCDS_NetworkConfig.h" line="195" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_f_i_g_1gabd7cc0a83468a29ea2e6ce130c8b7a08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BCDS_DEPRECATED</definition>
+        <argsstring>(Retcode_T NetworkConfig_SetIpDhcp(NetworkConfig_IpCallback_T myIpCallback))</argsstring>
+        <name>BCDS_DEPRECATED</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref> </type>
+          <declname>NetworkConfig_SetIpDhcp</declname>
+          <array>NetworkConfig_IpCallback_T myIpCallback</array>
+        </param>
+        <briefdescription>
+<para>Function to handle WLAN IP settings. This function sets the IP by using DHCP. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">myIpCallback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Callback function for notifying user of IP acquisition using DHCP</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" kindref="member">RETCODE_UNINITIALIZED</ref> - if WlanConnect_GetInitStatus failed by returning WLANCONNECT_NOT_INITIALZED. </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref> - if sl_Start failed by returning other than ROLE_STA. </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> - sets the IP by using DHCP successfully.</para></simplesect>
+<simplesect kind="return"><para>Retcode_T The return value consist of (First 1 MSByte represents Package ID, Next Byte represents Severity and Last 2 LSBytes represents error code) Below shows the error code(last 2 Bytes) meaning</para></simplesect>
+Example usage: Setting DHCP IP with Callback <programlisting><codeline><highlight class="normal">//<sp/>Callback<sp/>function</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>myDhcpIpCallbackFunc(NetworkConfig_IpStatus_T<sp/>returnStatus)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>user<sp/>can<sp/>do<sp/>something<sp/>inside<sp/>this<sp/>callback</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>local<sp/>variables</highlight></codeline>
+<codeline><highlight class="normal">NCI_ipCallback_t<sp/>myIpCallback;</highlight></codeline>
+<codeline><highlight class="normal">Retcode_T<sp/>retStatus;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Set<sp/>the<sp/>IP<sp/>callback</highlight></codeline>
+<codeline><highlight class="normal">myIpCallback<sp/>=<sp/>myDhcpIpCallbackFunc;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Configure<sp/>DHCP<sp/>IP<sp/>with<sp/>callback</highlight></codeline>
+<codeline><highlight class="normal">retStatus<sp/>=<sp/>NetworkConfig_SetIpDhcp(myIpCallback);</highlight></codeline>
+</programlisting></para><para>Example2 usage: Setting DHCP IP without Callback <programlisting><codeline><highlight class="normal">//<sp/>Configure<sp/>DHCP<sp/>IP<sp/>without<sp/>callback.</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>Note<sp/>that<sp/>this<sp/>is<sp/>the<sp/>default<sp/>function<sp/>in<sp/>case<sp/>no<sp/>other</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>function<sp/>is<sp/>used<sp/>in<sp/>order<sp/>to<sp/>set<sp/>the<sp/>IP</highlight></codeline>
+<codeline><highlight class="normal">retStatus<sp/>=<sp/>NetworkConfig_SetIpDhcp(NULL);</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/BCDS_NetworkConfig.h" line="243" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_f_i_g_1gae7c773fdab0298a723a6de248df750b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BCDS_DEPRECATED</definition>
+        <argsstring>(uint32_t NetworkConfig_Ipv4Value(uint8_t add3, uint8_t add2, uint8_t add1, uint8_t add0))</argsstring>
+        <name>BCDS_DEPRECATED</name>
+        <param>
+          <type>uint32_t </type>
+          <declname>NetworkConfig_Ipv4Value</declname>
+          <array>uint8_t add3, uint8_t add2, uint8_t add1, uint8_t add0</array>
+        </param>
+        <briefdescription>
+<para>Function to convert an IP to hexadecimal. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">add3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Decimal value of the first byte (MSB) of an IPV4 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">add2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Decimal value of the second byte of an IPV4 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">add1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Decimal value of the third byte of an IPV4 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">add0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Decimal value of the last byte (LSB) of an IPV4</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>On success returns the integer value of IP from given hexadecimal value </para></simplesect>
+<simplesect kind="return"><para>any error value refer <ref refid="group__netcfg_1ga4eab1e8ae1d6680598de66bfff8c3ec8" kindref="member">SL_IPV4_VAL</ref> error codes</para></simplesect>
+Example usage: Transform IPV4 to hexadecimal value <programlisting><codeline><highlight class="normal">//<sp/>Local<sp/>variables</highlight></codeline>
+<codeline><highlight class="normal">NetworkConfig_IpSettings_T<sp/>myIpSet;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>After<sp/>calling<sp/>the<sp/>function<sp/>the<sp/>IPV4<sp/>values<sp/>shall<sp/>be<sp/>:</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>0xc0a80278,<sp/>the<sp/>equivalent<sp/>for<sp/>192.168.2.120</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>0xc0a80201,<sp/>the<sp/>equivalent<sp/>for<sp/>192.168.2.1</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>0xffffff00,<sp/>the<sp/>equivalent<sp/>for<sp/>255.255.255.0</highlight></codeline>
+<codeline><highlight class="normal">myIpSet.ipv4<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>NetworkConfig_Ipv4Value(192,168,2,120);</highlight></codeline>
+<codeline><highlight class="normal">myIpSet.ipV4DnsServer<sp/>=<sp/>NetworkConfig_Ipv4Value(192,168,2,1);</highlight></codeline>
+<codeline><highlight class="normal">myIpSet.ipV4Gateway<sp/><sp/><sp/>=<sp/>NetworkConfig_Ipv4Value(192,168,2,1);</highlight></codeline>
+<codeline><highlight class="normal">myIpSet.ipV4Mask<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>NetworkConfig_Ipv4Value(255,255,255,0);</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/BCDS_NetworkConfig.h" line="278" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_f_i_g_1gacf8c7f3e56267038326ecc6590cf6cfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BCDS_DEPRECATED</definition>
+        <argsstring>(uint8_t NetworkConfig_Ipv4Byte(uint32_t ipValue, uint8_t index))</argsstring>
+        <name>BCDS_DEPRECATED</name>
+        <param>
+          <type>uint8_t </type>
+          <declname>NetworkConfig_Ipv4Byte</declname>
+          <array>uint32_t ipValue, uint8_t index</array>
+        </param>
+        <briefdescription>
+<para>Function to convert an hexadecimal to IP. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ipValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hexadecimal value of the IP V4 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Determines which byte of the IPV4 will be returned.It should be from 0 to 3</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>On success returns the integer value of IP from given hexadecimal value </para></simplesect>
+<simplesect kind="return"><para>any error value refer <ref refid="group__netcfg_1gac926ef1f2a6d3c3b521a4625a361a874" kindref="member">SL_IPV4_BYTE</ref> error codes</para></simplesect>
+Example usage: Extract IPV4 byte from the hexadecimal IP value and print it <programlisting><codeline><highlight class="normal">//<sp/>Get<sp/>the<sp/>IP<sp/>settings</highlight></codeline>
+<codeline><highlight class="normal">NetworkConfig_GetIpSettings(&amp;myIpGet);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Print<sp/>the<sp/>retrieved<sp/>IP<sp/>address.<sp/>The<sp/>Gateway,<sp/>DNS<sp/>and<sp/>Mask</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>can<sp/>also<sp/>be<sp/>extracted<sp/>in<sp/>the<sp/>same<sp/>manner</highlight></codeline>
+<codeline><highlight class="normal">printf(&quot;<sp/>-<sp/>The<sp/>static<sp/>IP<sp/>was<sp/>retrieved<sp/>:<sp/>%u.%u.%u.%u<sp/>\n\r&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(unsigned<sp/>int)<sp/>(NetworkConfig_Ipv4Byte(myIpGet.ipV4,<sp/>3)),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(unsigned<sp/>int)<sp/>(NetworkConfig_Ipv4Byte(myIpGet.ipV4,<sp/>2)),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(unsigned<sp/>int)<sp/>(NetworkConfig_Ipv4Byte(myIpGet.ipV4,<sp/>1)),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(unsigned<sp/>int)<sp/>(NetworkConfig_Ipv4Byte(myIpGet.ipV4,<sp/>0)));</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/BCDS_NetworkConfig.h" line="308" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_f_i_g_1gac8b1fc82364b18d1e3a427f8c155057b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BCDS_DEPRECATED</definition>
+        <argsstring>(NetworkConfig_IpStatus_T NetworkConfig_GetIpStatus(void))</argsstring>
+        <name>BCDS_DEPRECATED</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_f_i_g_1ga387dc587ca48f529ff4257d6a35f2a9d" kindref="member">NetworkConfig_IpStatus_T</ref> </type>
+          <declname>NetworkConfig_GetIpStatus</declname>
+          <array>void</array>
+        </param>
+        <briefdescription>
+<para>Function to get the IP status. This function return the IP status. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>NETWORKCONFIG_IPV4_ACQUIRED - IPv4 was acquired </para></simplesect>
+<simplesect kind="return"><para>NETWORKCONFIG_IPV6_ACQUIRED - IPv6 was acquired (currently not supported) </para></simplesect>
+<simplesect kind="return"><para>NETWORKCONFIG_IP_NOT_ACQUIRED - IP was not acquired</para></simplesect>
+Example usage: Block until IP status is acquired and Wlan is connected <programlisting><codeline><highlight class="normal">while<sp/>((WLI_DISCONNECTED<sp/>==<sp/>WlanConnect_GetStatus())</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>||<sp/>(NETWORKCONFIG_IP_NOT_ACQUIRED<sp/>==<sp/>NetworkConfig_GetIpStatus()))</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Stay<sp/>here<sp/>until<sp/>connected<sp/>and<sp/>ip<sp/>acquired.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Timeout<sp/>logic<sp/>can<sp/>be<sp/>added<sp/>here.</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> <simplesect kind="warning"><para>This API must be called only after initialization </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/BCDS_NetworkConfig.h" line="334" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_f_i_g_1ga457ac9d83b02102d2357740efc18796f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BCDS_DEPRECATED</definition>
+        <argsstring>(Retcode_T NetworkConfig_GetIpAddress(uint8_t *url, uint32_t *destAddr))</argsstring>
+        <name>BCDS_DEPRECATED</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref> </type>
+          <declname>NetworkConfig_GetIpAddress</declname>
+          <array>uint8_t *url, uint32_t *destAddr</array>
+        </param>
+        <briefdescription>
+<para>This API returns back the Ip address by the host name. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+<para>url The string pointer holding the host name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+<para>destAddr The variable in which IP address to be stored</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK IP address returned succesffuly </para></simplesect>
+<simplesect kind="return"><para>RETCODE_FAILURE Error occurred in fetching the ip address </para></simplesect>
+<simplesect kind="return"><para>RETCODE_NULL_POINTER if the input parameter passes NULL</para></simplesect>
+Example usage:</para><para><programlisting><codeline><highlight class="normal">uint8_t<sp/>url[]<sp/>=<sp/>&quot;www.google.com&quot;</highlight></codeline>
+<codeline><highlight class="normal">uint32_t<sp/>ipAddress<sp/>=<sp/>0x00;</highlight></codeline>
+<codeline><highlight class="normal">Retcode_T<sp/>ret;</highlight></codeline>
+<codeline><highlight class="normal">ret<sp/>=<sp/>NetworkConfig_GetIpaddress(url,<sp/>&amp;ipAddress);</highlight></codeline>
+<codeline><highlight class="normal">if(RETCODE_OK<sp/>!=<sp/>ret)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//handle<sp/>error</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/BCDS_NetworkConfig.h" line="361" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_f_i_g_1gace60bf4b988d39e49104131fea0e087c" prot="public" static="no">
+        <name>NETWORKCONFIG_DHCP_DISABLED</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro for Dynamically Host Configuration Protocol disabled </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/BCDS_NetworkConfig.h" line="74" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/BCDS_NetworkConfig.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_f_i_g_1ga7048ffae378257a755546005246acc66" prot="public" static="no">
+        <name>NETWORKCONFIG_DHCP_ENABLED</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro for Dynamically Host Configuration Protocol enabled </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/BCDS_NetworkConfig.h" line="78" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/BCDS_NetworkConfig.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_f_i_g_1ga139f0570c5e27c6f1abd08d5eedeb10e" prot="public" static="no">
+        <name>NETWORKCONFIG_DHCP_FLG_ACQ</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro for Dynamically Host Configuration Protocol acquired </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/BCDS_NetworkConfig.h" line="81" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/BCDS_NetworkConfig.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_f_i_g_1ga2c72b792bcc441601853fcdb27e1aa85" prot="public" static="no">
+        <name>NETWORKCONFIG_DHCP_FLG_NOT_ACQ</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro for Dynamically Host Configuration Protocol not acquired </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/BCDS_NetworkConfig.h" line="80" column="10" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/BCDS_NetworkConfig.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface header for the Network Configuration Interface module. </para>    </briefdescription>
+    <detaileddescription>
+<para>The interface header exports High-level Network Configuration API&apos;s for integrating with the Network Interface which are used to Get &amp; Set IP Settings Set DHCP IP address and to get the IPV4 IpAddress and ipv4 byte value. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

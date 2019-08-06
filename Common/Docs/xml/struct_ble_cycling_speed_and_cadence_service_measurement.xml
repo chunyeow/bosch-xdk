@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="struct_ble_cycling_speed_and_cadence_service_measurement" kind="struct" prot="public">
+    <compoundname>BleCyclingSpeedAndCadenceServiceMeasurement</compoundname>
+    <includes local="no">SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleCyclingSpeedAndCadence_Service.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_ble_cycling_speed_and_cadence_service_measurement_1a5ee964fe17c773192d0f46aa286e4ab4" prot="public" static="no" mutable="no">
+        <type><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref></type>
+        <definition>U16 cumulativeCrankRevolution</definition>
+        <argsstring></argsstring>
+        <name>cumulativeCrankRevolution</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>CumulativeCrankRevolution: The Cumulative Crank Revolutions value, which represents the number of times a crank rotates, is used in combination with the Last Crank Event Time to determine:<itemizedlist>
+<listitem><para>if the cyclist is coasting</para></listitem><listitem><para>the average cadence. Average cadence is not accurate unless 0 cadence events (i.e. coasting) are subtracted. This value is intended to roll over and is not configurable. </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleCyclingSpeedAndCadence_Service.h" line="169" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleCyclingSpeedAndCadence_Service.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_ble_cycling_speed_and_cadence_service_measurement_1a067a5ba6cc755cd2239bf05c4806fc3d" prot="public" static="no" mutable="no">
+        <type><ref refid="_ble_types_8h_1a811024d35b9b8a41095b1f583b649e56" kindref="member">U32</ref></type>
+        <definition>U32 cumulativeWheelRevolution</definition>
+        <argsstring></argsstring>
+        <name>cumulativeWheelRevolution</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>CumulativeWheelRevolution: The Cumulative Wheel Revolutions value represents the number of times a wheel rotates, is used in combination with the Last Wheel Event Time and the wheel circumference stored on the Client to determine:<itemizedlist>
+<listitem><para>the speed of the bicycle</para></listitem><listitem><para>the distance traveled. This value is expected to be set to 0 (or another desired value in case of e.g. a sensor upgrade) at initial installation on a bicycle </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleCyclingSpeedAndCadence_Service.h" line="146" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleCyclingSpeedAndCadence_Service.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_ble_cycling_speed_and_cadence_service_measurement_1a3d9222111282dc5a29d3c7dacb65ba07" prot="public" static="no" mutable="no">
+        <type><ref refid="union_ble_cycling_speed_and_cadence_service_measurement_flags" kindref="compound">BleCyclingSpeedAndCadenceServiceMeasurementFlags</ref></type>
+        <definition>BleCyclingSpeedAndCadenceServiceMeasurementFlags flagValue</definition>
+        <argsstring></argsstring>
+        <name>flagValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>flagValue: The flags indicating what values are included in the measurement. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleCyclingSpeedAndCadence_Service.h" line="134" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleCyclingSpeedAndCadence_Service.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_ble_cycling_speed_and_cadence_service_measurement_1a1f28a87ea5105abd8cde59904ff6863d" prot="public" static="no" mutable="no">
+        <type><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref></type>
+        <definition>U16 lastCrankEvent</definition>
+        <argsstring></argsstring>
+        <name>lastCrankEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>lastCrankEvent: The &apos;crank event time&apos; is a free-running-count of 1/1024 second units and it represents the time when the crank revolution was detected by the crank rotation sensor. Since several crank events can occur between transmissions, only the Last Crank Event Time value is transmitted. This value is used in combination with the Cumulative Crank Revolutions value to enable the Client to calculate cadence. The Last Crank Event Time value rolls over every 64 seconds. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleCyclingSpeedAndCadence_Service.h" line="180" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleCyclingSpeedAndCadence_Service.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_ble_cycling_speed_and_cadence_service_measurement_1a9372063d49a1b06db91c56e164acf327" prot="public" static="no" mutable="no">
+        <type><ref refid="_ble_types_8h_1adf928e51a60dba0df29d615401cc55a8" kindref="member">U16</ref></type>
+        <definition>U16 lastWheelEvent</definition>
+        <argsstring></argsstring>
+        <name>lastWheelEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>lastWheelEvent: The &apos;wheel event time&apos; is a free-running-count of 1/1024 second units and it represents the time when the wheel revolution was detected by the wheel rotation sensor. Since several wheel events can occur between transmissions, only the Last Wheel Event Time value is transmitted. The Last Wheel Event Time value rolls over every 64 seconds </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleCyclingSpeedAndCadence_Service.h" line="155" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleCyclingSpeedAndCadence_Service.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="struct_ble_cycling_speed_and_cadence_service_measurement" kindref="compound">BleCyclingSpeedAndCadenceServiceMeasurement</ref> type Define the current CSC Measurement value to be set during the call of BLECYCLINGSPEEDANDCADENCESERVICE_SetCscMeasurement </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="2245">
+        <label>BleCyclingSpeedAndCadenceServiceMeasurementFlags</label>
+        <link refid="union_ble_cycling_speed_and_cadence_service_measurement_flags"/>
+      </node>
+      <node id="2244">
+        <label>BleCyclingSpeedAndCadenceServiceMeasurement</label>
+        <link refid="struct_ble_cycling_speed_and_cadence_service_measurement"/>
+        <childnode refid="2245" relation="usage">
+          <edgelabel>flagValue</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleCyclingSpeedAndCadence_Service.h" line="130" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Interfaces/Services/BleCyclingSpeedAndCadence_Service.h" bodystart="130" bodyend="183"/>
+    <listofallmembers>
+      <member refid="struct_ble_cycling_speed_and_cadence_service_measurement_1a5ee964fe17c773192d0f46aa286e4ab4" prot="public" virt="non-virtual"><scope>BleCyclingSpeedAndCadenceServiceMeasurement</scope><name>cumulativeCrankRevolution</name></member>
+      <member refid="struct_ble_cycling_speed_and_cadence_service_measurement_1a067a5ba6cc755cd2239bf05c4806fc3d" prot="public" virt="non-virtual"><scope>BleCyclingSpeedAndCadenceServiceMeasurement</scope><name>cumulativeWheelRevolution</name></member>
+      <member refid="struct_ble_cycling_speed_and_cadence_service_measurement_1a3d9222111282dc5a29d3c7dacb65ba07" prot="public" virt="non-virtual"><scope>BleCyclingSpeedAndCadenceServiceMeasurement</scope><name>flagValue</name></member>
+      <member refid="struct_ble_cycling_speed_and_cadence_service_measurement_1a1f28a87ea5105abd8cde59904ff6863d" prot="public" virt="non-virtual"><scope>BleCyclingSpeedAndCadenceServiceMeasurement</scope><name>lastCrankEvent</name></member>
+      <member refid="struct_ble_cycling_speed_and_cadence_service_measurement_1a9372063d49a1b06db91c56e164acf327" prot="public" virt="non-virtual"><scope>BleCyclingSpeedAndCadenceServiceMeasurement</scope><name>lastWheelEvent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

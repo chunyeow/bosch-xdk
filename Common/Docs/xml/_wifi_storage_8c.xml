@@ -1,0 +1,766 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_wifi_storage_8c" kind="file">
+    <compoundname>WifiStorage.c</compoundname>
+    <includes refid="_xdk_common_info_8h" local="yes">XdkCommonInfo.h</includes>
+    <includes refid="_wifi_storage_8h" local="yes">WifiStorage.h</includes>
+    <includes local="yes">stdio.h</includes>
+    <includes refid="fs_8h" local="yes">fs.h</includes>
+    <incdepgraph>
+      <node id="28022">
+        <label>stdbool.h</label>
+      </node>
+      <node id="28036">
+        <label>netcfg.h</label>
+        <link refid="netcfg_8h"/>
+        <childnode refid="28028" relation="include">
+        </childnode>
+      </node>
+      <node id="28018">
+        <label>XdkCommonInfo.h</label>
+        <link refid="_xdk_common_info_8h"/>
+        <childnode refid="28019" relation="include">
+        </childnode>
+      </node>
+      <node id="28021">
+        <label>stdint.h</label>
+      </node>
+      <node id="28019">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="28020" relation="include">
+        </childnode>
+      </node>
+      <node id="28024">
+        <label>stdlib.h</label>
+      </node>
+      <node id="28029">
+        <label>user.h</label>
+      </node>
+      <node id="28030">
+        <label>../source/objInclusion.h</label>
+        <link refid="obj_inclusion_8h"/>
+        <childnode refid="28028" relation="include">
+        </childnode>
+      </node>
+      <node id="28017">
+        <label>SDK/xdk110/Common/source/Utility/WifiStorage.c</label>
+        <link refid="WifiStorage.c"/>
+        <childnode refid="28018" relation="include">
+        </childnode>
+        <childnode refid="28025" relation="include">
+        </childnode>
+        <childnode refid="28026" relation="include">
+        </childnode>
+        <childnode refid="28027" relation="include">
+        </childnode>
+      </node>
+      <node id="28025">
+        <label>WifiStorage.h</label>
+        <link refid="_wifi_storage_8h"/>
+        <childnode refid="28019" relation="include">
+        </childnode>
+        <childnode refid="28018" relation="include">
+        </childnode>
+      </node>
+      <node id="28027">
+        <label>fs.h</label>
+        <link refid="fs_8h"/>
+        <childnode refid="28028" relation="include">
+        </childnode>
+      </node>
+      <node id="28023">
+        <label>string.h</label>
+      </node>
+      <node id="28020">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="28021" relation="include">
+        </childnode>
+        <childnode refid="28022" relation="include">
+        </childnode>
+        <childnode refid="28023" relation="include">
+        </childnode>
+        <childnode refid="28024" relation="include">
+        </childnode>
+      </node>
+      <node id="28038">
+        <label>../source/nonos.h</label>
+        <link refid="nonos_8h"/>
+      </node>
+      <node id="28037">
+        <label>wlan_rx_filters.h</label>
+        <link refid="wlan__rx__filters_8h"/>
+        <childnode refid="28028" relation="include">
+        </childnode>
+      </node>
+      <node id="28033">
+        <label>netapp.h</label>
+        <link refid="netapp_8h"/>
+        <childnode refid="28028" relation="include">
+        </childnode>
+      </node>
+      <node id="28034">
+        <label>wlan.h</label>
+        <link refid="_libraries_2_wi_fi_23rd-party_2_t_i_2simplelink_2include_2_w_l_a_n_8h"/>
+        <childnode refid="28028" relation="include">
+        </childnode>
+      </node>
+      <node id="28032">
+        <label>socket.h</label>
+        <link refid="socket_8h"/>
+        <childnode refid="28028" relation="include">
+        </childnode>
+      </node>
+      <node id="28035">
+        <label>device.h</label>
+        <link refid="device_8h"/>
+        <childnode refid="28028" relation="include">
+        </childnode>
+      </node>
+      <node id="28026">
+        <label>stdio.h</label>
+      </node>
+      <node id="28031">
+        <label>trace.h</label>
+        <link refid="trace_8h"/>
+        <childnode refid="28028" relation="include">
+        </childnode>
+      </node>
+      <node id="28028">
+        <label>simplelink.h</label>
+        <link refid="simplelink_8h"/>
+        <childnode refid="28029" relation="include">
+        </childnode>
+        <childnode refid="28030" relation="include">
+        </childnode>
+        <childnode refid="28031" relation="include">
+        </childnode>
+        <childnode refid="28027" relation="include">
+        </childnode>
+        <childnode refid="28032" relation="include">
+        </childnode>
+        <childnode refid="28033" relation="include">
+        </childnode>
+        <childnode refid="28034" relation="include">
+        </childnode>
+        <childnode refid="28035" relation="include">
+        </childnode>
+        <childnode refid="28036" relation="include">
+        </childnode>
+        <childnode refid="28037" relation="include">
+        </childnode>
+        <childnode refid="28038" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_wifi_storage_8c_1abff8f3a204e79671b98fabaa652198c3" prot="public" static="no">
+        <name>BCDS_MODULE_ID</name>
+        <initializer><ref refid="_xdk_common_info_8h_1a7d550569e587db8903a47a7044e6e935a29e2920349f1d1547e4698951d507357" kindref="member">XDK_COMMON_ID_WIFISTORAGE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.c" line="40" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.c" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_wifi_storage_8c_1a0c0cbc175764517921d5a9684861016f" prot="public" static="no">
+        <name>INVALID_FILE_HANDLE</name>
+        <initializer>INT32_C(-1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.c" line="50" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.c" bodystart="50" bodyend="-1"/>
+        <referencedby refid="_wifi_storage_8h_1aed76db260530bae26ba523551c3219ed" compoundref="_wifi_storage_8c" startline="235" endline="254">WifiStorage_FileDelete</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_wifi_storage_8c_1afd61ea46ad706834d7415c03a85df5ca" prot="public" static="no">
+        <name>WRITE_READ_ALIGN_VAL</name>
+        <initializer>1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.c" line="49" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.c" bodystart="49" bodyend="-1"/>
+        <referencedby refid="_wifi_storage_8h_1a776f3ad735ead50abc4de0789eaa702e" compoundref="_wifi_storage_8c" startline="103" endline="142">WifiStorage_FileWrite</referencedby>
+        <referencedby refid="_wifi_storage_8h_1ae820b9d5ffd5ebc9adf20a92670bc473" compoundref="_wifi_storage_8c" startline="145" endline="190">WifiStorage_FileRead</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_wifi_storage_8c_1af7708ff59adfb7fe14fe98f92d6113aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WifiStorage_FileClose</definition>
+        <argsstring>(const int32_t fileHandle)</argsstring>
+        <name>WifiStorage_FileClose</name>
+        <param>
+          <type>const int32_t</type>
+          <declname>fileHandle</declname>
+        </param>
+        <briefdescription>
+<para>This Interface API is used to close a file in the wifi media. </para>        </briefdescription>
+        <detaileddescription>
+<para>A prior call to <ref refid="_wlan_connect_8c_1aedc3e3e198474548cde441070dff7f52" kindref="member">WlanConnect_Init()</ref> is necessary for this function in order to operate, failing which the intended functionality is not guaranteed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fileHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle obtained in <ref refid="_wifi_storage_8h_1a06d4627bfa59684cf1d7007d8224feb9" kindref="member">WifiStorage_FileOpen()</ref> API call</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+RETCODE_OK If in case of the requested file close operation is success  RETCODE_ERROR_IN_FILE_CLOSE_WIFI_MEDIA If in case of failure in closing the requested file</para><para><ref refid="_wifi_storage_8h_1af7708ff59adfb7fe14fe98f92d6113aa" kindref="member">WifiStorage_FileClose()</ref> must be called in the application in same execution context, even if in case <ref refid="_wifi_storage_8h_1ae820b9d5ffd5ebc9adf20a92670bc473" kindref="member">WifiStorage_FileRead()</ref> or <ref refid="_wifi_storage_8h_1a776f3ad735ead50abc4de0789eaa702e" kindref="member">WifiStorage_FileWrite()</ref> operation fails for some reason  <ref refid="_wifi_storage_8h_1af7708ff59adfb7fe14fe98f92d6113aa" kindref="member">WifiStorage_FileClose()</ref> must be called in application in same execution context where <ref refid="_wifi_storage_8h_1a06d4627bfa59684cf1d7007d8224feb9" kindref="member">WifiStorage_FileOpen()</ref>, <ref refid="_wifi_storage_8h_1ae820b9d5ffd5ebc9adf20a92670bc473" kindref="member">WifiStorage_FileRead()</ref> or <ref refid="_wifi_storage_8h_1a776f3ad735ead50abc4de0789eaa702e" kindref="member">WifiStorage_FileWrite()</ref> operations are performed  If no other file operation is performed after calling <ref refid="_wifi_storage_8h_1a06d4627bfa59684cf1d7007d8224feb9" kindref="member">WifiStorage_FileOpen()</ref> , close the file <ref refid="_wifi_storage_8h_1af7708ff59adfb7fe14fe98f92d6113aa" kindref="member">WifiStorage_FileClose()</ref> in the same context. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.c" line="222" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.c" bodystart="222" bodyend="232"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="simplelink_8h_1afcc951421dee921a20980010117583de" compoundref="simplelink_8h" startline="225">_i16</references>
+        <references refid="simplelink_8h_1ada9f3b59b3a217b8f8e5d281ae55a19e" compoundref="simplelink_8h" startline="227">_i32</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8ba91611468c87f1ad2b822580de01dc087" compoundref="_xdk_common_info_8h" startline="206">RETCODE_STORAGE_ERROR_IN_FILE_CLOSE_WIFI_MEDIA</references>
+      </memberdef>
+      <memberdef kind="function" id="_wifi_storage_8c_1aed76db260530bae26ba523551c3219ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WifiStorage_FileDelete</definition>
+        <argsstring>(const uint8_t *fileName, int32_t *fileHandle)</argsstring>
+        <name>WifiStorage_FileDelete</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>int32_t *</type>
+          <declname>fileHandle</declname>
+        </param>
+        <briefdescription>
+<para>This Interface API is used to delete a file in the wifi media in requested file mode. </para>        </briefdescription>
+        <detaileddescription>
+<para>A prior call to <ref refid="_wlan_connect_8c_1aedc3e3e198474548cde441070dff7f52" kindref="member">WlanConnect_Init()</ref> is necessary for this function in order to operate, failing which the intended functionality is not guaranteed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Filename of the file in the wifi media which needs to be deleted </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>[in/out]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>fileHandle Handle obtained in <ref refid="_wifi_storage_8h_1a06d4627bfa59684cf1d7007d8224feb9" kindref="member">WifiStorage_FileOpen()</ref> API call</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+RETCODE_OK If in case of the requested file delete operation is success  RETCODE_ERROR_IN_FILE_DELETE In case the delete operation is not successful</para><para>If file deleted successfully, then the fileHandle will be made invalid on returning from this API call </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.c" line="235" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.c" bodystart="235" bodyend="254"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="simplelink_8h_1afcc951421dee921a20980010117583de" compoundref="simplelink_8h" startline="225">_i16</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="simplelink_8h_1a44f20b191bdb85d44eabe758192d7f11" compoundref="simplelink_8h" startline="222">_u8</references>
+        <references refid="_wifi_storage_8c_1a0c0cbc175764517921d5a9684861016f" compoundref="_wifi_storage_8c" startline="50">INVALID_FILE_HANDLE</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8baf5e88feaacdd1d174233a0479a471a66" compoundref="_xdk_common_info_8h" startline="207">RETCODE_STORAGE_ERROR_IN_FILE_DELETE</references>
+      </memberdef>
+      <memberdef kind="function" id="_wifi_storage_8c_1a06d4627bfa59684cf1d7007d8224feb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WifiStorage_FileOpen</definition>
+        <argsstring>(const uint8_t *fileName, int32_t *fileHandle, WifiFileMode_T fileMode)</argsstring>
+        <name>WifiStorage_FileOpen</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>int32_t *</type>
+          <declname>fileHandle</declname>
+        </param>
+        <param>
+          <type><ref refid="_wifi_storage_8h_1ac6ae16764361ade56a3b0d3fd0d6c27c" kindref="member">WifiFileMode_T</ref></type>
+          <declname>fileMode</declname>
+        </param>
+        <briefdescription>
+<para>This Interface API is used to open a file in the wifi media in requested file mode. </para>        </briefdescription>
+        <detaileddescription>
+<para>A prior call to <ref refid="_wlan_connect_8c_1aedc3e3e198474548cde441070dff7f52" kindref="member">WlanConnect_Init()</ref> is necessary for this function in order to operate, failing which the intended functionality is not guaranteed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Filename which needs to be either created ,opened for read operation or opened for write operation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>[in/out]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>fileHandle Handle obtained as reference which needs to be used for performing file operation like <ref refid="_wifi_storage_8h_1ae820b9d5ffd5ebc9adf20a92670bc473" kindref="member">WifiStorage_FileRead()</ref>, <ref refid="_wifi_storage_8h_1a776f3ad735ead50abc4de0789eaa702e" kindref="member">WifiStorage_FileWrite()</ref>, <ref refid="_wifi_storage_8h_1af7708ff59adfb7fe14fe98f92d6113aa" kindref="member">WifiStorage_FileClose()</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fileMode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the file is opened for which mode for the modes supported please refer enum WifiFileMode_T</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+RETCODE_OK If in case of the requested file open operation is success based on the user selected filemode  RETCODE_WRONG_FILE_MODE If in case of wrong file mode is set while opening the file  RETCODE_ERROR_FILE_HAS_NOT_BEEN_CLOSE_CORRECTLY If in case this API is called before proper close of of file operation using API <ref refid="_wifi_storage_8h_1af7708ff59adfb7fe14fe98f92d6113aa" kindref="member">WifiStorage_FileClose()</ref> in the previous call in application</para><para>fileHandle obtained using this <ref refid="_wifi_storage_8h_1a06d4627bfa59684cf1d7007d8224feb9" kindref="member">WifiStorage_FileOpen()</ref> needs to be protected in application while performing file operation in multi-threading environment. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.c" line="56" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.c" bodystart="56" bodyend="100"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="simplelink_8h_1ada9f3b59b3a217b8f8e5d281ae55a19e" compoundref="simplelink_8h" startline="227">_i32</references>
+        <references refid="simplelink_8h_1a87886b60e61f791da9953f573bc83d8d" compoundref="simplelink_8h" startline="226">_u32</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09abeb11719036d11dc35af02aa610da98a" compoundref="_wifi_storage_8h" startline="57">WIFI_STORAGE_FOPEN_MAX</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" compoundref="_b_c_d_s___retcode_8h" startline="108">RETCODE_INVALID_PARAM</references>
+        <references refid="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09a208846fae51b5698cb7abdbd2e058d8d" compoundref="_wifi_storage_8h" startline="56">WIFI_STORAGE_FOPEN_CREATE_MODE</references>
+        <references refid="group___file_system_1gaaf27b73d19f8e86eed797eb8ff91d565" compoundref="fs_8h" startline="157">FS_MODE_OPEN_CREATE</references>
+        <references refid="_wifi_storage_8h_1a328d8734aee9a653fcd5c4e2a9773b79" compoundref="_wifi_storage_8h" startline="63">WIFI_STORAGE_FILE_SIZE</references>
+        <references refid="group___file_system_1gga555c24f3e1071fa13f8772a0b95cc7d4a0f1428da2bc548e1be547f39c4758a25" compoundref="fs_8h" startline="180">_FS_FILE_OPEN_FLAG_COMMIT</references>
+        <references refid="group___file_system_1gga555c24f3e1071fa13f8772a0b95cc7d4aa460f21229bcbd834e878c6bf6531e75" compoundref="fs_8h" startline="185">_FS_FILE_PUBLIC_WRITE</references>
+        <references refid="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09af5227de1976aa512992686b28b5578f1" compoundref="_wifi_storage_8h" startline="54">WIFI_STORAGE_FOPEN_WRITE_MODE</references>
+        <references refid="group___file_system_1ga4edab0949f89bd32631b7c8a86b0de46" compoundref="fs_8h" startline="155">FS_MODE_OPEN_WRITE</references>
+        <references refid="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09ab9ca5e6b7a316860c32f4599319316d1" compoundref="_wifi_storage_8h" startline="55">WIFI_STORAGE_FOPEN_READ_MODE</references>
+        <references refid="group___file_system_1gac3971725ec11b70a5ea0d9887168f616" compoundref="fs_8h" startline="153">FS_MODE_OPEN_READ</references>
+        <references refid="group___file_system_1gaf76fa3eb98168a9cb34e6d33a82b84c8" compoundref="fs_8h" startline="68">SL_FS_FILE_HAS_NOT_BEEN_CLOSE_CORRECTLY</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8bad2224404dc60bbb994c406f0ebddc53c" compoundref="_xdk_common_info_8h" startline="203">RETCODE_STORAGE_FILE_HAS_NOT_BEEN_CLOSE_CORRECTLY</references>
+        <references refid="group___file_system_1ga9d5f74b928c801ad37b247c3145f9c6c" compoundref="fs_8h" startline="110">SL_FS_ERR_BAD_FILE_MODE</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8ba80f1310ee7977e38f48a270d8ca551a4" compoundref="_xdk_common_info_8h" startline="202">RETCODE_STORAGE_WRONG_FILE_MODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" compoundref="_b_c_d_s___retcode_8h" startline="106">RETCODE_FAILURE</references>
+      </memberdef>
+      <memberdef kind="function" id="_wifi_storage_8c_1ae820b9d5ffd5ebc9adf20a92670bc473" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WifiStorage_FileRead</definition>
+        <argsstring>(const int32_t fileHandle, uint8_t *readBuffer, uint32_t *noOfBytesRead)</argsstring>
+        <name>WifiStorage_FileRead</name>
+        <param>
+          <type>const int32_t</type>
+          <declname>fileHandle</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>readBuffer</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>noOfBytesRead</declname>
+        </param>
+        <briefdescription>
+<para>This Interface API is used to read a file content from the wifi media. </para>        </briefdescription>
+        <detaileddescription>
+<para>A prior call to <ref refid="_wlan_connect_8c_1aedc3e3e198474548cde441070dff7f52" kindref="member">WlanConnect_Init()</ref> is necessary for this function in order to operate, failing which the intended functionality is not guaranteed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fileHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle obtained in <ref refid="_wifi_storage_8h_1a06d4627bfa59684cf1d7007d8224feb9" kindref="member">WifiStorage_FileOpen()</ref> API call in read mode </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">readBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to buffer to collect the read data from the file from media </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>[in/out]noOfBytesRead</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value pointed is used for mentioning the no of bytes to read and while returning, the actual no of bytes read is updated</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+RETCODE_OK If in case of the requested file read operation is success  RETCODE_ERROR_IN_FILE_READ If in case of failure in reading the requested file</para><para>Please note that the <ref refid="_wifi_storage_8h_1af7708ff59adfb7fe14fe98f92d6113aa" kindref="member">WifiStorage_FileClose()</ref> must be called in application in same execution context where <ref refid="_wifi_storage_8h_1ae820b9d5ffd5ebc9adf20a92670bc473" kindref="member">WifiStorage_FileRead()</ref> operation returns either success or failure case </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.c" line="145" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.c" bodystart="145" bodyend="190"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="simplelink_8h_1ada9f3b59b3a217b8f8e5d281ae55a19e" compoundref="simplelink_8h" startline="227">_i32</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" compoundref="_b_c_d_s___retcode_8h" startline="108">RETCODE_INVALID_PARAM</references>
+        <references refid="_wifi_storage_8c_1afd61ea46ad706834d7415c03a85df5ca" compoundref="_wifi_storage_8c" startline="49">WRITE_READ_ALIGN_VAL</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8bab6cc9f2bdbd64420355ab8d0426078f4" compoundref="_xdk_common_info_8h" startline="205">RETCODE_STORAGE_ERROR_IN_FILE_READ</references>
+      </memberdef>
+      <memberdef kind="function" id="_wifi_storage_8c_1a776f3ad735ead50abc4de0789eaa702e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WifiStorage_FileWrite</definition>
+        <argsstring>(const int32_t fileHandle, uint8_t *writeBuffer, uint32_t noOfBytesToWrite)</argsstring>
+        <name>WifiStorage_FileWrite</name>
+        <param>
+          <type>const int32_t</type>
+          <declname>fileHandle</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>writeBuffer</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>noOfBytesToWrite</declname>
+        </param>
+        <briefdescription>
+<para>This Interface API is used to write user buffer file content to the wifi media. </para>        </briefdescription>
+        <detaileddescription>
+<para>A prior call to <ref refid="_wlan_connect_8c_1aedc3e3e198474548cde441070dff7f52" kindref="member">WlanConnect_Init()</ref> is necessary for this function in order to operate, failing which the intended functionality is not guaranteed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fileHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle obtained in <ref refid="_wifi_storage_8h_1a06d4627bfa59684cf1d7007d8224feb9" kindref="member">WifiStorage_FileOpen()</ref> API call in write mode </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">writeBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to user write buffer which needs to be written into the file in media </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">noOfBytesToWrite</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>No of bytes to write</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+RETCODE_OK If in case of the requested file write operation is success  RETCODE_ERROR_IN_FILE_WRITE If in case of failure in writing to the requested file</para><para>Please note that the <ref refid="_wifi_storage_8h_1af7708ff59adfb7fe14fe98f92d6113aa" kindref="member">WifiStorage_FileClose()</ref> must be called in application in same execution context where <ref refid="_wifi_storage_8h_1a776f3ad735ead50abc4de0789eaa702e" kindref="member">WifiStorage_FileWrite()</ref> operation returns either success or failure case </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.c" line="103" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.c" bodystart="103" bodyend="142"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="simplelink_8h_1ada9f3b59b3a217b8f8e5d281ae55a19e" compoundref="simplelink_8h" startline="227">_i32</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" compoundref="_b_c_d_s___retcode_8h" startline="108">RETCODE_INVALID_PARAM</references>
+        <references refid="_wifi_storage_8c_1afd61ea46ad706834d7415c03a85df5ca" compoundref="_wifi_storage_8c" startline="49">WRITE_READ_ALIGN_VAL</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8bad6dae2380feeb1447bb962bf10366eee" compoundref="_xdk_common_info_8h" startline="204">RETCODE_STORAGE_ERROR_IN_FILE_WRITE</references>
+      </memberdef>
+      <memberdef kind="function" id="_wifi_storage_8c_1a6bc33c75f0b8b3b615deed54f539ee13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WifiStorage_GetFileStatus</definition>
+        <argsstring>(const uint8_t *fileName, uint32_t *fileLength)</argsstring>
+        <name>WifiStorage_GetFileStatus</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>fileLength</declname>
+        </param>
+        <briefdescription>
+<para>Checks whether the requested file exist in the wifi media. </para>        </briefdescription>
+        <detaileddescription>
+<para>A prior call to <ref refid="_wlan_connect_8c_1aedc3e3e198474548cde441070dff7f52" kindref="member">WlanConnect_Init()</ref> is necessary for this function in order to operate, failing which the intended functionality is not guaranteed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Filename for which the status needs to be checked </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>[in/out]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>fileLength : Gives the size of the content in the file in bytes</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+RETCODE_OK If in case of the requested file already exist in the wifi media  RETCODE_FILE_DOES_NOT_EXIST_WIFI_MEDIA If in case of file requested is not present in the wifi media  RETCODE_ERROR_FILE_HAS_NOT_BEEN_CLOSE_CORRECTLY If in case this API is called before proper close of of file operation using API <ref refid="_wifi_storage_8h_1af7708ff59adfb7fe14fe98f92d6113aa" kindref="member">WifiStorage_FileClose()</ref> in the previous call in application </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.c" line="193" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.c" bodystart="193" bodyend="220"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="simplelink_8h_1afcc951421dee921a20980010117583de" compoundref="simplelink_8h" startline="225">_i16</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="simplelink_8h_1a44f20b191bdb85d44eabe758192d7f11" compoundref="simplelink_8h" startline="222">_u8</references>
+        <references refid="struct_sl_fs_file_info__t_1a42e92a9d18f2642049165db21a2bfe82" compoundref="fs_8h" startline="165">SlFsFileInfo_t::FileLen</references>
+        <references refid="group___file_system_1gadfdafe6e49c1c16918961cd7961a8355" compoundref="fs_8h" startline="121">SL_FS_ERR_FILE_NOT_EXISTS</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8baedf090e831354862a5b146c3ed8100ce" compoundref="_xdk_common_info_8h" startline="200">RETCODE_STORAGE_FILE_DOES_NOT_EXIST_WIFI_MEDIA</references>
+        <references refid="group___file_system_1gaf76fa3eb98168a9cb34e6d33a82b84c8" compoundref="fs_8h" startline="68">SL_FS_FILE_HAS_NOT_BEEN_CLOSE_CORRECTLY</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8bad2224404dc60bbb994c406f0ebddc53c" compoundref="_xdk_common_info_8h" startline="203">RETCODE_STORAGE_FILE_HAS_NOT_BEEN_CLOSE_CORRECTLY</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8baf9bc237d76d876ae4511bbe352624e92" compoundref="_xdk_common_info_8h" startline="208">RETCODE_STORAGE_ERROR_IN_GETTING_FILE_STATUS</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_xdk_common_info_8h" kindref="compound">XdkCommonInfo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>BCDS_MODULE_ID<sp/><sp/></highlight><highlight class="comment">/*<sp/>Module<sp/>ID<sp/>define<sp/>before<sp/>including<sp/>Basics<sp/>package*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="_wifi_storage_8c_1abff8f3a204e79671b98fabaa652198c3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BCDS_MODULE_ID<sp/>XDK_COMMON_ID_WIFISTORAGE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_wifi_storage_8h" kindref="compound">WifiStorage.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stdio.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="fs_8h" kindref="compound">fs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>the<sp/>type<sp/>and<sp/>macro<sp/>definitions<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>constant<sp/>and<sp/>variable<sp/>definitions<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="_wifi_storage_8c_1afd61ea46ad706834d7415c03a85df5ca" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WRITE_READ_ALIGN_VAL<sp/><sp/><sp/><sp/><sp/><sp/><sp/>1024</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="_wifi_storage_8c_1a0c0cbc175764517921d5a9684861016f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INVALID_FILE_HANDLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INT32_C(-1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>private<sp/>function<sp/>declarations<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>function<sp/>implementations<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Refer<sp/>interface<sp/>details<sp/>in<sp/>&lt;WifiStorage.h&gt;<sp/>file<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="_wifi_storage_8h_1a06d4627bfa59684cf1d7007d8224feb9" refkind="member"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_wifi_storage_8c_1a06d4627bfa59684cf1d7007d8224feb9" kindref="member">WifiStorage_FileOpen</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*<sp/>fileName,<sp/>int32_t<sp/>*fileHandle,<sp/><ref refid="_wifi_storage_8h_1ac6ae16764361ade56a3b0d3fd0d6c27c" kindref="member">WifiFileMode_T</ref><sp/>fileMode)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retVal<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="simplelink_8h_1ada9f3b59b3a217b8f8e5d281ae55a19e" kindref="member">_i32</ref><sp/>libRetVal<sp/>=<sp/>INT32_C(-1);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="simplelink_8h_1a87886b60e61f791da9953f573bc83d8d" kindref="member">_u32</ref><sp/>accessModeVal<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>fileName)<sp/>||<sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>fileHandle))</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref>));</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09abeb11719036d11dc35af02aa610da98a" kindref="member">WIFI_STORAGE_FOPEN_MAX</ref><sp/>&lt;=<sp/>fileMode)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref>));</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09a208846fae51b5698cb7abdbd2e058d8d" kindref="member">WIFI_STORAGE_FOPEN_CREATE_MODE</ref><sp/>==<sp/>fileMode)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>accessModeVal<sp/>=<sp/><ref refid="group___file_system_1gaaf27b73d19f8e86eed797eb8ff91d565" kindref="member">FS_MODE_OPEN_CREATE</ref>(<ref refid="_wifi_storage_8h_1a328d8734aee9a653fcd5c4e2a9773b79" kindref="member">WIFI_STORAGE_FILE_SIZE</ref>,<sp/>(<sp/><ref refid="simplelink_8h_1a87886b60e61f791da9953f573bc83d8d" kindref="member">_u32</ref><sp/>)<sp/>(<ref refid="group___file_system_1gga555c24f3e1071fa13f8772a0b95cc7d4a0f1428da2bc548e1be547f39c4758a25" kindref="member">_FS_FILE_OPEN_FLAG_COMMIT</ref><sp/>|<sp/><ref refid="group___file_system_1gga555c24f3e1071fa13f8772a0b95cc7d4aa460f21229bcbd834e878c6bf6531e75" kindref="member">_FS_FILE_PUBLIC_WRITE</ref>));</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09af5227de1976aa512992686b28b5578f1" kindref="member">WIFI_STORAGE_FOPEN_WRITE_MODE</ref><sp/>==<sp/>fileMode)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>accessModeVal<sp/>=<sp/>(<ref refid="simplelink_8h_1a87886b60e61f791da9953f573bc83d8d" kindref="member">_u32</ref>)<sp/><ref refid="group___file_system_1ga4edab0949f89bd32631b7c8a86b0de46" kindref="member">FS_MODE_OPEN_WRITE</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09ab9ca5e6b7a316860c32f4599319316d1" kindref="member">WIFI_STORAGE_FOPEN_READ_MODE</ref><sp/>==<sp/>fileMode)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>accessModeVal<sp/>=<sp/>(<ref refid="simplelink_8h_1a87886b60e61f791da9953f573bc83d8d" kindref="member">_u32</ref>)<sp/><ref refid="group___file_system_1gac3971725ec11b70a5ea0d9887168f616" kindref="member">FS_MODE_OPEN_READ</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>libRetVal<sp/>=<sp/>sl_FsOpen(fileName,<sp/>accessModeVal,<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,<sp/>(<ref refid="simplelink_8h_1ada9f3b59b3a217b8f8e5d281ae55a19e" kindref="member">_i32</ref><sp/>*)fileHandle);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="group___file_system_1gaf76fa3eb98168a9cb34e6d33a82b84c8" kindref="member">SL_FS_FILE_HAS_NOT_BEEN_CLOSE_CORRECTLY</ref><sp/>==<sp/>libRetVal)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retVal<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8bad2224404dc60bbb994c406f0ebddc53c" kindref="member">RETCODE_STORAGE_FILE_HAS_NOT_BEEN_CLOSE_CORRECTLY</ref>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="group___file_system_1ga9d5f74b928c801ad37b247c3145f9c6c" kindref="member">SL_FS_ERR_BAD_FILE_MODE</ref><sp/>==<sp/>libRetVal)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retVal<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8ba80f1310ee7977e38f48a270d8ca551a4" kindref="member">RETCODE_STORAGE_WRONG_FILE_MODE</ref>);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(0x00<sp/>!=<sp/>libRetVal)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retVal<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref>);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Do<sp/>not<sp/>return<sp/>retVal<sp/>*/</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retVal;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Refer<sp/>interface<sp/>details<sp/>in<sp/>&lt;WifiStorage.h&gt;<sp/>file<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="_wifi_storage_8h_1a776f3ad735ead50abc4de0789eaa702e" refkind="member"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_wifi_storage_8c_1a776f3ad735ead50abc4de0789eaa702e" kindref="member">WifiStorage_FileWrite</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32_t<sp/>fileHandle,<sp/>uint8_t<sp/>*writeBuffer,<sp/>uint32_t<sp/>noOfBytesToWrite)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retVal<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="simplelink_8h_1ada9f3b59b3a217b8f8e5d281ae55a19e" kindref="member">_i32</ref><sp/>libRetVal<sp/>=<sp/>INT32_C(-1);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>noOfChunks<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>remainingBytes<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>writeOffset<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>writeBuffer)<sp/>||<sp/>(<sp/>INT32_C(0)<sp/>==<sp/>fileHandle))</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref>));</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(UINT32_C(0)<sp/>==<sp/>noOfBytesToWrite)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref>));</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>remainingBytes<sp/>=<sp/>(noOfBytesToWrite<sp/>%<sp/><ref refid="_wifi_storage_8c_1afd61ea46ad706834d7415c03a85df5ca" kindref="member">WRITE_READ_ALIGN_VAL</ref>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>noOfChunks<sp/>=<sp/>(noOfBytesToWrite<sp/>/<sp/><ref refid="_wifi_storage_8c_1afd61ea46ad706834d7415c03a85df5ca" kindref="member">WRITE_READ_ALIGN_VAL</ref>);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>noOfChunks;<sp/>i++)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>libRetVal<sp/>=<sp/>sl_FsWrite(fileHandle,<sp/>writeOffset,<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)<sp/>&amp;writeBuffer[writeOffset],<sp/><ref refid="_wifi_storage_8c_1afd61ea46ad706834d7415c03a85df5ca" kindref="member">WRITE_READ_ALIGN_VAL</ref>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_wifi_storage_8c_1afd61ea46ad706834d7415c03a85df5ca" kindref="member">WRITE_READ_ALIGN_VAL</ref><sp/>!=<sp/>libRetVal)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retVal<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8bad6dae2380feeb1447bb962bf10366eee" kindref="member">RETCODE_STORAGE_ERROR_IN_FILE_WRITE</ref>);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>writeOffset<sp/>+=<sp/>libRetVal;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retVal)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>libRetVal<sp/>=<sp/>sl_FsWrite(fileHandle,<sp/>writeOffset,<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)<sp/>&amp;writeBuffer[writeOffset],<sp/>remainingBytes);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((int32_t)<sp/>remainingBytes<sp/>!=<sp/>libRetVal)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retVal<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8bad6dae2380feeb1447bb962bf10366eee" kindref="member">RETCODE_STORAGE_ERROR_IN_FILE_WRITE</ref>);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retVal;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Refer<sp/>interface<sp/>details<sp/>in<sp/>&lt;WifiStorage.h&gt;<sp/>file<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="_wifi_storage_8h_1ae820b9d5ffd5ebc9adf20a92670bc473" refkind="member"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_wifi_storage_8c_1ae820b9d5ffd5ebc9adf20a92670bc473" kindref="member">WifiStorage_FileRead</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32_t<sp/>fileHandle,<sp/>uint8_t<sp/>*readBuffer,<sp/>uint32_t<sp/>*noOfBytesRead)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retVal<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="simplelink_8h_1ada9f3b59b3a217b8f8e5d281ae55a19e" kindref="member">_i32</ref><sp/>libRetVal<sp/>=<sp/>INT32_C(-1);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>noOfChunks<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>readOffset<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>remainingBytes<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>readBuffer)<sp/>||<sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>noOfBytesRead)<sp/>||<sp/>(INT32_C(0)<sp/>==<sp/>fileHandle))</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref>));</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(INT32_C(0)<sp/>==<sp/>*noOfBytesRead)</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref>));</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>remainingBytes<sp/>=<sp/>(*noOfBytesRead<sp/>%<sp/><ref refid="_wifi_storage_8c_1afd61ea46ad706834d7415c03a85df5ca" kindref="member">WRITE_READ_ALIGN_VAL</ref>);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>noOfChunks<sp/>=<sp/>(*noOfBytesRead<sp/>/<sp/><ref refid="_wifi_storage_8c_1afd61ea46ad706834d7415c03a85df5ca" kindref="member">WRITE_READ_ALIGN_VAL</ref>);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>*noOfBytesRead<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>noOfChunks;<sp/>i++)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>libRetVal<sp/>=<sp/>sl_FsRead(fileHandle,<sp/>readOffset,<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)<sp/>&amp;readBuffer[readOffset],<sp/><ref refid="_wifi_storage_8c_1afd61ea46ad706834d7415c03a85df5ca" kindref="member">WRITE_READ_ALIGN_VAL</ref>);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_wifi_storage_8c_1afd61ea46ad706834d7415c03a85df5ca" kindref="member">WRITE_READ_ALIGN_VAL</ref><sp/>==<sp/>libRetVal)</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>readOffset<sp/>+=<sp/>libRetVal;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*noOfBytesRead<sp/>+=<sp/>libRetVal;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retVal<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8bab6cc9f2bdbd64420355ab8d0426078f4" kindref="member">RETCODE_STORAGE_ERROR_IN_FILE_READ</ref>);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retVal)</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>libRetVal<sp/>=<sp/>sl_FsRead(fileHandle,<sp/>readOffset,<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)<sp/>&amp;readBuffer[readOffset],<sp/>remainingBytes);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((int32_t)<sp/>remainingBytes<sp/>==<sp/>libRetVal)</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*noOfBytesRead<sp/>+=<sp/>libRetVal;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retVal<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8bab6cc9f2bdbd64420355ab8d0426078f4" kindref="member">RETCODE_STORAGE_ERROR_IN_FILE_READ</ref>);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retVal;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Refer<sp/>interface<sp/>details<sp/>in<sp/>&lt;WifiStorage.h&gt;<sp/>file<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="_wifi_storage_8h_1a6bc33c75f0b8b3b615deed54f539ee13" refkind="member"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_wifi_storage_8c_1a6bc33c75f0b8b3b615deed54f539ee13" kindref="member">WifiStorage_GetFileStatus</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*<sp/>fileName,<sp/>uint32_t<sp/>*fileLength)</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retVal<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_sl_fs_file_info__t" kindref="compound">SlFsFileInfo_t</ref><sp/>fileInfo;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="simplelink_8h_1afcc951421dee921a20980010117583de" kindref="member">_i16</ref><sp/>libRetVal<sp/>=<sp/>INT16_C(-1);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>fileName)<sp/>||<sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>fileLength))</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref>));</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>libRetVal<sp/>=<sp/>sl_FsGetInfo((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="simplelink_8h_1a44f20b191bdb85d44eabe758192d7f11" kindref="member">_u8</ref><sp/>*)<sp/>fileName,<sp/>0,<sp/>&amp;fileInfo);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(INT16_C(0)<sp/>==<sp/>libRetVal)</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*fileLength<sp/>=<sp/>fileInfo.<ref refid="struct_sl_fs_file_info__t_1a42e92a9d18f2642049165db21a2bfe82" kindref="member">FileLen</ref>;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___file_system_1gadfdafe6e49c1c16918961cd7961a8355" kindref="member">SL_FS_ERR_FILE_NOT_EXISTS</ref><sp/>==<sp/>libRetVal)</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retVal<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8baedf090e831354862a5b146c3ed8100ce" kindref="member">RETCODE_STORAGE_FILE_DOES_NOT_EXIST_WIFI_MEDIA</ref>);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="group___file_system_1gaf76fa3eb98168a9cb34e6d33a82b84c8" kindref="member">SL_FS_FILE_HAS_NOT_BEEN_CLOSE_CORRECTLY</ref><sp/>==<sp/>libRetVal)</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retVal<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8bad2224404dc60bbb994c406f0ebddc53c" kindref="member">RETCODE_STORAGE_FILE_HAS_NOT_BEEN_CLOSE_CORRECTLY</ref>);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retVal<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8baf9bc237d76d876ae4511bbe352624e92" kindref="member">RETCODE_STORAGE_ERROR_IN_GETTING_FILE_STATUS</ref>);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retVal;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222" refid="_wifi_storage_8h_1af7708ff59adfb7fe14fe98f92d6113aa" refkind="member"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_wifi_storage_8c_1af7708ff59adfb7fe14fe98f92d6113aa" kindref="member">WifiStorage_FileClose</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32_t<sp/>fileHandle)</highlight></codeline>
+<codeline lineno="223"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retVal<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="simplelink_8h_1afcc951421dee921a20980010117583de" kindref="member">_i16</ref><sp/>libRetVal<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>libRetVal<sp/>=<sp/>sl_FsClose((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="simplelink_8h_1ada9f3b59b3a217b8f8e5d281ae55a19e" kindref="member">_i32</ref>)<sp/>fileHandle,<sp/>0,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(INT16_C(0)<sp/>!=<sp/>libRetVal)</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retVal<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8ba91611468c87f1ad2b822580de01dc087" kindref="member">RETCODE_STORAGE_ERROR_IN_FILE_CLOSE_WIFI_MEDIA</ref>);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retVal;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Refer<sp/>interface<sp/>details<sp/>in<sp/>&lt;WifiStorage.h&gt;<sp/>file<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235" refid="_wifi_storage_8h_1aed76db260530bae26ba523551c3219ed" refkind="member"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_wifi_storage_8c_1aed76db260530bae26ba523551c3219ed" kindref="member">WifiStorage_FileDelete</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*<sp/>fileName,<sp/>int32_t<sp/>*fileHandle)</highlight></codeline>
+<codeline lineno="236"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retVal<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="simplelink_8h_1afcc951421dee921a20980010117583de" kindref="member">_i16</ref><sp/>libRetVal<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>fileName)</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref>));</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>libRetVal<sp/>=<sp/>sl_FsDel((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="simplelink_8h_1a44f20b191bdb85d44eabe758192d7f11" kindref="member">_u8</ref><sp/>*)<sp/>fileName,<sp/>0);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(INT16_C(0)<sp/>==<sp/>libRetVal)</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*fileHandle<sp/>=<sp/><ref refid="_wifi_storage_8c_1a0c0cbc175764517921d5a9684861016f" kindref="member">INVALID_FILE_HANDLE</ref>;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retVal<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8baf5e88feaacdd1d174233a0479a471a66" kindref="member">RETCODE_STORAGE_ERROR_IN_FILE_DELETE</ref>);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retVal;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.c"/>
+  </compounddef>
+</doxygen>

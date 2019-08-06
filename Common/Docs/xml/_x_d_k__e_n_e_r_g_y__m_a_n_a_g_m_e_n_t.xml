@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_x_d_k__e_n_e_r_g_y__m_a_n_a_g_m_e_n_t" kind="page">
+    <compoundname>XDK_ENERGY_MANAGMENT</compoundname>
+    <title>XDK Energy Management</title>
+    <detaileddescription>
+<para>Outlines XDKs Energy Management approach</para><para><hruler/>
+</para><para>XDK uses a reactive energy management approach. In general, components are only activated, once they are needed. The XDK API makes sure, that when you call the initialize function of a software module, all relevant hardware components and modules are powered up. In turn this means, that as long as you do not initialize a component (e.g. a sensor), this component does not consume power.</para><para>However, some uC peripherals are always powered up, when XDK boots. The following components are considered vital to XDKs operation and hence are always initialized: <itemizedlist>
+<listitem>
+<para>GPIO Pins (including potential pull-up resistor) </para></listitem>
+<listitem>
+<para>I2C Module </para></listitem>
+<listitem>
+<para>USB Module </para></listitem>
+</itemizedlist>
+</para><para>Additional peripherals (such as the SPI module) are only initialized, when they are required (e.g. when initializing Wlan or the SD Card). The default initialization of the XDK SDK can be replaced, as outlined in <ref refid="_x_d_k__s_o_f_t_w_a_r_e__s_t_a_r_t_u_p__g_u_i_d_e" kindref="compound">XDK Software Startup Guide</ref>.</para><sect1 id="_x_d_k__e_n_e_r_g_y__m_a_n_a_g_m_e_n_t_1XDK_ENERGY_MANAGMENT_Sleeping">
+<title>Sleep Management</title>
+<para>XDK SDK currently does not support putting the MCU of XDK to sleep. While there is a software module called OS_SleepMgt, this module is neither used on XDK SDK nor has it been tested on XDK. Therefore, using it is at your own risk and may potentially be very frustrating.</para></sect1>
+<sect1 id="_x_d_k__e_n_e_r_g_y__m_a_n_a_g_m_e_n_t_1XDK_ENERGY_MANAGMENT_Battery">
+<title>XDK Battery Status</title>
+<para>To determine the battery voltage of XDK, the battery is connected to pin PD7 of the MCU. This pin can be configured with the ADC_Driver software module to allow sampling the battery voltage. XDK uses a typical <ulink url="https://en.wikipedia.org/wiki/Lithium-ion_battery">lithium-ion battery</ulink>.</para><para>The battery charger of XDK gives information about the current charging mode via the green LED of XDK. However, this pin is not connected to the MCU. Determining the current charging mode in the software running on XDK is therefore not possible. The green LED only shows the charging status and cannot be controlled by software.</para><para><table rows="4" cols="2"><row>
+<entry thead="yes"><para>Green LED </para></entry><entry thead="yes"><para>Charging Mode  </para></entry></row>
+<row>
+<entry thead="no"><para>Continuous </para></entry><entry thead="no"><para>Charging/Charging suspended by thermal loop </para></entry></row>
+<row>
+<entry thead="no"><para>Flashing </para></entry><entry thead="no"><para>Safety timers expired </para></entry></row>
+<row>
+<entry thead="no"><para>Off </para></entry><entry thead="no"><para>Charging done/Recharging after termination/IC disabled or no valid input power/Battery absent </para></entry></row>
+</table>
+</para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,586 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_x_d_k___lo_ra_8h" kind="file">
+    <compoundname>XDK_LoRa.h</compoundname>
+    <includes refid="_b_c_d_s___retcode_8h" local="yes">BCDS_Retcode.h</includes>
+    <includedby refid="_lo_ra_things_network_demo_2source_2_app_controller_8c" local="yes">SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c</includedby>
+    <incdepgraph>
+      <node id="23120">
+        <label>stdbool.h</label>
+      </node>
+      <node id="23119">
+        <label>stdint.h</label>
+      </node>
+      <node id="23117">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="23118" relation="include">
+        </childnode>
+      </node>
+      <node id="23122">
+        <label>stdlib.h</label>
+      </node>
+      <node id="23116">
+        <label>SDK/xdk110/Common/include/Connectivity/XDK_LoRa.h</label>
+        <link refid="XDK_LoRa.h"/>
+        <childnode refid="23117" relation="include">
+        </childnode>
+      </node>
+      <node id="23121">
+        <label>string.h</label>
+      </node>
+      <node id="23118">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="23119" relation="include">
+        </childnode>
+        <childnode refid="23120" relation="include">
+        </childnode>
+        <childnode refid="23121" relation="include">
+        </childnode>
+        <childnode refid="23122" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="23123">
+        <label>SDK/xdk110/Common/include/Connectivity/XDK_LoRa.h</label>
+        <link refid="XDK_LoRa.h"/>
+        <childnode refid="23124" relation="include">
+        </childnode>
+      </node>
+      <node id="23124">
+        <label>SDK/xdk110/Apps/LoRaThingsNetworkDemo/source/AppController.c</label>
+        <link refid="_lo_ra_things_network_demo_2source_2_app_controller_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_lo_ra___setup___s" prot="public">LoRa_Setup_S</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___lo_ra_1ga6ef1724a082ccdde367dbddf293fb7bc" prot="public" static="no">
+        <name>LoRa_Event_E</name>
+        <enumvalue id="group___lo_ra_1gga6ef1724a082ccdde367dbddf293fb7bca470078c88070a10f1945ebf86a70e66a" prot="public">
+          <name>LORA_EVENT_RECEIVED_PACKET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___lo_ra_1gga6ef1724a082ccdde367dbddf293fb7bca7f84674087f103b43621b18a8a8ffc2d" prot="public">
+          <name>LORA_EVENT_SEND_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___lo_ra_1gga6ef1724a082ccdde367dbddf293fb7bca5b57953ba81f5b4b531bfe26c8c02afe" prot="public">
+          <name>LORA_EVENT_RECEIVE_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>LORA events for the supported drivers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_LoRa.h" line="69" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_LoRa.h" bodystart="68" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___lo_ra_1ga24627b44241c99afc85a11a90341742b" prot="public" static="no">
+        <name>LoRa_JoinType_E</name>
+        <enumvalue id="group___lo_ra_1gga24627b44241c99afc85a11a90341742ba339b2b00bef92ce434534dba6e89bc23" prot="public">
+          <name>LORA_JOINTYPE_OTAA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___lo_ra_1gga24627b44241c99afc85a11a90341742ba9e0a6f3cc483991623db7a3c61732153" prot="public">
+          <name>LORA_JOINTYPE_ABP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enumeration representing supported join procedures as in LoRaWAN specification V1.0.1 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_LoRa.h" line="60" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_LoRa.h" bodystart="59" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___lo_ra_1gae5d0929ffb3226248ffce14c65903c68" prot="public" static="no">
+        <type>enum <ref refid="group___lo_ra_1ga6ef1724a082ccdde367dbddf293fb7bc" kindref="member">LoRa_Event_E</ref></type>
+        <definition>typedef enum LoRa_Event_E  LoRa_Event_T</definition>
+        <argsstring></argsstring>
+        <name>LoRa_Event_T</name>
+        <briefdescription>
+<para>LORA events for the supported drivers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_LoRa.h" line="73" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___lo_ra_1gaa2df774ff8ec8ce3db421caa83603ef2" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* LoRa_EventNotificationCB_T)(LoRa_Event_T event)</definition>
+        <argsstring>)(LoRa_Event_T event)</argsstring>
+        <name>LoRa_EventNotificationCB_T</name>
+        <briefdescription>
+<para>Typedef of the LORA event notification callback. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>run-time event of the LORA stack </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_LoRa.h" line="80" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_LoRa.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___lo_ra_1ga2a66daf63c51da9763403f4f9240f852" prot="public" static="no">
+        <type>enum <ref refid="group___lo_ra_1ga24627b44241c99afc85a11a90341742b" kindref="member">LoRa_JoinType_E</ref></type>
+        <definition>typedef enum LoRa_JoinType_E  LoRa_JoinType_T</definition>
+        <argsstring></argsstring>
+        <name>LoRa_JoinType_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enumeration representing supported join procedures as in LoRaWAN specification V1.0.1 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_LoRa.h" line="63" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___lo_ra_1ga7f627533d69eee9c475c5ecef418f4e1" prot="public" static="no">
+        <type>struct <ref refid="struct_lo_ra___setup___s" kindref="compound">LoRa_Setup_S</ref></type>
+        <definition>typedef struct LoRa_Setup_S LoRa_Setup_T</definition>
+        <argsstring></argsstring>
+        <name>LoRa_Setup_T</name>
+        <briefdescription>
+<para>Typedef to represent the WLAN setup feature. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_LoRa.h" line="80" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_LoRa.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___lo_ra_1gaa27fb462580693dd78ba9a36998fd20d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRa_Close</definition>
+        <argsstring>(void)</argsstring>
+        <name>LoRa_Close</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This will close the LoRa medium. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_LoRa.h" line="179" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___lo_ra_1gae8cdfed3afe59376a79612eef396a72e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRa_Disable</definition>
+        <argsstring>(void)</argsstring>
+        <name>LoRa_Disable</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This will disable the LoRa medium. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_LoRa.h" line="172" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___lo_ra_1ga03b463571101c0e72fc7d94968c28302" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRa_Enable</definition>
+        <argsstring>(void)</argsstring>
+        <name>LoRa_Enable</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This will enable the LORA(by calling this the Rxwindow2 frequency,DevEUI,appEUI,appKey, Coding rate will be set and saved) </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_LoRa.h" line="121" column="1"/>
+        <referencedby refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8c" startline="336" endline="376">AppControllerEnable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___lo_ra_1ga69c37ef4e09efb2fbf854bcf5b8ca3a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRa_GetADR</definition>
+        <argsstring>(bool *adr)</argsstring>
+        <name>LoRa_GetADR</name>
+        <param>
+          <type>bool *</type>
+          <declname>adr</declname>
+        </param>
+        <briefdescription>
+<para>Returns the status of the Adaptive data Rate. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">adr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_LoRa.h" line="206" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___lo_ra_1ga430500db1e5590ac729572396aac0ea7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRa_GetHwEUI</definition>
+        <argsstring>(uint64_t *hwDevEUI)</argsstring>
+        <name>LoRa_GetHwEUI</name>
+        <param>
+          <type>uint64_t *</type>
+          <declname>hwDevEUI</declname>
+        </param>
+        <briefdescription>
+<para>This will read the hardware dev EUI of the LoRa medium. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">hwDevEUI</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>place holder for Unique Identifier of the LoRa module</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_LoRa.h" line="188" column="1"/>
+        <referencedby refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8c" startline="203" endline="323">AppControllerFire</referencedby>
+        <referencedby refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8c" startline="336" endline="376">AppControllerEnable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___lo_ra_1gac15904441cffe97eaa910cfff9734f76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRa_Join</definition>
+        <argsstring>(void)</argsstring>
+        <name>LoRa_Join</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>performs a join request if the device has not joined a network yet </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_LoRa.h" line="128" column="1"/>
+        <referencedby refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8c" startline="203" endline="323">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___lo_ra_1gab87af2b51874613698a10fa9748630d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRa_SendConfirmed</definition>
+        <argsstring>(uint8_t LoRaPort, uint8_t *dataBuffer, uint32_t dataBufferSize)</argsstring>
+        <name>LoRa_SendConfirmed</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>LoRaPort</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>dataBuffer</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>dataBufferSize</declname>
+        </param>
+        <briefdescription>
+<para>Sends confirmed data over LoRa. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">LoRaPort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LoraWan Port that will be used for sending</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dataBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the data frame that will be sent</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dataBufferSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the frame to send</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_LoRa.h" line="165" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___lo_ra_1ga4062b901272926338010c9d9fa2462c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRa_SendUnconfirmed</definition>
+        <argsstring>(uint8_t LoRaPort, uint8_t *dataBuffer, uint32_t dataBufferSize)</argsstring>
+        <name>LoRa_SendUnconfirmed</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>LoRaPort</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>dataBuffer</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>dataBufferSize</declname>
+        </param>
+        <briefdescription>
+<para>Sends unconfirmed data frame over LoRa. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">LoRaPort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LoraWan Port that will be used for sending</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dataBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the data frame that will be sent</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dataBufferSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the frame to send</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. This function returns if an ACK has been received from the Network Server or if an error or a timeout occurred </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_LoRa.h" line="152" column="1"/>
+        <referencedby refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8c" startline="203" endline="323">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___lo_ra_1ga34d6ec16f3bb716ac0b7f654813a8fbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRa_SetADR</definition>
+        <argsstring>(bool enable)</argsstring>
+        <name>LoRa_SetADR</name>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>Sets the Adaptive Data Rate option to ON/OFF. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>adr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to true if ADR is to be enabled, set to false otherwise.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_LoRa.h" line="197" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___lo_ra_1gaaeb9f159c406558aef0b5bc2c67b1771" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRa_SetDataRate</definition>
+        <argsstring>(uint8_t dataRate)</argsstring>
+        <name>LoRa_SetDataRate</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>dataRate</declname>
+        </param>
+        <briefdescription>
+<para>Sets the Data Rate used for the transmission. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dataRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to be used according to LoRaWAN spec</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_LoRa.h" line="137" column="1"/>
+        <referencedby refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8c" startline="203" endline="323">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___lo_ra_1gad688d42c0ec23282fa2f3ed8f35dbb5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRa_Setup</definition>
+        <argsstring>(LoRa_Setup_T *setup)</argsstring>
+        <name>LoRa_Setup</name>
+        <param>
+          <type><ref refid="group___lo_ra_1ga7f627533d69eee9c475c5ecef418f4e1" kindref="member">LoRa_Setup_T</ref> *</type>
+          <declname>setup</declname>
+        </param>
+        <briefdescription>
+<para>This will setup the LORA. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">setup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the LORA setup feature</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para>This must be the first API to be called if LORA feature is to be used.</para></listitem><listitem><para>Do not call this API more than once. </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_LoRa.h" line="114" column="1"/>
+        <referencedby refid="group___l_o_r_a___t_h_i_n_g_s___n_e_t_w_o_r_k___d_e_m_o_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_lo_ra_things_network_demo_2source_2_app_controller_8c" startline="389" endline="415">AppControllerSetup</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor">#ifndef<sp/>XDK_LORA_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XDK_LORA_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>local<sp/>interface<sp/>declaration<sp/>**********************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___retcode_8h" kindref="compound">BCDS_Retcode.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="group___lo_ra_1ga24627b44241c99afc85a11a90341742b" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group___lo_ra_1ga24627b44241c99afc85a11a90341742b" kindref="member">LoRa_JoinType_E</ref></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61" refid="group___lo_ra_1gga24627b44241c99afc85a11a90341742ba339b2b00bef92ce434534dba6e89bc23" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___lo_ra_1gga24627b44241c99afc85a11a90341742ba339b2b00bef92ce434534dba6e89bc23" kindref="member">LORA_JOINTYPE_OTAA</ref>,</highlight></codeline>
+<codeline lineno="62" refid="group___lo_ra_1gga24627b44241c99afc85a11a90341742ba9e0a6f3cc483991623db7a3c61732153" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___lo_ra_1gga24627b44241c99afc85a11a90341742ba9e0a6f3cc483991623db7a3c61732153" kindref="member">LORA_JOINTYPE_ABP</ref></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}<sp/><ref refid="group___lo_ra_1ga2a66daf63c51da9763403f4f9240f852" kindref="member">LoRa_JoinType_T</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="group___lo_ra_1ga6ef1724a082ccdde367dbddf293fb7bc" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group___lo_ra_1ga6ef1724a082ccdde367dbddf293fb7bc" kindref="member">LoRa_Event_E</ref></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70" refid="group___lo_ra_1gga6ef1724a082ccdde367dbddf293fb7bca470078c88070a10f1945ebf86a70e66a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___lo_ra_1gga6ef1724a082ccdde367dbddf293fb7bca470078c88070a10f1945ebf86a70e66a" kindref="member">LORA_EVENT_RECEIVED_PACKET</ref>,</highlight></codeline>
+<codeline lineno="71" refid="group___lo_ra_1gga6ef1724a082ccdde367dbddf293fb7bca7f84674087f103b43621b18a8a8ffc2d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___lo_ra_1gga6ef1724a082ccdde367dbddf293fb7bca7f84674087f103b43621b18a8a8ffc2d" kindref="member">LORA_EVENT_SEND_FAILED</ref>,</highlight></codeline>
+<codeline lineno="72" refid="group___lo_ra_1gga6ef1724a082ccdde367dbddf293fb7bca5b57953ba81f5b4b531bfe26c8c02afe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___lo_ra_1gga6ef1724a082ccdde367dbddf293fb7bca5b57953ba81f5b4b531bfe26c8c02afe" kindref="member">LORA_EVENT_RECEIVE_FAILED</ref>,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}<sp/><ref refid="group___lo_ra_1gae5d0929ffb3226248ffce14c65903c68" kindref="member">LoRa_Event_T</ref>;</highlight></codeline>
+<codeline lineno="80" refid="group___lo_ra_1gaa2df774ff8ec8ce3db421caa83603ef2" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="group___lo_ra_1gaa2df774ff8ec8ce3db421caa83603ef2" kindref="member">LoRa_EventNotificationCB_T</ref>)(<ref refid="group___lo_ra_1gae5d0929ffb3226248ffce14c65903c68" kindref="member">LoRa_Event_T</ref><sp/>event);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="struct_lo_ra___setup___s" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_lo_ra___setup___s" kindref="compound">LoRa_Setup_S</ref></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87" refid="group___lo_ra_1ga54525463f36321b30e5247a30fe26737" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="group___lo_ra_1ga54525463f36321b30e5247a30fe26737" kindref="member">CodingRate</ref>;<sp/></highlight></codeline>
+<codeline lineno="88" refid="group___lo_ra_1gae6c80ae4ced882f57dec9c4d572cf051" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t*<sp/><ref refid="group___lo_ra_1gae6c80ae4ced882f57dec9c4d572cf051" kindref="member">DevEUI</ref>;<sp/></highlight></codeline>
+<codeline lineno="89" refid="group___lo_ra_1gac8af16b7f7e1f97fab8945fbf32b51a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="group___lo_ra_1gac8af16b7f7e1f97fab8945fbf32b51a8" kindref="member">AppEUI</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="90" refid="group___lo_ra_1ga560c2bd9214ee75105acac8593614bd9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t*<sp/><ref refid="group___lo_ra_1ga560c2bd9214ee75105acac8593614bd9" kindref="member">AppKey</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="91" refid="group___lo_ra_1ga17ba26f27cdadf59d88da803db1ef3e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="group___lo_ra_1ga17ba26f27cdadf59d88da803db1ef3e0" kindref="member">RxFreq</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="92" refid="group___lo_ra_1ga4255bc40baa51c0382a77ccb055d72ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="group___lo_ra_1ga4255bc40baa51c0382a77ccb055d72ff" kindref="member">Freq</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93" refid="group___lo_ra_1ga651606c084c4c80a4bf06b66b0b820db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___lo_ra_1gaa2df774ff8ec8ce3db421caa83603ef2" kindref="member">LoRa_EventNotificationCB_T</ref><sp/><ref refid="group___lo_ra_1ga651606c084c4c80a4bf06b66b0b820db" kindref="member">EventCallback</ref>;<sp/></highlight></codeline>
+<codeline lineno="94" refid="group___lo_ra_1gadec80660a4b05e57040cecf7a3ff8bf3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___lo_ra_1ga2a66daf63c51da9763403f4f9240f852" kindref="member">LoRa_JoinType_T</ref><sp/><ref refid="group___lo_ra_1gadec80660a4b05e57040cecf7a3ff8bf3" kindref="member">JoinType</ref>;<sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="group___lo_ra_1ga7f627533d69eee9c475c5ecef418f4e1" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_lo_ra___setup___s" kindref="compound">LoRa_Setup_S</ref><sp/><ref refid="struct_lo_ra___setup___s" kindref="compound">LoRa_Setup_T</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___lo_ra_1gad688d42c0ec23282fa2f3ed8f35dbb5c" kindref="member">LoRa_Setup</ref>(<ref refid="struct_lo_ra___setup___s" kindref="compound">LoRa_Setup_T</ref><sp/>*<sp/>setup);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___lo_ra_1ga03b463571101c0e72fc7d94968c28302" kindref="member">LoRa_Enable</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___lo_ra_1gac15904441cffe97eaa910cfff9734f76" kindref="member">LoRa_Join</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___lo_ra_1gaaeb9f159c406558aef0b5bc2c67b1771" kindref="member">LoRa_SetDataRate</ref>(uint8_t<sp/>dataRate);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___lo_ra_1ga4062b901272926338010c9d9fa2462c1" kindref="member">LoRa_SendUnconfirmed</ref>(uint8_t<sp/>LoRaPort,<sp/>uint8_t<sp/>*dataBuffer,<sp/>uint32_t<sp/>dataBufferSize);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___lo_ra_1gab87af2b51874613698a10fa9748630d5" kindref="member">LoRa_SendConfirmed</ref>(uint8_t<sp/>LoRaPort,<sp/>uint8_t<sp/>*dataBuffer,<sp/>uint32_t<sp/>dataBufferSize);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___lo_ra_1gae8cdfed3afe59376a79612eef396a72e" kindref="member">LoRa_Disable</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___lo_ra_1gaa27fb462580693dd78ba9a36998fd20d" kindref="member">LoRa_Close</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___lo_ra_1ga430500db1e5590ac729572396aac0ea7" kindref="member">LoRa_GetHwEUI</ref>(uint64_t<sp/>*hwDevEUI);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___lo_ra_1ga34d6ec16f3bb716ac0b7f654813a8fbe" kindref="member">LoRa_SetADR</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___lo_ra_1ga69c37ef4e09efb2fbf854bcf5b8ca3a9" kindref="member">LoRa_GetADR</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>adr);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>XDK_LORA_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_LoRa.h"/>
+  </compounddef>
+</doxygen>

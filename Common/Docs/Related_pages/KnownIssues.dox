@@ -1,0 +1,24 @@
+/** 
+@page Known_issues Known Issues
+@brief Lists known issues in XDK SDK
+<hr>
+
+  # | Area        | Issue Description
+ -- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  1 | Essentials  | De-bouncing feature for push button module is currently not supported.
+  2 | BSP         | USB CDC ACM is only working, when application or bootloader is running.\n When application is crashed or does not start, USB Device is not recognized on PC. Resetting XDK helps.
+  3 | BSP         | When USB is connected to PC, but COM port is not opened, printf transmissions will experience around 10ms delay.
+  4 | BSP         | Each USB transmission (such as printf) is truncated at 1024 bytes.
+  5 | BSP         | BMM150_INT along with SD_DETECT interrupt cannot be used at the same time. Similarly BMI160_INT2 along with BUTTON2 interrupt & BMA280_INT2 along with BUTTON1 interrupt cannot be used at the same time.
+  6 | Base System | A printf message must end with "\n", since stdio keep storing the printf arguments until it encounters a "\n".
+  7 | Base System | Printf is comparably slow and might exhibit unpredictable timing behaviour.
+  8 | Base System | XDK software uses newlib as C standard library which makes malloc, free, printf and other library functions not thread-safe.
+  9 | Networking  | WLAN transfers at high frequencies are currently not supported.
+ 10 | Networking  | Multi-threading for WLAN transfers is not implemented.
+ 11 | Networking  | Support for TLS/HTTPS is in 'technical preview' state and not ready for production use. Especially, operations relying on the random number generator are not secure, as the RNG is always returning 0.
+ 12 | Networking  | Sending data over BLE at high frequencies is currently unsupported.
+ 13 | Sensors     | When the magnetic  sensor is exposed to high magnetic field, the value read may be greater than 2500 microtesla on the Z axis.
+ 14 | Sensors     | Initialization of sensors takes an initial delay. Without this delay, first few samples would be incorrect.
+ 15 | Sensors     | The XDK sensor API allows all (even invalid) power mode transitions. Please refer to the sensor data sheets for valid power mode transitions.
+ 16 | Lem		  | When Lem Sensor external hardware is connected to XDK with USB connected the current value fluctuates from 0 to 9Ampere.																
+*/

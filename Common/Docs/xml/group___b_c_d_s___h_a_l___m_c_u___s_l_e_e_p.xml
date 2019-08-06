@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___b_c_d_s___h_a_l___m_c_u___s_l_e_e_p" kind="group">
+    <compoundname>BCDS_HAL_MCU_SLEEP</compoundname>
+    <title>MCU Sleep API</title>
+    <innerfile refid="_b_c_d_s___m_c_u___sleep_8h">BCDS_MCU_Sleep.h</innerfile>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___b_c_d_s___h_a_l___m_c_u___s_l_e_e_p_1gad037939b7b3f09e30cf99aea8b0cd1c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T MCU_Sleep_BlockSleepMode</definition>
+        <argsstring>(uint32_t mode)</argsstring>
+        <name>MCU_Sleep_BlockSleepMode</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Block Sleep Mode. </para>        </briefdescription>
+        <detaileddescription>
+<para>Blocks the sleep management from entering into the specified sleep mode</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Mode to block</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Successful Execution </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_INVALID_PARAM</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Tried to block an unsupported mode </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/mcu/BCDS_MCU_Sleep.h" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___h_a_l___m_c_u___s_l_e_e_p_1gaae21fdc9494cf9fb42eaba50b5474f49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MCU_Sleep_EnterSleep</definition>
+        <argsstring>(uint32_t mode)</argsstring>
+        <name>MCU_Sleep_EnterSleep</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>MCU Sleep. </para>        </briefdescription>
+        <detaileddescription>
+<para>Enters the micro-controller into the lowest possible sleep mode. This function returns after the MCU is awake again.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Sleep mode to be entered </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/mcu/BCDS_MCU_Sleep.h" line="133" column="1"/>
+        <referencedby refid="_system_startup_8c_1a97fd430f36f8b065226e2bff9bad1de5" compoundref="_system_startup_8c" startline="489" endline="494">vApplicationIdleHook</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___h_a_l___m_c_u___s_l_e_e_p_1ga168446c9199443c0b989ec98911c6e9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t MCU_Sleep_GetLowestSleepMode</definition>
+        <argsstring>(void)</argsstring>
+        <name>MCU_Sleep_GetLowestSleepMode</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get Lowest Sleep Mode. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns the lowest possible sleep mode to use. Mind that only power-saving modes which retain CPU and RAM are considered here as sleep modes.</para><para><simplesect kind="return"><para>Lowest Sleep Mode Available </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/mcu/BCDS_MCU_Sleep.h" line="122" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___h_a_l___m_c_u___s_l_e_e_p_1ga58ab7a06d199420db818f507e44833a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T MCU_Sleep_Initialize</definition>
+        <argsstring>(void)</argsstring>
+        <name>MCU_Sleep_Initialize</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize MCU Sleep Management. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function initializes the micro-controller sleep management</para><para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Successful Execution </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/mcu/BCDS_MCU_Sleep.h" line="85" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___h_a_l___m_c_u___s_l_e_e_p_1ga8e1991d8adada26f35978ad318ed4b69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T MCU_Sleep_UnblockSleepMode</definition>
+        <argsstring>(uint32_t mode)</argsstring>
+        <name>MCU_Sleep_UnblockSleepMode</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Unblock a sleep mode. </para>        </briefdescription>
+        <detaileddescription>
+<para>Removes one blockade in the sleep management from entering into the specified sleep mode</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Mode to unblock</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Successful Execution </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_INVALID_PARAM</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Tried to unblock an unsupported mode </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/mcu/BCDS_MCU_Sleep.h" line="111" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Micro-Controller Sleep API. </para>    </briefdescription>
+    <detaileddescription>
+<para>This is the interface to common MCU sleep management functionality</para><para>The invoking application shall be able to block the system from entering into certain energy modes.</para><para>Sleep modes can be blocked or unblocked by a nested counting semaphore. A block operation increases the counter by one element, unblocking will decrease this.</para><para>The MCU_Sleep_GoSleep will go into the lowest/deepest acceptable sleep mode.</para><para>Pre-sleep and post-sleep callbacks can be registered in order to do the last preparations from the application/BSP perspective before and after sleeping</para><para>Such callbacks might include pin-settings configuration, turning interrupts on/off, etc.</para><para><simplesect kind="warning"><para>Only power-saving modes which retain CPU and RAM are considered here as a sleep mode. This excludes some shutdown-modes! </para></simplesect>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

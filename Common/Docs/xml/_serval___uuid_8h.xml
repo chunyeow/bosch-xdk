@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_serval___uuid_8h" kind="file">
+    <compoundname>Serval_Uuid.h</compoundname>
+    <includes refid="_serval___defines_8h" local="no">Serval_Defines.h</includes>
+    <incdepgraph>
+      <node id="31988">
+        <label>SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Uuid.h</label>
+        <link refid="Serval_Uuid.h"/>
+        <childnode refid="31989" relation="include">
+        </childnode>
+      </node>
+      <node id="31989">
+        <label>Serval_Defines.h</label>
+        <link refid="_serval___defines_8h"/>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+<para>Uuid Module</para><para>Interface providing data types and functions to handle UUIDs. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/********************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2010-2018<sp/>Contributors<sp/>to<sp/>this<sp/>project</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>NOTICE<sp/>file(s)<sp/>distributed<sp/>with<sp/>this<sp/>work<sp/>for<sp/>additional</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>information<sp/>regarding<sp/>copyright<sp/>ownership.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>This<sp/>program<sp/>and<sp/>the<sp/>accompanying<sp/>materials<sp/>are<sp/>made<sp/>available<sp/>under<sp/>the</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>terms<sp/>of<sp/>the<sp/>Eclipse<sp/>Public<sp/>License<sp/>2.0<sp/>which<sp/>is<sp/>available<sp/>at</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>http://www.eclipse.org/legal/epl-2.0</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>EPL-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor">#ifndef<sp/>SERVAL_UUID_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVAL_UUID_H_<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_serval___defines_8h" kindref="compound">Serval_Defines.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>SERVAL_ENABLE_DPWS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_serval___types_8h" kindref="compound">Serval_Types.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_serval___exceptions_8h" kindref="compound">Serval_Exceptions.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>Uuid_T[DPWS_LENGTH_UUID];</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">__Uuid_S<sp/>Uuid_T;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="keyword">struct<sp/></highlight><highlight class="normal">__Uuid_S</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*array<sp/>for<sp/>holding<sp/>UUID<sp/>(16<sp/>x<sp/>8<sp/>bit<sp/>integers)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>a[16];</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Uuid_setRaw(Uuid_T<sp/>*uuid_ptr,<sp/>uint8_t<sp/>*a_ptr);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><ref refid="_serval___types_8h_1a473797d61ec6d5f5a4f91d1d8b56b198" kindref="member">retcode_t</ref><sp/>Uuid_toString(Uuid_T<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*uuid_ptr,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf_ptr,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bufSize);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><ref refid="_serval___types_8h_1a473797d61ec6d5f5a4f91d1d8b56b198" kindref="member">retcode_t</ref><sp/>Uuid_parse(Uuid_T<sp/>*uuid_ptr,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*str_ptr);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Uuid_random(Uuid_T<sp/>*uuid_ptr);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Uuid_increment(Uuid_T<sp/>*uuid_ptr);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SERVAL_ENABLE_DPWS<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SERVAL_UUID_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Uuid.h"/>
+  </compounddef>
+</doxygen>

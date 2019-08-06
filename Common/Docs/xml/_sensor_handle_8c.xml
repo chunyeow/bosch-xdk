@@ -1,0 +1,1290 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_sensor_handle_8c" kind="file">
+    <compoundname>SensorHandle.c</compoundname>
+    <includes refid="_xdk_common_info_8h" local="yes">XdkCommonInfo.h</includes>
+    <includes refid="_x_d_k___sensor_handle_8h" local="yes">XDK_SensorHandle.h</includes>
+    <includes refid="_b_c_d_s___basics_8h" local="yes">BCDS_Basics.h</includes>
+    <includes refid="_b_c_d_s___virtual_sensor_handle_8h" local="yes">BCDS_VirtualSensorHandle.h</includes>
+    <includes refid="sensors_hw_config_8h" local="yes">sensorsHwConfig.h</includes>
+    <includes refid="_b_c_d_s___axis_remap_8h" local="yes">BCDS_AxisRemap.h</includes>
+    <includes refid="_b_c_d_s___bma280_utils_8h" local="yes">BCDS_Bma280Utils.h</includes>
+    <includes refid="_b_c_d_s___bme280_utils_8h" local="yes">BCDS_Bme280Utils.h</includes>
+    <includes refid="_b_c_d_s___bmi160_utils_8h" local="yes">BCDS_Bmi160Utils.h</includes>
+    <includes refid="_b_c_d_s___bmg160_utils_8h" local="yes">BCDS_Bmg160Utils.h</includes>
+    <includes refid="_b_c_d_s___bmm150_utils_8h" local="yes">BCDS_Bmm150Utils.h</includes>
+    <includes refid="_b_c_d_s___max44009_utils_8h" local="yes">BCDS_Max44009Utils.h</includes>
+    <includes refid="_b_s_p___board_type_8h" local="yes">BSP_BoardType.h</includes>
+    <incdepgraph>
+      <node id="27793">
+        <label>stdbool.h</label>
+      </node>
+      <node id="27819">
+        <label>BCDS_HALConfig.h</label>
+        <link refid="_b_c_d_s___h_a_l_config_8h"/>
+      </node>
+      <node id="27809">
+        <label>BCDS_CalibratedMag.h</label>
+        <link refid="_b_c_d_s___calibrated_mag_8h"/>
+        <childnode refid="27792" relation="include">
+        </childnode>
+        <childnode refid="27790" relation="include">
+        </childnode>
+      </node>
+      <node id="27821">
+        <label>BCDS_Bmi160Utils.h</label>
+        <link refid="_b_c_d_s___bmi160_utils_8h"/>
+        <childnode refid="27815" relation="include">
+        </childnode>
+        <childnode refid="27817" relation="include">
+        </childnode>
+      </node>
+      <node id="27817">
+        <label>BCDS_BSP_SensorNode.h</label>
+        <link refid="_b_c_d_s___b_s_p___sensor_node_8h"/>
+        <childnode refid="27818" relation="include">
+        </childnode>
+      </node>
+      <node id="27816">
+        <label>BCDS_Bma280Utils.h</label>
+        <link refid="_b_c_d_s___bma280_utils_8h"/>
+        <childnode refid="27815" relation="include">
+        </childnode>
+        <childnode refid="27817" relation="include">
+        </childnode>
+      </node>
+      <node id="27813">
+        <label>BCDS_VirtualSensorHandle.h</label>
+        <link refid="_b_c_d_s___virtual_sensor_handle_8h"/>
+        <childnode refid="27797" relation="include">
+        </childnode>
+        <childnode refid="27798" relation="include">
+        </childnode>
+        <childnode refid="27800" relation="include">
+        </childnode>
+      </node>
+      <node id="27789">
+        <label>XdkCommonInfo.h</label>
+        <link refid="_xdk_common_info_8h"/>
+        <childnode refid="27790" relation="include">
+        </childnode>
+      </node>
+      <node id="27815">
+        <label>BCDS_AxisRemap.h</label>
+        <link refid="_b_c_d_s___axis_remap_8h"/>
+        <childnode refid="27790" relation="include">
+        </childnode>
+      </node>
+      <node id="27792">
+        <label>stdint.h</label>
+      </node>
+      <node id="27790">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="27791" relation="include">
+        </childnode>
+      </node>
+      <node id="27795">
+        <label>stdlib.h</label>
+      </node>
+      <node id="27802">
+        <label>BCDS_Orientation.h</label>
+        <link refid="_b_c_d_s___orientation_8h"/>
+        <childnode refid="27790" relation="include">
+        </childnode>
+      </node>
+      <node id="27812">
+        <label>BCDS_Gestures.h</label>
+        <link refid="_b_c_d_s___gestures_8h"/>
+        <childnode refid="27790" relation="include">
+        </childnode>
+      </node>
+      <node id="27804">
+        <label>BCDS_Gravity.h</label>
+        <link refid="_b_c_d_s___gravity_8h"/>
+        <childnode refid="27792" relation="include">
+        </childnode>
+        <childnode refid="27790" relation="include">
+        </childnode>
+        <childnode refid="27805" relation="include">
+        </childnode>
+      </node>
+      <node id="27814">
+        <label>sensorsHwConfig.h</label>
+        <link refid="sensors_hw_config_8h"/>
+      </node>
+      <node id="27810">
+        <label>BCDS_FingerPrint.h</label>
+        <link refid="_b_c_d_s___finger_print_8h"/>
+        <childnode refid="27790" relation="include">
+        </childnode>
+      </node>
+      <node id="27820">
+        <label>BCDS_Bme280Utils.h</label>
+        <link refid="_b_c_d_s___bme280_utils_8h"/>
+        <childnode refid="27817" relation="include">
+        </childnode>
+      </node>
+      <node id="27806">
+        <label>BCDS_AbsoluteHumidity.h</label>
+        <link refid="_b_c_d_s___absolute_humidity_8h"/>
+        <childnode refid="27790" relation="include">
+        </childnode>
+      </node>
+      <node id="27811">
+        <label>BCDS_LinearAcceleration.h</label>
+        <link refid="_b_c_d_s___linear_acceleration_8h"/>
+        <childnode refid="27792" relation="include">
+        </childnode>
+        <childnode refid="27790" relation="include">
+        </childnode>
+        <childnode refid="27805" relation="include">
+        </childnode>
+      </node>
+      <node id="27823">
+        <label>BCDS_Bmm150Utils.h</label>
+        <link refid="_b_c_d_s___bmm150_utils_8h"/>
+        <childnode refid="27815" relation="include">
+        </childnode>
+        <childnode refid="27817" relation="include">
+        </childnode>
+      </node>
+      <node id="27803">
+        <label>BCDS_Rotation.h</label>
+        <link refid="_b_c_d_s___rotation_8h"/>
+        <childnode refid="27790" relation="include">
+        </childnode>
+      </node>
+      <node id="27825">
+        <label>BSP_BoardType.h</label>
+        <link refid="_b_s_p___board_type_8h"/>
+      </node>
+      <node id="27794">
+        <label>string.h</label>
+      </node>
+      <node id="27791">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="27792" relation="include">
+        </childnode>
+        <childnode refid="27793" relation="include">
+        </childnode>
+        <childnode refid="27794" relation="include">
+        </childnode>
+        <childnode refid="27795" relation="include">
+        </childnode>
+      </node>
+      <node id="27796">
+        <label>XDK_SensorHandle.h</label>
+        <link refid="_x_d_k___sensor_handle_8h"/>
+        <childnode refid="27797" relation="include">
+        </childnode>
+        <childnode refid="27798" relation="include">
+        </childnode>
+        <childnode refid="27799" relation="include">
+        </childnode>
+        <childnode refid="27800" relation="include">
+        </childnode>
+        <childnode refid="27801" relation="include">
+        </childnode>
+        <childnode refid="27802" relation="include">
+        </childnode>
+        <childnode refid="27803" relation="include">
+        </childnode>
+        <childnode refid="27804" relation="include">
+        </childnode>
+        <childnode refid="27806" relation="include">
+        </childnode>
+        <childnode refid="27807" relation="include">
+        </childnode>
+        <childnode refid="27805" relation="include">
+        </childnode>
+        <childnode refid="27808" relation="include">
+        </childnode>
+        <childnode refid="27809" relation="include">
+        </childnode>
+        <childnode refid="27810" relation="include">
+        </childnode>
+        <childnode refid="27811" relation="include">
+        </childnode>
+        <childnode refid="27812" relation="include">
+        </childnode>
+      </node>
+      <node id="27818">
+        <label>BCDS_HAL.h</label>
+        <link refid="_b_c_d_s___h_a_l_8h"/>
+        <childnode refid="27790" relation="include">
+        </childnode>
+        <childnode refid="27819" relation="include">
+        </childnode>
+      </node>
+      <node id="27805">
+        <label>BCDS_CalibratedAccel.h</label>
+        <link refid="_b_c_d_s___calibrated_accel_8h"/>
+        <childnode refid="27792" relation="include">
+        </childnode>
+        <childnode refid="27790" relation="include">
+        </childnode>
+      </node>
+      <node id="27798">
+        <label>BCDS_Gyroscope.h</label>
+        <link refid="_b_c_d_s___gyroscope_8h"/>
+        <childnode refid="27790" relation="include">
+        </childnode>
+      </node>
+      <node id="27801">
+        <label>BCDS_Environmental.h</label>
+        <link refid="_b_c_d_s___environmental_8h"/>
+        <childnode refid="27790" relation="include">
+        </childnode>
+      </node>
+      <node id="27807">
+        <label>BCDS_StepCounter.h</label>
+        <link refid="_b_c_d_s___step_counter_8h"/>
+        <childnode refid="27790" relation="include">
+        </childnode>
+      </node>
+      <node id="27808">
+        <label>BCDS_CalibratedGyro.h</label>
+        <link refid="_b_c_d_s___calibrated_gyro_8h"/>
+        <childnode refid="27792" relation="include">
+        </childnode>
+        <childnode refid="27790" relation="include">
+        </childnode>
+      </node>
+      <node id="27797">
+        <label>BCDS_Accelerometer.h</label>
+        <link refid="_b_c_d_s___accelerometer_8h"/>
+        <childnode refid="27790" relation="include">
+        </childnode>
+      </node>
+      <node id="27799">
+        <label>BCDS_LightSensor.h</label>
+        <link refid="_b_c_d_s___light_sensor_8h"/>
+        <childnode refid="27790" relation="include">
+        </childnode>
+      </node>
+      <node id="27800">
+        <label>BCDS_Magnetometer.h</label>
+        <link refid="_b_c_d_s___magnetometer_8h"/>
+        <childnode refid="27790" relation="include">
+        </childnode>
+      </node>
+      <node id="27822">
+        <label>BCDS_Bmg160Utils.h</label>
+        <link refid="_b_c_d_s___bmg160_utils_8h"/>
+        <childnode refid="27815" relation="include">
+        </childnode>
+        <childnode refid="27817" relation="include">
+        </childnode>
+      </node>
+      <node id="27824">
+        <label>BCDS_Max44009Utils.h</label>
+        <link refid="_b_c_d_s___max44009_utils_8h"/>
+        <childnode refid="27817" relation="include">
+        </childnode>
+      </node>
+      <node id="27788">
+        <label>SDK/xdk110/Common/source/Sensor/SensorHandle.c</label>
+        <link refid="SensorHandle.c"/>
+        <childnode refid="27789" relation="include">
+        </childnode>
+        <childnode refid="27796" relation="include">
+        </childnode>
+        <childnode refid="27791" relation="include">
+        </childnode>
+        <childnode refid="27813" relation="include">
+        </childnode>
+        <childnode refid="27814" relation="include">
+        </childnode>
+        <childnode refid="27815" relation="include">
+        </childnode>
+        <childnode refid="27816" relation="include">
+        </childnode>
+        <childnode refid="27820" relation="include">
+        </childnode>
+        <childnode refid="27821" relation="include">
+        </childnode>
+        <childnode refid="27822" relation="include">
+        </childnode>
+        <childnode refid="27823" relation="include">
+        </childnode>
+        <childnode refid="27824" relation="include">
+        </childnode>
+        <childnode refid="27825" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_sensor_handle_8c_1abff8f3a204e79671b98fabaa652198c3" prot="public" static="no">
+        <name>BCDS_MODULE_ID</name>
+        <initializer><ref refid="_xdk_common_info_8h_1a7d550569e587db8903a47a7044e6e935a7a20419df47e9d7ea9a6e38fde557395" kindref="member">XDK_COMMON_ID_SENSORHANDLE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="60" column="10" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_sensor_handle_8c_1a964f0749ba287924cea1f9e58601c38c" prot="public" static="no">
+        <name>BMA280_DEV_ADDR</name>
+        <initializer>UINT8_C(0x18)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="81" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_sensor_handle_8c_1a154f25b7ad106565eb2097bd1072d5c9" prot="public" static="no">
+        <name>BME280_DEV_ADDR</name>
+        <initializer>UINT8_C(0x76)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="83" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_sensor_handle_8c_1a937359232f0a5ab8209fe6ebb01a3322" prot="public" static="no">
+        <name>BMG160_DEV_ADDR</name>
+        <initializer>UINT8_C(0x68)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="82" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_sensor_handle_8c_1aa6181c747814e42b03c165bd27f298da" prot="public" static="no">
+        <name>BMI160_DEV_ADDR</name>
+        <initializer>UINT8_C(0x69)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="86" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_sensor_handle_8c_1ab76be151de81e9029224c1301f6ff2c5" prot="public" static="no">
+        <name>BMM150_DEV_ADDR</name>
+        <initializer>UINT8_C(0x10)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="84" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_sensor_handle_8c_1aef0d32cfdb2c32ebfbb15afa1cf11e3d" prot="public" static="no">
+        <name>MAX44009_DEV_ADDR</name>
+        <initializer>UINT8_C(0x4A)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="85" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_sensor_handle_8c_1ae29202e70cc28696f685fc97755cc3d5" prot="public" static="no">
+        <name>SENSOR_API_INITIALIZED</name>
+        <initializer>UINT8_C(1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="80" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_sensor_handle_8c_1a3de7d6fa3d6511b6c5ba5cf8e446d3a1" prot="public" static="no">
+        <name>SENSOR_API_UNINITIALIZED</name>
+        <initializer>UINT8_C(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="79" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_sensor_handle_8c_1a5ed9d850ba700fb0be4af6f0a4e0c963" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gae41b9f75a3110598db5e4549fd76869a" kindref="member">Bma280Utils_Info_T</ref></type>
+        <definition>Bma280Utils_Info_T bma280Sensor_S</definition>
+        <argsstring></argsstring>
+        <name>bma280Sensor_S</name>
+        <initializer>=
+        {
+                .BspSensorId = (uint32_t) <ref refid="group___b_o_a_r_d___t_y_p_e___s_e_n_s_o_r___n_o_d_e_1gga912187ee09fe6b5cbec7a72484205112a521196827e0adc8d3fc1099a25639d16" kindref="member">BSP_XDK_SENSOR_BMA280</ref>,
+                .remap =
+                        {
+                                .axisConfig = <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga8ca99af0186afab96adc3e40f32a3bb7" kindref="member">RMP_BMA2X2_X_AXIS_CONFIG</ref> | <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1gac239d25ac3d66465960872d96880bd38" kindref="member">RMP_BMA2X2_Y_AXIS_CONFIG</ref> | <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1gad876534363082fb13a673919a0aad2b8" kindref="member">RMP_BMA2X2_Z_AXIS_CONFIG</ref>,
+                                .axisSign = <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga900610ed0c10d69b3b067915b5c80375" kindref="member">RMP_BMA2X2_X_AXIS_SIGN_CONFIG</ref> | <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga8299f14e344a8259a50cc4b7455cb69c" kindref="member">RMP_BMA2X2_Y_AXIS_SIGN_CONFIG</ref> | <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga7609756f0486d5276516a07dbb3a6241" kindref="member">RMP_BMA2X2_Z_AXIS_SIGN_CONFIG</ref>,
+                        },
+                .ISRCallback = <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,
+                .dev_addr = <ref refid="_sensor_handle_8c_1a964f0749ba287924cea1f9e58601c38c" kindref="member">BMA280_DEV_ADDR</ref>,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="89" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sensor_handle_8c_1ac5b976c523b3c0d460776081d4f6edcc" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___b_m_e280___s_e_n_s_o_r_u_t_i_l_s_1ga48d0850e025b549c452a7c2ae20da9ab" kindref="member">Bme280Utils_Info_T</ref></type>
+        <definition>Bme280Utils_Info_T bme280Sensor_S</definition>
+        <argsstring></argsstring>
+        <name>bme280Sensor_S</name>
+        <initializer>=
+        {
+                .BspSensorId = (uint32_t) <ref refid="group___b_o_a_r_d___t_y_p_e___s_e_n_s_o_r___n_o_d_e_1gga912187ee09fe6b5cbec7a72484205112a9d080650763bb0233baaeff397b970bd" kindref="member">BSP_XDK_SENSOR_BME280</ref>,
+                .dev_addr = <ref refid="_sensor_handle_8c_1a154f25b7ad106565eb2097bd1072d5c9" kindref="member">BME280_DEV_ADDR</ref>,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="136" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sensor_handle_8c_1ae9c7d2767f7c1fb2514a3dd72bdf2354" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___b_m_g160___s_e_n_s_o_r_u_t_i_l_s_1ga9cf59d350b65ca27254dc7741db7f64d" kindref="member">Bmg160Utils_Info_T</ref></type>
+        <definition>Bmg160Utils_Info_T bmg160Sensor_S</definition>
+        <argsstring></argsstring>
+        <name>bmg160Sensor_S</name>
+        <initializer>=
+        {
+
+        .BspSensorId = (uint32_t) <ref refid="group___b_o_a_r_d___t_y_p_e___s_e_n_s_o_r___n_o_d_e_1gga912187ee09fe6b5cbec7a72484205112aec6cd24d0d7fdda485c19e0efe496138" kindref="member">BSP_XDK_SENSOR_BMG160</ref>,
+                .remap =
+                        {
+                                .axisConfig = <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1gad9d845d7763ac5b4d80662a91d18723d" kindref="member">RMP_BMG160_X_AXIS_CONFIG</ref> | <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1gac23ecf1fe4c70d2fdfe7205e6a8febcd" kindref="member">RMP_BMG160_Y_AXIS_CONFIG</ref> | <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga42897cb7bab249d8c59b4150f73c2fd6" kindref="member">RMP_BMG160_Z_AXIS_CONFIG</ref>,
+                                .axisSign = <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1gace800522fb7ab80128519d3bb4de7c6c" kindref="member">RMP_BMG160_X_AXIS_SIGN_CONFIG</ref> | <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga4f340d2351a7718420050d04aef76566" kindref="member">RMP_BMG160_Y_AXIS_SIGN_CONFIG</ref> | <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga67da93e1454acd9adddb9d28b5baa257" kindref="member">RMP_BMG160_Z_AXIS_SIGN_CONFIG</ref>,
+                        },
+                .ISRCallback = <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,
+                .dev_addr = <ref refid="_sensor_handle_8c_1a937359232f0a5ab8209fe6ebb01a3322" kindref="member">BMG160_DEV_ADDR</ref>,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="115" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sensor_handle_8c_1a8190df70bd24d0cd1c1e63516c6a8c0b" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___b_m_i160___s_e_n_s_o_r_u_t_i_l_s_1ga3f4b5f2ec9feaef1f07746e5186bd97a" kindref="member">Bmi160Utils_Info_T</ref></type>
+        <definition>Bmi160Utils_Info_T bmi160AccelSensor_S</definition>
+        <argsstring></argsstring>
+        <name>bmi160AccelSensor_S</name>
+        <initializer>=
+        {
+                .BspSensorId = (uint32_t) <ref refid="group___b_o_a_r_d___t_y_p_e___s_e_n_s_o_r___n_o_d_e_1gga912187ee09fe6b5cbec7a72484205112a3e69c1de20ddbfe6bad3adb45f29c548" kindref="member">BSP_XDK_SENSOR_BMI160</ref>,
+                .remap =
+                        {
+                                .axisConfig = <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1gada62bdad9c457bd09ab195eb4d35fcf9" kindref="member">RMP_BMIACCEL_X_AXIS_CONFIG</ref> | <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga9d565b64415b223cb1fac97719ea88f3" kindref="member">RMP_BMIACCEL_Y_AXIS_CONFIG</ref> | <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1gac354cb41a81cfdf97922801a253809e2" kindref="member">RMP_BMIACCEL_Z_AXIS_CONFIG</ref>,
+                                .axisSign = <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga3c5da63efeea55a89f7bfb2e22a5b5dc" kindref="member">RMP_BMIACCEL_X_AXIS_SIGN_CONFIG</ref> | <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1gae623df452a5c7d2bbfc83a73e3953676" kindref="member">RMP_BMIACCEL_Y_AXIS_SIGN_CONFIG</ref> | <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga2ed3698a5ab436c08807726a3a3f697e" kindref="member">RMP_BMIACCEL_Z_AXIS_SIGN_CONFIG</ref>,
+                        },
+                .ISRCallback = <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,
+                .dev_addr = <ref refid="_sensor_handle_8c_1aa6181c747814e42b03c165bd27f298da" kindref="member">BMI160_DEV_ADDR</ref>,
+
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="186" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sensor_handle_8c_1a314ba046605cb36b878724310f046f29" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___b_m_i160___s_e_n_s_o_r_u_t_i_l_s_1ga3f4b5f2ec9feaef1f07746e5186bd97a" kindref="member">Bmi160Utils_Info_T</ref></type>
+        <definition>Bmi160Utils_Info_T bmi160GyroSensor_S</definition>
+        <argsstring></argsstring>
+        <name>bmi160GyroSensor_S</name>
+        <initializer>=
+        {
+                .BspSensorId = (uint32_t) <ref refid="group___b_o_a_r_d___t_y_p_e___s_e_n_s_o_r___n_o_d_e_1gga912187ee09fe6b5cbec7a72484205112a3e69c1de20ddbfe6bad3adb45f29c548" kindref="member">BSP_XDK_SENSOR_BMI160</ref>,
+                .remap =
+                        {
+                                .axisConfig = <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga5104e0d5f74fea4632cf02af00160f5a" kindref="member">RMP_BMIGYRO_X_AXIS_CONFIG</ref> | <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga756a27bf82978666b31813af860c5c05" kindref="member">RMP_BMIGYRO_Y_AXIS_CONFIG</ref> | <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga89427c287c66ff4fdda04bb4a2574ab1" kindref="member">RMP_BMIGYRO_Z_AXIS_CONFIG</ref>,
+                                .axisSign = <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga0a78d9a39a1ab8c7fc3190ee67a4b162" kindref="member">RMP_BMIGYRO_X_AXIS_SIGN_CONFIG</ref> | <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga26778d2408b189b5b4a082bbe90ed12d" kindref="member">RMP_BMIGYRO_Y_AXIS_SIGN_CONFIG</ref> | <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga2912de6126fd6fd5a1955b8db4f20ca3" kindref="member">RMP_BMIGYRO_Z_AXIS_SIGN_CONFIG</ref>,
+                        },
+                .ISRCallback = <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,
+                .dev_addr = <ref refid="_sensor_handle_8c_1aa6181c747814e42b03c165bd27f298da" kindref="member">BMI160_DEV_ADDR</ref>,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="211" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sensor_handle_8c_1a2cc946e6df171f7890870d004fb47997" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___b_m_m150___s_e_n_s_o_r_u_t_i_l_s_1ga310e2a462a971450d09c9801a84a3905" kindref="member">Bmm150Utils_Info_T</ref></type>
+        <definition>Bmm150Utils_Info_T bmm150Sensor_S</definition>
+        <argsstring></argsstring>
+        <name>bmm150Sensor_S</name>
+        <initializer>=
+        {
+                .BspSensorId = (uint32_t) <ref refid="group___b_o_a_r_d___t_y_p_e___s_e_n_s_o_r___n_o_d_e_1gga912187ee09fe6b5cbec7a72484205112a7ac11380bdfb2f4305990b439f8c5153" kindref="member">BSP_XDK_SENSOR_BMM150</ref>,
+                .remap =
+                        {
+                                .axisConfig = <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga1282c01d353b32f84b5553baae0beb4f" kindref="member">RMP_BMM150_X_AXIS_CONFIG</ref> | <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga10778da41501bb2e58f5d975a1780d43" kindref="member">RMP_BMM150_Y_AXIS_CONFIG</ref> | <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga82c015356199079464479f1e00fd3974" kindref="member">RMP_BMM150_Z_AXIS_CONFIG</ref>,
+                                .axisSign = <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1gacd072dfc342e7e83ff0890f831c27f87" kindref="member">RMP_BMM150_X_AXIS_SIGN_CONFIG</ref> | <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga3ea3dba44488b17c07db7da4d783c186" kindref="member">RMP_BMM150_Y_AXIS_SIGN_CONFIG</ref> | <ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga1a3732252fb94511308f125b5c2ea3c4" kindref="member">RMP_BMM150_Z_AXIS_SIGN_CONFIG</ref>,
+                        },
+                .ISRCallback = <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,
+                .dev_addr = <ref refid="_sensor_handle_8c_1ab76be151de81e9029224c1301f6ff2c5" kindref="member">BMM150_DEV_ADDR</ref>,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="150" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sensor_handle_8c_1a7a2479d53f4caf558fe760407d39911c" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___l_i_g_h_t_s_e_n_s_o_r_1ga02c3688e5e064ccbf15dc6d8b5333fc4" kindref="member">LightSensor_Handle_T</ref></type>
+        <definition>LightSensor_Handle_T LightSensor_Handle_S</definition>
+        <argsstring></argsstring>
+        <name>LightSensor_Handle_S</name>
+        <initializer>= {
+        .SensorInformation.sensorID = <ref refid="group___l_i_g_h_t_s_e_n_s_o_r_1ggae306d98050eef13600b0300f852769b5aa5eeec02a400621ee0a32e7b4a2a045a" kindref="member">LIGHTSENSOR_MAX44009</ref>,
+        .<ref refid="_max44009_utils_8c_1af2cc74878676abb62a86f1ac7db56447" kindref="member">SensorInformation.initializationStatus</ref> = <ref refid="_sensor_handle_8c_1a3de7d6fa3d6511b6c5ba5cf8e446d3a1" kindref="member">SENSOR_API_UNINITIALIZED</ref>,
+        .SensorPtr = &amp;<ref refid="_sensor_handle_8c_1ace25f37681c54cbe96ed9ba8f6619260" kindref="member">max44009Sensor_S</ref>,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="178" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sensor_handle_8c_1ace25f37681c54cbe96ed9ba8f6619260" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___m_a_x44009___s_e_n_s_o_r_u_t_i_l_s_1ga931d245cc16fdefd0632023bf46523b8" kindref="member">Max44009Utils_Info_T</ref></type>
+        <definition>Max44009Utils_Info_T max44009Sensor_S</definition>
+        <argsstring></argsstring>
+        <name>max44009Sensor_S</name>
+        <initializer>=
+        {
+                .BspSensorId = (uint32_t) <ref refid="group___b_o_a_r_d___t_y_p_e___s_e_n_s_o_r___n_o_d_e_1gga912187ee09fe6b5cbec7a72484205112acae4933cb79bd046402d6870e6f7b63f" kindref="member">BSP_XDK_SENSOR_MAX44009</ref>,
+                .ISRCallback = <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,
+                .dev_addr = <ref refid="_sensor_handle_8c_1aef0d32cfdb2c32ebfbb15afa1cf11e3d" kindref="member">MAX44009_DEV_ADDR</ref>,
+
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="170" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___sensors_handles_1ga6cb19ad24205e14082f944937d1acced" prot="public" static="no" mutable="no">
+        <type><ref refid="group___a_b_s_o_l_u_t_e_h_u_m_i_d_i_t_y_1gafbc9bd69b397c3289de5d7fe35a2b58b" kindref="member">AbsoluteHumidity_HandlePtr_T</ref></type>
+        <definition>AbsoluteHumidity_HandlePtr_T XdkAbsoluteHumidity_ClbrSensor_Handle</definition>
+        <argsstring></argsstring>
+        <name>XdkAbsoluteHumidity_ClbrSensor_Handle</name>
+        <initializer>= (<ref refid="group___a_b_s_o_l_u_t_e_h_u_m_i_d_i_t_y_1gafbc9bd69b397c3289de5d7fe35a2b58b" kindref="member">AbsoluteHumidity_HandlePtr_T</ref>) &amp; <ref refid="_sensor_handle_8c_1a05d6ebbff45bcbbf97e8c89eaa3d1054" kindref="member">xdkEnvironmental_BME280_S</ref></initializer>
+        <briefdescription>
+<para>Sensor Handler for the humidity Sensor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="248" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___sensors_handles_1ga15d0b783f0e91563cff52ea676bf7094" prot="public" static="no" mutable="no">
+        <type><ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga4b7970700c4307a311d7464927837b4a" kindref="member">Accelerometer_HandlePtr_T</ref></type>
+        <definition>Accelerometer_HandlePtr_T XdkAccelerometer_BMA280_Handle</definition>
+        <argsstring></argsstring>
+        <name>XdkAccelerometer_BMA280_Handle</name>
+        <initializer>= &amp;<ref refid="_sensor_handle_8c_1a4ebe2267cf0c99385107808bf27c8a97" kindref="member">xdkAccelerometers_BMA280_S</ref></initializer>
+        <briefdescription>
+<para>Sensor Handler for the BMA280 Sensor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="112" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="112" bodyend="-1"/>
+        <referencedby refid="_l_w_m2_m_sensor_device_accelerometer_8h_1af7ab85ac3234cb1bebe4ee912c7364f9" compoundref="_l_w_m2_m_sensor_device_accelerometer_8c" startline="68" endline="117">LWM2MSensorDeviceAccelerometer_Activate</referencedby>
+        <referencedby refid="_l_w_m2_m_sensor_device_accelerometer_8h_1aa53834569500f6e9305caa9a9cb0ca14" compoundref="_l_w_m2_m_sensor_device_accelerometer_8c" startline="120" endline="145">LWM2MSensorDeviceAccelerometer_Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group___sensors_handles_1ga0340e3cafd7cb8efc468ff416d534aca" prot="public" static="no" mutable="no">
+        <type><ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga4b7970700c4307a311d7464927837b4a" kindref="member">Accelerometer_HandlePtr_T</ref></type>
+        <definition>Accelerometer_HandlePtr_T XdkAccelerometer_BMI160_Handle</definition>
+        <argsstring></argsstring>
+        <name>XdkAccelerometer_BMI160_Handle</name>
+        <initializer>= &amp;<ref refid="_sensor_handle_8c_1a569f25b88eb018ad7f8dcae178153d3b" kindref="member">xdkAccelerometers_BMI160_S</ref></initializer>
+        <briefdescription>
+<para>Sensor Handler for the BMI160 Accelerometer Sensor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="209" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___sensors_handles_1ga38f6fbd01d44b3ce7c25212c26387860" prot="public" static="no" mutable="no">
+        <type><ref refid="group___c_a_l_i_b_r_a_t_e_d_a_c_c_e_l_e_r_o_m_e_t_e_r_1gae850c7cc65378420471e998c5bcad79d" kindref="member">CalibratedAccel_HandlePtr_T</ref></type>
+        <definition>CalibratedAccel_HandlePtr_T XdkAccelerometer_ClbrSensor_Handle</definition>
+        <argsstring></argsstring>
+        <name>XdkAccelerometer_ClbrSensor_Handle</name>
+        <initializer>= (<ref refid="group___c_a_l_i_b_r_a_t_e_d_a_c_c_e_l_e_r_o_m_e_t_e_r_1gae850c7cc65378420471e998c5bcad79d" kindref="member">CalibratedAccel_HandlePtr_T</ref>) &amp; <ref refid="_sensor_handle_8c_1a22157a2451777d9d9f4050a73a36ba4f" kindref="member">xdkBsxBaseSensors_S</ref></initializer>
+        <briefdescription>
+<para>Sensor Handler for Calibrated accelerometer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="249" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sensor_handle_8c_1a4ebe2267cf0c99385107808bf27c8a97" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga285fb3926893d5d0d7a51793a29a58eb" kindref="member">Accelerometer_Handle_T</ref></type>
+        <definition>Accelerometer_Handle_T xdkAccelerometers_BMA280_S</definition>
+        <argsstring></argsstring>
+        <name>xdkAccelerometers_BMA280_S</name>
+        <initializer>=
+        {
+                .SensorInformation.sensorID = <ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ggafdc575ef97319455e5c940a132b0311fa785e03d81065131704dfad9fb56bdd2a" kindref="member">ACCELEROMETER_BMA280</ref>,
+                .<ref refid="_max44009_utils_8c_1af2cc74878676abb62a86f1ac7db56447" kindref="member">SensorInformation.initializationStatus</ref> = <ref refid="_sensor_handle_8c_1a3de7d6fa3d6511b6c5ba5cf8e446d3a1" kindref="member">SENSOR_API_UNINITIALIZED</ref>,
+                .SensorPtr = &amp;<ref refid="_sensor_handle_8c_1a5ed9d850ba700fb0be4af6f0a4e0c963" kindref="member">bma280Sensor_S</ref>,
+                .IntChannel1.deferredCallback = <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,
+                .IntChannel1.rtCallback = <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,
+                .IntChannel2.deferredCallback = <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,
+                .IntChannel2.rtCallback = <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="101" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sensor_handle_8c_1a569f25b88eb018ad7f8dcae178153d3b" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga285fb3926893d5d0d7a51793a29a58eb" kindref="member">Accelerometer_Handle_T</ref></type>
+        <definition>Accelerometer_Handle_T xdkAccelerometers_BMI160_S</definition>
+        <argsstring></argsstring>
+        <name>xdkAccelerometers_BMI160_S</name>
+        <initializer>= {
+
+.SensorPtr = &amp;<ref refid="_sensor_handle_8c_1a8190df70bd24d0cd1c1e63516c6a8c0b" kindref="member">bmi160AccelSensor_S</ref>,
+        .IntChannel1.deferredCallback = <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,
+        .IntChannel1.rtCallback = <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,
+        .IntChannel2.deferredCallback = <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,
+        .IntChannel2.rtCallback = <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,
+        .<ref refid="_max44009_utils_8c_1af2cc74878676abb62a86f1ac7db56447" kindref="member">SensorInformation.initializationStatus</ref> = <ref refid="_sensor_handle_8c_1a3de7d6fa3d6511b6c5ba5cf8e446d3a1" kindref="member">SENSOR_API_UNINITIALIZED</ref>,
+        .SensorInformation.sensorID = <ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ggafdc575ef97319455e5c940a132b0311fa471fc80d97e52979fd031e173c2ef768" kindref="member">ACCELEROMETER_BMI160</ref>,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="199" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sensor_handle_8c_1a22157a2451777d9d9f4050a73a36ba4f" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___v_i_r_t_u_a_l_s_e_n_s_o_r_h_a_n_d_l_e_1ga12f78ed6ceeb7b697cbbe2406125eb15" kindref="member">VirtualSensor_bsxBaseSensor_T</ref></type>
+        <definition>VirtualSensor_bsxBaseSensor_T xdkBsxBaseSensors_S</definition>
+        <argsstring></argsstring>
+        <name>xdkBsxBaseSensors_S</name>
+        <initializer>=
+{
+    .accelerometerHandle = (<ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga4b7970700c4307a311d7464927837b4a" kindref="member">Accelerometer_HandlePtr_T</ref>) &amp; <ref refid="_sensor_handle_8c_1a569f25b88eb018ad7f8dcae178153d3b" kindref="member">xdkAccelerometers_BMI160_S</ref>,
+    .magnetometerHandle = (<ref refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1gab6c27ff087775a5b19a581a6cecb6946" kindref="member">Magnetometer_HandlePtr_T</ref>) &amp; <ref refid="_sensor_handle_8c_1a04dd0f954a6badb573d053ceb9851b0a" kindref="member">xdkMagnetometer_BMM150_S</ref>,
+    .gyroscopeHandle = (<ref refid="group___g_y_r_o_s_c_o_p_e_1ga0dff40202dfb4ed42a471d9498418d9f" kindref="member">Gyroscope_HandlePtr_T</ref>) &amp; <ref refid="_sensor_handle_8c_1a3f3bb9644576cc52c54fe6107b645ed2" kindref="member">xdkGyroscope_BMI160_S</ref>,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="234" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___sensors_handles_1ga9e060a4c589da67d03cc58569582ef0a" prot="public" static="no" mutable="no">
+        <type><ref refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ga67d8da8a0b81fa3cb1bec03a10203375" kindref="member">Environmental_HandlePtr_T</ref></type>
+        <definition>Environmental_HandlePtr_T XdkEnvironmental_BME280_Handle</definition>
+        <argsstring></argsstring>
+        <name>XdkEnvironmental_BME280_Handle</name>
+        <initializer>= &amp;<ref refid="_sensor_handle_8c_1a05d6ebbff45bcbbf97e8c89eaa3d1054" kindref="member">xdkEnvironmental_BME280_S</ref></initializer>
+        <briefdescription>
+<para>Sensor Handler for the BME280 Sensor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="148" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="148" bodyend="-1"/>
+        <referencedby refid="_l_w_m2_m_sensor_device_environment_8h_1aa01367decfc5cf43b7d47c9323ad5c9b" compoundref="_l_w_m2_m_sensor_device_environment_8c" startline="79" endline="149">LWM2MSensorDeviceEnvironment_Activate</referencedby>
+        <referencedby refid="_l_w_m2_m_sensor_device_environment_8h_1ab0d6be4458c74633d4dd7095bb1b93c0" compoundref="_l_w_m2_m_sensor_device_environment_8c" startline="152" endline="200">LWM2MSensorDeviceEnvironment_Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="_sensor_handle_8c_1a05d6ebbff45bcbbf97e8c89eaa3d1054" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1gadefd6ce0038551edddc8f425bb14f5d6" kindref="member">Environmental_Handle_T</ref></type>
+        <definition>Environmental_Handle_T xdkEnvironmental_BME280_S</definition>
+        <argsstring></argsstring>
+        <name>xdkEnvironmental_BME280_S</name>
+        <initializer>= {
+        .SensorInformation.sensorID = <ref refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ggac61632679b5a94fd9c32322a38fd6e69a841be60563b9314b6a9a26a5fc333d96" kindref="member">ENVIRONMENTAL_BME280</ref>,
+        .<ref refid="_max44009_utils_8c_1af2cc74878676abb62a86f1ac7db56447" kindref="member">SensorInformation.initializationStatus</ref> = <ref refid="_sensor_handle_8c_1a3de7d6fa3d6511b6c5ba5cf8e446d3a1" kindref="member">SENSOR_API_UNINITIALIZED</ref>,
+        .SensorPtr = &amp;<ref refid="_sensor_handle_8c_1ac5b976c523b3c0d460776081d4f6edcc" kindref="member">bme280Sensor_S</ref>,
+
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="142" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___sensors_handles_1ga1488a138a372c8fae5b0929f30913eba" prot="public" static="no" mutable="no">
+        <type><ref refid="group___f_i_n_g_e_r_p_r_i_n_t_1gab3b952ee1fef4ba9f0004f211284791e" kindref="member">FingerPrint_HandlePtr_T</ref></type>
+        <definition>FingerPrint_HandlePtr_T XdkFingerprint_VirtualSensor_Handle</definition>
+        <argsstring></argsstring>
+        <name>XdkFingerprint_VirtualSensor_Handle</name>
+        <initializer>= (<ref refid="group___f_i_n_g_e_r_p_r_i_n_t_1gab3b952ee1fef4ba9f0004f211284791e" kindref="member">FingerPrint_HandlePtr_T</ref>) &amp; <ref refid="_sensor_handle_8c_1a2cac91dddda0f82b1bcfd41bedcd471b" kindref="member">xdkFingerprintBaseSensor_S</ref></initializer>
+        <briefdescription>
+<para>Sensor Handler for Fingerprint Sensor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="253" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sensor_handle_8c_1a2cac91dddda0f82b1bcfd41bedcd471b" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___v_i_r_t_u_a_l_s_e_n_s_o_r_h_a_n_d_l_e_1ga4cf140be88d833915ec95814ee6fbdea" kindref="member">VirtualSensor_FPBaseSensor_T</ref></type>
+        <definition>VirtualSensor_FPBaseSensor_T xdkFingerprintBaseSensor_S</definition>
+        <argsstring></argsstring>
+        <name>xdkFingerprintBaseSensor_S</name>
+        <initializer>=
+{
+    .magnetometerHandle = (<ref refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1gab6c27ff087775a5b19a581a6cecb6946" kindref="member">Magnetometer_HandlePtr_T</ref>) &amp; <ref refid="_sensor_handle_8c_1a04dd0f954a6badb573d053ceb9851b0a" kindref="member">xdkMagnetometer_BMM150_S</ref>,
+    .accelerometerHandle = <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="241" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___sensors_handles_1ga04f3d2729cdd8510e25ce5f7bd63d8d2" prot="public" static="no" mutable="no">
+        <type><ref refid="group___g_e_s_t_u_r_e_s_1gafe927ffee562b27d8a064877e02bab9f" kindref="member">Gestures_HandlePtr_T</ref></type>
+        <definition>Gestures_HandlePtr_T XdkGesture_VirtualSensor_Handle</definition>
+        <argsstring></argsstring>
+        <name>XdkGesture_VirtualSensor_Handle</name>
+        <initializer>= (<ref refid="group___g_e_s_t_u_r_e_s_1gafe927ffee562b27d8a064877e02bab9f" kindref="member">Gestures_HandlePtr_T</ref>) &amp; <ref refid="_sensor_handle_8c_1a22157a2451777d9d9f4050a73a36ba4f" kindref="member">xdkBsxBaseSensors_S</ref></initializer>
+        <briefdescription>
+<para>Sensor Handler for Gesture Sensor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="258" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___sensors_handles_1gac1753f6effac559bfd95cddef0ff64be" prot="public" static="no" mutable="no">
+        <type><ref refid="group___g_r_a_v_i_t_y_1ga8147046ef190ab6ec5ca6623a9547bf0" kindref="member">Gravity_HandlePtr_T</ref></type>
+        <definition>Gravity_HandlePtr_T XdkGravity_VirtualSensor_Handle</definition>
+        <argsstring></argsstring>
+        <name>XdkGravity_VirtualSensor_Handle</name>
+        <initializer>= (<ref refid="group___g_r_a_v_i_t_y_1ga8147046ef190ab6ec5ca6623a9547bf0" kindref="member">Gravity_HandlePtr_T</ref>) &amp; <ref refid="_sensor_handle_8c_1a22157a2451777d9d9f4050a73a36ba4f" kindref="member">xdkBsxBaseSensors_S</ref></initializer>
+        <briefdescription>
+<para>Sensor Handler for the Gravity Sensor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="252" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___sensors_handles_1gaa0df931e602aa3b0a358cb6e773c24b9" prot="public" static="no" mutable="no">
+        <type><ref refid="group___g_y_r_o_s_c_o_p_e_1ga0dff40202dfb4ed42a471d9498418d9f" kindref="member">Gyroscope_HandlePtr_T</ref></type>
+        <definition>Gyroscope_HandlePtr_T XdkGyroscope_BMG160_Handle</definition>
+        <argsstring></argsstring>
+        <name>XdkGyroscope_BMG160_Handle</name>
+        <initializer>= &amp;<ref refid="_sensor_handle_8c_1a124f34311322d60f844096657118347d" kindref="member">xdkGyroscope_BMG160_S</ref></initializer>
+        <briefdescription>
+<para>Sensor Handler for the BMG160 Sensor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="133" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="133" bodyend="-1"/>
+        <referencedby refid="_l_w_m2_m_sensor_device_gyroscope_8h_1a2ff865f90813541ac08d439978c3d61e" compoundref="_l_w_m2_m_sensor_device_gyroscope_8c" startline="69" endline="106">LWM2MSensorDeviceGyroscope_InitRand</referencedby>
+        <referencedby refid="_l_w_m2_m_sensor_device_gyroscope_8h_1ad78cb5fd79c29bee4b93f36c35bfddcc" compoundref="_l_w_m2_m_sensor_device_gyroscope_8c" startline="109" endline="157">LWM2MSensorDeviceGyroscope_Activate</referencedby>
+        <referencedby refid="_l_w_m2_m_sensor_device_gyroscope_8h_1a272a3a3d3be902ae5c793a8f718c194b" compoundref="_l_w_m2_m_sensor_device_gyroscope_8c" startline="160" endline="186">LWM2MSensorDeviceGyroscope_Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="_sensor_handle_8c_1a124f34311322d60f844096657118347d" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___g_y_r_o_s_c_o_p_e_1ga0e6f5c872414b22f877e7267a46f5675" kindref="member">Gyroscope_Handle_T</ref></type>
+        <definition>Gyroscope_Handle_T xdkGyroscope_BMG160_S</definition>
+        <argsstring></argsstring>
+        <name>xdkGyroscope_BMG160_S</name>
+        <initializer>= {
+        .sensorInfo.sensorID = <ref refid="group___g_y_r_o_s_c_o_p_e_1gga2c53610a5f9352295be3c20df498e7a9a7f003f4215f5e97b49837fa530419bef" kindref="member">BMG160_GYRO_SENSOR</ref>,
+        .<ref refid="_max44009_utils_8c_1af2cc74878676abb62a86f1ac7db56447" kindref="member">sensorInfo.initializationStatus</ref> = <ref refid="_sensor_handle_8c_1a3de7d6fa3d6511b6c5ba5cf8e446d3a1" kindref="member">SENSOR_API_UNINITIALIZED</ref>,
+        .sensorPtr = &amp;<ref refid="_sensor_handle_8c_1ae9c7d2767f7c1fb2514a3dd72bdf2354" kindref="member">bmg160Sensor_S</ref>,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="128" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___sensors_handles_1ga42b237ce7325adac0d1cbc92ade67e49" prot="public" static="no" mutable="no">
+        <type><ref refid="group___g_y_r_o_s_c_o_p_e_1ga0dff40202dfb4ed42a471d9498418d9f" kindref="member">Gyroscope_HandlePtr_T</ref></type>
+        <definition>Gyroscope_HandlePtr_T XdkGyroscope_BMI160_Handle</definition>
+        <argsstring></argsstring>
+        <name>XdkGyroscope_BMI160_Handle</name>
+        <initializer>= &amp;<ref refid="_sensor_handle_8c_1a3f3bb9644576cc52c54fe6107b645ed2" kindref="member">xdkGyroscope_BMI160_S</ref></initializer>
+        <briefdescription>
+<para>Sensor Handler for the BMI160 Gyroscope Sensor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="232" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sensor_handle_8c_1a3f3bb9644576cc52c54fe6107b645ed2" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___g_y_r_o_s_c_o_p_e_1ga0e6f5c872414b22f877e7267a46f5675" kindref="member">Gyroscope_Handle_T</ref></type>
+        <definition>Gyroscope_Handle_T xdkGyroscope_BMI160_S</definition>
+        <argsstring></argsstring>
+        <name>xdkGyroscope_BMI160_S</name>
+        <initializer>= {
+        .sensorPtr = &amp;<ref refid="_sensor_handle_8c_1a314ba046605cb36b878724310f046f29" kindref="member">bmi160GyroSensor_S</ref>,
+        .sensorInfo =
+                {
+                        .sensorID = <ref refid="group___g_y_r_o_s_c_o_p_e_1gga2c53610a5f9352295be3c20df498e7a9a7701742d1bc1ec8fd9430dcb2e20f45b" kindref="member">BMI160_GYRO_SENSOR</ref>,
+                        .<ref refid="_max44009_utils_8c_1af2cc74878676abb62a86f1ac7db56447" kindref="member">initializationStatus</ref> = <ref refid="_sensor_handle_8c_1a3de7d6fa3d6511b6c5ba5cf8e446d3a1" kindref="member">SENSOR_API_UNINITIALIZED</ref>,
+                },
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="223" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___sensors_handles_1gab9131bcc6769d2f0b6e8fa3693609508" prot="public" static="no" mutable="no">
+        <type><ref refid="group___c_a_l_i_b_r_a_t_e_d_g_y_r_o_s_c_o_p_e_1ga090e4e52aa3ae2a5a040d7c59b7434af" kindref="member">CalibratedGyro_HandlePtr_T</ref></type>
+        <definition>CalibratedGyro_HandlePtr_T XdkGyroscope_ClbrSensor_Handle</definition>
+        <argsstring></argsstring>
+        <name>XdkGyroscope_ClbrSensor_Handle</name>
+        <initializer>= (<ref refid="group___c_a_l_i_b_r_a_t_e_d_g_y_r_o_s_c_o_p_e_1ga090e4e52aa3ae2a5a040d7c59b7434af" kindref="member">CalibratedGyro_HandlePtr_T</ref>) &amp; <ref refid="_sensor_handle_8c_1a22157a2451777d9d9f4050a73a36ba4f" kindref="member">xdkBsxBaseSensors_S</ref></initializer>
+        <briefdescription>
+<para>Sensor Handler for Calibrated gyroscope. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="254" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___sensors_handles_1gac7eceb877eb7e54d9a1135cd8e4535ee" prot="public" static="no" mutable="no">
+        <type><ref refid="group___l_i_g_h_t_s_e_n_s_o_r_1ga1db0e2c01814818c65b1a16f6e7d5651" kindref="member">LightSensor_HandlePtr_T</ref></type>
+        <definition>LightSensor_HandlePtr_T XdkLightSensor_MAX44009_Handle</definition>
+        <argsstring></argsstring>
+        <name>XdkLightSensor_MAX44009_Handle</name>
+        <initializer>= &amp;<ref refid="struct_light_sensor___handle___s" kindref="compound">LightSensor_Handle_S</ref></initializer>
+        <briefdescription>
+<para>Sensor Handler for the MAX44009 Sensor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="183" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="183" bodyend="-1"/>
+        <referencedby refid="_l_w_m2_m_sensor_device_illuminance_8h_1ac98b8c7612ea421feab36d92be5a3452" compoundref="_l_w_m2_m_sensor_device_illuminance_8c" startline="70" endline="94">LWM2MSensorDeviceIlluminance_Activate</referencedby>
+        <referencedby refid="_l_w_m2_m_sensor_device_illuminance_8h_1a6a74a881a596c27fdc0d1ac3187a3ac2" compoundref="_l_w_m2_m_sensor_device_illuminance_8c" startline="97" endline="120">LWM2MSensorDeviceIlluminance_Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group___sensors_handles_1ga4e210ce576a872b0e6cc2c6496788153" prot="public" static="no" mutable="no">
+        <type><ref refid="group___l_i_n_e_a_r___a_c_c_e_l_e_r_a_t_i_o_n_1ga07601d1cd6a31e3a0dc463032f5a5488" kindref="member">LinearAcceleration_HandlePtr_T</ref></type>
+        <definition>LinearAcceleration_HandlePtr_T XdkLinearAcceleration_ClbrSensor_Handle</definition>
+        <argsstring></argsstring>
+        <name>XdkLinearAcceleration_ClbrSensor_Handle</name>
+        <initializer>= (<ref refid="group___l_i_n_e_a_r___a_c_c_e_l_e_r_a_t_i_o_n_1ga07601d1cd6a31e3a0dc463032f5a5488" kindref="member">LinearAcceleration_HandlePtr_T</ref>) &amp; <ref refid="_sensor_handle_8c_1a22157a2451777d9d9f4050a73a36ba4f" kindref="member">xdkBsxBaseSensors_S</ref></initializer>
+        <briefdescription>
+<para>Sensor Handler for Linear Acceleration Sensor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="257" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___sensors_handles_1ga020a7ea71374eb9b2ae6e941f22c4464" prot="public" static="no" mutable="no">
+        <type><ref refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1gab6c27ff087775a5b19a581a6cecb6946" kindref="member">Magnetometer_HandlePtr_T</ref></type>
+        <definition>Magnetometer_HandlePtr_T XdkMagnetometer_BMM150_Handle</definition>
+        <argsstring></argsstring>
+        <name>XdkMagnetometer_BMM150_Handle</name>
+        <initializer>= &amp;<ref refid="_sensor_handle_8c_1a04dd0f954a6badb573d053ceb9851b0a" kindref="member">xdkMagnetometer_BMM150_S</ref></initializer>
+        <briefdescription>
+<para>Sensor Handler for the BMM150 Sensor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="167" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="167" bodyend="-1"/>
+        <referencedby refid="_l_w_m2_m_sensor_device_magnetometer_8h_1a6e770018878c3ed31d5e8738988a58d9" compoundref="_l_w_m2_m_sensor_device_magnetometer_8c" startline="66" endline="89">LWM2MSensorDeviceMagnetometer_Activate</referencedby>
+        <referencedby refid="_l_w_m2_m_sensor_device_magnetometer_8h_1a6dd3debbc5946788b7e685886510c88c" compoundref="_l_w_m2_m_sensor_device_magnetometer_8c" startline="92" endline="118">LWM2MSensorDeviceMagnetometer_Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="_sensor_handle_8c_1a04dd0f954a6badb573d053ceb9851b0a" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1gaba1bb7218e18e2e437671e7145166423" kindref="member">Magnetometer_Handle_T</ref></type>
+        <definition>Magnetometer_Handle_T xdkMagnetometer_BMM150_S</definition>
+        <argsstring></argsstring>
+        <name>xdkMagnetometer_BMM150_S</name>
+        <initializer>= {
+        .SensorInformation.sensorID = <ref refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1gga745581a5e9d1b28a1f177329b70c8295ad91e6487283f5fc829e70b5909eb7cfc" kindref="member">MAGNETOMETER_BMM150</ref>,
+        .<ref refid="_max44009_utils_8c_1af2cc74878676abb62a86f1ac7db56447" kindref="member">SensorInformation.initializationStatus</ref> = <ref refid="_sensor_handle_8c_1a3de7d6fa3d6511b6c5ba5cf8e446d3a1" kindref="member">SENSOR_API_UNINITIALIZED</ref>,
+        .SensorPtr = &amp;<ref refid="_sensor_handle_8c_1a2cc946e6df171f7890870d004fb47997" kindref="member">bmm150Sensor_S</ref>,
+
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="161" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___sensors_handles_1ga932145361f44eac64aba27591b0feced" prot="public" static="no" mutable="no">
+        <type><ref refid="group___c_a_l_i_b_r_a_t_e_d_m_a_g_n_e_t_o_m_e_t_e_r_1gabfb27b0e530205adf7fbe9345bad22b7" kindref="member">CalibratedMag_HandlePtr_T</ref></type>
+        <definition>CalibratedMag_HandlePtr_T XdkMagnetometer_ClbrSensor_Handle</definition>
+        <argsstring></argsstring>
+        <name>XdkMagnetometer_ClbrSensor_Handle</name>
+        <initializer>= (<ref refid="group___c_a_l_i_b_r_a_t_e_d_m_a_g_n_e_t_o_m_e_t_e_r_1gabfb27b0e530205adf7fbe9345bad22b7" kindref="member">CalibratedMag_HandlePtr_T</ref>) &amp; <ref refid="_sensor_handle_8c_1a22157a2451777d9d9f4050a73a36ba4f" kindref="member">xdkBsxBaseSensors_S</ref></initializer>
+        <briefdescription>
+<para>Sensor Handler for Calibrated magnetometer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="255" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___sensors_handles_1ga4030c79b162554c0dc2bd0dd5d70b9cf" prot="public" static="no" mutable="no">
+        <type><ref refid="group___o_r_i_e_n_t_a_t_i_o_n_1ga0eb92ff04f4d56c08a09e3a24cd28b3e" kindref="member">Orientation_HandlePtr_T</ref></type>
+        <definition>Orientation_HandlePtr_T XdkOrientation_VirtualSensor_Handle</definition>
+        <argsstring></argsstring>
+        <name>XdkOrientation_VirtualSensor_Handle</name>
+        <initializer>= (<ref refid="group___o_r_i_e_n_t_a_t_i_o_n_1ga0eb92ff04f4d56c08a09e3a24cd28b3e" kindref="member">Orientation_HandlePtr_T</ref>) &amp; <ref refid="_sensor_handle_8c_1a22157a2451777d9d9f4050a73a36ba4f" kindref="member">xdkBsxBaseSensors_S</ref></initializer>
+        <briefdescription>
+<para>Sensor Handler for the Orientation Sensor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="250" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___sensors_handles_1ga136715fa14bae5635b891a0ce984d212" prot="public" static="no" mutable="no">
+        <type><ref refid="group___r_o_t_a_t_i_o_n_1ga150d5a7c22603a2e984c1b06fbeb6ad0" kindref="member">Rotation_HandlePtr_T</ref></type>
+        <definition>Rotation_HandlePtr_T XdkRotation_VirtualSensor_Handle</definition>
+        <argsstring></argsstring>
+        <name>XdkRotation_VirtualSensor_Handle</name>
+        <initializer>= (<ref refid="group___r_o_t_a_t_i_o_n_1ga150d5a7c22603a2e984c1b06fbeb6ad0" kindref="member">Rotation_HandlePtr_T</ref>) &amp; <ref refid="_sensor_handle_8c_1a22157a2451777d9d9f4050a73a36ba4f" kindref="member">xdkBsxBaseSensors_S</ref></initializer>
+        <briefdescription>
+<para>Sensor Handler for the Rotation Sensor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="251" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___sensors_handles_1ga7feca8c6a34616704fb64ac89a11985b" prot="public" static="no" mutable="no">
+        <type><ref refid="group___s_t_e_p_c_o_u_n_t_e_r_1gab57a98c98b69653c6770fd55c6e3d08e" kindref="member">StepCounter_HandlePtr_T</ref></type>
+        <definition>StepCounter_HandlePtr_T XdkStepCounter_VirtualSensor_Handle</definition>
+        <argsstring></argsstring>
+        <name>XdkStepCounter_VirtualSensor_Handle</name>
+        <initializer>= (<ref refid="group___s_t_e_p_c_o_u_n_t_e_r_1gab57a98c98b69653c6770fd55c6e3d08e" kindref="member">StepCounter_HandlePtr_T</ref>) &amp; <ref refid="_sensor_handle_8c_1a569f25b88eb018ad7f8dcae178153d3b" kindref="member">xdkAccelerometers_BMI160_S</ref></initializer>
+        <briefdescription>
+<para>Sensor Handler for the Step Counter Sensor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" line="256" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Handles for the sensors will be returned through this module </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>Bosch<sp/>Connected<sp/>Devices<sp/>and<sp/>Solutions<sp/>GmbH.</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*<sp/>All<sp/>Rights<sp/>Reserved.<sp/>Confidential.</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*<sp/>Distribution<sp/>only<sp/>to<sp/>people<sp/>who<sp/>need<sp/>to<sp/>know<sp/>this<sp/>information<sp/>in</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*<sp/>order<sp/>to<sp/>do<sp/>their<sp/>job.(Need-to-know<sp/>principle).</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*<sp/>Distribution<sp/>to<sp/>persons<sp/>outside<sp/>the<sp/>company,<sp/>only<sp/>if<sp/>these<sp/>persons</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/>*<sp/>signed<sp/>a<sp/>non-disclosure<sp/>agreement.</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/>*<sp/>Electronic<sp/>transmission,<sp/>e.g.<sp/>via<sp/>electronic<sp/>mail,<sp/>must<sp/>be<sp/>made<sp/>in</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>*<sp/>encrypted<sp/>form.</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="comment">/*<sp/>module<sp/>includes<sp/>**********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_xdk_common_info_8h" kindref="compound">XdkCommonInfo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>BCDS_MODULE_ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="_sensor_handle_8c_1abff8f3a204e79671b98fabaa652198c3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BCDS_MODULE_ID<sp/>XDK_COMMON_ID_SENSORHANDLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_x_d_k___sensor_handle_8h" kindref="compound">XDK_SensorHandle.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>additional<sp/>interface<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___basics_8h" kindref="compound">BCDS_Basics.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___virtual_sensor_handle_8h" kindref="compound">BCDS_VirtualSensorHandle.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sensors_hw_config_8h" kindref="compound">sensorsHwConfig.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___axis_remap_8h" kindref="compound">BCDS_AxisRemap.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___bma280_utils_8h" kindref="compound">BCDS_Bma280Utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___bme280_utils_8h" kindref="compound">BCDS_Bme280Utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___bmi160_utils_8h" kindref="compound">BCDS_Bmi160Utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___bmg160_utils_8h" kindref="compound">BCDS_Bmg160Utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___bmm150_utils_8h" kindref="compound">BCDS_Bmm150Utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___max44009_utils_8h" kindref="compound">BCDS_Max44009Utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_s_p___board_type_8h" kindref="compound">BSP_BoardType.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>constant<sp/>definitions<sp/>*****************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="_sensor_handle_8c_1a3de7d6fa3d6511b6c5ba5cf8e446d3a1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SENSOR_API_UNINITIALIZED<sp/>UINT8_C(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="_sensor_handle_8c_1ae29202e70cc28696f685fc97755cc3d5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SENSOR_API_INITIALIZED<sp/><sp/><sp/>UINT8_C(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="_sensor_handle_8c_1a964f0749ba287924cea1f9e58601c38c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BMA280_DEV_ADDR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT8_C(0x18)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="_sensor_handle_8c_1a937359232f0a5ab8209fe6ebb01a3322" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BMG160_DEV_ADDR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT8_C(0x68)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="_sensor_handle_8c_1a154f25b7ad106565eb2097bd1072d5c9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BME280_DEV_ADDR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT8_C(0x76)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="_sensor_handle_8c_1ab76be151de81e9029224c1301f6ff2c5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BMM150_DEV_ADDR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT8_C(0x10)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="_sensor_handle_8c_1aef0d32cfdb2c32ebfbb15afa1cf11e3d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX44009_DEV_ADDR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT8_C(0x4A)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="_sensor_handle_8c_1aa6181c747814e42b03c165bd27f298da" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BMI160_DEV_ADDR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT8_C(0x69)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="_sensor_handle_8c_1a5ed9d850ba700fb0be4af6f0a4e0c963" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_bma280_utils___info___s" kindref="compound">Bma280Utils_Info_T</ref><sp/><ref refid="_sensor_handle_8c_1a5ed9d850ba700fb0be4af6f0a4e0c963" kindref="member">bma280Sensor_S</ref><sp/>=</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="struct_bma280_utils___info___s_1afb8d35b33d31d052c1ff16de62ba1014" kindref="member">BspSensorId</ref><sp/>=<sp/>(uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___s_e_n_s_o_r___n_o_d_e_1gga912187ee09fe6b5cbec7a72484205112a521196827e0adc8d3fc1099a25639d16" kindref="member">BSP_XDK_SENSOR_BMA280</ref>,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.remap<sp/>=</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.axisConfig<sp/>=<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga8ca99af0186afab96adc3e40f32a3bb7" kindref="member">RMP_BMA2X2_X_AXIS_CONFIG</ref><sp/>|<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1gac239d25ac3d66465960872d96880bd38" kindref="member">RMP_BMA2X2_Y_AXIS_CONFIG</ref><sp/>|<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1gad876534363082fb13a673919a0aad2b8" kindref="member">RMP_BMA2X2_Z_AXIS_CONFIG</ref>,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.axisSign<sp/>=<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga900610ed0c10d69b3b067915b5c80375" kindref="member">RMP_BMA2X2_X_AXIS_SIGN_CONFIG</ref><sp/>|<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga8299f14e344a8259a50cc4b7455cb69c" kindref="member">RMP_BMA2X2_Y_AXIS_SIGN_CONFIG</ref><sp/>|<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga7609756f0486d5276516a07dbb3a6241" kindref="member">RMP_BMA2X2_Z_AXIS_SIGN_CONFIG</ref>,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.ISRCallback<sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.dev_addr<sp/>=<sp/><ref refid="_sensor_handle_8c_1a964f0749ba287924cea1f9e58601c38c" kindref="member">BMA280_DEV_ADDR</ref>,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="_sensor_handle_8c_1a4ebe2267cf0c99385107808bf27c8a97" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_accelerometer___handle___s" kindref="compound">Accelerometer_Handle_T</ref><sp/><ref refid="_sensor_handle_8c_1a4ebe2267cf0c99385107808bf27c8a97" kindref="member">xdkAccelerometers_BMA280_S</ref><sp/>=</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="struct_accelerometer___handle___s_1a04bb28c9894cdb197d59fc816e443fb0" kindref="member">SensorInformation</ref>.<ref refid="struct_acceleromter___sensor_info___s_1af283dff71f30ae8a0611c82b6caeaa45" kindref="member">sensorID</ref><sp/>=<sp/><ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ggafdc575ef97319455e5c940a132b0311fa785e03d81065131704dfad9fb56bdd2a" kindref="member">ACCELEROMETER_BMA280</ref>,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.SensorInformation.initializationStatus<sp/>=<sp/><ref refid="_sensor_handle_8c_1a3de7d6fa3d6511b6c5ba5cf8e446d3a1" kindref="member">SENSOR_API_UNINITIALIZED</ref>,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.SensorPtr<sp/>=<sp/>&amp;<ref refid="_sensor_handle_8c_1a5ed9d850ba700fb0be4af6f0a4e0c963" kindref="member">bma280Sensor_S</ref>,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.IntChannel1.deferredCallback<sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.IntChannel1.rtCallback<sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.IntChannel2.deferredCallback<sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.IntChannel2.rtCallback<sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="group___sensors_handles_1ga15d0b783f0e91563cff52ea676bf7094" refkind="member"><highlight class="normal"><ref refid="struct_accelerometer___handle___s" kindref="compound">Accelerometer_HandlePtr_T</ref><sp/><ref refid="group___sensors_handles_1ga15d0b783f0e91563cff52ea676bf7094" kindref="member">XdkAccelerometer_BMA280_Handle</ref><sp/>=<sp/>&amp;<ref refid="_sensor_handle_8c_1a4ebe2267cf0c99385107808bf27c8a97" kindref="member">xdkAccelerometers_BMA280_S</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="comment">/************************************************BMG<sp/>Handle<sp/>Info*********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="_sensor_handle_8c_1ae9c7d2767f7c1fb2514a3dd72bdf2354" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_bmg160_utils___info___s" kindref="compound">Bmg160Utils_Info_T</ref><sp/><ref refid="_sensor_handle_8c_1ae9c7d2767f7c1fb2514a3dd72bdf2354" kindref="member">bmg160Sensor_S</ref><sp/>=</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="struct_bmg160_utils___info___s_1afb8d35b33d31d052c1ff16de62ba1014" kindref="member">BspSensorId</ref><sp/>=<sp/>(uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___s_e_n_s_o_r___n_o_d_e_1gga912187ee09fe6b5cbec7a72484205112aec6cd24d0d7fdda485c19e0efe496138" kindref="member">BSP_XDK_SENSOR_BMG160</ref>,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.remap<sp/>=</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.axisConfig<sp/>=<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1gad9d845d7763ac5b4d80662a91d18723d" kindref="member">RMP_BMG160_X_AXIS_CONFIG</ref><sp/>|<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1gac23ecf1fe4c70d2fdfe7205e6a8febcd" kindref="member">RMP_BMG160_Y_AXIS_CONFIG</ref><sp/>|<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga42897cb7bab249d8c59b4150f73c2fd6" kindref="member">RMP_BMG160_Z_AXIS_CONFIG</ref>,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.axisSign<sp/>=<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1gace800522fb7ab80128519d3bb4de7c6c" kindref="member">RMP_BMG160_X_AXIS_SIGN_CONFIG</ref><sp/>|<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga4f340d2351a7718420050d04aef76566" kindref="member">RMP_BMG160_Y_AXIS_SIGN_CONFIG</ref><sp/>|<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga67da93e1454acd9adddb9d28b5baa257" kindref="member">RMP_BMG160_Z_AXIS_SIGN_CONFIG</ref>,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.ISRCallback<sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.dev_addr<sp/>=<sp/><ref refid="_sensor_handle_8c_1a937359232f0a5ab8209fe6ebb01a3322" kindref="member">BMG160_DEV_ADDR</ref>,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="_sensor_handle_8c_1a124f34311322d60f844096657118347d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_gyroscope___handle___s" kindref="compound">Gyroscope_Handle_T</ref><sp/><ref refid="_sensor_handle_8c_1a124f34311322d60f844096657118347d" kindref="member">xdkGyroscope_BMG160_S</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="group___g_y_r_o_s_c_o_p_e_1gad0b62367ec5b555a1317b052271a795a" kindref="member">sensorInfo</ref>.<ref refid="group___g_y_r_o_s_c_o_p_e_1gad95b7496b80c992bc7517d67e65bdd01" kindref="member">sensorID</ref><sp/>=<sp/><ref refid="group___g_y_r_o_s_c_o_p_e_1gga2c53610a5f9352295be3c20df498e7a9a7f003f4215f5e97b49837fa530419bef" kindref="member">BMG160_GYRO_SENSOR</ref>,</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.sensorInfo.initializationStatus<sp/>=<sp/><ref refid="_sensor_handle_8c_1a3de7d6fa3d6511b6c5ba5cf8e446d3a1" kindref="member">SENSOR_API_UNINITIALIZED</ref>,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.sensorPtr<sp/>=<sp/>&amp;<ref refid="_sensor_handle_8c_1ae9c7d2767f7c1fb2514a3dd72bdf2354" kindref="member">bmg160Sensor_S</ref>,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="133" refid="group___sensors_handles_1gaa0df931e602aa3b0a358cb6e773c24b9" refkind="member"><highlight class="normal"><ref refid="struct_gyroscope___handle___s" kindref="compound">Gyroscope_HandlePtr_T</ref><sp/><ref refid="group___sensors_handles_1gaa0df931e602aa3b0a358cb6e773c24b9" kindref="member">XdkGyroscope_BMG160_Handle</ref><sp/>=<sp/>&amp;<ref refid="_sensor_handle_8c_1a124f34311322d60f844096657118347d" kindref="member">xdkGyroscope_BMG160_S</ref>;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="comment">/************************************************BME<sp/>Handle<sp/>Info*********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="_sensor_handle_8c_1ac5b976c523b3c0d460776081d4f6edcc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_bme280_utils___info___s" kindref="compound">Bme280Utils_Info_T</ref><sp/><ref refid="_sensor_handle_8c_1ac5b976c523b3c0d460776081d4f6edcc" kindref="member">bme280Sensor_S</ref><sp/>=</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="struct_bme280_utils___info___s_1afb8d35b33d31d052c1ff16de62ba1014" kindref="member">BspSensorId</ref><sp/>=<sp/>(uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___s_e_n_s_o_r___n_o_d_e_1gga912187ee09fe6b5cbec7a72484205112a9d080650763bb0233baaeff397b970bd" kindref="member">BSP_XDK_SENSOR_BME280</ref>,</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.dev_addr<sp/>=<sp/><ref refid="_sensor_handle_8c_1a154f25b7ad106565eb2097bd1072d5c9" kindref="member">BME280_DEV_ADDR</ref>,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="_sensor_handle_8c_1a05d6ebbff45bcbbf97e8c89eaa3d1054" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_environmental___handle___s" kindref="compound">Environmental_Handle_T</ref><sp/><ref refid="_sensor_handle_8c_1a05d6ebbff45bcbbf97e8c89eaa3d1054" kindref="member">xdkEnvironmental_BME280_S</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="struct_environmental___handle___s_1acc084d16c01d9fa0aa65c410933eb9b1" kindref="member">SensorInformation</ref>.<ref refid="struct_environmental___sensor_info___s_1a61b656ab973958724a1706ea468cd156" kindref="member">sensorID</ref><sp/>=<sp/><ref refid="group___e_n_v_i_r_o_n_m_e_n_t_a_l_1ggac61632679b5a94fd9c32322a38fd6e69a841be60563b9314b6a9a26a5fc333d96" kindref="member">ENVIRONMENTAL_BME280</ref>,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.SensorInformation.initializationStatus<sp/>=<sp/><ref refid="_sensor_handle_8c_1a3de7d6fa3d6511b6c5ba5cf8e446d3a1" kindref="member">SENSOR_API_UNINITIALIZED</ref>,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.SensorPtr<sp/>=<sp/>&amp;<ref refid="_sensor_handle_8c_1ac5b976c523b3c0d460776081d4f6edcc" kindref="member">bme280Sensor_S</ref>,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="148" refid="group___sensors_handles_1ga9e060a4c589da67d03cc58569582ef0a" refkind="member"><highlight class="normal"><ref refid="struct_environmental___handle___s" kindref="compound">Environmental_HandlePtr_T</ref><sp/><ref refid="group___sensors_handles_1ga9e060a4c589da67d03cc58569582ef0a" kindref="member">XdkEnvironmental_BME280_Handle</ref><sp/>=<sp/>&amp;<ref refid="_sensor_handle_8c_1a05d6ebbff45bcbbf97e8c89eaa3d1054" kindref="member">xdkEnvironmental_BME280_S</ref>;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="comment">/************************************************BMM<sp/>Handle<sp/>Info*********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="_sensor_handle_8c_1a2cc946e6df171f7890870d004fb47997" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_bmm150_utils___info___s" kindref="compound">Bmm150Utils_Info_T</ref><sp/><ref refid="_sensor_handle_8c_1a2cc946e6df171f7890870d004fb47997" kindref="member">bmm150Sensor_S</ref><sp/>=</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="struct_bmm150_utils___info___s_1afb8d35b33d31d052c1ff16de62ba1014" kindref="member">BspSensorId</ref><sp/>=<sp/>(uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___s_e_n_s_o_r___n_o_d_e_1gga912187ee09fe6b5cbec7a72484205112a7ac11380bdfb2f4305990b439f8c5153" kindref="member">BSP_XDK_SENSOR_BMM150</ref>,</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.remap<sp/>=</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.axisConfig<sp/>=<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga1282c01d353b32f84b5553baae0beb4f" kindref="member">RMP_BMM150_X_AXIS_CONFIG</ref><sp/>|<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga10778da41501bb2e58f5d975a1780d43" kindref="member">RMP_BMM150_Y_AXIS_CONFIG</ref><sp/>|<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga82c015356199079464479f1e00fd3974" kindref="member">RMP_BMM150_Z_AXIS_CONFIG</ref>,</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.axisSign<sp/>=<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1gacd072dfc342e7e83ff0890f831c27f87" kindref="member">RMP_BMM150_X_AXIS_SIGN_CONFIG</ref><sp/>|<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga3ea3dba44488b17c07db7da4d783c186" kindref="member">RMP_BMM150_Y_AXIS_SIGN_CONFIG</ref><sp/>|<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga1a3732252fb94511308f125b5c2ea3c4" kindref="member">RMP_BMM150_Z_AXIS_SIGN_CONFIG</ref>,</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.ISRCallback<sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.dev_addr<sp/>=<sp/><ref refid="_sensor_handle_8c_1ab76be151de81e9029224c1301f6ff2c5" kindref="member">BMM150_DEV_ADDR</ref>,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="161" refid="_sensor_handle_8c_1a04dd0f954a6badb573d053ceb9851b0a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_magnetometer___handle___s" kindref="compound">Magnetometer_Handle_T</ref><sp/><ref refid="_sensor_handle_8c_1a04dd0f954a6badb573d053ceb9851b0a" kindref="member">xdkMagnetometer_BMM150_S</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="struct_magnetometer___handle___s_1a64a78fe7dd4ed68e1970d0a98a571afc" kindref="member">SensorInformation</ref>.<ref refid="struct_magnetometer___sensor_info___s_1a6d8b52756d800d8f0c74596ab060b48f" kindref="member">sensorID</ref><sp/>=<sp/><ref refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1gga745581a5e9d1b28a1f177329b70c8295ad91e6487283f5fc829e70b5909eb7cfc" kindref="member">MAGNETOMETER_BMM150</ref>,</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.SensorInformation.initializationStatus<sp/>=<sp/><ref refid="_sensor_handle_8c_1a3de7d6fa3d6511b6c5ba5cf8e446d3a1" kindref="member">SENSOR_API_UNINITIALIZED</ref>,</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.SensorPtr<sp/>=<sp/>&amp;<ref refid="_sensor_handle_8c_1a2cc946e6df171f7890870d004fb47997" kindref="member">bmm150Sensor_S</ref>,</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="167" refid="group___sensors_handles_1ga020a7ea71374eb9b2ae6e941f22c4464" refkind="member"><highlight class="normal"><ref refid="struct_magnetometer___handle___s" kindref="compound">Magnetometer_HandlePtr_T</ref><sp/><ref refid="group___sensors_handles_1ga020a7ea71374eb9b2ae6e941f22c4464" kindref="member">XdkMagnetometer_BMM150_Handle</ref><sp/>=<sp/>&amp;<ref refid="_sensor_handle_8c_1a04dd0f954a6badb573d053ceb9851b0a" kindref="member">xdkMagnetometer_BMM150_S</ref>;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="comment">/************************************************MAX<sp/>Handle<sp/>Info*********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="_sensor_handle_8c_1ace25f37681c54cbe96ed9ba8f6619260" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_max44009_utils___info___s" kindref="compound">Max44009Utils_Info_T</ref><sp/><ref refid="_sensor_handle_8c_1ace25f37681c54cbe96ed9ba8f6619260" kindref="member">max44009Sensor_S</ref><sp/>=</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="struct_max44009_utils___info___s_1afb8d35b33d31d052c1ff16de62ba1014" kindref="member">BspSensorId</ref><sp/>=<sp/>(uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___s_e_n_s_o_r___n_o_d_e_1gga912187ee09fe6b5cbec7a72484205112acae4933cb79bd046402d6870e6f7b63f" kindref="member">BSP_XDK_SENSOR_MAX44009</ref>,</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.ISRCallback<sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.dev_addr<sp/>=<sp/><ref refid="_sensor_handle_8c_1aef0d32cfdb2c32ebfbb15afa1cf11e3d" kindref="member">MAX44009_DEV_ADDR</ref>,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="_sensor_handle_8c_1a7a2479d53f4caf558fe760407d39911c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_light_sensor___handle___s" kindref="compound">LightSensor_Handle_T</ref><sp/><ref refid="struct_light_sensor___handle___s" kindref="compound">LightSensor_Handle_S</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="struct_light_sensor___handle___s_1a146ca6b599a926f04b0b11d2ca881316" kindref="member">SensorInformation</ref>.<ref refid="struct_light_sensor___sensor_info___s_1ae14e20feb92e571535a65b422aeccbb7" kindref="member">sensorID</ref><sp/>=<sp/><ref refid="group___l_i_g_h_t_s_e_n_s_o_r_1ggae306d98050eef13600b0300f852769b5aa5eeec02a400621ee0a32e7b4a2a045a" kindref="member">LIGHTSENSOR_MAX44009</ref>,</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.SensorInformation.initializationStatus<sp/>=<sp/><ref refid="_sensor_handle_8c_1a3de7d6fa3d6511b6c5ba5cf8e446d3a1" kindref="member">SENSOR_API_UNINITIALIZED</ref>,</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.SensorPtr<sp/>=<sp/>&amp;<ref refid="_sensor_handle_8c_1ace25f37681c54cbe96ed9ba8f6619260" kindref="member">max44009Sensor_S</ref>,</highlight></codeline>
+<codeline lineno="182"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="183" refid="group___sensors_handles_1gac7eceb877eb7e54d9a1135cd8e4535ee" refkind="member"><highlight class="normal"><ref refid="struct_light_sensor___handle___s" kindref="compound">LightSensor_HandlePtr_T</ref><sp/><ref refid="group___sensors_handles_1gac7eceb877eb7e54d9a1135cd8e4535ee" kindref="member">XdkLightSensor_MAX44009_Handle</ref><sp/>=<sp/>&amp;<ref refid="_sensor_handle_8c_1a7a2479d53f4caf558fe760407d39911c" kindref="member">LightSensor_Handle_S</ref>;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="comment">/************************************************BMI<sp/>Handle<sp/>Info*********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186" refid="_sensor_handle_8c_1a8190df70bd24d0cd1c1e63516c6a8c0b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_bmi160_utils___info___s" kindref="compound">Bmi160Utils_Info_T</ref><sp/><ref refid="_sensor_handle_8c_1a8190df70bd24d0cd1c1e63516c6a8c0b" kindref="member">bmi160AccelSensor_S</ref><sp/>=</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="struct_bmi160_utils___info___s_1afb8d35b33d31d052c1ff16de62ba1014" kindref="member">BspSensorId</ref><sp/>=<sp/>(uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___s_e_n_s_o_r___n_o_d_e_1gga912187ee09fe6b5cbec7a72484205112a3e69c1de20ddbfe6bad3adb45f29c548" kindref="member">BSP_XDK_SENSOR_BMI160</ref>,</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.remap<sp/>=</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.axisConfig<sp/>=<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1gada62bdad9c457bd09ab195eb4d35fcf9" kindref="member">RMP_BMIACCEL_X_AXIS_CONFIG</ref><sp/>|<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga9d565b64415b223cb1fac97719ea88f3" kindref="member">RMP_BMIACCEL_Y_AXIS_CONFIG</ref><sp/>|<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1gac354cb41a81cfdf97922801a253809e2" kindref="member">RMP_BMIACCEL_Z_AXIS_CONFIG</ref>,</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.axisSign<sp/>=<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga3c5da63efeea55a89f7bfb2e22a5b5dc" kindref="member">RMP_BMIACCEL_X_AXIS_SIGN_CONFIG</ref><sp/>|<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1gae623df452a5c7d2bbfc83a73e3953676" kindref="member">RMP_BMIACCEL_Y_AXIS_SIGN_CONFIG</ref><sp/>|<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga2ed3698a5ab436c08807726a3a3f697e" kindref="member">RMP_BMIACCEL_Z_AXIS_SIGN_CONFIG</ref>,</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.ISRCallback<sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.dev_addr<sp/>=<sp/><ref refid="_sensor_handle_8c_1aa6181c747814e42b03c165bd27f298da" kindref="member">BMI160_DEV_ADDR</ref>,</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199" refid="_sensor_handle_8c_1a569f25b88eb018ad7f8dcae178153d3b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_accelerometer___handle___s" kindref="compound">Accelerometer_Handle_T</ref><sp/><ref refid="_sensor_handle_8c_1a569f25b88eb018ad7f8dcae178153d3b" kindref="member">xdkAccelerometers_BMI160_S</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal">.<ref refid="struct_accelerometer___handle___s_1a00af0b4f482ca97c22b9b49da614b2a5" kindref="member">SensorPtr</ref><sp/>=<sp/>&amp;<ref refid="_sensor_handle_8c_1a8190df70bd24d0cd1c1e63516c6a8c0b" kindref="member">bmi160AccelSensor_S</ref>,</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.IntChannel1.deferredCallback<sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.IntChannel1.rtCallback<sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.IntChannel2.deferredCallback<sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.IntChannel2.rtCallback<sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.SensorInformation.initializationStatus<sp/>=<sp/><ref refid="_sensor_handle_8c_1a3de7d6fa3d6511b6c5ba5cf8e446d3a1" kindref="member">SENSOR_API_UNINITIALIZED</ref>,</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.SensorInformation.sensorID<sp/>=<sp/><ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ggafdc575ef97319455e5c940a132b0311fa471fc80d97e52979fd031e173c2ef768" kindref="member">ACCELEROMETER_BMI160</ref>,</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="209" refid="group___sensors_handles_1ga0340e3cafd7cb8efc468ff416d534aca" refkind="member"><highlight class="normal"><ref refid="struct_accelerometer___handle___s" kindref="compound">Accelerometer_HandlePtr_T</ref><sp/><ref refid="group___sensors_handles_1ga0340e3cafd7cb8efc468ff416d534aca" kindref="member">XdkAccelerometer_BMI160_Handle</ref><sp/>=<sp/>&amp;<ref refid="_sensor_handle_8c_1a569f25b88eb018ad7f8dcae178153d3b" kindref="member">xdkAccelerometers_BMI160_S</ref>;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="_sensor_handle_8c_1a314ba046605cb36b878724310f046f29" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_bmi160_utils___info___s" kindref="compound">Bmi160Utils_Info_T</ref><sp/><ref refid="_sensor_handle_8c_1a314ba046605cb36b878724310f046f29" kindref="member">bmi160GyroSensor_S</ref><sp/>=</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="struct_bmi160_utils___info___s_1afb8d35b33d31d052c1ff16de62ba1014" kindref="member">BspSensorId</ref><sp/>=<sp/>(uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___s_e_n_s_o_r___n_o_d_e_1gga912187ee09fe6b5cbec7a72484205112a3e69c1de20ddbfe6bad3adb45f29c548" kindref="member">BSP_XDK_SENSOR_BMI160</ref>,</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.remap<sp/>=</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.axisConfig<sp/>=<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga5104e0d5f74fea4632cf02af00160f5a" kindref="member">RMP_BMIGYRO_X_AXIS_CONFIG</ref><sp/>|<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga756a27bf82978666b31813af860c5c05" kindref="member">RMP_BMIGYRO_Y_AXIS_CONFIG</ref><sp/>|<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga89427c287c66ff4fdda04bb4a2574ab1" kindref="member">RMP_BMIGYRO_Z_AXIS_CONFIG</ref>,</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.axisSign<sp/>=<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga0a78d9a39a1ab8c7fc3190ee67a4b162" kindref="member">RMP_BMIGYRO_X_AXIS_SIGN_CONFIG</ref><sp/>|<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga26778d2408b189b5b4a082bbe90ed12d" kindref="member">RMP_BMIGYRO_Y_AXIS_SIGN_CONFIG</ref><sp/>|<sp/><ref refid="group___s_e_n_s_o_r_h_w_c_o_n_f_i_g_1ga2912de6126fd6fd5a1955b8db4f20ca3" kindref="member">RMP_BMIGYRO_Z_AXIS_SIGN_CONFIG</ref>,</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.ISRCallback<sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.dev_addr<sp/>=<sp/><ref refid="_sensor_handle_8c_1aa6181c747814e42b03c165bd27f298da" kindref="member">BMI160_DEV_ADDR</ref>,</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223" refid="_sensor_handle_8c_1a3f3bb9644576cc52c54fe6107b645ed2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_gyroscope___handle___s" kindref="compound">Gyroscope_Handle_T</ref><sp/><ref refid="_sensor_handle_8c_1a3f3bb9644576cc52c54fe6107b645ed2" kindref="member">xdkGyroscope_BMI160_S</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="group___g_y_r_o_s_c_o_p_e_1ga2fb0aaf2fa3acb9fbd2ff27f6df99628" kindref="member">sensorPtr</ref><sp/>=<sp/>&amp;<ref refid="_sensor_handle_8c_1a314ba046605cb36b878724310f046f29" kindref="member">bmi160GyroSensor_S</ref>,</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.sensorInfo<sp/>=</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.sensorID<sp/>=<sp/><ref refid="group___g_y_r_o_s_c_o_p_e_1gga2c53610a5f9352295be3c20df498e7a9a7701742d1bc1ec8fd9430dcb2e20f45b" kindref="member">BMI160_GYRO_SENSOR</ref>,</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.initializationStatus<sp/>=<sp/><ref refid="_sensor_handle_8c_1a3de7d6fa3d6511b6c5ba5cf8e446d3a1" kindref="member">SENSOR_API_UNINITIALIZED</ref>,</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="230"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232" refid="group___sensors_handles_1ga42b237ce7325adac0d1cbc92ade67e49" refkind="member"><highlight class="normal"><ref refid="struct_gyroscope___handle___s" kindref="compound">Gyroscope_HandlePtr_T</ref><sp/><ref refid="group___sensors_handles_1ga42b237ce7325adac0d1cbc92ade67e49" kindref="member">XdkGyroscope_BMI160_Handle</ref><sp/>=<sp/>&amp;<ref refid="_sensor_handle_8c_1a3f3bb9644576cc52c54fe6107b645ed2" kindref="member">xdkGyroscope_BMI160_S</ref>;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234" refid="_sensor_handle_8c_1a22157a2451777d9d9f4050a73a36ba4f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_virtual_sensor__bsx_base_sensor___s" kindref="compound">VirtualSensor_bsxBaseSensor_T</ref><sp/><ref refid="_sensor_handle_8c_1a22157a2451777d9d9f4050a73a36ba4f" kindref="member">xdkBsxBaseSensors_S</ref><sp/>=</highlight></codeline>
+<codeline lineno="235"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>.<ref refid="struct_virtual_sensor__bsx_base_sensor___s_1a6dd98bdd1ef0e54b19982d50dbc691df" kindref="member">accelerometerHandle</ref><sp/>=<sp/>(<ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga4b7970700c4307a311d7464927837b4a" kindref="member">Accelerometer_HandlePtr_T</ref>)<sp/>&amp;<sp/>xdkAccelerometers_BMI160_S,</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>.magnetometerHandle<sp/>=<sp/>(<ref refid="struct_magnetometer___handle___s" kindref="compound">Magnetometer_HandlePtr_T</ref>)<sp/>&amp;<sp/><ref refid="_sensor_handle_8c_1a04dd0f954a6badb573d053ceb9851b0a" kindref="member">xdkMagnetometer_BMM150_S</ref>,</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>.gyroscopeHandle<sp/>=<sp/>(<ref refid="group___g_y_r_o_s_c_o_p_e_1ga0dff40202dfb4ed42a471d9498418d9f" kindref="member">Gyroscope_HandlePtr_T</ref>)<sp/>&amp;<sp/>xdkGyroscope_BMI160_S,</highlight></codeline>
+<codeline lineno="239"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241" refid="_sensor_handle_8c_1a2cac91dddda0f82b1bcfd41bedcd471b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_virtual_sensor___f_p_base_sensor___s" kindref="compound">VirtualSensor_FPBaseSensor_T</ref><sp/><ref refid="_sensor_handle_8c_1a2cac91dddda0f82b1bcfd41bedcd471b" kindref="member">xdkFingerprintBaseSensor_S</ref><sp/>=</highlight></codeline>
+<codeline lineno="242"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>.<ref refid="struct_virtual_sensor___f_p_base_sensor___s_1aeb433a2a362b124f6de551797e6f82c8" kindref="member">magnetometerHandle</ref><sp/>=<sp/>(<ref refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1gab6c27ff087775a5b19a581a6cecb6946" kindref="member">Magnetometer_HandlePtr_T</ref>)<sp/>&amp;<sp/>xdkMagnetometer_BMM150_S,</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>.accelerometerHandle<sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,</highlight></codeline>
+<codeline lineno="245"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="comment">/************************************************END<sp/>of<sp/>Handle<sp/>Info******************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248" refid="group___sensors_handles_1ga6cb19ad24205e14082f944937d1acced" refkind="member"><highlight class="normal"><ref refid="group___a_b_s_o_l_u_t_e_h_u_m_i_d_i_t_y_1gafbc9bd69b397c3289de5d7fe35a2b58b" kindref="member">AbsoluteHumidity_HandlePtr_T</ref><sp/><ref refid="group___sensors_handles_1ga6cb19ad24205e14082f944937d1acced" kindref="member">XdkAbsoluteHumidity_ClbrSensor_Handle</ref><sp/>=<sp/>(<ref refid="group___a_b_s_o_l_u_t_e_h_u_m_i_d_i_t_y_1gafbc9bd69b397c3289de5d7fe35a2b58b" kindref="member">AbsoluteHumidity_HandlePtr_T</ref>)<sp/>&amp;<sp/>xdkEnvironmental_BME280_S;</highlight></codeline>
+<codeline lineno="249" refid="group___sensors_handles_1ga38f6fbd01d44b3ce7c25212c26387860" refkind="member"><highlight class="normal"><ref refid="group___c_a_l_i_b_r_a_t_e_d_a_c_c_e_l_e_r_o_m_e_t_e_r_1gae850c7cc65378420471e998c5bcad79d" kindref="member">CalibratedAccel_HandlePtr_T</ref><sp/><ref refid="group___sensors_handles_1ga38f6fbd01d44b3ce7c25212c26387860" kindref="member">XdkAccelerometer_ClbrSensor_Handle</ref><sp/>=<sp/>(<ref refid="group___c_a_l_i_b_r_a_t_e_d_a_c_c_e_l_e_r_o_m_e_t_e_r_1gae850c7cc65378420471e998c5bcad79d" kindref="member">CalibratedAccel_HandlePtr_T</ref>)<sp/>&amp;<sp/>xdkBsxBaseSensors_S;</highlight></codeline>
+<codeline lineno="250" refid="group___sensors_handles_1ga4030c79b162554c0dc2bd0dd5d70b9cf" refkind="member"><highlight class="normal"><ref refid="group___o_r_i_e_n_t_a_t_i_o_n_1ga0eb92ff04f4d56c08a09e3a24cd28b3e" kindref="member">Orientation_HandlePtr_T</ref><sp/><ref refid="group___sensors_handles_1ga4030c79b162554c0dc2bd0dd5d70b9cf" kindref="member">XdkOrientation_VirtualSensor_Handle</ref><sp/>=<sp/>(<ref refid="group___o_r_i_e_n_t_a_t_i_o_n_1ga0eb92ff04f4d56c08a09e3a24cd28b3e" kindref="member">Orientation_HandlePtr_T</ref>)<sp/>&amp;<sp/>xdkBsxBaseSensors_S;</highlight></codeline>
+<codeline lineno="251" refid="group___sensors_handles_1ga136715fa14bae5635b891a0ce984d212" refkind="member"><highlight class="normal"><ref refid="group___r_o_t_a_t_i_o_n_1ga150d5a7c22603a2e984c1b06fbeb6ad0" kindref="member">Rotation_HandlePtr_T</ref><sp/><ref refid="group___sensors_handles_1ga136715fa14bae5635b891a0ce984d212" kindref="member">XdkRotation_VirtualSensor_Handle</ref><sp/>=<sp/>(<ref refid="group___r_o_t_a_t_i_o_n_1ga150d5a7c22603a2e984c1b06fbeb6ad0" kindref="member">Rotation_HandlePtr_T</ref>)<sp/>&amp;<sp/>xdkBsxBaseSensors_S;</highlight></codeline>
+<codeline lineno="252" refid="group___sensors_handles_1gac1753f6effac559bfd95cddef0ff64be" refkind="member"><highlight class="normal"><ref refid="group___g_r_a_v_i_t_y_1ga8147046ef190ab6ec5ca6623a9547bf0" kindref="member">Gravity_HandlePtr_T</ref><sp/><ref refid="group___sensors_handles_1gac1753f6effac559bfd95cddef0ff64be" kindref="member">XdkGravity_VirtualSensor_Handle</ref><sp/>=<sp/>(<ref refid="group___g_r_a_v_i_t_y_1ga8147046ef190ab6ec5ca6623a9547bf0" kindref="member">Gravity_HandlePtr_T</ref>)<sp/>&amp;<sp/>xdkBsxBaseSensors_S;</highlight></codeline>
+<codeline lineno="253" refid="group___sensors_handles_1ga1488a138a372c8fae5b0929f30913eba" refkind="member"><highlight class="normal"><ref refid="group___f_i_n_g_e_r_p_r_i_n_t_1gab3b952ee1fef4ba9f0004f211284791e" kindref="member">FingerPrint_HandlePtr_T</ref><sp/><ref refid="group___sensors_handles_1ga1488a138a372c8fae5b0929f30913eba" kindref="member">XdkFingerprint_VirtualSensor_Handle</ref><sp/>=<sp/>(<ref refid="group___f_i_n_g_e_r_p_r_i_n_t_1gab3b952ee1fef4ba9f0004f211284791e" kindref="member">FingerPrint_HandlePtr_T</ref>)<sp/>&amp;<sp/>xdkFingerprintBaseSensor_S;</highlight></codeline>
+<codeline lineno="254" refid="group___sensors_handles_1gab9131bcc6769d2f0b6e8fa3693609508" refkind="member"><highlight class="normal"><ref refid="group___c_a_l_i_b_r_a_t_e_d_g_y_r_o_s_c_o_p_e_1ga090e4e52aa3ae2a5a040d7c59b7434af" kindref="member">CalibratedGyro_HandlePtr_T</ref><sp/><ref refid="group___sensors_handles_1gab9131bcc6769d2f0b6e8fa3693609508" kindref="member">XdkGyroscope_ClbrSensor_Handle</ref><sp/>=<sp/>(<ref refid="group___c_a_l_i_b_r_a_t_e_d_g_y_r_o_s_c_o_p_e_1ga090e4e52aa3ae2a5a040d7c59b7434af" kindref="member">CalibratedGyro_HandlePtr_T</ref>)<sp/>&amp;<sp/>xdkBsxBaseSensors_S;</highlight></codeline>
+<codeline lineno="255" refid="group___sensors_handles_1ga932145361f44eac64aba27591b0feced" refkind="member"><highlight class="normal"><ref refid="group___c_a_l_i_b_r_a_t_e_d_m_a_g_n_e_t_o_m_e_t_e_r_1gabfb27b0e530205adf7fbe9345bad22b7" kindref="member">CalibratedMag_HandlePtr_T</ref><sp/><ref refid="group___sensors_handles_1ga932145361f44eac64aba27591b0feced" kindref="member">XdkMagnetometer_ClbrSensor_Handle</ref><sp/>=<sp/>(<ref refid="group___c_a_l_i_b_r_a_t_e_d_m_a_g_n_e_t_o_m_e_t_e_r_1gabfb27b0e530205adf7fbe9345bad22b7" kindref="member">CalibratedMag_HandlePtr_T</ref>)<sp/>&amp;<sp/>xdkBsxBaseSensors_S;</highlight></codeline>
+<codeline lineno="256" refid="group___sensors_handles_1ga7feca8c6a34616704fb64ac89a11985b" refkind="member"><highlight class="normal"><ref refid="group___s_t_e_p_c_o_u_n_t_e_r_1gab57a98c98b69653c6770fd55c6e3d08e" kindref="member">StepCounter_HandlePtr_T</ref><sp/><ref refid="group___sensors_handles_1ga7feca8c6a34616704fb64ac89a11985b" kindref="member">XdkStepCounter_VirtualSensor_Handle</ref><sp/>=<sp/>(<ref refid="group___s_t_e_p_c_o_u_n_t_e_r_1gab57a98c98b69653c6770fd55c6e3d08e" kindref="member">StepCounter_HandlePtr_T</ref>)<sp/>&amp;<sp/>xdkAccelerometers_BMI160_S;</highlight></codeline>
+<codeline lineno="257" refid="group___sensors_handles_1ga4e210ce576a872b0e6cc2c6496788153" refkind="member"><highlight class="normal"><ref refid="group___l_i_n_e_a_r___a_c_c_e_l_e_r_a_t_i_o_n_1ga07601d1cd6a31e3a0dc463032f5a5488" kindref="member">LinearAcceleration_HandlePtr_T</ref><sp/><ref refid="group___sensors_handles_1ga4e210ce576a872b0e6cc2c6496788153" kindref="member">XdkLinearAcceleration_ClbrSensor_Handle</ref><sp/>=<sp/>(<ref refid="group___l_i_n_e_a_r___a_c_c_e_l_e_r_a_t_i_o_n_1ga07601d1cd6a31e3a0dc463032f5a5488" kindref="member">LinearAcceleration_HandlePtr_T</ref>)<sp/>&amp;<sp/>xdkBsxBaseSensors_S;</highlight></codeline>
+<codeline lineno="258" refid="group___sensors_handles_1ga04f3d2729cdd8510e25ce5f7bd63d8d2" refkind="member"><highlight class="normal"><ref refid="group___g_e_s_t_u_r_e_s_1gafe927ffee562b27d8a064877e02bab9f" kindref="member">Gestures_HandlePtr_T</ref><sp/><ref refid="group___sensors_handles_1ga04f3d2729cdd8510e25ce5f7bd63d8d2" kindref="member">XdkGesture_VirtualSensor_Handle</ref><sp/>=<sp/>(<ref refid="group___g_e_s_t_u_r_e_s_1gafe927ffee562b27d8a064877e02bab9f" kindref="member">Gestures_HandlePtr_T</ref>)<sp/>&amp;<sp/>xdkBsxBaseSensors_S;</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>inline<sp/>functions<sp/>*********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>local<sp/>functions<sp/>**********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>global<sp/>functions<sp/>*********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/SensorHandle.c"/>
+  </compounddef>
+</doxygen>

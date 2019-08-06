@@ -1,0 +1,1414 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t" kind="group">
+    <compoundname>BCDS_NETWORK_CONNECT</compoundname>
+    <title>Wlan Connection</title>
+    <innerfile refid="_b_c_d_s___wlan_network_connect_8h">BCDS_WlanNetworkConnect.h</innerfile>
+    <innerclass refid="struct_wlan_network_connect___scan_info___s" prot="public">WlanNetworkConnect_ScanInfo_S</innerclass>
+    <innerclass refid="struct_wlan_network_connect___scan_list___s" prot="public">WlanNetworkConnect_ScanList_S</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga59e805ac62f3860ed3de3cf83206d0a5" prot="public" static="no">
+        <name>WlanNetworkConnect_IpStatus_E</name>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga59e805ac62f3860ed3de3cf83206d0a5a13e90103cd4c170fe84bdceb5ecf5eb4" prot="public">
+          <name>WLANNWCT_IPSTATUS_CT_AQRD</name>
+          <initializer>= 0x00</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Connected and IPV4 address acquired </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga59e805ac62f3860ed3de3cf83206d0a5a71ad0ab99abe3638f547dd8a6e4e2b0c" prot="public">
+          <name>WLANNWCT_IPSTATUS_CT_NAQRD</name>
+          <initializer>= 0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Connected and IPV4 address not acquired </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga59e805ac62f3860ed3de3cf83206d0a5a8d8f000e3703b7d867bd83ac8e33ed2f" prot="public">
+          <name>WLANNWCT_IPSTATUS_DISCT_AQRD</name>
+          <initializer>= 0x02</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Disconnected and IPV4 address acquired </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga59e805ac62f3860ed3de3cf83206d0a5a1e85391b861a33455c92c37aa6ada4d0" prot="public">
+          <name>WLANNWCT_IPSTATUS_DISCT_NAQRD</name>
+          <initializer>= 0x03</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Disconnected and IPV4 address not acquired </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Different status for the Current Network Configuration function callback </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="128" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" bodystart="127" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga220d17f71ab49d55bfe3cfe3e70cecf2" prot="public" static="no">
+        <name>WlanNetworkConnect_PwrCtrl_E</name>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga220d17f71ab49d55bfe3cfe3e70cecf2afbe341bcb6cd17e56d2a70762694bc1e" prot="public">
+          <name>WLANNWCT_PWRCTRL_HIBERNATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Lowest power mode. Memories are not retained and only RTC will run. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga220d17f71ab49d55bfe3cfe3e70cecf2a11db6cd117dc82c2b32a346f14ff958d" prot="public">
+          <name>WLANNWCT_PWRCTRL_WAKEUP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Device wakeup from sleep mode or hibernate mode </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga220d17f71ab49d55bfe3cfe3e70cecf2af1bce9e3d3196816ad7c8803829530a9" prot="public">
+          <name>WLANNWCT_PWRCTRL_FAST_CONNECT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Device will first try to reestablish previous connection without scan </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga220d17f71ab49d55bfe3cfe3e70cecf2a8ade78f2f2d0ce0510a44fdbfc3ef9a7" prot="public">
+          <name>WLANNWCT_PWRCTRL_MDNS_PACKET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Device will start or stop sending the mDNS packets </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga220d17f71ab49d55bfe3cfe3e70cecf2af59111e213c63abe1ce44a31f0f13302" prot="public">
+          <name>WLANNWCT_PWRCTRL_MODE_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration to represent the different power modes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="140" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" bodystart="139" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga3d409df82e4c546a8c031839f8f33293" prot="public" static="no">
+        <name>WlanNetworkConnect_Retcode_E</name>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga3d409df82e4c546a8c031839f8f33293a32439d9aac037461eef58974dbead219" prot="public">
+          <name>RETCODE_NO_NW_AVAILABLE</name>
+          <initializer>= RETCODE_FIRST_CUSTOM_CODE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>No available networks </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga3d409df82e4c546a8c031839f8f33293a9594495eae22b7dad163cdf61c83583d" prot="public">
+          <name>RETCODE_ALREADY_DISCONNECTED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Disconnected already </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga3d409df82e4c546a8c031839f8f33293ab1b550c2a60dd10d62af3334e206ff6e" prot="public">
+          <name>RETCODE_CONNECTION_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Connection error </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga3d409df82e4c546a8c031839f8f33293a5882689a7f3093e66343d66754a4e365" prot="public">
+          <name>RETCODE_ERROR_WRONG_PASSWORD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Password error while connecting </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga3d409df82e4c546a8c031839f8f33293aafe086f2eae9502b9e9026ea073efbb6" prot="public">
+          <name>RETCODE_ERROR_IP_NOT_ACQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>IP address not acquired </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga3d409df82e4c546a8c031839f8f33293abc104f2f6827aa11c6679df8e52ec57a" prot="public">
+          <name>RETCODE_DISCONNECT_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Disconnect error </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga3d409df82e4c546a8c031839f8f33293a1b0af7d0644f950e7239c8d10ff7ae97" prot="public">
+          <name>RETCODE_SIMPLELINK_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Error from Simplelink library </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga3d409df82e4c546a8c031839f8f33293ab13bf4d5494448aba0bc2da0a7c9286d" prot="public">
+          <name>RETCODE_TIMERCREATE_FAILURE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Error while creating timer </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga3d409df82e4c546a8c031839f8f33293abfed2de42c7aae26a467d966d96a5fff" prot="public">
+          <name>RETCODE_TIMERSTART_FAILURE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Error while starting timer </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga3d409df82e4c546a8c031839f8f33293ad0b288bbde1c7d21d460d0886885b61d" prot="public">
+          <name>RETCODE_TIME_NULL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Error while get timer value </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga3d409df82e4c546a8c031839f8f33293aed53a5d4315addc8dc4c82fc589bdb40" prot="public">
+          <name>RETCODE_SL_STOP_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>sl_Stop failed </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga3d409df82e4c546a8c031839f8f33293a2f2b21938e659608618edb378c77a3ac" prot="public">
+          <name>RETCODE_SL_MODE_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Simplelink mode set failed </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga3d409df82e4c546a8c031839f8f33293a3690d8311320cc9eb305f80cfec2550f" prot="public">
+          <name>RETCODE_SL_POLICY_SET_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Failed to set simplelink policy </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga3d409df82e4c546a8c031839f8f33293a68e5c6e5a7b1ddb09f0e0d94afac11f9" prot="public">
+          <name>RETCODE_MDNS_ALREADY_STARTED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>mDNS packets send already started </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga3d409df82e4c546a8c031839f8f33293ad67c04fb367e0e0ed31f98b769e0621b" prot="public">
+          <name>RETCODE_MDNS_ALREADY_STOPPED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>mDNS packets send already stopped </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration to represent the return codes of WLAN module. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="92" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" bodystart="91" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gadaf1b792db58d4dd52f06df108fd3c42" prot="public" static="no">
+        <name>WlanNetworkConnect_Status_E</name>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ggadaf1b792db58d4dd52f06df108fd3c42aa7fc4f2829fc443f861d00162c11a138" prot="public">
+          <name>WLANNWCT_STATUS_CONNECTED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Wlan status Connected </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ggadaf1b792db58d4dd52f06df108fd3c42a1ad838ed313e6207110fc3ca061326c4" prot="public">
+          <name>WLANNWCT_STATUS_DISCONNECTED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Wlan status Disconnected </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ggadaf1b792db58d4dd52f06df108fd3c42a7390deeaa45ab961cbf84e21066aca54" prot="public">
+          <name>WLANNWCT_STATUS_CONNECTERR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Wlan status Connection error </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ggadaf1b792db58d4dd52f06df108fd3c42a192db6241c6a783117dc64ad2f348716" prot="public">
+          <name>WLANNWCT_STATUS_PWD_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Wlan status password error while connecting </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ggadaf1b792db58d4dd52f06df108fd3c42a40dfcee4e2041fb74ba87e7a30945df7" prot="public">
+          <name>WLANNWCT_STATUS_DISCONNECTERR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Wlan status Disconnection error </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ggadaf1b792db58d4dd52f06df108fd3c42a04113bd76112dc2f7c318e63b477a5ee" prot="public">
+          <name>WLANNWCT_STATUS_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type defining callback status. This type is used for different connection status for the WLAN Connect function callback. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="116" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" bodystart="115" bodyend="123"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga295b9aa203738050fd2137fb81030321" prot="public" static="no">
+        <type>unsigned</type>
+        <definition>typedef unsigned long(WlanNetworkConnect_ScanInterval_T)</definition>
+        <argsstring>(WlanNetworkConnect_ScanInterval_T)</argsstring>
+        <name>long</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type defining scan interval. This type is used for WlanNetworkConnect_scanNetworks function </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="171" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga842a52fe75b967e2e8f8df40ac1bf622" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* WlanNetworkConnect_Callback_T)(WlanNetworkConnect_Status_T connectStatus)</definition>
+        <argsstring>)(WlanNetworkConnect_Status_T connectStatus)</argsstring>
+        <name>WlanNetworkConnect_Callback_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type defining the prototype which connection call back must conform to. This call back is called to notify the user when connection is established or Disconnection occurs. Returns the connection status as a parameter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="205" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gae155f11c028c481766a136593f7b651d" prot="public" static="no">
+        <type>enum <ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga59e805ac62f3860ed3de3cf83206d0a5" kindref="member">WlanNetworkConnect_IpStatus_E</ref></type>
+        <definition>typedef enum WlanNetworkConnect_IpStatus_E WlanNetworkConnect_IpStatus_T</definition>
+        <argsstring></argsstring>
+        <name>WlanNetworkConnect_IpStatus_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="99" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga014fbd8a415781080c897cbdd57f8b07" prot="public" static="no">
+        <type>signed char *</type>
+        <definition>typedef signed char* WlanNetworkConnect_PassPhrase_T</definition>
+        <argsstring></argsstring>
+        <name>WlanNetworkConnect_PassPhrase_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type defining a pointer to char This type is used in order to pass the network Pass Phrase </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="165" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga099857784f92abc417f8e6e9f21ad31a" prot="public" static="no">
+        <type>enum <ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga220d17f71ab49d55bfe3cfe3e70cecf2" kindref="member">WlanNetworkConnect_PwrCtrl_E</ref></type>
+        <definition>typedef enum WlanNetworkConnect_PwrCtrl_E WlanNetworkConnect_PwrCtrl_T</definition>
+        <argsstring></argsstring>
+        <name>WlanNetworkConnect_PwrCtrl_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="99" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga36c905dbc4756a7fd7626e3278af259a" prot="public" static="no">
+        <type>enum <ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga3d409df82e4c546a8c031839f8f33293" kindref="member">WlanNetworkConnect_Retcode_E</ref></type>
+        <definition>typedef enum WlanNetworkConnect_Retcode_E WlanNetworkConnect_Retcode_T</definition>
+        <argsstring></argsstring>
+        <name>WlanNetworkConnect_Retcode_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="99" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga1ae666720cd271f5fde5bc7fa88dc5ec" prot="public" static="no">
+        <type>struct <ref refid="struct_wlan_network_connect___scan_info___s" kindref="compound">WlanNetworkConnect_ScanInfo_S</ref></type>
+        <definition>typedef struct WlanNetworkConnect_ScanInfo_S WlanNetworkConnect_ScanInfo_T</definition>
+        <argsstring></argsstring>
+        <name>WlanNetworkConnect_ScanInfo_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="171" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gad5a73664d9b4cbeb1087d69d7e245076" prot="public" static="no">
+        <type>struct <ref refid="struct_wlan_network_connect___scan_list___s" kindref="compound">WlanNetworkConnect_ScanList_S</ref></type>
+        <definition>typedef struct WlanNetworkConnect_ScanList_S WlanNetworkConnect_ScanList_T</definition>
+        <argsstring></argsstring>
+        <name>WlanNetworkConnect_ScanList_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="171" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga83ffcce1a83320c0442fd98e710c3271" prot="public" static="no">
+        <type>signed char *</type>
+        <definition>typedef signed char* WlanNetworkConnect_SSID_T</definition>
+        <argsstring></argsstring>
+        <name>WlanNetworkConnect_SSID_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type defining a pointer to char. This type is used in order to pass the network SSID </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="153" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga54b9b7c3100d2dbaeefe1d8d2fe48fbc" prot="public" static="no">
+        <type>enum <ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gadaf1b792db58d4dd52f06df108fd3c42" kindref="member">WlanNetworkConnect_Status_E</ref></type>
+        <definition>typedef enum WlanNetworkConnect_Status_E WlanNetworkConnect_Status_T</definition>
+        <argsstring></argsstring>
+        <name>WlanNetworkConnect_Status_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="99" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga933192c2833abda5cabfcabd7a7570fe" prot="public" static="no">
+        <type>signed char *</type>
+        <definition>typedef signed char* WlanNetworkConnect_Username_T</definition>
+        <argsstring></argsstring>
+        <name>WlanNetworkConnect_Username_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type defining a pointer to char. This type is used in order to pass the network Username </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="159" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gab257e73a3b9af15f67fe883864674a32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WlanNetworkConnect_DeInit</definition>
+        <argsstring>(void)</argsstring>
+        <name>WlanNetworkConnect_DeInit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>WLAN driver de-initialization function.<linebreak/>
+ Performs memory deallocation, closes WLAN driver context and shuts down the hardware interfaces. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Retcode_T The return value consist of (First 1 MSByte represents Package ID, Next Byte represents Severity and Last 2 LSBytes represents error code) Below shows the error code(last 2 Bytes) meaning </para></simplesect>
+<simplesect kind="return"><para>RETCODE_OK - Successfully WLAN driver de-initialized. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_SIMPLELINK_ERROR - De-initializing WLAN driver failed </para></simplesect>
+<simplesect kind="return"><para>RETCODE_UNEXPECTED_BEHAVIOR - FreeRTOS timer delete failure</para></simplesect>
+Example1 usage: Deinitialize the WLAN Stack <programlisting><codeline><highlight class="normal">//<sp/>Deinitialize<sp/>WLAN<sp/>stack</highlight></codeline>
+<codeline><highlight class="normal">WlanNetworkConnect_DeInit();</highlight></codeline>
+</programlisting></para><para>Example2 usage: Restart Device <programlisting><codeline><highlight class="normal">//<sp/>Callback<sp/>function</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>myConnectCallbackFunc(WlanNetworkConnect_Status_T<sp/>returnStatus)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(WLANNWCT_STATUS_DISCONNECTED<sp/>==<sp/>returnStatus)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Network<sp/>dis-connection<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;Callback<sp/>Function<sp/>:<sp/>DisConnect<sp/>OK!\n\r&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>User<sp/>may<sp/>add<sp/>logic<sp/>once<sp/>the<sp/>connection<sp/>is<sp/>done</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>E.g<sp/>launch<sp/>another<sp/>OS<sp/>Timer</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>else</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>user<sp/>may<sp/>retry<sp/>to<sp/>connect</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">Retcode_T<sp/>retStatus;</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>Initialize<sp/>WLAN<sp/>driver<sp/>and<sp/>WLAN<sp/>stack</highlight></codeline>
+<codeline><highlight class="normal">retStatus<sp/>=<sp/>WlanNetworkConnect_Init(myConnectCallbackFunc);</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>(RETCODE_OK<sp/>!=<sp/>retStatus)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>printf(&quot;WLAN<sp/>driver<sp/>initialization<sp/>failure&quot;);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Local<sp/>API<sp/>return<sp/>status</highlight></codeline>
+<codeline><highlight class="normal">Retcode_T<sp/>retStatus[2];</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">retStatus[0]<sp/>=<sp/>WlanNetworkConnect_DeInit();</highlight></codeline>
+<codeline><highlight class="normal">retStatus[1]<sp/>=<sp/>WlanNetworkConnect_Init(myConnectCallbackFunc);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Check<sp/>if<sp/>device<sp/>restart<sp/>has<sp/>finished<sp/>with<sp/>error</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>((RETCODE_OK<sp/>!=<sp/>retStatus[0])<sp/>||<sp/>(RETCODE_OK<sp/>!=<sp/>retStatus[1]))</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>printf(&quot;Restart<sp/>device<sp/>failed&quot;);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="334" column="1"/>
+        <referencedby refid="_wlan_connect_8c_1a3c710b947527d86a6347634340353237" compoundref="_wlan_connect_8c" startline="258" endline="261">WlanConnect_DeInit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gac87b04b781426ceb8175d5568d0f253b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WlanNetworkConnect_DeleteAllProfiles</definition>
+        <argsstring>(void)</argsstring>
+        <name>WlanNetworkConnect_DeleteAllProfiles</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>WLAN Delete All Profiles interface.<linebreak/>
+ This function erases from memory all the stored profiles from WIFI Protected Setup functions. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK - successfully erased all profiles. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_SIMPLELINK_ERROR - error during erase</para></simplesect>
+<simplesect kind="return"><para>Retcode_T The return value consist of (First 1 MSByte represents Package ID, Next Byte represents Severity and Last 2 LSBytes represents error code) Below shows the error code(last 2 Bytes) meaning Example usage: Delete all stored WLAN profiles <programlisting><codeline><highlight class="normal">Retcode_T<sp/>retStatus;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">retStatus<sp/>=<sp/>WlanNetworkConnect_DeleteAllProfiles();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">if<sp/>(RETCODE_OK<sp/>!=<sp/>retStatus)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>printf(&quot;Profiles<sp/>were<sp/>not<sp/>deleted<sp/>correctly&quot;);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="736" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gaaf143649a7256e42b39a76f811d66bcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WlanNetworkConnect_Disconnect</definition>
+        <argsstring>(void)</argsstring>
+        <name>WlanNetworkConnect_Disconnect</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>WLAN disconnect interface.<linebreak/>
+ This function disconnects from the WLAN network.<linebreak/>
+ Function is configurable in two ways: callback parameter is set to the address of the user function. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK successfully disconnected from Access point. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_DISCONNECT_ERROR Error in disconnecting</para></simplesect>
+<simplesect kind="return"><para>Retcode_T The return value consist of (First 1 MSByte represents Package ID, Next Byte represents Severity and Last 2 LSBytes represents error code) Below shows the error code(last 2 Bytes) meaning Example usage: Disconnect with callback (non-blocking) <programlisting><codeline><highlight class="normal">void<sp/>myDisconnectCallbackFunc(WlanNetworkConnect_Status_T<sp/>returnStatus)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(WLANNWCT_STATUS_CONNECTED<sp/>==<sp/>returnStatus)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Network<sp/>disconnection<sp/>successfully<sp/>from<sp/>WlanNetworkConnect_Disconnect<sp/>function</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;Callback<sp/>Function<sp/>:<sp/>Disconnect<sp/>OK!\n\r&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>else</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//user<sp/>can<sp/>retry</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>local<sp/>variables</highlight></codeline>
+<codeline><highlight class="normal">Retcode_T<sp/>retStatus;</highlight></codeline>
+<codeline><highlight class="normal">retStatus<sp/>=<sp/>WlanNetworkConnect_Init(myConnectCallbackFunc);</highlight></codeline>
+<codeline><highlight class="normal">if(RETCODE_OK<sp/>==<sp/>retStatus)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>disconnect<sp/>from<sp/>network<sp/>in<sp/>non-blocking<sp/>mode</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>retStatus<sp/>=<sp/>WlanNetworkConnect_Disconnect();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(RETCODE_OK<sp/>==<sp/>retStatus)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Disconnect<sp/>has<sp/>completed<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;Disconnected<sp/>successfully!\n\r&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="784" column="1"/>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga6b08614c341359b0edd92c1feaf47fc6" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="203" endline="527">SetAndGetIp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga1e12d4070f878a825a63dc075ff4316d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WlanNetworkConnect_EnterpriseWPA</definition>
+        <argsstring>(WlanNetworkConnect_SSID_T connectSSID, WlanNetworkConnect_Username_T connectUsername, WlanNetworkConnect_PassPhrase_T connectPassPhrase)</argsstring>
+        <name>WlanNetworkConnect_EnterpriseWPA</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga83ffcce1a83320c0442fd98e710c3271" kindref="member">WlanNetworkConnect_SSID_T</ref></type>
+          <declname>connectSSID</declname>
+        </param>
+        <param>
+          <type><ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga933192c2833abda5cabfcabd7a7570fe" kindref="member">WlanNetworkConnect_Username_T</ref></type>
+          <declname>connectUsername</declname>
+        </param>
+        <param>
+          <type><ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga014fbd8a415781080c897cbdd57f8b07" kindref="member">WlanNetworkConnect_PassPhrase_T</ref></type>
+          <declname>connectPassPhrase</declname>
+        </param>
+        <briefdescription>
+<para>WLAN Connect to Enterprise WPA Network interface.<linebreak/>
+ This function connects to an WPA2-PSK or WPA-PSK network.<linebreak/>
+ Function is configurable in two ways: </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>blocking : callback parameter is set to <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL(maximum blocking in error case will be 15seconds)</ref></para></listitem><listitem><para>non-blocking : callback parameter is set to the address of the user function</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">connectionSSID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to char containing the network SSID to connect to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">connectUsername</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to char containing the network Username to connect to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">connectionPass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to char containing the network Pass Phrase.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK - API return code for success. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_SIMPLELINK_ERROR - Failure returned by simplelink API. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_ERROR_SSID_NOT_FOUND - Failure because of incorrect SSID. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_ERROR_WRONG_PASSWORD - Failure because of incorrect Pass phrase. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_ERROR_IP_NOT_ACQ - Connected but ip not acquired</para></simplesect>
+<simplesect kind="return"><para>Retcode_T The return value consist of (First 1 MSByte represents Package ID, Next Byte represents Severity and Last 2 LSBytes represents error code) Below shows the error code(last 2 Bytes) meaning</para></simplesect>
+<simplesect kind="note"><para>It uses index 0 for certificate. The Host must have been programmed with the certificate in this Index prior. It uses PEAP0-MSCHAPv2 as EAP method. It uses the connectUsername for default and anonymous user names</para></simplesect>
+Example usage: Connect to Enterprise WPA/WPA2 network with callback (non-blocking) <programlisting><codeline><highlight class="normal">//<sp/>Callback<sp/>function</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>myConnectCallbackFunc(WlanNetworkConnect_Status_T<sp/>returnStatus)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(WLANNWCT_STATUS_CONNECTED<sp/>==<sp/>returnStatus)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Network<sp/>connection<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;Callback<sp/>Function<sp/>:<sp/>Connect<sp/>OK!\n\r&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>User<sp/>may<sp/>add<sp/>logic<sp/>once<sp/>the<sp/>connection<sp/>is<sp/>done</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>E.g<sp/>launch<sp/>another<sp/>OS<sp/>Timer</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>else</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>user<sp/>may<sp/>retry<sp/>to<sp/>connect</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>local<sp/>variables</highlight></codeline>
+<codeline><highlight class="normal">WlanNetworkConnect_SSID_T<sp/>connectSSID;</highlight></codeline>
+<codeline><highlight class="normal">Retcode_T<sp/>retStatus;</highlight></codeline>
+<codeline><highlight class="normal">WlanNetworkConnect_PassPhrase_T<sp/>connectPassPhrase;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>WPA/WPA2<sp/>encrypted<sp/>wireless<sp/>network<sp/>settings</highlight></codeline>
+<codeline><highlight class="normal">connectSSID<sp/>=<sp/>(WlanNetworkConnect_SSID_T)&quot;WPA-NETWORK-NAME&quot;;</highlight></codeline>
+<codeline><highlight class="normal">connectUsername<sp/>=<sp/>(WlanNetworkConnect_Username_T)&quot;WPA-USERNAME-NAME&quot;;</highlight></codeline>
+<codeline><highlight class="normal">connectPassPhrase<sp/>=<sp/>(WlanNetworkConnect_PassPhrase_T)&quot;WPA-PASSWORD&quot;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Set<sp/>callback<sp/>functions</highlight></codeline>
+<codeline><highlight class="normal">connectCallback<sp/>=<sp/>myConnectCallbackFunc;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Connect<sp/>to<sp/>network<sp/>--&gt;<sp/>non<sp/>blocking<sp/>function<sp/>with<sp/>callback</highlight></codeline>
+<codeline><highlight class="normal">retStatus<sp/>=<sp/>WlanNetworkConnect_EnterpriseWPA(connectSSID,<sp/>connectUsername,<sp/>connectPassPhrase);</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="586" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga17f00d6849648efec6c7f514c17e0e2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t WlanNetworkConnect_GetInitStatus</definition>
+        <argsstring>(void)</argsstring>
+        <name>WlanNetworkConnect_GetInitStatus</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Function to get the connection status.<linebreak/>
+ This function return the connection status. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>WLANNWCT_INITIALZED - Wlan module is initialized. </para></simplesect>
+<simplesect kind="return"><para>WLANNWCT_NOT_INITIALZED - Wlan module is not initialized. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="918" column="1"/>
+        <referencedby refid="_wlan_connect_8c_1a5519f22f26952970030f6840b9f64f19" compoundref="_wlan_connect_8c" startline="248" endline="251">WlanConnect_GetInitStatus</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gae501bfe35eecb13b627779b1ef52a14d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gae155f11c028c481766a136593f7b651d" kindref="member">WlanNetworkConnect_IpStatus_T</ref></type>
+        <definition>WlanNetworkConnect_IpStatus_T WlanNetworkConnect_GetIpStatus</definition>
+        <argsstring>(void)</argsstring>
+        <name>WlanNetworkConnect_GetIpStatus</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Function to get the current network status This function sets a disconnect callback which is used to notify the user that there has been a disconnection that was not triggered by the user.ed on connection status. </para>        </briefdescription>
+        <detaileddescription>
+<para>This API must be called only after initialization</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">allDisconnectCallback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to user function callback. Returns the WLAN connection status as a parameter.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>WLANNWCT_IPSTATUS_CT_AQRD - currently WLAN connected and IP acquired. </para></simplesect>
+<simplesect kind="return"><para>WLANNWCT_IPSTATUS_CT_NAQRD - currently WLAN connected and IP not acquired. </para></simplesect>
+<simplesect kind="return"><para>WLANNWCT_IPSTATUS_DISCT_AQRD - currently WLAN disconnected and IP acquired </para></simplesect>
+<simplesect kind="return"><para>WLANNWCT_IPSTATUS_DISCT_NAQRD - currently WLAN disconnected and IP not acquired.</para></simplesect>
+Example usage: Get current status of a network and set a callback for any disconnect events <programlisting><codeline><highlight class="normal">void<sp/>myAllDisconnectCallbackFunc(WlanNetworkConnect_Status_T<sp/>returnStatus)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(WLANNWCT_STATUS_DISCONNECTED<sp/>==<sp/>returnStatus)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Network<sp/>disconnection<sp/>successfully<sp/>from<sp/>WlanNetworkConnect_Disconnect<sp/>function</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;Callback<sp/>Function<sp/>:<sp/>A<sp/>disconnect<sp/>event<sp/>has<sp/>happened!\n\r&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>local<sp/>variables</highlight></codeline>
+<codeline><highlight class="normal">Retcode_T<sp/>retStatus;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">if<sp/>(WLANNWCT_IPSTATUS_DISCT_NAQRD</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>!=<sp/>WlanNetworkConnect_GetIpStatus()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&amp;&amp;<sp/>(WLANNWCT_IPSTATUS_DISCT_AQRD</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>!=<sp/>WlanNetworkConnect_GetIpStatus()))</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>retStatus<sp/>=<sp/>WlanNetworkConnect_Disconnect();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>printf(&quot;Finished<sp/>disconnection<sp/>successfully<sp/>\n\r&quot;);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="882" column="1"/>
+        <referencedby refid="group___h_t_t_p___e_x_a_m_p_l_e___c_l_i_e_n_t_1gab59acc7b7dbee4dcdbc84fa610fac328" compoundref="_http_example_client_2source_2_app_controller_8c" startline="203" endline="233">AppControllerValidateWLANConnectivity</referencedby>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga6b08614c341359b0edd92c1feaf47fc6" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="203" endline="527">SetAndGetIp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga0219c7162e0c56ef093ded51a3c17bd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga54b9b7c3100d2dbaeefe1d8d2fe48fbc" kindref="member">WlanNetworkConnect_Status_T</ref></type>
+        <definition>WlanNetworkConnect_Status_T WlanNetworkConnect_GetStatus</definition>
+        <argsstring>(void)</argsstring>
+        <name>WlanNetworkConnect_GetStatus</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Function to get the connection status.<linebreak/>
+ This function return the connection status. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>WLANNWCT_STATUS_CONNECTED - WLAN connected obtained after calling connect function. </para></simplesect>
+<simplesect kind="return"><para>WLANNWCT_STATUS_DISCONNECTED - WLAN disconnected obtained after calling disconnect function.</para></simplesect>
+Example usage: Block until IP status is acquired and Wlan is connected <programlisting><codeline><highlight class="normal">while<sp/>((WLANNWCT_STATUS_DISCONNECTED<sp/>==<sp/>WlanNetworkConnect_GetStatus())</highlight></codeline>
+<codeline><highlight class="normal"><sp/>||<sp/>(WLANNWCNF_IPSTATUS_IP_NOTAQRD<sp/>==<sp/>WlanNetworkConfig_GetIpStatus()))</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Stay<sp/>here<sp/>until<sp/>connected<sp/>and<sp/>ip<sp/>acquired.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Timeout<sp/>logic<sp/>can<sp/>be<sp/>added<sp/>here.</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> <simplesect kind="warning"><para>This API must be called only after initialization </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="907" column="1"/>
+        <referencedby refid="group___b_o_s_c_h___x_d_k___c_l_o_u_d___c_o_n_n_e_c_t_i_v_i_t_y_1gaee13b98bef01547033a861f8d1f4e1ef" compoundref="_bosch_x_d_k_cloud_connectivity_2source_2_app_controller_8c" startline="462" endline="518">AppControllerWLANMonitor</referencedby>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga6b08614c341359b0edd92c1feaf47fc6" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="203" endline="527">SetAndGetIp</referencedby>
+        <referencedby refid="_wlan_connect_8c_1a0b1e8ed24b54dff3dcc6df9af99d1868" compoundref="_wlan_connect_8c" startline="243" endline="246">WlanConnect_GetStatus</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga46177fff2cf54b7c9a504cc509f1b04d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WlanNetworkConnect_Init</definition>
+        <argsstring>(WlanNetworkConnect_Callback_T callBack)</argsstring>
+        <name>WlanNetworkConnect_Init</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga842a52fe75b967e2e8f8df40ac1bf622" kindref="member">WlanNetworkConnect_Callback_T</ref></type>
+          <declname>callBack</declname>
+        </param>
+        <briefdescription>
+<para>WLAN driver initialization function.<linebreak/>
+ This function initializes WLAN driver context and Hardware interfaces; Also initializes the WLAN Stack. This API should be called first before calling any other API. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>By default device is configured to STA mode if user want to change the mode, they need to use the Simple link API directly</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">callBack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>call poiner to notify the connection status</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Retcode_T The return value consist of (First 1 MSByte represents Package ID, Next Byte represents Severity and Last 2 LSBytes represents error code) Below shows the error code(last 2 Bytes) meaning </para></simplesect>
+<simplesect kind="return"><para>RETCODE_OK - Successfully WLAN driver initialized. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_SIMPLELINK_ERROR - Not initialized WLAN driver. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_NULL_POINTER - Invalid callBack passed </para></simplesect>
+<simplesect kind="return"><para>RETCODE_TIMERCREATE_FAILURE - Failure in s/w timer creation</para></simplesect>
+Example1 usage: Initialize the WLAN Stack and the WLAN Driver <programlisting><codeline><highlight class="normal">//<sp/>Callback<sp/>function</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>myConnectCallbackFunc(WlanNetworkConnect_Status_T<sp/>returnStatus)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(WLANNWCT_STATUS_CONNECTED<sp/>==<sp/>returnStatus)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Network<sp/>connection<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;Callback<sp/>Function<sp/>:<sp/>Connect<sp/>OK!\n\r&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>User<sp/>may<sp/>add<sp/>logic<sp/>once<sp/>the<sp/>connection<sp/>is<sp/>done</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>E.g<sp/>launch<sp/>another<sp/>OS<sp/>Timer</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>else</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>user<sp/>may<sp/>retry<sp/>to<sp/>connect</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">Retcode_T<sp/>retStatus;</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>Initialize<sp/>WLAN<sp/>driver<sp/>and<sp/>WLAN<sp/>stack</highlight></codeline>
+<codeline><highlight class="normal">retStatus<sp/>=<sp/>WlanNetworkConnect_Init(myConnectCallbackFunc);</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>(RETCODE_OK<sp/>!=<sp/>retStatus)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>printf(&quot;WLAN<sp/>driver<sp/>initialization<sp/>failure&quot;);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para>Example2 usage: Restart Device <programlisting><codeline><highlight class="normal">//<sp/>Local<sp/>API<sp/>return<sp/>status</highlight></codeline>
+<codeline><highlight class="normal">Retcode_T<sp/>retStatus[2];</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">retStatus[0]<sp/>=<sp/>WlanNetworkConnect_DeInit();</highlight></codeline>
+<codeline><highlight class="normal">retStatus[1]<sp/>=<sp/>WlanNetworkConnect_Init(myConnectCallbackFunc);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Check<sp/>if<sp/>device<sp/>restart<sp/>has<sp/>finished<sp/>with<sp/>error</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>((RETCODE_OK<sp/>!=<sp/>retStatus[0])<sp/>||<sp/>(RETCODE_OK<sp/>!=<sp/>retStatus[1]))</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>printf(&quot;Restart<sp/>device<sp/>failed&quot;);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="272" column="1"/>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="633" endline="676">AppControllerEnable</referencedby>
+        <referencedby refid="_wlan_connect_8c_1aedc3e3e198474548cde441070dff7f52" compoundref="_wlan_connect_8c" startline="253" endline="256">WlanConnect_Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga4d2cf88d733fed93c822f4ba6d774b54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WlanNetworkConnect_Open</definition>
+        <argsstring>(WlanNetworkConnect_SSID_T connectSSID)</argsstring>
+        <name>WlanNetworkConnect_Open</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga83ffcce1a83320c0442fd98e710c3271" kindref="member">WlanNetworkConnect_SSID_T</ref></type>
+          <declname>connectSSID</declname>
+        </param>
+        <briefdescription>
+<para>WLAN Connect to Open Network interface.<linebreak/>
+ This function connects to an open network.<linebreak/>
+ Function is configurable in two ways: </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>blocking : callback parameter is set to <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL(maximum blocking in error case will be 15seconds)</ref></para></listitem><listitem><para>non-blocking : callback parameter is set to the address of the user function</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">connectSSID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to char containing the network SSID to connect to.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK - Successfully connected to the AP. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_SIMPLELINK_ERROR - Failure returned by simplelink API. </para></simplesect>
+<simplesect kind="return"><para>WLANNWCT_STATUS_CONNECTERR - Failure because of incorrect SSID. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_ERROR_IP_NOT_ACQ - Connected but ip not acquired.</para></simplesect>
+<simplesect kind="return"><para>Retcode_T The return value consist of (First 1 MSByte represents Package ID, Next Byte represents Severity and Last 2 LSBytes represents error code) Below shows the error code(last 2 Bytes) meaning</para></simplesect>
+Example usage: Connect to an open WLAN network with callback (non-blocking) <programlisting><codeline><highlight class="normal">//<sp/>Callback<sp/>function</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>myConnectCallbackFunc(WlanNetworkConnect_Status_T<sp/>returnStatus)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(WLANNWCT_STATUS_CONNECTED<sp/>==<sp/>returnStatus)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Network<sp/>connection<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;Callback<sp/>Function<sp/>:<sp/>Connect<sp/>OK!\n\r&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>User<sp/>may<sp/>add<sp/>logic<sp/>once<sp/>the<sp/>connection<sp/>is<sp/>done</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>E.g<sp/>launch<sp/>another<sp/>OS<sp/>Timer</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>else</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>user<sp/>may<sp/>retry<sp/>to<sp/>connect</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>local<sp/>variables</highlight></codeline>
+<codeline><highlight class="normal">WlanNetworkConnect_SSID_T<sp/>connectSSID;</highlight></codeline>
+<codeline><highlight class="normal">Retcode_T<sp/>retStatus;</highlight></codeline>
+<codeline><highlight class="normal">retStatus<sp/>=<sp/>WlanNetworkConnect_Init(myConnectCallbackFunc);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Open<sp/>wireless<sp/>network<sp/>settings</highlight></codeline>
+<codeline><highlight class="normal">connectSSID<sp/>=<sp/>(WlanNetworkConnect_SSID_T)&quot;Name-Of-Open-Network&quot;;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Connect<sp/>to<sp/>network<sp/>--&gt;<sp/>non<sp/>blocking<sp/>function<sp/>with<sp/>callback</highlight></codeline>
+<codeline><highlight class="normal">retStatus<sp/>=<sp/>WlanNetworkConnect_Open(connectSSID,<sp/>false);</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="390" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gaa513e13b18ac6aa1acdd6dee64a7087c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WlanNetworkConnect_PersonalWPA</definition>
+        <argsstring>(WlanNetworkConnect_SSID_T connectSSID, WlanNetworkConnect_PassPhrase_T connectPass)</argsstring>
+        <name>WlanNetworkConnect_PersonalWPA</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga83ffcce1a83320c0442fd98e710c3271" kindref="member">WlanNetworkConnect_SSID_T</ref></type>
+          <declname>connectSSID</declname>
+        </param>
+        <param>
+          <type><ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga014fbd8a415781080c897cbdd57f8b07" kindref="member">WlanNetworkConnect_PassPhrase_T</ref></type>
+          <declname>connectPass</declname>
+        </param>
+        <briefdescription>
+<para>WLAN Connect to Personal WPA Network interface.<linebreak/>
+ This function connects to an WPA2-PSK or WPA-PSK network.<linebreak/>
+ Function is configurable in two ways: </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>blocking : callback parameter is set to <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL(maximum blocking in error case will be 15seconds)</ref></para></listitem><listitem><para>non-blocking : callback parameter is set to the address of the user function</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">connectionSSID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to char containing the network SSID to connect to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">connectionPass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to char containing the network Pass Phrase.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK - API return code for success. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_SIMPLELINK_ERROR - Failure returned by simplelink API. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_ERROR_SSID_NOT_FOUND - Failure because of incorrect SSID. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_ERROR_WRONG_PASSWORD - Failure because of incorrect Pass phrase. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_ERROR_IP_NOT_ACQ - Connected but ip not acquired</para></simplesect>
+<simplesect kind="return"><para>Retcode_T The return value consist of (First 1 MSByte represents Package ID, Next Byte represents Severity and Last 2 LSBytes represents error code) Below shows the error code(last 2 Bytes) meaning</para></simplesect>
+Example usage: Connect to Personal WPA/WPA2 network with callback (non-blocking) <programlisting><codeline><highlight class="normal">//<sp/>Callback<sp/>function</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>myConnectCallbackFunc(WlanNetworkConnect_Status_T<sp/>returnStatus)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(WLANNWCT_STATUS_CONNECTED<sp/>==<sp/>returnStatus)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Network<sp/>connection<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;Callback<sp/>Function<sp/>:<sp/>Connect<sp/>OK!\n\r&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>User<sp/>may<sp/>add<sp/>logic<sp/>once<sp/>the<sp/>connection<sp/>is<sp/>done</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>E.g<sp/>launch<sp/>another<sp/>OS<sp/>Timer</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>else</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>user<sp/>may<sp/>retry<sp/>to<sp/>connect</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>local<sp/>variables</highlight></codeline>
+<codeline><highlight class="normal">WlanNetworkConnect_SSID_T<sp/>connectSSID;</highlight></codeline>
+<codeline><highlight class="normal">Retcode_T<sp/>retStatus;</highlight></codeline>
+<codeline><highlight class="normal">WlanNetworkConnect_PassPhrase_T<sp/>connectPassPhrase;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>WPA/WPA2<sp/>encrypted<sp/>wireless<sp/>network<sp/>settings</highlight></codeline>
+<codeline><highlight class="normal">connectSSID<sp/>=<sp/>(WlanNetworkConnect_SSID_T)&quot;WPA-NETWORK-NAME&quot;;</highlight></codeline>
+<codeline><highlight class="normal">connectPassPhrase<sp/>=<sp/>(WlanNetworkConnect_PassPhrase_T)&quot;WPA-PASSWORD&quot;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Set<sp/>callback<sp/>functions</highlight></codeline>
+<codeline><highlight class="normal">connectCallback<sp/>=<sp/>myConnectCallbackFunc;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Connect<sp/>to<sp/>network<sp/>--&gt;<sp/>non<sp/>blocking<sp/>function<sp/>with<sp/>callback</highlight></codeline>
+<codeline><highlight class="normal">retStatus<sp/>=<sp/>WlanNetworkConnect_PersonalWPA(connectSSID,<sp/>connectPassPhrase);</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="517" column="1"/>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga6b08614c341359b0edd92c1feaf47fc6" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="203" endline="527">SetAndGetIp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga92275fb469ac71036b4a4f04438d2e0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WlanNetworkConnect_PowerControl</definition>
+        <argsstring>(WlanNetworkConnect_PwrCtrl_T mode, void *data)</argsstring>
+        <name>WlanNetworkConnect_PowerControl</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga099857784f92abc417f8e6e9f21ad31a" kindref="member">WlanNetworkConnect_PwrCtrl_T</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Wlan power control function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Wlan power modes </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- data based on the power mode that is being notified <hruler/>
+ <heading level="2">| mode | data | </heading>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<heading level="2">| WLANNWCT_PWRCTRL_HIBERNATE | not used | </heading>
+</para><para><heading level="2">| WLANNWCT_PWRCTRL_WAKEUP | not used | </heading>
+</para><para><heading level="2">| WLANNWCT_PWRCTRL_FAST_CONNECT | bool | </heading>
+</para><para><heading level="2">| WLANNWCT_PWRCTRL_MDNS_PACKET | bool | </heading>
+</para><para>Example1 usage: Hibernate mode <programlisting><codeline><highlight class="normal">//<sp/>This<sp/>is<sp/>the<sp/>lowest<sp/>power<sp/>mode.<sp/>If<sp/>the<sp/>device<sp/>enter<sp/>into<sp/>hibernate<sp/>mode,<sp/>device<sp/>is<sp/>powered<sp/>off<sp/>except<sp/>RTC<sp/>clock<sp/>keeps<sp/>running.</highlight></codeline>
+<codeline><highlight class="normal">//<sp/><sp/><sp/>In<sp/>this<sp/>mode,<sp/>memory<sp/>is<sp/>not<sp/>retained,<sp/>and<sp/>wake<sp/>up<sp/>requires<sp/>a<sp/>cold<sp/>boot<sp/>initialization.</highlight></codeline>
+<codeline><highlight class="normal">WlanNetworkConnect_PowerControl(WLANNWCT_PWRCTRL_HIBERNATE,<sp/>NULL);</highlight></codeline>
+</programlisting></para><para><simplesect kind="note"><para>If the network is in connected mode, then disconnect from network and enter into hibernate mode. If the device is in hibernate mode, then system won&apos;t connected to the specified network.</para></simplesect>
+Example2 usage: Wakeup mode <programlisting><codeline><highlight class="normal">//<sp/>In<sp/>this<sp/>mode,<sp/>device<sp/>will<sp/>wakeup<sp/>from<sp/>sleep<sp/>mode<sp/>or<sp/>hibernate<sp/>mode.<sp/>Ensure<sp/>that,<sp/>if<sp/>the<sp/>device<sp/>is<sp/>in<sp/>hibernate<sp/>mode,<sp/>then<sp/>wakeup</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>requires<sp/>boot<sp/>initialization</highlight></codeline>
+<codeline><highlight class="normal">WlanNetworkConnect_PowerControl(WLANNWCT_PWRCTRL_WAKEUP,<sp/>NULL);</highlight></codeline>
+</programlisting> <simplesect kind="note"><para>If the device is in hibernate mode, then wakeup the device and connect to the specified network.</para></simplesect>
+Example3 usage: Fast connect mode <programlisting><codeline><highlight class="normal">//<sp/>In<sp/>fast<sp/>connect<sp/>policy,<sp/>in<sp/>the<sp/>event<sp/>of<sp/>disconnect<sp/>or<sp/>upon<sp/>initialization,<sp/>the<sp/>network<sp/>subsystem<sp/>immediately<sp/>tries<sp/>to<sp/>connect<sp/>the</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>last<sp/>access<sp/>point<sp/>that<sp/>it<sp/>was<sp/>connected.<sp/>it<sp/>remembers<sp/>the<sp/>last<sp/>ssid,<sp/>security<sp/>credentials<sp/>and<sp/>channel<sp/>info<sp/>of<sp/>last<sp/>access<sp/>point.</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>The<sp/>main<sp/>advantage<sp/>of<sp/>fast<sp/>connect<sp/>over<sp/>auto<sp/>connect<sp/>is<sp/><sp/>that<sp/>the<sp/>system<sp/>skips<sp/>the<sp/>scan.<sp/>If<sp/>the<sp/>last<sp/>access<sp/>point<sp/>connection<sp/>fails,</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>then<sp/>it<sp/>runs<sp/>the<sp/>scan<sp/>process<sp/>and<sp/>look<sp/>for<sp/>the<sp/>highest<sp/>priority<sp/>profile<sp/>and<sp/>connect<sp/>to<sp/>it.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>To<sp/>enable<sp/>fast<sp/>connect<sp/>policy</highlight></codeline>
+<codeline><highlight class="normal">bool<sp/>statusFlag<sp/>=<sp/>true;</highlight></codeline>
+<codeline><highlight class="normal">WlanNetworkConnect_PowerControl(WLANNWCT_PWRCTRL_FAST_CONNECT,<sp/>(void<sp/>*)&amp;statusFlag);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>To<sp/>disable<sp/>fast<sp/>connect<sp/>policy</highlight></codeline>
+<codeline><highlight class="normal">bool<sp/>statusFlag<sp/>=<sp/>false;</highlight></codeline>
+<codeline><highlight class="normal">WlanNetworkConnect_PowerControl(WLANNWCT_PWRCTRL_FAST_CONNECT,<sp/>(void<sp/>*)&amp;statusFlag);</highlight></codeline>
+</programlisting></para><para>Example4 usage: mDNS mode <programlisting><codeline><highlight class="normal">//<sp/>After<sp/>connecting<sp/>to<sp/>access<sp/>point,<sp/>network<sp/>processor<sp/>will<sp/>send<sp/>the<sp/>mDNS<sp/>packets<sp/>for<sp/>service<sp/>discovery.<sp/>Stop<sp/>sending<sp/>this<sp/>mDNS<sp/>packets</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>when<sp/>it<sp/>not<sp/>required<sp/>by<sp/>the<sp/>system<sp/>application<sp/>for<sp/>power<sp/>optimization.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>To<sp/>enable<sp/>mDNS<sp/>protocol<sp/>enable</highlight></codeline>
+<codeline><highlight class="normal">bool<sp/>statusFlag<sp/>=<sp/>true;</highlight></codeline>
+<codeline><highlight class="normal">WlanNetworkConnect_PowerControl(WLANNWCT_PWRCTRL_MDNS_PACKET,<sp/>(void<sp/>*)&amp;statusFlag);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>To<sp/>enable<sp/>mDNS<sp/>protocol<sp/>disable</highlight></codeline>
+<codeline><highlight class="normal">bool<sp/>statusFlag<sp/>=<sp/>false;</highlight></codeline>
+<codeline><highlight class="normal">WlanNetworkConnect_PowerControl(WLANNWCT_PWRCTRL_MDNS_PACKET,<sp/>(void<sp/>*)&amp;statusFlag);</highlight></codeline>
+</programlisting></para><para><simplesect kind="return"><para>RETCODE_OK in the case of success or an error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="992" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga35e5b048f01531f6eb47ec09f11a3bb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WlanNetworkConnect_ScanNetworks</definition>
+        <argsstring>(WlanNetworkConnect_ScanInterval_T scanInterval, WlanNetworkConnect_ScanList_T *scanList)</argsstring>
+        <name>WlanNetworkConnect_ScanNetworks</name>
+        <param>
+          <type>WlanNetworkConnect_ScanInterval_T</type>
+          <declname>scanInterval</declname>
+        </param>
+        <param>
+          <type><ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gad5a73664d9b4cbeb1087d69d7e245076" kindref="member">WlanNetworkConnect_ScanList_T</ref> *</type>
+          <declname>scanList</declname>
+        </param>
+        <briefdescription>
+<para>Function used to scan the available networks.<linebreak/>
+ Get the available scan information.<linebreak/>
+ List of scan results will be available via the call back function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">scanInterval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time interval between network scan.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">scanList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Structure pointer hold the WLAN scan information data.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK - scan done successful. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_SIMPLELINK_ERROR - scan was not successful. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_NO_NW_AVAILABLE - No network available to scan.</para></simplesect>
+<simplesect kind="return"><para>Retcode_T The return value consist of (First 1 MSByte represents Package ID, Next Byte represents Severity and Last 2 LSBytes represents error code) Below shows the error code(last 2 Bytes) meaning Example usage: Scan networks and print SSIDs <programlisting><codeline><highlight class="normal">//<sp/>local<sp/>variables</highlight></codeline>
+<codeline><highlight class="normal">Retcode_T<sp/>retScanStatus;</highlight></codeline>
+<codeline><highlight class="normal">WlanNetworkConnect_ScanInterval_T<sp/>scanInterval;</highlight></codeline>
+<codeline><highlight class="normal">WlanNetworkConnect_ScanList_T<sp/>scanList;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Set<sp/>scan<sp/>interval</highlight></codeline>
+<codeline><highlight class="normal">scanInterval<sp/>=<sp/>5;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Fill<sp/>out<sp/>the<sp/>scan<sp/>list<sp/>by<sp/>calling<sp/>the<sp/>scan<sp/>network<sp/>function</highlight></codeline>
+<codeline><highlight class="normal">retScanStatus<sp/>=<sp/>WlanNetworkConnect_ScanNetworks(scanInterval,<sp/>&amp;scanList);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Set<sp/>the<sp/>number<sp/>of<sp/>entries</highlight></codeline>
+<codeline><highlight class="normal">int<sp/>nbEntries<sp/>=<sp/>scanList.numOfScanEntries;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Print<sp/>all<sp/>the<sp/>non-empty<sp/>SSIDs</highlight></codeline>
+<codeline><highlight class="normal">for<sp/>(int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>nbEntries;<sp/>i++)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(0<sp/>!=<sp/>scanList.scanData[i].ssidLength)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;<sp/>-<sp/>found<sp/>SSID<sp/>number<sp/>%d<sp/>is<sp/>:<sp/>%s\n\r&quot;,<sp/>i,<sp/>scanList.scanData[i].ssid);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Delay<sp/>each<sp/>printf<sp/>with<sp/>0,5<sp/>seconds</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vTaskDelay(DELAY_500_MSEC);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="836" column="1"/>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga12ccd9f7e6c3b8c8ae9840cfc7e052db" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="538" endline="601">ScanNetwork</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gaa94c7ad6854421c9ba59e9ae897a6d25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WlanNetworkConnect_WEP_Open</definition>
+        <argsstring>(WlanNetworkConnect_SSID_T connectSSID, WlanNetworkConnect_PassPhrase_T connectPass, uint8_t passPhraseLength)</argsstring>
+        <name>WlanNetworkConnect_WEP_Open</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga83ffcce1a83320c0442fd98e710c3271" kindref="member">WlanNetworkConnect_SSID_T</ref></type>
+          <declname>connectSSID</declname>
+        </param>
+        <param>
+          <type><ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga014fbd8a415781080c897cbdd57f8b07" kindref="member">WlanNetworkConnect_PassPhrase_T</ref></type>
+          <declname>connectPass</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>passPhraseLength</declname>
+        </param>
+        <briefdescription>
+<para>WLAN Connect to WEP Open Network interface.<linebreak/>
+ This function connects to an WEP Open network.<linebreak/>
+ Function is configurable in two ways: </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>blocking : callback parameter is set to <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL(maximum blocking in error case will be 15seconds)</ref></para></listitem><listitem><para>non-blocking : callback parameter is set to the address of the user function</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">connectionSSID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to char containing the network SSID to connect to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">connectionPass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to char containing the network Pass Phrase. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">passPhraseLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the Pass Phrase</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK - API return code for success. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_SIMPLELINK_ERROR - Failure returned by simplelink API. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_ERROR_SSID_NOT_FOUND - Failure because of incorrect SSID. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_ERROR_WRONG_PASSWORD - Failure because of incorrect Pass phrase. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_ERROR_IP_NOT_ACQ - Connected but ip not acquired </para></simplesect>
+<simplesect kind="return"><para>RETCODE_INVALID_PARAM - passPhraseLength is zero</para></simplesect>
+<simplesect kind="return"><para>Retcode_T The return value consist of (First 1 MSByte represents Package ID, Next Byte represents Severity and Last 2 LSBytes represents error code) Below shows the error code(last 2 Bytes) meaning</para></simplesect>
+Example usage: Connect to an WEP Open network with callback (non-blocking) <programlisting><codeline><highlight class="normal">//<sp/>Callback<sp/>function</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>myConnectCallbackFunc(WlanNetworkConnect_Status_T<sp/>returnStatus)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(WLANNWCT_STATUS_CONNECTED<sp/>==<sp/>returnStatus)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Network<sp/>connection<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;Callback<sp/>Function<sp/>:<sp/>Connect<sp/>OK!\n\r&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>User<sp/>may<sp/>add<sp/>logic<sp/>once<sp/>the<sp/>connection<sp/>is<sp/>done</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>E.g<sp/>launch<sp/>another<sp/>OS<sp/>Timer</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>else</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>user<sp/>may<sp/>retry<sp/>to<sp/>connect</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>local<sp/>variables</highlight></codeline>
+<codeline><highlight class="normal">//For<sp/>example<sp/>if<sp/>AP<sp/>is<sp/>configured<sp/>to<sp/>WEP<sp/>with<sp/>40bit<sp/>Hex<sp/>password<sp/>of:<sp/>&quot;FFFFFFFFFF&quot;</highlight></codeline>
+<codeline><highlight class="normal">char<sp/>passPhrase[5]<sp/>=<sp/>{<sp/>0xFF,<sp/>0xFF,<sp/>0xFF,<sp/>0xFF,<sp/>0xFF<sp/>};</highlight></codeline>
+<codeline><highlight class="normal">WlanNetworkConnect_SSID_T<sp/>connectSSID;</highlight></codeline>
+<codeline><highlight class="normal">Retcode_T<sp/>retStatus;</highlight></codeline>
+<codeline><highlight class="normal">WlanNetworkConnect_PassPhrase_T<sp/>connectPassPhrase;</highlight></codeline>
+<codeline><highlight class="normal">uint8_t<sp/>passPhraseLength;[Don&apos;t<sp/>use<sp/>strlen()<sp/>in<sp/>order<sp/>not<sp/>to<sp/>bump<sp/>on<sp/>zero/NULL<sp/>in<sp/>the<sp/>passPhrase]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>WEP<sp/>encrypted<sp/>wireless<sp/>network<sp/>settings</highlight></codeline>
+<codeline><highlight class="normal">connectSSID<sp/>=<sp/>(WlanNetworkConnect_SSID_T)&quot;WEP-OPEN-NETWORK-NAME&quot;;</highlight></codeline>
+<codeline><highlight class="normal">connectPassPhrase<sp/>=<sp/>(WlanNetworkConnect_PassPhrase_T)passPhrase;</highlight></codeline>
+<codeline><highlight class="normal">passPhraseLength<sp/>=<sp/>UINT8_C(5);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Connect<sp/>to<sp/>network<sp/>--&gt;<sp/>non<sp/>blocking<sp/>function<sp/>with<sp/>callback</highlight></codeline>
+<codeline><highlight class="normal">retStatus<sp/>=<sp/>WlanNetworkConnect_WEP_Open(connectSSID,<sp/>connectPassPhrase,passPhraseLength,<sp/>false);</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="455" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gab1da79c659da7a1bea3b12b89a42c866" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WlanNetworkConnect_WPS_PBC</definition>
+        <argsstring>(void)</argsstring>
+        <name>WlanNetworkConnect_WPS_PBC</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>WLAN Connect using WPS PBC interface.<linebreak/>
+ This function connects to a network by using the Wi-Fi Protected Setup. After calling the function the user must push the connect button of the Router for around 5 seconds.<linebreak/>
+ Function is configurable in two ways: </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>blocking : callback parameter is set to <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL(maximum blocking in error case will be 15seconds)</ref></para></listitem><listitem><para>non-blocking : callback parameter is set to the address of the user function</para></listitem></itemizedlist>
+</para><para><simplesect kind="return"><para>Retcode_T The return value consist of (First 1 MSByte represents Package ID, Next Byte represents Severity and Last 2 LSBytes represents error code) Below shows the error code(last 2 Bytes) meaning </para></simplesect>
+<simplesect kind="return"><para>RETCODE_OK - API return code for success. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_SIMPLELINK_ERROR - Failure returned by simplelink API. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_CONNECTION_ERROR - connection Failure . </para></simplesect>
+<simplesect kind="return"><para>RETCODE_ERROR_IP_NOT_ACQ - Connected but ip not acquired</para></simplesect>
+Example usage: Connect to a wireless network using WPS (WiFi Protected Setup) PBC (Push Button Connect) with callback (non-blocking) <programlisting><codeline><highlight class="normal"><sp/>//<sp/>Callback<sp/>function</highlight></codeline>
+<codeline><highlight class="normal"><sp/>void<sp/>myConnectCallbackFunc(WlanNetworkConnect_Status_T<sp/>returnStatus)</highlight></codeline>
+<codeline><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>if<sp/>(WLANNWCT_STATUS_CONNECTED<sp/>==<sp/>returnStatus)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Network<sp/>connection<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;Callback<sp/>Function<sp/>:<sp/>Connect<sp/>OK!\n\r&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>User<sp/>may<sp/>add<sp/>logic<sp/>once<sp/>the<sp/>connection<sp/>is<sp/>done</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>E.g<sp/>launch<sp/>another<sp/>OS<sp/>Timer</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>else</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>user<sp/>may<sp/>retry<sp/>to<sp/>connect</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>//<sp/>local<sp/>variables</highlight></codeline>
+<codeline><highlight class="normal"><sp/>Retcode_T<sp/>retStatus[3];</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>//<sp/>Set<sp/>callback<sp/>functions</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Because<sp/>the<sp/>board<sp/>connects<sp/>to<sp/>network<sp/>very<sp/>fast,<sp/>the<sp/>user</highlight></codeline>
+<codeline><highlight class="normal"><sp/>//<sp/>must<sp/>disconnect<sp/>and<sp/>delete<sp/>all<sp/>stored<sp/>profiles<sp/>before</highlight></codeline>
+<codeline><highlight class="normal"><sp/>//<sp/>retrying<sp/>to<sp/>connect<sp/>with<sp/>WPS<sp/>PBC</highlight></codeline>
+<codeline><highlight class="normal"><sp/>retStatus[0]<sp/>=<sp/>WlanNetworkConnect_Disconnect();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>//<sp/>Delete<sp/>all<sp/>stored<sp/>profiles<sp/>in<sp/>order<sp/>to<sp/>connect<sp/>WPS<sp/>by<sp/>pushing</highlight></codeline>
+<codeline><highlight class="normal"><sp/>//<sp/>the<sp/>button<sp/>all<sp/>the<sp/>time.<sp/>Remove<sp/>this<sp/>line<sp/>if<sp/>you<sp/>want<sp/>to</highlight></codeline>
+<codeline><highlight class="normal"><sp/>//<sp/>keep<sp/>profile<sp/>after<sp/>running<sp/>once<sp/>the<sp/>function.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>retStatus[1]<sp/>=<sp/>WlanNetworkConnect_DeleteAllProfiles();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>//<sp/>Connect<sp/>to<sp/>network<sp/>--&gt;<sp/>non<sp/>blocking<sp/>function<sp/>with<sp/>callback</highlight></codeline>
+<codeline><highlight class="normal"><sp/>retStatus[2]<sp/>=<sp/>WlanNetworkConnect_WPS_PBC();</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="647" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gaf2fc8d28b8147f8be1dc74a916a64c32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WlanNetworkConnect_WPS_PIN</definition>
+        <argsstring>(void)</argsstring>
+        <name>WlanNetworkConnect_WPS_PIN</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>WLAN Connect using WPS PIN interface.<linebreak/>
+ This function connects to a network by using the Wi-Fi Protected Setup. The function is configured with the following enrollee PIN code: 35072317. This PIN must be entered in the router interface after calling the function.<linebreak/>
+ Function is configurable in two ways: </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>blocking : callback parameter is set to <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL(maximum blocking in error case will be 15seconds)</ref></para></listitem><listitem><para>non-blocking : callback parameter is set to the address of the user function</para></listitem></itemizedlist>
+</para><para><simplesect kind="return"><para>RETCODE_OK - API return code for success. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_SIMPLELINK_ERROR - Failure returned by simplelink API. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_CONNECTION_ERROR - Connection Failure because of incorrect Pin. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_ERROR_IP_NOT_ACQ - Connected but IP not acquired</para></simplesect>
+<simplesect kind="return"><para>Retcode_T The return value consist of (First 1 MSByte represents Package ID, Next Byte represents Severity and Last 2 LSBytes represents error code) Below shows the error code(last 2 Bytes) meaning Example usage: Connect to a wireless network using WPS (WiFi Protected Setup) PIN (Personal Identify. Number) with callback (non-blocking) <programlisting><codeline><highlight class="normal"><sp/>//<sp/>Callback<sp/>function</highlight></codeline>
+<codeline><highlight class="normal"><sp/>void<sp/>myConnectCallbackFunc(WlanNetworkConnect_Status_T<sp/>returnStatus)</highlight></codeline>
+<codeline><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>if<sp/>(WLANNWCT_STATUS_CONNECTED<sp/>==<sp/>returnStatus)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Network<sp/>connection<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;Callback<sp/>Function<sp/>:<sp/>Connect<sp/>OK!\n\r&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>User<sp/>may<sp/>add<sp/>logic<sp/>once<sp/>the<sp/>connection<sp/>is<sp/>done</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>E.g<sp/>launch<sp/>another<sp/>OS<sp/>Timer</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>else</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>user<sp/>may<sp/>retry<sp/>to<sp/>connect</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>//<sp/>local<sp/>variables</highlight></codeline>
+<codeline><highlight class="normal"><sp/>Retcode_T<sp/>retStatus[3];</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Because<sp/>the<sp/>board<sp/>connects<sp/>to<sp/>network<sp/>very<sp/>fast,<sp/>the<sp/>user</highlight></codeline>
+<codeline><highlight class="normal"><sp/>//<sp/>must<sp/>disconnect<sp/>and<sp/>delete<sp/>all<sp/>stored<sp/>profiles<sp/>before</highlight></codeline>
+<codeline><highlight class="normal"><sp/>//<sp/>retrying<sp/>to<sp/>connect<sp/>with<sp/>WPS<sp/>PIN</highlight></codeline>
+<codeline><highlight class="normal"><sp/>retStatus[0]<sp/>=<sp/>WlanNetworkConnect_Disconnect();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>//<sp/>Delete<sp/>all<sp/>stored<sp/>profiles<sp/>in<sp/>order<sp/>to<sp/>connect<sp/>WPS<sp/>using</highlight></codeline>
+<codeline><highlight class="normal"><sp/>//<sp/>enrollee<sp/>PIN<sp/>all<sp/>the<sp/>time.<sp/>Remove<sp/>this<sp/>line<sp/>if<sp/>you<sp/>want<sp/>to</highlight></codeline>
+<codeline><highlight class="normal"><sp/>//<sp/>keep<sp/>profile<sp/>after<sp/>running<sp/>once<sp/>the<sp/>function.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>retStatus[1]<sp/>=<sp/>WlanNetworkConnect_DeleteAllProfiles();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>//<sp/>Connect<sp/>to<sp/>network<sp/>--&gt;<sp/>non<sp/>blocking<sp/>function<sp/>with<sp/>callback</highlight></codeline>
+<codeline><highlight class="normal"><sp/>retStatus[2]<sp/>=<sp/>WlanNetworkConnect_WPS_PIN();</highlight></codeline>
+</programlisting> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="707" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gaa73d4203c22e992cc57eabd6c4a2f157" prot="public" static="no">
+        <name>WLANNWCT_DUMMY_SSID</name>
+        <initializer>&quot;XDK110&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>macro to represent the ssid of the device in WPS_PBC and WPS_PIN Security mode </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="78" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga17851987bf870711013243f6529a305a" prot="public" static="no">
+        <name>WLANNWCT_ENROLLEE_PIN</name>
+        <initializer>&quot;35072317&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the Enrollee PIN that must be entered in the router for WPS PIN Connection. The pin code is stored in the SFlash. The default pin code is 35072317. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="77" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gaaff7f24c71bfabea7f5c43631e7e71ab" prot="public" static="no">
+        <name>WLANNWCT_INITIALZED</name>
+        <initializer>UINT8_C(1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to represent Initialized state of Wlan </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="79" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gacfe95d1196eb27694beedd7a46a11eca" prot="public" static="no">
+        <name>WLANNWCT_MAX_MAC_ADDR_LEN</name>
+        <initializer>UINT8_C(6)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The max buffer for storing the MAC address length </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="75" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga2864793d4bea7ae70b37bb732b11ebd2" prot="public" static="no">
+        <name>WLANNWCT_MAX_SCAN_INFO_BUF</name>
+        <initializer>UINT8_C(20)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The max buffer for storing the scan data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="73" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" bodystart="73" bodyend="-1"/>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga12ccd9f7e6c3b8c8ae9840cfc7e052db" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="538" endline="601">ScanNetwork</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga897b6a80d483da8b64fe1e89b20ba5b3" prot="public" static="no">
+        <name>WLANNWCT_MAX_SSID_LENGTH</name>
+        <initializer>UINT8_C(32)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The max buffer for storing the SSID length </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="74" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga2ce4e2400d526be9d0fd27790dcddfb8" prot="public" static="no">
+        <name>WLANNWCT_NOT_INITIALZED</name>
+        <initializer>UINT8_C(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to represent un-Initialized state of Wlan Macro to represent the blocking connection request timeout </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="80" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gac0ca14857ef4c7daf0d19cfbc6fc0cae" prot="public" static="no">
+        <name>WLANNWCT_TIMEOUT_SEC</name>
+        <initializer>UINT32_C(180)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" line="84" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Wlan/include/BCDS_WlanNetworkConnect.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Module Describes the usage Of Wlan Interface. </para>    </briefdescription>
+    <detaileddescription>
+<para>The interface header exports High-level Wlan Interface API&apos;s for integrating with the Wlan Interface which are used to Initialize Wlan network connection Open Wlan Connection with the WEP &amp; Wlan Connection Get status by deleting profiles and de-initialize the wlan connection. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

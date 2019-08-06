@@ -1,0 +1,74 @@
+/** 
+@page XDK_Operation_Modes XDK Operation Modes
+@brief Explains XDK Operation Modes, meaning of LEDs, Assertions and Stack Overflows
+<hr>
+
+This page describes the different operation modes of the XDK, how to determine in which mode XDK is and how to switch between them. Please note, that in normal operation, XDK Workbench will automatically detect the mode XDK currently is in. Furthermore, XDK Workbench will try to automatically perform the mode switch that are required for its correct function. However, there may be certain situations, in which the automatic detection or the automated switching does not work.
+
+In general, XDK knows the following modes:
+<ul>
+	<li>Bootloader Mode</li>
+	<li>Application Mode</li>
+	<li>Assertion</li>
+	<li>Stack Overflow</li>
+</ul>
+
+\section XDK_Operation_Modes_LED_Code LED Code
+
+XDK uses the LEDs to signal the operation mode it is currently in. Since in application mode, the application has control over the LEDs, the LED code may not necessarily be unambiguous.
+
+Red LED     | Orange LED | Yellow LED | Macro    
+------------|------------|------------|-------------------------
+On          | Off        | Off        | XDK in Bootloader, USB not connected
+On          | Off        | On         | XDK in Bootloader, USB connected
+Blinking    | Off        | Off        | XDK in Bootloader, invalid application
+Off         | Off        | Off        | XDK in application mode (LEDs are user programmable)
+On          | On         | On         | XDK is in Assertion mode
+On          | Off        | On         | XDK is in Stack Overflow mode
+
+
+\section XDK_Operation_Modes_Bootloader XDK Bootloader Mode
+
+XDK has a bootloader, that allows to upload XDK Applications via USB (see @ref XDK_Bootloader for further information). The bootloader is write protected and can only be overwritten or updated using the J-Link JTAG Adapter via XDK Workbench. When powering up, XDK will automatically go into the bootloader mode, which is indicated by the red LED. If XDK finds a valid application, the bootloader will automatically turn off the red LED and start the application.
+
+In case no valid application is found or XDK is forced to go into bootloader mode, the yellow LED indicates whether XDK is successfully connected to a PC. Once the red and yellow LED are solid on, XDK shows up in the device view of XDK Workbench and can be programmed. 
+
+To get XDK into the bootloader, XDK Workbench can be used. Right click on the XDK and select "Goto Bootloader". In case XDK is not responding (and possibly not even recognized over USB), then you can manually force XDK into bootloader mode like so (see also @ref XDK_Bootloader_Engage_1):
+<ul>
+	<li>Switch off XDK</li>
+	<li>Press and hold Button 1</li>
+	<li>Turn on XDK</li>
+	<li>Release Button 1 as soon as red LED turns on</li>
+</ul>
+
+ 
+\section XDK_Operation_Modes_Application XDK Application Mode
+
+In application mode, the LEDs of XDK are user programmable. More information on the control flow can be found [here](@ref XDK_SOFTWARE_STARTUP_GUIDE).
+
+
+\section XDK_Operation_Modes_Assertion Assertion
+
+[Assertions](https://en.wikipedia.org/wiki/Assertion_%28software_development%29) are used in XDK to ensure certain conditions that must be met when calling a function or executing a given piece of code. The developer uses assertions to indicate explicit assumptions that he takes during development of the code. 
+
+In case one of those assumptions is violated during the execution of the application, XDK will stop and turn on all LEDs. Furthermore, the following message will be printed out on the console:
+
+\code
+    asserted at Filename Libraries/FreeRTOS/FreeRTOS/source/queue.c, line no 599
+\endcode
+
+XDK will have to be reset now, before it can be used again. Either, you simply switch it off and on again, and XDK will then execute the installed application. Or, you force it into bootloader mode (see above) to be able to install a new application onto XDK.
+
+To debug an assertion, dig into the code and find the place where your program asserted. The assertion will tell you, which assumption was not fulfilled. Check your code to make sure, that all assumptions are met when calling another function.
+
+
+\section XDK_Operation_Modes_Stack_Overflow Stack Overflow
+
+The [call stack](https://en.wikipedia.org/wiki/Call_stack) of a program is the memory that is allocated for holding runtime information that is mostly produced while calling functions. Each task in freeRTOS has a limited stack size. A task that exceeds its own reserved stack size corrupts the memory of other task, which will lead to unpredictable behaviour. This situation is called [Stack Overflow](https://en.wikipedia.org/wiki/Stack_overflow) and must be avoided. XDK uses a heuristic to detect, whether a stack overflow has occurred. If this is the case, XDK will turn on the red and yellow LED and print out the following message on the console:
+\code
+    ----- STACK OVERFLOW -----Task Name: Lwm2mExampleClient -----Current Task Handle: 0xAB
+\endcode
+
+XDK will have to be reset now, before it can be used again. Either, you simply switch it off and on again, XDK will then execute the installed application. Or, you force it into bootloader mode (see above) to be able to install a new application onto XDK.
+
+*/

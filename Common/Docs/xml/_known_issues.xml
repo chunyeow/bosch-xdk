@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_known_issues" kind="page">
+    <compoundname>Known_issues</compoundname>
+    <title>Known Issues</title>
+    <detaileddescription>
+<para>Lists known issues in XDK SDK</para><para><hruler/>
+</para><para><table rows="17" cols="3"><row>
+<entry thead="yes"><para># </para></entry><entry thead="yes"><para>Area </para></entry><entry thead="yes"><para>Issue Description  </para></entry></row>
+<row>
+<entry thead="no"><para>1 </para></entry><entry thead="no"><para>Essentials </para></entry><entry thead="no"><para>De-bouncing feature for push button module is currently not supported. </para></entry></row>
+<row>
+<entry thead="no"><para>2 </para></entry><entry thead="no"><para>BSP </para></entry><entry thead="no"><para>USB CDC ACM is only working, when application or bootloader is running.<linebreak/>
+ When application is crashed or does not start, USB Device is not recognized on PC. Resetting XDK helps. </para></entry></row>
+<row>
+<entry thead="no"><para>3 </para></entry><entry thead="no"><para>BSP </para></entry><entry thead="no"><para>When USB is connected to PC, but COM port is not opened, printf transmissions will experience around 10ms delay. </para></entry></row>
+<row>
+<entry thead="no"><para>4 </para></entry><entry thead="no"><para>BSP </para></entry><entry thead="no"><para>Each USB transmission (such as printf) is truncated at 1024 bytes. </para></entry></row>
+<row>
+<entry thead="no"><para>5 </para></entry><entry thead="no"><para>BSP </para></entry><entry thead="no"><para>BMM150_INT along with SD_DETECT interrupt cannot be used at the same time. Similarly BMI160_INT2 along with BUTTON2 interrupt &amp; BMA280_INT2 along with BUTTON1 interrupt cannot be used at the same time. </para></entry></row>
+<row>
+<entry thead="no"><para>6 </para></entry><entry thead="no"><para>Base System </para></entry><entry thead="no"><para>A printf message must end with &quot;\n&quot;, since stdio keep storing the printf arguments until it encounters a &quot;\n&quot;. </para></entry></row>
+<row>
+<entry thead="no"><para>7 </para></entry><entry thead="no"><para>Base System </para></entry><entry thead="no"><para>Printf is comparably slow and might exhibit unpredictable timing behaviour. </para></entry></row>
+<row>
+<entry thead="no"><para>8 </para></entry><entry thead="no"><para>Base System </para></entry><entry thead="no"><para>XDK software uses newlib as C standard library which makes malloc, free, printf and other library functions not thread-safe. </para></entry></row>
+<row>
+<entry thead="no"><para>9 </para></entry><entry thead="no"><para>Networking </para></entry><entry thead="no"><para>WLAN transfers at high frequencies are currently not supported. </para></entry></row>
+<row>
+<entry thead="no"><para>10 </para></entry><entry thead="no"><para>Networking </para></entry><entry thead="no"><para>Multi-threading for WLAN transfers is not implemented. </para></entry></row>
+<row>
+<entry thead="no"><para>11 </para></entry><entry thead="no"><para>Networking </para></entry><entry thead="no"><para>Support for TLS/HTTPS is in &apos;technical preview&apos; state and not ready for production use. Especially, operations relying on the random number generator are not secure, as the RNG is always returning 0. </para></entry></row>
+<row>
+<entry thead="no"><para>12 </para></entry><entry thead="no"><para>Networking </para></entry><entry thead="no"><para>Sending data over BLE at high frequencies is currently unsupported. </para></entry></row>
+<row>
+<entry thead="no"><para>13 </para></entry><entry thead="no"><para>Sensors </para></entry><entry thead="no"><para>When the magnetic sensor is exposed to high magnetic field, the value read may be greater than 2500 microtesla on the Z axis. </para></entry></row>
+<row>
+<entry thead="no"><para>14 </para></entry><entry thead="no"><para>Sensors </para></entry><entry thead="no"><para>Initialization of sensors takes an initial delay. Without this delay, first few samples would be incorrect. </para></entry></row>
+<row>
+<entry thead="no"><para>15 </para></entry><entry thead="no"><para>Sensors </para></entry><entry thead="no"><para>The XDK sensor API allows all (even invalid) power mode transitions. Please refer to the sensor data sheets for valid power mode transitions. </para></entry></row>
+<row>
+<entry thead="no"><para>16 </para></entry><entry thead="no"><para>Lem </para></entry><entry thead="no"><para>When Lem Sensor external hardware is connected to XDK with USB connected the current value fluctuates from 0 to 9Ampere. </para></entry></row>
+</table>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

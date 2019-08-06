@@ -1,0 +1,306 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_b_c_d_s___lo_ra_simplified_8h" kind="file">
+    <compoundname>BCDS_LoRaSimplified.h</compoundname>
+    <includes refid="_b_c_d_s___retcode_8h" local="yes">BCDS_Retcode.h</includes>
+    <includes refid="_b_c_d_s___lo_ra_device_8h" local="yes">BCDS_LoRaDevice.h</includes>
+    <incdepgraph>
+      <node id="37824">
+        <label>stdbool.h</label>
+      </node>
+      <node id="37823">
+        <label>stdint.h</label>
+      </node>
+      <node id="37821">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="37822" relation="include">
+        </childnode>
+      </node>
+      <node id="37826">
+        <label>stdlib.h</label>
+      </node>
+      <node id="37827">
+        <label>BCDS_LoRaDevice.h</label>
+        <link refid="_b_c_d_s___lo_ra_device_8h"/>
+        <childnode refid="37822" relation="include">
+        </childnode>
+        <childnode refid="37821" relation="include">
+        </childnode>
+        <childnode refid="37828" relation="include">
+        </childnode>
+      </node>
+      <node id="37828">
+        <label>BCDS_LoRaDriversConfig.h</label>
+        <link refid="_b_c_d_s___lo_ra_drivers_config_8h"/>
+      </node>
+      <node id="37825">
+        <label>string.h</label>
+      </node>
+      <node id="37822">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="37823" relation="include">
+        </childnode>
+        <childnode refid="37824" relation="include">
+        </childnode>
+        <childnode refid="37825" relation="include">
+        </childnode>
+        <childnode refid="37826" relation="include">
+        </childnode>
+      </node>
+      <node id="37820">
+        <label>SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaSimplified.h</label>
+        <link refid="BCDS_LoRaSimplified.h"/>
+        <childnode refid="37821" relation="include">
+        </childnode>
+        <childnode refid="37827" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="struct_lo_ra___network_config___s" prot="public">LoRa_NetworkConfig_S</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga1c42d720ac68f3de8206336b18183e3f" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* LoRa_AppCallback_T)(void *unused, LoRa_NetworkEvent_T event)</definition>
+        <argsstring>)(void *unused, LoRa_NetworkEvent_T event)</argsstring>
+        <name>LoRa_AppCallback_T</name>
+        <briefdescription>
+<para>This data type represents a function pointer which would be executed when any event (error/status/...) is to be notified. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: The argument containing relevant event information. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaSimplified.h" line="71" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaSimplified.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaa5001109e54061d9cb520f0a22178b9a" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* Lora_DataReceivedCallBack)(uint8_t *rxBuffer, uint8_t rxDataLength)</definition>
+        <argsstring>)(uint8_t *rxBuffer, uint8_t rxDataLength)</argsstring>
+        <name>Lora_DataReceivedCallBack</name>
+        <briefdescription>
+<para>Callback function signature to be called on data reception. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">rxBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Buffer in which received data to be stored.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">rxDataLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Length of received data. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaSimplified.h" line="80" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaSimplified.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga149fda63465e289a45956da0b82f0bfe" prot="public" static="no">
+        <type>struct <ref refid="struct_lo_ra___network_config___s" kindref="compound">LoRa_NetworkConfig_S</ref></type>
+        <definition>typedef struct LoRa_NetworkConfig_S  LoRa_NetworkConfig_T</definition>
+        <argsstring></argsstring>
+        <name>LoRa_NetworkConfig_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaSimplified.h" line="100" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga4825b3ed551e87b06e35f01b2bbc4278" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BCDS_DEPRECATED</definition>
+        <argsstring>(Retcode_T LoRa_Initialize(LoRa_NetworkConfig_T *config))</argsstring>
+        <name>BCDS_DEPRECATED</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref> </type>
+          <declname>LoRa_Initialize</declname>
+          <array>LoRa_NetworkConfig_T *config</array>
+        </param>
+        <briefdescription>
+<para>LoRa initialization entry will initialize the CommBuffer, the PalState, the Scheduler and LoRa itself. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000054"><xreftitle>Deprecated</xreftitle><xrefdescription><para>since version vxx.xx.xx </para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a lora Network configuration</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+RETCODE_OK: success, RECCODE_FAILURE: on error </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaSimplified.h" line="115" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga362028aec3f867c429fcf0ab2bb62cd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BCDS_DEPRECATED</definition>
+        <argsstring>(Retcode_T LoRa_Deinitialize(void))</argsstring>
+        <name>BCDS_DEPRECATED</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref> </type>
+          <declname>LoRa_Deinitialize</declname>
+          <defname>LoRa_Join</defname>
+          <array>void</array>
+        </param>
+        <briefdescription>
+<para>LoRa Deinitialization entry will deinitialize the CommBuffer, the PalState, the Scheduler and LoRa itself. </para>        </briefdescription>
+        <detaileddescription>
+<para>starts a LoRa join process</para><para><xrefsect id="deprecated_1_deprecated000055"><xreftitle>Deprecated</xreftitle><xrefdescription><para>since version vxx.xx.xx </para></xrefdescription></xrefsect></para><para>RETCODE_OK: success, RECCODE_FAILURE: on error</para><para><xrefsect id="deprecated_1_deprecated000056"><xreftitle>Deprecated</xreftitle><xrefdescription><para>since version vxx.xx.xx </para></xrefdescription></xrefsect></para><para>RETCODE_OK: join procedure successfully started RECODE_FAILURE: join error </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaSimplified.h" line="126" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gae0ef7eea4f77684521d078e37728516c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BCDS_DEPRECATED</definition>
+        <argsstring>(Retcode_T LoRa_TransmitData(uint8_t loraPort, void *dataBuffer, uint16_t dataBufferSize))</argsstring>
+        <name>BCDS_DEPRECATED</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref> </type>
+          <declname>LoRa_TransmitData</declname>
+          <array>uint8_t loraPort, void *dataBuffer, uint16_t dataBufferSize</array>
+        </param>
+        <briefdescription>
+<para>function to transmit data through LoRa communication </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000057"><xreftitle>Deprecated</xreftitle><xrefdescription><para>since version vxx.xx.xx </para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">loraPort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MAC payload port (must be &gt; 0)</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dataBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MAC data buffer to be sent</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dataBufferSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MAC data buffer size</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+uint8_t 0: OK 1: Busy 2: No network joined 3: Length or port error 4: Unknown MAC command 5: Unable to find a free channel </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaSimplified.h" line="158" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="comment">/*<sp/>header<sp/>definition<sp/>********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BCDS_LORA_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BCDS_LORA_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#warning<sp/>&quot;BCDS_LoRaSimplified.h<sp/>is<sp/>deprecated,<sp/>use<sp/>BCDS_LoRaDevice.h<sp/>instead&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___retcode_8h" kindref="compound">BCDS_Retcode.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___lo_ra_device_8h" kindref="compound">BCDS_LoRaDevice.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga1c42d720ac68f3de8206336b18183e3f" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga1c42d720ac68f3de8206336b18183e3f" kindref="member">LoRa_AppCallback_T</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>unused,<sp/><ref refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga6c0f8e7f4ce328c62ca1c1441716a8cb" kindref="member">LoRa_NetworkEvent_T</ref><sp/>event);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaa5001109e54061d9cb520f0a22178b9a" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaa5001109e54061d9cb520f0a22178b9a" kindref="member">Lora_DataReceivedCallBack</ref>)(uint8_t<sp/>*rxBuffer,<sp/>uint8_t<sp/>rxDataLength);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="struct_lo_ra___network_config___s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_lo_ra___network_config___s" kindref="compound">LoRa_NetworkConfig_S</ref></highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84" refid="struct_lo_ra___network_config___s_1a8644153b1c46ffcaeb2b44b5544a2c1a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_lo_ra___network_config___s_1a8644153b1c46ffcaeb2b44b5544a2c1a" kindref="member">DevAddr</ref>;</highlight></codeline>
+<codeline lineno="85" refid="struct_lo_ra___network_config___s_1a80c627d82cb5bffd8295ca710a133bfb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="struct_lo_ra___network_config___s_1a80c627d82cb5bffd8295ca710a133bfb" kindref="member">DevEui</ref>;</highlight></codeline>
+<codeline lineno="86" refid="struct_lo_ra___network_config___s_1a16010dc166746af49b2c2b286f5d644c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="struct_lo_ra___network_config___s_1a16010dc166746af49b2c2b286f5d644c" kindref="member">AppEui</ref>;</highlight></codeline>
+<codeline lineno="87" refid="struct_lo_ra___network_config___s_1a04e90b783b4e6841ecda8d32d10dc90e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*<ref refid="struct_lo_ra___network_config___s_1a04e90b783b4e6841ecda8d32d10dc90e" kindref="member">NwkSKey</ref>;</highlight></codeline>
+<codeline lineno="88" refid="struct_lo_ra___network_config___s_1a46a2c1c82bda378fb02d20db36bbe414" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*<ref refid="struct_lo_ra___network_config___s_1a46a2c1c82bda378fb02d20db36bbe414" kindref="member">AppSKey</ref>;</highlight></codeline>
+<codeline lineno="89" refid="struct_lo_ra___network_config___s_1a560c2bd9214ee75105acac8593614bd9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*<ref refid="struct_lo_ra___network_config___s_1a560c2bd9214ee75105acac8593614bd9" kindref="member">AppKey</ref>;</highlight></codeline>
+<codeline lineno="90" refid="struct_lo_ra___network_config___s_1a426f0e1108ebe3ba1b05c2853c0b0c3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_lo_ra___network_config___s_1a426f0e1108ebe3ba1b05c2853c0b0c3a" kindref="member">ReceiveDelay1</ref>;</highlight></codeline>
+<codeline lineno="91" refid="struct_lo_ra___network_config___s_1a67fbe3fba2eb31f8879ea22674dd50d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_lo_ra___network_config___s_1a67fbe3fba2eb31f8879ea22674dd50d8" kindref="member">ReceiveDelay2</ref>;</highlight></codeline>
+<codeline lineno="92" refid="struct_lo_ra___network_config___s_1a59ed32d2c7ce6d0b2011da8b0109b391" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_lo_ra___network_config___s_1a59ed32d2c7ce6d0b2011da8b0109b391" kindref="member">JoinAcceptDelay1</ref>;</highlight></codeline>
+<codeline lineno="93" refid="struct_lo_ra___network_config___s_1ae4a12f9dc83c6cedcf8afc05fb9ea06f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_lo_ra___network_config___s_1ae4a12f9dc83c6cedcf8afc05fb9ea06f" kindref="member">JoinAcceptDelay2</ref>;</highlight></codeline>
+<codeline lineno="94" refid="struct_lo_ra___network_config___s_1a75b2efb60e15430b9b6b04f510edd9a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_lo_ra___network_config___s_1a75b2efb60e15430b9b6b04f510edd9a4" kindref="member">Confirmed</ref>;</highlight></codeline>
+<codeline lineno="95" refid="struct_lo_ra___network_config___s_1ab632fb0b4d5156ea4df0b1e15410e913" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_lo_ra___network_config___s_1ab632fb0b4d5156ea4df0b1e15410e913" kindref="member">frequency</ref>;</highlight></codeline>
+<codeline lineno="96" refid="struct_lo_ra___network_config___s_1a0cf0c7e2505303f6379e9f554b80134e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_lo_ra___network_config___s_1a0cf0c7e2505303f6379e9f554b80134e" kindref="member">rx2DataRate</ref>;</highlight></codeline>
+<codeline lineno="97" refid="struct_lo_ra___network_config___s_1a6a3326043e7421272b26b3064694995e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_lo_ra___network_config___s_1a6a3326043e7421272b26b3064694995e" kindref="member">rx2frequency</ref>;</highlight></codeline>
+<codeline lineno="98" refid="struct_lo_ra___network_config___s_1af1fc620c1694c8934dbb422423595deb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga1c42d720ac68f3de8206336b18183e3f" kindref="member">LoRa_AppCallback_T</ref><sp/><ref refid="struct_lo_ra___network_config___s_1af1fc620c1694c8934dbb422423595deb" kindref="member">appCallback</ref>;</highlight></codeline>
+<codeline lineno="99" refid="struct_lo_ra___network_config___s_1addca82c8a1e423815ad93a9a6722672a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaa5001109e54061d9cb520f0a22178b9a" kindref="member">Lora_DataReceivedCallBack</ref><sp/><ref refid="struct_lo_ra___network_config___s_1addca82c8a1e423815ad93a9a6722672a" kindref="member">callBackOnDataRead</ref>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}<sp/><ref refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga149fda63465e289a45956da0b82f0bfe" kindref="member">LoRa_NetworkConfig_T</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><ref refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga4825b3ed551e87b06e35f01b2bbc4278" kindref="member">BCDS_DEPRECATED</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>LoRa_Initialize(<ref refid="struct_lo_ra___network_config___s" kindref="compound">LoRa_NetworkConfig_T</ref>*<sp/>config));</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><ref refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga4825b3ed551e87b06e35f01b2bbc4278" kindref="member">BCDS_DEPRECATED</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>LoRa_Deinitialize(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><ref refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga4825b3ed551e87b06e35f01b2bbc4278" kindref="member">BCDS_DEPRECATED</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___lo_ra_1gac15904441cffe97eaa910cfff9734f76" kindref="member">LoRa_Join</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><ref refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga4825b3ed551e87b06e35f01b2bbc4278" kindref="member">BCDS_DEPRECATED</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>LoRa_TransmitData(uint8_t<sp/>loraPort,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*dataBuffer,<sp/>uint16_t<sp/>dataBufferSize));</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Deprecated<sp/>functions<sp/>will<sp/>be<sp/>removed<sp/>as<sp/>part<sp/>of<sp/>PFM-659.<sp/>Deprecated<sp/>since<sp/>vXXX<sp/>(@todo:<sp/>replace<sp/>xxx<sp/>with<sp/>next<sp/>version)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><ref refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga4825b3ed551e87b06e35f01b2bbc4278" kindref="member">BCDS_DEPRECATED</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>LoRa_initialize(<ref refid="struct_lo_ra___network_config___s" kindref="compound">LoRa_NetworkConfig_T</ref>*<sp/>config));</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><ref refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga4825b3ed551e87b06e35f01b2bbc4278" kindref="member">BCDS_DEPRECATED</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>LoRa_deinitialize(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><ref refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga4825b3ed551e87b06e35f01b2bbc4278" kindref="member">BCDS_DEPRECATED</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>LoRa_join(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><ref refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga4825b3ed551e87b06e35f01b2bbc4278" kindref="member">BCDS_DEPRECATED</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>LoRa_transmitData(uint8_t<sp/>loraPort,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*dataBuffer,<sp/>uint16_t<sp/>dataBufferSize));</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>INCLUDE_BCDS_LORA_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaSimplified.h"/>
+  </compounddef>
+</doxygen>

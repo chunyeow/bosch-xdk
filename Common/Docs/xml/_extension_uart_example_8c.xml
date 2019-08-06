@@ -1,0 +1,959 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_extension_uart_example_8c" kind="file">
+    <compoundname>ExtensionUartExample.c</compoundname>
+    <includes refid="_xdk_extension_port_2source_2_xdk_app_info_8h" local="yes">XdkAppInfo.h</includes>
+    <includes refid="_xdk_extension_port_2source_2_app_controller_8h" local="yes">AppController.h</includes>
+    <includes refid="_extension_uart_example_8h" local="yes">ExtensionUartExample.h</includes>
+    <includes refid="_b_s_p___extension_port_8h" local="yes">BSP_ExtensionPort.h</includes>
+    <includes refid="_b_c_d_s___u_a_r_t_transceiver_8h" local="yes">BCDS_UARTTransceiver.h</includes>
+    <includes refid="_b_c_d_s___m_c_u___u_a_r_t_8h" local="yes">BCDS_MCU_UART.h</includes>
+    <includes local="no">stdio.h</includes>
+    <incdepgraph>
+      <node id="21922">
+        <label>stdbool.h</label>
+      </node>
+      <node id="21932">
+        <label>BCDS_HALConfig.h</label>
+        <link refid="_b_c_d_s___h_a_l_config_8h"/>
+      </node>
+      <node id="21917">
+        <label>XdkAppInfo.h</label>
+        <link refid="_xdk_extension_port_2source_2_xdk_app_info_8h"/>
+        <childnode refid="21918" relation="include">
+        </childnode>
+        <childnode refid="21919" relation="include">
+        </childnode>
+      </node>
+      <node id="21927">
+        <label>BCDS_CmdProcessor.h</label>
+        <link refid="_b_c_d_s___cmd_processor_8h"/>
+        <childnode refid="21928" relation="include">
+        </childnode>
+        <childnode refid="21920" relation="include">
+        </childnode>
+        <childnode refid="21919" relation="include">
+        </childnode>
+      </node>
+      <node id="21938">
+        <label>BCDS_Assert.h</label>
+        <link refid="_b_c_d_s___assert_8h"/>
+        <childnode refid="21919" relation="include">
+        </childnode>
+      </node>
+      <node id="21918">
+        <label>XdkCommonInfo.h</label>
+        <link refid="_xdk_common_info_8h"/>
+        <childnode refid="21919" relation="include">
+        </childnode>
+      </node>
+      <node id="21921">
+        <label>stdint.h</label>
+      </node>
+      <node id="21919">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="21920" relation="include">
+        </childnode>
+      </node>
+      <node id="21924">
+        <label>stdlib.h</label>
+      </node>
+      <node id="21939">
+        <label>BCDS_TaskConfig.h</label>
+        <link refid="_b_c_d_s___task_config_8h"/>
+      </node>
+      <node id="21942">
+        <label>semphr.h</label>
+        <link refid="semphr_8h"/>
+        <childnode refid="21943" relation="include">
+        </childnode>
+      </node>
+      <node id="21936">
+        <label>stddef.h</label>
+      </node>
+      <node id="21934">
+        <label>BCDS_RingBuffer.h</label>
+        <link refid="_b_c_d_s___ring_buffer_8h"/>
+        <childnode refid="21928" relation="include">
+        </childnode>
+        <childnode refid="21920" relation="include">
+        </childnode>
+      </node>
+      <node id="21941">
+        <label>portable.h</label>
+      </node>
+      <node id="21944">
+        <label>BCDS_MCU_UART.h</label>
+        <link refid="_b_c_d_s___m_c_u___u_a_r_t_8h"/>
+        <childnode refid="21931" relation="include">
+        </childnode>
+      </node>
+      <node id="21929">
+        <label>BCDS_UtilsConfig.h</label>
+        <link refid="_b_c_d_s___utils_config_8h"/>
+      </node>
+      <node id="21923">
+        <label>string.h</label>
+      </node>
+      <node id="21928">
+        <label>BCDS_Utils.h</label>
+        <link refid="_b_c_d_s___utils_8h"/>
+        <childnode refid="21929" relation="include">
+        </childnode>
+        <childnode refid="21919" relation="include">
+        </childnode>
+      </node>
+      <node id="21920">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="21921" relation="include">
+        </childnode>
+        <childnode refid="21922" relation="include">
+        </childnode>
+        <childnode refid="21923" relation="include">
+        </childnode>
+        <childnode refid="21924" relation="include">
+        </childnode>
+      </node>
+      <node id="21925">
+        <label>AppController.h</label>
+        <link refid="_xdk_extension_port_2source_2_app_controller_8h"/>
+        <childnode refid="21920" relation="include">
+        </childnode>
+      </node>
+      <node id="21940">
+        <label>projdefs.h</label>
+      </node>
+      <node id="21931">
+        <label>BCDS_HAL.h</label>
+        <link refid="_b_c_d_s___h_a_l_8h"/>
+        <childnode refid="21919" relation="include">
+        </childnode>
+        <childnode refid="21932" relation="include">
+        </childnode>
+      </node>
+      <node id="21943">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+      </node>
+      <node id="21937">
+        <label>FreeRTOSConfig.h</label>
+        <link refid="_free_r_t_o_s_config_8h"/>
+        <childnode refid="21921" relation="include">
+        </childnode>
+        <childnode refid="21938" relation="include">
+        </childnode>
+        <childnode refid="21939" relation="include">
+        </childnode>
+      </node>
+      <node id="21935">
+        <label>FreeRTOS.h</label>
+        <link refid="_free_r_t_o_s_8h"/>
+        <childnode refid="21936" relation="include">
+        </childnode>
+        <childnode refid="21921" relation="include">
+        </childnode>
+        <childnode refid="21937" relation="include">
+        </childnode>
+        <childnode refid="21940" relation="include">
+        </childnode>
+        <childnode refid="21941" relation="include">
+        </childnode>
+      </node>
+      <node id="21930">
+        <label>BSP_ExtensionPort.h</label>
+        <link refid="_b_s_p___extension_port_8h"/>
+        <childnode refid="21931" relation="include">
+        </childnode>
+      </node>
+      <node id="21945">
+        <label>stdio.h</label>
+      </node>
+      <node id="21916">
+        <label>SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c</label>
+        <link refid="ExtensionUartExample.c"/>
+        <childnode refid="21917" relation="include">
+        </childnode>
+        <childnode refid="21925" relation="include">
+        </childnode>
+        <childnode refid="21926" relation="include">
+        </childnode>
+        <childnode refid="21930" relation="include">
+        </childnode>
+        <childnode refid="21933" relation="include">
+        </childnode>
+        <childnode refid="21944" relation="include">
+        </childnode>
+        <childnode refid="21945" relation="include">
+        </childnode>
+      </node>
+      <node id="21926">
+        <label>ExtensionUartExample.h</label>
+        <link refid="_extension_uart_example_8h"/>
+        <childnode refid="21925" relation="include">
+        </childnode>
+        <childnode refid="21919" relation="include">
+        </childnode>
+        <childnode refid="21927" relation="include">
+        </childnode>
+      </node>
+      <node id="21933">
+        <label>BCDS_UARTTransceiver.h</label>
+        <link refid="_b_c_d_s___u_a_r_t_transceiver_8h"/>
+        <childnode refid="21928" relation="include">
+        </childnode>
+        <childnode refid="21920" relation="include">
+        </childnode>
+        <childnode refid="21919" relation="include">
+        </childnode>
+        <childnode refid="21931" relation="include">
+        </childnode>
+        <childnode refid="21932" relation="include">
+        </childnode>
+        <childnode refid="21934" relation="include">
+        </childnode>
+        <childnode refid="21935" relation="include">
+        </childnode>
+        <childnode refid="21942" relation="include">
+        </childnode>
+        <childnode refid="21944" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___x_d_k___extension___port___uart_1gabff8f3a204e79671b98fabaa652198c3" prot="public" static="no">
+        <name>BCDS_MODULE_ID</name>
+        <initializer><ref refid="_xdk_extension_port_2source_2_xdk_app_info_8h_1a58c5197225b08cbce9809ee5d9b3ae74a9ac48f54d17b155c67630e0abaaeae68" kindref="member">XDK_APP_MODULE_ID_EXTENSION_PORT_UART</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" line="52" column="10" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___x_d_k___extension___port___uart_1ga0f07f12ba8949770acfc44890d300eb0" prot="public" static="no">
+        <name>END_OF_FRAME</name>
+        <initializer>UINT8_C(0xAA)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" line="69" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___x_d_k___extension___port___uart_1ga48a4a6f4e6808efc34d445d99bc6c9ad" prot="public" static="no">
+        <name>MAX_UART_RX_BUFFERSIZE</name>
+        <initializer>UINT32_C(16)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" line="66" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" bodystart="66" bodyend="-1"/>
+        <referencedby refid="group___x_d_k___extension___port___uart_1ga24130a88a54fc2a1767f7887c77318d9" compoundref="_extension_uart_example_8c" startline="202" endline="266">ExtensionUartExample_Initialize</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___x_d_k___extension___port___uart_1ga2bac79681bc6e00cb7a506a67ebcd12f" prot="public" static="no">
+        <name>UART_BAURDRATE</name>
+        <initializer>UINT32_C(9600)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" line="70" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" bodystart="70" bodyend="-1"/>
+        <referencedby refid="group___x_d_k___extension___port___uart_1ga24130a88a54fc2a1767f7887c77318d9" compoundref="_extension_uart_example_8c" startline="202" endline="266">ExtensionUartExample_Initialize</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___x_d_k___extension___port___uart_1ga852681b5c0ea55a67380f72048ad96f8" prot="public" static="no">
+        <name>UART_RX_ERROR</name>
+        <initializer>UINT32_C(0xFFFF)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" line="67" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" bodystart="67" bodyend="-1"/>
+        <referencedby refid="group___x_d_k___extension___port___uart_1ga891f2db2ef992db19d6ada0e2988252e" compoundref="_extension_uart_example_8c" startline="113" endline="134">ProcessUartRxData</referencedby>
+        <referencedby refid="group___x_d_k___extension___port___uart_1ga785a2158f05b7b5f73d90c39096bac6c" compoundref="_extension_uart_example_8c" startline="138" endline="153">UartAppCallback</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___x_d_k___extension___port___uart_1ga57a31242b400e942becfe1211e5a9dd2" prot="public" static="no">
+        <name>UART_RX_SUCCESS</name>
+        <initializer>UINT32_C(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" line="68" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" bodystart="68" bodyend="-1"/>
+        <referencedby refid="group___x_d_k___extension___port___uart_1ga785a2158f05b7b5f73d90c39096bac6c" compoundref="_extension_uart_example_8c" startline="138" endline="153">UartAppCallback</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___x_d_k___extension___port___uart_1ga77a2170671ae972d2f4a6281451e7135" prot="public" static="no">
+        <name>UART_SPI_DATA_TRANSFER_TIMEOUT_MILLISEC</name>
+        <initializer>UINT32_MAX</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" line="71" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" bodystart="71" bodyend="-1"/>
+        <referencedby refid="group___x_d_k___extension___port___uart_1gacebe9c79d5732d5660670a060d0848d0" compoundref="_extension_uart_example_8c" startline="269" endline="281">ExtensionUartExample_Read</referencedby>
+        <referencedby refid="group___x_d_k___extension___port___uart_1ga48477b2d61dfc16266b9ad8f8c576739" compoundref="_extension_uart_example_8c" startline="284" endline="296">ExtensionUartExample_Write</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___x_d_k___extension___port___uart_1gafca87bb1ca999872c123c3f9ce9f262c" prot="public" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t TxBuffer[MAX_UART_RX_BUFFERSIZE]</definition>
+        <argsstring>[MAX_UART_RX_BUFFERSIZE]</argsstring>
+        <name>TxBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" line="77" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" bodystart="77" bodyend="-1"/>
+        <referencedby refid="group___x_d_k___extension___port___uart_1ga891f2db2ef992db19d6ada0e2988252e" compoundref="_extension_uart_example_8c" startline="113" endline="134">ProcessUartRxData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group___x_d_k___extension___port___uart_1ga2d0977e387ae95c5394398e522b36a72" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga41a2f220f03970c1857bd96528307a81" kindref="member">CmdProcessor_T</ref> *</type>
+        <definition>CmdProcessor_T* uartCmdProcessorPtr</definition>
+        <argsstring></argsstring>
+        <name>uartCmdProcessorPtr</name>
+        <initializer>= <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" line="79" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___x_d_k___extension___port___uart_1ga9cf8d2c96d37bf45629ecff8c92742e6" prot="public" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t UartRxBuffInstance[MAX_UART_RX_BUFFERSIZE]</definition>
+        <argsstring>[MAX_UART_RX_BUFFERSIZE]</argsstring>
+        <name>UartRxBuffInstance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" line="76" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" bodystart="76" bodyend="-1"/>
+        <referencedby refid="group___x_d_k___extension___port___uart_1ga891f2db2ef992db19d6ada0e2988252e" compoundref="_extension_uart_example_8c" startline="113" endline="134">ProcessUartRxData</referencedby>
+        <referencedby refid="group___x_d_k___extension___port___uart_1ga24130a88a54fc2a1767f7887c77318d9" compoundref="_extension_uart_example_8c" startline="202" endline="266">ExtensionUartExample_Initialize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group___x_d_k___extension___port___uart_1ga0d2a54ad52d2d7c3538abb74161eea1b" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___u_a_r_t_t_r_a_n_s_c_e_i_v_e_r_1ga039060f6f0ecf4b3f933bc31d9cab661" kindref="member">UARTTransceiver_T</ref></type>
+        <definition>UARTTransceiver_T UartTranscieverInstance</definition>
+        <argsstring></argsstring>
+        <name>UartTranscieverInstance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" line="75" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___x_d_k___extension___port___uart_1ga146b61102a358113bfcdcecc6d2a85f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T ExtensionUartExample_DeInitialize</definition>
+        <argsstring>(void)</argsstring>
+        <name>ExtensionUartExample_DeInitialize</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This API is used to deinit the UART interface. Once this called, from there-on user needs to call <ref refid="group___x_d_k___extension___port___uart_1ga24130a88a54fc2a1767f7887c77318d9" kindref="member">ExtensionUartExample_Initialize</ref> for using the UART communication again. </para>        </briefdescription>
+        <detaileddescription>
+<para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" line="299" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" bodystart="299" bodyend="325"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="group___u_a_r_t_t_r_a_n_s_c_e_i_v_e_r_1ga40fe5691f2d48dbb8e6c2f0c6137047a">UARTTransceiver_Deinitialize</references>
+      </memberdef>
+      <memberdef kind="function" id="group___x_d_k___extension___port___uart_1ga24130a88a54fc2a1767f7887c77318d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T ExtensionUartExample_Initialize</definition>
+        <argsstring>(CmdProcessor_T *handle)</argsstring>
+        <name>ExtensionUartExample_Initialize</name>
+        <param>
+          <type><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga41a2f220f03970c1857bd96528307a81" kindref="member">CmdProcessor_T</ref> *</type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+<para>This API is used to prepare the UART with the user configuration data. Once after this call the user can write over UART interface at any time. Read callback will happen for each byte and user can able to read received data using UartRead() </para>        </briefdescription>
+        <detaileddescription>
+<para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" line="202" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" bodystart="202" bodyend="266"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="group___x_d_k___extension___port___uart_1ga2bac79681bc6e00cb7a506a67ebcd12f" compoundref="_extension_uart_example_8c" startline="70">UART_BAURDRATE</references>
+        <references refid="group___x_d_k___extension___port___uart_1ga8939786a9c616da84616635ba19d8b21" compoundref="_extension_uart_example_8c" startline="186" endline="197">UartCallBack</references>
+        <references refid="group___u_a_r_t_t_r_a_n_s_c_e_i_v_e_r_1ggabfc93652f03de1186fb385d0beea7e19aa11e850a81ede5423104314932990990" compoundref="_b_c_d_s___u_a_r_t_transceiver_8h" startline="140">UART_TRANSCEIVER_UART_TYPE_UART</references>
+        <references refid="group___x_d_k___extension___port___uart_1ga48a4a6f4e6808efc34d445d99bc6c9ad" compoundref="_extension_uart_example_8c" startline="66">MAX_UART_RX_BUFFERSIZE</references>
+        <references refid="group___u_a_r_t_t_r_a_n_s_c_e_i_v_e_r_1gac13c141344de042980deabfc89411d5e">UARTTransceiver_Initialize</references>
+        <references refid="group___x_d_k___extension___port___uart_1ga9cf8d2c96d37bf45629ecff8c92742e6" compoundref="_extension_uart_example_8c" startline="76">UartRxBuffInstance</references>
+        <references refid="group___u_a_r_t_t_r_a_n_s_c_e_i_v_e_r_1gaa6d932e7282cd4847bcd34cfa4f241ba">UARTTransceiver_StartInAsyncMode</references>
+        <references refid="group___x_d_k___extension___port___uart_1ga8ef2820a885c9b674a408ff566f232ea" compoundref="_extension_uart_example_8c" startline="179" endline="183">FrameEndCheckFunc</references>
+        <references refid="group___x_d_k___extension___port___uart_1ga785a2158f05b7b5f73d90c39096bac6c" compoundref="_extension_uart_example_8c" startline="138" endline="153">UartAppCallback</references>
+        <referencedby refid="group___x_d_k___e_x_t_e_n_s_i_o_n___p_o_r_t_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_xdk_extension_port_2source_2_app_controller_8c" startline="219" endline="263">AppControllerSetup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___x_d_k___extension___port___uart_1gacebe9c79d5732d5660670a060d0848d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T ExtensionUartExample_Read</definition>
+        <argsstring>(uint8_t *readBuffer, uint8_t readlength, uint32_t *actualLength)</argsstring>
+        <name>ExtensionUartExample_Read</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>readBuffer</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>readlength</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>actualLength</declname>
+        </param>
+        <briefdescription>
+<para>This API is used to read the data received over the UART interface. </para>        </briefdescription>
+        <detaileddescription>
+<para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" line="269" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" bodystart="269" bodyend="281"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="group___u_a_r_t_t_r_a_n_s_c_e_i_v_e_r_1gae45d83bad8efeb151af0054e9b626632">UARTTransceiver_ReadData</references>
+        <references refid="group___x_d_k___extension___port___uart_1ga77a2170671ae972d2f4a6281451e7135" compoundref="_extension_uart_example_8c" startline="71">UART_SPI_DATA_TRANSFER_TIMEOUT_MILLISEC</references>
+        <referencedby refid="group___x_d_k___extension___port___uart_1ga891f2db2ef992db19d6ada0e2988252e" compoundref="_extension_uart_example_8c" startline="113" endline="134">ProcessUartRxData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___x_d_k___extension___port___uart_1ga48477b2d61dfc16266b9ad8f8c576739" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T ExtensionUartExample_Write</definition>
+        <argsstring>(uint8_t *writeBuffer, uint8_t writeLength)</argsstring>
+        <name>ExtensionUartExample_Write</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>writeBuffer</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>writeLength</declname>
+        </param>
+        <briefdescription>
+<para>This API is used to write data over the UART interface. Once the UartInit() was success, user can transmit data over UART interface. </para>        </briefdescription>
+        <detaileddescription>
+<para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" line="284" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" bodystart="284" bodyend="296"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="group___u_a_r_t_t_r_a_n_s_c_e_i_v_e_r_1gaffc00de5e7a25b3da39d09dd74f4a6bd">UARTTransceiver_WriteData</references>
+        <references refid="group___x_d_k___extension___port___uart_1ga77a2170671ae972d2f4a6281451e7135" compoundref="_extension_uart_example_8c" startline="71">UART_SPI_DATA_TRANSFER_TIMEOUT_MILLISEC</references>
+        <referencedby refid="group___x_d_k___extension___port___uart_1ga75b19676dec6d6d0a8e664e832c10919" compoundref="_extension_uart_example_8c" startline="84" endline="92">SendUartResponseData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___x_d_k___extension___port___uart_1ga8ef2820a885c9b674a408ff566f232ea" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool FrameEndCheckFunc</definition>
+        <argsstring>(uint8_t lastByte)</argsstring>
+        <name>FrameEndCheckFunc</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>lastByte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" line="179" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" bodystart="179" bodyend="183"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <referencedby refid="group___x_d_k___extension___port___uart_1ga24130a88a54fc2a1767f7887c77318d9" compoundref="_extension_uart_example_8c" startline="202" endline="266">ExtensionUartExample_Initialize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___x_d_k___extension___port___uart_1ga891f2db2ef992db19d6ada0e2988252e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ProcessUartRxData</definition>
+        <argsstring>(void *param1, uint32_t param2)</argsstring>
+        <name>ProcessUartRxData</name>
+        <param>
+          <type>void *</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" line="113" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" bodystart="113" bodyend="134"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___x_d_k___extension___port___uart_1ga852681b5c0ea55a67380f72048ad96f8" compoundref="_extension_uart_example_8c" startline="67">UART_RX_ERROR</references>
+        <references refid="group___x_d_k___extension___port___uart_1gacebe9c79d5732d5660670a060d0848d0" compoundref="_extension_uart_example_8c" startline="269" endline="281">ExtensionUartExample_Read</references>
+        <references refid="group___x_d_k___extension___port___uart_1ga9cf8d2c96d37bf45629ecff8c92742e6" compoundref="_extension_uart_example_8c" startline="76">UartRxBuffInstance</references>
+        <references refid="group___x_d_k___extension___port___uart_1gafca87bb1ca999872c123c3f9ce9f262c" compoundref="_extension_uart_example_8c" startline="77">TxBuffer</references>
+        <references refid="group___x_d_k___extension___port___uart_1gaed559533f3c61e36a11ac7c105a92cda" compoundref="_extension_uart_example_8c" startline="97" endline="105">ProcessUartTxData</references>
+        <referencedby refid="group___x_d_k___extension___port___uart_1ga785a2158f05b7b5f73d90c39096bac6c" compoundref="_extension_uart_example_8c" startline="138" endline="153">UartAppCallback</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___x_d_k___extension___port___uart_1gaed559533f3c61e36a11ac7c105a92cda" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ProcessUartTxData</definition>
+        <argsstring>(uint8_t *txBuff, uint32_t txLength)</argsstring>
+        <name>ProcessUartTxData</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>txBuff</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>txLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" line="97" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" bodystart="97" bodyend="105"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e">CmdProcessor_Enqueue</references>
+        <references refid="group___x_d_k___extension___port___uart_1ga75b19676dec6d6d0a8e664e832c10919" compoundref="_extension_uart_example_8c" startline="84" endline="92">SendUartResponseData</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <referencedby refid="group___x_d_k___extension___port___uart_1ga891f2db2ef992db19d6ada0e2988252e" compoundref="_extension_uart_example_8c" startline="113" endline="134">ProcessUartRxData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___x_d_k___extension___port___uart_1ga75b19676dec6d6d0a8e664e832c10919" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SendUartResponseData</definition>
+        <argsstring>(void *param1, uint32_t param2)</argsstring>
+        <name>SendUartResponseData</name>
+        <param>
+          <type>void *</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" line="84" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" bodystart="84" bodyend="92"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___x_d_k___extension___port___uart_1ga48477b2d61dfc16266b9ad8f8c576739" compoundref="_extension_uart_example_8c" startline="284" endline="296">ExtensionUartExample_Write</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <referencedby refid="group___x_d_k___extension___port___uart_1gaed559533f3c61e36a11ac7c105a92cda" compoundref="_extension_uart_example_8c" startline="97" endline="105">ProcessUartTxData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___x_d_k___extension___port___uart_1ga785a2158f05b7b5f73d90c39096bac6c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void UartAppCallback</definition>
+        <argsstring>(struct MCU_UART_Event_S event)</argsstring>
+        <name>UartAppCallback</name>
+        <param>
+          <type>struct MCU_UART_Event_S</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" line="138" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" bodystart="138" bodyend="153"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga6ac2f907469b3a4614c6884ff7fec8fa">CmdProcessor_EnqueueFromIsr</references>
+        <references refid="group___x_d_k___extension___port___uart_1ga891f2db2ef992db19d6ada0e2988252e" compoundref="_extension_uart_example_8c" startline="113" endline="134">ProcessUartRxData</references>
+        <references refid="group___x_d_k___extension___port___uart_1ga57a31242b400e942becfe1211e5a9dd2" compoundref="_extension_uart_example_8c" startline="68">UART_RX_SUCCESS</references>
+        <references refid="group___x_d_k___extension___port___uart_1ga852681b5c0ea55a67380f72048ad96f8" compoundref="_extension_uart_example_8c" startline="67">UART_RX_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga16c59695a081199fd09cd3bed6cc6bab">Retcode_RaiseErrorFromIsr</references>
+        <referencedby refid="group___x_d_k___extension___port___uart_1ga24130a88a54fc2a1767f7887c77318d9" compoundref="_extension_uart_example_8c" startline="202" endline="266">ExtensionUartExample_Initialize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___x_d_k___extension___port___uart_1ga8939786a9c616da84616635ba19d8b21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UartCallBack</definition>
+        <argsstring>(UART_T uart, struct MCU_UART_Event_S event)</argsstring>
+        <name>UartCallBack</name>
+        <param>
+          <type>UART_T</type>
+          <declname>uart</declname>
+        </param>
+        <param>
+          <type>struct MCU_UART_Event_S</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" line="186" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c" bodystart="186" bodyend="197"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" compoundref="_b_c_d_s___retcode_8h" startline="108">RETCODE_INVALID_PARAM</references>
+        <references refid="struct___u_a_r_t_transceiver___s_1aafb56e2e4c2af7b9c8d9cea969c61dc0" compoundref="_b_c_d_s___u_a_r_t_transceiver_8h" startline="154">_UARTTransceiver_S::handle</references>
+        <references refid="group___u_a_r_t_t_r_a_n_s_c_e_i_v_e_r_1ga3814d8adbd0737240abccc82cae2556e">UARTTransceiver_LoopCallback</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <referencedby refid="group___x_d_k___extension___port___uart_1ga24130a88a54fc2a1767f7887c77318d9" compoundref="_extension_uart_example_8c" startline="202" endline="266">ExtensionUartExample_Initialize</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_xdk_extension_port_2source_2_xdk_app_info_8h" kindref="compound">XdkAppInfo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>BCDS_MODULE_ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="group___x_d_k___extension___port___uart_1gabff8f3a204e79671b98fabaa652198c3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BCDS_MODULE_ID<sp/>XDK_APP_MODULE_ID_EXTENSION_PORT_UART</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_xdk_extension_port_2source_2_app_controller_8h" kindref="compound">AppController.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>EXTENSION_PORT_UART_FEATURE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_extension_uart_example_8h" kindref="compound">ExtensionUartExample.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_s_p___extension_port_8h" kindref="compound">BSP_ExtensionPort.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___u_a_r_t_transceiver_8h" kindref="compound">BCDS_UARTTransceiver.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___m_c_u___u_a_r_t_8h" kindref="compound">BCDS_MCU_UART.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>the<sp/>type<sp/>and<sp/>macro<sp/>definitions<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="group___x_d_k___extension___port___uart_1ga48a4a6f4e6808efc34d445d99bc6c9ad" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_UART_RX_BUFFERSIZE<sp/><sp/><sp/>UINT32_C(16)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="group___x_d_k___extension___port___uart_1ga852681b5c0ea55a67380f72048ad96f8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UART_RX_ERROR<sp/><sp/>UINT32_C(0xFFFF)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="group___x_d_k___extension___port___uart_1ga57a31242b400e942becfe1211e5a9dd2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UART_RX_SUCCESS<sp/><sp/>UINT32_C(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="group___x_d_k___extension___port___uart_1ga0f07f12ba8949770acfc44890d300eb0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>END_OF_FRAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT8_C(0xAA)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="group___x_d_k___extension___port___uart_1ga2bac79681bc6e00cb7a506a67ebcd12f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UART_BAURDRATE<sp/><sp/><sp/>UINT32_C(9600)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="group___x_d_k___extension___port___uart_1ga77a2170671ae972d2f4a6281451e7135" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UART_SPI_DATA_TRANSFER_TIMEOUT_MILLISEC<sp/>UINT32_MAX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>constant<sp/>and<sp/>variable<sp/>definitions<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="group___x_d_k___extension___port___uart_1ga0d2a54ad52d2d7c3538abb74161eea1b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct___u_a_r_t_transceiver___s" kindref="compound">UARTTransceiver_T</ref><sp/><ref refid="group___x_d_k___extension___port___uart_1ga0d2a54ad52d2d7c3538abb74161eea1b" kindref="member">UartTranscieverInstance</ref>;</highlight></codeline>
+<codeline lineno="76" refid="group___x_d_k___extension___port___uart_1ga9cf8d2c96d37bf45629ecff8c92742e6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="group___x_d_k___extension___port___uart_1ga9cf8d2c96d37bf45629ecff8c92742e6" kindref="member">UartRxBuffInstance</ref>[<ref refid="group___x_d_k___extension___port___uart_1ga48a4a6f4e6808efc34d445d99bc6c9ad" kindref="member">MAX_UART_RX_BUFFERSIZE</ref>];</highlight></codeline>
+<codeline lineno="77" refid="group___x_d_k___extension___port___uart_1gafca87bb1ca999872c123c3f9ce9f262c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="group___x_d_k___extension___port___uart_1gafca87bb1ca999872c123c3f9ce9f262c" kindref="member">TxBuffer</ref>[<ref refid="group___x_d_k___extension___port___uart_1ga48a4a6f4e6808efc34d445d99bc6c9ad" kindref="member">MAX_UART_RX_BUFFERSIZE</ref>];</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="group___x_d_k___extension___port___uart_1ga2d0977e387ae95c5394398e522b36a72" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct___cmd_processor___s" kindref="compound">CmdProcessor_T</ref><sp/>*<ref refid="group___x_d_k___extension___port___uart_1ga2d0977e387ae95c5394398e522b36a72" kindref="member">uartCmdProcessorPtr</ref><sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="82"><highlight class="comment"><sp/>*<sp/>This<sp/>API<sp/>is<sp/>to<sp/>Transmit<sp/>the<sp/>data<sp/>over<sp/>UART<sp/>in<sp/>deferred<sp/>context</highlight></codeline>
+<codeline lineno="83"><highlight class="comment"><sp/>**/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="group___x_d_k___extension___port___uart_1ga75b19676dec6d6d0a8e664e832c10919" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___x_d_k___extension___port___uart_1ga75b19676dec6d6d0a8e664e832c10919" kindref="member">SendUartResponseData</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*param1,<sp/>uint32_t<sp/>param2)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___x_d_k___extension___port___uart_1ga48477b2d61dfc16266b9ad8f8c576739" kindref="member">ExtensionUartExample_Write</ref>((uint8_t<sp/>*)<sp/>param1,<sp/>param2);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>!=<sp/>retcode)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2" kindref="member">Retcode_RaiseError</ref>(retcode);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/>*<sp/>This<sp/>API<sp/>is<sp/>to<sp/>process<sp/>the<sp/>Transmit<sp/>the<sp/>data<sp/>over<sp/>UART<sp/>in<sp/>deferred<sp/>context</highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/>**/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="group___x_d_k___extension___port___uart_1gaed559533f3c61e36a11ac7c105a92cda" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___x_d_k___extension___port___uart_1gaed559533f3c61e36a11ac7c105a92cda" kindref="member">ProcessUartTxData</ref>(uint8_t<sp/>*txBuff,<sp/>uint32_t<sp/>txLength)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e" kindref="member">CmdProcessor_Enqueue</ref>(uartCmdProcessorPtr,<sp/><ref refid="group___x_d_k___extension___port___uart_1ga75b19676dec6d6d0a8e664e832c10919" kindref="member">SendUartResponseData</ref>,<sp/>txBuff,<sp/>txLength);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>!=<sp/>retcode)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2" kindref="member">Retcode_RaiseError</ref>(retcode);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/>*<sp/>This<sp/>API<sp/>is<sp/>to<sp/><sp/>process<sp/>the<sp/>received<sp/>data<sp/>and<sp/>pass<sp/>it<sp/>to<sp/>the<sp/>application<sp/>in<sp/>the<sp/>deferred<sp/>context,</highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/>*<sp/>Please<sp/>note<sp/>here<sp/>the<sp/>UartRead()<sp/>API<sp/>needs<sp/>to<sp/>be<sp/>called<sp/>to<sp/>read<sp/>data<sp/>received<sp/>over<sp/>UART.</highlight></codeline>
+<codeline lineno="110"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="111"><highlight class="comment"><sp/>*<sp/>Note:<sp/>For<sp/>The<sp/>sake<sp/>of<sp/>demonstration<sp/>,<sp/>in<sp/>this<sp/>implementation<sp/>data<sp/>is<sp/>read<sp/>in<sp/>this<sp/>API<sp/>and<sp/>loop<sp/>backed<sp/>(i.e<sp/>transmitted<sp/>back<sp/>over<sp/>UART)</highlight></codeline>
+<codeline lineno="112"><highlight class="comment"><sp/>**/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="group___x_d_k___extension___port___uart_1ga891f2db2ef992db19d6ada0e2988252e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___x_d_k___extension___port___uart_1ga891f2db2ef992db19d6ada0e2988252e" kindref="member">ProcessUartRxData</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*param1,<sp/>uint32_t<sp/>param2)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" kindref="member">BCDS_UNUSED</ref>(param1);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>RxCommand<sp/>=<sp/>0xff;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>RxCommandIndex<sp/>=<sp/>0xFF;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>actualLength<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>readlength<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___x_d_k___extension___port___uart_1ga852681b5c0ea55a67380f72048ad96f8" kindref="member">UART_RX_ERROR</ref><sp/>!=<sp/>param2)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___x_d_k___extension___port___uart_1gacebe9c79d5732d5660670a060d0848d0" kindref="member">ExtensionUartExample_Read</ref>(<ref refid="group___x_d_k___extension___port___uart_1ga9cf8d2c96d37bf45629ecff8c92742e6" kindref="member">UartRxBuffInstance</ref>,<sp/>readlength,<sp/>&amp;actualLength);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)<sp/>&amp;&amp;<sp/>(readlength<sp/>==<sp/>actualLength))</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RxCommandIndex<sp/>=<sp/>readlength<sp/>-<sp/>actualLength;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RxCommand<sp/>=<sp/><ref refid="group___x_d_k___extension___port___uart_1ga9cf8d2c96d37bf45629ecff8c92742e6" kindref="member">UartRxBuffInstance</ref>[RxCommandIndex];</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___x_d_k___extension___port___uart_1gafca87bb1ca999872c123c3f9ce9f262c" kindref="member">TxBuffer</ref>[0]<sp/>=<sp/>RxCommand;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___x_d_k___extension___port___uart_1gaed559533f3c61e36a11ac7c105a92cda" kindref="member">ProcessUartTxData</ref>(<ref refid="group___x_d_k___extension___port___uart_1gafca87bb1ca999872c123c3f9ce9f262c" kindref="member">TxBuffer</ref>,<sp/>readlength);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Call<sp/>back<sp/>to<sp/>be<sp/>triggered<sp/>by<sp/>the<sp/>Uart<sp/>transceiver<sp/>module<sp/>upon<sp/>reception<sp/>of<sp/>defined<sp/>no<sp/>of<sp/>bytes<sp/>on<sp/>UART,</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"><sp/>*<sp/>Please<sp/>note<sp/>that<sp/>this<sp/>callback<sp/>triggered<sp/>will<sp/>be<sp/>based<sp/>on<sp/>the<sp/>implementation<sp/>of<sp/>FrameEndCheckFunc()<sp/>API<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="group___x_d_k___extension___port___uart_1ga785a2158f05b7b5f73d90c39096bac6c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___x_d_k___extension___port___uart_1ga785a2158f05b7b5f73d90c39096bac6c" kindref="member">UartAppCallback</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>MCU_UART_Event_S<sp/>event)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((event.RxComplete)<sp/>&amp;&amp;<sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>!=<sp/>uartCmdProcessorPtr))</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga6ac2f907469b3a4614c6884ff7fec8fa" kindref="member">CmdProcessor_EnqueueFromIsr</ref>(uartCmdProcessorPtr,<sp/><ref refid="group___x_d_k___extension___port___uart_1ga891f2db2ef992db19d6ada0e2988252e" kindref="member">ProcessUartRxData</ref>,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,<sp/><ref refid="group___x_d_k___extension___port___uart_1ga57a31242b400e942becfe1211e5a9dd2" kindref="member">UART_RX_SUCCESS</ref>);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(event.RxError)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga6ac2f907469b3a4614c6884ff7fec8fa" kindref="member">CmdProcessor_EnqueueFromIsr</ref>(uartCmdProcessorPtr,<sp/><ref refid="group___x_d_k___extension___port___uart_1ga891f2db2ef992db19d6ada0e2988252e" kindref="member">ProcessUartRxData</ref>,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,<sp/><ref refid="group___x_d_k___extension___port___uart_1ga852681b5c0ea55a67380f72048ad96f8" kindref="member">UART_RX_ERROR</ref>);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>!=<sp/>retcode)</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga16c59695a081199fd09cd3bed6cc6bab" kindref="member">Retcode_RaiseErrorFromIsr</ref>(retcode);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="156"><highlight class="comment"><sp/>*<sp/>This<sp/>API<sp/>is<sp/>given<sp/>as<sp/>one<sp/>of<sp/>the<sp/>input<sp/>parameter<sp/>for<sp/>UARTTransceiver_StartInAsyncMode()</highlight></codeline>
+<codeline lineno="157"><highlight class="comment"><sp/>*<sp/>If<sp/>the<sp/>user<sp/>wants<sp/>to<sp/>trigger<sp/>callback<sp/>for<sp/>every<sp/>byte<sp/>reception<sp/>of<sp/>UART<sp/>interface</highlight></codeline>
+<codeline lineno="158"><highlight class="comment"><sp/>*<sp/>then<sp/>simply<sp/>return<sp/>true<sp/>in<sp/>the<sp/>this<sp/>API.</highlight></codeline>
+<codeline lineno="159"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="160"><highlight class="comment"><sp/>*<sp/>If<sp/>the<sp/>user<sp/>wants<sp/>to<sp/>trigger<sp/>interrupt<sp/>for<sp/>example<sp/>only<sp/>after<sp/>application<sp/>specific</highlight></codeline>
+<codeline lineno="161"><highlight class="comment"><sp/>*<sp/>EOF<sp/>(End<sp/>of<sp/>frame<sp/>byte)<sp/>then<sp/>this<sp/>API<sp/>implementation<sp/>shall<sp/>be<sp/>modified<sp/>accordingly</highlight></codeline>
+<codeline lineno="162"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="163"><highlight class="comment"><sp/>*<sp/>Example</highlight></codeline>
+<codeline lineno="164"><highlight class="comment"><sp/>*<sp/>#define<sp/>END_OF_FRAME<sp/>0xAA</highlight></codeline>
+<codeline lineno="165"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="166"><highlight class="comment"><sp/>*<sp/>static<sp/>bool<sp/>FrameEndCheckFunc(uint8_t<sp/>lastByte)</highlight></codeline>
+<codeline lineno="167"><highlight class="comment"><sp/>*<sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="comment"><sp/>*<sp/>if(lastByte<sp/>==<sp/>END_OF_FRAME<sp/>)</highlight></codeline>
+<codeline lineno="169"><highlight class="comment"><sp/>*<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="comment"><sp/>*<sp/><sp/><sp/>return<sp/>true;</highlight></codeline>
+<codeline lineno="171"><highlight class="comment"><sp/>*<sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="comment"><sp/>*<sp/>else</highlight></codeline>
+<codeline lineno="173"><highlight class="comment"><sp/>*<sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="comment"><sp/>*<sp/>return<sp/>false;</highlight></codeline>
+<codeline lineno="175"><highlight class="comment"><sp/>*<sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="comment"><sp/>*<sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="178"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179" refid="group___x_d_k___extension___port___uart_1ga8ef2820a885c9b674a408ff566f232ea" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="group___x_d_k___extension___port___uart_1ga8ef2820a885c9b674a408ff566f232ea" kindref="member">FrameEndCheckFunc</ref>(uint8_t<sp/>lastByte)</highlight></codeline>
+<codeline lineno="180"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" kindref="member">BCDS_UNUSED</ref>(lastByte);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>MCU<sp/>Call<sp/>back<sp/>to<sp/>be<sp/>triggered<sp/>on<sp/>reception<sp/>of<sp/>of<sp/>every<sp/>single<sp/>byte<sp/>in<sp/>Uart<sp/>Rx<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186" refid="group___x_d_k___extension___port___uart_1ga8939786a9c616da84616635ba19d8b21" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___x_d_k___extension___port___uart_1ga8939786a9c616da84616635ba19d8b21" kindref="member">UartCallBack</ref>(UART_T<sp/>uart,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>MCU_UART_Event_S<sp/>event)</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref>);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(UartTranscieverInstance.<ref refid="struct___u_a_r_t_transceiver___s_1aafb56e2e4c2af7b9c8d9cea969c61dc0" kindref="member">handle</ref><sp/>==<sp/>uart)</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___u_a_r_t_t_r_a_n_s_c_e_i_v_e_r_1ga3814d8adbd0737240abccc82cae2556e" kindref="member">UARTTransceiver_LoopCallback</ref>(&amp;UartTranscieverInstance,<sp/>event);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2" kindref="member">Retcode_RaiseError</ref>(retcode);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>private<sp/>function<sp/>declarations<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="group___x_d_k___extension___port___uart_1ga24130a88a54fc2a1767f7887c77318d9" refkind="member"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___x_d_k___extension___port___uart_1ga24130a88a54fc2a1767f7887c77318d9" kindref="member">ExtensionUartExample_Initialize</ref>(<ref refid="struct___cmd_processor___s" kindref="compound">CmdProcessor_T</ref><sp/>*<sp/>handle)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___h_a_l_1ga39fd157e78cb1535814fe63af2f3e1ee" kindref="member">HWHandle_T</ref><sp/>UartHandle<sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group___u_a_r_t_t_r_a_n_s_c_e_i_v_e_r_1gabfc93652f03de1186fb385d0beea7e19" kindref="member">UARTTransceiver_UartType_E</ref><sp/>type;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>rxBuffSize;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(handle<sp/>==<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>)</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref>);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uartCmdProcessorPtr<sp/>=<sp/>handle;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>BSP_ExtensionPort_ConnectUart();</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>BSP_ExtensionPort_SetUartConfig(BSP_EXTENSIONPORT_UART_PARITY,(uint32_t)<sp/>BSP_EXTENSIONPORT_UART_NO_PARITY,<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>BSP_ExtensionPort_SetUartConfig(BSP_EXTENSIONPORT_UART_BAUDRATE,<sp/><ref refid="group___x_d_k___extension___port___uart_1ga2bac79681bc6e00cb7a506a67ebcd12f" kindref="member">UART_BAURDRATE</ref>,<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>BSP_ExtensionPort_SetUartConfig(BSP_EXTENSIONPORT_UART_STOPBITS,<sp/>(uint32_t)<sp/>BSP_EXTENSIONPORT_UART_STOPBITS_ONE,<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Get<sp/>the<sp/>serial<sp/>uart<sp/><sp/>handle<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UartHandle<sp/>=<sp/>BSP_ExtensionPort_GetUartHandle();</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>UartHandle)</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref>);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>MCU_UART_Initialize(UartHandle,<sp/><ref refid="group___x_d_k___extension___port___uart_1ga8939786a9c616da84616635ba19d8b21" kindref="member">UartCallBack</ref>);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type<sp/>=<sp/><ref refid="group___u_a_r_t_t_r_a_n_s_c_e_i_v_e_r_1ggabfc93652f03de1186fb385d0beea7e19aa11e850a81ede5423104314932990990" kindref="member">UART_TRANSCEIVER_UART_TYPE_UART</ref>;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rxBuffSize<sp/>=<sp/>(<ref refid="group___x_d_k___extension___port___uart_1ga48a4a6f4e6808efc34d445d99bc6c9ad" kindref="member">MAX_UART_RX_BUFFERSIZE</ref><sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___u_a_r_t_t_r_a_n_s_c_e_i_v_e_r_1gac13c141344de042980deabfc89411d5e" kindref="member">UARTTransceiver_Initialize</ref>(&amp;UartTranscieverInstance,<sp/>UartHandle,<sp/><ref refid="group___x_d_k___extension___port___uart_1ga9cf8d2c96d37bf45629ecff8c92742e6" kindref="member">UartRxBuffInstance</ref>,<sp/>rxBuffSize,<sp/>type);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>BSP_ExtensionPort_EnableUart();</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___u_a_r_t_t_r_a_n_s_c_e_i_v_e_r_1gaa6d932e7282cd4847bcd34cfa4f241ba" kindref="member">UARTTransceiver_StartInAsyncMode</ref>(&amp;UartTranscieverInstance,<sp/><ref refid="group___x_d_k___extension___port___uart_1ga8ef2820a885c9b674a408ff566f232ea" kindref="member">FrameEndCheckFunc</ref>,<sp/><ref refid="group___x_d_k___extension___port___uart_1ga785a2158f05b7b5f73d90c39096bac6c" kindref="member">UartAppCallback</ref>);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>!=<sp/>retcode)</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error<sp/>in<sp/>initializing<sp/>and<sp/>starting<sp/>the<sp/>Uart<sp/>\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retcode;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269" refid="group___x_d_k___extension___port___uart_1gacebe9c79d5732d5660670a060d0848d0" refkind="member"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___x_d_k___extension___port___uart_1gacebe9c79d5732d5660670a060d0848d0" kindref="member">ExtensionUartExample_Read</ref>(uint8_t<sp/>*readBuffer,<sp/>uint8_t<sp/>readlength,<sp/>uint32_t<sp/>*actualLength)</highlight></codeline>
+<codeline lineno="270"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>readBuffer)<sp/>||<sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>actualLength))</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref>);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___u_a_r_t_t_r_a_n_s_c_e_i_v_e_r_1gae45d83bad8efeb151af0054e9b626632" kindref="member">UARTTransceiver_ReadData</ref>(&amp;UartTranscieverInstance,<sp/>readBuffer,<sp/>readlength,<sp/>actualLength,<sp/><ref refid="group___x_d_k___extension___port___uart_1ga77a2170671ae972d2f4a6281451e7135" kindref="member">UART_SPI_DATA_TRANSFER_TIMEOUT_MILLISEC</ref>);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retcode;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284" refid="group___x_d_k___extension___port___uart_1ga48477b2d61dfc16266b9ad8f8c576739" refkind="member"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___x_d_k___extension___port___uart_1ga48477b2d61dfc16266b9ad8f8c576739" kindref="member">ExtensionUartExample_Write</ref>(uint8_t<sp/>*writeBuffer,<sp/>uint8_t<sp/>writeLength)</highlight></codeline>
+<codeline lineno="285"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>writeBuffer)</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref>);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___u_a_r_t_t_r_a_n_s_c_e_i_v_e_r_1gaffc00de5e7a25b3da39d09dd74f4a6bd" kindref="member">UARTTransceiver_WriteData</ref>(&amp;UartTranscieverInstance,<sp/>writeBuffer,<sp/>writeLength,<sp/><ref refid="group___x_d_k___extension___port___uart_1ga77a2170671ae972d2f4a6281451e7135" kindref="member">UART_SPI_DATA_TRANSFER_TIMEOUT_MILLISEC</ref>);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retcode;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299" refid="group___x_d_k___extension___port___uart_1ga146b61102a358113bfcdcecc6d2a85f6" refkind="member"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___x_d_k___extension___port___uart_1ga146b61102a358113bfcdcecc6d2a85f6" kindref="member">ExtensionUartExample_DeInitialize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="300"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___h_a_l_1ga39fd157e78cb1535814fe63af2f3e1ee" kindref="member">HWHandle_T</ref><sp/>UartHandle;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>UartHandle<sp/>=<sp/>BSP_ExtensionPort_GetUartHandle();</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>UartHandle)</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref>);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>MCU_UART_Deinitialize(UartHandle);</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___u_a_r_t_t_r_a_n_s_c_e_i_v_e_r_1ga40fe5691f2d48dbb8e6c2f0c6137047a" kindref="member">UARTTransceiver_Deinitialize</ref>(&amp;UartTranscieverInstance);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>BSP_ExtensionPort_DisableUart();</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>BSP_ExtensionPort_DisonnectUart();</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retcode;</highlight></codeline>
+<codeline lineno="325"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>EXTENSION_PORT_UART_FEATURE<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c"/>
+  </compounddef>
+</doxygen>

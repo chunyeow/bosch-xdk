@@ -1,0 +1,715 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="sl__common_8h" kind="file">
+    <compoundname>sl_common.h</compoundname>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="sl__common_8h_1aee01c39132c3e5916e949a9b3280ceb1" prot="public" static="no">
+        <name>ASSERT_ON_ERROR</name>
+        <param><defname>error_code</defname></param>
+        <initializer>{\
+                /* Handling the error-codes is specific to the application */ \
+                if (error_code &lt; 0) return error_code; \
+                /* else, continue w/ execution */ \
+            }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="56" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1a69b19c74bcd5602d7383c384897f289a" prot="public" static="no">
+        <name>CLR_STATUS_BIT</name>
+        <param><defname>status_variable</defname></param>
+        <param><defname>bit</defname></param>
+        <initializer>status_variable &amp;= ~((unsigned <ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga295b9aa203738050fd2137fb81030321" kindref="member">long</ref>)1&lt;&lt;(bit))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="145" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1a30b328ca499f27b3d0f8111b495834ca" prot="public" static="no">
+        <name>DATE</name>
+        <initializer>10       /* Current Date */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="92" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1a4066b312add26b664da0febb8d082f0a" prot="public" static="no">
+        <name>GET_STATUS_BIT</name>
+        <param><defname>status_variable</defname></param>
+        <param><defname>bit</defname></param>
+        <initializer>(0 != (status_variable &amp; ((unsigned <ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga295b9aa203738050fd2137fb81030321" kindref="member">long</ref>)1&lt;&lt;(bit))))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="146" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1a4698ae12cf6a8acb5886fffd0ec897e6" prot="public" static="no">
+        <name>HOUR</name>
+        <initializer>15      /* Time - hours */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="95" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1a85e63ae93399fcd11f1eb3b5d0f077a3" prot="public" static="no">
+        <name>IS_CONNECTED</name>
+        <param><defname>status_variable</defname></param>
+        <initializer><ref refid="sl__common_8h_1a4066b312add26b664da0febb8d082f0a" kindref="member">GET_STATUS_BIT</ref>(status_variable, \
+                                                               <ref refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60ad1e831077e1b5f19f0b64937e607be7c" kindref="member">STATUS_BIT_CONNECTION</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="148" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1a6dfe02d575f040a1ebe8f40f71ecdd01" prot="public" static="no">
+        <name>IS_CONNECTION_FAILED</name>
+        <param><defname>status_variable</defname></param>
+        <initializer><ref refid="sl__common_8h_1a4066b312add26b664da0febb8d082f0a" kindref="member">GET_STATUS_BIT</ref>(status_variable, \
+                                                               <ref refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60af2b531274e6eaa11149b011f0320b4bd" kindref="member">STATUS_BIT_CONNECTION_FAILED</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="156" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1aba1cff5a1f277fe33962870d0ac11299" prot="public" static="no">
+        <name>IS_IP_ACQUIRED</name>
+        <param><defname>status_variable</defname></param>
+        <initializer><ref refid="sl__common_8h_1a4066b312add26b664da0febb8d082f0a" kindref="member">GET_STATUS_BIT</ref>(status_variable, \
+                                                               <ref refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60abd58a09e5e1af48f6bee35bc88ba15e9" kindref="member">STATUS_BIT_IP_ACQUIRED</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="152" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1a60a51fd95523463bdec69d0bc91e6ffd" prot="public" static="no">
+        <name>IS_IP_LEASED</name>
+        <param><defname>status_variable</defname></param>
+        <initializer><ref refid="sl__common_8h_1a4066b312add26b664da0febb8d082f0a" kindref="member">GET_STATUS_BIT</ref>(status_variable, \
+                                                               <ref refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60ab5928137e028318d9d03984cd07614b4" kindref="member">STATUS_BIT_IP_LEASED</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="154" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1aa5f4a30febe25360ad914ceb2f95deae" prot="public" static="no">
+        <name>IS_P2P_NEG_REQ_RECEIVED</name>
+        <param><defname>status_variable</defname></param>
+        <initializer><ref refid="sl__common_8h_1a4066b312add26b664da0febb8d082f0a" kindref="member">GET_STATUS_BIT</ref>(status_variable, \
+                                                               <ref refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60af4273f20affb942a2837217a4f6a6b33" kindref="member">STATUS_BIT_P2P_NEG_REQ_RECEIVED</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="158" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1a72cbaee913ee771bbc682d330dd12e98" prot="public" static="no">
+        <name>IS_SMARTCONFIG_DONE</name>
+        <param><defname>status_variable</defname></param>
+        <initializer><ref refid="sl__common_8h_1a4066b312add26b664da0febb8d082f0a" kindref="member">GET_STATUS_BIT</ref>(status_variable, \
+                                                               <ref refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60a4112aadda9f5d95e48a73d72c7525258" kindref="member">STATUS_BIT_SMARTCONFIG_DONE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="160" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1a28e4c80625b77d1a8740bb4eeec59d88" prot="public" static="no">
+        <name>IS_SMARTCONFIG_STOPPED</name>
+        <param><defname>status_variable</defname></param>
+        <initializer><ref refid="sl__common_8h_1a4066b312add26b664da0febb8d082f0a" kindref="member">GET_STATUS_BIT</ref>(status_variable, \
+                                                               <ref refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60a53b8930faa12aaba8cdb2f2ccb0d7473" kindref="member">STATUS_BIT_SMARTCONFIG_STOPPED</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="162" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1ad0271b614ec65d16b4a196c596d078c3" prot="public" static="no">
+        <name>IS_STA_CONNECTED</name>
+        <param><defname>status_variable</defname></param>
+        <initializer><ref refid="sl__common_8h_1a4066b312add26b664da0febb8d082f0a" kindref="member">GET_STATUS_BIT</ref>(status_variable, \
+                                                               <ref refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60add0e5040c846e5350dd3c5d63b871430" kindref="member">STATUS_BIT_STA_CONNECTED</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="150" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1ae0674ea7579e8c978ac7ff2548b90d51" prot="public" static="no">
+        <name>LOOP_FOREVER</name>
+        <param></param>
+        <initializer>{\
+                while(1); \
+            }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="51" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1ac1454fa04f41c693f39425697a137d82" prot="public" static="no">
+        <name>MINUTE</name>
+        <initializer>10      /* Time - minutes */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="96" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1a3729d06495d9713592f79f3122c9e677" prot="public" static="no">
+        <name>MONTH</name>
+        <initializer>7       /* Month */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="93" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1a90952fe90796bf1f9338abb16cc33205" prot="public" static="no">
+        <name>pal_Memcmp</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <param><defname>z</defname></param>
+        <initializer>memcmp((const void *)x, (const void *)y, z)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="65" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1a37fdd21ff9af245c2e31cbdb052569cb" prot="public" static="no">
+        <name>pal_Memcpy</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <param><defname>z</defname></param>
+        <initializer>memcpy((void *)x, (const void *)y, z)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="64" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1aa5213901b06d3956b23cbad0025c4e62" prot="public" static="no">
+        <name>pal_Memset</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <param><defname>z</defname></param>
+        <initializer>memset((void *)x,y,z)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="63" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1aaea5f37dc3249bd449caba394126c792" prot="public" static="no">
+        <name>pal_Strcat</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer>strcat((char *)x, (const char *)y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="72" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1ab34483469aa144a61e5645f03c946243" prot="public" static="no">
+        <name>pal_Strcmp</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer>strcmp((const char *)x, (const char *)y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="67" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1ad3ec4baec6428b50366abaaa5df1b41f" prot="public" static="no">
+        <name>pal_Strcpy</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer>strcpy((char *)x, (const char *)y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="68" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1a6b307f3019965ea010a34fbe3fc4e317" prot="public" static="no">
+        <name>pal_Strlen</name>
+        <param><defname>x</defname></param>
+        <initializer>strlen((const char *)x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="66" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1aca5430664d7717bd6addee9ab98bacea" prot="public" static="no">
+        <name>pal_Strncmp</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <param><defname>z</defname></param>
+        <initializer>strncmp((const char *)x, (const char *)y, z)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="71" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1ad7ac572bd8337056e9f201e4baefd2ea" prot="public" static="no">
+        <name>pal_Strncpy</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <param><defname>z</defname></param>
+        <initializer>strncpy((char *)x, (const char *)y, z)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="69" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1ac2088f26f6facfb83393ef66b5e3cc5e" prot="public" static="no">
+        <name>pal_Strstr</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer>strstr((const char *)x, (const char *)y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="70" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1a8847f87908eac6b9997cc77e7ad812b4" prot="public" static="no">
+        <name>PASSKEY</name>
+        <initializer>&quot;&quot;                  /* Password in case of secure AP */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="80" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1a64d47f2021b387623f4c0a2576008a98" prot="public" static="no">
+        <name>PASSKEY_LEN</name>
+        <initializer><ref refid="sl__common_8h_1a6b307f3019965ea010a34fbe3fc4e317" kindref="member">pal_Strlen</ref>(<ref refid="sl__common_8h_1a8847f87908eac6b9997cc77e7ad812b4" kindref="member">PASSKEY</ref>)  /* Password length in case of secure AP */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="81" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1a5d0580045e0bc6c8f12efd69fbbf4779" prot="public" static="no">
+        <name>PASSWORD_AP_MODE</name>
+        <initializer>&quot;&quot;                  /* Password of CC3100 AP */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="85" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1ae6d04eb94ec2bc84228ef0559f9f4af1" prot="public" static="no">
+        <name>SEC_TYPE</name>
+        <initializer><ref refid="group__wlan_1gad8810524d8a3a8a39aa515384b9ee4e6" kindref="member">SL_SEC_TYPE_OPEN</ref>    /* Security type of the Access piont */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="79" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1a26b16e7ff97ed9edfa6e26c452e09d54" prot="public" static="no">
+        <name>SEC_TYPE_AP_MODE</name>
+        <initializer><ref refid="group__wlan_1gad8810524d8a3a8a39aa515384b9ee4e6" kindref="member">SL_SEC_TYPE_OPEN</ref>    /* Can take <ref refid="group__wlan_1ga9fe0ffec5e209c753f3e34c2a218b0d9" kindref="member">SL_SEC_TYPE_WEP</ref> or
+                                                * <ref refid="group__wlan_1ga80ee56acbb067c1ad95d039e655db6ac" kindref="member">SL_SEC_TYPE_WPA</ref> as well */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="87" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1a94212be2394d2d37d9dfd33d07d82dba" prot="public" static="no">
+        <name>SECOND</name>
+        <initializer>0       /* Time - seconds */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="97" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1a4138fadf902a97c43107ff97c5266b73" prot="public" static="no">
+        <name>SET_STATUS_BIT</name>
+        <param><defname>status_variable</defname></param>
+        <param><defname>bit</defname></param>
+        <initializer>status_variable |= ((unsigned <ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga295b9aa203738050fd2137fb81030321" kindref="member">long</ref>)1&lt;&lt;(bit))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="144" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1ad1c337976ebb84a243c8406123ff737e" prot="public" static="no">
+        <name>SSID_AP_MODE</name>
+        <initializer>&quot;&lt;ap_mode_ssid&gt;&quot;       /* SSID of the CC3100 in AP mode */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="84" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1a5a96011c562e0f15942febdce71ba975" prot="public" static="no">
+        <name>SSID_NAME</name>
+        <initializer>&quot;&lt;ap_name&gt;&quot;         /* Access point name to connect to. */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="78" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1aa90cac659d18e8ef6294c7ae337f6b58" prot="public" static="no">
+        <name>SUCCESS</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="99" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sl__common_8h_1a5871356500f559add06ea81d60331b1b" prot="public" static="no">
+        <name>YEAR</name>
+        <initializer>2017    /* Current year */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="94" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="sl__common_8h_1a73849ce9f12b1004feca595f78448d60" prot="public" static="no">
+        <name>e_StatusBits</name>
+        <enumvalue id="sl__common_8h_1a73849ce9f12b1004feca595f78448d60ad1e831077e1b5f19f0b64937e607be7c" prot="public">
+          <name>STATUS_BIT_CONNECTION</name>
+          <initializer>=  0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sl__common_8h_1a73849ce9f12b1004feca595f78448d60add0e5040c846e5350dd3c5d63b871430" prot="public">
+          <name>STATUS_BIT_STA_CONNECTED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sl__common_8h_1a73849ce9f12b1004feca595f78448d60abd58a09e5e1af48f6bee35bc88ba15e9" prot="public">
+          <name>STATUS_BIT_IP_ACQUIRED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sl__common_8h_1a73849ce9f12b1004feca595f78448d60ab5928137e028318d9d03984cd07614b4" prot="public">
+          <name>STATUS_BIT_IP_LEASED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sl__common_8h_1a73849ce9f12b1004feca595f78448d60af2b531274e6eaa11149b011f0320b4bd" prot="public">
+          <name>STATUS_BIT_CONNECTION_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sl__common_8h_1a73849ce9f12b1004feca595f78448d60af4273f20affb942a2837217a4f6a6b33" prot="public">
+          <name>STATUS_BIT_P2P_NEG_REQ_RECEIVED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sl__common_8h_1a73849ce9f12b1004feca595f78448d60a4112aadda9f5d95e48a73d72c7525258" prot="public">
+          <name>STATUS_BIT_SMARTCONFIG_DONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sl__common_8h_1a73849ce9f12b1004feca595f78448d60a53b8930faa12aaba8cdb2f2ccb0d7473" prot="public">
+          <name>STATUS_BIT_SMARTCONFIG_STOPPED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" line="102" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h" bodystart="102" bodyend="142"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>sl_common.h<sp/>-<sp/>Defining<sp/>the<sp/>common<sp/>configurations</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2014<sp/>Texas<sp/>Instruments<sp/>Incorporated<sp/>-<sp/>http://www.ti.com/</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in<sp/>the</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>distribution.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>Neither<sp/>the<sp/>name<sp/>of<sp/>Texas<sp/>Instruments<sp/>Incorporated<sp/>nor<sp/>the<sp/>names<sp/>of</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>its<sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/><sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/><sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>COPYRIGHT</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/><sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,<sp/>INCIDENTAL,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/><sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/><sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/><sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/><sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/><sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__SL_COMMON_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__SL_COMMON_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//*****************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>If<sp/>building<sp/>with<sp/>a<sp/>C++<sp/>compiler,<sp/>make<sp/>all<sp/>of<sp/>the<sp/>definitions<sp/>in<sp/>this<sp/>header</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/>have<sp/>a<sp/>C<sp/>binding.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//*****************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="sl__common_8h_1ae0674ea7579e8c978ac7ff2548b90d51" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOOP_FOREVER()<sp/>\</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{\</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>while(1);<sp/>\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="sl__common_8h_1aee01c39132c3e5916e949a9b3280ceb1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ASSERT_ON_ERROR(error_code)<sp/>\</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{\</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Handling<sp/>the<sp/>error-codes<sp/>is<sp/>specific<sp/>to<sp/>the<sp/>application<sp/>*/</highlight><highlight class="preprocessor"><sp/>\</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(error_code<sp/>&lt;<sp/>0)<sp/>return<sp/>error_code;<sp/>\</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>else,<sp/>continue<sp/>w/<sp/>execution<sp/>*/</highlight><highlight class="preprocessor"><sp/>\</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="sl__common_8h_1aa5213901b06d3956b23cbad0025c4e62" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pal_Memset(x,y,z)<sp/><sp/><sp/>memset((void<sp/>*)x,y,z)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="sl__common_8h_1a37fdd21ff9af245c2e31cbdb052569cb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pal_Memcpy(x,y,z)<sp/><sp/><sp/>memcpy((void<sp/>*)x,<sp/>(const<sp/>void<sp/>*)y,<sp/>z)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="sl__common_8h_1a90952fe90796bf1f9338abb16cc33205" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pal_Memcmp(x,y,z)<sp/><sp/><sp/>memcmp((const<sp/>void<sp/>*)x,<sp/>(const<sp/>void<sp/>*)y,<sp/>z)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="sl__common_8h_1a6b307f3019965ea010a34fbe3fc4e317" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pal_Strlen(x)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>strlen((const<sp/>char<sp/>*)x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="sl__common_8h_1ab34483469aa144a61e5645f03c946243" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pal_Strcmp(x,y)<sp/><sp/><sp/><sp/><sp/>strcmp((const<sp/>char<sp/>*)x,<sp/>(const<sp/>char<sp/>*)y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="sl__common_8h_1ad3ec4baec6428b50366abaaa5df1b41f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pal_Strcpy(x,y)<sp/><sp/><sp/><sp/><sp/>strcpy((char<sp/>*)x,<sp/>(const<sp/>char<sp/>*)y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="sl__common_8h_1ad7ac572bd8337056e9f201e4baefd2ea" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pal_Strncpy(x,y,z)<sp/><sp/>strncpy((char<sp/>*)x,<sp/>(const<sp/>char<sp/>*)y,<sp/>z)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="sl__common_8h_1ac2088f26f6facfb83393ef66b5e3cc5e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pal_Strstr(x,y)<sp/><sp/><sp/><sp/><sp/>strstr((const<sp/>char<sp/>*)x,<sp/>(const<sp/>char<sp/>*)y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="sl__common_8h_1aca5430664d7717bd6addee9ab98bacea" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pal_Strncmp(x,y,z)<sp/><sp/>strncmp((const<sp/>char<sp/>*)x,<sp/>(const<sp/>char<sp/>*)y,<sp/>z)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="sl__common_8h_1aaea5f37dc3249bd449caba394126c792" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pal_Strcat(x,y)<sp/><sp/><sp/><sp/><sp/>strcat((char<sp/>*)x,<sp/>(const<sp/>char<sp/>*)y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="75"><highlight class="comment"><sp/>*<sp/>Values<sp/>for<sp/>below<sp/>macros<sp/>shall<sp/>be<sp/>modified<sp/>per<sp/>the<sp/>access-point&apos;s<sp/>(AP)<sp/>properties</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/>*<sp/>SimpleLink<sp/>device<sp/>will<sp/>connect<sp/>to<sp/>following<sp/>AP<sp/>when<sp/>the<sp/>application<sp/>is<sp/>executed</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="sl__common_8h_1a5a96011c562e0f15942febdce71ba975" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSID_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;&lt;ap_name&gt;&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Access<sp/>point<sp/>name<sp/>to<sp/>connect<sp/>to.<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="sl__common_8h_1ae6d04eb94ec2bc84228ef0559f9f4af1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SEC_TYPE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SL_SEC_TYPE_OPEN<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Security<sp/>type<sp/>of<sp/>the<sp/>Access<sp/>piont<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="sl__common_8h_1a8847f87908eac6b9997cc77e7ad812b4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PASSKEY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Password<sp/>in<sp/>case<sp/>of<sp/>secure<sp/>AP<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="sl__common_8h_1a64d47f2021b387623f4c0a2576008a98" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PASSKEY_LEN<sp/><sp/><sp/><sp/><sp/>pal_Strlen(PASSKEY)<sp/><sp/></highlight><highlight class="comment">/*<sp/>Password<sp/>length<sp/>in<sp/>case<sp/>of<sp/>secure<sp/>AP<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Configuration<sp/>of<sp/>the<sp/>device<sp/>when<sp/>it<sp/>comes<sp/>up<sp/>in<sp/>AP<sp/>mode<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="sl__common_8h_1ad1c337976ebb84a243c8406123ff737e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSID_AP_MODE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;&lt;ap_mode_ssid&gt;&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>SSID<sp/>of<sp/>the<sp/>CC3100<sp/>in<sp/>AP<sp/>mode<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="sl__common_8h_1a5d0580045e0bc6c8f12efd69fbbf4779" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PASSWORD_AP_MODE<sp/><sp/><sp/>&quot;&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Password<sp/>of<sp/>CC3100<sp/>AP<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="sl__common_8h_1a26b16e7ff97ed9edfa6e26c452e09d54" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SEC_TYPE_AP_MODE<sp/><sp/><sp/>SL_SEC_TYPE_OPEN<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Can<sp/>take<sp/>SL_SEC_TYPE_WEP<sp/>or</highlight></codeline>
+<codeline lineno="87"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>SL_SEC_TYPE_WPA<sp/>as<sp/>well<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/>*<sp/>Values<sp/>for<sp/>below<sp/>macros<sp/>shall<sp/>be<sp/>modified<sp/>based<sp/>on<sp/>current<sp/>time</highlight></codeline>
+<codeline lineno="91"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="sl__common_8h_1a30b328ca499f27b3d0f8111b495834ca" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>10<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Current<sp/>Date<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="sl__common_8h_1a3729d06495d9713592f79f3122c9e677" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MONTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/>7<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Month<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="sl__common_8h_1a5871356500f559add06ea81d60331b1b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>YEAR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2017<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Current<sp/>year<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="sl__common_8h_1a4698ae12cf6a8acb5886fffd0ec897e6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HOUR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>15<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Time<sp/>-<sp/>hours<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="sl__common_8h_1ac1454fa04f41c693f39425697a137d82" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MINUTE<sp/><sp/><sp/><sp/><sp/><sp/>10<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Time<sp/>-<sp/>minutes<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="sl__common_8h_1a94212be2394d2d37d9dfd33d07d82dba" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SECOND<sp/><sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Time<sp/>-<sp/>seconds<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="sl__common_8h_1aa90cac659d18e8ef6294c7ae337f6b58" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SUCCESS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Status<sp/>bits<sp/>-<sp/>These<sp/>are<sp/>used<sp/>to<sp/>set/reset<sp/>the<sp/>corresponding<sp/>bits<sp/>in<sp/>a<sp/>&apos;status_variable&apos;<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="103" refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60ad1e831077e1b5f19f0b64937e607be7c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60ad1e831077e1b5f19f0b64937e607be7c" kindref="member">STATUS_BIT_CONNECTION</ref><sp/>=<sp/><sp/>0,<sp/></highlight><highlight class="comment">/*<sp/>If<sp/>this<sp/>bit<sp/>is:</highlight></codeline>
+<codeline lineno="104"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>1<sp/>in<sp/>a<sp/>&apos;status_variable&apos;,<sp/>the<sp/>device<sp/>is<sp/>connected<sp/>to<sp/>the<sp/>AP</highlight></codeline>
+<codeline lineno="105"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>0<sp/>in<sp/>a<sp/>&apos;status_variable&apos;,<sp/>the<sp/>device<sp/>is<sp/>not<sp/>connected<sp/>to<sp/>the<sp/>AP</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60add0e5040c846e5350dd3c5d63b871430" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60add0e5040c846e5350dd3c5d63b871430" kindref="member">STATUS_BIT_STA_CONNECTED</ref>,<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>this<sp/>bit<sp/>is:</highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>1<sp/>in<sp/>a<sp/>&apos;status_variable&apos;,<sp/>client<sp/>is<sp/>connected<sp/>to<sp/>device</highlight></codeline>
+<codeline lineno="110"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>0<sp/>in<sp/>a<sp/>&apos;status_variable&apos;,<sp/>client<sp/>is<sp/>not<sp/>connected<sp/>to<sp/>device</highlight></codeline>
+<codeline lineno="111"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60abd58a09e5e1af48f6bee35bc88ba15e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60abd58a09e5e1af48f6bee35bc88ba15e9" kindref="member">STATUS_BIT_IP_ACQUIRED</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>this<sp/>bit<sp/>is:</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>1<sp/>in<sp/>a<sp/>&apos;status_variable&apos;,<sp/>the<sp/>device<sp/>has<sp/>acquired<sp/>an<sp/>IP</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>0<sp/>in<sp/>a<sp/>&apos;status_variable&apos;,<sp/>the<sp/>device<sp/>has<sp/>not<sp/>acquired<sp/>an<sp/>IP</highlight></codeline>
+<codeline lineno="116"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60ab5928137e028318d9d03984cd07614b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60ab5928137e028318d9d03984cd07614b4" kindref="member">STATUS_BIT_IP_LEASED</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>this<sp/>bit<sp/>is:</highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>1<sp/>in<sp/>a<sp/>&apos;status_variable&apos;,<sp/>the<sp/>device<sp/>has<sp/>leased<sp/>an<sp/>IP</highlight></codeline>
+<codeline lineno="120"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>0<sp/>in<sp/>a<sp/>&apos;status_variable&apos;,<sp/>the<sp/>device<sp/>has<sp/>not<sp/>leased<sp/>an<sp/>IP</highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60af2b531274e6eaa11149b011f0320b4bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60af2b531274e6eaa11149b011f0320b4bd" kindref="member">STATUS_BIT_CONNECTION_FAILED</ref>,<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>this<sp/>bit<sp/>is:</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>1<sp/>in<sp/>a<sp/>&apos;status_variable&apos;,<sp/>failed<sp/>to<sp/>connect<sp/>to<sp/>device</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>0<sp/>in<sp/>a<sp/>&apos;status_variable&apos;</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60af4273f20affb942a2837217a4f6a6b33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60af4273f20affb942a2837217a4f6a6b33" kindref="member">STATUS_BIT_P2P_NEG_REQ_RECEIVED</ref>,</highlight><highlight class="comment">/*<sp/>If<sp/>this<sp/>bit<sp/>is:</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>1<sp/>in<sp/>a<sp/>&apos;status_variable&apos;,<sp/>connection<sp/>requested<sp/>by<sp/>remote<sp/>wifi-direct<sp/>device</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>0<sp/>in<sp/>a<sp/>&apos;status_variable&apos;,</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60a4112aadda9f5d95e48a73d72c7525258" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60a4112aadda9f5d95e48a73d72c7525258" kindref="member">STATUS_BIT_SMARTCONFIG_DONE</ref>,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>this<sp/>bit<sp/>is:</highlight></codeline>
+<codeline lineno="133"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>1<sp/>in<sp/>a<sp/>&apos;status_variable&apos;,<sp/>smartconfig<sp/>completed</highlight></codeline>
+<codeline lineno="134"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>0<sp/>in<sp/>a<sp/>&apos;status_variable&apos;,<sp/>smartconfig<sp/>event<sp/>couldn&apos;t<sp/>complete</highlight></codeline>
+<codeline lineno="135"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60a53b8930faa12aaba8cdb2f2ccb0d7473" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60a53b8930faa12aaba8cdb2f2ccb0d7473" kindref="member">STATUS_BIT_SMARTCONFIG_STOPPED</ref><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>this<sp/>bit<sp/>is:</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>1<sp/>in<sp/>a<sp/>&apos;status_variable&apos;,<sp/>smartconfig<sp/>process<sp/>stopped</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>0<sp/>in<sp/>a<sp/>&apos;status_variable&apos;,<sp/>smartconfig<sp/>process<sp/>running</highlight></codeline>
+<codeline lineno="140"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}<ref refid="sl__common_8h_1a73849ce9f12b1004feca595f78448d60" kindref="member">e_StatusBits</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="sl__common_8h_1a4138fadf902a97c43107ff97c5266b73" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SET_STATUS_BIT(status_variable,<sp/>bit)<sp/><sp/><sp/><sp/>status_variable<sp/>|=<sp/>((unsigned<sp/>long)1&lt;&lt;(bit))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="sl__common_8h_1a69b19c74bcd5602d7383c384897f289a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLR_STATUS_BIT(status_variable,<sp/>bit)<sp/><sp/><sp/><sp/>status_variable<sp/>&amp;=<sp/>~((unsigned<sp/>long)1&lt;&lt;(bit))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="sl__common_8h_1a4066b312add26b664da0febb8d082f0a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GET_STATUS_BIT(status_variable,<sp/>bit)<sp/><sp/><sp/><sp/>(0<sp/>!=<sp/>(status_variable<sp/>&amp;<sp/>((unsigned<sp/>long)1&lt;&lt;(bit))))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="sl__common_8h_1a85e63ae93399fcd11f1eb3b5d0f077a3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_CONNECTED(status_variable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_STATUS_BIT(status_variable,<sp/>\</highlight></codeline>
+<codeline lineno="149"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>STATUS_BIT_CONNECTION)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="sl__common_8h_1ad0271b614ec65d16b4a196c596d078c3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_STA_CONNECTED(status_variable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_STATUS_BIT(status_variable,<sp/>\</highlight></codeline>
+<codeline lineno="151"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>STATUS_BIT_STA_CONNECTED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="sl__common_8h_1aba1cff5a1f277fe33962870d0ac11299" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_IP_ACQUIRED(status_variable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_STATUS_BIT(status_variable,<sp/>\</highlight></codeline>
+<codeline lineno="153"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>STATUS_BIT_IP_ACQUIRED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="sl__common_8h_1a60a51fd95523463bdec69d0bc91e6ffd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_IP_LEASED(status_variable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_STATUS_BIT(status_variable,<sp/>\</highlight></codeline>
+<codeline lineno="155"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>STATUS_BIT_IP_LEASED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="sl__common_8h_1a6dfe02d575f040a1ebe8f40f71ecdd01" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_CONNECTION_FAILED(status_variable)<sp/><sp/><sp/><sp/><sp/>GET_STATUS_BIT(status_variable,<sp/>\</highlight></codeline>
+<codeline lineno="157"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>STATUS_BIT_CONNECTION_FAILED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158" refid="sl__common_8h_1aa5f4a30febe25360ad914ceb2f95deae" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_P2P_NEG_REQ_RECEIVED(status_variable)<sp/><sp/>GET_STATUS_BIT(status_variable,<sp/>\</highlight></codeline>
+<codeline lineno="159"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>STATUS_BIT_P2P_NEG_REQ_RECEIVED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="sl__common_8h_1a72cbaee913ee771bbc682d330dd12e98" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_SMARTCONFIG_DONE(status_variable)<sp/><sp/><sp/><sp/><sp/><sp/>GET_STATUS_BIT(status_variable,<sp/>\</highlight></codeline>
+<codeline lineno="161"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>STATUS_BIT_SMARTCONFIG_DONE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="sl__common_8h_1a28e4c80625b77d1a8740bb4eeec59d88" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_SMARTCONFIG_STOPPED(status_variable)<sp/><sp/><sp/>GET_STATUS_BIT(status_variable,<sp/>\</highlight></codeline>
+<codeline lineno="163"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>STATUS_BIT_SMARTCONFIG_STOPPED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__cplusplus<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*__SL_COMMON_H__*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/examples/common/sl_common.h"/>
+  </compounddef>
+</doxygen>

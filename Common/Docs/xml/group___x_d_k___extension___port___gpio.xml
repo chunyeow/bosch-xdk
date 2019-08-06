@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___x_d_k___extension___port___gpio" kind="group">
+    <compoundname>XDK_Extension_Port_Gpio</compoundname>
+    <title>XdkExtensionPortGpio</title>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___x_d_k___extension___port___gpio_1gac554438f346cf0b4994cfff7ff8e60ed" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga41a2f220f03970c1857bd96528307a81" kindref="member">CmdProcessor_T</ref> *</type>
+        <definition>CmdProcessor_T* GpioCmdProcessHandle</definition>
+        <argsstring></argsstring>
+        <name>GpioCmdProcessHandle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionGpioExample.c" line="68" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionGpioExample.c" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___x_d_k___extension___port___gpio_1ga61ea7f99c292d9ca084581b8cb62899e" prot="public" static="yes" mutable="no">
+        <type>BSP_ExtensionPort_PinId_T</type>
+        <definition>BSP_ExtensionPort_PinId_T GpioPinIdForEdgeInterrupt</definition>
+        <argsstring></argsstring>
+        <name>GpioPinIdForEdgeInterrupt</name>
+        <initializer>= BSP_EXTENSIONPORT_GPIO_MAX</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionGpioExample.c" line="70" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionGpioExample.c" bodystart="70" bodyend="-1"/>
+        <referencedby refid="group___x_d_k___extension___port___gpio_1ga0d2eec702f3954283fae072c87abaf27" compoundref="_extension_gpio_example_8c" startline="100" endline="116">GpioInterruptCallback</referencedby>
+        <referencedby refid="group___x_d_k___extension___port___gpio_1ga90baef8256d1b2cd0765ec00ff0b3d92" compoundref="_extension_gpio_example_8c" startline="134" endline="157">ExtensionGpioExample_InitGpioIntBothEdge</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___x_d_k___extension___port___gpio_1gaa8069c465690880301eb41d1321d707d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T ExtensionGpioExample_DeleteGpio</definition>
+        <argsstring>(BSP_ExtensionPort_PinId_T pinId)</argsstring>
+        <name>ExtensionGpioExample_DeleteGpio</name>
+        <param>
+          <type>BSP_ExtensionPort_PinId_T</type>
+          <declname>pinId</declname>
+        </param>
+        <briefdescription>
+<para>This API is used to de-initialize a particular GPIO pin and put it into default state. </para>        </briefdescription>
+        <detaileddescription>
+<para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionGpioExample.c" line="180" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionGpioExample.c" bodystart="180" bodyend="193"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+      </memberdef>
+      <memberdef kind="function" id="group___x_d_k___extension___port___gpio_1ga90baef8256d1b2cd0765ec00ff0b3d92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T ExtensionGpioExample_InitGpioIntBothEdge</definition>
+        <argsstring>(BSP_ExtensionPort_PinId_T pinId)</argsstring>
+        <name>ExtensionGpioExample_InitGpioIntBothEdge</name>
+        <param>
+          <type>BSP_ExtensionPort_PinId_T</type>
+          <declname>pinId</declname>
+        </param>
+        <briefdescription>
+<para>This API is used to configure GPIO as Input and capable of triggering interrupt for both Raising and Falling. After calling this API successfully the signal on the GPIO will trigger an Interrupt. </para>        </briefdescription>
+        <detaileddescription>
+<para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionGpioExample.c" line="134" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionGpioExample.c" bodystart="134" bodyend="157"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___x_d_k___extension___port___gpio_1ga0d2eec702f3954283fae072c87abaf27" compoundref="_extension_gpio_example_8c" startline="100" endline="116">GpioInterruptCallback</references>
+        <references refid="group___x_d_k___extension___port___gpio_1ga61ea7f99c292d9ca084581b8cb62899e" compoundref="_extension_gpio_example_8c" startline="70">GpioPinIdForEdgeInterrupt</references>
+        <referencedby refid="group___x_d_k___e_x_t_e_n_s_i_o_n___p_o_r_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_xdk_extension_port_2source_2_app_controller_8c" startline="179" endline="203">AppControllerEnable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___x_d_k___extension___port___gpio_1gac80620d8d76b8d91c391adfe18d01fb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T ExtensionGpioExample_InitGpioOutputMode</definition>
+        <argsstring>(BSP_ExtensionPort_PinId_T pinId)</argsstring>
+        <name>ExtensionGpioExample_InitGpioOutputMode</name>
+        <param>
+          <type>BSP_ExtensionPort_PinId_T</type>
+          <declname>pinId</declname>
+        </param>
+        <briefdescription>
+<para>This API is used to configure GPIO pin as output pin. </para>        </briefdescription>
+        <detaileddescription>
+<para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionGpioExample.c" line="160" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionGpioExample.c" bodystart="160" bodyend="177"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <referencedby refid="group___x_d_k___e_x_t_e_n_s_i_o_n___p_o_r_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_xdk_extension_port_2source_2_app_controller_8c" startline="116" endline="167">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___x_d_k___extension___port___gpio_1ga43878ea6891d400977c664a051563761" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T ExtensionGpioExample_Initialize</definition>
+        <argsstring>(CmdProcessor_T *handle)</argsstring>
+        <name>ExtensionGpioExample_Initialize</name>
+        <param>
+          <type><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga41a2f220f03970c1857bd96528307a81" kindref="member">CmdProcessor_T</ref> *</type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+<para>This API is used to initialize the GPIO example resources. </para>        </briefdescription>
+        <detaileddescription>
+<para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionGpioExample.c" line="119" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionGpioExample.c" bodystart="119" bodyend="131"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <referencedby refid="group___x_d_k___e_x_t_e_n_s_i_o_n___p_o_r_t_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_xdk_extension_port_2source_2_app_controller_8c" startline="219" endline="263">AppControllerSetup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___x_d_k___extension___port___gpio_1ga0d2eec702f3954283fae072c87abaf27" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void GpioInterruptCallback</definition>
+        <argsstring>(void)</argsstring>
+        <name>GpioInterruptCallback</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Callback function to be triggered upon interrupt in GPIO input pin BSP_ExtensionPort_ReadGpio() is used to read the pin value on interrupt. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note: De-bouncing logic is not implemented here. The user shall implement his own in case if it is required for their use case. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionGpioExample.c" line="100" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionGpioExample.c" bodystart="100" bodyend="116"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___x_d_k___extension___port___gpio_1ga61ea7f99c292d9ca084581b8cb62899e" compoundref="_extension_gpio_example_8c" startline="70">GpioPinIdForEdgeInterrupt</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga6ac2f907469b3a4614c6884ff7fec8fa">CmdProcessor_EnqueueFromIsr</references>
+        <references refid="group___x_d_k___extension___port___gpio_1gaa7b9b95f5bfe9dc4ab1c21dae9ab508c" compoundref="_extension_gpio_example_8c" startline="86" endline="91">GpioInterruptConsumer</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga16c59695a081199fd09cd3bed6cc6bab">Retcode_RaiseErrorFromIsr</references>
+        <referencedby refid="group___x_d_k___extension___port___gpio_1ga90baef8256d1b2cd0765ec00ff0b3d92" compoundref="_extension_gpio_example_8c" startline="134" endline="157">ExtensionGpioExample_InitGpioIntBothEdge</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___x_d_k___extension___port___gpio_1gaa7b9b95f5bfe9dc4ab1c21dae9ab508c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void GpioInterruptConsumer</definition>
+        <argsstring>(void *param1, uint32_t pinValue)</argsstring>
+        <name>GpioInterruptConsumer</name>
+        <param>
+          <type>void *</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>pinValue</declname>
+        </param>
+        <briefdescription>
+<para>Deferred function called upon interrupt to process, this way of implementation can be used in case user want to execute long procedure upon this event on GPIO. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pinValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value on the GPIO pin </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionGpioExample.c" line="86" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionGpioExample.c" bodystart="86" bodyend="91"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <referencedby refid="group___x_d_k___extension___port___gpio_1ga0d2eec702f3954283fae072c87abaf27" compoundref="_extension_gpio_example_8c" startline="100" endline="116">GpioInterruptCallback</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___x_d_k___extension___port___gpio_1gabff8f3a204e79671b98fabaa652198c3" prot="public" static="no">
+        <name>BCDS_MODULE_ID</name>
+        <initializer><ref refid="_xdk_extension_port_2source_2_xdk_app_info_8h_1a58c5197225b08cbce9809ee5d9b3ae74a6c9508413733dda751f0fbf92d19c6f9" kindref="member">XDK_APP_MODULE_ID_EXTENSION_PORT_GPIO</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionGpioExample.c" line="53" column="10" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionGpioExample.c" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This Module contains necessary implementation in order to enable user to develop his application using the Extension port GPIO interface. This module can be used a reference design for interfacing user device via GPIO of extension port. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

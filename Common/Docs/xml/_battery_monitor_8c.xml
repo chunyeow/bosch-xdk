@@ -1,0 +1,550 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_battery_monitor_8c" kind="file">
+    <compoundname>BatteryMonitor.c</compoundname>
+    <includes refid="_xdk_common_info_8h" local="yes">XdkCommonInfo.h</includes>
+    <includes refid="_battery_monitor_8h" local="yes">BatteryMonitor.h</includes>
+    <includes refid="_adc_central_8h" local="yes">AdcCentral.h</includes>
+    <includes local="yes">BCDS_BSP_Charger_BQ2407X.h</includes>
+    <includes refid="_b_s_p___adc_8h" local="yes">BSP_Adc.h</includes>
+    <includes refid="_free_r_t_o_s_8h" local="yes">FreeRTOS.h</includes>
+    <includes refid="timers_8h" local="yes">timers.h</includes>
+    <includes refid="semphr_8h" local="yes">semphr.h</includes>
+    <incdepgraph>
+      <node id="24076">
+        <label>stdbool.h</label>
+      </node>
+      <node id="24083">
+        <label>BCDS_HALConfig.h</label>
+        <link refid="_b_c_d_s___h_a_l_config_8h"/>
+      </node>
+      <node id="24096">
+        <label>list.h</label>
+      </node>
+      <node id="24081">
+        <label>Mcu_Adc.h</label>
+        <link refid="_mcu___adc_8h"/>
+        <childnode refid="24082" relation="include">
+        </childnode>
+        <childnode refid="24074" relation="include">
+        </childnode>
+        <childnode refid="24084" relation="include">
+        </childnode>
+      </node>
+      <node id="24090">
+        <label>BCDS_Assert.h</label>
+        <link refid="_b_c_d_s___assert_8h"/>
+        <childnode refid="24073" relation="include">
+        </childnode>
+      </node>
+      <node id="24072">
+        <label>XdkCommonInfo.h</label>
+        <link refid="_xdk_common_info_8h"/>
+        <childnode refid="24073" relation="include">
+        </childnode>
+      </node>
+      <node id="24075">
+        <label>stdint.h</label>
+      </node>
+      <node id="24073">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="24074" relation="include">
+        </childnode>
+      </node>
+      <node id="24078">
+        <label>stdlib.h</label>
+      </node>
+      <node id="24094">
+        <label>timers.h</label>
+        <link refid="timers_8h"/>
+        <childnode refid="24095" relation="include">
+        </childnode>
+      </node>
+      <node id="24084">
+        <label>em_adc.h</label>
+      </node>
+      <node id="24091">
+        <label>BCDS_TaskConfig.h</label>
+        <link refid="_b_c_d_s___task_config_8h"/>
+      </node>
+      <node id="24097">
+        <label>semphr.h</label>
+        <link refid="semphr_8h"/>
+        <childnode refid="24098" relation="include">
+        </childnode>
+      </node>
+      <node id="24080">
+        <label>AdcCentral.h</label>
+        <link refid="_adc_central_8h"/>
+        <childnode refid="24081" relation="include">
+        </childnode>
+      </node>
+      <node id="24088">
+        <label>stddef.h</label>
+      </node>
+      <node id="24086">
+        <label>BSP_Adc.h</label>
+        <link refid="_b_s_p___adc_8h"/>
+        <childnode refid="24082" relation="include">
+        </childnode>
+      </node>
+      <node id="24093">
+        <label>portable.h</label>
+      </node>
+      <node id="24077">
+        <label>string.h</label>
+      </node>
+      <node id="24074">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="24075" relation="include">
+        </childnode>
+        <childnode refid="24076" relation="include">
+        </childnode>
+        <childnode refid="24077" relation="include">
+        </childnode>
+        <childnode refid="24078" relation="include">
+        </childnode>
+      </node>
+      <node id="24092">
+        <label>projdefs.h</label>
+      </node>
+      <node id="24082">
+        <label>BCDS_HAL.h</label>
+        <link refid="_b_c_d_s___h_a_l_8h"/>
+        <childnode refid="24073" relation="include">
+        </childnode>
+        <childnode refid="24083" relation="include">
+        </childnode>
+      </node>
+      <node id="24098">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+      </node>
+      <node id="24071">
+        <label>SDK/xdk110/Common/source/BatteryMonitor.c</label>
+        <link refid="BatteryMonitor.c"/>
+        <childnode refid="24072" relation="include">
+        </childnode>
+        <childnode refid="24079" relation="include">
+        </childnode>
+        <childnode refid="24080" relation="include">
+        </childnode>
+        <childnode refid="24085" relation="include">
+        </childnode>
+        <childnode refid="24086" relation="include">
+        </childnode>
+        <childnode refid="24087" relation="include">
+        </childnode>
+        <childnode refid="24094" relation="include">
+        </childnode>
+        <childnode refid="24097" relation="include">
+        </childnode>
+      </node>
+      <node id="24095">
+        <label>task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="24096" relation="include">
+        </childnode>
+      </node>
+      <node id="24089">
+        <label>FreeRTOSConfig.h</label>
+        <link refid="_free_r_t_o_s_config_8h"/>
+        <childnode refid="24075" relation="include">
+        </childnode>
+        <childnode refid="24090" relation="include">
+        </childnode>
+        <childnode refid="24091" relation="include">
+        </childnode>
+      </node>
+      <node id="24087">
+        <label>FreeRTOS.h</label>
+        <link refid="_free_r_t_o_s_8h"/>
+        <childnode refid="24088" relation="include">
+        </childnode>
+        <childnode refid="24075" relation="include">
+        </childnode>
+        <childnode refid="24089" relation="include">
+        </childnode>
+        <childnode refid="24092" relation="include">
+        </childnode>
+        <childnode refid="24093" relation="include">
+        </childnode>
+      </node>
+      <node id="24079">
+        <label>BatteryMonitor.h</label>
+        <link refid="_battery_monitor_8h"/>
+        <childnode refid="24073" relation="include">
+        </childnode>
+      </node>
+      <node id="24085">
+        <label>BCDS_BSP_Charger_BQ2407X.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_battery_monitor_8c_1a0becbf06e79a30a6bfd9f94313631d82" prot="public" static="no">
+        <name>BATTERYMONITOR_ADC_REFERENCE</name>
+        <initializer>2500</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ADC reference voltage is configured to 2.5 Volts </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/BatteryMonitor.c" line="55" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/BatteryMonitor.c" bodystart="55" bodyend="-1"/>
+        <referencedby refid="group___b_a_t_t_e_r_y_m_o_n_i_t_o_r_1gaf86e2e00a58342a77311da2486bc5b3d" compoundref="_battery_monitor_8c" startline="112" endline="145">BatteryMonitor_MeasureSignal</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_battery_monitor_8c_1ad917171c24180313142700bbcfe227cd" prot="public" static="no">
+        <name>BATTERYMONITOR_ADC_RESOLUTION</name>
+        <initializer>4096</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ADC resolution is configured to 12 bit hence 2^12=4096 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/BatteryMonitor.c" line="54" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/BatteryMonitor.c" bodystart="54" bodyend="-1"/>
+        <referencedby refid="group___b_a_t_t_e_r_y_m_o_n_i_t_o_r_1gaf86e2e00a58342a77311da2486bc5b3d" compoundref="_battery_monitor_8c" startline="112" endline="145">BatteryMonitor_MeasureSignal</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_battery_monitor_8c_1abff8f3a204e79671b98fabaa652198c3" prot="public" static="no">
+        <name>BCDS_MODULE_ID</name>
+        <initializer><ref refid="_xdk_common_info_8h_1a7d550569e587db8903a47a7044e6e935a024b164133132258973e72a232b6393b" kindref="member">XDK_COMMON_ID_BATTERYMONITOR</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/BatteryMonitor.c" line="41" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/BatteryMonitor.c" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_battery_monitor_8c_1a5d78c8ff7803344b65430b2e4fc62051" prot="public" static="yes" mutable="no">
+        <type><ref refid="semphr_8h_1ad88c6df4a04beedeac782918c8a332f5" kindref="member">SemaphoreHandle_t</ref></type>
+        <definition>SemaphoreHandle_t AdcSampleSemaphore</definition>
+        <argsstring></argsstring>
+        <name>AdcSampleSemaphore</name>
+        <initializer>= <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/BatteryMonitor.c" line="59" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/BatteryMonitor.c" bodystart="59" bodyend="-1"/>
+        <referencedby refid="_battery_monitor_8c_1a3a535a147586f68296d407bfab52cd7f" compoundref="_battery_monitor_8c" startline="62" endline="76">AdcSampleIRQCallback</referencedby>
+        <referencedby refid="group___b_a_t_t_e_r_y_m_o_n_i_t_o_r_1ga5a312f35b44dd926b4c5f054300c40c6" compoundref="_battery_monitor_8c" startline="79" endline="109">BatteryMonitor_Init</referencedby>
+        <referencedby refid="group___b_a_t_t_e_r_y_m_o_n_i_t_o_r_1gaf86e2e00a58342a77311da2486bc5b3d" compoundref="_battery_monitor_8c" startline="112" endline="145">BatteryMonitor_MeasureSignal</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="_battery_monitor_8c_1acf7e27e5129fb4febbb44dbd372a8a5a" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool IsInitialized</definition>
+        <argsstring></argsstring>
+        <name>IsInitialized</name>
+        <initializer>= <ref refid="_serval___types_8h_1a65e9886d74aaee76545e83dd09011727" kindref="member">false</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/BatteryMonitor.c" line="60" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/BatteryMonitor.c" bodystart="60" bodyend="-1"/>
+        <referencedby refid="group___b_a_t_t_e_r_y_m_o_n_i_t_o_r_1ga5a312f35b44dd926b4c5f054300c40c6" compoundref="_battery_monitor_8c" startline="79" endline="109">BatteryMonitor_Init</referencedby>
+        <referencedby refid="group___b_a_t_t_e_r_y_m_o_n_i_t_o_r_1gaf86e2e00a58342a77311da2486bc5b3d" compoundref="_battery_monitor_8c" startline="112" endline="145">BatteryMonitor_MeasureSignal</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_battery_monitor_8c_1a3a535a147586f68296d407bfab52cd7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AdcSampleIRQCallback</definition>
+        <argsstring>(ADC_T adc, uint16_t *buffer)</argsstring>
+        <name>AdcSampleIRQCallback</name>
+        <param>
+          <type><ref refid="_mcu___adc_8h_1a5860f527f3003fac5b4c77b3d28f3e9b" kindref="member">ADC_T</ref></type>
+          <declname>adc</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/BatteryMonitor.c" line="62" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/BatteryMonitor.c" bodystart="62" bodyend="76"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="semphr_8h_1a68aa43df8b2a0dbe17d05fad74670ef0" compoundref="semphr_8h" startline="624">xSemaphoreGiveFromISR</references>
+        <references refid="_battery_monitor_8c_1a5d78c8ff7803344b65430b2e4fc62051" compoundref="_battery_monitor_8c" startline="59">AdcSampleSemaphore</references>
+        <references refid="portmacro_8h_1aac6850c66595efdc02a8bbb95fb4648e" compoundref="portmacro_8h" startline="93">portYIELD_FROM_ISR</references>
+        <referencedby refid="group___b_a_t_t_e_r_y_m_o_n_i_t_o_r_1gaf86e2e00a58342a77311da2486bc5b3d" compoundref="_battery_monitor_8c" startline="112" endline="145">BatteryMonitor_MeasureSignal</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___b_a_t_t_e_r_y_m_o_n_i_t_o_r_1ga5a312f35b44dd926b4c5f054300c40c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T BatteryMonitor_Init</definition>
+        <argsstring>(void)</argsstring>
+        <name>BatteryMonitor_Init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize the Battery monitor module. </para>        </briefdescription>
+        <detaileddescription>
+<para>: Enables the Battery Charger &amp; Initialize the Battery monitor to measure the battery voltage</para><para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in case of successfully Initializing the Battery monitor. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_SEMAPHORE_ERROR</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in case not able to create Semaphore. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/BatteryMonitor.c" line="79" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/BatteryMonitor.c" bodystart="79" bodyend="109"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="_battery_monitor_8c_1acf7e27e5129fb4febbb44dbd372a8a5a" compoundref="_battery_monitor_8c" startline="60">IsInitialized</references>
+        <references refid="_battery_monitor_8c_1a5d78c8ff7803344b65430b2e4fc62051" compoundref="_battery_monitor_8c" startline="59">AdcSampleSemaphore</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba281b77d7bbd0b11781de864c12f32fd9" compoundref="_b_c_d_s___retcode_8h" startline="117">RETCODE_SEMAPHORE_ERROR</references>
+        <references refid="group___b_o_a_r_d___t_y_p_e___c_h_a_r_g_e_r_1gga3f43dcd85934d3046add9af3b4303f4aa8372e6c53b751abf2f449710756d3a95" compoundref="_b_s_p___board_type_8h" startline="301">BSP_XDK_CHARGING_SPEED_1</references>
+        <references refid="group___m_c_u___a_d_c_1ga384bfb9ef993b0b92e10b86f753de9b2" compoundref="_adc_central_8c" startline="435" endline="473">AdcCentral_Init</references>
+        <referencedby refid="_l_w_m2_m_object_device_8h_1a333808ec8833bf25207ff3f4e7d37506" compoundref="_l_w_m2_m_object_device_8c" startline="783" endline="792">LWM2MObjectDevice_Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___b_a_t_t_e_r_y_m_o_n_i_t_o_r_1gaf86e2e00a58342a77311da2486bc5b3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T BatteryMonitor_MeasureSignal</definition>
+        <argsstring>(uint32_t *outputVoltage)</argsstring>
+        <name>BatteryMonitor_MeasureSignal</name>
+        <param>
+          <type>uint32_t *</type>
+          <declname>outputVoltage</declname>
+        </param>
+        <briefdescription>
+<para>Measures the specified voltage signal. </para>        </briefdescription>
+        <detaileddescription>
+<para>: the analog signals from the charger routed to the MCU could be fetched using this function</para><para>This function once called will return the value of the specified signal in millivolts.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">outputVoltage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>measured battery voltage in millivolts</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in case of successfully getting the battery voltage. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_NULL_POINTER</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in case of NULL pointer passed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_BSP_CHARGER_NOT_ENABLED</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in case of accessing before enabling the charger. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/BatteryMonitor.c" line="112" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/BatteryMonitor.c" bodystart="112" bodyend="145"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="struct_adc_central___config_single___s_1a15a29da407bed66f69cc83ff595dd6e0" compoundref="_adc_central_8h" startline="82">AdcCentral_ConfigSingle_S::AcqTime</references>
+        <references refid="_mcu___adc_8h_1afaedfbeee1ed31a27cf10c71b60a6d3ca7966f0d1c3e0d629d5d9d704ec065f27" compoundref="_mcu___adc_8h" startline="111">ADC_ACQ_TIME_16</references>
+        <references refid="struct_adc_central___config_single___s_1abee273739ea1185e31b2d1caa044bd66" compoundref="_adc_central_8h" startline="83">AdcCentral_ConfigSingle_S::Appcallback</references>
+        <references refid="_battery_monitor_8c_1a3a535a147586f68296d407bfab52cd7f" compoundref="_battery_monitor_8c" startline="62" endline="76">AdcSampleIRQCallback</references>
+        <references refid="struct_adc_central___config_single___s_1ae4398a2ee15010b2562c2825560d44cf" compoundref="_adc_central_8h" startline="79">AdcCentral_ConfigSingle_S::BufferPtr</references>
+        <references refid="struct_adc_central___config_single___s_1a3b471348facf90fed27bde303c153459" compoundref="_adc_central_8h" startline="78">AdcCentral_ConfigSingle_S::Channel</references>
+        <references refid="_mcu___adc_8h_1a38413dd59fa2baa95927b80e05a0d079aeb7218c661cbbd67e9bde55b5a6b20ce" compoundref="_mcu___adc_8h" startline="65">ADC_ENABLE_CH7</references>
+        <references refid="struct_adc_central___config_single___s_1a1e98a729d768aed6a076425816de41f3" compoundref="_adc_central_8h" startline="80">AdcCentral_ConfigSingle_S::Reference</references>
+        <references refid="_mcu___adc_8h_1a91fbb9c4573e73c1e21f6b03913626ffa177c0f345a051a0a7e9bbcbcafa5c6b8" compoundref="_mcu___adc_8h" startline="81">ADC_REF_2V5</references>
+        <references refid="struct_adc_central___config_single___s_1ae90c4ba13730c0920e88e77212dd9628" compoundref="_adc_central_8h" startline="81">AdcCentral_ConfigSingle_S::Resolution</references>
+        <references refid="_mcu___adc_8h_1a28192a30ab66ef92e890ca0667ccff89ac002266035b9c3a14762154237da8e87" compoundref="_mcu___adc_8h" startline="95">ADC_RESOLUTION_12BIT</references>
+        <references refid="_battery_monitor_8c_1acf7e27e5129fb4febbb44dbd372a8a5a" compoundref="_battery_monitor_8c" startline="60">IsInitialized</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8bace6f6250ab91cc706faa7c8297cb0bc0" compoundref="_xdk_common_info_8h" startline="134">RETCODE_BATTERY_MONITOR_NOT_INIT</references>
+        <references refid="group___m_c_u___a_d_c_1ga1045e55329fc26bdacc46ef7f040cc6f" compoundref="_adc_central_8c" startline="475" endline="504">AdcCentral_StartSingle</references>
+        <references refid="semphr_8h_1af116e436d2a5ae5bd72dbade2b5ea930" compoundref="semphr_8h" startline="289">xSemaphoreTake</references>
+        <references refid="_battery_monitor_8c_1a5d78c8ff7803344b65430b2e4fc62051" compoundref="_battery_monitor_8c" startline="59">AdcSampleSemaphore</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaa0e5f5d6d335ce57106dbe4c3c914a9d" compoundref="_b_c_d_s___retcode_8h" startline="115">RETCODE_TIMEOUT</references>
+        <references refid="_battery_monitor_8c_1a0becbf06e79a30a6bfd9f94313631d82" compoundref="_battery_monitor_8c" startline="55">BATTERYMONITOR_ADC_REFERENCE</references>
+        <references refid="_battery_monitor_8c_1ad917171c24180313142700bbcfe227cd" compoundref="_battery_monitor_8c" startline="54">BATTERYMONITOR_ADC_RESOLUTION</references>
+        <referencedby refid="_l_w_m2_m_object_device_8c_1a3de693371743de156ee2b5b921e9661e" compoundref="_l_w_m2_m_object_device_8c" startline="612" endline="654">powerSourceVoltageFunc</referencedby>
+        <referencedby refid="_l_w_m2_m_object_device_8c_1a59ae782dd048c0d8746877c7e5cf99b4" compoundref="_l_w_m2_m_object_device_8c" startline="659" endline="690">batteryLevelFunc</referencedby>
+        <referencedby refid="_l_w_m2_m_object_device_8c_1af11fa85968fe590cdeb95ef72218db20" compoundref="_l_w_m2_m_object_device_8c" startline="695" endline="758">batteryStatusFunc</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>own<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_xdk_common_info_8h" kindref="compound">XdkCommonInfo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>BCDS_MODULE_ID<sp/><sp/></highlight><highlight class="comment">/*<sp/>Module<sp/>ID<sp/>define<sp/>before<sp/>including<sp/>Basics<sp/>package*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="_battery_monitor_8c_1abff8f3a204e79671b98fabaa652198c3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BCDS_MODULE_ID<sp/>XDK_COMMON_ID_BATTERYMONITOR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_battery_monitor_8h" kindref="compound">BatteryMonitor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>additional<sp/>interface<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_adc_central_8h" kindref="compound">AdcCentral.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;BCDS_BSP_Charger_BQ2407X.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_s_p___adc_8h" kindref="compound">BSP_Adc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_free_r_t_o_s_8h" kindref="compound">FreeRTOS.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="timers_8h" kindref="compound">timers.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="semphr_8h" kindref="compound">semphr.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_xdk_common_info_8h" kindref="compound">XdkCommonInfo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>the<sp/>type<sp/>and<sp/>macro<sp/>definitions<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="_battery_monitor_8c_1ad917171c24180313142700bbcfe227cd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BATTERYMONITOR_ADC_RESOLUTION<sp/>4096<sp/></highlight></codeline>
+<codeline lineno="55" refid="_battery_monitor_8c_1a0becbf06e79a30a6bfd9f94313631d82" refkind="member"><highlight class="preprocessor">#define<sp/>BATTERYMONITOR_ADC_REFERENCE<sp/><sp/>2500<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>Put<sp/>constant<sp/>and<sp/>variable<sp/>definitions<sp/>here<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="_battery_monitor_8c_1a5d78c8ff7803344b65430b2e4fc62051" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="semphr_8h_1ad88c6df4a04beedeac782918c8a332f5" kindref="member">SemaphoreHandle_t</ref><sp/><ref refid="_battery_monitor_8c_1a5d78c8ff7803344b65430b2e4fc62051" kindref="member">AdcSampleSemaphore</ref><sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="60" refid="_battery_monitor_8c_1acf7e27e5129fb4febbb44dbd372a8a5a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_battery_monitor_8c_1acf7e27e5129fb4febbb44dbd372a8a5a" kindref="member">IsInitialized</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="_battery_monitor_8c_1a3a535a147586f68296d407bfab52cd7f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_battery_monitor_8c_1a3a535a147586f68296d407bfab52cd7f" kindref="member">AdcSampleIRQCallback</ref>(<ref refid="_mcu___adc_8h_1a5860f527f3003fac5b4c77b3d28f3e9b" kindref="member">ADC_T</ref><sp/>adc,<sp/>uint16_t<sp/>*buffer)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" kindref="member">BCDS_UNUSED</ref>(adc);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" kindref="member">BCDS_UNUSED</ref>(buffer);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="portmacro_8h_1a46fb21e00ae0729d7515c0fbf2269796" kindref="member">BaseType_t</ref><sp/>higherPriorityTaskWoken<sp/>=<sp/>pdFALSE;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pdTRUE<sp/>==<sp/><ref refid="semphr_8h_1a68aa43df8b2a0dbe17d05fad74670ef0" kindref="member">xSemaphoreGiveFromISR</ref>(<ref refid="_battery_monitor_8c_1a5d78c8ff7803344b65430b2e4fc62051" kindref="member">AdcSampleSemaphore</ref>,<sp/>&amp;higherPriorityTaskWoken))</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="portmacro_8h_1aac6850c66595efdc02a8bbb95fb4648e" kindref="member">portYIELD_FROM_ISR</ref>(higherPriorityTaskWoken);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>ignore...<sp/>semaphore<sp/>has<sp/>already<sp/>been<sp/>given<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>private<sp/>function<sp/>declarations<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="group___b_a_t_t_e_r_y_m_o_n_i_t_o_r_1ga5a312f35b44dd926b4c5f054300c40c6" refkind="member"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___b_a_t_t_e_r_y_m_o_n_i_t_o_r_1ga5a312f35b44dd926b4c5f054300c40c6" kindref="member">BatteryMonitor_Init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retval<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>==<sp/><ref refid="_battery_monitor_8c_1acf7e27e5129fb4febbb44dbd372a8a5a" kindref="member">IsInitialized</ref>)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_battery_monitor_8c_1a5d78c8ff7803344b65430b2e4fc62051" kindref="member">AdcSampleSemaphore</ref><sp/>=<sp/>xSemaphoreCreateBinary();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/><ref refid="_battery_monitor_8c_1a5d78c8ff7803344b65430b2e4fc62051" kindref="member">AdcSampleSemaphore</ref>)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retval<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba281b77d7bbd0b11781de864c12f32fd9" kindref="member">RETCODE_SEMAPHORE_ERROR</ref>);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retval)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retval<sp/>=<sp/>BSP_Charger_BQ2407X_Connect();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retval)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retval<sp/>=<sp/>BSP_Charger_BQ2407X_Enable((uint32_t)<sp/><ref refid="group___b_o_a_r_d___t_y_p_e___c_h_a_r_g_e_r_1gga3f43dcd85934d3046add9af3b4303f4aa8372e6c53b751abf2f449710756d3a95" kindref="member">BSP_XDK_CHARGING_SPEED_1</ref>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retval)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retval<sp/>=<sp/><ref refid="group___m_c_u___a_d_c_1ga384bfb9ef993b0b92e10b86f753de9b2" kindref="member">AdcCentral_Init</ref>();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retval)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_battery_monitor_8c_1acf7e27e5129fb4febbb44dbd372a8a5a" kindref="member">IsInitialized</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retval;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>function<sp/>implementations<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="group___b_a_t_t_e_r_y_m_o_n_i_t_o_r_1gaf86e2e00a58342a77311da2486bc5b3d" refkind="member"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___b_a_t_t_e_r_y_m_o_n_i_t_o_r_1gaf86e2e00a58342a77311da2486bc5b3d" kindref="member">BatteryMonitor_MeasureSignal</ref>(uint32_t*<sp/>outputVoltage)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retval<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_adc_central___config_single___s" kindref="compound">AdcCentral_ConfigSingle_T</ref><sp/>singleConfig;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>batteryVoltage<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>singleConfig.<ref refid="struct_adc_central___config_single___s_1a15a29da407bed66f69cc83ff595dd6e0" kindref="member">AcqTime</ref><sp/>=<sp/><ref refid="_mcu___adc_8h_1afaedfbeee1ed31a27cf10c71b60a6d3ca7966f0d1c3e0d629d5d9d704ec065f27" kindref="member">ADC_ACQ_TIME_16</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>singleConfig.<ref refid="struct_adc_central___config_single___s_1abee273739ea1185e31b2d1caa044bd66" kindref="member">Appcallback</ref><sp/>=<sp/><ref refid="_battery_monitor_8c_1a3a535a147586f68296d407bfab52cd7f" kindref="member">AdcSampleIRQCallback</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>singleConfig.<ref refid="struct_adc_central___config_single___s_1ae4398a2ee15010b2562c2825560d44cf" kindref="member">BufferPtr</ref><sp/>=<sp/>(uint16_t<sp/>*)<sp/>outputVoltage;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>singleConfig.<ref refid="struct_adc_central___config_single___s_1a3b471348facf90fed27bde303c153459" kindref="member">Channel</ref><sp/>=<sp/><ref refid="_mcu___adc_8h_1a38413dd59fa2baa95927b80e05a0d079aeb7218c661cbbd67e9bde55b5a6b20ce" kindref="member">ADC_ENABLE_CH7</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>singleConfig.<ref refid="struct_adc_central___config_single___s_1a1e98a729d768aed6a076425816de41f3" kindref="member">Reference</ref><sp/>=<sp/><ref refid="_mcu___adc_8h_1a91fbb9c4573e73c1e21f6b03913626ffa177c0f345a051a0a7e9bbcbcafa5c6b8" kindref="member">ADC_REF_2V5</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>singleConfig.<ref refid="struct_adc_central___config_single___s_1ae90c4ba13730c0920e88e77212dd9628" kindref="member">Resolution</ref><sp/>=<sp/><ref refid="_mcu___adc_8h_1a28192a30ab66ef92e890ca0667ccff89ac002266035b9c3a14762154237da8e87" kindref="member">ADC_RESOLUTION_12BIT</ref>;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>==<sp/><ref refid="_battery_monitor_8c_1acf7e27e5129fb4febbb44dbd372a8a5a" kindref="member">IsInitialized</ref>)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8bace6f6250ab91cc706faa7c8297cb0bc0" kindref="member">RETCODE_BATTERY_MONITOR_NOT_INIT</ref>));</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>retval<sp/>=<sp/><ref refid="group___m_c_u___a_d_c_1ga1045e55329fc26bdacc46ef7f040cc6f" kindref="member">AdcCentral_StartSingle</ref>(BSP_Adc_GetHandle(),<sp/>&amp;singleConfig);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retval)</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pdTRUE<sp/>!=<sp/><ref refid="semphr_8h_1af116e436d2a5ae5bd72dbade2b5ea930" kindref="member">xSemaphoreTake</ref>(<ref refid="_battery_monitor_8c_1a5d78c8ff7803344b65430b2e4fc62051" kindref="member">AdcSampleSemaphore</ref>,<sp/>(<ref refid="portmacro_8h_1aa69c48c6e902ce54f70886e6573c92a9" kindref="member">TickType_t</ref>)<sp/>pdMS_TO_TICKS(100)))</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retval<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaa0e5f5d6d335ce57106dbe4c3c914a9d" kindref="member">RETCODE_TIMEOUT</ref>);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>below<sp/>conversation<sp/>converts<sp/>the<sp/>ADC<sp/>output<sp/>to<sp/>actual<sp/>battery<sp/>voltage<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>batteryVoltage<sp/>=<sp/>((2<sp/>*<sp/>(*(uint16_t<sp/>*)<sp/>outputVoltage)<sp/>*<sp/><ref refid="_battery_monitor_8c_1a0becbf06e79a30a6bfd9f94313631d82" kindref="member">BATTERYMONITOR_ADC_REFERENCE</ref>)<sp/>/<sp/><ref refid="_battery_monitor_8c_1ad917171c24180313142700bbcfe227cd" kindref="member">BATTERYMONITOR_ADC_RESOLUTION</ref>);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*outputVoltage<sp/>=<sp/>batteryVoltage;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retval;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/BatteryMonitor.c"/>
+  </compounddef>
+</doxygen>

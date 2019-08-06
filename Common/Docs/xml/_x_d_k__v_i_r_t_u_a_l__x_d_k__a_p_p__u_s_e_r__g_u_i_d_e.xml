@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e" kind="page">
+    <compoundname>XDK_VIRTUAL_XDK_APP_USER_GUIDE</compoundname>
+    <title>Virtual XDK Application Guide</title>
+    <detaileddescription>
+<para>XDK is presented in a playful fashion on a mobile device that is connected to XDK via BLE. Interacting with the physical XDK will manipulate the virtual XDK.</para><para><hruler/>
+ With version 3.0.0, XDK Workbench ships virtual XDK demo application as an additional example application <bold>VirtualXdkDemo</bold>.</para><para>To be able to use this demo, simply follow this steps:<itemizedlist>
+<listitem><para>Flash XDK Application onto XDK using the XDK Workbench.</para></listitem><listitem><para>Open up the respective companion application on your mobile device and connect it to XDK.</para></listitem></itemizedlist>
+</para><para>The web links to get the Android/iOS App is given below:<linebreak/>
+ <bold> Android App: </bold> <ulink url="https://play.google.com/store/apps/details?id=com.bosch.VirtualXdk">Click_Here</ulink> <linebreak/>
+ <bold> iOS App: </bold> <ulink url="https://itunes.apple.com/de/app/virtual-xdk/id1120568347?mt=8">Click_Here</ulink> <linebreak/>
+</para><sect1 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_XDK_APP_USER_GUIDE_USAGE">
+<title>1.Virtual XDK application user guide:</title>
+<para>The XDK user can interact with the physical XDK by moving the XDK or stimulating the sensors. These interactions are transmitted via Bluetooth LE to the Virtual XDK app on a iOS or Android based mobile device (phone or tablet). The current state of the sensors is visualized in the app user interface. The following section will introduce the user into the app usage. The displayed information and available user actions are explained.</para><sect2 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_XDK_APP_USER_GUIDE_SUBSECTION1">
+<title>1.1 Calibrating XDK</title>
+<para>After starting the virtual XDK application on XDK, the sensors need to be calibrated. This has to be done after each startup of XDK, no matter if initiated by XDK Workbench (clicking reboot or flash) or by switching XDK off and on. Calibrating the sensors can be done by moving XDK in a figure of eight for 5 to 10 times.The following video illustrates the process <ulink url="https://www.youtube.com/watch?v=sP3d00Hr14o">Click_Here</ulink></para></sect2>
+<sect2 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_XDK_APP_USER_GUIDE_SUBSECTION2">
+<title>1.2 App Startup</title>
+<para>On app startup and whenever no connection to a device could be established, the Scanning for Devices Dialog will be shown.</para></sect2>
+<sect2 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_XDK_APP_USER_GUIDE_SUBSECTION3">
+<title>1.3 Scan for Devices</title>
+<para>When scanning for devices, the app will actively scan for any Bluetooth Low Energy device within reach. As long as the app is in scanning mode, the scanning for devices dialog will be shown.</para><sect3 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_XDK_APP_USER_GUIDE_SUBSUBSECTION3_1">
+<title>1.3.1 Scanning for Devices Dialog</title>
+<para>The dialog lists all Bluetooth Low Energy devices discovered within reach of the Bluetooth receiver. The received Bluetooth device name and address is listed in the dialog. The dialog will be closed immediately once the app is connected to a device. It will reopen when the connection is lost or has been manually closed by the Scan for Devices button.</para></sect3>
+</sect2>
+<sect2 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_XDK_APP_USER_GUIDE_SUBSECTION4">
+<title>1.4 Connecting to an XDK Device</title>
+<para>A connection to a device is established by tapping on one of the devices listed in the Scanning for Devices Dialog. The dialog will disappear when the device is connected. The connection will be closed once the user taps on the Scan for Devices button or when the application is closed. Please note: You can connect to any device supporting the Bluetooth Low Energy protocol, but the app will only visualize the data from an XDK device which broadcasts in the expected format.</para></sect2>
+<sect2 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_XDK_APP_USER_GUIDE_SUBSECTION5">
+<title>1.5 Live Update Mode</title>
+<para>Once the connection with the XDK device is established, the app will signal the device to start sending notifications containing the sensor values. The sensor values will be immediately visualized by the central 3D model and the gauges arranged around it. In the center of the screen, a 3D model visualizes the current rotation of the XDK as indicated by the gyroscope and accelerometer sensors.</para><para>The following sensor values are shown on the left side:<itemizedlist>
+<listitem><para>Humidity</para></listitem><listitem><para>Temperature</para></listitem><listitem><para>Air pressure</para></listitem><listitem><para>Accelerometer values</para></listitem></itemizedlist>
+</para><para>The following sensor values are shown on the right side:<itemizedlist>
+<listitem><para>Magnetic field force and direction</para></listitem><listitem><para>Brightness</para></listitem><listitem><para>Noise Sensor(Vrms)</para></listitem><listitem><para>Gyroscope values</para></listitem></itemizedlist>
+</para><para>The following sensor values are shown on the Lower side:<itemizedlist>
+<listitem><para>SD card inserted/not inserted</para></listitem><listitem><para>LEM Sensor Connection status</para></listitem></itemizedlist>
+</para><para>The status of 3 LEDs is visualized (if it is on or off). Also, when a button on XDK is pressed it will be darker rendered in the app.</para><para><image type="html" name="virtualxdk-01.jpg" width="\textwidth">Virtual XDK Mobile Application: Current measurement screen</image>
+ <image type="html" name="virtualxdk-02.jpg" width="500px">Virtual XDK Mobile Application: LEM Sensor config screen</image>
+</para><sect3 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_XDK_APP_USER_GUIDE_SUBSECTION5_1">
+<title>1.5.1 The Settings Dialog</title>
+<para>With this dialog, you can change basic settings for the app. You can show or hide the settings dialog by tapping on the cogwheel in the lower left corner of the screen.</para><sect4 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_XDK_APP_USER_GUIDE_SUBSUBSECTION5_1_1">
+<title>1.5.1.1 Reset XDK</title>
+<para>Pressing this button will immediately disconnect and reboot the physical XDK.</para></sect4>
+<sect4 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_XDK_APP_USER_GUIDE_SUBSUBSECTION5_1_2">
+<title>1.5.1.2 Reset Position</title>
+<para>This button resets the rotation position of the device to a standard position. Pressing the physical button 1 on the XDK device has the same effect.</para></sect4>
+<sect4 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_XDK_APP_USER_GUIDE_SUBSUBSECTION5_1_3">
+<title>1.5.1.3 Scan for Devices</title>
+<para>To disconnect the currently connected device, go to the Settings dialog and select Scan for Devices. When the device is successfully disconnected, the Scanning for Devices Dialog will be shown again.</para></sect4>
+<sect4 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_XDK_APP_USER_GUIDE_SUBSUBSECTION5_1_4">
+<title>1.5.1.4 Refresh Rate</title>
+<para>The number next to the slider indicates the Bluetooth notification update frequency in Hertz. This controls how frequently the device will send value updates. The frequency can be adjusted using the slider. A higher number will reduce the latency between XDK sensor value updates and their visualization in the app, but the data transfer will be more brittle.</para></sect4>
+<sect4 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_XDK_APP_USER_GUIDE_SUBSUBSECTION5_1_5">
+<title>1.5.1.5 Device Name</title>
+<para>This label indicates the name of the currently connected device, as advertised by the Bluetooth Low Energy protocol.</para></sect4>
+<sect4 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_XDK_APP_USER_GUIDE_SUBSUBSECTION5_1_6">
+<title>1.5.1.6 Device Address</title>
+<para>The device address of the currently connected device is displayed here, as advertised by the Bluetooth Low Energy protocol.</para></sect4>
+<sect4 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_XDK_APP_USER_GUIDE_SUBSUBSECTION5_1_7">
+<title>1.5.1.7 XDK Software Version</title>
+<para>This label displays the software version of the device firmware.</para></sect4>
+</sect3>
+<sect3 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_XDK_APP_USER_GUIDE_SUBSUBSECTION5_2">
+<title>1.5.2 Calibrate display</title>
+<para>For humidity, temperature, air pressure and light it is possible to calibrate display. Calibrating is useful for fine adjustments of the display according to current values of sensors. In order to calibrate type on the corresponding sensor icon, the calibrate dialog will appear.</para><sect4 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_XDK_APP_USER_GUIDE_SUBSUBSECTION5_2_1">
+<title>1.5.2.1 Setting minimum and maximum values</title>
+<para>By using Minimum and Maximum sliders you can adjust the range of displayed values, so that the display will be scaled within the chosen range.</para></sect4>
+<sect4 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_XDK_APP_USER_GUIDE_SUBSUBSECTION5_2_2">
+<title>1.5.2.2 Using predefined ranges</title>
+<para>You can also automatically set the values of Minimum and Maximum by typing on ranges buttons. For example for temperature there are 3 predefined ranges: +-1, +-5, +-10. The current value of sensor will be then used to adjust Minimum and Maximum values according to the formulas given below as an example, thus the current value will be uses as the middle value for the display. <linebreak/>
+ Example: <programlisting><codeline><highlight class="normal">Minimum<sp/>=<sp/>CurrentValue<sp/>-<sp/>Range<sp/></highlight></codeline>
+<codeline><highlight class="normal">Maximum<sp/>=<sp/>CurrentValue<sp/>+<sp/>Range</highlight></codeline>
+</programlisting></para></sect4>
+<sect4 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_XDK_APP_USER_GUIDE_SUBSUBSECTION5_2_3">
+<title>1.5.2.3 Resetting range</title>
+<para>In order to reset Minimum and Maximum values to the default range type, click on the Reset button.</para></sect4>
+</sect3>
+<sect3 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_XDK_APP_USER_GUIDE_SUBSUBSECTION5_3">
+<title>1.5.3 Resetting XDKs reference position</title>
+<para>The Virtual XDK application will always show XDK in the initial position (look from upwards, buttons facing top of the screen). Virtual XDK does not know the relative orientation of the physical XDK and your mobile device. To align those two, place the physical XDK in parallel to the mobile device and press button 1 on XDK. The virtual XDK application will record an offset and apply it to all subsequent measurements. Pressing button 1 again will update the offset.</para></sect3>
+</sect2>
+</sect1>
+<sect1 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_FIRMWARE_DESIGN_GUIDE">
+<title>2.Virtual XDK embedded Firmware design</title>
+<para>This section explains how does the embedded firmware designed for this application The XDK Firmware has the following tasks:<itemizedlist>
+<listitem><para>Initialization of the sensors and the Alpwise Bluetooth LE (BLE) stack</para></listitem><listitem><para>Gathering data from the different sensors</para></listitem><listitem><para>Bundle the sensor data if necessary</para></listitem><listitem><para>Send sensor data and additional data to the mobile app via BLE</para></listitem><listitem><para>Handle received control messages from the mobile app</para></listitem><listitem><para>All the necessary implementations required for this application are available in the module <bold>VirtualXdkDemo.c</bold></para></listitem></itemizedlist>
+</para><sect2 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_FIRMWARE_DESIGN_GUIDE_SUBSECTION2_1">
+<title>2.1 XDK Initialization</title>
+<para>After startup, the XDK firmware calls a function <bold>Init()</bold> which initialize required subsystems of the application like Ble stack , Sensors, HMI like button and<linebreak/>
+ initialize the timers for the sensor sampling, the high data rate service and for test purposes,a sensor simulation timer.</para></sect2>
+<sect2 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_FIRMWARE_DESIGN_GUIDE_SUBSECTION2_2">
+<title>2.2 XDK BLE Profiles, Services, Characteristics and Attributes</title>
+<para>BLE uses Profiles,Services,Characteristics and Attributes for exchanging data between server and client. Here the embedded device acts as a BLE server.<linebreak/>
+ The Information concerning the services, characteristics and attributes are stored in the so called &quot;Attribute Database&quot; inside the BLE stack. This database<linebreak/>
+ is initialized before starting the BLE stack.<linebreak/>
+ <simplesect kind="note"><para>More information about the introduced services etc.and the concerning data can be found under the section <ref refid="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_BLE_UUID" kindref="member">3.Overview XDK UUID&apos;s Services, Characteristics and Attribute Types</ref> and <linebreak/>
+ The packaging of the high data rate characteristics can be found under the section <ref refid="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_BLE_HIGH_PRIO_DATA" kindref="member">4.Data format for High priority data service</ref></para></simplesect>
+</para></sect2>
+<sect2 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_FIRMWARE_DESIGN_GUIDE_SUBSECTION2_3">
+<title>2.3 XDK Gathering sensor data</title>
+<para>There are 2 functions gathering and handling the sensor data.<itemizedlist>
+<listitem><para>&quot;sampleAndNotifySensorData&quot;: This function is used for the full blown &quot;normal&quot; BLE Profile for the XDK. It samples the data by calling the concerning sensor read function and stores the value in the Attribute Database of the BLE stack.<linebreak/>
+ Note: To use this feature please set the macro <bold>#define ENABLE_HIGH_PRIO_DATA_SERVICE 0 </bold> present in the header file <bold>VirtualXdkDemo.h</bold> and recompile the application</para></listitem><listitem><para>&quot;sampleAndNotifyHighPriorityData&quot;: This function is used for the high data rate service. It also samples the data from the sensors and packs the data in a byte array which then is written into the Attribute Database. Note: To use this feature please set the macro <bold>#define ENABLE_HIGH_PRIO_DATA_SERVICE 1 </bold> present in the header file <bold>VirtualXdkDemo.h</bold> and recompile the application.<bold>Please also note this is the default setting</bold></para></listitem></itemizedlist>
+</para></sect2>
+</sect1>
+<sect1 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_BLE_UUID">
+<title>3.Overview XDK UUID&apos;s Services, Characteristics and Attribute Types</title>
+<para>This section gives information related to the BLE services and characteristic UUID used for this virtual XDK application</para><sect2 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_BLE_UUID_SUBSECTION3_1">
+<title>3.1 Accelerometer Sensor Service:</title>
+<para><table rows="5" cols="4"><row>
+<entry thead="yes"><para>Service </para></entry><entry thead="yes"><para>Characteristic </para></entry><entry thead="yes"><para>Attribute-Type </para></entry><entry thead="yes"><para>UUID  </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-Accelerometer </para></entry><entry thead="no"><para>NA </para></entry><entry thead="no"><para>NA </para></entry><entry thead="no"><para>5a211d40-7166-11e4-82f8-0800200c9a66 </para></entry></row>
+<row>
+<entry thead="no"><para>NA </para></entry><entry thead="no"><para>Accelerometer X-Axis </para></entry><entry thead="no"><para>int16_t </para></entry><entry thead="no"><para>5a211d41-7166-11e4-82f8-0800200c9a66 </para></entry></row>
+<row>
+<entry thead="no"><para>NA </para></entry><entry thead="no"><para>Accelerometer Y-Axis </para></entry><entry thead="no"><para>int16_t </para></entry><entry thead="no"><para>5a211d42-7166-11e4-82f8-0800200c9a66 </para></entry></row>
+<row>
+<entry thead="no"><para>NA </para></entry><entry thead="no"><para>Accelerometer Z-Axis </para></entry><entry thead="no"><para>int16_t </para></entry><entry thead="no"><para>5a211d43-7166-11e4-82f8-0800200c9a66 </para></entry></row>
+</table>
+</para></sect2>
+<sect2 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_BLE_UUID_SUBSECTION3_2">
+<title>3.2 Gyro Sensor Service:</title>
+<para><table rows="5" cols="4"><row>
+<entry thead="yes"><para>Service </para></entry><entry thead="yes"><para>Characteristic </para></entry><entry thead="yes"><para>Attribute-Type </para></entry><entry thead="yes"><para>UUID  </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-Gyro </para></entry><entry thead="no"><para>NA </para></entry><entry thead="no"><para>NA </para></entry><entry thead="no"><para>aca96a40-74a4-11e4-82f8-0800200c9a66 </para></entry></row>
+<row>
+<entry thead="no"><para>NA </para></entry><entry thead="no"><para>Gyro X-Axis </para></entry><entry thead="no"><para>int16_t </para></entry><entry thead="no"><para>aca96a41-74a4-11e4-82f8-0800200c9a66 </para></entry></row>
+<row>
+<entry thead="no"><para>NA </para></entry><entry thead="no"><para>Gyro Y-Axis </para></entry><entry thead="no"><para>int16_t </para></entry><entry thead="no"><para>aca96a42-74a4-11e4-82f8-0800200c9a66 </para></entry></row>
+<row>
+<entry thead="no"><para>NA </para></entry><entry thead="no"><para>Gyro Z-Axis </para></entry><entry thead="no"><para>int16_t </para></entry><entry thead="no"><para>aca96a43-74a4-11e4-82f8-0800200c9a66 </para></entry></row>
+</table>
+</para></sect2>
+<sect2 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_BLE_UUID_SUBSECTION3_3">
+<title>3.3 Light Sensor Service:</title>
+<para><table rows="3" cols="4"><row>
+<entry thead="yes"><para>Service </para></entry><entry thead="yes"><para>Characteristic </para></entry><entry thead="yes"><para>Attribute-Type </para></entry><entry thead="yes"><para>UUID  </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-LightSensor </para></entry><entry thead="no"><para>NA </para></entry><entry thead="no"><para>NA </para></entry><entry thead="no"><para>38eb02c0-7540-11e4-82f8-0800200c9a66 </para></entry></row>
+<row>
+<entry thead="no"><para>NA </para></entry><entry thead="no"><para>Light Sensor Millilux </para></entry><entry thead="no"><para>uint32_t </para></entry><entry thead="no"><para>38eb02c1-7540-11e4-82f8-0800200c9a66 </para></entry></row>
+</table>
+</para></sect2>
+<sect2 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_BLE_UUID_SUBSECTION3_4">
+<title>3.4 Noise Sensor Service:</title>
+<para><table rows="3" cols="4"><row>
+<entry thead="yes"><para>Service </para></entry><entry thead="yes"><para>Characteristic </para></entry><entry thead="yes"><para>Attribute-Type </para></entry><entry thead="yes"><para>UUID  </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-NoiseSensor </para></entry><entry thead="no"><para>NA </para></entry><entry thead="no"><para>NA </para></entry><entry thead="no"><para>01033830-754c-11e4-82f8-0800200c9a66 </para></entry></row>
+<row>
+<entry thead="no"><para>NA </para></entry><entry thead="no"><para>Noise Sensor DbSpl </para></entry><entry thead="no"><para>uint8_t </para></entry><entry thead="no"><para>01033831-754c-11e4-82f8-0800200c9a66 </para></entry></row>
+</table>
+</para></sect2>
+<sect2 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_BLE_UUID_SUBSECTION3_5">
+<title>3.5 Magnetometer Sensor Service:</title>
+<para><table rows="6" cols="4"><row>
+<entry thead="yes"><para>Service </para></entry><entry thead="yes"><para>Characteristic </para></entry><entry thead="yes"><para>Attribute-Type </para></entry><entry thead="yes"><para>UUID  </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-MagnetometerSensor</para></entry><entry thead="no"><para>NA </para></entry><entry thead="no"><para>NA </para></entry><entry thead="no"><para>651f4c00-7579-11e4-82f8-0800200c9a66 </para></entry></row>
+<row>
+<entry thead="no"><para>NA </para></entry><entry thead="no"><para>Magnetometer Sensor X-Axis </para></entry><entry thead="no"><para>int16_t </para></entry><entry thead="no"><para>651f4c01-7579-11e4-82f8-0800200c9a66 </para></entry></row>
+<row>
+<entry thead="no"><para>NA </para></entry><entry thead="no"><para>Magnetometer Sensor Y-Axis </para></entry><entry thead="no"><para>int16_t </para></entry><entry thead="no"><para>651f4c02-7579-11e4-82f8-0800200c9a66 </para></entry></row>
+<row>
+<entry thead="no"><para>NA </para></entry><entry thead="no"><para>Magnetometer Sensor Z-Axis </para></entry><entry thead="no"><para>int16_t </para></entry><entry thead="no"><para>651f4c03-7579-11e4-82f8-0800200c9a66 </para></entry></row>
+<row>
+<entry thead="no"><para>NA </para></entry><entry thead="no"><para>Magnetometer Sensor Resistance </para></entry><entry thead="no"><para>int16_t </para></entry><entry thead="no"><para>651f4c04-7579-11e4-82f8-0800200c9a66 </para></entry></row>
+</table>
+</para></sect2>
+<sect2 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_BLE_UUID_SUBSECTION3_6">
+<title>3.6 Environment Sensor Service:</title>
+<para><table rows="5" cols="4"><row>
+<entry thead="yes"><para>Service </para></entry><entry thead="yes"><para>Characteristic </para></entry><entry thead="yes"><para>Attribute-Type </para></entry><entry thead="yes"><para>UUID  </para></entry></row>
+<row>
+<entry thead="no"><para>XDK-EnvironmentSensor </para></entry><entry thead="no"><para>NA </para></entry><entry thead="no"><para>NA </para></entry><entry thead="no"><para>92dab060-7634-11e4-82f8-0800200c9a66 </para></entry></row>
+<row>
+<entry thead="no"><para>NA </para></entry><entry thead="no"><para>Pressure Sensor </para></entry><entry thead="no"><para>uint32_t </para></entry><entry thead="no"><para>92dab061-7634-11e4-82f8-0800200c9a66 </para></entry></row>
+<row>
+<entry thead="no"><para>NA </para></entry><entry thead="no"><para>Temperature Sensor </para></entry><entry thead="no"><para>int32_t </para></entry><entry thead="no"><para>92dab062-7634-11e4-82f8-0800200c9a66 </para></entry></row>
+<row>
+<entry thead="no"><para>NA </para></entry><entry thead="no"><para>Humidity Sensor </para></entry><entry thead="no"><para>uint32_t </para></entry><entry thead="no"><para>92dab063-7634-11e4-82f8-0800200c9a66 </para></entry></row>
+</table>
+</para></sect2>
+<sect2 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_BLE_UUID_SUBSECTION3_7">
+<title>3.7 High Data Rate Service:</title>
+<para><table rows="4" cols="4"><row>
+<entry thead="yes"><para>Service </para></entry><entry thead="yes"><para>Characteristic </para></entry><entry thead="yes"><para>Attribute-Type </para></entry><entry thead="yes"><para>UUID  </para></entry></row>
+<row>
+<entry thead="no"><para>XDK High Data Rate Service </para></entry><entry thead="no"><para>NA </para></entry><entry thead="no"><para>NA </para></entry><entry thead="no"><para>c2967210-7ba4-11e4-82f8-0800200c9a66 </para></entry></row>
+<row>
+<entry thead="no"><para>NA </para></entry><entry thead="no"><para>High Priority Array </para></entry><entry thead="no"><para>uint8_t[20] </para></entry><entry thead="no"><para>c2967211-7ba4-11e4-82f8-0800200c9a66 </para></entry></row>
+<row>
+<entry thead="no"><para>NA </para></entry><entry thead="no"><para>Low Priority Array </para></entry><entry thead="no"><para>uint8_t[20] </para></entry><entry thead="no"><para>c2967212-7ba4-11e4-82f8-0800200c9a66 </para></entry></row>
+</table>
+</para></sect2>
+<sect2 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_BLE_UUID_SUBSECTION3_8">
+<title>3.8 Control XDK Service:</title>
+<para><table rows="6" cols="4"><row>
+<entry thead="yes"><para>Service </para></entry><entry thead="yes"><para>Characteristic </para></entry><entry thead="yes"><para>Attribute-Type </para></entry><entry thead="yes"><para>UUID  </para></entry></row>
+<row>
+<entry thead="no"><para>XDK Control Service</para></entry><entry thead="no"><para>NA </para></entry><entry thead="no"><para>NA </para></entry><entry thead="no"><para>55b741d0-7ada-11e4-82f8-0800200c9a66 </para></entry></row>
+<row>
+<entry thead="no"><para>NA </para></entry><entry thead="no"><para>Start Sensor Sampling and Notifications </para></entry><entry thead="no"><para>uint8_t </para></entry><entry thead="no"><para>55b741d1-7ada-11e4-82f8-0800200c9a66 </para></entry></row>
+<row>
+<entry thead="no"><para>NA </para></entry><entry thead="no"><para>Change Sensor Sampling Rate </para></entry><entry thead="no"><para>uint32_t </para></entry><entry thead="no"><para>55b741d2-7ada-11e4-82f8-0800200c9a66 </para></entry></row>
+<row>
+<entry thead="no"><para>NA </para></entry><entry thead="no"><para>Reboot XDK </para></entry><entry thead="no"><para>uint8_t </para></entry><entry thead="no"><para>55b741d3-7ada-11e4-82f8-0800200c9a66 </para></entry></row>
+<row>
+<entry thead="no"><para>NA </para></entry><entry thead="no"><para>Get Firmware Version </para></entry><entry thead="no"><para>uint32_t </para></entry><entry thead="no"><para>55b741d4-7ada-11e4-82f8-0800200c9a66 </para></entry></row>
+</table>
+</para></sect2>
+</sect1>
+<sect1 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_BLE_HIGH_PRIO_DATA">
+<title>4.Data format for High priority data service</title>
+<para>This section gives information of the data format of High priority given from the XDK device to virtual XDK application</para><sect2 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_BLE_HIGH_PRIO_DATA_SUBSECTION4_1">
+<title>4.1 High Priority Data:</title>
+<para><table rows="7" cols="2"><row>
+<entry thead="yes"><para>Bytes </para></entry><entry thead="yes"><para>Data  </para></entry></row>
+<row>
+<entry thead="no"><para>0 &amp; 1</para></entry><entry thead="no"><para>Accelerometer x-Axis </para></entry></row>
+<row>
+<entry thead="no"><para>2 &amp; 3</para></entry><entry thead="no"><para>Accelerometer y-Axis </para></entry></row>
+<row>
+<entry thead="no"><para>4 &amp; 5</para></entry><entry thead="no"><para>Accelerometer z-Axis </para></entry></row>
+<row>
+<entry thead="no"><para>6 &amp; 7</para></entry><entry thead="no"><para>Gyro x-Axis </para></entry></row>
+<row>
+<entry thead="no"><para>8 &amp; 9</para></entry><entry thead="no"><para>Gyro y-Axis </para></entry></row>
+<row>
+<entry thead="no"><para>10 &amp; 11</para></entry><entry thead="no"><para>Gyro z-Axis </para></entry></row>
+</table>
+</para></sect2>
+<sect2 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_BLE_HIGH_PRIO_DATA_SUBSECTION4_2">
+<title>4.2 Low Priority Data – Message 1:</title>
+<para><table rows="9" cols="2"><row>
+<entry thead="yes"><para>Bytes </para></entry><entry thead="yes"><para>Data  </para></entry></row>
+<row>
+<entry thead="no"><para>0</para></entry><entry thead="no"><para>Message ID 0x01 </para></entry></row>
+<row>
+<entry thead="no"><para>1,2,3&amp;4</para></entry><entry thead="no"><para>Light Sensor </para></entry></row>
+<row>
+<entry thead="no"><para>5</para></entry><entry thead="no"><para>Noise Sensor (Reserved) </para></entry></row>
+<row>
+<entry thead="no"><para>6,7,8&amp;9 </para></entry><entry thead="no"><para>Pressure Sensor </para></entry></row>
+<row>
+<entry thead="no"><para>10,11,12&amp; 13</para></entry><entry thead="no"><para>Temperature Sensor </para></entry></row>
+<row>
+<entry thead="no"><para>14,15,16&amp;17</para></entry><entry thead="no"><para>Humidity Sensor </para></entry></row>
+<row>
+<entry thead="no"><para>18</para></entry><entry thead="no"><para>SD-Card detect status </para></entry></row>
+<row>
+<entry thead="no"><para>19</para></entry><entry thead="no"><para>Button status – encoded as bit-field: Bit 0: Button 1; Bit 1: Button 2 </para></entry></row>
+</table>
+</para></sect2>
+<sect2 id="_x_d_k__v_i_r_t_u_a_l__x_d_k__a_p_p__u_s_e_r__g_u_i_d_e_1XDK_VIRTUAL_BLE_HIGH_PRIO_DATA_SUBSECTION4_3">
+<title>4.3 Low Priority Data – Message 2:</title>
+<para><table rows="10" cols="2"><row>
+<entry thead="yes"><para>Bytes </para></entry><entry thead="yes"><para>Data  </para></entry></row>
+<row>
+<entry thead="no"><para>0</para></entry><entry thead="no"><para>Message ID 0x02 </para></entry></row>
+<row>
+<entry thead="no"><para>1&amp;2</para></entry><entry thead="no"><para>Magnetometer x-Axis </para></entry></row>
+<row>
+<entry thead="no"><para>3&amp;4</para></entry><entry thead="no"><para>Magnetometer y-Axis </para></entry></row>
+<row>
+<entry thead="no"><para>5&amp;6 </para></entry><entry thead="no"><para>Magnetometer z-Axis </para></entry></row>
+<row>
+<entry thead="no"><para>7&amp;8 </para></entry><entry thead="no"><para>Magnetometer Resistance </para></entry></row>
+<row>
+<entry thead="no"><para>9</para></entry><entry thead="no"><para>LED status – encoded as bit-field: Bit 0: yellow LED; Bit 1: orange LED; Bit 2: red LED </para></entry></row>
+<row>
+<entry thead="no"><para>10 to 13</para></entry><entry thead="no"><para>RMS voltage of LEM sensor in micro Volts </para></entry></row>
+<row>
+<entry thead="no"><para>14</para></entry><entry thead="no"><para>Lemsensor Connection status - <ref refid="_serval___types_8h_1a41f9c5fb8b08eb5dc3edce4dcb37fee7" kindref="member">true(1)</ref>: connected; <ref refid="_serval___types_8h_1a65e9886d74aaee76545e83dd09011727" kindref="member">false(0)</ref>: disconnected </para></entry></row>
+<row>
+<entry thead="no"><para>15 to 18</para></entry><entry thead="no"><para>RMS Value of Noise sensor in millivolts </para></entry></row>
+</table>
+</para></sect2>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

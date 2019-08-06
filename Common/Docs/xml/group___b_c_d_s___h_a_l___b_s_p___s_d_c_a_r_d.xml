@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___b_c_d_s___h_a_l___b_s_p___s_d_c_a_r_d" kind="group">
+    <compoundname>BCDS_HAL_BSP_SDCARD</compoundname>
+    <title>SDCARD</title>
+    <briefdescription>
+<para>Generic interface to the Secure Digital SD Card over SPI. </para>    </briefdescription>
+    <detaileddescription>
+<para>A prior call to BSP_Board_Initialize(param1, param2) function is necessary to initialize the MCU resources needed by the SD device.</para><para>Once the SD is requested a call to BSP_SDCard_Connect() function is required to map the internal MCU resources to their associated function.</para><para>The application needs get the handle for the MCU resource driver via BSP_SDCard_GetHandle() and to initialize the MCU resource driver by calling the MCU_&lt;RESOURCE&gt;_Initialize() and providing it with the previously acquired handle and an event callback function.</para><para>Then a call to BSP_SDCard_Enable() will execute the required sequence to enable the SD peripheral and the MCU resources dedicated for it (SPI) and will associate the interrupt requests to their appropriate service routines.</para><para>The BSP_SDCard_Disable() will revert back what the BSP_SDCard_Enable() has done and set the SD and the MCU resource into disabled state.</para><para>The BSP_SDCard_Disconnect() will put the GPIO pins associated to the SD peripheral in analog mode to further reduce the consumption. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

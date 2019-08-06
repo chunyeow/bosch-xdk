@@ -1,0 +1,529 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___p_p_m_p___u_n_i_d_e" kind="group">
+    <compoundname>PPMP_UNIDE</compoundname>
+    <title>PpmpUnide</title>
+    <innerfile refid="_ppmp_unide_2source_2_app_controller_8c">AppController.c</innerfile>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___p_p_m_p___u_n_i_d_e_1ga90ce7b07b4530c957f9f83201d8dc8bc" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga41a2f220f03970c1857bd96528307a81" kindref="member">CmdProcessor_T</ref> *</type>
+        <definition>CmdProcessor_T* AppCmdProcessor</definition>
+        <argsstring></argsstring>
+        <name>AppCmdProcessor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle to store the main Command processor handle to be reused by ServalPAL thread </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" line="235" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" bodystart="235" bodyend="-1"/>
+        <referencedby refid="group___p_p_m_p___u_n_i_d_e_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_ppmp_unide_2source_2_app_controller_8c" startline="612" endline="649">AppControllerSetup</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group___p_p_m_p___u_n_i_d_e_1ga6fa700b048407619b5309da95dcce5dd" prot="public" static="yes" mutable="no">
+        <type><ref refid="_free_r_t_o_s_8h_1af7cd8f53b62f0c497b442b504c30f2ec" kindref="member">xTaskHandle</ref></type>
+        <definition>xTaskHandle AppControllerHandle</definition>
+        <argsstring></argsstring>
+        <name>AppControllerHandle</name>
+        <initializer>= <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>OS thread handle for Application controller </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" line="233" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" bodystart="233" bodyend="-1"/>
+        <referencedby refid="group___p_p_m_p___u_n_i_d_e_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_ppmp_unide_2source_2_app_controller_8c" startline="554" endline="595">AppControllerEnable</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group___p_p_m_p___u_n_i_d_e_1ga135901bea19405bb54b239f696e26cb4" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___h_t_t_p_r_e_s_t_c_l_i_e_n_t_1ga9fcd7503395aa65821f564b870f68d57" kindref="member">HTTPRestClient_Config_T</ref></type>
+        <definition>HTTPRestClient_Config_T HTTPRestClientConfigInfo</definition>
+        <argsstring></argsstring>
+        <name>HTTPRestClientConfigInfo</name>
+        <initializer>=
+        {
+                .IsSecure = <ref refid="_serval___types_8h_1a65e9886d74aaee76545e83dd09011727" kindref="member">false</ref>,
+                .DestinationServerUrl = <ref refid="_ppmp_unide_2source_2_app_controller_8h_1a768eeeacb71c0878bceb321d4e8ee503" kindref="member">PPMP_SERVER_URL</ref>,
+                .DestinationServerPort = <ref refid="_ppmp_unide_2source_2_app_controller_8h_1af40e2ecec5663cd94ced53523997865e" kindref="member">PPMP_SERVER_PORT</ref>,
+                .RequestMaxDownloadSize = <ref refid="group___p_p_m_p___u_n_i_d_e_1ga01cadf8ca323ae4a97f61452e5eb582f" kindref="member">APP_REQUEST_MAX_DOWNLOAD_SIZE</ref>,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>HTTP rest client configuration parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" line="165" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___p_p_m_p___u_n_i_d_e_1ga675fb2fe80ff2d729420e5ac3db0fcec" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___h_t_t_p_r_e_s_t_c_l_i_e_n_t_1gabbd89e8fbac9dea48da5ae69940ed473" kindref="member">HTTPRestClient_Post_T</ref></type>
+        <definition>HTTPRestClient_Post_T HTTPRestClientPostMeasurementInfo</definition>
+        <argsstring></argsstring>
+        <name>HTTPRestClientPostMeasurementInfo</name>
+        <initializer>=
+        {
+                .Payload = <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>, 
+                .PayloadLength = 0UL, 
+                .Url = PPMP_POST_URL_MEASUREMENT,
+                .RequestCustomHeader0 = APP_POST_REQUEST_CUSTOM_HEADER_0,
+                .RequestCustomHeader1 = APP_POST_REQUEST_CUSTOM_HEADER_1,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>HTTP rest client POST parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" line="173" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___p_p_m_p___u_n_i_d_e_1gabaa00b9c49ee745bd168c1d45af60a2c" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___h_t_t_p_r_e_s_t_c_l_i_e_n_t_1gab60e9896e7923c3a6e2272a52e71fbfc" kindref="member">HTTPRestClient_Setup_T</ref></type>
+        <definition>HTTPRestClient_Setup_T HTTPRestClientSetupInfo</definition>
+        <argsstring></argsstring>
+        <name>HTTPRestClientSetupInfo</name>
+        <initializer>=
+        {
+                .IsSecure = <ref refid="_serval___types_8h_1a65e9886d74aaee76545e83dd09011727" kindref="member">false</ref>,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>HTTP rest client setup parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" line="160" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___p_p_m_p___u_n_i_d_e_1gace8e5a52217562b38b348c6e7e5bd1c2" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___p_p_m_p_s_e_r_i_a_l_i_z_e_r_1gad88f9a5400d963d3dd171acd54c0bdee" kindref="member">PPMPSerializer_Setup_T</ref></type>
+        <definition>PPMPSerializer_Setup_T PPMPSerializerSetup</definition>
+        <argsstring></argsstring>
+        <name>PPMPSerializerSetup</name>
+        <initializer>=
+        {
+                .DeviceName = <ref refid="_ppmp_unide_2source_2_app_controller_8h_1a07d33be05d8c97d16662c75c1370962d" kindref="member">APP_PPMP_DEVICE_ID</ref>,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>PPMP serializer setup parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" line="182" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___p_p_m_p___u_n_i_d_e_1ga30f9cefc6d3484ef7c8aafac99310abe" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___i_n_b_u_i_l_d_s_e_n_s_o_r_1ga7769593edd2c8739a3debfe559ad6ff8" kindref="member">Sensor_Setup_T</ref></type>
+        <definition>Sensor_Setup_T SensorSetup</definition>
+        <argsstring></argsstring>
+        <name>SensorSetup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sensor setup parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" line="187" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___p_p_m_p___u_n_i_d_e_1ga62d7996cafb989f27d906c6ab4823e15" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___s_n_t_p_1gaa31240c500f1b41b43b0367c694c570a" kindref="member">SNTP_Setup_T</ref></type>
+        <definition>SNTP_Setup_T SNTPSetupInfo</definition>
+        <argsstring></argsstring>
+        <name>SNTPSetupInfo</name>
+        <initializer>=
+        {
+                .ServerUrl = <ref refid="_send_data_over_m_q_t_t_2source_2_app_controller_8h_1a27dec0587f6fe92077449a4b3324cd95" kindref="member">SNTP_SERVER_URL</ref>,
+                .ServerPort = <ref refid="_send_data_over_m_q_t_t_2source_2_app_controller_8h_1a0c65edee974d3e3bdb4e01a4d8b58764" kindref="member">SNTP_SERVER_PORT</ref>,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SNTP setup parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" line="154" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___p_p_m_p___u_n_i_d_e_1ga0e412a42d216de0f4feb72dfc0dfa51d" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___w_l_a_n_1ga0e6768bd91dfe20a7c6e5c6ce49533af" kindref="member">WLAN_Setup_T</ref></type>
+        <definition>WLAN_Setup_T WLANSetupInfo</definition>
+        <argsstring></argsstring>
+        <name>WLANSetupInfo</name>
+        <initializer>=
+        {
+                .IsEnterprise = <ref refid="_serval___types_8h_1a65e9886d74aaee76545e83dd09011727" kindref="member">false</ref>,
+                .IsHostPgmEnabled = <ref refid="_serval___types_8h_1a65e9886d74aaee76545e83dd09011727" kindref="member">false</ref>,
+                .SSID = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1af8d23ae6c17168a7ce76f565959a7100" kindref="member">WLAN_SSID</ref>,
+                .Username = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a7595c51ecaebc052ebb16bfee33ef064" kindref="member">WLAN_PSK</ref>,
+                .Password = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a7595c51ecaebc052ebb16bfee33ef064" kindref="member">WLAN_PSK</ref>,
+                .IsStatic = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a3b7cbbe0cc99913db8a349bf04cb7648" kindref="member">WLAN_STATIC_IP</ref>,
+                .IpAddr = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1af8b956915d3648203d2db609f103d400" kindref="member">WLAN_IP_ADDR</ref>,
+                .GwAddr = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1aabe89318c85014d96791cdb2cd9263a8" kindref="member">WLAN_GW_ADDR</ref>,
+                .DnsAddr = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a91bfddd64e54251da5ca4e7b2d4b5774" kindref="member">WLAN_DNS_ADDR</ref>,
+                .Mask = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a408301af8a45e844e60c3be81a51a5e7" kindref="member">WLAN_MASK</ref>,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>WLAN setup parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" line="140" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___p_p_m_p___u_n_i_d_e_1ga22919ee3de6947c4b6616a9231e71f67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AppController_Init</definition>
+        <argsstring>(void *cmdProcessorHandle, uint32_t param2)</argsstring>
+        <name>AppController_Init</name>
+        <param>
+          <type>void *</type>
+          <declname>cmdProcessorHandle</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>Gives control to the Application controller. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a template function where the user can write his custom application.</para><para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" line="654" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" bodystart="654" bodyend="676"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e">CmdProcessor_Enqueue</references>
+        <references refid="group___p_p_m_p___u_n_i_d_e_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_ppmp_unide_2source_2_app_controller_8c" startline="612" endline="649">AppControllerSetup</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+      </memberdef>
+      <memberdef kind="function" id="group___p_p_m_p___u_n_i_d_e_1ga5ef9cc8f277726dc19c525c8049d388f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerEnable</definition>
+        <argsstring>(void *param1, uint32_t param2)</argsstring>
+        <name>AppControllerEnable</name>
+        <param>
+          <type>void *</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>To enable the necessary modules for the application. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>WLAN</para></listitem><listitem><para>ServalPAL</para></listitem><listitem><para>SNTP</para></listitem><listitem><para>HTTP rest client</para></listitem><listitem><para>PPMP Serializer</para></listitem><listitem><para>Sensor</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" line="554" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" bodystart="554" bodyend="595"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___w_l_a_n_1gade1d0097361a009766b934f25111dd8b">WLAN_Enable</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___s_e_r_v_a_l_p_a_l_1ga5c486b056c82b352bd487143e7ca7633">ServalPAL_Enable</references>
+        <references refid="group___s_n_t_p_1gaec27b2582b486a4b87a4ab217abd1f15">SNTP_Enable</references>
+        <references refid="group___h_t_t_p_r_e_s_t_c_l_i_e_n_t_1ga520428bed1560dc49c1f31e0b897a654">HTTPRestClient_Enable</references>
+        <references refid="group___p_p_m_p_s_e_r_i_a_l_i_z_e_r_1ga20b330d35f011f0545261782c7d6c565" compoundref="_p_p_m_p_serializer_8c" startline="100" endline="103">PPMPSerializer_Enable</references>
+        <references refid="group___i_n_b_u_i_l_d_s_e_n_s_o_r_1ga098f1e2f6e287146591b8ff5886c6820">Sensor_Enable</references>
+        <references refid="group___p_p_m_p___u_n_i_d_e_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_ppmp_unide_2source_2_app_controller_8c" startline="297" endline="537">AppControllerFire</references>
+        <references refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1af793604cd2dbedfc6b69f10936fe7c41" compoundref="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h" startline="61">TASK_STACK_SIZE_APP_CONTROLLER</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1a4651501b886d4de331b9f06b37265177" compoundref="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h" startline="59">TASK_PRIO_APP_CONTROLLER</references>
+        <references refid="group___p_p_m_p___u_n_i_d_e_1ga6fa700b048407619b5309da95dcce5dd" compoundref="_ppmp_unide_2source_2_app_controller_8c" startline="233">AppControllerHandle</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba497273b2285191edc1cda8648b67250a" compoundref="_b_c_d_s___retcode_8h" startline="107">RETCODE_OUT_OF_RESOURCES</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+        <references refid="group___x_d_k_u_t_i_l_s_1ga7ffe38d38314b5301a4ddd04f4fa7ca6" compoundref="_utils_8c" startline="277" endline="284">Utils_PrintResetCause</references>
+        <referencedby refid="group___p_p_m_p___u_n_i_d_e_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_ppmp_unide_2source_2_app_controller_8c" startline="612" endline="649">AppControllerSetup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___p_p_m_p___u_n_i_d_e_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerFire</definition>
+        <argsstring>(void *pvParameters)</argsstring>
+        <name>AppControllerFire</name>
+        <param>
+          <type>void *</type>
+          <declname>pvParameters</declname>
+        </param>
+        <briefdescription>
+<para>Responsible for controlling the PPMP Example application control flow. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Check whether the network connection is available</para></listitem><listitem><para>Synchronize the SNTP server for timestamp</para></listitem><listitem><para>Sample the node data</para></listitem><listitem><para>Construct the PPMP payload</para></listitem><listitem><para>POST it to the server</para></listitem><listitem><para>Wait for APP_POST_INTERVAL_MS before proceeding to redoing the above steps</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pvParameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" line="297" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" bodystart="297" bodyend="537"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="struct_sensor___setup___s_1a1579b951b8f83858b9a235f60f12cd33" compoundref="_x_d_k___sensor_8h" startline="209">Sensor_Setup_S::Enable</references>
+        <references refid="group___p_p_m_p___u_n_i_d_e_1ga7416b040551f36dd0dc4abb7ccf455ab" compoundref="_ppmp_unide_2source_2_app_controller_8c" startline="119">APP_SENSORS_PAYLOAD_TO_BE_SERIALIZED</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="_ppmp_unide_2source_2_app_controller_8h_1a41b0d4322fedd4a8bd6cecd7d6473e66" compoundref="_ppmp_unide_2source_2_app_controller_8h" startline="145">APP_POST_INTERVAL_MS</references>
+        <references refid="struct_sensor___enable___s_1a81be76b206e99faedd19928a8ad9e9b6" compoundref="_x_d_k___sensor_8h" startline="65">Sensor_Enable_S::Accel</references>
+        <references refid="struct_sensor___enable___s_1a1d3c6e3a81c61ae9842df2558cb8e3ab" compoundref="_x_d_k___sensor_8h" startline="66">Sensor_Enable_S::Mag</references>
+        <references refid="struct_sensor___enable___s_1a08451a2f48341a57a201e6fca088f25a" compoundref="_x_d_k___sensor_8h" startline="67">Sensor_Enable_S::Gyro</references>
+        <references refid="struct_sensor___enable___s_1ab5948d7f22bb9b3fb64df9a843d65865" compoundref="_x_d_k___sensor_8h" startline="68">Sensor_Enable_S::Humidity</references>
+        <references refid="struct_sensor___enable___s_1a88e8fa49564879a3723fde34ab8ee5e8" compoundref="_x_d_k___sensor_8h" startline="69">Sensor_Enable_S::Temp</references>
+        <references refid="struct_sensor___enable___s_1ab8ddefb20d75c5b9747270d17df92a06" compoundref="_x_d_k___sensor_8h" startline="70">Sensor_Enable_S::Pressure</references>
+        <references refid="struct_sensor___enable___s_1a3f201bb445bf74356ae7117505f97f48" compoundref="_x_d_k___sensor_8h" startline="71">Sensor_Enable_S::Light</references>
+        <references refid="struct_sensor___enable___s_1a14869f07df4b46efad374f848283ab46" compoundref="_x_d_k___sensor_8h" startline="72">Sensor_Enable_S::Noise</references>
+        <references refid="group___p_p_m_p___u_n_i_d_e_1gac3be0e3ec1b791acf86aea6fff60cb3c" compoundref="_ppmp_unide_2source_2_app_controller_8c" startline="113">APP_SENSORS_TO_BE_SERIALIZED_PER_PAYLOAD</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga91295a78f0e84b66b5fffb537241b856" compoundref="_b_c_d_s___retcode_8h" startline="92">RETCODE_INCONSITENT_STATE</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+        <references refid="task_8h_1a753ecfe23e7386066ecccad5d16422f7" compoundref="tasks_8c" startline="2226" endline="2238">xTaskGetTickCount</references>
+        <references refid="group___p_p_m_p___u_n_i_d_e_1ga9705492018c39d2f2643bb75c503f9b4" compoundref="_ppmp_unide_2source_2_app_controller_8c" startline="253" endline="282">AppControllerValidateWLANConnectivity</references>
+        <references refid="group___s_n_t_p_1ga524d9a28f1943d999fe94951b268cc1f">SNTP_GetTimeFromServer</references>
+        <references refid="group___p_p_m_p___u_n_i_d_e_1ga1cfc98de5e09b225abf287dd632ccf31" compoundref="_ppmp_unide_2source_2_app_controller_8c" startline="101">APP_RESPONSE_FROM_SNTP_SERVER_TIMEOUT</references>
+        <references refid="group___s_n_t_p_1ga1dbd405df6d7dc81b0c6e3e38be13ffb">SNTP_GetTimeFromSystem</references>
+        <references refid="group___i_n_b_u_i_l_d_s_e_n_s_o_r_1ga79fa92353c8d9e30f05d957755a48f24">Sensor_GetData</references>
+        <references refid="struct_sensor___value___s_1a30b2ceb495b99ab029b438563e5f22fa" compoundref="_x_d_k___sensor_8h" startline="266">Sensor_Value_S::Temp</references>
+        <references refid="group___t_i_m_e_s_t_a_m_p_1ga9d2ba3e11602f017a9e9dff9a4050a7f" compoundref="_time_stamp_8c" startline="89" endline="182">TimeStamp_SecsToTm</references>
+        <references refid="group___t_i_m_e_s_t_a_m_p_1gae661cf6ba094af296258b2377099f480" compoundref="_time_stamp_8c" startline="185" endline="254">TimeStamp_TmToIso8601</references>
+        <references refid="group___p_p_m_p_s_e_r_i_a_l_i_z_e_r_1gac6f89c07a494d40c5e1b41b0e505d8a2" compoundref="_p_p_m_p_serializer_8c" startline="106" endline="306">PPMPSerializer_PayloadSensorSelective</references>
+        <references refid="struct_h_t_t_p_rest_client___post___s_1a0dbdb3d7f218fcbde52ea86cc1b98167" compoundref="_x_d_k___h_t_t_p_rest_client_8h" startline="91">HTTPRestClient_Post_S::Payload</references>
+        <references refid="struct_h_t_t_p_rest_client___post___s_1a9bb4e842b701984f7fd0c0502c6f4aec" compoundref="_x_d_k___h_t_t_p_rest_client_8h" startline="92">HTTPRestClient_Post_S::PayloadLength</references>
+        <references refid="group___h_t_t_p_r_e_s_t_c_l_i_e_n_t_1ga3c2df1e0766bfe6c35f7b11d39fc4472">HTTPRestClient_Post</references>
+        <references refid="group___p_p_m_p___u_n_i_d_e_1ga56e65111a0e2145506b91a6c71e527f5" compoundref="_ppmp_unide_2source_2_app_controller_8c" startline="99">APP_RESPONSE_FROM_HTTP_SERVER_POST_TIMEOUT</references>
+        <references refid="task_8h_1aa154068cecd7f31446a7a84af44ab1a3">vTaskDelay</references>
+        <references refid="task_8h_1a067da3e949e248096ec6c01f9cb75a47">vTaskDelayUntil</references>
+        <references refid="_ppmp_unide_2source_2_app_controller_8h_1af39782a9a1e51a9b44a55f4065fc790c" compoundref="_ppmp_unide_2source_2_app_controller_8h" startline="151">APP_SYNC_TIME_FOR_EVERY_POST</references>
+        <references refid="group___b_o_s_c_h___x_d_k___c_l_o_u_d___c_o_n_n_e_c_t_i_v_i_t_y_1ga1aa49fa5385a3028b6cbe7556c695bb9" compoundref="_bosch_x_d_k_cloud_connectivity_2source_2_app_controller_8c" startline="122">APP_SYNC_TIME_INTERVAL_MAX_MS</references>
+        <references refid="group___p_p_m_p___u_n_i_d_e_1ga081eb43aad9e8e7acb406cbeab53d2e5" compoundref="_ppmp_unide_2source_2_app_controller_8c" startline="107">APP_HTTP_COMM_ISSUE_COUNT_FOR_RESET</references>
+        <references refid="group___b_c_d_s___h_a_l___b_s_p___board_1ga9002f1e2b3c29dc6d5b4a23cb3eb40dd" compoundref="_b_s_p___board_8c" startline="994" endline="997">BSP_Board_SoftReset</references>
+        <referencedby refid="group___p_p_m_p___u_n_i_d_e_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_ppmp_unide_2source_2_app_controller_8c" startline="554" endline="595">AppControllerEnable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___p_p_m_p___u_n_i_d_e_1ga5ca12481e985f2cd2437fe712e08c9b7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerSetup</definition>
+        <argsstring>(void *param1, uint32_t param2)</argsstring>
+        <name>AppControllerSetup</name>
+        <param>
+          <type>void *</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>To setup the necessary modules for the application. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>WLAN</para></listitem><listitem><para>ServalPAL</para></listitem><listitem><para>SNTP</para></listitem><listitem><para>HTTP rest client</para></listitem><listitem><para>PPMP Serializer</para></listitem><listitem><para>Sensor</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" line="612" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" bodystart="612" bodyend="649"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___w_l_a_n_1ga5e86721c894549287a387d49af37b1e3">WLAN_Setup</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___s_e_r_v_a_l_p_a_l_1gab722469d5c22a0211799fd3d5a5073bc">ServalPAL_Setup</references>
+        <references refid="group___s_n_t_p_1ga4aff8a89750e6d74f5b8053ebb66ca77">SNTP_Setup</references>
+        <references refid="group___h_t_t_p_r_e_s_t_c_l_i_e_n_t_1ga6f6ed69c1dc39ed43a01b5f710a31d04">HTTPRestClient_Setup</references>
+        <references refid="group___p_p_m_p_s_e_r_i_a_l_i_z_e_r_1ga2a38431051ef8a659595ce5eb2558806" compoundref="_p_p_m_p_serializer_8c" startline="84" endline="97">PPMPSerializer_Setup</references>
+        <references refid="struct_sensor___setup___s_1a4b767178f176a51f1c1c6abc68069ece" compoundref="_x_d_k___sensor_8h" startline="208">Sensor_Setup_S::CmdProcessorHandle</references>
+        <references refid="group___p_p_m_p___u_n_i_d_e_1ga90ce7b07b4530c957f9f83201d8dc8bc" compoundref="_ppmp_unide_2source_2_app_controller_8c" startline="235">AppCmdProcessor</references>
+        <references refid="group___i_n_b_u_i_l_d_s_e_n_s_o_r_1ga128512064ba3f94f8d0157cc1e87db22">Sensor_Setup</references>
+        <references refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e">CmdProcessor_Enqueue</references>
+        <references refid="group___p_p_m_p___u_n_i_d_e_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_ppmp_unide_2source_2_app_controller_8c" startline="554" endline="595">AppControllerEnable</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+        <referencedby refid="group___p_p_m_p___u_n_i_d_e_1ga22919ee3de6947c4b6616a9231e71f67" compoundref="_ppmp_unide_2source_2_app_controller_8c" startline="654" endline="676">AppController_Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___p_p_m_p___u_n_i_d_e_1ga9705492018c39d2f2643bb75c503f9b4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerValidateWLANConnectivity</definition>
+        <argsstring>(void)</argsstring>
+        <name>AppControllerValidateWLANConnectivity</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This will validate the WLAN network connectivity. </para>        </briefdescription>
+        <detaileddescription>
+<para>Currently, upon abrupt disconnection the event from the WiFi chip is not propagated / notified to the application. Until then, we manually validate prior to ever HTTP Rest Client POST/GET cycle to make sure that the possibility of software break is reduced. We check if the IP is valid to validate the same.</para><para>If there is no connectivity we will restart the node after 10 seconds. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" line="253" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" bodystart="253" bodyend="282"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_c_d_s___w_l_a_n___n_e_t_w_o_r_k___c_o_n_f_i_g_1ggae92d6cf23a5ef348fad87fff095665f5a0eb0cb0c6c20215cdf65e526ddd8006e" compoundref="_b_c_d_s___wlan_network_config_8h" startline="88">WLANNWCNF_IPSTATUS_IP_NOTAQRD</references>
+        <references refid="group___b_c_d_s___w_l_a_n___n_e_t_w_o_r_k___c_o_n_f_i_g_1ga51c3c1c93110333402dd5ceb00890c54">WlanNetworkConfig_GetIpStatus</references>
+        <references refid="group___b_c_d_s___w_l_a_n___n_e_t_w_o_r_k___c_o_n_f_i_g_1ggae92d6cf23a5ef348fad87fff095665f5a61ce7795c1225a3f66ea501577e688e8" compoundref="_b_c_d_s___wlan_network_config_8h" startline="86">WLANNWCNF_IPSTATUS_IPV4_AQRD</references>
+        <references refid="group___b_c_d_s___w_l_a_n___n_e_t_w_o_r_k___c_o_n_f_i_g_1ga610f25671b673e8ed2df02dd35aeef79">WlanNetworkConfig_GetIpSettings</references>
+        <references refid="struct_wlan_network_config___ip_settings___s_1a74a18608655497def3171983ff965430" compoundref="_b_c_d_s___wlan_network_config_8h" startline="96">WlanNetworkConfig_IpSettings_S::ipV4</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1a085cdb1a14d17a5446ada2a66d166432a3ac0a3061638529da54473e121f17d0a" compoundref="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h" startline="79">RETCODE_NODE_IPV4_IS_CORRUPTED</references>
+        <references refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1a085cdb1a14d17a5446ada2a66d166432ab5b289fe10ac1a1dcb2f03cc0cad8871" compoundref="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h" startline="80">RETCODE_NODE_WLAN_CONNECTION_IS_LOST</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="task_8h_1aa154068cecd7f31446a7a84af44ab1a3">vTaskDelay</references>
+        <references refid="group___b_c_d_s___h_a_l___b_s_p___board_1ga9002f1e2b3c29dc6d5b4a23cb3eb40dd" compoundref="_b_s_p___board_8c" startline="994" endline="997">BSP_Board_SoftReset</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+        <referencedby refid="group___p_p_m_p___u_n_i_d_e_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_ppmp_unide_2source_2_app_controller_8c" startline="297" endline="537">AppControllerFire</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___p_p_m_p___u_n_i_d_e_1ga081eb43aad9e8e7acb406cbeab53d2e5" prot="public" static="no">
+        <name>APP_HTTP_COMM_ISSUE_COUNT_FOR_RESET</name>
+        <initializer>10U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>APP_HTTP_COMM_ISSUE_COUNT_FOR_RESET is an application logic count where-in upon encountering those many consecutive server communication failures the node will reset. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" line="107" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" bodystart="107" bodyend="-1"/>
+        <referencedby refid="group___p_p_m_p___u_n_i_d_e_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_ppmp_unide_2source_2_app_controller_8c" startline="297" endline="537">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___p_p_m_p___u_n_i_d_e_1ga0bfd310eec9d44c159f44d64d930283f" prot="public" static="no">
+        <name>APP_POST_REQUEST_CUSTOM_HEADER_0</name>
+        <initializer>&quot;X-AuthToken: InsertCrypticAuthenticationToken\r\n&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>APP_POST_REQUEST_CUSTOM_HEADER_0 is a custom header which is sent along with the POST request. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" line="132" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_p_m_p___u_n_i_d_e_1ga95ea203decc2ece7b3c5cef0a295abec" prot="public" static="no">
+        <name>APP_POST_REQUEST_CUSTOM_HEADER_1</name>
+        <initializer>&quot;X-Foobar: AnotherCustomHeader\r\n&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>APP_POST_REQUEST_CUSTOM_HEADER_1 is a custom header which is sent along with the POST request. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" line="138" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_p_m_p___u_n_i_d_e_1ga01cadf8ca323ae4a97f61452e5eb582f" prot="public" static="no">
+        <name>APP_REQUEST_MAX_DOWNLOAD_SIZE</name>
+        <initializer>UINT32_C(512)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The maximum amount of data we download in a single request (in bytes). This number is limited by the platform abstraction layer implementation that ships with the XDK. The maximum value that will work here is 512 bytes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" line="126" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_p_m_p___u_n_i_d_e_1ga56e65111a0e2145506b91a6c71e527f5" prot="public" static="no">
+        <name>APP_RESPONSE_FROM_HTTP_SERVER_POST_TIMEOUT</name>
+        <initializer>UINT32_C(10000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Timeout for completion of HTTP rest client POST </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" line="99" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" bodystart="99" bodyend="-1"/>
+        <referencedby refid="group___p_p_m_p___u_n_i_d_e_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_ppmp_unide_2source_2_app_controller_8c" startline="297" endline="537">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___p_p_m_p___u_n_i_d_e_1ga1cfc98de5e09b225abf287dd632ccf31" prot="public" static="no">
+        <name>APP_RESPONSE_FROM_SNTP_SERVER_TIMEOUT</name>
+        <initializer>UINT32_C(10000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Timeout for SNTP server time sync </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" line="101" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" bodystart="101" bodyend="-1"/>
+        <referencedby refid="group___p_p_m_p___u_n_i_d_e_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_ppmp_unide_2source_2_app_controller_8c" startline="297" endline="537">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___p_p_m_p___u_n_i_d_e_1ga7416b040551f36dd0dc4abb7ccf455ab" prot="public" static="no">
+        <name>APP_SENSORS_PAYLOAD_TO_BE_SERIALIZED</name>
+        <initializer>3U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>APP_SENSORS_PAYLOAD_TO_BE_SERIALIZED is an application logic count which will define the number of sensor payloads to be serialized. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" line="119" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" bodystart="119" bodyend="-1"/>
+        <referencedby refid="group___p_p_m_p___u_n_i_d_e_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_ppmp_unide_2source_2_app_controller_8c" startline="297" endline="537">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___p_p_m_p___u_n_i_d_e_1gac3be0e3ec1b791acf86aea6fff60cb3c" prot="public" static="no">
+        <name>APP_SENSORS_TO_BE_SERIALIZED_PER_PAYLOAD</name>
+        <initializer>7U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>APP_SENSORS_TO_BE_SERIALIZED_PER_PAYLOAD is an application logic count which will define the number of sensors to be serialized per send. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" line="113" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" bodystart="113" bodyend="-1"/>
+        <referencedby refid="group___p_p_m_p___u_n_i_d_e_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_ppmp_unide_2source_2_app_controller_8c" startline="297" endline="537">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___p_p_m_p___u_n_i_d_e_1gabff8f3a204e79671b98fabaa652198c3" prot="public" static="no">
+        <name>BCDS_MODULE_ID</name>
+        <initializer><ref refid="_xdk_extension_port_2source_2_xdk_app_info_8h_1a58c5197225b08cbce9809ee5d9b3ae74ac664b9d7c9367aef22abcb23812b6f33" kindref="member">XDK_APP_MODULE_ID_APP_CONTROLLER</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" line="73" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/PpmpUnide/source/AppController.c" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This module is responsible for controlling the complete PPMP Unide application control flow. </para>    </briefdescription>
+    <detaileddescription>
+<para>We have a thread that currently runs on polling basis. For every iteration that we call the POST cycle, by default we perform the below for positive scenario.<itemizedlist>
+<listitem><para>Check is the network connection is available</para></listitem><listitem><para>We synchronize the SNTP server for timestamp</para></listitem><listitem><para>Sample the node data</para></listitem><listitem><para>Construct the PPMP payload</para></listitem><listitem><para>POST it to the server</para></listitem><listitem><para>Destruct the utilized memory for used at the time of Construction</para></listitem><listitem><para>Wait for APP_POST_INTERVAL_MS before proceeding to redoing the above steps</para></listitem></itemizedlist>
+</para><para>In addition,<itemizedlist>
+<listitem><para>If network connection is not available, we restart the node</para></listitem><listitem><para>If SNTP server is not synced, we will keep retrying</para></listitem><listitem><para>If POST fails, still we destruct the constructed payload to release MCU heap and validate with APP_HTTP_COMM_ISSUE_COUNT_FOR_RESET if system must be reset </para></listitem></itemizedlist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

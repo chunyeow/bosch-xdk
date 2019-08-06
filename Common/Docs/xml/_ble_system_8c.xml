@@ -1,0 +1,367 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_ble_system_8c" kind="file">
+    <compoundname>BleSystem.c</compoundname>
+    <includes refid="_ble_types_8h" local="yes">BleTypes.h</includes>
+    <includes refid="_ble_system_8h" local="yes">BleSystem.h</includes>
+    <incdepgraph>
+      <node id="28138">
+        <label>BleSystem.h</label>
+        <link refid="_ble_system_8h"/>
+        <childnode refid="28135" relation="include">
+        </childnode>
+      </node>
+      <node id="28134">
+        <label>SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleSystem.c</label>
+        <link refid="BleSystem.c"/>
+        <childnode refid="28135" relation="include">
+        </childnode>
+        <childnode refid="28138" relation="include">
+        </childnode>
+      </node>
+      <node id="28135">
+        <label>BleTypes.h</label>
+        <link refid="_ble_types_8h"/>
+        <childnode refid="28136" relation="include">
+        </childnode>
+      </node>
+      <node id="28137">
+        <label>BLECustomConfig.h</label>
+        <link refid="_common_2config_2_b_l_e_custom_config_8h"/>
+      </node>
+      <node id="28136">
+        <label>BleConfig.h</label>
+        <link refid="_ble_config_8h"/>
+        <childnode refid="28137" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_ble_system_8c_1aea03852267e73019391033c4afc10b36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SYSTEM_CancelTimer</definition>
+        <argsstring>(void)</argsstring>
+        <name>SYSTEM_CancelTimer</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The stack request its timer destruction</para><para><ref refid="_ble_system_8c_1aea03852267e73019391033c4afc10b36" kindref="member">SYSTEM_CancelTimer()</ref> The BLE stack no more need timer. it request destruction of the timer created with <ref refid="_ble_system_8c_1ae5b2f31ab4cf42b40a157ccf94048519" kindref="member">SYSTEM_CreateTimer()</ref>.</para><para><simplesect kind="see"><para><ref refid="_ble_system_8c_1ae5b2f31ab4cf42b40a157ccf94048519" kindref="member">SYSTEM_CreateTimer()</ref> , <ref refid="_ble_system_8c_1a65372745d14128ffbb349918c446cc6a" kindref="member">SYSTEM_TimerGetRemain()</ref></para></simplesect>
+<simplesect kind="return"><para>none</para></simplesect>
+<simplesect kind="author"><para>Alexandre GIMARD </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleSystem.c" line="185" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleSystem.c" bodystart="185" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="_ble_system_8c_1ae5b2f31ab4cf42b40a157ccf94048519" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SYSTEM_CreateTimer</definition>
+        <argsstring>(void *func, void *param, U32 millisecond)</argsstring>
+        <name>SYSTEM_CreateTimer</name>
+        <param>
+          <type>void *</type>
+          <declname>func</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type><ref refid="_ble_types_8h_1a811024d35b9b8a41095b1f583b649e56" kindref="member">U32</ref></type>
+          <declname>millisecond</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The stack request a timer creation</para><para>SYSTEM_TimerCreate() The BLE stack need one timer in order to calulates timeout or wachdog. It uses this function to create the timer, timers are internally multiplexed, so it need only one.</para><para><simplesect kind="see"><para>SYSTEM_TimerCancel() , <ref refid="_ble_system_8c_1a65372745d14128ffbb349918c446cc6a" kindref="member">SYSTEM_TimerGetRemain()</ref></para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: pointer to a function to call when the timer expires </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: param to pass in func when the timer expire </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>millisecond</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: time to wait before the timer expiration</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none</para></simplesect>
+<simplesect kind="author"><para>Alexandre GIMARD </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleSystem.c" line="165" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleSystem.c" bodystart="165" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="_ble_system_8c_1a7075172a4ee0dadb45b65aa54276be60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SYSTEM_DatabaseMutexPend</definition>
+        <argsstring>(void)</argsstring>
+        <name>SYSTEM_DatabaseMutexPend</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Lock the Attribute database mutex.</para><para><ref refid="_ble_system_8c_1a7075172a4ee0dadb45b65aa54276be60" kindref="member">SYSTEM_DatabaseMutexPend()</ref> The BLE stack uses a MUTEX to prevent internal/external multiple access to the Attribute protocol database, the BLE stack calls this function to acquire the MUTEX. This function SHALL be implemented. Note that the User application does not call this function directly, but call the application interface ATT_Server_SecureDatabaseAccess().</para><para>It could be implemented using a mutex or perhaps a semaphore</para><para><simplesect kind="see"><para><ref refid="_ble_system_8c_1ab70c2f4c136c32167af5cd50c65278b1" kindref="member">SYSTEM_DatabaseMutexPost()</ref></para></simplesect>
+<simplesect kind="return"><para>none</para></simplesect>
+<simplesect kind="author"><para>Alexandre GIMARD </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleSystem.c" line="112" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleSystem.c" bodystart="112" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="_ble_system_8c_1ab70c2f4c136c32167af5cd50c65278b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SYSTEM_DatabaseMutexPost</definition>
+        <argsstring>(void)</argsstring>
+        <name>SYSTEM_DatabaseMutexPost</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unlock the stack mutex.</para><para><ref refid="_ble_system_8c_1ab70c2f4c136c32167af5cd50c65278b1" kindref="member">SYSTEM_DatabaseMutexPost()</ref> The BLE stack uses a MUTEX to prevent internal/external multiple access to the Attribute protocol database, the BLE stack calls this function to release the MUTEX. This function SHALL be implemented. Note that the User application does not call this function directly, but call the application interface ATT_Server_ReleaseDatabaseAccess().</para><para>It could be implemented using a mutex or perhaps a semaphore</para><para><simplesect kind="see"><para><ref refid="_ble_system_8c_1a7075172a4ee0dadb45b65aa54276be60" kindref="member">SYSTEM_DatabaseMutexPend()</ref></para></simplesect>
+<simplesect kind="return"><para>none</para></simplesect>
+<simplesect kind="author"><para>Alexandre GIMARD </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleSystem.c" line="137" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleSystem.c" bodystart="137" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="_ble_system_8c_1adc3b05fa002d7d6691d93454c4a09a25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SYSTEM_StackMutexPend</definition>
+        <argsstring>(void)</argsstring>
+        <name>SYSTEM_StackMutexPend</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Lock the stack mutex.</para><para><ref refid="_ble_system_8c_1adc3b05fa002d7d6691d93454c4a09a25" kindref="member">SYSTEM_StackMutexPend()</ref> The BLE stack uses a MUTEX to prevent internal interface reentrency and dead lock, the BLE stack calls this function to acquire the MUTEX this function SHALL be implemented. It could be implemented using a mutex or perhaps a semaphore</para><para><simplesect kind="see"><para><ref refid="_ble_system_8c_1ace421c7c66b2caec3fced6c8188223c6" kindref="member">SYSTEM_StackMutexPost()</ref></para></simplesect>
+<simplesect kind="return"><para>none</para></simplesect>
+<simplesect kind="author"><para>Alexandre GIMARD </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleSystem.c" line="69" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleSystem.c" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="_ble_system_8c_1ace421c7c66b2caec3fced6c8188223c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SYSTEM_StackMutexPost</definition>
+        <argsstring>(void)</argsstring>
+        <name>SYSTEM_StackMutexPost</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unlock the stack mutex.</para><para><ref refid="_ble_system_8c_1ace421c7c66b2caec3fced6c8188223c6" kindref="member">SYSTEM_StackMutexPost()</ref> The BLE stack uses a MUTEX to prevent internal interface reentrency and dead lock, the BLE stack calls this function to acquire the MUTEX this function SHALL be implemented. It could be implemented using a mutex or perhaps a semaphore</para><para><simplesect kind="see"><para><ref refid="_ble_system_8c_1adc3b05fa002d7d6691d93454c4a09a25" kindref="member">SYSTEM_StackMutexPend()</ref></para></simplesect>
+<simplesect kind="return"><para>none</para></simplesect>
+<simplesect kind="author"><para>Alexandre GIMARD </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleSystem.c" line="90" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleSystem.c" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="_ble_system_8c_1a65372745d14128ffbb349918c446cc6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_ble_types_8h_1a811024d35b9b8a41095b1f583b649e56" kindref="member">U32</ref></type>
+        <definition>U32 SYSTEM_TimerGetRemain</definition>
+        <argsstring>(void)</argsstring>
+        <name>SYSTEM_TimerGetRemain</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The stack request the timer remainting time</para><para><ref refid="_ble_system_8c_1a65372745d14128ffbb349918c446cc6a" kindref="member">SYSTEM_TimerGetRemain()</ref> The BLE stack need the remaining time of the timer created by <ref refid="_ble_system_8c_1ae5b2f31ab4cf42b40a157ccf94048519" kindref="member">SYSTEM_CreateTimer()</ref> in order to do some internal things</para><para><simplesect kind="see"><para><ref refid="_ble_system_8c_1ae5b2f31ab4cf42b40a157ccf94048519" kindref="member">SYSTEM_CreateTimer()</ref> , <ref refid="_ble_system_8c_1aea03852267e73019391033c4afc10b36" kindref="member">SYSTEM_CancelTimer()</ref></para></simplesect>
+<simplesect kind="return"><para>the time remaining in millisecond.</para></simplesect>
+<simplesect kind="author"><para>Alexandre GIMARD </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleSystem.c" line="204" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleSystem.c" bodystart="204" bodyend="208"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>This<sp/>software<sp/>is<sp/>copyrighted<sp/>by<sp/>Alpwise,<sp/>2016.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>The<sp/>use<sp/>of<sp/>this<sp/>software<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>XDK<sp/>SDK<sp/>EULA</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleSystem.c</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Description:<sp/><sp/><sp/>Contains<sp/>routines<sp/>for<sp/>SYSTEM<sp/>service<sp/>needed<sp/>by<sp/>the<sp/>BLE</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Stack.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>These<sp/>routines<sp/>should<sp/>be<sp/>filled<sp/>by<sp/>the<sp/>stack<sp/>implementer&apos;s</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>Created:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>June,<sp/>2008</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>Version:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0.1</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>File<sp/>Revision:<sp/>$Rev:<sp/>2724<sp/>$</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>$Project$</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>trademark<sp/>and<sp/>other<sp/>intellectual<sp/>property<sp/>rights.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//platform<sp/>specific</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ble_types_8h" kindref="compound">BleTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ble_system_8h" kindref="compound">BleSystem.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/>RAM<sp/>data</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">\***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/>ROM<sp/>data</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">\***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/><sp/>Local<sp/>functions<sp/>Prototype</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*<sp/>External<sp/>Functions</highlight></codeline>
+<codeline lineno="44"><highlight class="comment">\***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*<sp/>Synchronisation<sp/>Operation</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">\***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLE_STACK_SKIP_MUTEX_FUNCTIONS<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="_ble_system_8h_1adc3b05fa002d7d6691d93454c4a09a25" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_ble_system_8c_1adc3b05fa002d7d6691d93454c4a09a25" kindref="member">SYSTEM_StackMutexPend</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>here<sp/>specific<sp/>code<sp/>to<sp/>pend<sp/>the<sp/>stack<sp/>Mutex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="_ble_system_8h_1ace421c7c66b2caec3fced6c8188223c6" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_ble_system_8c_1ace421c7c66b2caec3fced6c8188223c6" kindref="member">SYSTEM_StackMutexPost</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>here<sp/>specific<sp/>code<sp/>to<sp/>post<sp/>the<sp/>stack<sp/>Mutex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="_ble_system_8h_1a7075172a4ee0dadb45b65aa54276be60" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_ble_system_8c_1a7075172a4ee0dadb45b65aa54276be60" kindref="member">SYSTEM_DatabaseMutexPend</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>here<sp/>specific<sp/>code<sp/>to<sp/>pend<sp/>the<sp/>database<sp/>Mutex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="_ble_system_8h_1ab70c2f4c136c32167af5cd50c65278b1" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_ble_system_8c_1ab70c2f4c136c32167af5cd50c65278b1" kindref="member">SYSTEM_DatabaseMutexPost</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>here<sp/>specific<sp/>code<sp/>to<sp/>post<sp/>the<sp/>stack<sp/>Mutex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLE_STACK_SKIP_MUTEX_FUNCTIONS<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="143"><highlight class="comment"><sp/>*<sp/>Timer<sp/>Operation</highlight></codeline>
+<codeline lineno="144"><highlight class="comment"><sp/>\***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="_ble_system_8h_1ae5b2f31ab4cf42b40a157ccf94048519" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_ble_system_8c_1ae5b2f31ab4cf42b40a157ccf94048519" kindref="member">SYSTEM_CreateTimer</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*func,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*param,<sp/><ref refid="_ble_types_8h_1a811024d35b9b8a41095b1f583b649e56" kindref="member">U32</ref><sp/>millisecond){</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>here<sp/>specific<sp/>code<sp/>to<sp/>create<sp/>the<sp/>stack<sp/>timer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&gt;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185" refid="_ble_system_8h_1aea03852267e73019391033c4afc10b36" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_ble_system_8c_1aea03852267e73019391033c4afc10b36" kindref="member">SYSTEM_CancelTimer</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>here<sp/>specific<sp/>code<sp/>to<sp/>cancel<sp/>the<sp/>stack<sp/>timer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204" refid="_ble_system_8h_1a65372745d14128ffbb349918c446cc6a" refkind="member"><highlight class="normal"><ref refid="_ble_types_8h_1a811024d35b9b8a41095b1f583b649e56" kindref="member">U32</ref><sp/><ref refid="_ble_system_8c_1a65372745d14128ffbb349918c446cc6a" kindref="member">SYSTEM_TimerGetRemain</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>here<sp/>specific<sp/>code<sp/>to<sp/>get<sp/>the<sp/>millisecond</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>remaining<sp/>in<sp/>the<sp/>the<sp/>stack<sp/>timer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&gt;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="212"><highlight class="comment"><sp/>*<sp/>Security<sp/>Operation</highlight></codeline>
+<codeline lineno="213"><highlight class="comment">\***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLE_SECURITY<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/><ref refid="_ble_system_8h_1aff6291e2141c9a5687e38e1d4dd344ff" kindref="member">SYSTEM_SetPersistentInformation</ref>(</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_b_d___a_d_d_r" kindref="compound">BD_ADDR</ref><sp/><sp/><sp/><sp/><sp/>*addr,<sp/></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>infoType,<sp/></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*infoValue,<sp/></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InfoLen){</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>here<sp/>specific<sp/>code<sp/>to<sp/>SET<sp/>the<sp/>infoType<sp/>value<sp/>into<sp/>persistent<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>memory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&gt;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_ble_types_8h_1ad14b20a1135ee7821fa32d0bb0d7b2fc" kindref="member">BLESTATUS_SUCCESS</ref>;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/><ref refid="_ble_system_8h_1af1e3460f35fb11532ea4fcffd8791e5e" kindref="member">SYSTEM_GetPersistentInformation</ref>(</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_b_d___a_d_d_r" kindref="compound">BD_ADDR</ref><sp/><sp/><sp/><sp/><sp/>*addr,<sp/></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>infoType,<sp/></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**infoValue,</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*infoLen){</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>here<sp/>specific<sp/>code<sp/>to<sp/>RETRIEVE<sp/>the<sp/>infoType<sp/>value<sp/>from<sp/>persistent<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>memory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&gt;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_ble_types_8h_1ad14b20a1135ee7821fa32d0bb0d7b2fc" kindref="member">BLESTATUS_SUCCESS</ref>;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/><ref refid="_ble_system_8h_1a0f7e4888692ae30ad5ddeab0c7918eec" kindref="member">SYSTEM_RemovePersistentInformation</ref>(</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_b_d___a_d_d_r" kindref="compound">BD_ADDR</ref><sp/><sp/><sp/><sp/><sp/>*addr,<sp/></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>infoTypeFrom,<sp/></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>infoTypeTo){</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>here<sp/>specific<sp/>code<sp/>to<sp/>REMOVE<sp/>the<sp/>infoType<sp/>value<sp/>from<sp/>persistent<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>memory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&gt;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_ble_types_8h_1ad14b20a1135ee7821fa32d0bb0d7b2fc" kindref="member">BLESTATUS_SUCCESS</ref>;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLE_SECURITY<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="310"><highlight class="comment"><sp/>*<sp/>Logging<sp/>Operation</highlight></codeline>
+<codeline lineno="311"><highlight class="comment">\***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BLE_PRINT_DEBUG_TRACES<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SYSTEM_Log(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*format,...){</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>here<sp/>specific<sp/>code<sp/>to<sp/>print<sp/>output<sp/>argumented<sp/>string<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&gt;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_c_u_s_t_o_m_c_o_n_f_i_g_1ga994597d0bc153a83d751e0d1468c83af" kindref="member">UNUSED_PARAMETER</ref>(format);</highlight></codeline>
+<codeline lineno="320"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//(BLE_PRINT_DEBUG_TRACES<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleSystem.c"/>
+  </compounddef>
+</doxygen>

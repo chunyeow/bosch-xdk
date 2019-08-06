@@ -1,0 +1,122 @@
+/** 
+@page XDK_Bootloader XDK Bootloader User Guide
+@brief Explains XDKs Bootloader
+<hr>
+
+This page outlines some technical background on as well as the functionality of the XDK bootloader. The XDK bootloader is stored in the first 128 kB of XDKs flash memory. It is write protected and represents the only piece of software on XDK, that shall not be modified by an XDK user. When the bootloader is no longer present or becomes corrupted, an update or recovery is only possible via the J-Link JTAG Adapter (see below).
+
+\section XDK_Bootloader_Engage How to engage the Bootloader?
+
+The bootloader can be engaged using the three different approaches.
+
+When clicking the "Flash" button in XDK Workbench, XDK will be automatically brought into bootloader mode. In case XDK is not responding to XDK workbench, a popup will appear. You should now use @ref XDK_Bootloader_Engage_1 to force XDK into bootloader mode.
+
+\subsection XDK_Bootloader_Engage_1 Approach 1
+<ul>
+	<li>Switch off XDK</li>
+	<li>Press and hold Button 1</li>
+	<li>Turn on XDK</li>
+	<li>Release Button 1 as soon as red LED turns on</li>
+</ul>
+
+This approach is the "last resort" when XDK is not responding. Even when XDK is not recognized over USB, approach 1 will still work. 
+
+\subsection XDK_Bootloader_Engage_2 Approach 2
+<ul>
+	<li>Get XDK into application mode (typically by switching it on)</li>
+	<li>Connect it to your PC</li>
+	<li>Start XDK Workbench</li>
+	<li>Right click on your XDK in the XDK Device View and select "Goto Bootloader"</li>
+</ul>
+
+The second approach will set a flag in the user page of the MCU of XDK. When XDK reboots, the bootloader reads the flag and engages itself. Only after booting an application, the flag is reset.
+
+\subsection XDK_Bootloader_Enageg_3 Approach 3
+<ul>
+	<li>Get XDK into application mode (typically by switching it on)</li>
+	<li>Connect it to your PC</li>
+	<li>Connect to XDK with a serial terminal program (see XDK_USB_DEVICE_HANDLING_Terminal)</li>
+	<li>Send the following string: #reBoot$</li>
+	<li>XDK will automatically reboot and go into the bootloader</li>
+</ul>
+
+This is technically the same as @ref XDK_Bootloader_Engage_2. More information on the commands that can be sent by USB can be found in @ref XDK_USB_DEVICE_HANDLING_RESET_REBOOT. 
+
+\section XDK_Bootloader_Commands Bootloader Commands
+
+When XDK is in bootloader mode, a serial terminal application (see @ref XDK_USB_DEVICE_HANDLING_Terminal) can be used to open up the (virtual) serial port of XDK. The bootloader offers the following commands:
+
+Command | Meaning                      | Explanation | Commands Supported by bootloader version/versions |
+--------|------------------------------|------------|--------------------------------------------------|
+u       | Upload application           | This command lets the user upload an application to the flash, while keeping the bootloader intact. For an application to work correctly it must use a linker file which places the application start address at 0x00010000 for the EFM32GG. The application is transferred using the [XMODEM-CRC](https://en.wikipedia.org/wiki/XMODEM#XMODEM-CRC) protocol. | All Bootloader versions |
+i       | Information                  | This command returns the bootloader version and unique chip id. | All Bootloader versions |
+b       | Boot application             | This command will start the uploaded application.| All Bootloader versions |
+v       | Verify flash checksum        | This command calculates the CRC-16 checksum of the entire flash and prints it.| All Bootloader versions | 
+c       | Verify application checksum  | This command calculates the CRC-16 checksum of the application and prints it. | All Bootloader versions |  
+n       | Verify user page checksum    | This command calculates the CRC-16 checksum of the user page and prints it. | All Bootloader versions | 
+m       | Verify lock page checksum    | This command calculates the CRC-16 checksum of the lock page and prints it. | All Bootloader versions | 
+r       | Reset                        | This Command resets the XDK device. | All Bootloader versions | 
+e       | Clean                        | This Command clears FOTA User page data and application code area of the flash memory. | V1.0.0 & above | 
+h       | Help Menu                    | This Command prints the supported Bootloader commands  | v1.2.0 |
+g		| Read the WLAN MAC address    | This command prints the Wlan MAC address   | All Bootloader versions |
+p       | Lock the bootloader flash area   | This command locks the bootlader flash area | All Bootloader versions |
+w       | Read the BLE MAC address     | This command prints the ble mac address | All Bootloader versions |
+
+Binary images uploaded via the bootloader must be transferred in the XMODEM-CRC format.
+
+
+\section XDK_Bootloader_Update Bootloader Update
+
+Updating the bootloader requires a [J-Link Lite CortexM-9 JTAG Adapter](https://www.segger.com/products/debug-probes/j-link/models/j-link-lite/j-link-lite-cortex-m/) or [J-Link EDU Min JTAG Adapter] (https://www.segger.com/products/debug-probes/j-link/models/j-link-edu-mini/) (to be purchased seperately, you can refer to the Bosch XDK device). To perform the update, please follow those steps:
+
+<ul>
+	<li>Connect XDK to your PC via USB</li>
+	<li>Connect your J-Link adapter to your XDK</li>
+	<li>Connect your J-Link adapter to your PC via USB</li>
+	<li>Start XDK Workbench</li>
+	<li>Make sure, that your XDK shows up as having a JTAG connection</li>
+	<li>Right click on XDK, select "Flash Bootloader", a dialog will open.</li>
+	<li>Select the binary "XDK110_FOTA_Bootloader_1.1.0.bin" to get FOTA support.</li>
+	<li>Select the binary "XDK110_Bootloader_0.0.10.bin" to get support without FOTA .</li>
+</ul>
+
+XDK Workbench will update the bootloader and reestablish the write protection for the bootloader section. 
+
+\section XDK_User_Indication_in_Bootloader_Mode User Indication in Bootloader Mode
+The following table indicates LED indications for different scenarios in bootloader mode.
+Case ID	|Yellow 	|Orange 	|Red 	|	Scenarios
+--------|-----------|-----------|-------|------------------------   		 	           
+1		|	OFF  	|	OFF		| OFF	|  	In Application/Device Power Off.		                  
+2		|	OFF  	|	OFF		| ON	|   In Bootloader, USB is enumerated but not connected.			             	        
+3   	|	ON		|	OFF 	| ON	|  	In Bootloader, USB is enumerated and connected/Recovery failed.   
+4		|	ON		|	ON		| ON	|	XDK is in Assertion in Application.		
+5		|	Blinking|	OFF		| ON	|	New firmware transfer through USB in Bootloader.	
+6		|	OFF		|	Blinking| OFF   |   Update of New Firmware in progress.
+7		|	OFF		|	ON		| ON	|	FOTA Update Fail.		
+
+\section XDK_Firmware_Over_the_Air_Update Firmware Over the Air Update
+ This section describes  Firmware Over the Air Update when the new application is available.
+<ul>
+	<li>During the firmware over the air update, the application requires the SD card to keep the new application which is downloaded over FOTA.</li>
+	<li>When the new firmware is available for update the application will intimate the bootloader by trigger and switches to bootloader mode.</li>
+	<li>During this process user will be having an LED indication as in case (6).</li> 
+	<li>In case the firmware upgrade fails and the existing application is intact the Bootloader will jump to current application and will be indicated by LED as in case (7).</li> 
+	<li>In case of existing application is corrupted and backup fails then USB communication is enabled to flash the application over USB and will be indicated by LED as in case (3).</li>
+</ul>
+\note 
+1. USB communication will not be available when the device is in scenario "Update of New Firmware in progress using FOTA" as in case(6), after successful update the application will enable USB communication.                   
+2. User must not try to initiate any trigger from workbench when the device is in scenario Update of New Firmware in progress using FOTA as in case(6).
+3. Maximum supported binary size for user application  see section \ref XDK_BOOTLOADER_ERRATA  
+4. Case (6) is the only user indication currently supported to notify user that the boot loader is uploading new firmware received using FOTA.
+5. When in bootloader mode and button 2 is pressed the bootloader will jump to appplication mode
+
+\section XDK_BOOTLOADER_ERRATA Bootloader-Application Partition information
+
+This section describes how the microcontroller flash memory address space is separated for bootloader area and user application area    
+
+Bootloader Version No	| Flash Memory |Bootloader Memory| Application Memory           | Reserved Memory     | Description
+------------------------|--------------|-----------------|------------------------------|---------------------|----------------------           
+V0.0.11 & below		    |1024KB	       | 64KB            | 960 KB                       | NULL                | No Restriction                                                                                      
+V1.0.0 & V1.1.0	        |1024KB	       | 128KB           | 600 KB (896KB J-Link)		| 296KB               | Application memory restriction of 600KB is only valid by flashing over USB not with J-Link or FOTA  
+V1.2.0					|1024KB		   | 128KB  		 | 896KB						| NULL				  | No Restriction  
+*/

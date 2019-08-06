@@ -1,0 +1,717 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_sigfox_8h" kind="file">
+    <compoundname>Sigfox.h</compoundname>
+    <includes refid="_b_c_d_s___h_a_l_8h" local="yes">BCDS_HAL.h</includes>
+    <includes refid="_b_c_d_s___retcode_8h" local="yes">BCDS_Retcode.h</includes>
+    <includes refid="_sigfox_config_8h" local="yes">SigfoxConfig.h</includes>
+    <includedby refid="_sigfox_data_example_2source_2_app_controller_8c" local="yes">SDK/xdk110/Apps/SigfoxDataExample/source/AppController.c</includedby>
+    <includedby refid="_sigfox_8c" local="yes">SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.c</includedby>
+    <incdepgraph>
+      <node id="21794">
+        <label>stdbool.h</label>
+      </node>
+      <node id="21797">
+        <label>BCDS_HALConfig.h</label>
+        <link refid="_b_c_d_s___h_a_l_config_8h"/>
+      </node>
+      <node id="21793">
+        <label>stdint.h</label>
+      </node>
+      <node id="21791">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="21792" relation="include">
+        </childnode>
+      </node>
+      <node id="21796">
+        <label>stdlib.h</label>
+      </node>
+      <node id="21795">
+        <label>string.h</label>
+      </node>
+      <node id="21792">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="21793" relation="include">
+        </childnode>
+        <childnode refid="21794" relation="include">
+        </childnode>
+        <childnode refid="21795" relation="include">
+        </childnode>
+        <childnode refid="21796" relation="include">
+        </childnode>
+      </node>
+      <node id="21789">
+        <label>SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.h</label>
+        <link refid="Sigfox.h"/>
+        <childnode refid="21790" relation="include">
+        </childnode>
+        <childnode refid="21791" relation="include">
+        </childnode>
+        <childnode refid="21798" relation="include">
+        </childnode>
+      </node>
+      <node id="21790">
+        <label>BCDS_HAL.h</label>
+        <link refid="_b_c_d_s___h_a_l_8h"/>
+        <childnode refid="21791" relation="include">
+        </childnode>
+        <childnode refid="21797" relation="include">
+        </childnode>
+      </node>
+      <node id="21798">
+        <label>SigfoxConfig.h</label>
+        <link refid="_sigfox_config_8h"/>
+        <childnode refid="21792" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="21801">
+        <label>SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.c</label>
+        <link refid="_sigfox_8c"/>
+      </node>
+      <node id="21799">
+        <label>SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.h</label>
+        <link refid="Sigfox.h"/>
+        <childnode refid="21800" relation="include">
+        </childnode>
+        <childnode refid="21801" relation="include">
+        </childnode>
+      </node>
+      <node id="21800">
+        <label>SDK/xdk110/Apps/SigfoxDataExample/source/AppController.c</label>
+        <link refid="_sigfox_data_example_2source_2_app_controller_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_sigfox_8h_1adf4c2764f3e88491faf2fcc472625cb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Sigfox_Enable</definition>
+        <argsstring>(void)</argsstring>
+        <name>Sigfox_Enable</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This will enable the Sigfox communication. It wakes up the chip and prepares it for further communication exchange. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para><ref refid="_sigfox_8c_1a6a711a7ae9c2e33edfcfcd045e0db5e1" kindref="member">Sigfox_Setup</ref> must have been successful prior.</para></listitem><listitem><para>Do not call this API more than once.</para></listitem></itemizedlist>
+</para></simplesect>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.h" line="74" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.c" bodystart="246" bodyend="251"/>
+        <references refid="group___b_c_d_s___h_a_l___b_s_p___board_1ga3c12de2d1d4a59f5a1c9794e88ff6608" compoundref="_b_s_p___board_8c" startline="412" endline="419">BSP_Board_Delay</references>
+        <references refid="_sigfox_8c_1ae9ae38f96aa6a4a3d48b817689ba2ce7" compoundref="_sigfox_8c" startline="254" endline="270">Sigfox_SendWakeUp</references>
+      </memberdef>
+      <memberdef kind="function" id="_sigfox_8h_1a3978d698fb372ec1b92947bfe5ad2b5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Sigfox_GetInfo</definition>
+        <argsstring>(void)</argsstring>
+        <name>Sigfox_GetInfo</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Send getInfo command to SOC OL2385 to get ID and PAC and lib version. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.h" line="100" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.c" bodystart="296" bodyend="310"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="_sigfox_8c_1a9e74a947782a2a1bee8404218125c644" compoundref="_sigfox_8c" startline="84">WriteBufferPointer</references>
+        <references refid="_sigfox_config_8h_1ae7b8c4acc806e25bf63e5ed8c744a373" compoundref="_sigfox_config_8h" startline="61">SIGFOX_GETINFO_LEN</references>
+        <references refid="_sigfox_config_8h_1ab3c8e18194f56388c8f17d6d11a4c8d7" compoundref="_sigfox_config_8h" startline="60">SIGFOX_GETINFO_ID</references>
+        <references refid="_sigfox_8c_1abbcf5d5dfbe9d7266946384bf0e27508" compoundref="_sigfox_8c" startline="86">WriteBufferLength</references>
+        <references refid="_sigfox_8c_1a1f0822c261193f19760e10b222fac3c6" compoundref="_sigfox_8c" startline="113" endline="182">HandleSPIDataTransfer</references>
+        <references refid="_sigfox_8c_1a42b54ee39b6e0d2b8acbc937e21bd81f" compoundref="_sigfox_8c" startline="185" endline="207">PrintInfo</references>
+      </memberdef>
+      <memberdef kind="function" id="_sigfox_8h_1a79eabe723f83eeaf0c0f4b4b2b5800ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Sigfox_GetSOCVersion</definition>
+        <argsstring>(void)</argsstring>
+        <name>Sigfox_GetSOCVersion</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Retrieve device &amp; software version of OL2385 chip. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.h" line="180" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.c" bodystart="606" bodyend="621"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="_sigfox_8c_1a9e74a947782a2a1bee8404218125c644" compoundref="_sigfox_8c" startline="84">WriteBufferPointer</references>
+        <references refid="_sigfox_config_8h_1a01a54851fa52dc06ed8721465e0a5e3c" compoundref="_sigfox_config_8h" startline="91">SIGFOX_GETSOCV_LEN</references>
+        <references refid="_sigfox_config_8h_1a322f4977649c6a300ee99efb88163b86" compoundref="_sigfox_config_8h" startline="90">SIGFOX_GETSOCV_ID</references>
+        <references refid="_sigfox_8c_1abbcf5d5dfbe9d7266946384bf0e27508" compoundref="_sigfox_8c" startline="86">WriteBufferLength</references>
+        <references refid="_sigfox_8c_1a1f0822c261193f19760e10b222fac3c6" compoundref="_sigfox_8c" startline="113" endline="182">HandleSPIDataTransfer</references>
+        <references refid="_sigfox_8c_1a0203d2c859dce815f636df71aa442e34" compoundref="_sigfox_8c" startline="210" endline="222">PrintSOCVersion</references>
+      </memberdef>
+      <memberdef kind="function" id="_sigfox_8h_1abaa16e680de16f8a5b5de57faac3708a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sigfox_PrintRXPayload</definition>
+        <argsstring>(void)</argsstring>
+        <name>Sigfox_PrintRXPayload</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Print Downlink Payload. </para>        </briefdescription>
+        <detaileddescription>
+<para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.h" line="117" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.c" bodystart="374" bodyend="382"/>
+        <references refid="_sigfox_8c_1a174f4c100de793512049f6dc0fab14e0" compoundref="_sigfox_8c" startline="91">DownlinkPayload</references>
+      </memberdef>
+      <memberdef kind="function" id="_sigfox_8h_1af71688526c96c5bbe053cad466739d58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Sigfox_ReadPACurve</definition>
+        <argsstring>(uint8_t subcommand)</argsstring>
+        <name>Sigfox_ReadPACurve</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>subcommand</declname>
+        </param>
+        <briefdescription>
+<para>Read PA Curve. Only subcommands 0-ReadETSIPATable and 3-ReadFCCPATable are supported. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+<para>subcommand Subcommand Code (Only 0 and 3 implemented)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.h" line="215" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.c" bodystart="720" bodyend="752"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="_sigfox_8c_1a9e74a947782a2a1bee8404218125c644" compoundref="_sigfox_8c" startline="84">WriteBufferPointer</references>
+        <references refid="_sigfox_config_8h_1affaa6261080afbaac5150afc659079df" compoundref="_sigfox_config_8h" startline="100">SIGFOX_READPACURVE_LEN</references>
+        <references refid="_sigfox_config_8h_1a4b57b1d4bdc0f6687e1fc66b2fedcdbe" compoundref="_sigfox_config_8h" startline="99">SIGFOX_READPACURVE_ID</references>
+        <references refid="_sigfox_8c_1abbcf5d5dfbe9d7266946384bf0e27508" compoundref="_sigfox_8c" startline="86">WriteBufferLength</references>
+        <references refid="_sigfox_8c_1a1f0822c261193f19760e10b222fac3c6" compoundref="_sigfox_8c" startline="113" endline="182">HandleSPIDataTransfer</references>
+        <references refid="_sigfox_8c_1a9db401d1ed40ba37cda2e09bf2788df5" compoundref="_sigfox_8c" startline="87">ReadBufferLength</references>
+        <references refid="_sigfox_8c_1a3f921dd53f78f928d07b3c5f2454bac2" compoundref="_sigfox_8c" startline="85">ReadBufferPointer</references>
+      </memberdef>
+      <memberdef kind="function" id="_sigfox_8h_1a28f08c031875f43e62790f48de640e2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Sigfox_ResetMacroChannel</definition>
+        <argsstring>(void)</argsstring>
+        <name>Sigfox_ResetMacroChannel</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Reset Macrochannel (for RCZ2 and RCZ4 only) </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.h" line="152" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.c" bodystart="517" bodyend="539"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="_sigfox_8c_1a9e74a947782a2a1bee8404218125c644" compoundref="_sigfox_8c" startline="84">WriteBufferPointer</references>
+        <references refid="_sigfox_config_8h_1a23b365c4a6c2ab025a2984fb5f0dbe2c" compoundref="_sigfox_config_8h" startline="82">SIGFOX_RESETMACROCHANNEL_LEN</references>
+        <references refid="_sigfox_config_8h_1aab0d1d7177f3c203885b7098ff4c6023" compoundref="_sigfox_config_8h" startline="81">SIGFOX_RESETMACROCHANNEL_ID</references>
+        <references refid="_sigfox_8c_1abbcf5d5dfbe9d7266946384bf0e27508" compoundref="_sigfox_8c" startline="86">WriteBufferLength</references>
+        <references refid="_sigfox_8c_1a1f0822c261193f19760e10b222fac3c6" compoundref="_sigfox_8c" startline="113" endline="182">HandleSPIDataTransfer</references>
+        <references refid="_sigfox_8c_1a9db401d1ed40ba37cda2e09bf2788df5" compoundref="_sigfox_8c" startline="87">ReadBufferLength</references>
+        <references refid="_sigfox_8c_1a3f921dd53f78f928d07b3c5f2454bac2" compoundref="_sigfox_8c" startline="85">ReadBufferPointer</references>
+      </memberdef>
+      <memberdef kind="function" id="_sigfox_8h_1a8190fdb793bf3e8ced3f5b34f9596e66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Sigfox_SendBit</definition>
+        <argsstring>(void)</argsstring>
+        <name>Sigfox_SendBit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Send sigfox empty frame. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.h" line="173" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.c" bodystart="580" bodyend="603"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="_sigfox_8c_1a9e74a947782a2a1bee8404218125c644" compoundref="_sigfox_8c" startline="84">WriteBufferPointer</references>
+        <references refid="_sigfox_config_8h_1af3ed37beb5b4a4dc29b4908d3aeafb2b" compoundref="_sigfox_config_8h" startline="88">SIGFOX_SENDBIT_LEN</references>
+        <references refid="_sigfox_config_8h_1a56838bd6e317834fc3dc617a9bdd2ed8" compoundref="_sigfox_config_8h" startline="87">SIGFOX_SENDBIT_ID</references>
+        <references refid="_sigfox_8c_1abbcf5d5dfbe9d7266946384bf0e27508" compoundref="_sigfox_8c" startline="86">WriteBufferLength</references>
+        <references refid="_sigfox_8c_1a1f0822c261193f19760e10b222fac3c6" compoundref="_sigfox_8c" startline="113" endline="182">HandleSPIDataTransfer</references>
+        <references refid="_sigfox_8c_1a9db401d1ed40ba37cda2e09bf2788df5" compoundref="_sigfox_8c" startline="87">ReadBufferLength</references>
+        <references refid="_sigfox_8c_1a3f921dd53f78f928d07b3c5f2454bac2" compoundref="_sigfox_8c" startline="85">ReadBufferPointer</references>
+      </memberdef>
+      <memberdef kind="function" id="_sigfox_8h_1a5675010bb267dc9eaa10bb70e63cef5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Sigfox_SendPayload</definition>
+        <argsstring>(uint8_t *payload, uint8_t payloadSize, bool downlinkFlag)</argsstring>
+        <name>Sigfox_SendPayload</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>payloadSize</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>downlinkFlag</declname>
+        </param>
+        <briefdescription>
+<para>Send sigfox payload. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+<para>payload sigfox payload to send </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+<para>payloadSize size of payload in bytes </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+<para>downlinkFlag Enable Downlink reception</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.h" line="111" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.c" bodystart="313" bodyend="371"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="_sigfox_config_8h_1a95e6813361767e0a2f640ee94ee61311" compoundref="_sigfox_config_8h" startline="52">SIGFOX_SEND_PAYLOAD_LEN_MAX</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" compoundref="_b_c_d_s___retcode_8h" startline="108">RETCODE_INVALID_PARAM</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="_sigfox_8c_1a9e74a947782a2a1bee8404218125c644" compoundref="_sigfox_8c" startline="84">WriteBufferPointer</references>
+        <references refid="_sigfox_config_8h_1a7a6b0e3f33473a98f572a3b6204a9f25" compoundref="_sigfox_config_8h" startline="85">SIGFOX_SENDPAYLOADACK_ID</references>
+        <references refid="_sigfox_config_8h_1a725a2f6c7bda7bef1001289690723a83" compoundref="_sigfox_config_8h" startline="84">SIGFOX_SENDPAYLOAD_ID</references>
+        <references refid="_sigfox_8c_1abbcf5d5dfbe9d7266946384bf0e27508" compoundref="_sigfox_8c" startline="86">WriteBufferLength</references>
+        <references refid="_sigfox_8c_1a1f0822c261193f19760e10b222fac3c6" compoundref="_sigfox_8c" startline="113" endline="182">HandleSPIDataTransfer</references>
+        <references refid="_sigfox_8c_1a9db401d1ed40ba37cda2e09bf2788df5" compoundref="_sigfox_8c" startline="87">ReadBufferLength</references>
+        <references refid="_sigfox_8c_1a174f4c100de793512049f6dc0fab14e0" compoundref="_sigfox_8c" startline="91">DownlinkPayload</references>
+        <references refid="_sigfox_8c_1a3f921dd53f78f928d07b3c5f2454bac2" compoundref="_sigfox_8c" startline="85">ReadBufferPointer</references>
+      </memberdef>
+      <memberdef kind="function" id="_sigfox_8h_1a6621cd1fc0d913b481288eeeddc61d61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Sigfox_SendToSleep</definition>
+        <argsstring>(void)</argsstring>
+        <name>Sigfox_SendToSleep</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Send Innocomm chipset to sleep mode. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.h" line="93" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.c" bodystart="273" bodyend="293"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="_sigfox_8c_1a9e74a947782a2a1bee8404218125c644" compoundref="_sigfox_8c" startline="84">WriteBufferPointer</references>
+        <references refid="_sigfox_config_8h_1a2fca29ae2b8c01ce957e2a0ab259c88c" compoundref="_sigfox_config_8h" startline="58">SIGFOX_SENDTOSLEEP_LEN</references>
+        <references refid="_sigfox_config_8h_1a312af8538f60da01daf754615b8d61e7" compoundref="_sigfox_config_8h" startline="57">SIGFOX_SENDTOSLEEP_ID</references>
+        <references refid="_sigfox_8c_1abbcf5d5dfbe9d7266946384bf0e27508" compoundref="_sigfox_8c" startline="86">WriteBufferLength</references>
+        <references refid="_sigfox_8c_1a1f0822c261193f19760e10b222fac3c6" compoundref="_sigfox_8c" startline="113" endline="182">HandleSPIDataTransfer</references>
+        <references refid="group___e_x_t_e_n_s_i_o_n_p_o_r_t_s_p_i_1gafbe088dba3b02c7cefa13e626debc69e" compoundref="_extension_port_spi_8c" startline="220" endline="259">ExtensionPortSpi_DeInitialize</references>
+        <references refid="_extension_port_spi_ctrl_8c_1a8fef6602beaa41cbecab18e3d6988442" compoundref="_extension_port_spi_ctrl_8c" startline="135" endline="152">ExtensionPortSpiCtrl_DeInitialize</references>
+      </memberdef>
+      <memberdef kind="function" id="_sigfox_8h_1ae9ae38f96aa6a4a3d48b817689ba2ce7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Sigfox_SendWakeUp</definition>
+        <argsstring>(void)</argsstring>
+        <name>Sigfox_SendWakeUp</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Send wakeup command to SOC OL2385. Should be used before sending a payload as SOC goes in sleep mode automatically. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para>In-case <ref refid="_sigfox_8c_1adf4c2764f3e88491faf2fcc472625cb0" kindref="member">Sigfox_Enable</ref> was called before we can proceed with first send since it .</para></listitem></itemizedlist>
+</para></simplesect>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.h" line="86" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.c" bodystart="254" bodyend="270"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="_sigfox_8c_1a9e74a947782a2a1bee8404218125c644" compoundref="_sigfox_8c" startline="84">WriteBufferPointer</references>
+        <references refid="_sigfox_config_8h_1a10049a8a59923e00b44e99d85f45662a" compoundref="_sigfox_config_8h" startline="55">SIGFOX_SENDWAKEUP_LEN</references>
+        <references refid="_sigfox_config_8h_1a6cc08358a8ad164e317f9a594e485ab1" compoundref="_sigfox_config_8h" startline="54">SIGFOX_SENDWAKEUP_ID</references>
+        <references refid="_sigfox_8c_1abbcf5d5dfbe9d7266946384bf0e27508" compoundref="_sigfox_8c" startline="86">WriteBufferLength</references>
+        <references refid="_sigfox_8c_1a1f0822c261193f19760e10b222fac3c6" compoundref="_sigfox_8c" startline="113" endline="182">HandleSPIDataTransfer</references>
+        <references refid="group___b_c_d_s___h_a_l___b_s_p___board_1ga3c12de2d1d4a59f5a1c9794e88ff6608" compoundref="_b_s_p___board_8c" startline="412" endline="419">BSP_Board_Delay</references>
+        <referencedby refid="_sigfox_8h_1adf4c2764f3e88491faf2fcc472625cb0" compoundref="_sigfox_8c" startline="246" endline="251">Sigfox_Enable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_sigfox_8h_1a95182aab1b4de005d2816c85c86ed6f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Sigfox_SetFCCMacroChannel</definition>
+        <argsstring>(uint32_t *configWords, uint8_t defaultChannelConfig)</argsstring>
+        <name>Sigfox_SetFCCMacroChannel</name>
+        <param>
+          <type>uint32_t *</type>
+          <declname>configWords</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>defaultChannelConfig</declname>
+        </param>
+        <briefdescription>
+<para>Set FCC Macrochannel. config_words[0] are for Channels 1 to 32 (902.2MHz to 911.5MHz) config_words[1] are for Channels 33 to 64 (911.8MHz to 921.1MHz) config_words[2] are for Channels 65 to 86 (921.4MHz to 927.7MHz) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+<para>configWords Config Words for Macro Channels </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+<para>defaultChannelConfig Default Channel</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.h" line="194" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.c" bodystart="626" bodyend="667"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="_sigfox_8c_1a9e74a947782a2a1bee8404218125c644" compoundref="_sigfox_8c" startline="84">WriteBufferPointer</references>
+        <references refid="_sigfox_config_8h_1a12b46b280653440681034816235a7b42" compoundref="_sigfox_config_8h" startline="94">SIGFOX_SETFCCMACROCHANNEL_LEN</references>
+        <references refid="_sigfox_config_8h_1a8efcd5cbef95013ffd70426b67493b08" compoundref="_sigfox_config_8h" startline="93">SIGFOX_SETFCCMACROCHANNEL_ID</references>
+        <references refid="_sigfox_8c_1abbcf5d5dfbe9d7266946384bf0e27508" compoundref="_sigfox_8c" startline="86">WriteBufferLength</references>
+        <references refid="_sigfox_8c_1a1f0822c261193f19760e10b222fac3c6" compoundref="_sigfox_8c" startline="113" endline="182">HandleSPIDataTransfer</references>
+        <references refid="_sigfox_8c_1a9db401d1ed40ba37cda2e09bf2788df5" compoundref="_sigfox_8c" startline="87">ReadBufferLength</references>
+        <references refid="_sigfox_8c_1a3f921dd53f78f928d07b3c5f2454bac2" compoundref="_sigfox_8c" startline="85">ReadBufferPointer</references>
+      </memberdef>
+      <memberdef kind="function" id="_sigfox_8h_1a93d9389f754773829790d985ca2284a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Sigfox_SetPrivateKey</definition>
+        <argsstring>(void)</argsstring>
+        <name>Sigfox_SetPrivateKey</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Set AES Private Key (default mode) </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.h" line="159" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.c" bodystart="542" bodyend="564"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="_sigfox_8c_1a9e74a947782a2a1bee8404218125c644" compoundref="_sigfox_8c" startline="84">WriteBufferPointer</references>
+        <references refid="_sigfox_config_8h_1a4b7be6235c2eee6d444f7289b9bfa8e1" compoundref="_sigfox_config_8h" startline="76">SIGFOX_PRIVATEKEY_LEN</references>
+        <references refid="_sigfox_config_8h_1acba526ad90c191d16c2d32c57fe14cbb" compoundref="_sigfox_config_8h" startline="75">SIGFOX_PRIVATEKEY_ID</references>
+        <references refid="_sigfox_8c_1abbcf5d5dfbe9d7266946384bf0e27508" compoundref="_sigfox_8c" startline="86">WriteBufferLength</references>
+        <references refid="_sigfox_8c_1a1f0822c261193f19760e10b222fac3c6" compoundref="_sigfox_8c" startline="113" endline="182">HandleSPIDataTransfer</references>
+        <references refid="_sigfox_8c_1a9db401d1ed40ba37cda2e09bf2788df5" compoundref="_sigfox_8c" startline="87">ReadBufferLength</references>
+        <references refid="_sigfox_8c_1a3f921dd53f78f928d07b3c5f2454bac2" compoundref="_sigfox_8c" startline="85">ReadBufferPointer</references>
+      </memberdef>
+      <memberdef kind="function" id="_sigfox_8h_1ab8ef118282c5c514c85e4b09f695093b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Sigfox_SetPublicKey</definition>
+        <argsstring>(void)</argsstring>
+        <name>Sigfox_SetPublicKey</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Set AES Public Key (to use with SNEK) </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.h" line="166" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.c" bodystart="567" bodyend="577"/>
+        <references refid="_sigfox_8c_1a9e74a947782a2a1bee8404218125c644" compoundref="_sigfox_8c" startline="84">WriteBufferPointer</references>
+        <references refid="_sigfox_config_8h_1a05f79e6fa90f701e5652a88f16315ee4" compoundref="_sigfox_config_8h" startline="79">SIGFOX_PUBLICKEY_LEN</references>
+        <references refid="_sigfox_config_8h_1a66856f033454eb70ffdc073f1d7a67ff" compoundref="_sigfox_config_8h" startline="78">SIGFOX_PUBLICKEY_ID</references>
+        <references refid="_sigfox_8c_1abbcf5d5dfbe9d7266946384bf0e27508" compoundref="_sigfox_8c" startline="86">WriteBufferLength</references>
+        <references refid="_sigfox_8c_1a1f0822c261193f19760e10b222fac3c6" compoundref="_sigfox_8c" startline="113" endline="182">HandleSPIDataTransfer</references>
+      </memberdef>
+      <memberdef kind="function" id="_sigfox_8h_1a718b5714982eab93db9709e2f8d6b18c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Sigfox_SetRCZ1</definition>
+        <argsstring>(void)</argsstring>
+        <name>Sigfox_SetRCZ1</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Set Radio Zone 1 (ETSI) </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.h" line="124" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.c" bodystart="385" bodyend="415"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="_sigfox_8c_1a9e74a947782a2a1bee8404218125c644" compoundref="_sigfox_8c" startline="84">WriteBufferPointer</references>
+        <references refid="_sigfox_config_8h_1a5ee6c77b763ad86f7ee5373bece29a3b" compoundref="_sigfox_config_8h" startline="64">SIGFOX_SETRCZ1_LEN</references>
+        <references refid="_sigfox_config_8h_1a510d23e6343bbf43022c3e798022c770" compoundref="_sigfox_config_8h" startline="63">SIGFOX_SETRCZ1_ID</references>
+        <references refid="_sigfox_8c_1abbcf5d5dfbe9d7266946384bf0e27508" compoundref="_sigfox_8c" startline="86">WriteBufferLength</references>
+        <references refid="_sigfox_8c_1a1f0822c261193f19760e10b222fac3c6" compoundref="_sigfox_8c" startline="113" endline="182">HandleSPIDataTransfer</references>
+        <references refid="_sigfox_8c_1a9db401d1ed40ba37cda2e09bf2788df5" compoundref="_sigfox_8c" startline="87">ReadBufferLength</references>
+        <references refid="_sigfox_8c_1a3f921dd53f78f928d07b3c5f2454bac2" compoundref="_sigfox_8c" startline="85">ReadBufferPointer</references>
+      </memberdef>
+      <memberdef kind="function" id="_sigfox_8h_1a101106d9bc24d378bd011eb4cc12d088" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Sigfox_SetRCZ2</definition>
+        <argsstring>(void)</argsstring>
+        <name>Sigfox_SetRCZ2</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Set Radio Zone 2. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.h" line="131" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.c" bodystart="418" bodyend="448"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="_sigfox_8c_1a9e74a947782a2a1bee8404218125c644" compoundref="_sigfox_8c" startline="84">WriteBufferPointer</references>
+        <references refid="_sigfox_config_8h_1a138ce76e65c82684088dae0dff079c29" compoundref="_sigfox_config_8h" startline="67">SIGFOX_SETRCZ2_LEN</references>
+        <references refid="_sigfox_config_8h_1a3e1eca9d81753fd0e3f045d8d7a6fc42" compoundref="_sigfox_config_8h" startline="66">SIGFOX_SETRCZ2_ID</references>
+        <references refid="_sigfox_8c_1abbcf5d5dfbe9d7266946384bf0e27508" compoundref="_sigfox_8c" startline="86">WriteBufferLength</references>
+        <references refid="_sigfox_8c_1a1f0822c261193f19760e10b222fac3c6" compoundref="_sigfox_8c" startline="113" endline="182">HandleSPIDataTransfer</references>
+        <references refid="_sigfox_8c_1a9db401d1ed40ba37cda2e09bf2788df5" compoundref="_sigfox_8c" startline="87">ReadBufferLength</references>
+        <references refid="_sigfox_8c_1a3f921dd53f78f928d07b3c5f2454bac2" compoundref="_sigfox_8c" startline="85">ReadBufferPointer</references>
+      </memberdef>
+      <memberdef kind="function" id="_sigfox_8h_1a9447f29bbc1e34c1dcaec7b04b86840a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Sigfox_SetRCZ3</definition>
+        <argsstring>(void)</argsstring>
+        <name>Sigfox_SetRCZ3</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Set Radio Zone 3. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.h" line="138" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.c" bodystart="451" bodyend="481"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="_sigfox_8c_1a9e74a947782a2a1bee8404218125c644" compoundref="_sigfox_8c" startline="84">WriteBufferPointer</references>
+        <references refid="_sigfox_config_8h_1a44fa4dd34bebd059a11661bffe6e6a99" compoundref="_sigfox_config_8h" startline="70">SIGFOX_SETRCZ3_LEN</references>
+        <references refid="_sigfox_config_8h_1af7713d3bbc456c2f382ed694ee51da03" compoundref="_sigfox_config_8h" startline="69">SIGFOX_SETRCZ3_ID</references>
+        <references refid="_sigfox_8c_1abbcf5d5dfbe9d7266946384bf0e27508" compoundref="_sigfox_8c" startline="86">WriteBufferLength</references>
+        <references refid="_sigfox_8c_1a1f0822c261193f19760e10b222fac3c6" compoundref="_sigfox_8c" startline="113" endline="182">HandleSPIDataTransfer</references>
+        <references refid="_sigfox_8c_1a9db401d1ed40ba37cda2e09bf2788df5" compoundref="_sigfox_8c" startline="87">ReadBufferLength</references>
+        <references refid="_sigfox_8c_1a3f921dd53f78f928d07b3c5f2454bac2" compoundref="_sigfox_8c" startline="85">ReadBufferPointer</references>
+      </memberdef>
+      <memberdef kind="function" id="_sigfox_8h_1a9178c086a8b4dcf73dbcdf1b9e3c08da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Sigfox_SetRCZ4</definition>
+        <argsstring>(void)</argsstring>
+        <name>Sigfox_SetRCZ4</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Set Radio Zone 4. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.h" line="145" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.c" bodystart="484" bodyend="514"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="_sigfox_8c_1a9e74a947782a2a1bee8404218125c644" compoundref="_sigfox_8c" startline="84">WriteBufferPointer</references>
+        <references refid="_sigfox_config_8h_1a85697c81f2d054e250f827b0a7930193" compoundref="_sigfox_config_8h" startline="73">SIGFOX_SETRCZ4_LEN</references>
+        <references refid="_sigfox_config_8h_1a28222dd51a4b3a9ff5575f60c861c689" compoundref="_sigfox_config_8h" startline="72">SIGFOX_SETRCZ4_ID</references>
+        <references refid="_sigfox_8c_1abbcf5d5dfbe9d7266946384bf0e27508" compoundref="_sigfox_8c" startline="86">WriteBufferLength</references>
+        <references refid="_sigfox_8c_1a1f0822c261193f19760e10b222fac3c6" compoundref="_sigfox_8c" startline="113" endline="182">HandleSPIDataTransfer</references>
+        <references refid="_sigfox_8c_1a9db401d1ed40ba37cda2e09bf2788df5" compoundref="_sigfox_8c" startline="87">ReadBufferLength</references>
+        <references refid="_sigfox_8c_1a3f921dd53f78f928d07b3c5f2454bac2" compoundref="_sigfox_8c" startline="85">ReadBufferPointer</references>
+      </memberdef>
+      <memberdef kind="function" id="_sigfox_8h_1a6a711a7ae9c2e33edfcfcd045e0db5e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Sigfox_Setup</definition>
+        <argsstring>(void)</argsstring>
+        <name>Sigfox_Setup</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This will setup the Sigfox communication by initializing the SPI interface with the chip and allocating the necessary buffers for memory. </para>        </briefdescription>
+        <detaileddescription>
+<para>Licensee agrees that the example code provided to Licensee has been developed and released by Bosch solely as an example to be used as a potential reference for Licenseeís application development. Fitness and suitability of the example code for any use within Licenseeís applications need to be verified by Licensee on its own authority by taking appropriate state of the art actions and measures (e.g. by means of quality assurance measures). Licensee shall be responsible for conducting the development of its applications as well as integration of parts of the example code into such applications, taking into account the state of the art of technology and any statutory regulations and provisions applicable for such applications. Compliance with the functional system requirements and testing there of (including validation of information/data security aspects and functional safety) and release shall be solely incumbent upon Licensee. For the avoidance of doubt, Licensee shall be responsible and fully liable for the applications and any distribution of such applications into the market.</para><para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: <verbatim>(1) Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+
+(2) Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in
+the documentation and/or other materials provided with the
+distribution.
+
+(3)The name of the author may not be used to
+endorse or promote products derived from this software without
+specific prior written permission.
+</verbatim></para><para>THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS&apos;&apos; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. <simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para>This must be the first API to be called if Sigfox feature is to be used.</para></listitem><listitem><para>Do not call this API more than once.</para></listitem><listitem><para>#BSP_ExtensionPort_Connect must have been successful prior.</para></listitem></itemizedlist>
+</para></simplesect>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.h" line="62" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.c" bodystart="225" bodyend="243"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="struct_extension_port_spi___config___s_1aaad609733f3fd8146c8745e953a91b2a" compoundref="_extension_port_spi_8h" startline="91">ExtensionPortSpi_Config_S::BaudRate</references>
+        <references refid="_sigfox_8c_1a068dfc63c560b01bcfa0eef83cf856c2" compoundref="_sigfox_8c" startline="56">EXTENSION_BUS_SPI_BAUDRATE</references>
+        <references refid="group___e_x_t_e_n_s_i_o_n_p_o_r_t_s_p_i_1gga488c56574677aed6cfc29a281bbd986eaa456d396eacdc8cbd460dd65e176f822" compoundref="_extension_port_spi_8h" startline="61">EXTENSION_PORT_SPI_BIT_ORDER_MSB_FIRST</references>
+        <references refid="group___e_x_t_e_n_s_i_o_n_p_o_r_t_s_p_i_1gga166b0819add7ae6253b6f4f1456a716ea0cd50d3cbd7a23c6b586363850a58916" compoundref="_extension_port_spi_8h" startline="76">EXTENSION_PORT_SPI_CLOCK_MODE_1</references>
+        <references refid="_sigfox_8c_1a3f921dd53f78f928d07b3c5f2454bac2" compoundref="_sigfox_8c" startline="85">ReadBufferPointer</references>
+        <references refid="_sigfox_8c_1ab2805f834fb41b04387c2c401549d243" compoundref="_sigfox_8c" startline="89">ReadBuffer</references>
+        <references refid="_sigfox_8c_1a9e74a947782a2a1bee8404218125c644" compoundref="_sigfox_8c" startline="84">WriteBufferPointer</references>
+        <references refid="_sigfox_8c_1aacad890a518ebd5b3bb074b0ae3b1097" compoundref="_sigfox_8c" startline="90">WriteBuffer</references>
+        <references refid="_extension_port_spi_ctrl_8c_1ae2d748b29c4347fe06fdd74c7e93d488" compoundref="_extension_port_spi_ctrl_8c" startline="58" endline="88">ExtensionPortSpiCtrl_Initialize</references>
+        <references refid="group___e_x_t_e_n_s_i_o_n_p_o_r_t_s_p_i_1gaad3ad9808efe73485bd5b05ed83460e3" compoundref="_extension_port_spi_8c" startline="111" endline="156">ExtensionPortSpi_Initialize</references>
+      </memberdef>
+      <memberdef kind="function" id="_sigfox_8h_1a49a23c077e7c8d4290a1f5056849319d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Sigfox_UpdatePACurve</definition>
+        <argsstring>(uint8_t subcommand)</argsstring>
+        <name>Sigfox_UpdatePACurve</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>subcommand</declname>
+        </param>
+        <briefdescription>
+<para>Update PA Curve. Only subcommands 1-UpdateETSIPATable and 4-UpdateFCCPATable are supported PA Curves tables are hardcoded in <ref refid="_sigfox_8c" kindref="compound">Sigfox.c</ref> file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+<para>subcommand Subcommand Code (Only 1 and 4 implemented)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.h" line="205" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.c" bodystart="670" bodyend="717"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="_sigfox_8c_1a9e74a947782a2a1bee8404218125c644" compoundref="_sigfox_8c" startline="84">WriteBufferPointer</references>
+        <references refid="_sigfox_config_8h_1a32328cd46ea5eea18b77e9e2eb47e4e2" compoundref="_sigfox_config_8h" startline="97">SIGFOX_UPDATEPACURVE_LEN</references>
+        <references refid="_sigfox_config_8h_1aae364a008c1197480a9a8a262f8c2c82" compoundref="_sigfox_config_8h" startline="96">SIGFOX_UPDATEPACURVE_ID</references>
+        <references refid="_sigfox_8c_1abbcf5d5dfbe9d7266946384bf0e27508" compoundref="_sigfox_8c" startline="86">WriteBufferLength</references>
+        <references refid="_sigfox_8c_1a6f3955817f9606b7646bac841b670f70" compoundref="_sigfox_8c" startline="60">ETSIPATable</references>
+        <references refid="_sigfox_8c_1a2f0349c824f69d1a029b36c0c2291690" compoundref="_sigfox_8c" startline="72">FCCPATable</references>
+        <references refid="_sigfox_8c_1a1f0822c261193f19760e10b222fac3c6" compoundref="_sigfox_8c" startline="113" endline="182">HandleSPIDataTransfer</references>
+        <references refid="_sigfox_8c_1a9db401d1ed40ba37cda2e09bf2788df5" compoundref="_sigfox_8c" startline="87">ReadBufferLength</references>
+        <references refid="_sigfox_8c_1a3f921dd53f78f928d07b3c5f2454bac2" compoundref="_sigfox_8c" startline="85">ReadBufferPointer</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="36"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/>Sigfox.h</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>Aug<sp/>8,<sp/>2017</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>Aur√©lienLequertier</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___h_a_l_8h" kindref="compound">BCDS_HAL.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SIGFOX_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SIGFOX_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___retcode_8h" kindref="compound">BCDS_Retcode.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_sigfox_config_8h" kindref="compound">SigfoxConfig.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_sigfox_8h_1a6a711a7ae9c2e33edfcfcd045e0db5e1" kindref="member">Sigfox_Setup</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_sigfox_8h_1adf4c2764f3e88491faf2fcc472625cb0" kindref="member">Sigfox_Enable</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_sigfox_8h_1ae9ae38f96aa6a4a3d48b817689ba2ce7" kindref="member">Sigfox_SendWakeUp</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_sigfox_8h_1a6621cd1fc0d913b481288eeeddc61d61" kindref="member">Sigfox_SendToSleep</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_sigfox_8h_1a3978d698fb372ec1b92947bfe5ad2b5f" kindref="member">Sigfox_GetInfo</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_sigfox_8h_1a5675010bb267dc9eaa10bb70e63cef5b" kindref="member">Sigfox_SendPayload</ref>(uint8_t<sp/>*<sp/>payload,<sp/>uint8_t<sp/>payloadSize,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>downlinkFlag);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_sigfox_8h_1abaa16e680de16f8a5b5de57faac3708a" kindref="member">Sigfox_PrintRXPayload</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_sigfox_8h_1a718b5714982eab93db9709e2f8d6b18c" kindref="member">Sigfox_SetRCZ1</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_sigfox_8h_1a101106d9bc24d378bd011eb4cc12d088" kindref="member">Sigfox_SetRCZ2</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_sigfox_8h_1a9447f29bbc1e34c1dcaec7b04b86840a" kindref="member">Sigfox_SetRCZ3</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_sigfox_8h_1a9178c086a8b4dcf73dbcdf1b9e3c08da" kindref="member">Sigfox_SetRCZ4</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_sigfox_8h_1a28f08c031875f43e62790f48de640e2a" kindref="member">Sigfox_ResetMacroChannel</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_sigfox_8h_1a93d9389f754773829790d985ca2284a9" kindref="member">Sigfox_SetPrivateKey</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_sigfox_8h_1ab8ef118282c5c514c85e4b09f695093b" kindref="member">Sigfox_SetPublicKey</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_sigfox_8h_1a8190fdb793bf3e8ced3f5b34f9596e66" kindref="member">Sigfox_SendBit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_sigfox_8h_1a79eabe723f83eeaf0c0f4b4b2b5800ed" kindref="member">Sigfox_GetSOCVersion</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>A1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_sigfox_8h_1a95182aab1b4de005d2816c85c86ed6f2" kindref="member">Sigfox_SetFCCMacroChannel</ref>(uint32_t<sp/>*<sp/>configWords,<sp/>uint8_t<sp/>defaultChannelConfig);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_sigfox_8h_1a49a23c077e7c8d4290a1f5056849319d" kindref="member">Sigfox_UpdatePACurve</ref>(uint8_t<sp/>subcommand);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_sigfox_8h_1af71688526c96c5bbe053cad466739d58" kindref="member">Sigfox_ReadPACurve</ref>(uint8_t<sp/>subcommand);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>#ifdef<sp/>A1<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SIGFOX_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/SigfoxDataExample/source/Sigfox/Sigfox.h"/>
+  </compounddef>
+</doxygen>

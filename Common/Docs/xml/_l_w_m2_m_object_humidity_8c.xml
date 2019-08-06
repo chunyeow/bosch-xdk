@@ -1,0 +1,1326 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_l_w_m2_m_object_humidity_8c" kind="file">
+    <compoundname>LWM2MObjectHumidity.c</compoundname>
+    <includes refid="_xdk_common_info_8h" local="yes">XdkCommonInfo.h</includes>
+    <includes refid="_l_w_m2_m_objects_8h" local="yes">LWM2MObjects.h</includes>
+    <includes refid="_l_w_m2_m_util_8h" local="yes">LWM2MUtil.h</includes>
+    <includes refid="_l_w_m2_m_8h" local="yes">LWM2M.h</includes>
+    <includes refid="_serval___clock_8h" local="no">Serval_Clock.h</includes>
+    <includes refid="_serval___exceptions_8h" local="no">Serval_Exceptions.h</includes>
+    <includes refid="_b_c_d_s___retcode_8h" local="no">BCDS_Retcode.h</includes>
+    <includes refid="_x_d_k___sensor_handle_8h" local="yes">XDK_SensorHandle.h</includes>
+    <incdepgraph>
+      <node id="25549">
+        <label>stdbool.h</label>
+      </node>
+      <node id="25556">
+        <label>Serval_Types.h</label>
+        <link refid="_serval___types_8h"/>
+        <childnode refid="25557" relation="include">
+        </childnode>
+        <childnode refid="25591" relation="include">
+        </childnode>
+      </node>
+      <node id="25561">
+        <label>stdarg.h</label>
+      </node>
+      <node id="25605">
+        <label>Serval_CoapServer.h</label>
+        <link refid="_serval___coap_server_8h"/>
+        <childnode refid="25555" relation="include">
+        </childnode>
+        <childnode refid="25591" relation="include">
+        </childnode>
+        <childnode refid="25594" relation="include">
+        </childnode>
+        <childnode refid="25601" relation="include">
+        </childnode>
+        <childnode refid="25602" relation="include">
+        </childnode>
+      </node>
+      <node id="25636">
+        <label>BCDS_CalibratedMag.h</label>
+        <link refid="_b_c_d_s___calibrated_mag_8h"/>
+        <childnode refid="25548" relation="include">
+        </childnode>
+        <childnode refid="25546" relation="include">
+        </childnode>
+      </node>
+      <node id="25552">
+        <label>LWM2MObjects.h</label>
+        <link refid="_l_w_m2_m_objects_8h"/>
+        <childnode refid="25553" relation="include">
+        </childnode>
+        <childnode refid="25606" relation="include">
+        </childnode>
+        <childnode refid="25607" relation="include">
+        </childnode>
+        <childnode refid="25608" relation="include">
+        </childnode>
+        <childnode refid="25609" relation="include">
+        </childnode>
+        <childnode refid="25610" relation="include">
+        </childnode>
+        <childnode refid="25611" relation="include">
+        </childnode>
+        <childnode refid="25612" relation="include">
+        </childnode>
+        <childnode refid="25613" relation="include">
+        </childnode>
+        <childnode refid="25614" relation="include">
+        </childnode>
+        <childnode refid="25615" relation="include">
+        </childnode>
+        <childnode refid="25616" relation="include">
+        </childnode>
+        <childnode refid="25617" relation="include">
+        </childnode>
+        <childnode refid="25618" relation="include">
+        </childnode>
+      </node>
+      <node id="25622">
+        <label>Serval_Clock.h</label>
+        <link refid="_serval___clock_8h"/>
+        <childnode refid="25556" relation="include">
+        </childnode>
+        <childnode refid="25591" relation="include">
+        </childnode>
+      </node>
+      <node id="25588">
+        <label>netcfg.h</label>
+        <link refid="netcfg_8h"/>
+        <childnode refid="25579" relation="include">
+        </childnode>
+      </node>
+      <node id="25573">
+        <label>list.h</label>
+      </node>
+      <node id="25575">
+        <label>BCDS_CmdProcessor.h</label>
+        <link refid="_b_c_d_s___cmd_processor_8h"/>
+        <childnode refid="25576" relation="include">
+        </childnode>
+        <childnode refid="25547" relation="include">
+        </childnode>
+        <childnode refid="25546" relation="include">
+        </childnode>
+      </node>
+      <node id="25618">
+        <label>LWM2MObjectAlertNotification.h</label>
+        <link refid="_l_w_m2_m_object_alert_notification_8h"/>
+        <childnode refid="25553" relation="include">
+        </childnode>
+      </node>
+      <node id="25606">
+        <label>LWM2MObjectDevice.h</label>
+        <link refid="_l_w_m2_m_object_device_8h"/>
+        <childnode refid="25553" relation="include">
+        </childnode>
+      </node>
+      <node id="25595">
+        <label>Serval_StringDescr.h</label>
+        <link refid="_serval___string_descr_8h"/>
+        <childnode refid="25556" relation="include">
+        </childnode>
+      </node>
+      <node id="25607">
+        <label>LWM2MObjectConnectivityMonitoring.h</label>
+        <link refid="_l_w_m2_m_object_connectivity_monitoring_8h"/>
+        <childnode refid="25553" relation="include">
+        </childnode>
+      </node>
+      <node id="25559">
+        <label>BCDS_Assert.h</label>
+        <link refid="_b_c_d_s___assert_8h"/>
+        <childnode refid="25546" relation="include">
+        </childnode>
+      </node>
+      <node id="25545">
+        <label>XdkCommonInfo.h</label>
+        <link refid="_xdk_common_info_8h"/>
+        <childnode refid="25546" relation="include">
+        </childnode>
+      </node>
+      <node id="25548">
+        <label>stdint.h</label>
+      </node>
+      <node id="25546">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="25547" relation="include">
+        </childnode>
+      </node>
+      <node id="25551">
+        <label>stdlib.h</label>
+      </node>
+      <node id="25591">
+        <label>Serval_Exceptions.h</label>
+        <link refid="_serval___exceptions_8h"/>
+      </node>
+      <node id="25554">
+        <label>Serval_Policy.h</label>
+        <link refid="_serval___policy_8h"/>
+      </node>
+      <node id="25629">
+        <label>BCDS_Orientation.h</label>
+        <link refid="_b_c_d_s___orientation_8h"/>
+        <childnode refid="25546" relation="include">
+        </childnode>
+      </node>
+      <node id="25639">
+        <label>BCDS_Gestures.h</label>
+        <link refid="_b_c_d_s___gestures_8h"/>
+        <childnode refid="25546" relation="include">
+        </childnode>
+      </node>
+      <node id="25567">
+        <label>BCDS_TaskConfig.h</label>
+        <link refid="_b_c_d_s___task_config_8h"/>
+      </node>
+      <node id="25570">
+        <label>semphr.h</label>
+        <link refid="semphr_8h"/>
+        <childnode refid="25571" relation="include">
+        </childnode>
+      </node>
+      <node id="25578">
+        <label>BCDS_ServalPalConfig.h</label>
+        <link refid="_b_c_d_s___serval_pal_config_8h"/>
+      </node>
+      <node id="25580">
+        <label>user.h</label>
+      </node>
+      <node id="25574">
+        <label>BCDS_ServalPal.h</label>
+        <link refid="_b_c_d_s___serval_pal_8h"/>
+        <childnode refid="25546" relation="include">
+        </childnode>
+        <childnode refid="25575" relation="include">
+        </childnode>
+        <childnode refid="25578" relation="include">
+        </childnode>
+      </node>
+      <node id="25631">
+        <label>BCDS_Gravity.h</label>
+        <link refid="_b_c_d_s___gravity_8h"/>
+        <childnode refid="25548" relation="include">
+        </childnode>
+        <childnode refid="25546" relation="include">
+        </childnode>
+        <childnode refid="25632" relation="include">
+        </childnode>
+      </node>
+      <node id="25637">
+        <label>BCDS_FingerPrint.h</label>
+        <link refid="_b_c_d_s___finger_print_8h"/>
+        <childnode refid="25546" relation="include">
+        </childnode>
+      </node>
+      <node id="25615">
+        <label>LWM2MObjectSensorDevice.h</label>
+        <link refid="_l_w_m2_m_object_sensor_device_8h"/>
+        <childnode refid="25553" relation="include">
+        </childnode>
+      </node>
+      <node id="25581">
+        <label>../source/objInclusion.h</label>
+        <link refid="obj_inclusion_8h"/>
+        <childnode refid="25579" relation="include">
+        </childnode>
+      </node>
+      <node id="25598">
+        <label>Serval_Callable.h</label>
+        <link refid="_serval___callable_8h"/>
+        <childnode refid="25556" relation="include">
+        </childnode>
+        <childnode refid="25599" relation="include">
+        </childnode>
+      </node>
+      <node id="25602">
+        <label>Serval_Security.h</label>
+        <link refid="_serval___security_8h"/>
+        <childnode refid="25555" relation="include">
+        </childnode>
+        <childnode refid="25594" relation="include">
+        </childnode>
+        <childnode refid="25557" relation="include">
+        </childnode>
+        <childnode refid="25603" relation="include">
+        </childnode>
+      </node>
+      <node id="25603">
+        <label>Serval_MsgSendingCtx.h</label>
+        <link refid="_serval___msg_sending_ctx_8h"/>
+        <childnode refid="25554" relation="include">
+        </childnode>
+      </node>
+      <node id="25565">
+        <label>stddef.h</label>
+      </node>
+      <node id="25604">
+        <label>Serval_Url.h</label>
+        <link refid="_serval___url_8h"/>
+        <childnode refid="25595" relation="include">
+        </childnode>
+        <childnode refid="25556" relation="include">
+        </childnode>
+        <childnode refid="25592" relation="include">
+        </childnode>
+      </node>
+      <node id="25583">
+        <label>fs.h</label>
+        <link refid="fs_8h"/>
+        <childnode refid="25579" relation="include">
+        </childnode>
+      </node>
+      <node id="25620">
+        <label>LWM2M.h</label>
+        <link refid="_l_w_m2_m_8h"/>
+        <childnode refid="25621" relation="include">
+        </childnode>
+      </node>
+      <node id="25563">
+        <label>PThreading.h</label>
+        <link refid="_p_threading_8h"/>
+        <childnode refid="25564" relation="include">
+        </childnode>
+        <childnode refid="25566" relation="include">
+        </childnode>
+        <childnode refid="25570" relation="include">
+        </childnode>
+        <childnode refid="25572" relation="include">
+        </childnode>
+      </node>
+      <node id="25633">
+        <label>BCDS_AbsoluteHumidity.h</label>
+        <link refid="_b_c_d_s___absolute_humidity_8h"/>
+        <childnode refid="25546" relation="include">
+        </childnode>
+      </node>
+      <node id="25558">
+        <label>PBasics.h</label>
+        <link refid="_p_basics_8h"/>
+        <childnode refid="25559" relation="include">
+        </childnode>
+        <childnode refid="25547" relation="include">
+        </childnode>
+        <childnode refid="25560" relation="include">
+        </childnode>
+        <childnode refid="25561" relation="include">
+        </childnode>
+        <childnode refid="25562" relation="include">
+        </childnode>
+        <childnode refid="25551" relation="include">
+        </childnode>
+        <childnode refid="25556" relation="include">
+        </childnode>
+        <childnode refid="25563" relation="include">
+        </childnode>
+        <childnode refid="25574" relation="include">
+        </childnode>
+        <childnode refid="25579" relation="include">
+        </childnode>
+      </node>
+      <node id="25560">
+        <label>limits.h</label>
+      </node>
+      <node id="25638">
+        <label>BCDS_LinearAcceleration.h</label>
+        <link refid="_b_c_d_s___linear_acceleration_8h"/>
+        <childnode refid="25548" relation="include">
+        </childnode>
+        <childnode refid="25546" relation="include">
+        </childnode>
+        <childnode refid="25632" relation="include">
+        </childnode>
+      </node>
+      <node id="25613">
+        <label>LWM2MObjectTemperature.h</label>
+        <link refid="_l_w_m2_m_object_temperature_8h"/>
+      </node>
+      <node id="25594">
+        <label>Serval_Msg.h</label>
+        <link refid="_serval___msg_8h"/>
+        <childnode refid="25555" relation="include">
+        </childnode>
+        <childnode refid="25556" relation="include">
+        </childnode>
+        <childnode refid="25595" relation="include">
+        </childnode>
+        <childnode refid="25596" relation="include">
+        </childnode>
+        <childnode refid="25597" relation="include">
+        </childnode>
+        <childnode refid="25598" relation="include">
+        </childnode>
+        <childnode refid="25592" relation="include">
+        </childnode>
+        <childnode refid="25554" relation="include">
+        </childnode>
+        <childnode refid="25600" relation="include">
+        </childnode>
+      </node>
+      <node id="25569">
+        <label>portable.h</label>
+      </node>
+      <node id="25611">
+        <label>LWM2MObjectIlluminance.h</label>
+        <link refid="_l_w_m2_m_object_illuminance_8h"/>
+        <childnode refid="25553" relation="include">
+        </childnode>
+      </node>
+      <node id="25630">
+        <label>BCDS_Rotation.h</label>
+        <link refid="_b_c_d_s___rotation_8h"/>
+        <childnode refid="25546" relation="include">
+        </childnode>
+      </node>
+      <node id="25577">
+        <label>BCDS_UtilsConfig.h</label>
+        <link refid="_b_c_d_s___utils_config_8h"/>
+      </node>
+      <node id="25550">
+        <label>string.h</label>
+      </node>
+      <node id="25576">
+        <label>BCDS_Utils.h</label>
+        <link refid="_b_c_d_s___utils_8h"/>
+        <childnode refid="25577" relation="include">
+        </childnode>
+        <childnode refid="25546" relation="include">
+        </childnode>
+      </node>
+      <node id="25599">
+        <label>Serval_StructCtx.h</label>
+        <link refid="_serval___struct_ctx_8h"/>
+        <childnode refid="25565" relation="include">
+        </childnode>
+      </node>
+      <node id="25547">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="25548" relation="include">
+        </childnode>
+        <childnode refid="25549" relation="include">
+        </childnode>
+        <childnode refid="25550" relation="include">
+        </childnode>
+        <childnode refid="25551" relation="include">
+        </childnode>
+      </node>
+      <node id="25600">
+        <label>Serval_Msg_Obsolete.h</label>
+        <link refid="_serval___msg___obsolete_8h"/>
+        <childnode refid="25556" relation="include">
+        </childnode>
+        <childnode refid="25554" relation="include">
+        </childnode>
+        <childnode refid="25594" relation="include">
+        </childnode>
+      </node>
+      <node id="25592">
+        <label>Serval_Ip.h</label>
+        <link refid="_serval___ip_8h"/>
+        <childnode refid="25593" relation="include">
+        </childnode>
+        <childnode refid="25556" relation="include">
+        </childnode>
+      </node>
+      <node id="25623">
+        <label>XDK_SensorHandle.h</label>
+        <link refid="_x_d_k___sensor_handle_8h"/>
+        <childnode refid="25624" relation="include">
+        </childnode>
+        <childnode refid="25625" relation="include">
+        </childnode>
+        <childnode refid="25626" relation="include">
+        </childnode>
+        <childnode refid="25627" relation="include">
+        </childnode>
+        <childnode refid="25628" relation="include">
+        </childnode>
+        <childnode refid="25629" relation="include">
+        </childnode>
+        <childnode refid="25630" relation="include">
+        </childnode>
+        <childnode refid="25631" relation="include">
+        </childnode>
+        <childnode refid="25633" relation="include">
+        </childnode>
+        <childnode refid="25634" relation="include">
+        </childnode>
+        <childnode refid="25632" relation="include">
+        </childnode>
+        <childnode refid="25635" relation="include">
+        </childnode>
+        <childnode refid="25636" relation="include">
+        </childnode>
+        <childnode refid="25637" relation="include">
+        </childnode>
+        <childnode refid="25638" relation="include">
+        </childnode>
+        <childnode refid="25639" relation="include">
+        </childnode>
+      </node>
+      <node id="25608">
+        <label>LWM2MObjectFirmwareUpdate.h</label>
+        <link refid="_l_w_m2_m_object_firmware_update_8h"/>
+        <childnode refid="25553" relation="include">
+        </childnode>
+        <childnode refid="25575" relation="include">
+        </childnode>
+      </node>
+      <node id="25568">
+        <label>projdefs.h</label>
+      </node>
+      <node id="25617">
+        <label>LWM2MObjectLightControl.h</label>
+        <link refid="_l_w_m2_m_object_light_control_8h"/>
+        <childnode refid="25553" relation="include">
+        </childnode>
+      </node>
+      <node id="25610">
+        <label>LWM2MObjectMagnetometer.h</label>
+        <link refid="_l_w_m2_m_object_magnetometer_8h"/>
+        <childnode refid="25553" relation="include">
+        </childnode>
+      </node>
+      <node id="25590">
+        <label>../source/nonos.h</label>
+        <link refid="nonos_8h"/>
+      </node>
+      <node id="25632">
+        <label>BCDS_CalibratedAccel.h</label>
+        <link refid="_b_c_d_s___calibrated_accel_8h"/>
+        <childnode refid="25548" relation="include">
+        </childnode>
+        <childnode refid="25546" relation="include">
+        </childnode>
+      </node>
+      <node id="25593">
+        <label>PIp.h</label>
+        <link refid="_p_ip_8h"/>
+        <childnode refid="25546" relation="include">
+        </childnode>
+      </node>
+      <node id="25589">
+        <label>wlan_rx_filters.h</label>
+        <link refid="wlan__rx__filters_8h"/>
+        <childnode refid="25579" relation="include">
+        </childnode>
+      </node>
+      <node id="25553">
+        <label>Serval_Lwm2m.h</label>
+        <link refid="_serval___lwm2m_8h"/>
+        <childnode refid="25554" relation="include">
+        </childnode>
+        <childnode refid="25555" relation="include">
+        </childnode>
+        <childnode refid="25556" relation="include">
+        </childnode>
+        <childnode refid="25592" relation="include">
+        </childnode>
+        <childnode refid="25594" relation="include">
+        </childnode>
+        <childnode refid="25601" relation="include">
+        </childnode>
+        <childnode refid="25602" relation="include">
+        </childnode>
+        <childnode refid="25604" relation="include">
+        </childnode>
+        <childnode refid="25605" relation="include">
+        </childnode>
+      </node>
+      <node id="25597">
+        <label>Serval_Filesystem.h</label>
+        <link refid="_serval___filesystem_8h"/>
+        <childnode refid="25556" relation="include">
+        </childnode>
+      </node>
+      <node id="25625">
+        <label>BCDS_Gyroscope.h</label>
+        <link refid="_b_c_d_s___gyroscope_8h"/>
+        <childnode refid="25546" relation="include">
+        </childnode>
+      </node>
+      <node id="25555">
+        <label>Serval_Defines.h</label>
+        <link refid="_serval___defines_8h"/>
+      </node>
+      <node id="25628">
+        <label>BCDS_Environmental.h</label>
+        <link refid="_b_c_d_s___environmental_8h"/>
+        <childnode refid="25546" relation="include">
+        </childnode>
+      </node>
+      <node id="25634">
+        <label>BCDS_StepCounter.h</label>
+        <link refid="_b_c_d_s___step_counter_8h"/>
+        <childnode refid="25546" relation="include">
+        </childnode>
+      </node>
+      <node id="25601">
+        <label>Serval_Coap.h</label>
+        <link refid="_serval___coap_8h"/>
+        <childnode refid="25555" relation="include">
+        </childnode>
+        <childnode refid="25554" relation="include">
+        </childnode>
+      </node>
+      <node id="25585">
+        <label>netapp.h</label>
+        <link refid="netapp_8h"/>
+        <childnode refid="25579" relation="include">
+        </childnode>
+      </node>
+      <node id="25571">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+      </node>
+      <node id="25635">
+        <label>BCDS_CalibratedGyro.h</label>
+        <link refid="_b_c_d_s___calibrated_gyro_8h"/>
+        <childnode refid="25548" relation="include">
+        </childnode>
+        <childnode refid="25546" relation="include">
+        </childnode>
+      </node>
+      <node id="25586">
+        <label>wlan.h</label>
+        <link refid="_libraries_2_wi_fi_23rd-party_2_t_i_2simplelink_2include_2_w_l_a_n_8h"/>
+        <childnode refid="25579" relation="include">
+        </childnode>
+      </node>
+      <node id="25596">
+        <label>Serval_XmlParser.h</label>
+        <link refid="_serval___xml_parser_8h"/>
+        <childnode refid="25595" relation="include">
+        </childnode>
+      </node>
+      <node id="25584">
+        <label>socket.h</label>
+        <link refid="socket_8h"/>
+        <childnode refid="25579" relation="include">
+        </childnode>
+      </node>
+      <node id="25572">
+        <label>task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="25573" relation="include">
+        </childnode>
+      </node>
+      <node id="25624">
+        <label>BCDS_Accelerometer.h</label>
+        <link refid="_b_c_d_s___accelerometer_8h"/>
+        <childnode refid="25546" relation="include">
+        </childnode>
+      </node>
+      <node id="25587">
+        <label>device.h</label>
+        <link refid="device_8h"/>
+        <childnode refid="25579" relation="include">
+        </childnode>
+      </node>
+      <node id="25566">
+        <label>FreeRTOSConfig.h</label>
+        <link refid="_free_r_t_o_s_config_8h"/>
+        <childnode refid="25548" relation="include">
+        </childnode>
+        <childnode refid="25559" relation="include">
+        </childnode>
+        <childnode refid="25567" relation="include">
+        </childnode>
+      </node>
+      <node id="25626">
+        <label>BCDS_LightSensor.h</label>
+        <link refid="_b_c_d_s___light_sensor_8h"/>
+        <childnode refid="25546" relation="include">
+        </childnode>
+      </node>
+      <node id="25627">
+        <label>BCDS_Magnetometer.h</label>
+        <link refid="_b_c_d_s___magnetometer_8h"/>
+        <childnode refid="25546" relation="include">
+        </childnode>
+      </node>
+      <node id="25557">
+        <label>Serval_Basics.h</label>
+        <link refid="_serval___basics_8h"/>
+        <childnode refid="25558" relation="include">
+        </childnode>
+      </node>
+      <node id="25616">
+        <label>LWM2MObjectAccelerometer.h</label>
+        <link refid="_l_w_m2_m_object_accelerometer_8h"/>
+        <childnode refid="25553" relation="include">
+        </childnode>
+      </node>
+      <node id="25544">
+        <label>SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c</label>
+        <link refid="LWM2MObjectHumidity.c"/>
+        <childnode refid="25545" relation="include">
+        </childnode>
+        <childnode refid="25552" relation="include">
+        </childnode>
+        <childnode refid="25619" relation="include">
+        </childnode>
+        <childnode refid="25620" relation="include">
+        </childnode>
+        <childnode refid="25622" relation="include">
+        </childnode>
+        <childnode refid="25591" relation="include">
+        </childnode>
+        <childnode refid="25546" relation="include">
+        </childnode>
+        <childnode refid="25623" relation="include">
+        </childnode>
+      </node>
+      <node id="25614">
+        <label>LWM2MObjectHumidity.h</label>
+        <link refid="_l_w_m2_m_object_humidity_8h"/>
+      </node>
+      <node id="25564">
+        <label>FreeRTOS.h</label>
+        <link refid="_free_r_t_o_s_8h"/>
+        <childnode refid="25565" relation="include">
+        </childnode>
+        <childnode refid="25548" relation="include">
+        </childnode>
+        <childnode refid="25566" relation="include">
+        </childnode>
+        <childnode refid="25568" relation="include">
+        </childnode>
+        <childnode refid="25569" relation="include">
+        </childnode>
+      </node>
+      <node id="25612">
+        <label>LWM2MObjectBarometer.h</label>
+        <link refid="_l_w_m2_m_object_barometer_8h"/>
+        <childnode refid="25553" relation="include">
+        </childnode>
+      </node>
+      <node id="25562">
+        <label>stdio.h</label>
+      </node>
+      <node id="25619">
+        <label>LWM2MUtil.h</label>
+        <link refid="_l_w_m2_m_util_8h"/>
+        <childnode refid="25553" relation="include">
+        </childnode>
+        <childnode refid="25564" relation="include">
+        </childnode>
+        <childnode refid="25572" relation="include">
+        </childnode>
+        <childnode refid="25570" relation="include">
+        </childnode>
+      </node>
+      <node id="25582">
+        <label>trace.h</label>
+        <link refid="trace_8h"/>
+        <childnode refid="25579" relation="include">
+        </childnode>
+      </node>
+      <node id="25621">
+        <label>XDK_LWM2M.h</label>
+        <link refid="_x_d_k___l_w_m2_m_8h"/>
+        <childnode refid="25546" relation="include">
+        </childnode>
+        <childnode refid="25575" relation="include">
+        </childnode>
+      </node>
+      <node id="25609">
+        <label>LWM2MObjectGyroscope.h</label>
+        <link refid="_l_w_m2_m_object_gyroscope_8h"/>
+        <childnode refid="25553" relation="include">
+        </childnode>
+      </node>
+      <node id="25579">
+        <label>simplelink.h</label>
+        <link refid="simplelink_8h"/>
+        <childnode refid="25580" relation="include">
+        </childnode>
+        <childnode refid="25581" relation="include">
+        </childnode>
+        <childnode refid="25582" relation="include">
+        </childnode>
+        <childnode refid="25583" relation="include">
+        </childnode>
+        <childnode refid="25584" relation="include">
+        </childnode>
+        <childnode refid="25585" relation="include">
+        </childnode>
+        <childnode refid="25586" relation="include">
+        </childnode>
+        <childnode refid="25587" relation="include">
+        </childnode>
+        <childnode refid="25588" relation="include">
+        </childnode>
+        <childnode refid="25589" relation="include">
+        </childnode>
+        <childnode refid="25590" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_l_w_m2_m_object_humidity_8c_1abff8f3a204e79671b98fabaa652198c3" prot="public" static="no">
+        <name>BCDS_MODULE_ID</name>
+        <initializer><ref refid="_xdk_common_info_8h_1a7d550569e587db8903a47a7044e6e935a1c0ae8e301ca209a202bc06591378ae9" kindref="member">XDK_COMMON_ID_LWM2MOBJECTHUMIDITY</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" line="53" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_l_w_m2_m_object_humidity_8c_1a6389113922372f8bb6db5c0609b5c2f1" prot="public" static="no">
+        <name>FLUSH_RESOURCES</name>
+        <initializer><ref refid="_serval___lwm2m_8h_1ac4322b6bce3d9abbe86e8b7ece716e7f" kindref="member">Lwm2mReporting_multipleResourcesChanged</ref>(&amp;<ref refid="_l_w_m2_m_object_humidity_8c_1a6ce381f0004a74ce9482ab3941747e59" kindref="member">HumidityUriPath</ref>, 6, \
+		<ref refid="_l_w_m2_m_object_humidity_8c_1a541edb7d77c452c84eb8bc459aa913ad" kindref="member">HUMIDITY_RESOURCE_INDEX</ref>(minRangeValue),\
+		<ref refid="_l_w_m2_m_object_humidity_8c_1a541edb7d77c452c84eb8bc459aa913ad" kindref="member">HUMIDITY_RESOURCE_INDEX</ref>(maxRangeValue),\
+		<ref refid="_l_w_m2_m_object_humidity_8c_1a541edb7d77c452c84eb8bc459aa913ad" kindref="member">HUMIDITY_RESOURCE_INDEX</ref>(units),\
+		<ref refid="_l_w_m2_m_object_humidity_8c_1a541edb7d77c452c84eb8bc459aa913ad" kindref="member">HUMIDITY_RESOURCE_INDEX</ref>(sensorValue),\
+		<ref refid="_l_w_m2_m_object_humidity_8c_1a541edb7d77c452c84eb8bc459aa913ad" kindref="member">HUMIDITY_RESOURCE_INDEX</ref>(minMeasuredValue),\
+		<ref refid="_l_w_m2_m_object_humidity_8c_1a541edb7d77c452c84eb8bc459aa913ad" kindref="member">HUMIDITY_RESOURCE_INDEX</ref>(maxMeasuredValue))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" line="76" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" bodystart="76" bodyend="-1"/>
+        <referencedby refid="_l_w_m2_m_object_humidity_8c_1a961882bb60e0d79dbb64bf485432fa0b" compoundref="_l_w_m2_m_object_humidity_8c" startline="125" endline="137">LWM2MObjectHumidityInternalEnable</referencedby>
+        <referencedby refid="_l_w_m2_m_object_humidity_8c_1acc38d15900e533caf5c6ef8bdc85d350" compoundref="_l_w_m2_m_object_humidity_8c" startline="139" endline="151">LWM2MObjectHumidityInternalDisable</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_l_w_m2_m_object_humidity_8c_1a541edb7d77c452c84eb8bc459aa913ad" prot="public" static="no">
+        <name>HUMIDITY_RESOURCE_INDEX</name>
+        <param><defname>res</defname></param>
+        <initializer><ref refid="_l_w_m2_m_objects_8h_1a1ee14b7a930cd894d349cb4278b93d81" kindref="member">LWM2M_RESOURCES_INDEX</ref>(<ref refid="_l_w_m2_m_object_humidity_8h_1a41e4a42fd5bfd24c6b987615d09c598e" kindref="member">LWM2MObjectHumidityResources</ref>, res)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" line="74" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_l_w_m2_m_object_humidity_8c_1a177f399f4a2e7cadec6fe94188781556" prot="public" static="yes" mutable="no">
+        <type><ref refid="struct_lwm2m___call___t" kindref="compound">Lwm2m_Call_T</ref></type>
+        <definition>Lwm2m_Call_T AsyncCall_Disabler</definition>
+        <argsstring></argsstring>
+        <name>AsyncCall_Disabler</name>
+        <initializer>= { .call = <ref refid="_l_w_m2_m_object_humidity_8c_1acc38d15900e533caf5c6ef8bdc85d350" kindref="member">LWM2MObjectHumidityInternalDisable</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" line="106" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_l_w_m2_m_object_humidity_8c_1a1f9759529ee6aa758e346c03caf82d08" prot="public" static="yes" mutable="no">
+        <type><ref refid="struct_lwm2m___pair___resource___update___t" kindref="compound">Lwm2m_Pair_Resource_Update_T</ref></type>
+        <definition>Lwm2m_Pair_Resource_Update_T AsyncCall_Enabler</definition>
+        <argsstring></argsstring>
+        <name>AsyncCall_Enabler</name>
+        <initializer>= { .set_pair = <ref refid="_l_w_m2_m_object_humidity_8c_1a961882bb60e0d79dbb64bf485432fa0b" kindref="member">LWM2MObjectHumidityInternalEnable</ref>, .mutex = <ref refid="_l_w_m2_m_util_8h_1abfe6ac33288a68d102f897dc8bef7da4" kindref="member">LWM2M_MUTEX_INIT_VALUE</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" line="105" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_l_w_m2_m_object_humidity_8c_1a62398de1aae0b637cae5fda1e016dd77" prot="public" static="yes" mutable="no">
+        <type><ref refid="struct_lwm2m___single___resource___update___t" kindref="compound">Lwm2m_Single_Resource_Update_T</ref></type>
+        <definition>Lwm2m_Single_Resource_Update_T AsyncCall_Updater</definition>
+        <argsstring></argsstring>
+        <name>AsyncCall_Updater</name>
+        <initializer>= { .set_single = <ref refid="_l_w_m2_m_object_humidity_8c_1aa04924c8ac987e7e133cfed8237fbbf6" kindref="member">LWM2MObjectHumidityInternalSetValue</ref>, .mutex = <ref refid="_l_w_m2_m_util_8h_1abfe6ac33288a68d102f897dc8bef7da4" kindref="member">LWM2M_MUTEX_INIT_VALUE</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" line="107" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_l_w_m2_m_object_humidity_8c_1a6ce381f0004a74ce9482ab3941747e59" prot="public" static="yes" mutable="no">
+        <type><ref refid="_serval___lwm2m_8h_1a25e2d343888ace930acb390bf600708a" kindref="member">Lwm2m_URI_Path_T</ref></type>
+        <definition>Lwm2m_URI_Path_T HumidityUriPath</definition>
+        <argsstring></argsstring>
+        <name>HumidityUriPath</name>
+        <initializer>= { <ref refid="_l_w_m2_m_objects_8h_1a36c5cf8225acc2b1260cb157f83e6b33" kindref="member">LWM2MOBJECTS_IX_HUMIDITY_0</ref>, <ref refid="_l_w_m2_m_objects_8h_1a36c5cf8225acc2b1260cb157f83e6b33" kindref="member">LWM2MOBJECTS_IX_HUMIDITY_0</ref>, -1 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" line="70" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_l_w_m2_m_object_humidity_8c_1a41e4a42fd5bfd24c6b987615d09c598e" prot="public" static="no" mutable="no">
+        <type><ref refid="_l_w_m2_m_object_humidity_8h_1ae017631d0d50d2c24292f055a44b6999" kindref="member">LWM2MObjectHumidityResource_T</ref></type>
+        <definition>LWM2MObjectHumidityResource_T LWM2MObjectHumidityResources</definition>
+        <argsstring></argsstring>
+        <name>LWM2MObjectHumidityResources</name>
+        <initializer>=
+        {
+                { 5601, <ref refid="_serval___lwm2m_8h_1ab5198d8bd971f4f93ae0c16601681cec" kindref="member">LWM2M_FLOAT</ref>(0.0F) | LWM2M_READ_ONLY }, 
+                { 5602, LWM2M_FLOAT(0.0F) | LWM2M_READ_ONLY }, 
+                { 5603, LWM2M_FLOAT(0.0F) | LWM2M_READ_ONLY }, 
+                { 5604, LWM2M_FLOAT(0.0F) | LWM2M_READ_ONLY }, 
+                { 5605, LWM2M_FUNCTION(ResetMinMaxValues) }, 
+                { 5700, LWM2M_FLOAT(0.0F) | LWM2M_READ_ONLY }, 
+                { 5701, LWM2M_STRING_RO(&quot;&quot;) }, 
+        }</initializer>
+        <briefdescription>
+<para>LWM2M resource data for instance 0. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" line="91" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_l_w_m2_m_object_humidity_8c_1a25b0783812c1afde020276298a30a0d0" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool MinMaxInit</definition>
+        <argsstring></argsstring>
+        <name>MinMaxInit</name>
+        <initializer>= <ref refid="_serval___types_8h_1a65e9886d74aaee76545e83dd09011727" kindref="member">false</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" line="103" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" bodystart="103" bodyend="-1"/>
+        <referencedby refid="_l_w_m2_m_object_humidity_8c_1a961882bb60e0d79dbb64bf485432fa0b" compoundref="_l_w_m2_m_object_humidity_8c" startline="125" endline="137">LWM2MObjectHumidityInternalEnable</referencedby>
+        <referencedby refid="_l_w_m2_m_object_humidity_8c_1acc38d15900e533caf5c6ef8bdc85d350" compoundref="_l_w_m2_m_object_humidity_8c" startline="139" endline="151">LWM2MObjectHumidityInternalDisable</referencedby>
+        <referencedby refid="_l_w_m2_m_object_humidity_8c_1aa04924c8ac987e7e133cfed8237fbbf6" compoundref="_l_w_m2_m_object_humidity_8c" startline="153" endline="176">LWM2MObjectHumidityInternalSetValue</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="_l_w_m2_m_object_humidity_8c_1a3acdf9803fe27ba986425c338aae03b7" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>volatile bool started</definition>
+        <argsstring></argsstring>
+        <name>started</name>
+        <initializer>= <ref refid="_serval___types_8h_1a65e9886d74aaee76545e83dd09011727" kindref="member">false</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" line="71" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" bodystart="71" bodyend="-1"/>
+        <referencedby refid="_l_w_m2_m_object_humidity_8c_1a6a0de24da588de35e2e499147489c2fe" compoundref="_l_w_m2_m_object_humidity_8c" startline="109" endline="123">ResetMinMaxValues</referencedby>
+        <referencedby refid="_l_w_m2_m_object_humidity_8c_1a961882bb60e0d79dbb64bf485432fa0b" compoundref="_l_w_m2_m_object_humidity_8c" startline="125" endline="137">LWM2MObjectHumidityInternalEnable</referencedby>
+        <referencedby refid="_l_w_m2_m_object_humidity_8c_1acc38d15900e533caf5c6ef8bdc85d350" compoundref="_l_w_m2_m_object_humidity_8c" startline="139" endline="151">LWM2MObjectHumidityInternalDisable</referencedby>
+        <referencedby refid="_l_w_m2_m_object_humidity_8c_1aa04924c8ac987e7e133cfed8237fbbf6" compoundref="_l_w_m2_m_object_humidity_8c" startline="153" endline="176">LWM2MObjectHumidityInternalSetValue</referencedby>
+        <referencedby refid="_l_w_m2_m_object_humidity_8h_1ab6861a94b27234c71a38cef433158a15" compoundref="_l_w_m2_m_object_humidity_8c" startline="181" endline="186">LWM2MObjectHumidity_Init</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_l_w_m2_m_object_humidity_8c_1a0dc12052c04ca137d0f13c533129af1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LWM2MObjectHumidity_Disable</definition>
+        <argsstring>(void)</argsstring>
+        <name>LWM2MObjectHumidity_Disable</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Disable LWM2M object instance to stop providing sensor data. Sets unit to &quot;&quot; and all other values to 0. Function is thread safe, it schedules a job for serval. Execution may therefore be deferred. </para>        </briefdescription>
+        <detaileddescription>
+<para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" line="195" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" bodystart="195" bodyend="198"/>
+        <references refid="_l_w_m2_m_util_8c_1a008c4225a368f8897d018b51e2f6fdca" compoundref="_l_w_m2_m_util_8c" startline="269" endline="280">LWM2MUtil_Schedule</references>
+        <referencedby refid="_l_w_m2_m_sensor_device_environment_8h_1aa01367decfc5cf43b7d47c9323ad5c9b" compoundref="_l_w_m2_m_sensor_device_environment_8c" startline="79" endline="149">LWM2MSensorDeviceEnvironment_Activate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_l_w_m2_m_object_humidity_8c_1a8e58b09a163628c18921eddd2f2822e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LWM2MObjectHumidity_Enable</definition>
+        <argsstring>(float minRangeValue, float maxRangeValue)</argsstring>
+        <name>LWM2MObjectHumidity_Enable</name>
+        <param>
+          <type>float</type>
+          <declname>minRangeValue</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>maxRangeValue</declname>
+        </param>
+        <briefdescription>
+<para>Enables the LWM2M object instance to start providing sensor data. Function is thread safe, it schedules a job for serval. Execution may therefore be deferred. </para>        </briefdescription>
+        <detaileddescription>
+<para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" line="189" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" bodystart="189" bodyend="192"/>
+        <references refid="_l_w_m2_m_util_8c_1abcf35896cccc0800860339e9e7cc79fa" compoundref="_l_w_m2_m_util_8c" startline="192" endline="214">LWM2MUtil_UpdatePairResources</references>
+        <referencedby refid="_l_w_m2_m_sensor_device_environment_8h_1aa01367decfc5cf43b7d47c9323ad5c9b" compoundref="_l_w_m2_m_sensor_device_environment_8c" startline="79" endline="149">LWM2MSensorDeviceEnvironment_Activate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_l_w_m2_m_object_humidity_8c_1ab6861a94b27234c71a38cef433158a15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LWM2MObjectHumidity_Init</definition>
+        <argsstring>(void)</argsstring>
+        <name>LWM2MObjectHumidity_Init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize LWM2M object instance. Must be called before any other function call. </para>        </briefdescription>
+        <detaileddescription>
+<para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" line="181" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" bodystart="181" bodyend="186"/>
+        <references refid="_l_w_m2_m_object_humidity_8c_1a3acdf9803fe27ba986425c338aae03b7" compoundref="_l_w_m2_m_object_humidity_8c" startline="71">started</references>
+        <references refid="_l_w_m2_m_util_8h_1abba58cbf10f2d30a6ddddfeeda732299" compoundref="_l_w_m2_m_util_8h" startline="336">LWM2M_MUTEX_CREATE</references>
+      </memberdef>
+      <memberdef kind="function" id="_l_w_m2_m_object_humidity_8c_1a28daacb2d136604c4076b4f10b93942b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LWM2MObjectHumidity_SetValue</definition>
+        <argsstring>(float sensorValue_prh)</argsstring>
+        <name>LWM2MObjectHumidity_SetValue</name>
+        <param>
+          <type>float</type>
+          <declname>sensorValue_prh</declname>
+        </param>
+        <briefdescription>
+<para>the function set the current measured sensorValue in [%] </para>        </briefdescription>
+        <detaileddescription>
+<para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" line="201" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" bodystart="201" bodyend="204"/>
+        <references refid="_l_w_m2_m_util_8c_1ae1d28e0c67d65e52b4e20ce43c33affb" compoundref="_l_w_m2_m_util_8c" startline="152" endline="173">LWM2MUtil_UpdateSingleResource</references>
+        <referencedby refid="_l_w_m2_m_sensor_device_environment_8h_1ab0d6be4458c74633d4dd7095bb1b93c0" compoundref="_l_w_m2_m_sensor_device_environment_8c" startline="152" endline="200">LWM2MSensorDeviceEnvironment_Update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_l_w_m2_m_object_humidity_8c_1acc38d15900e533caf5c6ef8bdc85d350" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void LWM2MObjectHumidityInternalDisable</definition>
+        <argsstring>(void)</argsstring>
+        <name>LWM2MObjectHumidityInternalDisable</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" line="87" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" bodystart="139" bodyend="151"/>
+        <references refid="_l_w_m2_m_object_humidity_8c_1a3acdf9803fe27ba986425c338aae03b7" compoundref="_l_w_m2_m_object_humidity_8c" startline="71">started</references>
+        <references refid="struct_l_w_m2_m_object_humidity_resource___s_1aeea01005d1a659cd2ebe5246efeb3cfe" compoundref="_l_w_m2_m_object_humidity_8h" startline="66">LWM2MObjectHumidityResource_S::units</references>
+        <references refid="struct_lwm2m_resource___s_1a04b7f6cbb03a480706149683c5f17d9b">Lwm2mResource_S::data</references>
+        <references refid="struct_lwm2m_resource___s_1ab51cd24d34f6509eafb5e059f4c7d10e" compoundref="_serval___lwm2m_8h" startline="344">Lwm2mResource_S::s</references>
+        <references refid="struct_l_w_m2_m_object_humidity_resource___s_1ae3aeae7a46fa4408c3da9a52b6c5cb05" compoundref="_l_w_m2_m_object_humidity_8h" startline="62">LWM2MObjectHumidityResource_S::minRangeValue</references>
+        <references refid="struct_lwm2m_resource___s_1af900396d7b72ff2a7002e8befe8cf8f1" compoundref="_serval___lwm2m_8h" startline="348">Lwm2mResource_S::f</references>
+        <references refid="struct_l_w_m2_m_object_humidity_resource___s_1a35e1e4e64f0ec9a70a82c0051b97d158" compoundref="_l_w_m2_m_object_humidity_8h" startline="63">LWM2MObjectHumidityResource_S::maxRangeValue</references>
+        <references refid="struct_l_w_m2_m_object_humidity_resource___s_1a4fffd9aaf75a0cb5c6fb30231c202e3d" compoundref="_l_w_m2_m_object_humidity_8h" startline="60">LWM2MObjectHumidityResource_S::minMeasuredValue</references>
+        <references refid="struct_l_w_m2_m_object_humidity_resource___s_1a56f531252ee02d8d2e2fcfd40587a2ca" compoundref="_l_w_m2_m_object_humidity_8h" startline="61">LWM2MObjectHumidityResource_S::maxMeasuredValue</references>
+        <references refid="struct_l_w_m2_m_object_humidity_resource___s_1a3da99853e6071c413c105b1662085465" compoundref="_l_w_m2_m_object_humidity_8h" startline="65">LWM2MObjectHumidityResource_S::sensorValue</references>
+        <references refid="_l_w_m2_m_object_humidity_8c_1a25b0783812c1afde020276298a30a0d0" compoundref="_l_w_m2_m_object_humidity_8c" startline="103">MinMaxInit</references>
+        <references refid="_l_w_m2_m_object_humidity_8c_1a6389113922372f8bb6db5c0609b5c2f1" compoundref="_l_w_m2_m_object_humidity_8c" startline="76">FLUSH_RESOURCES</references>
+      </memberdef>
+      <memberdef kind="function" id="_l_w_m2_m_object_humidity_8c_1a961882bb60e0d79dbb64bf485432fa0b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void LWM2MObjectHumidityInternalEnable</definition>
+        <argsstring>(float minRangeValue, float maxRangeValue)</argsstring>
+        <name>LWM2MObjectHumidityInternalEnable</name>
+        <param>
+          <type>float</type>
+          <declname>minRangeValue</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>maxRangeValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" line="86" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" bodystart="125" bodyend="137"/>
+        <references refid="_l_w_m2_m_object_humidity_8c_1a3acdf9803fe27ba986425c338aae03b7" compoundref="_l_w_m2_m_object_humidity_8c" startline="71">started</references>
+        <references refid="struct_l_w_m2_m_object_humidity_resource___s_1aeea01005d1a659cd2ebe5246efeb3cfe" compoundref="_l_w_m2_m_object_humidity_8h" startline="66">LWM2MObjectHumidityResource_S::units</references>
+        <references refid="struct_lwm2m_resource___s_1a04b7f6cbb03a480706149683c5f17d9b">Lwm2mResource_S::data</references>
+        <references refid="struct_lwm2m_resource___s_1ab51cd24d34f6509eafb5e059f4c7d10e" compoundref="_serval___lwm2m_8h" startline="344">Lwm2mResource_S::s</references>
+        <references refid="struct_l_w_m2_m_object_humidity_resource___s_1ae3aeae7a46fa4408c3da9a52b6c5cb05" compoundref="_l_w_m2_m_object_humidity_8h" startline="62">LWM2MObjectHumidityResource_S::minRangeValue</references>
+        <references refid="struct_lwm2m_resource___s_1af900396d7b72ff2a7002e8befe8cf8f1" compoundref="_serval___lwm2m_8h" startline="348">Lwm2mResource_S::f</references>
+        <references refid="struct_l_w_m2_m_l_w_m2_m_object_gyroscope___resource___s_1ae3aeae7a46fa4408c3da9a52b6c5cb05" compoundref="_l_w_m2_m_object_gyroscope_8h" startline="63">LWM2MLWM2MObjectGyroscope_Resource_S::minRangeValue</references>
+        <references refid="struct_l_w_m2_m_object_humidity_resource___s_1a35e1e4e64f0ec9a70a82c0051b97d158" compoundref="_l_w_m2_m_object_humidity_8h" startline="63">LWM2MObjectHumidityResource_S::maxRangeValue</references>
+        <references refid="struct_l_w_m2_m_l_w_m2_m_object_gyroscope___resource___s_1a35e1e4e64f0ec9a70a82c0051b97d158" compoundref="_l_w_m2_m_object_gyroscope_8h" startline="64">LWM2MLWM2MObjectGyroscope_Resource_S::maxRangeValue</references>
+        <references refid="struct_l_w_m2_m_object_humidity_resource___s_1a4fffd9aaf75a0cb5c6fb30231c202e3d" compoundref="_l_w_m2_m_object_humidity_8h" startline="60">LWM2MObjectHumidityResource_S::minMeasuredValue</references>
+        <references refid="struct_l_w_m2_m_object_humidity_resource___s_1a56f531252ee02d8d2e2fcfd40587a2ca" compoundref="_l_w_m2_m_object_humidity_8h" startline="61">LWM2MObjectHumidityResource_S::maxMeasuredValue</references>
+        <references refid="struct_l_w_m2_m_object_humidity_resource___s_1a3da99853e6071c413c105b1662085465" compoundref="_l_w_m2_m_object_humidity_8h" startline="65">LWM2MObjectHumidityResource_S::sensorValue</references>
+        <references refid="_l_w_m2_m_object_humidity_8c_1a25b0783812c1afde020276298a30a0d0" compoundref="_l_w_m2_m_object_humidity_8c" startline="103">MinMaxInit</references>
+        <references refid="_l_w_m2_m_object_humidity_8c_1a6389113922372f8bb6db5c0609b5c2f1" compoundref="_l_w_m2_m_object_humidity_8c" startline="76">FLUSH_RESOURCES</references>
+      </memberdef>
+      <memberdef kind="function" id="_l_w_m2_m_object_humidity_8c_1aa04924c8ac987e7e133cfed8237fbbf6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void LWM2MObjectHumidityInternalSetValue</definition>
+        <argsstring>(float sensorValue_prh)</argsstring>
+        <name>LWM2MObjectHumidityInternalSetValue</name>
+        <param>
+          <type>float</type>
+          <declname>sensorValue_prh</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" line="88" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" bodystart="153" bodyend="176"/>
+        <references refid="_l_w_m2_m_util_8h_1a1db61fdcc65892e699a1f8794ac711c8" compoundref="_l_w_m2_m_util_8h" startline="508">INIT_LWM2M_DYNAMIC_CHANGES</references>
+        <references refid="_b_l_e_s_w___alert_notification_release_notes_8txt_1ac9af130c71a5e5ccebd69f14d2d8ebfe" compoundref="_b_l_e_s_w___alert_notification_release_notes_8txt" startline="24">changes</references>
+        <references refid="_l_w_m2_m_object_humidity_8c_1a25b0783812c1afde020276298a30a0d0" compoundref="_l_w_m2_m_object_humidity_8c" startline="103">MinMaxInit</references>
+        <references refid="_l_w_m2_m_util_8h_1a9e5b5fd28d4440a74868e1006d885909" compoundref="_l_w_m2_m_util_8h" startline="531">LWM2M_DYNAMIC_CHANGES_SET_FLOAT_VALUE</references>
+        <references refid="_l_w_m2_m_util_8h_1a1b53599bc44c57dec97fd52723c24f18" compoundref="_l_w_m2_m_util_8h" startline="555">LWM2M_DYNAMIC_CHANGES_SET_FLOAT_MIN_VALUE</references>
+        <references refid="_l_w_m2_m_util_8h_1a45b29fea4f4dfa04278cdb8e4769ec1b" compoundref="_l_w_m2_m_util_8h" startline="579">LWM2M_DYNAMIC_CHANGES_SET_FLOAT_MAX_VALUE</references>
+        <references refid="_l_w_m2_m_object_humidity_8c_1a3acdf9803fe27ba986425c338aae03b7" compoundref="_l_w_m2_m_object_humidity_8c" startline="71">started</references>
+        <references refid="_l_w_m2_m_util_8h_1a8c21cf72e5cf412382ec1e20716b956f" compoundref="_l_w_m2_m_util_8h" startline="591">LWM2M_DYNAMIC_CHANGES_REPORT</references>
+      </memberdef>
+      <memberdef kind="function" id="_l_w_m2_m_object_humidity_8c_1a6a0de24da588de35e2e499147489c2fe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_serval___types_8h_1a473797d61ec6d5f5a4f91d1d8b56b198" kindref="member">retcode_t</ref></type>
+        <definition>static retcode_t ResetMinMaxValues</definition>
+        <argsstring>(Lwm2mSerializer_T *serializer_ptr, Lwm2mParser_T *parser_ptr)</argsstring>
+        <name>ResetMinMaxValues</name>
+        <param>
+          <type><ref refid="_serval___lwm2m_8h_1a0091953baee537959c00d97a217b6513" kindref="member">Lwm2mSerializer_T</ref> *</type>
+          <declname>serializer_ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="_serval___lwm2m_8h_1ac7b87d2b5c6ff0ea8311e2d7fe55d125" kindref="member">Lwm2mParser_T</ref> *</type>
+          <declname>parser_ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" line="85" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c" bodystart="109" bodyend="123"/>
+        <references refid="_l_w_m2_m_util_8h_1a1db61fdcc65892e699a1f8794ac711c8" compoundref="_l_w_m2_m_util_8h" startline="508">INIT_LWM2M_DYNAMIC_CHANGES</references>
+        <references refid="_b_l_e_s_w___alert_notification_release_notes_8txt_1ac9af130c71a5e5ccebd69f14d2d8ebfe" compoundref="_b_l_e_s_w___alert_notification_release_notes_8txt" startline="24">changes</references>
+        <references refid="_l_w_m2_m_util_8h_1a9e5b5fd28d4440a74868e1006d885909" compoundref="_l_w_m2_m_util_8h" startline="531">LWM2M_DYNAMIC_CHANGES_SET_FLOAT_VALUE</references>
+        <references refid="struct_l_w_m2_m_object_humidity_resource___s_1a3da99853e6071c413c105b1662085465" compoundref="_l_w_m2_m_object_humidity_8h" startline="65">LWM2MObjectHumidityResource_S::sensorValue</references>
+        <references refid="struct_lwm2m_resource___s_1a04b7f6cbb03a480706149683c5f17d9b">Lwm2mResource_S::data</references>
+        <references refid="struct_lwm2m_resource___s_1af900396d7b72ff2a7002e8befe8cf8f1" compoundref="_serval___lwm2m_8h" startline="348">Lwm2mResource_S::f</references>
+        <references refid="_l_w_m2_m_object_humidity_8c_1a3acdf9803fe27ba986425c338aae03b7" compoundref="_l_w_m2_m_object_humidity_8c" startline="71">started</references>
+        <references refid="_l_w_m2_m_util_8h_1a8c21cf72e5cf412382ec1e20716b956f" compoundref="_l_w_m2_m_util_8h" startline="591">LWM2M_DYNAMIC_CHANGES_REPORT</references>
+        <references refid="_serval___exceptions_8h_1a63c2b4e52d920a11ad698d49b6a47a80ab834a5bb2ce6d97c2831fe3d71103c14" compoundref="_serval___exceptions_8h" startline="123">RC_OK</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file provides the implementation of LWM2MObjectHumidity module. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>Licensee’s<sp/>application<sp/>development.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>Licensee’s<sp/>applications<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">*<sp/>Contributors:</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">*<sp/>Bosch<sp/>Software<sp/>Innovations<sp/>GmbH</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="comment">/*<sp/>module<sp/>includes<sp/>**********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>own<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_xdk_common_info_8h" kindref="compound">XdkCommonInfo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>BCDS_MODULE_ID<sp/><sp/></highlight><highlight class="comment">/*<sp/>Module<sp/>ID<sp/>define<sp/>before<sp/>including<sp/>Basics<sp/>package*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="_l_w_m2_m_object_humidity_8c_1abff8f3a204e79671b98fabaa652198c3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BCDS_MODULE_ID<sp/>XDK_COMMON_ID_LWM2MOBJECTHUMIDITY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>own<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_l_w_m2_m_objects_8h" kindref="compound">LWM2MObjects.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_l_w_m2_m_util_8h" kindref="compound">LWM2MUtil.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_l_w_m2_m_8h" kindref="compound">LWM2M.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>additional<sp/>interface<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_serval___clock_8h" kindref="compound">Serval_Clock.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_serval___exceptions_8h" kindref="compound">Serval_Exceptions.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_b_c_d_s___retcode_8h" kindref="compound">BCDS_Retcode.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_x_d_k___sensor_handle_8h" kindref="compound">XDK_SensorHandle.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>global<sp/>variables<sp/>*********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>local<sp/>variables<sp/>**********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">/*lint<sp/>-e(956)<sp/>const<sp/>?*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="_l_w_m2_m_object_humidity_8c_1a6ce381f0004a74ce9482ab3941747e59" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_lwm2m___u_r_i___path___s" kindref="compound">Lwm2m_URI_Path_T</ref><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1a6ce381f0004a74ce9482ab3941747e59" kindref="member">HumidityUriPath</ref><sp/>=<sp/>{<sp/><ref refid="_l_w_m2_m_objects_8h_1a36c5cf8225acc2b1260cb157f83e6b33" kindref="member">LWM2MOBJECTS_IX_HUMIDITY_0</ref>,<sp/><ref refid="_l_w_m2_m_objects_8h_1a36c5cf8225acc2b1260cb157f83e6b33" kindref="member">LWM2MOBJECTS_IX_HUMIDITY_0</ref>,<sp/>-1<sp/>};</highlight></codeline>
+<codeline lineno="71" refid="_l_w_m2_m_object_humidity_8c_1a3acdf9803fe27ba986425c338aae03b7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1a3acdf9803fe27ba986425c338aae03b7" kindref="member">started</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>constant<sp/>definitions<sp/>*****************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="_l_w_m2_m_object_humidity_8c_1a541edb7d77c452c84eb8bc459aa913ad" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HUMIDITY_RESOURCE_INDEX(res)<sp/>LWM2M_RESOURCES_INDEX(LWM2MObjectHumidityResources,<sp/>res)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="_l_w_m2_m_object_humidity_8c_1a6389113922372f8bb6db5c0609b5c2f1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLUSH_RESOURCES<sp/>Lwm2mReporting_multipleResourcesChanged(&amp;HumidityUriPath,<sp/>6,<sp/>\</highlight></codeline>
+<codeline lineno="77"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HUMIDITY_RESOURCE_INDEX(minRangeValue),\</highlight></codeline>
+<codeline lineno="78"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HUMIDITY_RESOURCE_INDEX(maxRangeValue),\</highlight></codeline>
+<codeline lineno="79"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HUMIDITY_RESOURCE_INDEX(units),\</highlight></codeline>
+<codeline lineno="80"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HUMIDITY_RESOURCE_INDEX(sensorValue),\</highlight></codeline>
+<codeline lineno="81"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HUMIDITY_RESOURCE_INDEX(minMeasuredValue),\</highlight></codeline>
+<codeline lineno="82"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HUMIDITY_RESOURCE_INDEX(maxMeasuredValue))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>local<sp/>functions<sp/>**********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_serval___types_8h_1a473797d61ec6d5f5a4f91d1d8b56b198" kindref="member">retcode_t</ref><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1a6a0de24da588de35e2e499147489c2fe" kindref="member">ResetMinMaxValues</ref>(<ref refid="_serval___lwm2m_8h_1a0091953baee537959c00d97a217b6513" kindref="member">Lwm2mSerializer_T</ref><sp/>*serializer_ptr,<sp/><ref refid="_serval___lwm2m_8h_1ac7b87d2b5c6ff0ea8311e2d7fe55d125" kindref="member">Lwm2mParser_T</ref><sp/>*parser_ptr);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1a961882bb60e0d79dbb64bf485432fa0b" kindref="member">LWM2MObjectHumidityInternalEnable</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_l_w_m2_m_l_w_m2_m_object_gyroscope___resource___s_1ae3aeae7a46fa4408c3da9a52b6c5cb05" kindref="member">minRangeValue</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_l_w_m2_m_l_w_m2_m_object_gyroscope___resource___s_1a35e1e4e64f0ec9a70a82c0051b97d158" kindref="member">maxRangeValue</ref>);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1acc38d15900e533caf5c6ef8bdc85d350" kindref="member">LWM2MObjectHumidityInternalDisable</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1aa04924c8ac987e7e133cfed8237fbbf6" kindref="member">LWM2MObjectHumidityInternalSetValue</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>sensorValue_prh);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>TODO<sp/>need<sp/>a<sp/>way<sp/>to<sp/>define<sp/>inactive<sp/>resources.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="_l_w_m2_m_object_humidity_8h_1a41e4a42fd5bfd24c6b987615d09c598e" refkind="member"><highlight class="normal"><ref refid="struct_l_w_m2_m_object_humidity_resource___s" kindref="compound">LWM2MObjectHumidityResource_T</ref><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1a41e4a42fd5bfd24c6b987615d09c598e" kindref="member">LWM2MObjectHumidityResources</ref><sp/>=</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>5601,<sp/><ref refid="_serval___lwm2m_8h_1ab5198d8bd971f4f93ae0c16601681cec" kindref="member">LWM2M_FLOAT</ref>(0.0F)<sp/>|<sp/><ref refid="_serval___lwm2m_8h_1a379b2a6273f9c4bd6e8579f3b249565a" kindref="member">LWM2M_READ_ONLY</ref><sp/>},<sp/></highlight><highlight class="comment">//<sp/>minMeassuredValue|R|Single|O|Float<sp/>|<sp/><sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>5602,<sp/><ref refid="_serval___lwm2m_8h_1ab5198d8bd971f4f93ae0c16601681cec" kindref="member">LWM2M_FLOAT</ref>(0.0F)<sp/>|<sp/><ref refid="_serval___lwm2m_8h_1a379b2a6273f9c4bd6e8579f3b249565a" kindref="member">LWM2M_READ_ONLY</ref><sp/>},<sp/></highlight><highlight class="comment">//<sp/>maxMeassuredValue|R|Single|O|Float<sp/>|<sp/><sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>5603,<sp/><ref refid="_serval___lwm2m_8h_1ab5198d8bd971f4f93ae0c16601681cec" kindref="member">LWM2M_FLOAT</ref>(0.0F)<sp/>|<sp/><ref refid="_serval___lwm2m_8h_1a379b2a6273f9c4bd6e8579f3b249565a" kindref="member">LWM2M_READ_ONLY</ref><sp/>},<sp/></highlight><highlight class="comment">//<sp/>minRangeValue<sp/><sp/><sp/><sp/>|R|Single|O|Float<sp/>|<sp/><sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>5604,<sp/><ref refid="_serval___lwm2m_8h_1ab5198d8bd971f4f93ae0c16601681cec" kindref="member">LWM2M_FLOAT</ref>(0.0F)<sp/>|<sp/><ref refid="_serval___lwm2m_8h_1a379b2a6273f9c4bd6e8579f3b249565a" kindref="member">LWM2M_READ_ONLY</ref><sp/>},<sp/></highlight><highlight class="comment">//<sp/>maxRangeValue<sp/><sp/><sp/><sp/>|R|Single|O|Float<sp/>|<sp/><sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>5605,<sp/><ref refid="_serval___lwm2m_8h_1ac6067e91752fd2d1ba06764c73d2fedf" kindref="member">LWM2M_FUNCTION</ref>(<ref refid="_l_w_m2_m_object_humidity_8c_1a6a0de24da588de35e2e499147489c2fe" kindref="member">ResetMinMaxValues</ref>)<sp/>},<sp/></highlight><highlight class="comment">//<sp/>resetMinMaxValue<sp/>|E|Single|O|<sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>5700,<sp/><ref refid="_serval___lwm2m_8h_1ab5198d8bd971f4f93ae0c16601681cec" kindref="member">LWM2M_FLOAT</ref>(0.0F)<sp/>|<sp/><ref refid="_serval___lwm2m_8h_1a379b2a6273f9c4bd6e8579f3b249565a" kindref="member">LWM2M_READ_ONLY</ref><sp/>},<sp/></highlight><highlight class="comment">//<sp/>sensorValue<sp/><sp/><sp/><sp/><sp/><sp/>|R|Single|M|Float<sp/>|<sp/><sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>5701,<sp/><ref refid="_serval___lwm2m_8h_1a789ff08d1972a37ec3c7d1901a4941d2" kindref="member">LWM2M_STRING_RO</ref>(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>},<sp/></highlight><highlight class="comment">//<sp/>units<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|R|Single|O|String|<sp/><sp/><sp/>|see:http://unitsofmeasure.org/ucum.html</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="comment">/*lint<sp/>-e(956)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="_l_w_m2_m_object_humidity_8c_1a25b0783812c1afde020276298a30a0d0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1a25b0783812c1afde020276298a30a0d0" kindref="member">MinMaxInit</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="_l_w_m2_m_object_humidity_8c_1a1f9759529ee6aa758e346c03caf82d08" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_lwm2m___pair___resource___update___t" kindref="compound">Lwm2m_Pair_Resource_Update_T</ref><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1a1f9759529ee6aa758e346c03caf82d08" kindref="member">AsyncCall_Enabler</ref><sp/>=<sp/>{<sp/>.<ref refid="struct_lwm2m___pair___resource___update___t_1aa80323eacd6700824f4ca2108d329af6" kindref="member">set_pair</ref><sp/>=<sp/><ref refid="_l_w_m2_m_object_humidity_8c_1a961882bb60e0d79dbb64bf485432fa0b" kindref="member">LWM2MObjectHumidityInternalEnable</ref>,<sp/>.mutex<sp/>=<sp/><ref refid="_l_w_m2_m_util_8h_1abfe6ac33288a68d102f897dc8bef7da4" kindref="member">LWM2M_MUTEX_INIT_VALUE</ref><sp/>};</highlight></codeline>
+<codeline lineno="106" refid="_l_w_m2_m_object_humidity_8c_1a177f399f4a2e7cadec6fe94188781556" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_lwm2m___call___t" kindref="compound">Lwm2m_Call_T</ref><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1a177f399f4a2e7cadec6fe94188781556" kindref="member">AsyncCall_Disabler</ref><sp/>=<sp/>{<sp/>.<ref refid="struct_lwm2m___call___t_1a6cd54eeb6377baa353aa2f4d8d6af3bc" kindref="member">call</ref><sp/>=<sp/><ref refid="_l_w_m2_m_object_humidity_8c_1acc38d15900e533caf5c6ef8bdc85d350" kindref="member">LWM2MObjectHumidityInternalDisable</ref><sp/>};</highlight></codeline>
+<codeline lineno="107" refid="_l_w_m2_m_object_humidity_8c_1a62398de1aae0b637cae5fda1e016dd77" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_lwm2m___single___resource___update___t" kindref="compound">Lwm2m_Single_Resource_Update_T</ref><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1a62398de1aae0b637cae5fda1e016dd77" kindref="member">AsyncCall_Updater</ref><sp/>=<sp/>{<sp/>.<ref refid="struct_lwm2m___single___resource___update___t_1a9c53a348798b76c54dfabc695a36ddbb" kindref="member">set_single</ref><sp/>=<sp/><ref refid="_l_w_m2_m_object_humidity_8c_1aa04924c8ac987e7e133cfed8237fbbf6" kindref="member">LWM2MObjectHumidityInternalSetValue</ref>,<sp/>.mutex<sp/>=<sp/><ref refid="_l_w_m2_m_util_8h_1abfe6ac33288a68d102f897dc8bef7da4" kindref="member">LWM2M_MUTEX_INIT_VALUE</ref><sp/>};</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="_l_w_m2_m_object_humidity_8c_1a6a0de24da588de35e2e499147489c2fe" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_serval___types_8h_1a473797d61ec6d5f5a4f91d1d8b56b198" kindref="member">retcode_t</ref><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1a6a0de24da588de35e2e499147489c2fe" kindref="member">ResetMinMaxValues</ref>(<ref refid="_serval___lwm2m_8h_1a0091953baee537959c00d97a217b6513" kindref="member">Lwm2mSerializer_T</ref><sp/>*serializer_ptr,<sp/><ref refid="_serval___lwm2m_8h_1ac7b87d2b5c6ff0ea8311e2d7fe55d125" kindref="member">Lwm2mParser_T</ref><sp/>*parser_ptr)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)<sp/>parser_ptr;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)<sp/>serializer_ptr;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_l_w_m2_m_util_8h_1a1db61fdcc65892e699a1f8794ac711c8" kindref="member">INIT_LWM2M_DYNAMIC_CHANGES</ref>(<ref refid="_b_l_e_s_w___alert_notification_release_notes_8txt_1ac9af130c71a5e5ccebd69f14d2d8ebfe" kindref="member">changes</ref>);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_l_w_m2_m_util_8h_1a9e5b5fd28d4440a74868e1006d885909" kindref="member">LWM2M_DYNAMIC_CHANGES_SET_FLOAT_VALUE</ref>(<ref refid="_b_l_e_s_w___alert_notification_release_notes_8txt_1ac9af130c71a5e5ccebd69f14d2d8ebfe" kindref="member">changes</ref>,<sp/>LWM2MObjectHumidityResources,<sp/>minMeasuredValue,<sp/>LWM2MObjectHumidityResources.<ref refid="struct_l_w_m2_m_object_humidity_resource___s_1a3da99853e6071c413c105b1662085465" kindref="member">sensorValue</ref>.<ref refid="struct_lwm2m_resource___s_1a04b7f6cbb03a480706149683c5f17d9b" kindref="member">data</ref>.<ref refid="struct_lwm2m_resource___s_1af900396d7b72ff2a7002e8befe8cf8f1" kindref="member">f</ref>);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_l_w_m2_m_util_8h_1a9e5b5fd28d4440a74868e1006d885909" kindref="member">LWM2M_DYNAMIC_CHANGES_SET_FLOAT_VALUE</ref>(<ref refid="_b_l_e_s_w___alert_notification_release_notes_8txt_1ac9af130c71a5e5ccebd69f14d2d8ebfe" kindref="member">changes</ref>,<sp/>LWM2MObjectHumidityResources,<sp/>maxMeasuredValue,<sp/>LWM2MObjectHumidityResources.<ref refid="struct_l_w_m2_m_object_humidity_resource___s_1a3da99853e6071c413c105b1662085465" kindref="member">sensorValue</ref>.<ref refid="struct_lwm2m_resource___s_1a04b7f6cbb03a480706149683c5f17d9b" kindref="member">data</ref>.<ref refid="struct_lwm2m_resource___s_1af900396d7b72ff2a7002e8befe8cf8f1" kindref="member">f</ref>);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_l_w_m2_m_object_humidity_8c_1a3acdf9803fe27ba986425c338aae03b7" kindref="member">started</ref>)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_l_w_m2_m_util_8h_1a8c21cf72e5cf412382ec1e20716b956f" kindref="member">LWM2M_DYNAMIC_CHANGES_REPORT</ref>(<ref refid="_b_l_e_s_w___alert_notification_release_notes_8txt_1ac9af130c71a5e5ccebd69f14d2d8ebfe" kindref="member">changes</ref>,<sp/>HumidityUriPath);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Humidity:<sp/>reset<sp/>min/max<sp/>Values<sp/>to<sp/>current\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="_serval___exceptions_8h_1a63c2b4e52d920a11ad698d49b6a47a80ab834a5bb2ce6d97c2831fe3d71103c14" kindref="member">RC_OK</ref>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="_l_w_m2_m_object_humidity_8c_1a961882bb60e0d79dbb64bf485432fa0b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1a961882bb60e0d79dbb64bf485432fa0b" kindref="member">LWM2MObjectHumidityInternalEnable</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_l_w_m2_m_l_w_m2_m_object_gyroscope___resource___s_1ae3aeae7a46fa4408c3da9a52b6c5cb05" kindref="member">minRangeValue</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_l_w_m2_m_l_w_m2_m_object_gyroscope___resource___s_1a35e1e4e64f0ec9a70a82c0051b97d158" kindref="member">maxRangeValue</ref>)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1a3acdf9803fe27ba986425c338aae03b7" kindref="member">started</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>LWM2MObjectHumidityResources.<ref refid="struct_l_w_m2_m_object_humidity_resource___s_1aeea01005d1a659cd2ebe5246efeb3cfe" kindref="member">units</ref>.<ref refid="struct_lwm2m_resource___s_1a04b7f6cbb03a480706149683c5f17d9b" kindref="member">data</ref>.<ref refid="struct_lwm2m_resource___s_1ab51cd24d34f6509eafb5e059f4c7d10e" kindref="member">s</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;%&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>LWM2MObjectHumidityResources.<ref refid="struct_l_w_m2_m_object_humidity_resource___s_1ae3aeae7a46fa4408c3da9a52b6c5cb05" kindref="member">minRangeValue</ref>.<ref refid="struct_lwm2m_resource___s_1a04b7f6cbb03a480706149683c5f17d9b" kindref="member">data</ref>.<ref refid="struct_lwm2m_resource___s_1af900396d7b72ff2a7002e8befe8cf8f1" kindref="member">f</ref><sp/>=<sp/><ref refid="struct_l_w_m2_m_l_w_m2_m_object_gyroscope___resource___s_1ae3aeae7a46fa4408c3da9a52b6c5cb05" kindref="member">minRangeValue</ref>;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>LWM2MObjectHumidityResources.<ref refid="struct_l_w_m2_m_object_humidity_resource___s_1a35e1e4e64f0ec9a70a82c0051b97d158" kindref="member">maxRangeValue</ref>.<ref refid="struct_lwm2m_resource___s_1a04b7f6cbb03a480706149683c5f17d9b" kindref="member">data</ref>.<ref refid="struct_lwm2m_resource___s_1af900396d7b72ff2a7002e8befe8cf8f1" kindref="member">f</ref><sp/>=<sp/><ref refid="struct_l_w_m2_m_l_w_m2_m_object_gyroscope___resource___s_1a35e1e4e64f0ec9a70a82c0051b97d158" kindref="member">maxRangeValue</ref>;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>LWM2MObjectHumidityResources.<ref refid="struct_l_w_m2_m_object_humidity_resource___s_1a4fffd9aaf75a0cb5c6fb30231c202e3d" kindref="member">minMeasuredValue</ref>.<ref refid="struct_lwm2m_resource___s_1a04b7f6cbb03a480706149683c5f17d9b" kindref="member">data</ref>.<ref refid="struct_lwm2m_resource___s_1af900396d7b72ff2a7002e8befe8cf8f1" kindref="member">f</ref><sp/>=<sp/><ref refid="struct_l_w_m2_m_l_w_m2_m_object_gyroscope___resource___s_1ae3aeae7a46fa4408c3da9a52b6c5cb05" kindref="member">minRangeValue</ref>;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>LWM2MObjectHumidityResources.<ref refid="struct_l_w_m2_m_object_humidity_resource___s_1a56f531252ee02d8d2e2fcfd40587a2ca" kindref="member">maxMeasuredValue</ref>.<ref refid="struct_lwm2m_resource___s_1a04b7f6cbb03a480706149683c5f17d9b" kindref="member">data</ref>.<ref refid="struct_lwm2m_resource___s_1af900396d7b72ff2a7002e8befe8cf8f1" kindref="member">f</ref><sp/>=<sp/><ref refid="struct_l_w_m2_m_l_w_m2_m_object_gyroscope___resource___s_1ae3aeae7a46fa4408c3da9a52b6c5cb05" kindref="member">minRangeValue</ref>;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>LWM2MObjectHumidityResources.<ref refid="struct_l_w_m2_m_object_humidity_resource___s_1a3da99853e6071c413c105b1662085465" kindref="member">sensorValue</ref>.<ref refid="struct_lwm2m_resource___s_1a04b7f6cbb03a480706149683c5f17d9b" kindref="member">data</ref>.<ref refid="struct_lwm2m_resource___s_1af900396d7b72ff2a7002e8befe8cf8f1" kindref="member">f</ref><sp/>=<sp/><ref refid="struct_l_w_m2_m_l_w_m2_m_object_gyroscope___resource___s_1ae3aeae7a46fa4408c3da9a52b6c5cb05" kindref="member">minRangeValue</ref>;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1a25b0783812c1afde020276298a30a0d0" kindref="member">MinMaxInit</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*lint<sp/>-e(534)<sp/>purposefully<sp/>suppressing<sp/>the<sp/>warning:Ignoring<sp/>return<sp/>value<sp/>of<sp/>function,since<sp/>in<sp/>CONF<sp/>mode<sp/>this<sp/>may<sp/>fail<sp/>many<sp/>times<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1a6389113922372f8bb6db5c0609b5c2f1" kindref="member">FLUSH_RESOURCES</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="_l_w_m2_m_object_humidity_8c_1acc38d15900e533caf5c6ef8bdc85d350" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1acc38d15900e533caf5c6ef8bdc85d350" kindref="member">LWM2MObjectHumidityInternalDisable</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1a3acdf9803fe27ba986425c338aae03b7" kindref="member">started</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>LWM2MObjectHumidityResources.<ref refid="struct_l_w_m2_m_object_humidity_resource___s_1aeea01005d1a659cd2ebe5246efeb3cfe" kindref="member">units</ref>.<ref refid="struct_lwm2m_resource___s_1a04b7f6cbb03a480706149683c5f17d9b" kindref="member">data</ref>.<ref refid="struct_lwm2m_resource___s_1ab51cd24d34f6509eafb5e059f4c7d10e" kindref="member">s</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>LWM2MObjectHumidityResources.<ref refid="struct_l_w_m2_m_object_humidity_resource___s_1ae3aeae7a46fa4408c3da9a52b6c5cb05" kindref="member">minRangeValue</ref>.<ref refid="struct_lwm2m_resource___s_1a04b7f6cbb03a480706149683c5f17d9b" kindref="member">data</ref>.<ref refid="struct_lwm2m_resource___s_1af900396d7b72ff2a7002e8befe8cf8f1" kindref="member">f</ref><sp/>=<sp/>0.0F;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>LWM2MObjectHumidityResources.<ref refid="struct_l_w_m2_m_object_humidity_resource___s_1a35e1e4e64f0ec9a70a82c0051b97d158" kindref="member">maxRangeValue</ref>.<ref refid="struct_lwm2m_resource___s_1a04b7f6cbb03a480706149683c5f17d9b" kindref="member">data</ref>.<ref refid="struct_lwm2m_resource___s_1af900396d7b72ff2a7002e8befe8cf8f1" kindref="member">f</ref><sp/>=<sp/>0.0F;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>LWM2MObjectHumidityResources.<ref refid="struct_l_w_m2_m_object_humidity_resource___s_1a4fffd9aaf75a0cb5c6fb30231c202e3d" kindref="member">minMeasuredValue</ref>.<ref refid="struct_lwm2m_resource___s_1a04b7f6cbb03a480706149683c5f17d9b" kindref="member">data</ref>.<ref refid="struct_lwm2m_resource___s_1af900396d7b72ff2a7002e8befe8cf8f1" kindref="member">f</ref><sp/>=<sp/>0.0F;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>LWM2MObjectHumidityResources.<ref refid="struct_l_w_m2_m_object_humidity_resource___s_1a56f531252ee02d8d2e2fcfd40587a2ca" kindref="member">maxMeasuredValue</ref>.<ref refid="struct_lwm2m_resource___s_1a04b7f6cbb03a480706149683c5f17d9b" kindref="member">data</ref>.<ref refid="struct_lwm2m_resource___s_1af900396d7b72ff2a7002e8befe8cf8f1" kindref="member">f</ref><sp/>=<sp/>0.0F;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>LWM2MObjectHumidityResources.<ref refid="struct_l_w_m2_m_object_humidity_resource___s_1a3da99853e6071c413c105b1662085465" kindref="member">sensorValue</ref>.<ref refid="struct_lwm2m_resource___s_1a04b7f6cbb03a480706149683c5f17d9b" kindref="member">data</ref>.<ref refid="struct_lwm2m_resource___s_1af900396d7b72ff2a7002e8befe8cf8f1" kindref="member">f</ref><sp/>=<sp/>0.0F;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1a25b0783812c1afde020276298a30a0d0" kindref="member">MinMaxInit</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*lint<sp/>-e(534)<sp/>purposefully<sp/>suppressing<sp/>the<sp/>warning:Ignoring<sp/>return<sp/>value<sp/>of<sp/>function,since<sp/>in<sp/>CONF<sp/>mode<sp/>this<sp/>may<sp/>fail<sp/>many<sp/>times<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1a6389113922372f8bb6db5c0609b5c2f1" kindref="member">FLUSH_RESOURCES</ref>;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="_l_w_m2_m_object_humidity_8c_1aa04924c8ac987e7e133cfed8237fbbf6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1aa04924c8ac987e7e133cfed8237fbbf6" kindref="member">LWM2MObjectHumidityInternalSetValue</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>sensorValue_prh)</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_l_w_m2_m_util_8h_1a1db61fdcc65892e699a1f8794ac711c8" kindref="member">INIT_LWM2M_DYNAMIC_CHANGES</ref>(<ref refid="_b_l_e_s_w___alert_notification_release_notes_8txt_1ac9af130c71a5e5ccebd69f14d2d8ebfe" kindref="member">changes</ref>);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_l_w_m2_m_object_humidity_8c_1a25b0783812c1afde020276298a30a0d0" kindref="member">MinMaxInit</ref>)</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_l_w_m2_m_util_8h_1a9e5b5fd28d4440a74868e1006d885909" kindref="member">LWM2M_DYNAMIC_CHANGES_SET_FLOAT_VALUE</ref>(<ref refid="_b_l_e_s_w___alert_notification_release_notes_8txt_1ac9af130c71a5e5ccebd69f14d2d8ebfe" kindref="member">changes</ref>,<sp/>LWM2MObjectHumidityResources,<sp/>sensorValue,<sp/>sensorValue_prh))</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_l_w_m2_m_util_8h_1a1b53599bc44c57dec97fd52723c24f18" kindref="member">LWM2M_DYNAMIC_CHANGES_SET_FLOAT_MIN_VALUE</ref>(<ref refid="_b_l_e_s_w___alert_notification_release_notes_8txt_1ac9af130c71a5e5ccebd69f14d2d8ebfe" kindref="member">changes</ref>,<sp/>LWM2MObjectHumidityResources,<sp/>minMeasuredValue,<sp/>sensorValue_prh);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_l_w_m2_m_util_8h_1a45b29fea4f4dfa04278cdb8e4769ec1b" kindref="member">LWM2M_DYNAMIC_CHANGES_SET_FLOAT_MAX_VALUE</ref>(<ref refid="_b_l_e_s_w___alert_notification_release_notes_8txt_1ac9af130c71a5e5ccebd69f14d2d8ebfe" kindref="member">changes</ref>,<sp/>LWM2MObjectHumidityResources,<sp/>maxMeasuredValue,<sp/>sensorValue_prh);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_l_w_m2_m_object_humidity_8c_1a3acdf9803fe27ba986425c338aae03b7" kindref="member">started</ref>)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_l_w_m2_m_util_8h_1a8c21cf72e5cf412382ec1e20716b956f" kindref="member">LWM2M_DYNAMIC_CHANGES_REPORT</ref>(<ref refid="_b_l_e_s_w___alert_notification_release_notes_8txt_1ac9af130c71a5e5ccebd69f14d2d8ebfe" kindref="member">changes</ref>,<sp/>HumidityUriPath);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1a25b0783812c1afde020276298a30a0d0" kindref="member">MinMaxInit</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_l_w_m2_m_util_8h_1a9e5b5fd28d4440a74868e1006d885909" kindref="member">LWM2M_DYNAMIC_CHANGES_SET_FLOAT_VALUE</ref>(<ref refid="_b_l_e_s_w___alert_notification_release_notes_8txt_1ac9af130c71a5e5ccebd69f14d2d8ebfe" kindref="member">changes</ref>,<sp/>LWM2MObjectHumidityResources,<sp/>sensorValue,<sp/>sensorValue_prh);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_l_w_m2_m_util_8h_1a9e5b5fd28d4440a74868e1006d885909" kindref="member">LWM2M_DYNAMIC_CHANGES_SET_FLOAT_VALUE</ref>(<ref refid="_b_l_e_s_w___alert_notification_release_notes_8txt_1ac9af130c71a5e5ccebd69f14d2d8ebfe" kindref="member">changes</ref>,<sp/>LWM2MObjectHumidityResources,<sp/>minMeasuredValue,<sp/>sensorValue_prh);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_l_w_m2_m_util_8h_1a9e5b5fd28d4440a74868e1006d885909" kindref="member">LWM2M_DYNAMIC_CHANGES_SET_FLOAT_VALUE</ref>(<ref refid="_b_l_e_s_w___alert_notification_release_notes_8txt_1ac9af130c71a5e5ccebd69f14d2d8ebfe" kindref="member">changes</ref>,<sp/>LWM2MObjectHumidityResources,<sp/>maxMeasuredValue,<sp/>sensorValue_prh);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_l_w_m2_m_object_humidity_8c_1a3acdf9803fe27ba986425c338aae03b7" kindref="member">started</ref>)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_l_w_m2_m_util_8h_1a8c21cf72e5cf412382ec1e20716b956f" kindref="member">LWM2M_DYNAMIC_CHANGES_REPORT</ref>(<ref refid="_b_l_e_s_w___alert_notification_release_notes_8txt_1ac9af130c71a5e5ccebd69f14d2d8ebfe" kindref="member">changes</ref>,<sp/>HumidityUriPath);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>global<sp/>functions<sp/>*********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="_l_w_m2_m_object_humidity_8h_1ab6861a94b27234c71a38cef433158a15" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1ab6861a94b27234c71a38cef433158a15" kindref="member">LWM2MObjectHumidity_Init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="182"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1a3acdf9803fe27ba986425c338aae03b7" kindref="member">started</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_l_w_m2_m_util_8h_1abba58cbf10f2d30a6ddddfeeda732299" kindref="member">LWM2M_MUTEX_CREATE</ref>(AsyncCall_Updater.mutex);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>AsyncCall_Enabler.mutex<sp/>=<sp/>AsyncCall_Updater.mutex;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189" refid="_l_w_m2_m_object_humidity_8h_1a8e58b09a163628c18921eddd2f2822e3" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1a8e58b09a163628c18921eddd2f2822e3" kindref="member">LWM2MObjectHumidity_Enable</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_l_w_m2_m_l_w_m2_m_object_gyroscope___resource___s_1ae3aeae7a46fa4408c3da9a52b6c5cb05" kindref="member">minRangeValue</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_l_w_m2_m_l_w_m2_m_object_gyroscope___resource___s_1a35e1e4e64f0ec9a70a82c0051b97d158" kindref="member">maxRangeValue</ref>)</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_l_w_m2_m_util_8c_1abcf35896cccc0800860339e9e7cc79fa" kindref="member">LWM2MUtil_UpdatePairResources</ref>(minRangeValue,<sp/>maxRangeValue,<sp/>&amp;AsyncCall_Enabler);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195" refid="_l_w_m2_m_object_humidity_8h_1a0dc12052c04ca137d0f13c533129af1d" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1a0dc12052c04ca137d0f13c533129af1d" kindref="member">LWM2MObjectHumidity_Disable</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_l_w_m2_m_util_8c_1a008c4225a368f8897d018b51e2f6fdca" kindref="member">LWM2MUtil_Schedule</ref>(&amp;AsyncCall_Disabler);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201" refid="_l_w_m2_m_object_humidity_8h_1a3fefe1b490a3a737f92efe0fdbe60d21" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_l_w_m2_m_object_humidity_8c_1a28daacb2d136604c4076b4f10b93942b" kindref="member">LWM2MObjectHumidity_SetValue</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>sensorValue_prh)</highlight></codeline>
+<codeline lineno="202"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_l_w_m2_m_util_8c_1ae1d28e0c67d65e52b4e20ce43c33affb" kindref="member">LWM2MUtil_UpdateSingleResource</ref>(sensorValue_prh,<sp/>&amp;AsyncCall_Updater);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectHumidity.c"/>
+  </compounddef>
+</doxygen>

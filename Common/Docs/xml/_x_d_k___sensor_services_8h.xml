@@ -1,0 +1,624 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_x_d_k___sensor_services_8h" kind="file">
+    <compoundname>XDK_SensorServices.h</compoundname>
+    <includes refid="_b_c_d_s___basics_8h" local="yes">BCDS_Basics.h</includes>
+    <includedby refid="_x_d_k___b_l_e_8h" local="yes">SDK/xdk110/Common/include/Connectivity/XDK_BLE.h</includedby>
+    <includedby refid="_sensor_services_8h" local="yes">SDK/xdk110/Common/source/Connectivity/BLE/SensorServices.h</includedby>
+    <includedby refid="_b_c_d_s___sensor_services_8h" local="yes">SDK/xdk110/Common/legacy/include/BLE/BCDS_SensorServices.h</includedby>
+    <incdepgraph>
+      <node id="23164">
+        <label>stdbool.h</label>
+      </node>
+      <node id="23163">
+        <label>stdint.h</label>
+      </node>
+      <node id="23166">
+        <label>stdlib.h</label>
+      </node>
+      <node id="23165">
+        <label>string.h</label>
+      </node>
+      <node id="23162">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="23163" relation="include">
+        </childnode>
+        <childnode refid="23164" relation="include">
+        </childnode>
+        <childnode refid="23165" relation="include">
+        </childnode>
+        <childnode refid="23166" relation="include">
+        </childnode>
+      </node>
+      <node id="23161">
+        <label>SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h</label>
+        <link refid="XDK_SensorServices.h"/>
+        <childnode refid="23162" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="23176">
+        <label>SDK/xdk110/Common/legacy/include/BLE/BCDS_SensorServices.h</label>
+        <link refid="_b_c_d_s___sensor_services_8h"/>
+        <childnode refid="23168" relation="include">
+        </childnode>
+      </node>
+      <node id="23170">
+        <label>SDK/xdk110/Common/source/Connectivity/BLE/BleDeviceInfoService.c</label>
+        <link refid="_ble_device_info_service_8c"/>
+      </node>
+      <node id="23169">
+        <label>SDK/xdk110/Common/source/Connectivity/BLE/BleDeviceInfoService.h</label>
+        <link refid="_ble_device_info_service_8h"/>
+        <childnode refid="23170" relation="include">
+        </childnode>
+      </node>
+      <node id="23168">
+        <label>SDK/xdk110/Common/include/Connectivity/XDK_BLE.h</label>
+        <link refid="_x_d_k___b_l_e_8h"/>
+        <childnode refid="23169" relation="include">
+        </childnode>
+        <childnode refid="23171" relation="include">
+        </childnode>
+        <childnode refid="23172" relation="include">
+        </childnode>
+        <childnode refid="23173" relation="include">
+        </childnode>
+      </node>
+      <node id="23172">
+        <label>SDK/xdk110/Apps/SendAccelerometerDataOverBle/source/AppController.c</label>
+        <link refid="_send_accelerometer_data_over_ble_2source_2_app_controller_8c"/>
+      </node>
+      <node id="23175">
+        <label>SDK/xdk110/Common/source/Connectivity/BLE/SensorServices.c</label>
+        <link refid="_sensor_services_8c"/>
+      </node>
+      <node id="23174">
+        <label>SDK/xdk110/Common/source/Connectivity/BLE/SensorServices.h</label>
+        <link refid="_sensor_services_8h"/>
+        <childnode refid="23175" relation="include">
+        </childnode>
+      </node>
+      <node id="23167">
+        <label>SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h</label>
+        <link refid="XDK_SensorServices.h"/>
+        <childnode refid="23168" relation="include">
+        </childnode>
+        <childnode refid="23174" relation="include">
+        </childnode>
+        <childnode refid="23176" relation="include">
+        </childnode>
+      </node>
+      <node id="23173">
+        <label>SDK/xdk110/Apps/VirtualXdkDemo/source/AppController.c</label>
+        <link refid="_virtual_xdk_demo_2source_2_app_controller_8c"/>
+      </node>
+      <node id="23171">
+        <label>SDK/xdk110/Apps/SendAccelDataOverUdpAndBle/source/AppController.c</label>
+        <link refid="_send_accel_data_over_udp_and_ble_2source_2_app_controller_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_sensor_services___info___s" prot="public">SensorServices_Info_S</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___b_l_e_1ga89c5cd2f2d2364066df6ee10bc0a596d" prot="public" static="no">
+        <name>SensorService_Type_E</name>
+        <enumvalue id="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596da1ccfa700106d376ec62a1946ee1e2e40" prot="public">
+          <name>BLE_SENSOR_ACCELEROMETER</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>accelerometer sensor service </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596dabb4f4f3731829839336a26a4aa2ed7b6" prot="public">
+          <name>BLE_SENSOR_GYRO</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>gyro sensor service </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596da7768667a8a9f2745e686ac0e35651493" prot="public">
+          <name>BLE_SENSOR_LIGHT</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>light sensor service </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596da10f1ea2b13287ef69744b0b123238f82" prot="public">
+          <name>BLE_SENSOR_NOISE</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>noise sensor service </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596daa40625be06974096309d0446c23e8ff2" prot="public">
+          <name>BLE_SENSOR_MAGNETOMETER</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>magnetometer sensor service </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596daa4f38c6a497e86153cc599e97e97412a" prot="public">
+          <name>BLE_SENSOR_ENVIRONMENTAL</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>environmental sensor service </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596dacda1c63fffe907365de1e2681d1bdb3d" prot="public">
+          <name>BLE_HIGH_DATA_RATE</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>bidirectional raw data service </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596da822228c7383d0e76fb7ac0a48ab39970" prot="public">
+          <name>BLE_CONTROL_NODE</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>control service </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596da3de94633bdb4dfeef58462cb5b7e2810" prot="public">
+          <name>BLE_SENSOR_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Maximum limit for BLE Data Exchange service </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Typedef to represent the sensor service types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" line="64" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" bodystart="63" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___b_l_e_1gabe8357c0e98c7166e88b4243c426a242" prot="public" static="no">
+        <name>SensorServices_EnvironmentalType_E</name>
+        <enumvalue id="group___b_l_e_1ggabe8357c0e98c7166e88b4243c426a242a1254d92c2ed27738a04cc83bb787ed25" prot="public">
+          <name>SENSOR_ENVIRONMENTAL_PRESSURE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>pressure sensor </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_l_e_1ggabe8357c0e98c7166e88b4243c426a242abb25e356fdda8382d6e323ee40a4865a" prot="public">
+          <name>SENSOR_ENVIRONMENTAL_TEMPERATURE</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>temperature sensor </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_l_e_1ggabe8357c0e98c7166e88b4243c426a242ae2f0a708e60ac8e7f076c0ef94df0c52" prot="public">
+          <name>SENSOR_ENVIRONMENTAL_HUMIDITY</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>humidity sensor </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration to represent the environmental service characteristics. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" line="118" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" bodystart="117" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___b_l_e_1ga1e1f269bfda13df3dbc468d723404820" prot="public" static="no">
+        <name>SensorServices_HighDataRateType_E</name>
+        <enumvalue id="group___b_l_e_1gga1e1f269bfda13df3dbc468d723404820a2e92d4d8b2c2cd2a430aa687551c2a44" prot="public">
+          <name>HIGH_DATA_RATE_HIGH_PRIO</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>high priority array </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_l_e_1gga1e1f269bfda13df3dbc468d723404820a84e032bd8187fce54dd4b82ea8fb6b5c" prot="public">
+          <name>HIGH_DATA_RATE_LOW_PRIO</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>low priority array </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_l_e_1gga1e1f269bfda13df3dbc468d723404820a40ae339461d4755aad06682c1c3cf95d" prot="public">
+          <name>HIGH_DATA_RATE_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration to represent the high data rate service characteristics. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" line="133" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" bodystart="132" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___b_l_e_1gaaa164db02ca8bd9e3ae5e0c106c43689" prot="public" static="no">
+        <name>SensorServices_MagnetometerType_E</name>
+        <enumvalue id="group___b_l_e_1ggaaa164db02ca8bd9e3ae5e0c106c43689a3d427341722119652b29046d3fdf3496" prot="public">
+          <name>SENSOR_MAGNETOMETER_AXIS_X</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>X axis </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_l_e_1ggaaa164db02ca8bd9e3ae5e0c106c43689a4274ed9b77031cd80c6fd04edcd71e31" prot="public">
+          <name>SENSOR_MAGNETOMETER_AXIS_Y</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>X axis </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_l_e_1ggaaa164db02ca8bd9e3ae5e0c106c43689ab926c9a90125427fad4256336ee92667" prot="public">
+          <name>SENSOR_MAGNETOMETER_AXIS_Z</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Z axis </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_l_e_1ggaaa164db02ca8bd9e3ae5e0c106c43689ae780db95b3941d34379a92fc4321a02b" prot="public">
+          <name>SENSOR_MAGNETOMETER_RESISTANCE</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>resistance </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_l_e_1ggaaa164db02ca8bd9e3ae5e0c106c43689a75b65ddeb2419a1ef4b12123a0f49f4a" prot="public">
+          <name>SENSOR_MAGNETOMETER_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration to represent the magnetometer service characteristics. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" line="101" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" bodystart="100" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___b_l_e_1ga0fb6adf1c87af1d67397edb4ed68638b" prot="public" static="no">
+        <name>SensorServices_SensorAxisType_E</name>
+        <enumvalue id="group___b_l_e_1gga0fb6adf1c87af1d67397edb4ed68638ba8e8a6ca701ce47f5321b1e7fda17471c" prot="public">
+          <name>SENSOR_AXIS_X</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>X axis </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_l_e_1gga0fb6adf1c87af1d67397edb4ed68638baf9282b1d012afca3866629ccb52db94a" prot="public">
+          <name>SENSOR_AXIS_Y</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Y axis </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_l_e_1gga0fb6adf1c87af1d67397edb4ed68638ba00b9d49450b444641f63fc9fd69e0f34" prot="public">
+          <name>SENSOR_AXIS_Z</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Z axis </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_l_e_1gga0fb6adf1c87af1d67397edb4ed68638bac1a9756b2ec007af49f7c55b96501ad3" prot="public">
+          <name>SENSOR_AXIS_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration to represent the sensor axis types for accelerometer and gyro services. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" line="85" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" bodystart="84" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___b_l_e_1ga4b8c7fe3f78ca570a62f063cbb6a9252" prot="public" static="no">
+        <name>SensorServices_SensorControlNode_E</name>
+        <enumvalue id="group___b_l_e_1gga4b8c7fe3f78ca570a62f063cbb6a9252abf6ec2fcd9ddee5db1ac00ae84489c2c" prot="public">
+          <name>CONTROL_NODE_START_SAMPLING</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>start sampling </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_l_e_1gga4b8c7fe3f78ca570a62f063cbb6a9252ae2e316d0bbf8b518c7efda9e548c469b" prot="public">
+          <name>CONTROL_NODE_CHANGE_SAMPLING_RATE</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>change sampling rate </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_l_e_1gga4b8c7fe3f78ca570a62f063cbb6a9252a163cd4553241c6d08b4c4657fe6b476c" prot="public">
+          <name>CONTROL_NODE_REBOOT</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>reboot </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_l_e_1gga4b8c7fe3f78ca570a62f063cbb6a9252a0eca2080aee16b30433d9ceaffd4f4e3" prot="public">
+          <name>CONTROL_NODE_GET_FW_VERSION</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>get firmware version </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_l_e_1gga4b8c7fe3f78ca570a62f063cbb6a9252a600c4ec1140347121972964036a9000c" prot="public">
+          <name>CONTROL_NODE_USE_SENSOR_FUSION</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>use sensor fusion </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_l_e_1gga4b8c7fe3f78ca570a62f063cbb6a9252a9ebab72cddc7d8c2f18322dcbd8410a9" prot="public">
+          <name>CONTROL_NODE_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration to control the nodes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" line="148" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" bodystart="147" bodyend="155"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___b_l_e_1gabb2e8d5ef990ac216807396b587e3bb0" prot="public" static="no">
+        <type>enum <ref refid="group___b_l_e_1ga89c5cd2f2d2364066df6ee10bc0a596d" kindref="member">SensorService_Type_E</ref></type>
+        <definition>typedef enum SensorService_Type_E SensorService_Type_T</definition>
+        <argsstring></argsstring>
+        <name>SensorService_Type_T</name>
+        <briefdescription>
+<para>Typedef to represent the sensor service type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" line="147" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_l_e_1gad4eddaef22be68c009d265216f00e542" prot="public" static="no">
+        <type>enum <ref refid="group___b_l_e_1gabe8357c0e98c7166e88b4243c426a242" kindref="member">SensorServices_EnvironmentalType_E</ref></type>
+        <definition>typedef enum SensorServices_EnvironmentalType_E SensorServices_EnvironmentalType_T</definition>
+        <argsstring></argsstring>
+        <name>SensorServices_EnvironmentalType_T</name>
+        <briefdescription>
+<para>Typedef to represent the environmental service characteristic. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" line="147" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_l_e_1ga2914758d233fc4522c96c2132de889fa" prot="public" static="no">
+        <type>enum <ref refid="group___b_l_e_1ga1e1f269bfda13df3dbc468d723404820" kindref="member">SensorServices_HighDataRateType_E</ref></type>
+        <definition>typedef enum SensorServices_HighDataRateType_E SensorServices_HighDataRateType_T</definition>
+        <argsstring></argsstring>
+        <name>SensorServices_HighDataRateType_T</name>
+        <briefdescription>
+<para>Typedef to represent the high data rate service characteristic. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" line="147" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_l_e_1gad31342fe3ba822820e944bbb7cc2ddff" prot="public" static="no">
+        <type>struct <ref refid="struct_sensor_services___info___s" kindref="compound">SensorServices_Info_S</ref></type>
+        <definition>typedef struct SensorServices_Info_S SensorServices_Info_T</definition>
+        <argsstring></argsstring>
+        <name>SensorServices_Info_T</name>
+        <briefdescription>
+<para>Typedef to represent the node sensor service information. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" line="147" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_l_e_1gaf1ac3082b258d4925dc6c7d5250f2812" prot="public" static="no">
+        <type>enum <ref refid="group___b_l_e_1gaaa164db02ca8bd9e3ae5e0c106c43689" kindref="member">SensorServices_MagnetometerType_E</ref></type>
+        <definition>typedef enum SensorServices_MagnetometerType_E SensorServices_MagnetometerType_T</definition>
+        <argsstring></argsstring>
+        <name>SensorServices_MagnetometerType_T</name>
+        <briefdescription>
+<para>typedef to represent the magnetometer service characteristic </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" line="147" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_l_e_1ga5218542b1c2ed7b24571ff4d64324a2f" prot="public" static="no">
+        <type>enum <ref refid="group___b_l_e_1ga0fb6adf1c87af1d67397edb4ed68638b" kindref="member">SensorServices_SensorAxisType_E</ref></type>
+        <definition>typedef enum SensorServices_SensorAxisType_E SensorServices_SensorAxisType_T</definition>
+        <argsstring></argsstring>
+        <name>SensorServices_SensorAxisType_T</name>
+        <briefdescription>
+<para>Typedef to represent the sensor axis type for accelerometer and gyro services. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" line="147" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_l_e_1gad61295e15eea60d420fe9dba73f8b2df" prot="public" static="no">
+        <type>enum <ref refid="group___b_l_e_1ga4b8c7fe3f78ca570a62f063cbb6a9252" kindref="member">SensorServices_SensorControlNode_E</ref></type>
+        <definition>typedef enum SensorServices_SensorControlNode_E SensorServices_SensorControlNode_T</definition>
+        <argsstring></argsstring>
+        <name>SensorServices_SensorControlNode_T</name>
+        <briefdescription>
+<para>Typedef to control the node. </para>        </briefdescription>
+        <detaileddescription>
+<para>Typedef to control the node. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" line="147" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor">#ifndef<sp/>XDK_SENSORSERVICES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XDK_SENSORSERVICES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Include<sp/>all<sp/>headers<sp/>which<sp/>are<sp/>needed<sp/>by<sp/>this<sp/>file.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___basics_8h" kindref="compound">BCDS_Basics.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>the<sp/>type<sp/>and<sp/>macro<sp/>definitions<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>the<sp/>function<sp/>declarations<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="group___b_l_e_1ga89c5cd2f2d2364066df6ee10bc0a596d" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group___b_l_e_1ga89c5cd2f2d2364066df6ee10bc0a596d" kindref="member">SensorService_Type_E</ref></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65" refid="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596da1ccfa700106d376ec62a1946ee1e2e40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596da1ccfa700106d376ec62a1946ee1e2e40" kindref="member">BLE_SENSOR_ACCELEROMETER</ref><sp/>=<sp/>1,<sp/></highlight></codeline>
+<codeline lineno="66" refid="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596dabb4f4f3731829839336a26a4aa2ed7b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596dabb4f4f3731829839336a26a4aa2ed7b6" kindref="member">BLE_SENSOR_GYRO</ref><sp/>=<sp/>2,<sp/></highlight></codeline>
+<codeline lineno="67" refid="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596da7768667a8a9f2745e686ac0e35651493" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596da7768667a8a9f2745e686ac0e35651493" kindref="member">BLE_SENSOR_LIGHT</ref><sp/>=<sp/>3,<sp/></highlight></codeline>
+<codeline lineno="68" refid="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596da10f1ea2b13287ef69744b0b123238f82" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596da10f1ea2b13287ef69744b0b123238f82" kindref="member">BLE_SENSOR_NOISE</ref><sp/>=<sp/>4,<sp/></highlight></codeline>
+<codeline lineno="69" refid="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596daa40625be06974096309d0446c23e8ff2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596daa40625be06974096309d0446c23e8ff2" kindref="member">BLE_SENSOR_MAGNETOMETER</ref><sp/>=<sp/>5,<sp/></highlight></codeline>
+<codeline lineno="70" refid="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596daa4f38c6a497e86153cc599e97e97412a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596daa4f38c6a497e86153cc599e97e97412a" kindref="member">BLE_SENSOR_ENVIRONMENTAL</ref><sp/>=<sp/>6,<sp/></highlight></codeline>
+<codeline lineno="71" refid="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596dacda1c63fffe907365de1e2681d1bdb3d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596dacda1c63fffe907365de1e2681d1bdb3d" kindref="member">BLE_HIGH_DATA_RATE</ref><sp/>=<sp/>7,<sp/></highlight></codeline>
+<codeline lineno="72" refid="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596da822228c7383d0e76fb7ac0a48ab39970" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596da822228c7383d0e76fb7ac0a48ab39970" kindref="member">BLE_CONTROL_NODE</ref><sp/>=<sp/>8,<sp/></highlight></codeline>
+<codeline lineno="73" refid="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596da3de94633bdb4dfeef58462cb5b7e2810" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1gga89c5cd2f2d2364066df6ee10bc0a596da3de94633bdb4dfeef58462cb5b7e2810" kindref="member">BLE_SENSOR_MAX</ref><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="group___b_l_e_1gabb2e8d5ef990ac216807396b587e3bb0" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group___b_l_e_1ga89c5cd2f2d2364066df6ee10bc0a596d" kindref="member">SensorService_Type_E</ref><sp/><ref refid="group___b_l_e_1gabb2e8d5ef990ac216807396b587e3bb0" kindref="member">SensorService_Type_T</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="group___b_l_e_1ga0fb6adf1c87af1d67397edb4ed68638b" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group___b_l_e_1ga0fb6adf1c87af1d67397edb4ed68638b" kindref="member">SensorServices_SensorAxisType_E</ref></highlight></codeline>
+<codeline lineno="85"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="86" refid="group___b_l_e_1gga0fb6adf1c87af1d67397edb4ed68638ba8e8a6ca701ce47f5321b1e7fda17471c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1gga0fb6adf1c87af1d67397edb4ed68638ba8e8a6ca701ce47f5321b1e7fda17471c" kindref="member">SENSOR_AXIS_X</ref><sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="87" refid="group___b_l_e_1gga0fb6adf1c87af1d67397edb4ed68638baf9282b1d012afca3866629ccb52db94a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1gga0fb6adf1c87af1d67397edb4ed68638baf9282b1d012afca3866629ccb52db94a" kindref="member">SENSOR_AXIS_Y</ref><sp/>=<sp/>1,<sp/></highlight></codeline>
+<codeline lineno="88" refid="group___b_l_e_1gga0fb6adf1c87af1d67397edb4ed68638ba00b9d49450b444641f63fc9fd69e0f34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1gga0fb6adf1c87af1d67397edb4ed68638ba00b9d49450b444641f63fc9fd69e0f34" kindref="member">SENSOR_AXIS_Z</ref><sp/>=<sp/>2,<sp/></highlight></codeline>
+<codeline lineno="89" refid="group___b_l_e_1gga0fb6adf1c87af1d67397edb4ed68638bac1a9756b2ec007af49f7c55b96501ad3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1gga0fb6adf1c87af1d67397edb4ed68638bac1a9756b2ec007af49f7c55b96501ad3" kindref="member">SENSOR_AXIS_MAX</ref></highlight></codeline>
+<codeline lineno="90"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="group___b_l_e_1ga5218542b1c2ed7b24571ff4d64324a2f" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group___b_l_e_1ga0fb6adf1c87af1d67397edb4ed68638b" kindref="member">SensorServices_SensorAxisType_E</ref><sp/><ref refid="group___b_l_e_1ga5218542b1c2ed7b24571ff4d64324a2f" kindref="member">SensorServices_SensorAxisType_T</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="group___b_l_e_1gaaa164db02ca8bd9e3ae5e0c106c43689" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group___b_l_e_1gaaa164db02ca8bd9e3ae5e0c106c43689" kindref="member">SensorServices_MagnetometerType_E</ref></highlight></codeline>
+<codeline lineno="101"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102" refid="group___b_l_e_1ggaaa164db02ca8bd9e3ae5e0c106c43689a3d427341722119652b29046d3fdf3496" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1ggaaa164db02ca8bd9e3ae5e0c106c43689a3d427341722119652b29046d3fdf3496" kindref="member">SENSOR_MAGNETOMETER_AXIS_X</ref><sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="103" refid="group___b_l_e_1ggaaa164db02ca8bd9e3ae5e0c106c43689a4274ed9b77031cd80c6fd04edcd71e31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1ggaaa164db02ca8bd9e3ae5e0c106c43689a4274ed9b77031cd80c6fd04edcd71e31" kindref="member">SENSOR_MAGNETOMETER_AXIS_Y</ref><sp/>=<sp/>1,<sp/></highlight></codeline>
+<codeline lineno="104" refid="group___b_l_e_1ggaaa164db02ca8bd9e3ae5e0c106c43689ab926c9a90125427fad4256336ee92667" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1ggaaa164db02ca8bd9e3ae5e0c106c43689ab926c9a90125427fad4256336ee92667" kindref="member">SENSOR_MAGNETOMETER_AXIS_Z</ref><sp/>=<sp/>2,<sp/></highlight></codeline>
+<codeline lineno="105" refid="group___b_l_e_1ggaaa164db02ca8bd9e3ae5e0c106c43689ae780db95b3941d34379a92fc4321a02b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1ggaaa164db02ca8bd9e3ae5e0c106c43689ae780db95b3941d34379a92fc4321a02b" kindref="member">SENSOR_MAGNETOMETER_RESISTANCE</ref><sp/>=<sp/>3,<sp/></highlight></codeline>
+<codeline lineno="106" refid="group___b_l_e_1ggaaa164db02ca8bd9e3ae5e0c106c43689a75b65ddeb2419a1ef4b12123a0f49f4a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1ggaaa164db02ca8bd9e3ae5e0c106c43689a75b65ddeb2419a1ef4b12123a0f49f4a" kindref="member">SENSOR_MAGNETOMETER_MAX</ref></highlight></codeline>
+<codeline lineno="107"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="group___b_l_e_1gaf1ac3082b258d4925dc6c7d5250f2812" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group___b_l_e_1gaaa164db02ca8bd9e3ae5e0c106c43689" kindref="member">SensorServices_MagnetometerType_E</ref><sp/><ref refid="group___b_l_e_1gaf1ac3082b258d4925dc6c7d5250f2812" kindref="member">SensorServices_MagnetometerType_T</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="group___b_l_e_1gabe8357c0e98c7166e88b4243c426a242" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group___b_l_e_1gabe8357c0e98c7166e88b4243c426a242" kindref="member">SensorServices_EnvironmentalType_E</ref></highlight></codeline>
+<codeline lineno="118"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="119" refid="group___b_l_e_1ggabe8357c0e98c7166e88b4243c426a242a1254d92c2ed27738a04cc83bb787ed25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1ggabe8357c0e98c7166e88b4243c426a242a1254d92c2ed27738a04cc83bb787ed25" kindref="member">SENSOR_ENVIRONMENTAL_PRESSURE</ref><sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="120" refid="group___b_l_e_1ggabe8357c0e98c7166e88b4243c426a242abb25e356fdda8382d6e323ee40a4865a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1ggabe8357c0e98c7166e88b4243c426a242abb25e356fdda8382d6e323ee40a4865a" kindref="member">SENSOR_ENVIRONMENTAL_TEMPERATURE</ref><sp/>=<sp/>1,<sp/></highlight></codeline>
+<codeline lineno="121" refid="group___b_l_e_1ggabe8357c0e98c7166e88b4243c426a242ae2f0a708e60ac8e7f076c0ef94df0c52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1ggabe8357c0e98c7166e88b4243c426a242ae2f0a708e60ac8e7f076c0ef94df0c52" kindref="member">SENSOR_ENVIRONMENTAL_HUMIDITY</ref><sp/>=<sp/>2,<sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="group___b_l_e_1gad4eddaef22be68c009d265216f00e542" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group___b_l_e_1gabe8357c0e98c7166e88b4243c426a242" kindref="member">SensorServices_EnvironmentalType_E</ref><sp/><ref refid="group___b_l_e_1gad4eddaef22be68c009d265216f00e542" kindref="member">SensorServices_EnvironmentalType_T</ref>;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="group___b_l_e_1ga1e1f269bfda13df3dbc468d723404820" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group___b_l_e_1ga1e1f269bfda13df3dbc468d723404820" kindref="member">SensorServices_HighDataRateType_E</ref></highlight></codeline>
+<codeline lineno="133"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="134" refid="group___b_l_e_1gga1e1f269bfda13df3dbc468d723404820a2e92d4d8b2c2cd2a430aa687551c2a44" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1gga1e1f269bfda13df3dbc468d723404820a2e92d4d8b2c2cd2a430aa687551c2a44" kindref="member">HIGH_DATA_RATE_HIGH_PRIO</ref><sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="135" refid="group___b_l_e_1gga1e1f269bfda13df3dbc468d723404820a84e032bd8187fce54dd4b82ea8fb6b5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1gga1e1f269bfda13df3dbc468d723404820a84e032bd8187fce54dd4b82ea8fb6b5c" kindref="member">HIGH_DATA_RATE_LOW_PRIO</ref><sp/>=<sp/>1,<sp/></highlight></codeline>
+<codeline lineno="136" refid="group___b_l_e_1gga1e1f269bfda13df3dbc468d723404820a40ae339461d4755aad06682c1c3cf95d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1gga1e1f269bfda13df3dbc468d723404820a40ae339461d4755aad06682c1c3cf95d" kindref="member">HIGH_DATA_RATE_MAX</ref></highlight></codeline>
+<codeline lineno="137"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="group___b_l_e_1ga2914758d233fc4522c96c2132de889fa" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group___b_l_e_1ga1e1f269bfda13df3dbc468d723404820" kindref="member">SensorServices_HighDataRateType_E</ref><sp/><ref refid="group___b_l_e_1ga2914758d233fc4522c96c2132de889fa" kindref="member">SensorServices_HighDataRateType_T</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="group___b_l_e_1ga4b8c7fe3f78ca570a62f063cbb6a9252" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group___b_l_e_1ga4b8c7fe3f78ca570a62f063cbb6a9252" kindref="member">SensorServices_SensorControlNode_E</ref></highlight></codeline>
+<codeline lineno="148"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="149" refid="group___b_l_e_1gga4b8c7fe3f78ca570a62f063cbb6a9252abf6ec2fcd9ddee5db1ac00ae84489c2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1gga4b8c7fe3f78ca570a62f063cbb6a9252abf6ec2fcd9ddee5db1ac00ae84489c2c" kindref="member">CONTROL_NODE_START_SAMPLING</ref><sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="150" refid="group___b_l_e_1gga4b8c7fe3f78ca570a62f063cbb6a9252ae2e316d0bbf8b518c7efda9e548c469b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1gga4b8c7fe3f78ca570a62f063cbb6a9252ae2e316d0bbf8b518c7efda9e548c469b" kindref="member">CONTROL_NODE_CHANGE_SAMPLING_RATE</ref><sp/>=<sp/>1,<sp/></highlight></codeline>
+<codeline lineno="151" refid="group___b_l_e_1gga4b8c7fe3f78ca570a62f063cbb6a9252a163cd4553241c6d08b4c4657fe6b476c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1gga4b8c7fe3f78ca570a62f063cbb6a9252a163cd4553241c6d08b4c4657fe6b476c" kindref="member">CONTROL_NODE_REBOOT</ref><sp/>=<sp/>2,<sp/></highlight></codeline>
+<codeline lineno="152" refid="group___b_l_e_1gga4b8c7fe3f78ca570a62f063cbb6a9252a0eca2080aee16b30433d9ceaffd4f4e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1gga4b8c7fe3f78ca570a62f063cbb6a9252a0eca2080aee16b30433d9ceaffd4f4e3" kindref="member">CONTROL_NODE_GET_FW_VERSION</ref><sp/>=<sp/>3,<sp/></highlight></codeline>
+<codeline lineno="153" refid="group___b_l_e_1gga4b8c7fe3f78ca570a62f063cbb6a9252a600c4ec1140347121972964036a9000c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1gga4b8c7fe3f78ca570a62f063cbb6a9252a600c4ec1140347121972964036a9000c" kindref="member">CONTROL_NODE_USE_SENSOR_FUSION</ref><sp/>=<sp/>4,<sp/></highlight></codeline>
+<codeline lineno="154" refid="group___b_l_e_1gga4b8c7fe3f78ca570a62f063cbb6a9252a9ebab72cddc7d8c2f18322dcbd8410a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_l_e_1gga4b8c7fe3f78ca570a62f063cbb6a9252a9ebab72cddc7d8c2f18322dcbd8410a9" kindref="member">CONTROL_NODE_MAX</ref></highlight></codeline>
+<codeline lineno="155"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="group___b_l_e_1gad61295e15eea60d420fe9dba73f8b2df" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group___b_l_e_1ga4b8c7fe3f78ca570a62f063cbb6a9252" kindref="member">SensorServices_SensorControlNode_E</ref><sp/><ref refid="group___b_l_e_1gad61295e15eea60d420fe9dba73f8b2df" kindref="member">SensorServices_SensorControlNode_T</ref>;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="struct_sensor_services___info___s" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_sensor_services___info___s" kindref="compound">SensorServices_Info_S</ref></highlight></codeline>
+<codeline lineno="182"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="183" refid="struct_sensor_services___info___s_1a65cda82de379e9d97b2d2647482b1f71" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="struct_sensor_services___info___s_1a65cda82de379e9d97b2d2647482b1f71" kindref="member">sensorServicesType</ref>;<sp/></highlight></codeline>
+<codeline lineno="184" refid="struct_sensor_services___info___s_1a7b95267f599613283c35f86060b1dfc8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="struct_sensor_services___info___s_1a7b95267f599613283c35f86060b1dfc8" kindref="member">sensorServicesContent</ref>;<sp/></highlight></codeline>
+<codeline lineno="185"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190" refid="group___b_l_e_1gad31342fe3ba822820e944bbb7cc2ddff" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_sensor_services___info___s" kindref="compound">SensorServices_Info_S</ref><sp/><ref refid="struct_sensor_services___info___s" kindref="compound">SensorServices_Info_T</ref>;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>XDK_SENSORSERVICES_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Connectivity/XDK_SensorServices.h"/>
+  </compounddef>
+</doxygen>

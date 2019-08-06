@@ -1,0 +1,417 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_b_s_p___irq_handler_8h" kind="file">
+    <compoundname>BSP_IrqHandler.h</compoundname>
+    <includedby refid="_b_s_p___board_8c" local="yes">SDK/xdk110/Platform/BSP/source/BSP_Board.c</includedby>
+    <includedby refid="_b_s_p___irq_handler_8c" local="yes">SDK/xdk110/Platform/BSP/source/BSP_IrqHandler.c</includedby>
+    <invincdepgraph>
+      <node id="35163">
+        <label>SDK/xdk110/Platform/BSP/source/BSP_Board.c</label>
+        <link refid="_b_s_p___board_8c"/>
+      </node>
+      <node id="35164">
+        <label>SDK/xdk110/Platform/BSP/source/BSP_IrqHandler.c</label>
+        <link refid="_b_s_p___irq_handler_8c"/>
+      </node>
+      <node id="35162">
+        <label>SDK/xdk110/Platform/BSP/source/BSP_IrqHandler.h</label>
+        <link refid="BSP_IrqHandler.h"/>
+        <childnode refid="35163" relation="include">
+        </childnode>
+        <childnode refid="35164" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_b_s_p___irq_handler_8h_1a87d72653156b83829786f1f856ecbad1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GPIO_EVEN_IRQHandler</definition>
+        <argsstring>(void)</argsstring>
+        <name>GPIO_EVEN_IRQHandler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>GPIO EVEN interrupt handler. </para>        </briefdescription>
+        <detaileddescription>
+<para>Interrupt handler clears all IF even flags and call the dispatcher passing the flags which triggered the interrupt. <simplesect kind="note"><para>GPIO_EVEN_IRQHandler is used for all the EVEN GPIO pins capable and configured to generate interrupts in XDK </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_IrqHandler.h" line="120" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_IrqHandler.c" bodystart="89" bodyend="100"/>
+        <references refid="group___b_s_p___b_o_a_r_d_s_e_t_t_i_n_g_s_1ga2613c35fe541be39a93f7752f1faec13" compoundref="_b_s_p___board_settings_8h" startline="79">BSP_GPIO_INT_EVEN_MASK</references>
+        <references refid="_b_s_p___board_8c_1a2dc20bb690be7587007313faf9daf61f" compoundref="_b_s_p___board_8c" startline="469" endline="489">Board_GPIOInterruptDispatch</references>
+      </memberdef>
+      <memberdef kind="function" id="_b_s_p___irq_handler_8h_1a8fff5a798ff4721659dc7bdbb3149c8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GPIO_ODD_IRQHandler</definition>
+        <argsstring>(void)</argsstring>
+        <name>GPIO_ODD_IRQHandler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>GPIO ODD interrupt handler. </para>        </briefdescription>
+        <detaileddescription>
+<para>Interrupt handler clears all IF odd flags and call the dispatcher passing the flags which triggered the interrupt. <simplesect kind="note"><para>GPIO_ODD_IRQHandler is used for all the ODD GPIO pins capable and configured to generate interrupts in XDK </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_IrqHandler.h" line="128" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_IrqHandler.c" bodystart="105" bodyend="116"/>
+        <references refid="group___b_s_p___b_o_a_r_d_s_e_t_t_i_n_g_s_1ga428ea57f6c62b1a4116a5f7c62a5a29e" compoundref="_b_s_p___board_settings_8h" startline="80">BSP_GPIO_INT_ODD_MASK</references>
+        <references refid="_b_s_p___board_8c_1a2dc20bb690be7587007313faf9daf61f" compoundref="_b_s_p___board_8c" startline="469" endline="489">Board_GPIOInterruptDispatch</references>
+      </memberdef>
+      <memberdef kind="function" id="_b_s_p___irq_handler_8h_1a8e817e99d2a59e5f48e4ff0c79e7eef5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void I2C0_IRQHandler</definition>
+        <argsstring>(void)</argsstring>
+        <name>I2C0_IRQHandler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>I2C0 interrupt handler. </para>        </briefdescription>
+        <detaileddescription>
+<para>Interrupt handler forwards all I2C receive related interrupts to the MCU driver for processing. <simplesect kind="note"><para>I2C0_IRQHandler is used for the all the sensors node modules in XDK </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_IrqHandler.h" line="194" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_IrqHandler.c" bodystart="156" bodyend="159"/>
+        <references refid="_b_s_p___sensor_node_8c_1af63b0dc51a42da8ca3f4adbafe4e406f" compoundref="_b_s_p___sensor_node_8c" startline="945" endline="952">SensorNode_I2CISR</references>
+      </memberdef>
+      <memberdef kind="function" id="_b_s_p___irq_handler_8h_1a9048ac38e05135c35a2389670b480e42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T IrqHandler_SysTickDummyHandler</definition>
+        <argsstring>(void)</argsstring>
+        <name>IrqHandler_SysTickDummyHandler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_IrqHandler.h" line="239" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_IrqHandler.c" bodystart="239" bodyend="242"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <referencedby refid="group___b_c_d_s___h_a_l___b_s_p___board_1ga12d8c4efe0afa9269e816c50f51bdd1e" compoundref="_b_s_p___board_8c" startline="243" endline="351">BSP_Board_Initialize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_b_s_p___irq_handler_8h_1ab5e09814056d617c521549e542639b7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SysTick_Handler</definition>
+        <argsstring>(void)</argsstring>
+        <name>SysTick_Handler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>SysTick Handler. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_IrqHandler.h" line="112" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="_b_s_p___irq_handler_8h_1a3f216427c6df5e45eb0cceccee1aa5ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UART0_RX_IRQHandler</definition>
+        <argsstring>(void)</argsstring>
+        <name>UART0_RX_IRQHandler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>UART0 Rx interrupt handler. </para>        </briefdescription>
+        <detaileddescription>
+<para>Interrupt handler forwards all UART receive related interrupts to the MCU driver for processing. <simplesect kind="note"><para>UART0_RX_IRQHandler is used for the BT LE module in XDK </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_IrqHandler.h" line="145" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_IrqHandler.c" bodystart="129" bodyend="132"/>
+        <references refid="_b_s_p___b_t___e_m9301_8c_1a28d3d9806ef90bc2756db8b91925fd4e" compoundref="_b_s_p___b_t___e_m9301_8c" startline="271" endline="278">BT_EM9301_UART_RxISR</references>
+      </memberdef>
+      <memberdef kind="function" id="_b_s_p___irq_handler_8h_1a999dab3845c0a90fdc8f0a3974b17e26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UART0_TX_IRQHandler</definition>
+        <argsstring>(void)</argsstring>
+        <name>UART0_TX_IRQHandler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>UART0 Tx interrupt handler. </para>        </briefdescription>
+        <detaileddescription>
+<para>Interrupt handler forwards all UART transmit related interrupts to the MCU driver for processing. <simplesect kind="note"><para>UART0_TX_IRQHandler is used for the BT LE module in XDK </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_IrqHandler.h" line="137" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_IrqHandler.c" bodystart="122" bodyend="125"/>
+        <references refid="_b_s_p___b_t___e_m9301_8c_1a651efd671201e638d4c473b08a9176a4" compoundref="_b_s_p___b_t___e_m9301_8c" startline="259" endline="266">BT_EM9301_UART_TxISR</references>
+      </memberdef>
+      <memberdef kind="function" id="_b_s_p___irq_handler_8h_1a8ef4dfd53f8b518acaeddcda2b159c61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USART0_RX_IRQHandler</definition>
+        <argsstring>(void)</argsstring>
+        <name>USART0_RX_IRQHandler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>USART0 Rx interrupt handler. </para>        </briefdescription>
+        <detaileddescription>
+<para>Interrupt handler forwards all USART receive related interrupts to the MCU driver for processing. <simplesect kind="note"><para>USART0_RX_IRQHandler is used for the wlan module in XDK </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_IrqHandler.h" line="164" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_IrqHandler.c" bodystart="146" bodyend="149"/>
+        <references refid="_b_s_p___wi_fi__cc3100mod_8c_1a487baf309fe0acf78649956b662f080e" compoundref="_b_s_p___wi_fi__cc3100mod_8c" startline="320" endline="327">WiFi_CC3100MOD_SPIRxISR</references>
+      </memberdef>
+      <memberdef kind="function" id="_b_s_p___irq_handler_8h_1aa1ad8819e3b118aa46e7c04efc32593b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USART0_TX_IRQHandler</definition>
+        <argsstring>(void)</argsstring>
+        <name>USART0_TX_IRQHandler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>USART0 Tx interrupt handler. </para>        </briefdescription>
+        <detaileddescription>
+<para>Interrupt handler forwards all USART transmit related interrupts to the MCU driver for processing. <simplesect kind="note"><para>USART0_TX_IRQHandler is used for the wlan module in XDK </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_IrqHandler.h" line="156" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_IrqHandler.c" bodystart="139" bodyend="142"/>
+        <references refid="_b_s_p___wi_fi__cc3100mod_8c_1a151d5543d80272aac71c698c680fdad1" compoundref="_b_s_p___wi_fi__cc3100mod_8c" startline="332" endline="340">WiFi_CC3100MOD_SPITxISR</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>interrupt handlers used within the board support package and overwriting weak definition of ARM startup file. </para>    </briefdescription>
+    <detaileddescription>
+<para><table rows="54" cols="2"><row>
+<entry thead="yes"><para>Type of Interrupt </para></entry><entry thead="yes"><para>Predefined IRQ name  </para></entry></row>
+<row>
+<entry thead="no"><para>Core interrupt</para></entry><entry thead="no"><para>Reset_Handler </para></entry></row>
+<row>
+<entry thead="no"><para>Core interrupt</para></entry><entry thead="no"><para>NMI_Handler </para></entry></row>
+<row>
+<entry thead="no"><para>Core interrupt</para></entry><entry thead="no"><para>HardFault_Handler </para></entry></row>
+<row>
+<entry thead="no"><para>Core interrupt</para></entry><entry thead="no"><para>MemManage_Handler </para></entry></row>
+<row>
+<entry thead="no"><para>Core interrupt</para></entry><entry thead="no"><para>BusFault_Handler </para></entry></row>
+<row>
+<entry thead="no"><para>Core interrupt</para></entry><entry thead="no"><para>UsageFault_Handler </para></entry></row>
+<row>
+<entry thead="no"><para>Core interrupt</para></entry><entry thead="no"><para>Default_Handler </para></entry></row>
+<row>
+<entry thead="no"><para>Core interrupt</para></entry><entry thead="no"><para>Default_Handler </para></entry></row>
+<row>
+<entry thead="no"><para>Core interrupt</para></entry><entry thead="no"><para>Default_Handler </para></entry></row>
+<row>
+<entry thead="no"><para>Core interrupt</para></entry><entry thead="no"><para>Default_Handler </para></entry></row>
+<row>
+<entry thead="no"><para>Core interrupt</para></entry><entry thead="no"><para>SVC_Handler </para></entry></row>
+<row>
+<entry thead="no"><para>Core interrupt</para></entry><entry thead="no"><para>DebugMon_Handler </para></entry></row>
+<row>
+<entry thead="no"><para>Core interrupt</para></entry><entry thead="no"><para>Default_Handler </para></entry></row>
+<row>
+<entry thead="no"><para>Core interrupt</para></entry><entry thead="no"><para>PendSV_Handler </para></entry></row>
+<row>
+<entry thead="no"><para>Core interrupt</para></entry><entry thead="no"><para>SysTick_Handler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt </para></entry><entry thead="no"><para>DMA_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>GPIO_EVEN_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>TIMER0_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>USART0_RX_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>USART0_TX_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>USB_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>ACMP0_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>ADC0_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>DAC0_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>I2C0_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>GPIO_ODD_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>TIMER1_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>TIMER2_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupts</para></entry><entry thead="no"><para>TIMER3_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>USART1_RX_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>USART1_TX_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>LESENSE_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>USART2_RX_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>USART2_TX_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>UART0_RX_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>UART0_TX_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>UART1_RX_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>UART1_TX_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>LEUART0_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>LEUART1_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>LETIMER0_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>PCNT0_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>PCNT1_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>PCNT2_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>RTC_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>BURTC_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupts</para></entry><entry thead="no"><para>CMU_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>VCMP_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>LCD_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>MSC_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>AES_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>EBI_IRQHandler </para></entry></row>
+<row>
+<entry thead="no"><para>External interrupt</para></entry><entry thead="no"><para>EMU_IRQHandler </para></entry></row>
+</table>
+<simplesect kind="note"><para>in order for this file to be linked correctly the option <bold><ndash/>whole-archive</bold> should be used for the linker script </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="preprocessor">#ifndef<sp/>IrqHandler_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IrqHandler_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_b_s_p___irq_handler_8h_1ab5e09814056d617c521549e542639b7e" kindref="member">SysTick_Handler</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_b_s_p___irq_handler_8h_1a87d72653156b83829786f1f856ecbad1" kindref="member">GPIO_EVEN_IRQHandler</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_b_s_p___irq_handler_8h_1a8fff5a798ff4721659dc7bdbb3149c8b" kindref="member">GPIO_ODD_IRQHandler</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>BCDS_FEATURE_BSP_BT_EM9301</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_b_s_p___irq_handler_8h_1a999dab3845c0a90fdc8f0a3974b17e26" kindref="member">UART0_TX_IRQHandler</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_b_s_p___irq_handler_8h_1a3f216427c6df5e45eb0cceccee1aa5ba" kindref="member">UART0_RX_IRQHandler</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>BCDS_FEATURE_BSP_WIFI_CC3100MOD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_b_s_p___irq_handler_8h_1aa1ad8819e3b118aa46e7c04efc32593b" kindref="member">USART0_TX_IRQHandler</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_b_s_p___irq_handler_8h_1a8ef4dfd53f8b518acaeddcda2b159c61" kindref="member">USART0_RX_IRQHandler</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>BCDS_FEATURE_BSP_WIFI_CC3100MOD<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>BCDS_FEATURE_BSP_SD_CARD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>USART1_TX_IRQHandler(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>USART1_RX_IRQHandler(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>BCDS_FEATURE_BSP_SD_CARD<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>BCDS_FEATURE_BSP_SENSOR_NODE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_b_s_p___irq_handler_8h_1a8e817e99d2a59e5f48e4ff0c79e7eef5" kindref="member">I2C0_IRQHandler</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*BCDS_FEATURE_BSP_SENSOR_NODE*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>BCDS_FEATURE_BSP_EXTENSIONPORT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>I2C1_IRQHandler(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>USART2_TX_IRQHandler(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>USART2_RX_IRQHandler(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>UART1_TX_IRQHandler(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>UART1_RX_IRQHandler(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="comment">/*@todo<sp/>workaround<sp/>to<sp/>address<sp/>weak<sp/>linkage<sp/>of<sp/>SysTick_Handler<sp/>defined<sp/>in<sp/>IrqHandler.c<sp/>file<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_b_s_p___irq_handler_8h_1a9048ac38e05135c35a2389670b480e42" kindref="member">IrqHandler_SysTickDummyHandler</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>IrqHandler_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/BSP/source/BSP_IrqHandler.h"/>
+  </compounddef>
+</doxygen>

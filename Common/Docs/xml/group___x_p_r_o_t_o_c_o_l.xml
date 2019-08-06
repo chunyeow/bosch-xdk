@@ -1,0 +1,714 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___x_p_r_o_t_o_c_o_l" kind="group">
+    <compoundname>XPROTOCOL</compoundname>
+    <title>XProtocol</title>
+    <innerfile refid="_b_c_d_s___x_protocol_8h">BCDS_XProtocol.h</innerfile>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___x_p_r_o_t_o_c_o_l_1ga1035a62c3f0d421186143e2c158d465a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BCDS_DEPRECATED</definition>
+        <argsstring>(Retcode_T xProtocol_Init(void))</argsstring>
+        <name>BCDS_DEPRECATED</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref> </type>
+          <declname>xProtocol_Init</declname>
+          <array>void</array>
+        </param>
+        <briefdescription>
+<para>Initializes the xProtocol module. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000014"><xreftitle>Deprecated</xreftitle><xrefdescription><para>since version vxx.xx.xx, replaced by <ref refid="group___x_p_r_o_t_o_c_o_l_1gaad090d59978439858029a5a8493e4c02" kindref="member">XProtocol_Init</ref> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_XProtocol.h" line="175" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___x_p_r_o_t_o_c_o_l_1gaac9b8b19c12f99edc16f3e0227319314" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BCDS_DEPRECATED</definition>
+        <argsstring>(Retcode_T xProtocol_EncodeFrame(const uint8_t *data, uint32_t dataLength, uint32_t maxFrameLength, uint8_t *frame, uint32_t *frameLength))</argsstring>
+        <name>BCDS_DEPRECATED</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref> </type>
+          <declname>xProtocol_EncodeFrame</declname>
+          <array>const uint8_t *data, uint32_t dataLength, uint32_t maxFrameLength, uint8_t *frame, uint32_t *frameLength</array>
+        </param>
+        <briefdescription>
+<para>Encodes an xProtocol frame. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000015"><xreftitle>Deprecated</xreftitle><xrefdescription><para>since version vxx.xx.xx, replaced by <ref refid="group___x_p_r_o_t_o_c_o_l_1ga6c80c1c96e490a97e46d574774bd4747" kindref="member">XProtocol_EncodeFrame</ref> </para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to buffer which contains data from higher level protocols, which must not be NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of data buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxFrameLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum number of bytes the frame buffer can hold </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">frame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to buffer which is supposed to hold the encoded frame, which must not be NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">frameLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the encoded frame </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_SUCCESS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data encoding to frame successfull </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_NULL_POINTER</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if data, frame or frameLength is NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_XPROTOCOL_FRAME_BUFFER_TOO_SMALL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>encoded frame does not fit in frame buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_XPROTOCOL_DATA_EXCEEDES_MAX_PAYLOAD_LENGTH</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>payload length would exceed the maximum length </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_XProtocol.h" line="196" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___x_p_r_o_t_o_c_o_l_1gaae70b716756bd26cc5d57d1a829a1df4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BCDS_DEPRECATED</definition>
+        <argsstring>(Retcode_T xProtocol_DecodeFrame(const uint8_t *frame, uint32_t frameLength, uint32_t maxDataLength, uint8_t *data, uint32_t *dataLength))</argsstring>
+        <name>BCDS_DEPRECATED</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref> </type>
+          <declname>xProtocol_DecodeFrame</declname>
+          <array>const uint8_t *frame, uint32_t frameLength, uint32_t maxDataLength, uint8_t *data, uint32_t *dataLength</array>
+        </param>
+        <briefdescription>
+<para>Decodes an xProtocol frame. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000016"><xreftitle>Deprecated</xreftitle><xrefdescription><para>since version vxx.xx.xx, replaced by <ref refid="group___x_p_r_o_t_o_c_o_l_1ga9c2ffb0b8847b2104d5c3dfb906468b3" kindref="member">XProtocol_DecodeFrame</ref> </para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">frame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to buffer which contains an encoded frame, which must not be NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frameLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of frame buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxDataLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum number of bytes the data buffer can hold </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to buffer which is supposed to hold the decoded data, which must not be NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">dataLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of data buffer </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_SUCCESS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frame decoding successfull </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_NULL_POINTER</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if data, frame or dataLength is NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_XPROTOCOL_DATA_BUFFER_TOO_SMALL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>decoded frame does not fit in data buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_XPROTOCOL_INTEGRITY_FAILED</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the frame&apos;s checksum is wrong </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_XPROTOCOL_START_DELIMITER_MISSING</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frame does not contain a start delimiter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_XPROTOCOL_END_DELIMITER_MISSING</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frame does not contain an end delimiter </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_XProtocol.h" line="221" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___x_p_r_o_t_o_c_o_l_1ga9b145313abf179be06694354716ebf70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BCDS_DEPRECATED</definition>
+        <argsstring>(Retcode_T xProtocol_IsCompleteFrame(const uint8_t *frame, uint32_t frameLength, const uint8_t **lastCheckPosition))</argsstring>
+        <name>BCDS_DEPRECATED</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref> </type>
+          <declname>xProtocol_IsCompleteFrame</declname>
+          <array>const uint8_t *frame, uint32_t frameLength, const uint8_t **lastCheckPosition</array>
+        </param>
+        <briefdescription>
+<para>Check if an xProtocol frame is complete. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000017"><xreftitle>Deprecated</xreftitle><xrefdescription><para>since version vxx.xx.xx, replaced by <ref refid="group___x_p_r_o_t_o_c_o_l_1ga43e3eebd0347eaba2461b1591966b220" kindref="member">XProtocol_IsCompleteFrame</ref> </para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">frame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to buffer which contains an, possibly incomplete, encoded frame, which must not be NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frameLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of frame buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">lastCheckPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>last position within the frame which has been checked. If this function is called the first time on a frame, lastCheckPosition must be initialized to `frame&apos;. Subsequent calls to XProtocol_IsCompleteFrame for the same frame will use and update that parameter, to avoid checking the bytes of the frame over and over again. This is only meant as a performance optimization. If performance is not an issue, then that field may be set to NULL. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_SUCCESS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frame buffer contains complete xProtocol frame </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_NULL_POINTER</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if frame pointer is NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_XPROTOCOL_FRAME_NOT_COMPLETE_YET</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xProtocol is not complete yet </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_XPROTOCOL_DATA_EXCEEDES_MAX_PAYLOAD_LENGTH</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>payload length would exceed the maximum length </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_XProtocol.h" line="248" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___x_p_r_o_t_o_c_o_l_1gaf8b74079263e08192e484ddea845a506" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BCDS_DEPRECATED</definition>
+        <argsstring>(Retcode_T xProtocol_GetPayloadLength(const uint8_t *frame, uint32_t frameLength, uint32_t *payloadLength))</argsstring>
+        <name>BCDS_DEPRECATED</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref> </type>
+          <declname>xProtocol_GetPayloadLength</declname>
+          <array>const uint8_t *frame, uint32_t frameLength, uint32_t *payloadLength</array>
+        </param>
+        <briefdescription>
+<para>Determine the payload length. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000018"><xreftitle>Deprecated</xreftitle><xrefdescription><para>since version vxx.xx.xx, replaced by <ref refid="group___x_p_r_o_t_o_c_o_l_1gac9cfc49a6a154941d6509334b0efeab4" kindref="member">XProtocol_GetPayloadLength</ref> </para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">frame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to buffer which contains an, possibly incomplete, encoded frame, which must not be NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frameLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of frame buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">payloadLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of payload, must not be NULL </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_SUCCESS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>payloadLength contains payload length </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_NULL_POINTER</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if frame pointer or payloadLength is NULL </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_XProtocol.h" line="263" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___x_p_r_o_t_o_c_o_l_1ga9c2ffb0b8847b2104d5c3dfb906468b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T XProtocol_DecodeFrame</definition>
+        <argsstring>(const uint8_t *frame, uint32_t frameLength, uint32_t maxDataLength, uint8_t *data, uint32_t *dataLength)</argsstring>
+        <name>XProtocol_DecodeFrame</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>frame</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>frameLength</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>maxDataLength</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>dataLength</declname>
+        </param>
+        <briefdescription>
+<para>Decodes an xProtocol frame. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">frame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to buffer which contains an encoded frame, which must not be NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frameLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of frame buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxDataLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum number of bytes the data buffer can hold </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to buffer which is supposed to hold the decoded data, which must not be NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">dataLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of data buffer </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_SUCCESS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frame decoding successfull </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_NULL_POINTER</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if data, frame or dataLength is NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_XPROTOCOL_DATA_BUFFER_TOO_SMALL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>decoded frame does not fit in data buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_XPROTOCOL_INTEGRITY_FAILED</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the frame&apos;s checksum is wrong </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_XPROTOCOL_START_DELIMITER_MISSING</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frame does not contain a start delimiter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_XPROTOCOL_END_DELIMITER_MISSING</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frame does not contain an end delimiter </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_XProtocol.h" line="130" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___x_p_r_o_t_o_c_o_l_1ga6c80c1c96e490a97e46d574774bd4747" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T XProtocol_EncodeFrame</definition>
+        <argsstring>(const uint8_t *data, uint32_t dataLength, uint32_t maxFrameLength, uint8_t *frame, uint32_t *frameLength)</argsstring>
+        <name>XProtocol_EncodeFrame</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>dataLength</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>maxFrameLength</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>frame</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>frameLength</declname>
+        </param>
+        <briefdescription>
+<para>Encodes an xProtocol frame. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to buffer which contains data from higher level protocols, which must not be NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of data buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxFrameLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum number of bytes the frame buffer can hold </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">frame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to buffer which is supposed to hold the encoded frame, which must not be NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">frameLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the encoded frame </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_SUCCESS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data encoding to frame successfull </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_NULL_POINTER</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if data, frame or frameLength is NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_XPROTOCOL_FRAME_BUFFER_TOO_SMALL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>encoded frame does not fit in frame buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_XPROTOCOL_DATA_EXCEEDES_MAX_PAYLOAD_LENGTH</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>payload length would exceed the maximum length </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_XProtocol.h" line="108" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___x_p_r_o_t_o_c_o_l_1gac9cfc49a6a154941d6509334b0efeab4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T XProtocol_GetPayloadLength</definition>
+        <argsstring>(const uint8_t *frame, uint32_t frameLength, uint32_t *payloadLength)</argsstring>
+        <name>XProtocol_GetPayloadLength</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>frame</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>frameLength</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>payloadLength</declname>
+        </param>
+        <briefdescription>
+<para>Determine the payload length. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">frame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to buffer which contains an, possibly incomplete, encoded frame, which must not be NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frameLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of frame buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">payloadLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of payload, must not be NULL </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_SUCCESS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>payloadLength contains payload length </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_NULL_POINTER</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if frame pointer or payloadLength is NULL </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_XProtocol.h" line="166" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___x_p_r_o_t_o_c_o_l_1gaad090d59978439858029a5a8493e4c02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T XProtocol_Init</definition>
+        <argsstring>(void)</argsstring>
+        <name>XProtocol_Init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initializes the xProtocol module. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_XProtocol.h" line="90" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___x_p_r_o_t_o_c_o_l_1ga43e3eebd0347eaba2461b1591966b220" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T XProtocol_IsCompleteFrame</definition>
+        <argsstring>(const uint8_t *frame, uint32_t frameLength, const uint8_t **lastCheckPosition)</argsstring>
+        <name>XProtocol_IsCompleteFrame</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>frame</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>frameLength</declname>
+        </param>
+        <param>
+          <type>const uint8_t **</type>
+          <declname>lastCheckPosition</declname>
+        </param>
+        <briefdescription>
+<para>Check if an xProtocol frame is complete. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">frame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to buffer which contains an, possibly incomplete, encoded frame, which must not be NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frameLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of frame buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">lastCheckPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>last position within the frame which has been checked. If this function is called the first time on a frame, lastCheckPosition must be initialized to `frame&apos;. Subsequent calls to XProtocol_IsCompleteFrame for the same frame will use and update that parameter, to avoid checking the bytes of the frame over and over again. This is only meant as a performance optimization. If performance is not an issue, then that field may be set to NULL. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_SUCCESS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frame buffer contains complete xProtocol frame </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_NULL_POINTER</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if frame pointer is NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_XPROTOCOL_FRAME_NOT_COMPLETE_YET</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xProtocol is not complete yet </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_XPROTOCOL_DATA_EXCEEDES_MAX_PAYLOAD_LENGTH</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>payload length would exceed the maximum length </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_XProtocol.h" line="154" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>API to encode and decode xProtocol frames. </para>    </briefdescription>
+    <detaileddescription>
+<para>Frame format</para><para><table rows="2" cols="4"><row>
+<entry thead="yes"><para>SD </para></entry><entry thead="yes"><para>CS </para></entry><entry thead="yes"><para>Payload </para></entry><entry thead="yes"><para>ED  </para></entry></row>
+<row>
+<entry thead="no"><para>1B </para></entry><entry thead="no"><para>2B </para></entry><entry thead="no"><para>N Bytes </para></entry><entry thead="no"><para>1B </para></entry></row>
+</table>
+SD - Start Delimiter</para><para>CS - Checksum</para><para>ED - End Delimiter</para><para>Any occurrence of SD or ED in CS or payload will be escaped (after the checksum calculation). The special character to escape (ESC) SDs and EDs is escaped as well.</para><para>The following table shows how escaping is done:</para><para><table rows="4" cols="4"><row>
+<entry thead="yes"><para>Symbol </para></entry><entry thead="yes"><para>Hex Value </para></entry><entry thead="yes"><para>Escape Symbol </para></entry><entry thead="yes"><para>Hex Value  </para></entry></row>
+<row>
+<entry thead="no"><para>SD </para></entry><entry thead="no"><para>0xC0 </para></entry><entry thead="no"><para>ESC_SD </para></entry><entry thead="no"><para>0xDBDC </para></entry></row>
+<row>
+<entry thead="no"><para>ED </para></entry><entry thead="no"><para>0xC9 </para></entry><entry thead="no"><para>ESC_ED </para></entry><entry thead="no"><para>0xDBDE </para></entry></row>
+<row>
+<entry thead="no"><para>ESC </para></entry><entry thead="no"><para>0xDB </para></entry><entry thead="no"><para>ESC_ESC </para></entry><entry thead="no"><para>0xDBDD </para></entry></row>
+</table>
+The complete protocol definition can be found here: <ulink url="https://bcds01.de.bosch.com/wiki/display/BSA/xProtocol">https://bcds01.de.bosch.com/wiki/display/BSA/xProtocol</ulink> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

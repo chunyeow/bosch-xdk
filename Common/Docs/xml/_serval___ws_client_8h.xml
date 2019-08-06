@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_serval___ws_client_8h" kind="file">
+    <compoundname>Serval_WsClient.h</compoundname>
+    <includes refid="_serval___defines_8h" local="no">Serval_Defines.h</includes>
+    <incdepgraph>
+      <node id="32054">
+        <label>Serval_Defines.h</label>
+        <link refid="_serval___defines_8h"/>
+      </node>
+      <node id="32053">
+        <label>SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_WsClient.h</label>
+        <link refid="Serval_WsClient.h"/>
+        <childnode refid="32054" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+<para>Interface for WebSocket client</para><para>This API has recently been added to the Stack and may be subject to change as feedback from usage is being obtained. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="since"><para>1.8 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/********************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2010-2018<sp/>Contributors<sp/>to<sp/>this<sp/>project</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>NOTICE<sp/>file(s)<sp/>distributed<sp/>with<sp/>this<sp/>work<sp/>for<sp/>additional</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>information<sp/>regarding<sp/>copyright<sp/>ownership.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>This<sp/>program<sp/>and<sp/>the<sp/>accompanying<sp/>materials<sp/>are<sp/>made<sp/>available<sp/>under<sp/>the</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>terms<sp/>of<sp/>the<sp/>Eclipse<sp/>Public<sp/>License<sp/>2.0<sp/>which<sp/>is<sp/>available<sp/>at</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>http://www.eclipse.org/legal/epl-2.0</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>EPL-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor">#ifndef<sp/>SERVAL_WSCLIENT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVAL_WSCLIENT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_serval___defines_8h" kindref="compound">Serval_Defines.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>SERVAL_ENABLE_WS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_serval___ws_8h" kindref="compound">Serval_Ws.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_serval___ip_8h" kindref="compound">Serval_Ip.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*WsReceiveCallback_T)(<ref refid="_serval___msg_8h_1ae00d936510d9d4493cae90cf1ff00ee4" kindref="member">Msg_T</ref><sp/>*msg_ptr,<sp/>WsEvent_T<sp/>event);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><ref refid="_serval___types_8h_1a473797d61ec6d5f5a4f91d1d8b56b198" kindref="member">retcode_t</ref><sp/>WsClient_initialize(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="keyword">struct<sp/></highlight><highlight class="normal">WsConnectionRequest_S</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_p_ip_8h_1ac1d21d89ac985b0d00d1697d098a1d1e" kindref="member">Ip_Address_T</ref><sp/>*destination;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_p_ip_8h_1a946a51fb3a1e4f79c1f86ad62fb1e1c1" kindref="member">Ip_Port_T</ref><sp/>port;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>url;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_serval___msg_8h_1abc6e55d820d2dbb8950162e9baa35940" kindref="member">OutMsgPartFactoryFunc_T</ref><sp/>customHeaderElements;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>WsReceiveCallback_T<sp/>onMsgReceive;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">WsConnectionRequest_S<sp/>WsConnectionRequest_T;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><ref refid="_serval___types_8h_1a473797d61ec6d5f5a4f91d1d8b56b198" kindref="member">retcode_t</ref><sp/>WsClient_connect(WsConnectionRequest_T*<sp/>connectionRequest,<sp/>uint8_t<sp/>*websocketId_ptr);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>SERVAL_ENABLE_TLS_CLIENT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><ref refid="_serval___types_8h_1a473797d61ec6d5f5a4f91d1d8b56b198" kindref="member">retcode_t</ref><sp/>WsClient_connectSecure(WsConnectionRequest_T*<sp/>connectionRequest,<sp/>uint8_t<sp/>*websocketId_ptr);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SERVAL_ENABLE_TLS_CLIENT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SERVAL_ENABLES_WS<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SERVAL_WSCLIENT_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_WsClient.h"/>
+  </compounddef>
+</doxygen>

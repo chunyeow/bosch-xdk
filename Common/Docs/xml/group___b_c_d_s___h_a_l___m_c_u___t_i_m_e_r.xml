@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___b_c_d_s___h_a_l___m_c_u___t_i_m_e_r" kind="group">
+    <compoundname>BCDS_HAL_MCU_TIMER</compoundname>
+    <title>Timer</title>
+    <innerfile refid="_b_c_d_s___m_c_u___timer_8h">BCDS_MCU_Timer.h</innerfile>
+    <briefdescription>
+<para>Unified HAL API for Timer hardware. </para>    </briefdescription>
+    <detaileddescription>
+<para>Use this component to control the timer hardware peripheral The timer is being set in the BSP including clock setup The application will get a driver handle by the BSP in order to control, start, stop the timer</para><para>Before using the timer it has to be initialized by a call to MCU_TIMER_Initialize</para><para><programlisting><codeline><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/>MCU_TIMER_Initialize(timer0,<sp/>MyTimer0EventCallback);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>!=<sp/>retcode)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>handle<sp/>the<sp/>error</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>use<sp/>the<sp/>timer</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para>Once the timer is successfully initialized, it can be used</para><para><simplesect kind="note"><para>It is possible to disable the entire TIMER feature in the HAL-BSP configuration file. i.e. the TIMER code will only be compiled and linked if the feature <bold>BCDS_FEATURE_TIMER</bold> is set to 1 in the configuration file. </para></simplesect>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

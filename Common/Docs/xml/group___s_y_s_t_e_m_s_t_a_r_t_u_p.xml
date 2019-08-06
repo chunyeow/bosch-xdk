@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___s_y_s_t_e_m_s_t_a_r_t_u_p" kind="group">
+    <compoundname>SYSTEMSTARTUP</compoundname>
+    <title>System startup</title>
+    <innerfile refid="_xdk_system_startup_8h">XdkSystemStartup.h</innerfile>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___s_y_s_t_e_m_s_t_a_r_t_u_p_1gac9c0148f493d68be6e41606fa5dc75d1" prot="public" static="no">
+        <name>SystemStartup_ErrorCode_E</name>
+        <enumvalue id="group___s_y_s_t_e_m_s_t_a_r_t_u_p_1ggac9c0148f493d68be6e41606fa5dc75d1a5686270653299984b76be7acef0edbf6" prot="public">
+          <name>BLE_MAC_BIT_FAILED</name>
+          <initializer>= RETCODE_FIRST_CUSTOM_CODE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Return status for operations using corresponding Retcodes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/XdkSystemStartup.h" line="65" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/XdkSystemStartup.h" bodystart="64" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___s_y_s_t_e_m_s_t_a_r_t_u_p_1ga45a19a1bfdfa451a6d930228cdee9f4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void assertIndicationMapping</definition>
+        <argsstring>(const unsigned long line, const unsigned char *const file)</argsstring>
+        <name>assertIndicationMapping</name>
+        <param>
+          <type>const unsigned <ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga295b9aa203738050fd2137fb81030321" kindref="member">long</ref></type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const unsigned char *const</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>This API is called when function enters an assert. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: line number where asserted </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: file name which is asserted </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/XdkSystemStartup.h" line="82" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/SystemStartup.c" bodystart="279" bodyend="294"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_o_a_r_d___t_y_p_e___l_e_d_1gga04070ddf0e599d5784e51f7f731102d8aa8351fce64f9b2047a9e6f4dd4257edf" compoundref="_b_s_p___board_type_8h" startline="80">BSP_LED_COMMAND_ON</references>
+        <references refid="task_8h_1a366b302eba79d10b5ee2a3756f0fcc43" compoundref="tasks_8c" startline="2043" endline="2050">vTaskSuspendAll</references>
+        <referencedby refid="group___s_y_s_t_e_m_s_t_a_r_t_u_p_1gab3bf0967da05629b9d5b23b21d15aeb1" compoundref="_system_startup_8c" startline="297" endline="388">systemStartup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___s_y_s_t_e_m_s_t_a_r_t_u_p_1ga19f4c992e7df69e2e32d1bf2080feab7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DefaultErrorHandlingFunc</definition>
+        <argsstring>(Retcode_T error, bool isfromIsr)</argsstring>
+        <name>DefaultErrorHandlingFunc</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+          <declname>error</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isfromIsr</declname>
+        </param>
+        <briefdescription>
+<para>System Error Handling routine. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Error Information from Basic</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">isfromIsr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>:currently unused, can be used for future implementation. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/XdkSystemStartup.h" line="79" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/SystemStartup.c" bodystart="136" bodyend="268"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaae6f389a8342fb69834ea7dbc294e4a9" compoundref="_b_c_d_s___retcode_8h" startline="273" endline="276">Retcode_GetPackage</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gad609de2b5ec721b86e52effc2d1dd574" compoundref="_b_c_d_s___retcode_8h" startline="309" endline="312">Retcode_GetCode</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gadfd4ed6274231782f33de14b3b6270f6" compoundref="_b_c_d_s___retcode_8h" startline="285" endline="288">Retcode_GetModuleId</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29cf262307b032a013a9a7349a3fb20e" compoundref="_b_c_d_s___retcode_8h" startline="297" endline="300">Retcode_GetSeverity</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6acec8ccdc2bb7d9c1e4806729ea2acb76" compoundref="_b_c_d_s___retcode_8h" startline="130">RETCODE_SEVERITY_FATAL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6ae50e23ac22de65b64de1424dd9663a3f" compoundref="_b_c_d_s___retcode_8h" startline="132">RETCODE_SEVERITY_WARNING</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6ae21ed2b53ddce83b92604ecb3c51a9ec" compoundref="_b_c_d_s___retcode_8h" startline="133">RETCODE_SEVERITY_INFO</references>
+        <referencedby refid="_aws_send_data_over_m_q_t_t_2source_2_main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="_aws_send_data_over_m_q_t_t_2source_2_main_8c" startline="62" endline="94">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___s_y_s_t_e_m_s_t_a_r_t_u_p_1gab3bf0967da05629b9d5b23b21d15aeb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T systemStartup</definition>
+        <argsstring>(void)</argsstring>
+        <name>systemStartup</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>The main function initializes the hardware and starts the RTOS scheduler. </para>        </briefdescription>
+        <detaileddescription>
+<para>returns RETCODE_OK for successful intialisation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/XdkSystemStartup.h" line="77" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/SystemStartup.c" bodystart="297" bodyend="388"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___h_a_l___b_s_p___board_1ga1c4f813db830d67337111f8d5e4fa56f" compoundref="_b_s_p___board_8c" startline="232" endline="237">BSP_Board_OSTickInitialize</references>
+        <references refid="_system_startup_8c_1ad9fa718b122929695de3beb3ad4bf810" compoundref="_system_startup_8c" startline="93">SystickPreCallback</references>
+        <references refid="group___a_s_s_e_r_t_1ga6bc99ece3950034f3038020f5c483beb">Assert_Initialize</references>
+        <references refid="group___s_y_s_t_e_m_s_t_a_r_t_u_p_1ga45a19a1bfdfa451a6d930228cdee9f4d" compoundref="_system_startup_8c" startline="279" endline="294">assertIndicationMapping</references>
+        <references refid="group___b_c_d_s___h_a_l___b_s_p___board_1ga12d8c4efe0afa9269e816c50f51bdd1e" compoundref="_b_s_p___board_8c" startline="243" endline="351">BSP_Board_Initialize</references>
+        <references refid="group___u_s_b___r_e_s_e_t___u_t_i_l_i_t_y_1gacc631c8d8cf919b924269233c20398cd">UsbResetUtility_Init</references>
+        <references refid="group___n_v_m_1gac14d043f334df1f2eb9ef2e14a3d6d3e">NVM_Initialize</references>
+        <references refid="group___n_v_m_1ga09d6c1a83b40a03cde695099ead6cd38">NVM_ReadUInt8</references>
+        <references refid="_b_c_d_s___n_v_m_user_page_items_8h_1ab729807159a9353f5eb27e1d0a84efb7" compoundref="_b_c_d_s___n_v_m_user_page_items_8h" startline="23">NVM_ITEM_CONTENT_INDEX</references>
+        <references refid="_system_startup_8c_1abadcb7659bc16a2cc45039dc50fbd879" compoundref="_system_startup_8c" startline="76">BLE_MAC_USERPAGE_FLAG_BIT</references>
+        <references refid="_system_startup_8c_1a6cf39550ffbb0de249a6116c70ac6a7d" compoundref="_system_startup_8c" startline="77">WIFI_MAC_USERPAGE_FLAG_BIT</references>
+        <references refid="group___n_v_m_1gaeb6c0ea8605a03bb5d020e1e3f318b5e">NVM_WriteUInt8</references>
+        <references refid="group___n_v_m_1ga49ed64fee7640e7e48312ae8c14ac264">NVM_Flush</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8baa88e0fb1050f9036537054f38a3eb89a" compoundref="_xdk_common_info_8h" startline="193">RETCODE_NVM_WIFI_AND_BLE_BIT_SET_FAILED</references>
+        <referencedby refid="_aws_send_data_over_m_q_t_t_2source_2_main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="_aws_send_data_over_m_q_t_t_2source_2_main_8c" startline="62" endline="94">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___s_y_s_t_e_m_s_t_a_r_t_u_p_1ga4b04d39908e91daaba55c50a672f8e06" prot="public" static="no">
+        <name>TIMER_AUTORELOAD_OFF</name>
+        <initializer>UINT32_C(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Auto reload of timer is disabled </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/XdkSystemStartup.h" line="59" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/XdkSystemStartup.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_y_s_t_e_m_s_t_a_r_t_u_p_1ga549d000e57b2860a7d246bad225c70ae" prot="public" static="no">
+        <name>TIMERBLOCKTIME</name>
+        <initializer>UINT32_C(0xffff)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>block time of timer is defined by this macro </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/XdkSystemStartup.h" line="58" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/XdkSystemStartup.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This module contains &quot;Main&quot; routine and the APIs , in which user can easily integrate application specific routines. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

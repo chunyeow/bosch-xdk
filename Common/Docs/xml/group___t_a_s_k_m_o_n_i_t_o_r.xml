@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___t_a_s_k_m_o_n_i_t_o_r" kind="group">
+    <compoundname>TASKMONITOR</compoundname>
+    <title>TaskMonitor</title>
+    <innerfile refid="_b_c_d_s___task_monitor_8h">BCDS_TaskMonitor.h</innerfile>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___t_a_s_k_m_o_n_i_t_o_r_1gace3781d3307313a19abf71f2cc9a6340" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TaskMonitor_Check</definition>
+        <argsstring>(void)</argsstring>
+        <name>TaskMonitor_Check</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Check the all registered task execution time with the corresponding upper-limit. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function should be called from free rtos idle hook.</para></simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>True</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Anyone of the task execution fail </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>False</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: All task are executed successfully</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+usage <programlisting><codeline><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_system_startup_8c_1a97fd430f36f8b065226e2bff9bad1de5" kindref="member">vApplicationIdleHook</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>rc;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>rc<sp/>=<sp/><ref refid="group___t_a_s_k_m_o_n_i_t_o_r_1gace3781d3307313a19abf71f2cc9a6340" kindref="member">TaskMonitor_Check</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(rc)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Handle<sp/>Error</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/>}</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_TaskMonitor.h" line="129" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___t_a_s_k_m_o_n_i_t_o_r_1ga53b4e6358e8d7564eed083de8943ec22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T TaskMonitor_Initialize</definition>
+        <argsstring>(void)</argsstring>
+        <name>TaskMonitor_Initialize</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize the Task monitor. </para>        </briefdescription>
+        <detaileddescription>
+<para>All variables are initialed to default value</para><para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Task Monitor is initialized successfully </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_TaskMonitor.h" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___t_a_s_k_m_o_n_i_t_o_r_1gab17159e87d5aa1c37a4f4930ca7a84c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T TaskMonitor_Register</definition>
+        <argsstring>(TaskHandle_t task, uint32_t upperLimit)</argsstring>
+        <name>TaskMonitor_Register</name>
+        <param>
+          <type><ref refid="task_8h_1ae95f44d4cfeb4a599c6cc258d241cb6b" kindref="member">TaskHandle_t</ref></type>
+          <declname>task</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>upperLimit</declname>
+        </param>
+        <briefdescription>
+<para>Register the task for monitoring. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">task</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Task handler for given task</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">upperLimit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in Seconds Maximum allowed time out to trigger the task execution from freertos kernel.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Task is registered successfully </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___u_t_i_l_s_1ggaf6e34e978b1294a3773f02f5ca7894d8ab2eb87ed6fe419ff2a398160862ad55d" kindref="member">RETCODE_TASKMONITOR_BUFFER_FULL_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Task is not registered. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: task handler is NULL or upperLimit is zero </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_TaskMonitor.h" line="86" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___t_a_s_k_m_o_n_i_t_o_r_1ga0a098e332b5dd730706ffe96be05f7e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TaskMonitor_Update</definition>
+        <argsstring>(unsigned int *taskTag, unsigned int tickCount)</argsstring>
+        <name>TaskMonitor_Update</name>
+        <param>
+          <type>unsigned int *</type>
+          <declname>taskTag</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>tickCount</declname>
+        </param>
+        <briefdescription>
+<para>Update the time stamp while exiting from task execution. This function is mapped with <ref refid="_free_r_t_o_s_8h_1a4b94b0d35e9a4ad783af7be32cabbdaa" kindref="member">traceTASK_SWITCHED_OUT()</ref> to call from Freertos kernel. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is called at every task exit. Hence execution time should be very minimal. Usage #define <ref refid="_free_r_t_o_s_8h_1a4b94b0d35e9a4ad783af7be32cabbdaa" kindref="member">traceTASK_SWITCHED_OUT()</ref> TaskMonitor_Update(&amp;pxCurrentTCB-&gt;pxTaskTag, xTickCount)</para></simplesect>
+Data types is added as �unsigned int� to avoid compilation warning in <ref refid="_free_r_t_o_s_config_8h" kindref="compound">FreeRTOSConfig.h</ref> file</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">taskTag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current Tasks&apos;s task tag pointer to update the tickcount</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tickCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>count of ticks since vTaskStartScheduler was called </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_TaskMonitor.h" line="104" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Monitor the system tasks in order to detect deadlocks or significant mismatch with the expected scheduling. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

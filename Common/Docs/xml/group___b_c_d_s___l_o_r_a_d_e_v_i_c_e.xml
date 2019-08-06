@@ -1,0 +1,2977 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e" kind="group">
+    <compoundname>BCDS_LORADEVICE</compoundname>
+    <title>LoRaDrivers</title>
+    <innerfile refid="_b_c_d_s___lo_ra_device_8h">BCDS_LoRaDevice.h</innerfile>
+    <innerfile refid="_b_c_d_s___lo_ra_simplified_8h">BCDS_LoRaSimplified.h</innerfile>
+    <innerclass refid="struct_lo_ra___network_config___s" prot="public">LoRa_NetworkConfig_S</innerclass>
+    <innerclass refid="struct_lo_ra_mac_event_info___s" prot="public">LoRaMacEventInfo_S</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga594657f1110b83a4bb3caebc5be6cf61" prot="public" static="no">
+        <name>BCDS_LORA_ModuleID_E</name>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gga594657f1110b83a4bb3caebc5be6cf61a325c996d70e4900aded27ea26c00c4f3" prot="public">
+          <name>BCDS_LORA_MODULE_ID_LORA</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gga594657f1110b83a4bb3caebc5be6cf61a1f0fc2443d7ca0048a4b79babb89d837" prot="public">
+          <name>BCDS_LORA_MODULE_ID_LORADEVICE</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gga594657f1110b83a4bb3caebc5be6cf61a8ec46cb6994f8d1a54c83389b871f8de" prot="public">
+          <name>BCDS_LORA_MODULE_ID_RN2483_PARSER</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gga594657f1110b83a4bb3caebc5be6cf61acb16c75da43662f9ce535b3f32121f8e" prot="public">
+          <name>BCDS_LORA_MODULE_ID_UARTTRANSCEIVER</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>BCDS_MODULE_ID for each LoRa C module  usage: #undef BCDS_MODULE_ID #define BCDS_MODULE_ID BCDS_LORA_MODULE_ID_xxx. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="74" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" bodystart="73" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga4428414bda13f76aba7ed984e4d8299a" prot="public" static="no">
+        <name>LoRa_NetworkEvent_E</name>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gga4428414bda13f76aba7ed984e4d8299aaf1881fdace660435ee4faee51d353a47" prot="public">
+          <name>LORA_NETWORK_JOIN_SUCCESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gga4428414bda13f76aba7ed984e4d8299aa616d72f666b200097c4dbd803ef55646" prot="public">
+          <name>LORA_NETWORK_JOIN_TIMEOUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gga4428414bda13f76aba7ed984e4d8299aa373d7607450f2f5fdf94015f0fffc132" prot="public">
+          <name>LORA_NETWORK_JOIN_FAILURE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gga4428414bda13f76aba7ed984e4d8299aa9cd80e88541f3ecd19f6962cd791b5cc" prot="public">
+          <name>LORA_NETWORK_RECEIVED_PACKET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gga4428414bda13f76aba7ed984e4d8299aa99cc039ad8171bd248b1bf8b19ef1f67" prot="public">
+          <name>LORA_NETWORK_SEND_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gga4428414bda13f76aba7ed984e4d8299aa72a080e1cb161b2b0a99701b54138e46" prot="public">
+          <name>LORA_NETWORK_RECEIVE_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Network events for the supported drivers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="115" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" bodystart="114" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gab213275287472ad3fdb6eb5618b79aed" prot="public" static="no">
+        <name>LoRa_Retcode_E</name>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggab213275287472ad3fdb6eb5618b79aeda166faed86a3cb61e684d7d0359295643" prot="public">
+          <name>LORA_RETCODE_CALLBACK_NOT_POSSIBLE</name>
+          <initializer>= RETCODE_FIRST_CUSTOM_CODE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggab213275287472ad3fdb6eb5618b79aeda0859886ce44e4f7c0a2e914901b607f7" prot="public">
+          <name>LORA_RETCODE_MAC_BUSY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggab213275287472ad3fdb6eb5618b79aeda1b72082b2260575f5588d095959d4fbb" prot="public">
+          <name>LORA_RETCODE_INVALID_PARAM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggab213275287472ad3fdb6eb5618b79aeda6df23ffd36e4a807474df17a3c710c58" prot="public">
+          <name>LORA_RETCODE_INVALID_DATA_LEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggab213275287472ad3fdb6eb5618b79aedaa54f47d806bc8201b209169e65de5b89" prot="public">
+          <name>LORA_RETCODE_KEYS_NOT_INIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggab213275287472ad3fdb6eb5618b79aeda81fd963327af7dbac20c99c2f756cd2c" prot="public">
+          <name>LORA_RETCODE_SILENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggab213275287472ad3fdb6eb5618b79aeda13a6bf8a8f4168e2d0e43605fef395c5" prot="public">
+          <name>LORA_RETCODE_MAC_PAUSED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggab213275287472ad3fdb6eb5618b79aedae84bcf5c81c16d89cfc85b461399d3f7" prot="public">
+          <name>LORA_RETCODE_MAC_NO_CHANNEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggab213275287472ad3fdb6eb5618b79aeda1ff57221802dda0b1b1a8ec083b0a5b5" prot="public">
+          <name>LORA_RETCODE_NOT_JOINED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggab213275287472ad3fdb6eb5618b79aedafbe9e47bc89a6e4548ef1832367e0bf7" prot="public">
+          <name>LORA_RETCODE_MAC_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggab213275287472ad3fdb6eb5618b79aedabb83e867dee17a6d2c75c9c1b97d113e" prot="public">
+          <name>LORA_RETCODE_MAC_FRAME_COUNTER_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggab213275287472ad3fdb6eb5618b79aedaeb5cc05a3e2ea2bcd45bfffaeb2bc05c" prot="public">
+          <name>LORA_RETCODE_JOIN_FAILURE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggab213275287472ad3fdb6eb5618b79aeda2156797895c0586eafd513de68f5de11" prot="public">
+          <name>LORA_RETCODE_INVALID_EXPECTED_INFORMATION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggab213275287472ad3fdb6eb5618b79aeda41b12ec0b144585b8ae1dc1e591d7866" prot="public">
+          <name>RETCODE_SEMAPHORE_CREATE_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggab213275287472ad3fdb6eb5618b79aedae134aa5db177dd6bcc4f5590a467c167" prot="public">
+          <name>RETCODE_SEMAPHORE_LOCK_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggab213275287472ad3fdb6eb5618b79aeda18bbc965e06a43f5efff13716cc926d4" prot="public">
+          <name>RETCODE_SEMAPHORE_UNLOCK_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggab213275287472ad3fdb6eb5618b79aeda8365c00e185004ea3bd061df2ca22c81" prot="public">
+          <name>RETCODE_UART_MODULE_INIT_NOT_DONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggab213275287472ad3fdb6eb5618b79aeda5a980bdc148d1553b3b7f18e1b68fb12" prot="public">
+          <name>RETCODE_UART_INVALID_REQUEST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggab213275287472ad3fdb6eb5618b79aeda9802ee105011bd91263417a847578ce7" prot="public">
+          <name>RETCODE_UART_SEND_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggab213275287472ad3fdb6eb5618b79aedad8ba5ff94270add787d78e8c72c8f716" prot="public">
+          <name>RETCODE_UART_RECEIVE_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggab213275287472ad3fdb6eb5618b79aedadda18227de1debccab982936e7704c64" prot="public">
+          <name>RETCODE_LORA_DEVICE_BUSY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>return value for the supported lora drivers </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="87" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" bodystart="86" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga59596dd53ff67e321ee5977306784559" prot="public" static="no">
+        <name>LoRaDeviceBand_E</name>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gga59596dd53ff67e321ee5977306784559ad9702175b6632d031137270f4176659c" prot="public">
+          <name>LORA_BAND_EU_863_870</name>
+          <briefdescription>
+<para>LORA_BAND_EU_863_870. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gga59596dd53ff67e321ee5977306784559a1efbe037c8f90c74c79abdc3c227aef1" prot="public">
+          <name>LORA_BAND_US_902_928</name>
+          <briefdescription>
+<para>LORA_BAND_US_902_928. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gga59596dd53ff67e321ee5977306784559a65e78793c78f7ad2fcde77cb04354ce6" prot="public">
+          <name>LORA_BAND_CN779_787</name>
+          <briefdescription>
+<para>LORA_BAND_CN779_787. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gga59596dd53ff67e321ee5977306784559a3dacac1478edc03c94114574e34ef371" prot="public">
+          <name>LORA_BAND_EU433</name>
+          <briefdescription>
+<para>LORA_BAND_EU433. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>enumeration representing supported frequency bands as in LoRaWAN specification V1.0.1 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="172" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" bodystart="171" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga338802d5d2046ef44f750ec10e2579ad" prot="public" static="no">
+        <name>LoRaDeviceJoin_E</name>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gga338802d5d2046ef44f750ec10e2579ada8c32410afc19ae0e503114e6317ec993" prot="public">
+          <name>LORA_JOIN_OTAA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gga338802d5d2046ef44f750ec10e2579ada785e6f5f4db59d3d3b1a2fa65db7a755" prot="public">
+          <name>LORA_JOIN_ABP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enumeration representing supported join procedures as in LoRaWAN specification V1.0.1 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="162" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" bodystart="161" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaf5143048b0bbe79d14c79e6ce904f944" prot="public" static="no">
+        <name>LoRaDeviceReset_E</name>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggaf5143048b0bbe79d14c79e6ce904f944a740146f9ac8b913e95fce1d26d7b2f03" prot="public">
+          <name>LORA_RESET_HARD</name>
+          <briefdescription>
+<para>LORA_RESET_HARD. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggaf5143048b0bbe79d14c79e6ce904f944ad7e4f82ed8d6ec464f4b7abb40f5d3c1" prot="public">
+          <name>LORA_RESET_SOFT</name>
+          <briefdescription>
+<para>LORA_RESET_SOFT. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggaf5143048b0bbe79d14c79e6ce904f944adbc80fa4df2d7f4e3b537eb37aa23993" prot="public">
+          <name>LORA_RESET_FACTORY</name>
+          <briefdescription>
+<para>LORA_RESET_FACTORY. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggaf5143048b0bbe79d14c79e6ce904f944a776bac7b48348354bfdb4fcc6f6282aa" prot="public">
+          <name>LORA_RESET_MAC_CONFIG</name>
+          <briefdescription>
+<para>LORA_RESET_MAC_CONFIG. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enumeration representing different possible reset types for a LoRa device. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="150" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" bodystart="149" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaefe28ed974a9cc5fdfdd8a4f3be723b0" prot="public" static="no">
+        <name>LoRaDeviceTxPower_E</name>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggaefe28ed974a9cc5fdfdd8a4f3be723b0a08e15bef45af918a119169f1b5606d42" prot="public">
+          <name>LORA_POWER_0</name>
+          <briefdescription>
+<para>LORA_POWER_0. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggaefe28ed974a9cc5fdfdd8a4f3be723b0acec7eb26e4183e6a8a8fba43eb374556" prot="public">
+          <name>LORA_POWER_1</name>
+          <briefdescription>
+<para>LORA_POWER_1. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggaefe28ed974a9cc5fdfdd8a4f3be723b0a6e365c62392fad7586048fd4f594e22e" prot="public">
+          <name>LORA_POWER_2</name>
+          <briefdescription>
+<para>LORA_POWER_2. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggaefe28ed974a9cc5fdfdd8a4f3be723b0a0a50fad83fe0d8a53efe5471274d2549" prot="public">
+          <name>LORA_POWER_3</name>
+          <briefdescription>
+<para>LORA_POWER_3. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggaefe28ed974a9cc5fdfdd8a4f3be723b0aa89648f78af96d1d73816813f7ef9599" prot="public">
+          <name>LORA_POWER_4</name>
+          <briefdescription>
+<para>LORA_POWER_4. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ggaefe28ed974a9cc5fdfdd8a4f3be723b0a6642a297d215d9f9a56296713fe9d66b" prot="public">
+          <name>LORA_POWER_5</name>
+          <briefdescription>
+<para>LORA_POWER_5. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enumeration representing possible Tx-power indexes as in LoRaWAN specification V1.0.1.</para><para>refer to the utilized frequency band in chapter 7 from LoRaWAN specification </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="186" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" bodystart="185" bodyend="193"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga1c42d720ac68f3de8206336b18183e3f" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* LoRa_AppCallback_T)(void *unused, LoRa_NetworkEvent_T event)</definition>
+        <argsstring>)(void *unused, LoRa_NetworkEvent_T event)</argsstring>
+        <name>LoRa_AppCallback_T</name>
+        <briefdescription>
+<para>This data type represents a function pointer which would be executed when any event (error/status/...) is to be notified. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: The argument containing relevant event information. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaSimplified.h" line="71" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaSimplified.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gabb8e473e22f11dec71339834795266c7" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* LoRa_callbackFunction_T)(void *, LoRaMacEventInfo_T *)</definition>
+        <argsstring>)(void *, LoRaMacEventInfo_T *)</argsstring>
+        <name>LoRa_callbackFunction_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback function for the LoRa MAC notification </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="144" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaa5001109e54061d9cb520f0a22178b9a" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* Lora_DataReceivedCallBack)(uint8_t *rxBuffer, uint8_t rxDataLength)</definition>
+        <argsstring>)(uint8_t *rxBuffer, uint8_t rxDataLength)</argsstring>
+        <name>Lora_DataReceivedCallBack</name>
+        <briefdescription>
+<para>Callback function signature to be called on data reception. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">rxBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Buffer in which received data to be stored.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">rxDataLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Length of received data. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaSimplified.h" line="80" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaSimplified.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga149fda63465e289a45956da0b82f0bfe" prot="public" static="no">
+        <type>struct <ref refid="struct_lo_ra___network_config___s" kindref="compound">LoRa_NetworkConfig_S</ref></type>
+        <definition>typedef struct LoRa_NetworkConfig_S  LoRa_NetworkConfig_T</definition>
+        <argsstring></argsstring>
+        <name>LoRa_NetworkConfig_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaSimplified.h" line="100" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga6c0f8e7f4ce328c62ca1c1441716a8cb" prot="public" static="no">
+        <type>enum <ref refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga4428414bda13f76aba7ed984e4d8299a" kindref="member">LoRa_NetworkEvent_E</ref></type>
+        <definition>typedef enum LoRa_NetworkEvent_E LoRa_NetworkEvent_T</definition>
+        <argsstring></argsstring>
+        <name>LoRa_NetworkEvent_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="70" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga8a33a79f8632c05efb4a8cc690926be9" prot="public" static="no">
+        <type>enum <ref refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga59596dd53ff67e321ee5977306784559" kindref="member">LoRaDeviceBand_E</ref></type>
+        <definition>typedef enum LoRaDeviceBand_E  LoRaDeviceBand_T</definition>
+        <argsstring></argsstring>
+        <name>LoRaDeviceBand_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>enumeration representing supported frequency bands as in LoRaWAN specification V1.0.1 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="177" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaa947e3c59a3b49c8d32f1967720ca70e" prot="public" static="no">
+        <type>enum <ref refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga338802d5d2046ef44f750ec10e2579ad" kindref="member">LoRaDeviceJoin_E</ref></type>
+        <definition>typedef enum LoRaDeviceJoin_E  LoRaDeviceJoin_T</definition>
+        <argsstring></argsstring>
+        <name>LoRaDeviceJoin_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enumeration representing supported join procedures as in LoRaWAN specification V1.0.1 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="165" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga51def5b8e2255675d19e3feb4443084d" prot="public" static="no">
+        <type>enum <ref refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaefe28ed974a9cc5fdfdd8a4f3be723b0" kindref="member">LoRaDeviceTxPower_E</ref></type>
+        <definition>typedef enum LoRaDeviceTxPower_E  LoRaDeviceTxPower_T</definition>
+        <argsstring></argsstring>
+        <name>LoRaDeviceTxPower_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enumeration representing possible Tx-power indexes as in LoRaWAN specification V1.0.1.</para><para>refer to the utilized frequency band in chapter 7 from LoRaWAN specification </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="193" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga5c0bdfdac701b8e693f0308d21bc2229" prot="public" static="no">
+        <type>struct <ref refid="struct_lo_ra_mac_event_info___s" kindref="compound">LoRaMacEventInfo_S</ref></type>
+        <definition>typedef struct LoRaMacEventInfo_S  LoRaMacEventInfo_T</definition>
+        <argsstring></argsstring>
+        <name>LoRaMacEventInfo_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>LoRaMAC event information </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="138" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga4825b3ed551e87b06e35f01b2bbc4278" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BCDS_DEPRECATED</definition>
+        <argsstring>(Retcode_T LoRa_Initialize(LoRa_NetworkConfig_T *config))</argsstring>
+        <name>BCDS_DEPRECATED</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref> </type>
+          <declname>LoRa_Initialize</declname>
+          <array>LoRa_NetworkConfig_T *config</array>
+        </param>
+        <briefdescription>
+<para>LoRa initialization entry will initialize the CommBuffer, the PalState, the Scheduler and LoRa itself. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000054"><xreftitle>Deprecated</xreftitle><xrefdescription><para>since version vxx.xx.xx </para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a lora Network configuration</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+RETCODE_OK: success, RECCODE_FAILURE: on error </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaSimplified.h" line="115" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga362028aec3f867c429fcf0ab2bb62cd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BCDS_DEPRECATED</definition>
+        <argsstring>(Retcode_T LoRa_Deinitialize(void))</argsstring>
+        <name>BCDS_DEPRECATED</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref> </type>
+          <declname>LoRa_Deinitialize</declname>
+          <defname>LoRa_Join</defname>
+          <array>void</array>
+        </param>
+        <briefdescription>
+<para>LoRa Deinitialization entry will deinitialize the CommBuffer, the PalState, the Scheduler and LoRa itself. </para>        </briefdescription>
+        <detaileddescription>
+<para>starts a LoRa join process</para><para><xrefsect id="deprecated_1_deprecated000055"><xreftitle>Deprecated</xreftitle><xrefdescription><para>since version vxx.xx.xx </para></xrefdescription></xrefsect></para><para>RETCODE_OK: success, RECCODE_FAILURE: on error</para><para><xrefsect id="deprecated_1_deprecated000056"><xreftitle>Deprecated</xreftitle><xrefdescription><para>since version vxx.xx.xx </para></xrefdescription></xrefsect></para><para>RETCODE_OK: join procedure successfully started RECODE_FAILURE: join error </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaSimplified.h" line="126" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gae0ef7eea4f77684521d078e37728516c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BCDS_DEPRECATED</definition>
+        <argsstring>(Retcode_T LoRa_TransmitData(uint8_t loraPort, void *dataBuffer, uint16_t dataBufferSize))</argsstring>
+        <name>BCDS_DEPRECATED</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref> </type>
+          <declname>LoRa_TransmitData</declname>
+          <array>uint8_t loraPort, void *dataBuffer, uint16_t dataBufferSize</array>
+        </param>
+        <briefdescription>
+<para>function to transmit data through LoRa communication </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000057"><xreftitle>Deprecated</xreftitle><xrefdescription><para>since version vxx.xx.xx </para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">loraPort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MAC payload port (must be &gt; 0)</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dataBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MAC data buffer to be sent</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dataBufferSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MAC data buffer size</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+uint8_t 0: OK 1: Busy 2: No network joined 3: Length or port error 4: Unknown MAC command 5: Unable to find a free channel </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaSimplified.h" line="158" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaba00750352ca674786fb5156c8dd98bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_Deinit</definition>
+        <argsstring>(void)</argsstring>
+        <name>LoRaDevice_Deinit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Switches off the module and deinitializes the driver. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="208" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga095e55065f74b22d572aeeaab832ad11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetADR</definition>
+        <argsstring>(bool *adr)</argsstring>
+        <name>LoRaDevice_GetADR</name>
+        <param>
+          <type>bool *</type>
+          <declname>adr</declname>
+        </param>
+        <briefdescription>
+<para>Returns the status of the Adaptive data Rate. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADR </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="415" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaa961b1aebeaa9e4a2582b1a4a3edd65b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetAppEUI</definition>
+        <argsstring>(uint64_t *appEUI)</argsstring>
+        <name>LoRaDevice_GetAppEUI</name>
+        <param>
+          <type>uint64_t *</type>
+          <declname>appEUI</declname>
+        </param>
+        <briefdescription>
+<para>Returns the device unique identifier used during the join procedure. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">appEUI</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>application Extended Unique Identifier used by the MAC layer of the LoRa module. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="318" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga7f2160b1c99f23f16c9be9c9d5616078" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetAutomaticReply</definition>
+        <argsstring>(bool *autoReply)</argsstring>
+        <name>LoRaDevice_GetAutomaticReply</name>
+        <param>
+          <type>bool *</type>
+          <declname>autoReply</declname>
+        </param>
+        <briefdescription>
+<para>Returns the status of the automatic reply: ON or OFF. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>autoReply status true if ON false if OFF </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="555" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaf9c7ea729062b5b63ca554bb305e03a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetBand</definition>
+        <argsstring>(LoRaDeviceBand_T *band)</argsstring>
+        <name>LoRaDevice_GetBand</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga8a33a79f8632c05efb4a8cc690926be9" kindref="member">LoRaDeviceBand_T</ref> *</type>
+          <declname>band</declname>
+        </param>
+        <briefdescription>
+<para>Returns the frequency band in which the LoRa module is currently operating. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">band</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enumeration value representing the frequency band among the supported bands by specification V1.0.1. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="296" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gab77ce3852dae443f920fb9f70003736f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetChannelDataRateRange</definition>
+        <argsstring>(uint8_t chId, uint8_t *minRange, uint8_t *maxRange)</argsstring>
+        <name>LoRaDevice_GetChannelDataRateRange</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>chId</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>minRange</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>maxRange</declname>
+        </param>
+        <briefdescription>
+<para>Gets a channel&apos;s Data Rate range. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel id </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>minRange</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to minimum data rate value to be returned </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxRange</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to maximum data rate value to be returned </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="605" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga03e89316f2d54644168af85972dabcf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetChannelDutyCycle</definition>
+        <argsstring>(uint8_t chId, uint16_t *dutyCycle)</argsstring>
+        <name>LoRaDevice_GetChannelDutyCycle</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>chId</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>dutyCycle</declname>
+        </param>
+        <briefdescription>
+<para>Gets a channels duty cycle. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel id </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">dutyCycle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>duty cycle output value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="587" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga93401768939b9b6c3662094d3ccc8a6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetChannelFreq</definition>
+        <argsstring>(uint8_t chId, uint32_t *freq_Hz)</argsstring>
+        <name>LoRaDevice_GetChannelFreq</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>chId</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>freq_Hz</declname>
+        </param>
+        <briefdescription>
+<para>Gets the channel frequency. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel id </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">freq_Hz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frequency </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="571" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gac6ad08814d2a179cb7067e60c996c7c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetChannelStatus</definition>
+        <argsstring>(uint8_t chId, bool *status)</argsstring>
+        <name>LoRaDevice_GetChannelStatus</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>chId</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+<para>Gets a channels Status. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel id </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel status ON or OFF (respectively true or false) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="622" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gae4d2eb42cfc6df330f046e7ff706ae55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetDataRate</definition>
+        <argsstring>(uint8_t *dataRate)</argsstring>
+        <name>LoRaDevice_GetDataRate</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>dataRate</declname>
+        </param>
+        <briefdescription>
+<para>Gets the Data Rate used for transmission. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">dataRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="429" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga49db871d02c20b955c1d704f3b44c030" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t LoRaDevice_GetDemodulationMargin</definition>
+        <argsstring>(void *)</argsstring>
+        <name>LoRaDevice_GetDemodulationMargin</name>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+<para>Gets the demodulation margin as received in the last Link_Check_Answer frame. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+<para>return RETCODE_OK in case of success error code otherwise </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="645" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga37a6936a23e9a8200b6716e4b31f4563" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetDevAddr</definition>
+        <argsstring>(uint32_t *devAddr)</argsstring>
+        <name>LoRaDevice_GetDevAddr</name>
+        <param>
+          <type>uint32_t *</type>
+          <declname>devAddr</declname>
+        </param>
+        <briefdescription>
+<para>returns the device address assigned by the network server to the module after successful join or preprogrammed in the device for ABP type join </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">devAddr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="334" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga9339a2bacf69e8fff20a60f3464267f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetDevEUI</definition>
+        <argsstring>(uint64_t *devEUI)</argsstring>
+        <name>LoRaDevice_GetDevEUI</name>
+        <param>
+          <type>uint64_t *</type>
+          <declname>devEUI</declname>
+        </param>
+        <briefdescription>
+<para>Returns the device unique identifier used during the join procedure. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">devEUI</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>used by the MAC layer of the LoRa module </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="303" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga3f144a6ea623054d4be8b1bc5da7e035" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t LoRaDevice_GetDutycyclePrescaler</definition>
+        <argsstring>(void *)</argsstring>
+        <name>LoRaDevice_GetDutycyclePrescaler</name>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+<para>Gets the duty cycle prescaler which can only be configured by the network server. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+<para>return RETCODE_OK in case of success error code otherwise </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="637" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga04e03a720ec91107d37411b91f67ad15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetFCntDown</definition>
+        <argsstring>(uint32_t *dnctr)</argsstring>
+        <name>LoRaDevice_GetFCntDown</name>
+        <param>
+          <type>uint32_t *</type>
+          <declname>dnctr</declname>
+        </param>
+        <briefdescription>
+<para>Gets the value of the current downlink frame counter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">downlink</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frame counter value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="504" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gac339a4fd52aaff8a065ce0d5b9f7262c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetFCntUp</definition>
+        <argsstring>(uint32_t *upctr)</argsstring>
+        <name>LoRaDevice_GetFCntUp</name>
+        <param>
+          <type>uint32_t *</type>
+          <declname>upctr</declname>
+        </param>
+        <briefdescription>
+<para>Gets the value of the current uplink frame counter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">Uplink</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frame counter value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="489" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga3b6e345fc194364b5f226a3c00e2d9d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetFrequencyDeviation</definition>
+        <argsstring>(uint32_t *freqdev)</argsstring>
+        <name>LoRaDevice_GetFrequencyDeviation</name>
+        <param>
+          <type>uint32_t *</type>
+          <declname>freqdev</declname>
+        </param>
+        <briefdescription>
+<para>Gets the frequency deviation configured for the device. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>freqdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current frequency deviation value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="734" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga415955fb8b342be9e27bc91075aee3f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t LoRaDevice_GetGatewayNumber</definition>
+        <argsstring>(void *)</argsstring>
+        <name>LoRaDevice_GetGatewayNumber</name>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+<para>This command will return the number of gateways that successfully received the last Link_Check_Request frame command, as received in the last Link_Check_Answer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+<para>return RETCODE_OK in case of success error code otherwise </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="654" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga99abc3329d6f11288d9c697202558de0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetHwEUI</definition>
+        <argsstring>(uint64_t *hwEUI)</argsstring>
+        <name>LoRaDevice_GetHwEUI</name>
+        <param>
+          <type>uint64_t *</type>
+          <declname>hwEUI</declname>
+        </param>
+        <briefdescription>
+<para>Returns the globally unique identifier of the LoRa module (if existing) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">Extended</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unique Identifier of the module </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="286" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga8b134b4ac3ca1329de8764f307150b25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetIQInversion</definition>
+        <argsstring>(bool *iqi)</argsstring>
+        <name>LoRaDevice_GetIQInversion</name>
+        <param>
+          <type>bool *</type>
+          <declname>iqi</declname>
+        </param>
+        <briefdescription>
+<para>Gets the IQ inversion status. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>iqi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to true if IQ inversion is to be enabled, to false otherwise. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="408" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gafb346460a9d4744b54023bcf1609091a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetRadioBandwidth</definition>
+        <argsstring>(uint16_t *bandWidth_kHz)</argsstring>
+        <name>LoRaDevice_GetRadioBandwidth</name>
+        <param>
+          <type>uint16_t *</type>
+          <declname>bandWidth_kHz</declname>
+        </param>
+        <briefdescription>
+<para>Get the value used for the radio bandwidth. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+<para>return RETCODE_OK in case of success error code otherwise </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="791" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga0f5a78344d578d0269d0bf4bfc6e1762" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetRadioCodingRate</definition>
+        <argsstring>(char *codingRate)</argsstring>
+        <name>LoRaDevice_GetRadioCodingRate</name>
+        <param>
+          <type>char *</type>
+          <declname>codingRate</declname>
+        </param>
+        <briefdescription>
+<para>Get the coding rate used by the radio. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">coding</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>rate currently in use. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="777" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga45b148a0b1f92652b0d297f0b168c760" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetRadioCRC</definition>
+        <argsstring>(bool *crc)</argsstring>
+        <name>LoRaDevice_GetRadioCRC</name>
+        <param>
+          <type>bool *</type>
+          <declname>crc</declname>
+        </param>
+        <briefdescription>
+<para>Gets the Status of CRC use. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>crc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is true if CRC is currently enabled, is false otherwise </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="762" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga30ff3e4d5e7f5987a0b6529c8e47d2e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetRadioFrequency</definition>
+        <argsstring>(uint32_t *frequency_Hz)</argsstring>
+        <name>LoRaDevice_GetRadioFrequency</name>
+        <param>
+          <type>uint32_t *</type>
+          <declname>frequency_Hz</declname>
+        </param>
+        <briefdescription>
+<para>Gets the Frequency used for by the radio transceiver. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">frequency_Hz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>currently used frequency </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="805" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gac6ddaf9eff5b9168adc35f1adbd1489f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetRadioPreambleLength</definition>
+        <argsstring>(uint16_t *preamble)</argsstring>
+        <name>LoRaDevice_GetRadioPreambleLength</name>
+        <param>
+          <type>uint16_t *</type>
+          <declname>preamble</declname>
+        </param>
+        <briefdescription>
+<para>Gets the length of the preamble used by the radio transceiver. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">preamble</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current preamble length value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="748" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaf7e73425bd8b8f707f7d0b0f9a709bca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetRadioSNR</definition>
+        <argsstring>(int8_t *snr)</argsstring>
+        <name>LoRaDevice_GetRadioSNR</name>
+        <param>
+          <type>int8_t *</type>
+          <declname>snr</declname>
+        </param>
+        <briefdescription>
+<para>Get the signal noise ratio (SNR) of the last received packet. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">snr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>signed value in dBm of the signal to noise Ratio from -127 to +128 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="812" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga767786194dec1ddd469f96fe33b01bbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetRadioSpreadingFactor</definition>
+        <argsstring>(uint8_t *sf)</argsstring>
+        <name>LoRaDevice_GetRadioSpreadingFactor</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>sf</declname>
+        </param>
+        <briefdescription>
+<para>Gets the Spreading Factor currently configured for radio transmission. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">sf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>spreading factor value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="719" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga168e7c87c5bfaa7ad5ccc7dec804eb38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetRadioTxPower</definition>
+        <argsstring>(int8_t *pwrout)</argsstring>
+        <name>LoRaDevice_GetRadioTxPower</name>
+        <param>
+          <type>int8_t *</type>
+          <declname>pwrout</declname>
+        </param>
+        <briefdescription>
+<para>returns the currently configured Radio transmission power </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pwrout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transceiver output power </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="705" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gae4f3e88f985fa03ad5851a629da82345" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetRetransmissions</definition>
+        <argsstring>(uint8_t *retx)</argsstring>
+        <name>LoRaDevice_GetRetransmissions</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>retx</declname>
+        </param>
+        <briefdescription>
+<para>Gets the number of retransmissions used for an uplink confirmed packet. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">retx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of retransmissions before returning error </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="444" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga9328cf2afad7665726e589c75b6d4ff1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetRxDelay</definition>
+        <argsstring>(uint32_t *rxDelay_ms)</argsstring>
+        <name>LoRaDevice_GetRxDelay</name>
+        <param>
+          <type>uint32_t *</type>
+          <declname>rxDelay_ms</declname>
+        </param>
+        <briefdescription>
+<para>Gets the delay between the transmission and the first receive window. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">receive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>window 1 delay value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="518" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga316c82a30c983a1e0be557d6680c5398" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetRxWindow2</definition>
+        <argsstring>(uint8_t *dataRate, uint32_t *frequency_Hz, uint16_t band)</argsstring>
+        <name>LoRaDevice_GetRxWindow2</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>dataRate</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>frequency_Hz</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>band</declname>
+        </param>
+        <briefdescription>
+<para>Gets the data rate and frequency used for the second Receive window at the specified frequency band. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">dataRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data rate value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">frequency_Hz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frequency value in Hz </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>band</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frequency band value. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="536" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga7b9ead979d1b1fa8f3c357810e3275a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetStatus</definition>
+        <argsstring>(uint32_t *status)</argsstring>
+        <name>LoRaDevice_GetStatus</name>
+        <param>
+          <type>uint32_t *</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+<para>Gets the current status of the module. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="629" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaac0b87113b782ddd6f43b2793c6b4ea0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetSyncWord</definition>
+        <argsstring>(uint8_t *sync)</argsstring>
+        <name>LoRaDevice_GetSyncWord</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>sync</declname>
+        </param>
+        <briefdescription>
+<para>Gets the synchronization word for the LoRaWAN communication. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">sync</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to sync word </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="474" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaf8d0685896dcb584b34726829f3c968f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_GetTxPower</definition>
+        <argsstring>(LoRaDeviceTxPower_T *pwr)</argsstring>
+        <name>LoRaDevice_GetTxPower</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga51def5b8e2255675d19e3feb4443084d" kindref="member">LoRaDeviceTxPower_T</ref> *</type>
+          <declname>pwr</declname>
+        </param>
+        <briefdescription>
+<para>Gets the Radio transmit power. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">TX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>power used for sending radio signals </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="380" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaab412a51daab7e263e785fcd44003375" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_Init</definition>
+        <argsstring>(LoRa_callbackFunction_T EventCallback, uint32_t frequency)</argsstring>
+        <name>LoRaDevice_Init</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gabb8e473e22f11dec71339834795266c7" kindref="member">LoRa_callbackFunction_T</ref></type>
+          <declname>EventCallback</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>frequency</declname>
+        </param>
+        <briefdescription>
+<para>Switches ON the module and initializes the driver. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>EventCallback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function that should process the events generated by the LoRa module driver </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frequency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frequency band that will be used for the radio communication </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="202" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga5dec5b7b1ad7feedba6f2f86377c3dae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_Join</definition>
+        <argsstring>(LoRaDeviceJoin_T joinType)</argsstring>
+        <name>LoRaDevice_Join</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaa947e3c59a3b49c8d32f1967720ca70e" kindref="member">LoRaDeviceJoin_T</ref></type>
+          <declname>joinType</declname>
+        </param>
+        <briefdescription>
+<para>performs a join request if the device has not joined a network yet </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>joinType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>OTAA (ON The Air Activation) or ABP(Activation By Personalization). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="252" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga55d8d6183c1be94ef6ff62a3c2b29e2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_LoRaWANPause</definition>
+        <argsstring>(uint32_t *pauseWAN)</argsstring>
+        <name>LoRaDevice_LoRaWANPause</name>
+        <param>
+          <type>uint32_t *</type>
+          <declname>pauseWAN</declname>
+        </param>
+        <briefdescription>
+<para>Pauses the LoRaWAN stack functionality to allow transceiver (radio) configuration. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pauseWAN: time interval in milliseconds that the transceiver can be used without affecting the LoRaWAN functionality. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="663" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaa783d5554b54bf0af133674d9efcca69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_LoRaWANResume</definition>
+        <argsstring>(void)</argsstring>
+        <name>LoRaDevice_LoRaWANResume</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This command resumes LoRaWAN stack functionality, in order to continue normal functionality after being paused. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="670" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga47120408bd62477a7f0cc0c6337862bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_RadioListen</definition>
+        <argsstring>(uint16_t rxWindowSize_ms)</argsstring>
+        <name>LoRaDevice_RadioListen</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>rxWindowSize_ms</declname>
+        </param>
+        <briefdescription>
+<para>Puts the Radio device into listening mode for a specified period of time. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rxWindowSize_ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time in ms during which the module will have its receiver listening if 0 the module will listen indefinitely. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="689" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga8cf3ac2c938b7e44d606b54c3579ecc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_RadioTransmit</definition>
+        <argsstring>(uint8_t *dataBuffer, uint16_t dataBufferSize)</argsstring>
+        <name>LoRaDevice_RadioTransmit</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>dataBuffer</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>dataBufferSize</declname>
+        </param>
+        <briefdescription>
+<para>Transmits a simple data frame over the radio transceiver of the LoRa device FSK or LoRa modulation can be used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the frame to be sent </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataBufferSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the frame to be sent </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="679" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gad81b630542a2203da9e3d7b85f36fb89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_Reset</definition>
+        <argsstring>(enum LoRaDeviceReset_E resetType)</argsstring>
+        <name>LoRaDevice_Reset</name>
+        <param>
+          <type>enum <ref refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaf5143048b0bbe79d14c79e6ce904f944" kindref="member">LoRaDeviceReset_E</ref></type>
+          <declname>resetType</declname>
+        </param>
+        <briefdescription>
+<para>Performs Reset operation to the LoRa device. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>resetType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enumeration value of which reset to perform (Factory, Hard, Soft ...) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="236" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gab1608621f9a72f484ef11b9ea6a48adc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_ResetMac</definition>
+        <argsstring>(uint16_t frequency)</argsstring>
+        <name>LoRaDevice_ResetMac</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>frequency</declname>
+        </param>
+        <briefdescription>
+<para>Performs Reset of the MAC layer of the LoRa module to a specific frequency band. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>frequency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Frequency band to operate within. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="244" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gae5b5b20e0e1e097b38a7c4ef54b4aa43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SaveConfig</definition>
+        <argsstring>(void)</argsstring>
+        <name>LoRaDevice_SaveConfig</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Saves the device configuration to permanent storage. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="279" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga9fb1bb106bf922196c22afc1d828bf1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SendConfirmed</definition>
+        <argsstring>(uint8_t LoRaPort, uint8_t *dataBuffer, uint16_t dataBufferSize)</argsstring>
+        <name>LoRaDevice_SendConfirmed</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>LoRaPort</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>dataBuffer</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>dataBufferSize</declname>
+        </param>
+        <briefdescription>
+<para>Sends confirmed data over LoRa. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>LoRaPort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LoraWan Port that will be used for sending </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the data frame that will be sent </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataBufferSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the frame to send </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="272" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga9aa030214056f8998bd4037a60d7a029" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SendUnconfirmed</definition>
+        <argsstring>(uint8_t LoRaPort, uint8_t *dataBuffer, uint16_t dataBufferSize)</argsstring>
+        <name>LoRaDevice_SendUnconfirmed</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>LoRaPort</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>dataBuffer</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>dataBufferSize</declname>
+        </param>
+        <briefdescription>
+<para>Sends unconfirmed data frame over LoRa. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>LoRaPort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LoraWan Port that will be used for sending </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the data frame that will be sent </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataBufferSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the frame to send </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. This function returns if an ACK has been received from the Network Server or if an error or a timeout occurred </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="263" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaa00a2a67adab71c43af638f3b01d3594" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetADR</definition>
+        <argsstring>(bool adr)</argsstring>
+        <name>LoRaDevice_SetADR</name>
+        <param>
+          <type>bool</type>
+          <declname>adr</declname>
+        </param>
+        <briefdescription>
+<para>Sets the Adaptive Data Rate option to ON/OFF. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>adr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to true if ADR is to be enabled, set to false otherwise. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="387" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga90514b1754a7900bb6b843f8b1e18b36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetAppEUI</definition>
+        <argsstring>(uint64_t AppEui)</argsstring>
+        <name>LoRaDevice_SetAppEUI</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>AppEui</declname>
+        </param>
+        <briefdescription>
+<para>Sets the Application unique identifier attributed by the device operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of the App EUI </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="326" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaeb4011b389e00b92b08578dbfa1fee92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetAppKey</definition>
+        <argsstring>(uint8_t *appKey)</argsstring>
+        <name>LoRaDevice_SetAppKey</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>appKey</declname>
+        </param>
+        <briefdescription>
+<para>Sets the Application key which is used to encrypt the join request messages. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pointer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to 16-byte application key </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="349" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaa4c940887e7f329e71b3cd7bb1557c9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetAppSKey</definition>
+        <argsstring>(uint8_t *appSKey)</argsstring>
+        <name>LoRaDevice_SetAppSKey</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>appSKey</declname>
+        </param>
+        <briefdescription>
+<para>Sets The application session key used for the encryption of frames to the application server. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pointer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to 128bit application session key </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="357" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gab2c11d88e1ae337337309383d85dcd9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetAutomaticReply</definition>
+        <argsstring>(bool autoReply)</argsstring>
+        <name>LoRaDevice_SetAutomaticReply</name>
+        <param>
+          <type>bool</type>
+          <declname>autoReply</declname>
+        </param>
+        <briefdescription>
+<para>Sets Automatic reply on or off. </para>        </briefdescription>
+        <detaileddescription>
+<para>By enabling the automatic reply,the module will transmit a packet without a payload immediately after a confirmed downlink is received, or when the frame Pending bit has been set by the server. If set to OFF, no automatic reply will be transmitted. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>autoReply</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to true if autmatic reply is to be enabled, set to false otherwise </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="548" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaf88cc801ab0c7ad1162856ef96d25071" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetBatteryLevel</definition>
+        <argsstring>(uint8_t bat)</argsstring>
+        <name>LoRaDevice_SetBatteryLevel</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>bat</declname>
+        </param>
+        <briefdescription>
+<para>Sets the battery level for Device Status Answer frame command response. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>battery level from 0 to 255 representing a scale from 0 to 100% </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="452" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga0b634f052a4cbb25ebc2ff3a3cd82c39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetChannelDataRateRange</definition>
+        <argsstring>(uint8_t chId, uint8_t minRange, uint8_t maxRange)</argsstring>
+        <name>LoRaDevice_SetChannelDataRateRange</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>chId</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>minRange</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>maxRange</declname>
+        </param>
+        <briefdescription>
+<para>Sets a channel&apos;s Data Rate range. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel id </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>minRange</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum data rate value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxRange</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum data rate value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="596" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga91362aa2090f4e275137c3f473cfd622" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetChannelDutyCycle</definition>
+        <argsstring>(uint8_t chId, uint16_t dutyCycle)</argsstring>
+        <name>LoRaDevice_SetChannelDutyCycle</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>chId</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>dutyCycle</declname>
+        </param>
+        <briefdescription>
+<para>Sets a channel&apos;s duty cycle. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel id </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>duty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>cycle value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="579" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gae82d756b3abbd7dd979e86531a5cd91a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetChannelFreq</definition>
+        <argsstring>(uint8_t chId, uint32_t freq_Hz)</argsstring>
+        <name>LoRaDevice_SetChannelFreq</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>chId</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>freq_Hz</declname>
+        </param>
+        <briefdescription>
+<para>Sets a channel&apos;s frequency. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel id </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>freq_Hz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frequency value in Hz </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="563" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga59ccd542086545d847517361acfe6846" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetChannelStatus</definition>
+        <argsstring>(uint8_t chId, bool status)</argsstring>
+        <name>LoRaDevice_SetChannelStatus</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>chId</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+<para>Sets a channels Status to ON or OFF. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel id </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to true if channel is to be enabled, set to false otherwise </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="614" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga1160c1177d9e39ca2b68b94cd3ccdb76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetDataRate</definition>
+        <argsstring>(uint8_t dataRate)</argsstring>
+        <name>LoRaDevice_SetDataRate</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>dataRate</declname>
+        </param>
+        <briefdescription>
+<para>Sets the Data Rate used for the transmission. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to be used according to LoRaWAN spec </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="422" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga48426ad84fa7c2048dcc76a046f38cad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetDevAddr</definition>
+        <argsstring>(uint32_t devAddr)</argsstring>
+        <name>LoRaDevice_SetDevAddr</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>devAddr</declname>
+        </param>
+        <briefdescription>
+<para>Programs the device address to the LoRa module. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>address to be used for the LoRaWAN communication </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="341" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gad7376fe5e30f18f4d205e397e4753276" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetDevEUI</definition>
+        <argsstring>(uint64_t DevEui)</argsstring>
+        <name>LoRaDevice_SetDevEUI</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>DevEui</declname>
+        </param>
+        <briefdescription>
+<para>Sets the device unique identifier attributed by the device owner. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of the device EUI </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="310" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga1da9cec7be1d30f06cde267aff9a39b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetDutyCycle</definition>
+        <argsstring>(bool enable)</argsstring>
+        <name>LoRaDevice_SetDutyCycle</name>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>Sets the Duty cyle ON/OFF. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>adr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to true if Dcycle is to be enabled, set to false otherwise. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="394" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaec4a1a1f1215f0dcd7efaffd8598ef1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetFCntDown</definition>
+        <argsstring>(uint32_t dnctr)</argsstring>
+        <name>LoRaDevice_SetFCntDown</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>dnctr</declname>
+        </param>
+        <briefdescription>
+<para>Sets the value of the downlink frame counter that will be used for the next uplink transmission. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dnctr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of the Downlink frame counter </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="497" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga52c052ac4953e00643ccb5b7960b26c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetFCntUp</definition>
+        <argsstring>(uint32_t upctr)</argsstring>
+        <name>LoRaDevice_SetFCntUp</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>upctr</declname>
+        </param>
+        <briefdescription>
+<para>Sets the value of the uplink frame counter that will be used for the next uplink transmission. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>upctr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of the Uplink frame counter </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="482" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaca2f8d042f0121703b33ab7bbf5a1cd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetFrequencyDeviation</definition>
+        <argsstring>(uint32_t freqdev)</argsstring>
+        <name>LoRaDevice_SetFrequencyDeviation</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>freqdev</declname>
+        </param>
+        <briefdescription>
+<para>Set the frequency deviation allowed by the end device. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>freqdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>decimal number representing the frequency deviation from 0 to 200000 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="727" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga64200f699aa878593dd8e23ac1a2dea6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetIQInversion</definition>
+        <argsstring>(bool iqi)</argsstring>
+        <name>LoRaDevice_SetIQInversion</name>
+        <param>
+          <type>bool</type>
+          <declname>iqi</declname>
+        </param>
+        <briefdescription>
+<para>Sets the IQ inversion to ON/OFF. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>iqi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to true if IQ inversion is to be enabled, to false otherwise. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="401" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga838a0db9a6e00dfa71ec92d601a7d441" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetJoinAcceptDelay</definition>
+        <argsstring>(uint32_t JoinAcceptDelay1, uint32_t JoinAcceptDelay2)</argsstring>
+        <name>LoRaDevice_SetJoinAcceptDelay</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>JoinAcceptDelay1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>JoinAcceptDelay2</declname>
+        </param>
+        <briefdescription>
+<para>Sets the delay between the Lora Join and JoinAccept reception window&apos;s. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>JoinAcceptDelay1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>delay value in µs </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>JoinAcceptDelay2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>delay value in µs </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="848" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga71e31d55f9fea792f30660bd55241a60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetLinkCheckPeriod</definition>
+        <argsstring>(uint16_t linkchk)</argsstring>
+        <name>LoRaDevice_SetLinkCheckPeriod</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>linkchk</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the time interval for the link check process to be triggered. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>linkchk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time period in ms </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="459" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gae4f14aa56b9cbc81000b1e9432506b24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetNwSKey</definition>
+        <argsstring>(uint8_t *nwSKey)</argsstring>
+        <name>LoRaDevice_SetNwSKey</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>nwSKey</declname>
+        </param>
+        <briefdescription>
+<para>sets the network session key for encryption of frames to the network server. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pointer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to 128bit network session key</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="366" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga6e8261b63ce880fac2ce5e29cbc96895" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetRadioBandwidth</definition>
+        <argsstring>(uint16_t bandWidth_kHz)</argsstring>
+        <name>LoRaDevice_SetRadioBandwidth</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>bandWidth_kHz</declname>
+        </param>
+        <briefdescription>
+<para>Set the value used for the radio bandwidth. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bandWidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Radio transmission bandwidth value in kHz e.g 125, 250, 500. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="784" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga19861f2c49000dc86ff3f84f12f2a28d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetRadioCodingRate</definition>
+        <argsstring>(char *codingRate)</argsstring>
+        <name>LoRaDevice_SetRadioCodingRate</name>
+        <param>
+          <type>char *</type>
+          <declname>codingRate</declname>
+        </param>
+        <briefdescription>
+<para>Set the coding rate used by the radio. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>codingRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the string representing the coding rate to be set </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="770" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga97a9588b143a3577c6705ce8b581ebb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetRadioCRC</definition>
+        <argsstring>(bool crc)</argsstring>
+        <name>LoRaDevice_SetRadioCRC</name>
+        <param>
+          <type>bool</type>
+          <declname>crc</declname>
+        </param>
+        <briefdescription>
+<para>Enables or disables the use of CRC header. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>crc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set to true if CRC is to be enabled, set to false otherwise </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="755" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga60a26881701e240f37e66a958ecc5300" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetRadioFrequency</definition>
+        <argsstring>(uint32_t frequency_Hz)</argsstring>
+        <name>LoRaDevice_SetRadioFrequency</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>frequency_Hz</declname>
+        </param>
+        <briefdescription>
+<para>Sets the Frequency used for transmission by the radio transceiver. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>frequency_Hz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frequency to be used </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="798" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga6ab776f806f778b9d76dfa35f2dd59bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetRadioPreambleLength</definition>
+        <argsstring>(uint16_t preamble)</argsstring>
+        <name>LoRaDevice_SetRadioPreambleLength</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>preamble</declname>
+        </param>
+        <briefdescription>
+<para>Sets the length of the preamble used for the radio transceiver. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>preamble</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Preamble length from 0 to 65535. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="741" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga10792e7b535d23ff18e67b0960dd96ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetRadioSpreadingFactor</definition>
+        <argsstring>(uint8_t sf)</argsstring>
+        <name>LoRaDevice_SetRadioSpreadingFactor</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>sf</declname>
+        </param>
+        <briefdescription>
+<para>Sets the spreading factor to be used for the next radio transmission. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>spreading factor value e.g. for sf9 the input parameter is 9 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="712" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga737b4cb09cde841e8f757915e4d43770" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetRadioTxPower</definition>
+        <argsstring>(int8_t pwrout)</argsstring>
+        <name>LoRaDevice_SetRadioTxPower</name>
+        <param>
+          <type>int8_t</type>
+          <declname>pwrout</declname>
+        </param>
+        <briefdescription>
+<para>Sets the radio Transmission power used for transmitting packets in FSK modulation mode. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pwrout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>signed decimal number representing the transceiver output power from -3 to 15. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="698" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gaa35575a0e49618289f12d90de5ed69e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetRetransmissions</definition>
+        <argsstring>(uint8_t retx)</argsstring>
+        <name>LoRaDevice_SetRetransmissions</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>retx</declname>
+        </param>
+        <briefdescription>
+<para>Sets the number of retransmissions to be used for an uplink confirmed packet. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>retx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of retransmissions before returning error </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="437" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga92ba08f8d91c8ace17097a282b81d5f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetRxDelay</definition>
+        <argsstring>(uint16_t rxDelay_ms)</argsstring>
+        <name>LoRaDevice_SetRxDelay</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>rxDelay_ms</declname>
+        </param>
+        <briefdescription>
+<para>Sets the delay between the transmission and the first reception window. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rxDelay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>delay value in ms </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="511" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga8f51e73f98c01ddbcfc57f9f268a48b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetRxWindow2</definition>
+        <argsstring>(uint32_t dataRate, uint32_t frequency_Hz)</argsstring>
+        <name>LoRaDevice_SetRxWindow2</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>dataRate</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>frequency_Hz</declname>
+        </param>
+        <briefdescription>
+<para>Sets the data rate and frequency used for the second Receive window. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data rate value according to loraWAN spec </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frequency_Hz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frequency value in Hz </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="526" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga2c2e88f25cf9f133ff258dbff34223ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetRxWindowDelay</definition>
+        <argsstring>(uint32_t rxDelay1, uint32_t rxDelay2)</argsstring>
+        <name>LoRaDevice_SetRxWindowDelay</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>rxDelay1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>rxDelay2</declname>
+        </param>
+        <briefdescription>
+<para>Sets the delay between the transmission and reception window&apos;s. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rxDelay1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>delay value in µs </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rxDelay2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>delay value in µs </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="840" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga99ef765e1e7b55073d2e562578e0cd8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetSyncWord</definition>
+        <argsstring>(uint8_t sync)</argsstring>
+        <name>LoRaDevice_SetSyncWord</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>sync</declname>
+        </param>
+        <briefdescription>
+<para>Sets the synchronization word for the LoRaWAN™ communication. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sync</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>one byte long hexadecimal number representing the synchronization word for the LoRaWAN communication </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="467" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga7127b1b4f9dff3b28ac944f0bdf0411a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SetTxPower</definition>
+        <argsstring>(LoRaDeviceTxPower_T pwr)</argsstring>
+        <name>LoRaDevice_SetTxPower</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga51def5b8e2255675d19e3feb4443084d" kindref="member">LoRaDeviceTxPower_T</ref></type>
+          <declname>pwr</declname>
+        </param>
+        <briefdescription>
+<para>Sets the Radio transmit power. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>TX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>power to be used for sending radio signals </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="373" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga0c738b5e79f213734a686c139819a746" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_Sleep</definition>
+        <argsstring>(uint32_t duration_ms)</argsstring>
+        <name>LoRaDevice_Sleep</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>duration_ms</declname>
+        </param>
+        <briefdescription>
+<para>Puts the LoRa module in sleep mode. </para>        </briefdescription>
+        <detaileddescription>
+<para>the command puts the module in sleep mode for the specified time duration and will return after the module has been waken up or if there has been an error <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>duration_ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time duration to sleep in ms </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK if the module is waken up error code othrewise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="822" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1gad0ea4c67dc9e01e3600799bd1837c724" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SwitchOFF</definition>
+        <argsstring>(void)</argsstring>
+        <name>LoRaDevice_SwitchOFF</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Switches OFF the LoRa module. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function performs the low level operations in order to power OFF * the module and release the physical link (SPI, UART, I2C,...) to the main CPU.</para><para><simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="228" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga74ed5052f6e81b6f9bb82377920411d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_SwitchON</definition>
+        <argsstring>(void)</argsstring>
+        <name>LoRaDevice_SwitchON</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Switches ON the LoRa module. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function performs the low level operations in order to power ON the module and establish the physical link (SPI, UART, I2C,...) between the main CPU and the LoRa device.</para><para><simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="218" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga391a42333bf8620ec737eab69401431f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T LoRaDevice_Wakeup</definition>
+        <argsstring>(void)</argsstring>
+        <name>LoRaDevice_Wakeup</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Wake up the module from sleep. </para>        </briefdescription>
+        <detaileddescription>
+<para>if the module is in sleep mode a call to this function will wake it up. <simplesect kind="note"><para>In order to wake up the module this function has to be called from within the context of a task other than the one that called <ref refid="group___b_c_d_s___l_o_r_a_d_e_v_i_c_e_1ga0c738b5e79f213734a686c139819a746" kindref="member">LoRaDevice_Sleep()</ref>. </para></simplesect>
+<simplesect kind="return"><para>RETCODE_OK in case of success error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/LoRaDrivers/include/BCDS_LoRaDevice.h" line="832" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file defines the Application programming interface for a LoRa. </para>    </briefdescription>
+    <detaileddescription>
+<para>Interface header for the LoRa file.</para><para>This file defines the Application programming interface for a LoRa module The current API follows the LoRaWAN Specification V1.0.1</para><para>The functions specified herein should be implemented for each new module (if possible).</para><para>The user of this API has to check if the functions have been implemented for the intended hardware</para><para>The interface header exports the following features:<itemizedlist>
+<listitem><para>LoRa_Initialize</para></listitem><listitem><para>LoRa_Join</para></listitem><listitem><para>LoRa_TransmitData</para></listitem><listitem><para>LoRa_Deinitialize </para></listitem></itemizedlist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

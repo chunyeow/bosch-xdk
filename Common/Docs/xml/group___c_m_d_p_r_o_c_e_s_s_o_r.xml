@@ -1,0 +1,683 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___c_m_d_p_r_o_c_e_s_s_o_r" kind="group">
+    <compoundname>CMDPROCESSOR</compoundname>
+    <title>CmdProcessor</title>
+    <innerfile refid="_b_c_d_s___cmd_processor_8h">BCDS_CmdProcessor.h</innerfile>
+    <innerclass refid="struct___cmd_processor___s" prot="public">_CmdProcessor_S</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga0c065ba29c60a18867aa3a6f117695c6" prot="public" static="no">
+        <name>CmdProcessor_Retcode_E</name>
+        <enumvalue id="group___c_m_d_p_r_o_c_e_s_s_o_r_1gga0c065ba29c60a18867aa3a6f117695c6a94edf245da7be15b75daceb796535664" prot="public">
+          <name>CMDPROCESSOR_RETCODE_QUEUE_FULL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___c_m_d_p_r_o_c_e_s_s_o_r_1gga0c065ba29c60a18867aa3a6f117695c6ab51f8e91db3201e3c7fc85555ec29ad7" prot="public">
+          <name>CMDPROCESSOR_RETCODE_QUEUE_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>enums to represent the return status of a command processor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CmdProcessor.h" line="124" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CmdProcessor.h" bodystart="123" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga9539281f742143f5739187834c54ba3b" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* CmdProcessor_Func_T)(void *param1, uint32_t param2)</definition>
+        <argsstring>)(void *param1, uint32_t param2)</argsstring>
+        <name>CmdProcessor_Func_T</name>
+        <briefdescription>
+<para>This data type represents a function pointer for the functions which can be handled by the command processor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The return value of the command processor function is void. Exceptions must be handled within the function itself.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- a generic pointer to any context data structure which will be passed to the function when it is invoked by the command processor. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- a generic 32 bit value which will be passed to the function when it is invoked by the command processor.. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CmdProcessor.h" line="101" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CmdProcessor.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga41a2f220f03970c1857bd96528307a81" prot="public" static="no">
+        <type>struct <ref refid="struct___cmd_processor___s" kindref="compound">_CmdProcessor_S</ref></type>
+        <definition>typedef struct _CmdProcessor_S CmdProcessor_T</definition>
+        <argsstring></argsstring>
+        <name>CmdProcessor_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The Command Processor handle data type. The structure itself is hidden in the source file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CmdProcessor.h" line="105" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CmdProcessor.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___c_m_d_p_r_o_c_e_s_s_o_r_1gac8d785005d691180b9449c846d60fc9f" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* cmdProcessorQueueHandle_t</definition>
+        <argsstring></argsstring>
+        <name>cmdProcessorQueueHandle_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CmdProcessor.h" line="105" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CmdProcessor.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___c_m_d_p_r_o_c_e_s_s_o_r_1gab058d4801f1f10b058a5b0031fb5e346" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* cmdProcessorTaskHandle_t</definition>
+        <argsstring></argsstring>
+        <name>cmdProcessorTaskHandle_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CmdProcessor.h" line="103" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CmdProcessor.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga2afba351d70204738d6354ef479e30fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BCDS_DEPRECATED</definition>
+        <argsstring>(Retcode_T CmdProcessor_initialize(CmdProcessor_T *cmdProcessor, char *name, uint32_t taskPriority, uint32_t taskStackDepth, uint32_t queueSize))</argsstring>
+        <name>BCDS_DEPRECATED</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref> </type>
+          <declname>CmdProcessor_initialize</declname>
+          <array>CmdProcessor_T *cmdProcessor, char *name, uint32_t taskPriority, uint32_t taskStackDepth, uint32_t queueSize</array>
+        </param>
+        <briefdescription>
+<para>This function initializes the command processor instance. It creates a queue which will carry the command functions and a task which will process the queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000005"><xreftitle>Deprecated</xreftitle><xrefdescription><para>since version vxx.xx.xx, replaced by <ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga2d76af33024f60e7bf8615e9dec40b4a" kindref="member">CmdProcessor_Initialize</ref> </para></xrefdescription></xrefsect></para><para><programlisting><codeline><highlight class="normal"><ref refid="struct___cmd_processor___s" kindref="compound">CmdProcessor_T</ref><sp/>*cmdProcessor<sp/>=<sp/>CmdProcessor_getSingleton();</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga2d76af33024f60e7bf8615e9dec40b4a" kindref="member">CmdProcessor_Initialize</ref>(&amp;cmdProcessor,<sp/></highlight><highlight class="stringliteral">&quot;AppCmdProcessor&quot;</highlight><highlight class="normal">,<sp/>...);</highlight></codeline>
+</programlisting></para><para><simplesect kind="note"><para>Please take care while assigning the priority to command processor task, it should be less than scheduler timer task priority. Command processor does not support the delegation from ISR because it falls under the application tasks and application task should be operated at least priority compare to ISR and RTOS(timer service).</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cmdProcessor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- contains the queue and task handles </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- represents the task name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">taskPriority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- represents the task priority </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">taskStackDepth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Represents the stack Size for the task </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">queueSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Represents the queue Size</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the queue is created successfully </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the task or queue is not created </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CmdProcessor.h" line="235" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_m_d_p_r_o_c_e_s_s_o_r_1gab0505641e4b3ee8374bab204691e4a9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BCDS_DEPRECATED</definition>
+        <argsstring>(Retcode_T CmdProcessor_enqueue(CmdProcessor_T *cmdProcessor, CmdProcessor_Func_T func, void *param1, uint32_t param2))</argsstring>
+        <name>BCDS_DEPRECATED</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref> </type>
+          <declname>CmdProcessor_enqueue</declname>
+          <defname>CmdProcessor_enqueueFromIsr</defname>
+          <array>CmdProcessor_T *cmdProcessor, CmdProcessor_Func_T func, void *param1, uint32_t param2</array>
+        </param>
+        <briefdescription>
+<para>This routine is used to hand-over a function to the command processor for execution. The function is added to the queue which is processed in a FIFO manner. </para>        </briefdescription>
+        <detaileddescription>
+<para>This routine is used to hand-over a function to the command processor from ISR context. The function is added to the queue which is processed in a FIFO manner.</para><para><xrefsect id="deprecated_1_deprecated000006"><xreftitle>Deprecated</xreftitle><xrefdescription><para>since version vxx.xx.xx, replaced by <ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e" kindref="member">CmdProcessor_Enqueue</ref> </para></xrefdescription></xrefsect></para><para><simplesect kind="warning"><para>This routine should be called after CmdProcessor_Initialize function. Hand-over Function prototype should be same as cmdprocess_fun_t</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cmdProcessor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- contains the queue handle </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- represents the function </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- a generic pointer to an arbitrary context data structure which will be passed to the function when it is invoked by the command processor. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- second argument of the function</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the function is pushed successfully into the queue </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when cmdProcessor or function pointers is NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the queue is full</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="deprecated_1_deprecated000007"><xreftitle>Deprecated</xreftitle><xrefdescription><para>since version vxx.xx.xx, replaced by <ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga6ac2f907469b3a4614c6884ff7fec8fa" kindref="member">CmdProcessor_EnqueueFromIsr</ref> </para></xrefdescription></xrefsect></para><para><simplesect kind="warning"><para>This routine should be called after cmdprocessor_intitialize function. Hand-over Function prototype should be same as cmdprocess_fun_t</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cmdProcessor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- contains the queue handle </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- represents the function </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- a generic pointer to an arbitrary context data structure which will be passed to the function when it is invoked by the command processor. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- second argument of the function</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the function is pushed successfully into the queue </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when cmdProcessor or function pointers is NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the queue is full </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CmdProcessor.h" line="256" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_m_d_p_r_o_c_e_s_s_o_r_1gaf1a8e6e48af417d56cecdaa7bc60193e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BCDS_DEPRECATED</definition>
+        <argsstring>(void CmdProcessor_suspend(CmdProcessor_T *cmdProcessor))</argsstring>
+        <name>BCDS_DEPRECATED</name>
+        <param>
+          <type>void </type>
+          <declname>CmdProcessor_suspend</declname>
+          <defname>CmdProcessor_resume</defname>
+          <array>CmdProcessor_T *cmdProcessor</array>
+        </param>
+        <briefdescription>
+<para>The API suspends the command processor service. It is used to stop the execution of the command processor task functionality. </para>        </briefdescription>
+        <detaileddescription>
+<para>The API resumes the command processor service. It is used to execute the suspended command processor task functionality.</para><para><xrefsect id="deprecated_1_deprecated000008"><xreftitle>Deprecated</xreftitle><xrefdescription><para>since version vxx.xx.xx, replaced by <ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga9dc54a29327ff6e29b7299d2a0822acf" kindref="member">CmdProcessor_Suspend</ref> </para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cmdProcessor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Holds the command processor task handle</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="deprecated_1_deprecated000009"><xreftitle>Deprecated</xreftitle><xrefdescription><para>since version vxx.xx.xx, replaced by <ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1gaf027da53fd8f1256e35499516062e087" kindref="member">CmdProcessor_Resume</ref> </para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cmdProcessor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Holds the command processor task handle </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CmdProcessor.h" line="288" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T CmdProcessor_Enqueue</definition>
+        <argsstring>(CmdProcessor_T *cmdProcessor, CmdProcessor_Func_T func, void *param1, uint32_t param2)</argsstring>
+        <name>CmdProcessor_Enqueue</name>
+        <param>
+          <type><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga41a2f220f03970c1857bd96528307a81" kindref="member">CmdProcessor_T</ref> *</type>
+          <declname>cmdProcessor</declname>
+        </param>
+        <param>
+          <type><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga9539281f742143f5739187834c54ba3b" kindref="member">CmdProcessor_Func_T</ref></type>
+          <declname>func</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>This routine is used to hand-over a function to the command processor for execution. The function is added to the queue which is processed in a FIFO manner. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>This routine should be called after cmdprocessor_intitialize function. Hand-over Function prototype should be same as cmdprocess_fun_t</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cmdProcessor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- contains the queue handle </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- represents the function </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- a generic pointer to an arbitrary context data structure which will be passed to the function when it is invoked by the command processor. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- second argument of the function</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the function is pushed successfully into the queue </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when cmdProcessor or function pointers is NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the queue is full </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CmdProcessor.h" line="170" column="1"/>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gab69e900037ff919feff8de34718fd2f5" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="552" endline="721">AppControllerFire</referencedby>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="742" endline="796">AppControllerEnable</referencedby>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="817" endline="870">AppControllerSetup</referencedby>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga22919ee3de6947c4b6616a9231e71f67" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="875" endline="897">AppController_Init</referencedby>
+        <referencedby refid="group___s_e_n_d___a_c_c_e_l_e_r_o_m_e_t_e_r___d_a_t_a___o_v_e_r___u_d_p___a_n_d___b_l_e_1ga4035bea80e1ce048a57881a3014ddfaf" compoundref="_send_accel_data_over_udp_and_ble_2source_2_app_controller_8c" startline="295" endline="326">AppControllerBleDataRxCB</referencedby>
+        <referencedby refid="_aws_send_data_over_m_q_t_t_2source_2_main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="_aws_send_data_over_m_q_t_t_2source_2_main_8c" startline="62" endline="94">main</referencedby>
+        <referencedby refid="group___x_d_k___extension___port___uart_1gaed559533f3c61e36a11ac7c105a92cda" compoundref="_extension_uart_example_8c" startline="97" endline="105">ProcessUartTxData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga6ac2f907469b3a4614c6884ff7fec8fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T CmdProcessor_EnqueueFromIsr</definition>
+        <argsstring>(CmdProcessor_T *cmdProcessor, CmdProcessor_Func_T func, void *param1, uint32_t param2)</argsstring>
+        <name>CmdProcessor_EnqueueFromIsr</name>
+        <param>
+          <type><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga41a2f220f03970c1857bd96528307a81" kindref="member">CmdProcessor_T</ref> *</type>
+          <declname>cmdProcessor</declname>
+        </param>
+        <param>
+          <type><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga9539281f742143f5739187834c54ba3b" kindref="member">CmdProcessor_Func_T</ref></type>
+          <declname>func</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>This routine is used to hand-over a function to the command processor from ISR context. The function is added to the queue which is processed in a FIFO manner. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>This routine should be called after cmdprocessor_intitialize function. Hand-over Function prototype should be same as cmdprocess_fun_t</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cmdProcessor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- contains the queue handle </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- represents the function </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- a generic pointer to an arbitrary context data structure which will be passed to the function when it is invoked by the command processor. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- second argument of the function</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the function is pushed successfully into the queue </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when cmdProcessor or function pointers is NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the queue is full </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CmdProcessor.h" line="188" column="1"/>
+        <referencedby refid="group___x_d_k___extension___port___gpio_1ga0d2eec702f3954283fae072c87abaf27" compoundref="_extension_gpio_example_8c" startline="100" endline="116">GpioInterruptCallback</referencedby>
+        <referencedby refid="group___x_d_k___extension___port___uart_1ga785a2158f05b7b5f73d90c39096bac6c" compoundref="_extension_uart_example_8c" startline="138" endline="153">UartAppCallback</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga2d76af33024f60e7bf8615e9dec40b4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T CmdProcessor_Initialize</definition>
+        <argsstring>(CmdProcessor_T *cmdProcessor, char *name, uint32_t taskPriority, uint32_t taskStackDepth, uint32_t queueSize)</argsstring>
+        <name>CmdProcessor_Initialize</name>
+        <param>
+          <type><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga41a2f220f03970c1857bd96528307a81" kindref="member">CmdProcessor_T</ref> *</type>
+          <declname>cmdProcessor</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>taskPriority</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>taskStackDepth</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>queueSize</declname>
+        </param>
+        <briefdescription>
+<para>This function initializes the command processor instance. It creates a queue which will carry the command functions and a task which will process the queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal"><ref refid="struct___cmd_processor___s" kindref="compound">CmdProcessor_T</ref><sp/>*cmdProcessor<sp/>=<sp/>CmdProcessor_getSingleton();</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga2d76af33024f60e7bf8615e9dec40b4a" kindref="member">CmdProcessor_Initialize</ref>(&amp;cmdProcessor,<sp/></highlight><highlight class="stringliteral">&quot;AppCmdProcessor&quot;</highlight><highlight class="normal">,<sp/>...);</highlight></codeline>
+</programlisting></para><para><simplesect kind="note"><para>Please take care while assigning the priority to command processor task, it should be less than scheduler timer task priority. Command processor does not support the delegation from ISR because it falls under the application tasks and application task should be operated at least priority compare to ISR and RTOS(timer service).</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cmdProcessor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- contains the queue and task handles </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- represents the task name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">taskPriority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- represents the task priority </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">taskStackDepth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Represents the stack Size for the task </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">queueSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Represents the queue Size</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the queue is created successfully </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the task or queue is not created </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CmdProcessor.h" line="152" column="1"/>
+        <referencedby refid="_aws_send_data_over_m_q_t_t_2source_2_main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="_aws_send_data_over_m_q_t_t_2source_2_main_8c" startline="62" endline="94">main</referencedby>
+        <referencedby refid="_serval_p_a_l___wi_fi_8c_1a4cc092ffe9dfb657a1ce0e9de7067938" compoundref="_serval_p_a_l___wi_fi_8c" startline="75" endline="85">ServalPalSetup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___c_m_d_p_r_o_c_e_s_s_o_r_1gaf027da53fd8f1256e35499516062e087" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CmdProcessor_Resume</definition>
+        <argsstring>(CmdProcessor_T *cmdProcessor)</argsstring>
+        <name>CmdProcessor_Resume</name>
+        <param>
+          <type><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga41a2f220f03970c1857bd96528307a81" kindref="member">CmdProcessor_T</ref> *</type>
+          <declname>cmdProcessor</declname>
+        </param>
+        <briefdescription>
+<para>The API resumes the command processor service. It is used to execute the suspended command processor task functionality. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cmdProcessor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Holds the command processor task handle </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CmdProcessor.h" line="207" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga9dc54a29327ff6e29b7299d2a0822acf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CmdProcessor_Suspend</definition>
+        <argsstring>(CmdProcessor_T *cmdProcessor)</argsstring>
+        <name>CmdProcessor_Suspend</name>
+        <param>
+          <type><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga41a2f220f03970c1857bd96528307a81" kindref="member">CmdProcessor_T</ref> *</type>
+          <declname>cmdProcessor</declname>
+        </param>
+        <briefdescription>
+<para>The API suspends the command processor service. It is used to stop the execution of the command processor task functionality. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cmdProcessor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Holds the command processor task handle </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CmdProcessor.h" line="198" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___c_m_d_p_r_o_c_e_s_s_o_r_1gad8556410c5caee8856dbab7f9c81b16b" prot="public" static="no">
+        <name>CMDPROCESSOR_MAX_NAME_LEN</name>
+        <initializer>UINT32_C(32)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum length of command processor task name including 0 termination char </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CmdProcessor.h" line="90" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_CmdProcessor.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Handles the execution of enqueued commands. </para>    </briefdescription>
+    <detaileddescription>
+<para>Command processor module has a task, to executes the next function from the queue. This function is enqueued by the application using the command enqueue function</para><para>Example usage: <programlisting><codeline><highlight class="normal">//<sp/>function<sp/>to<sp/>load<sp/>in<sp/>queue</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>AppFunc(void<sp/>*<sp/>,<sp/>uint32_t<sp/>param)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>do<sp/>some<sp/>functionality</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>main(void)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Intialize<sp/>the<sp/>command<sp/>processor</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>CmdProcessor_Initialize(&amp;cmdprocessor,&quot;&lt;taskname&gt;&quot;,priority,<sp/>stack_size,queue_size);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//create<sp/>a<sp/>timer<sp/>task</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>OS_timerCreate(timer,<sp/>10,pdTRUE<sp/>,NULL,<sp/>vTimerCallback);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Timer<sp/>call<sp/>back<sp/>function<sp/>to<sp/>load<sp/>application<sp/>function<sp/>in<sp/>queue</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>vTimerCallback(<sp/>OS_timerHandle_tp<sp/>pxTimer<sp/>)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>CmdProcessor_enqueue(&amp;CmdProcessor,&amp;AppFunc,<sp/>NULL,<sp/>NULL);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,345 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_b_c_d_s___ring_buffer_8h" kind="file">
+    <compoundname>BCDS_RingBuffer.h</compoundname>
+    <includes refid="_b_c_d_s___utils_8h" local="yes">BCDS_Utils.h</includes>
+    <includes refid="_b_c_d_s___basics_8h" local="yes">BCDS_Basics.h</includes>
+    <includedby refid="_b_c_d_s___u_a_r_t_transceiver_8h" local="yes">SDK/xdk110/Platform/Utils/include/BCDS_UARTTransceiver.h</includedby>
+    <incdepgraph>
+      <node id="39524">
+        <label>stdbool.h</label>
+      </node>
+      <node id="39523">
+        <label>stdint.h</label>
+      </node>
+      <node id="39521">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="39522" relation="include">
+        </childnode>
+      </node>
+      <node id="39526">
+        <label>stdlib.h</label>
+      </node>
+      <node id="39518">
+        <label>SDK/xdk110/Platform/Utils/include/BCDS_RingBuffer.h</label>
+        <link refid="BCDS_RingBuffer.h"/>
+        <childnode refid="39519" relation="include">
+        </childnode>
+        <childnode refid="39522" relation="include">
+        </childnode>
+      </node>
+      <node id="39520">
+        <label>BCDS_UtilsConfig.h</label>
+        <link refid="_b_c_d_s___utils_config_8h"/>
+      </node>
+      <node id="39525">
+        <label>string.h</label>
+      </node>
+      <node id="39519">
+        <label>BCDS_Utils.h</label>
+        <link refid="_b_c_d_s___utils_8h"/>
+        <childnode refid="39520" relation="include">
+        </childnode>
+        <childnode refid="39521" relation="include">
+        </childnode>
+      </node>
+      <node id="39522">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="39523" relation="include">
+        </childnode>
+        <childnode refid="39524" relation="include">
+        </childnode>
+        <childnode refid="39525" relation="include">
+        </childnode>
+        <childnode refid="39526" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="39527">
+        <label>SDK/xdk110/Platform/Utils/include/BCDS_RingBuffer.h</label>
+        <link refid="BCDS_RingBuffer.h"/>
+        <childnode refid="39528" relation="include">
+        </childnode>
+      </node>
+      <node id="39529">
+        <label>SDK/xdk110/Apps/XdkExtensionPort/source/ExtensionUartExample.c</label>
+        <link refid="_extension_uart_example_8c"/>
+      </node>
+      <node id="39528">
+        <label>SDK/xdk110/Platform/Utils/include/BCDS_UARTTransceiver.h</label>
+        <link refid="_b_c_d_s___u_a_r_t_transceiver_8h"/>
+        <childnode refid="39529" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_ring_buffer___s" prot="public">RingBuffer_S</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___r_i_n_g_b_u_f_f_e_r_1ga94f9784a0739428ba99a3b5a9a3a4fb3" prot="public" static="no">
+        <type>struct <ref refid="struct_ring_buffer___s" kindref="compound">RingBuffer_S</ref></type>
+        <definition>typedef struct RingBuffer_S  RingBuffer_T</definition>
+        <argsstring></argsstring>
+        <name>RingBuffer_T</name>
+        <briefdescription>
+<para>Describes a circular buffer - this implementation expects a single consumer and a single producer. </para>        </briefdescription>
+        <detaileddescription>
+<para>Reading and writing to the buffer can be done independently. The read function only returns data unless the buffer is empty The write function only writes data when the buffer is not full.</para><para>Definition:<itemizedlist>
+<listitem><para>WriteIndex: the location where data is stored to</para></listitem><listitem><para>ReadIndex: the location from where to read from </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_RingBuffer.h" line="80" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___r_i_n_g_b_u_f_f_e_r_1ga4060ee5ec8e5980901c33b757c61e6f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RingBuffer_Initialize</definition>
+        <argsstring>(RingBuffer_T *ringBuffer, uint8_t *bufferSpace, uint32_t size)</argsstring>
+        <name>RingBuffer_Initialize</name>
+        <param>
+          <type><ref refid="group___r_i_n_g_b_u_f_f_e_r_1ga94f9784a0739428ba99a3b5a9a3a4fb3" kindref="member">RingBuffer_T</ref> *</type>
+          <declname>ringBuffer</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>bufferSpace</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a ring-buffer to empty state with a given buffer and buffer size. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ringBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the ring-buffer descriptor. MUST NOT be NULL</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bufferSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the circular buffer. This buffer must be created and maintained by the caller. The reason the buffer is separate from the descriptor is to allow for buffers of different sizes while using the same descriptor to manage any buffer MUST NOT be NULL</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the circular buffer. Must be known to the caller and will get stored inside the descriptor. MUST BE &gt; 1 NOTE: the actual number of bytes that can be stored is size -1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_RingBuffer.h" line="102" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___r_i_n_g_b_u_f_f_e_r_1gaf37dbfacbc836229fc519734cc247f8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t RingBuffer_Read</definition>
+        <argsstring>(RingBuffer_T *ringBuffer, uint8_t *data, uint32_t length)</argsstring>
+        <name>RingBuffer_Read</name>
+        <param>
+          <type><ref refid="group___r_i_n_g_b_u_f_f_e_r_1ga94f9784a0739428ba99a3b5a9a3a4fb3" kindref="member">RingBuffer_T</ref> *</type>
+          <declname>ringBuffer</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Removes the specified number of bytes from the circular buffer and stores them in the user supplied buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The number of bytes may be different depending on the actual fill-level of the buffer.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ringBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the ring-buffer descriptor MUST NOT be NULL</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the user supplied buffer into which the data has to be copied. Must be large enough to hold the specific number of bytes MUST NOT be NULL</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to copy</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Actual number of bytes read </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_RingBuffer.h" line="154" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___r_i_n_g_b_u_f_f_e_r_1gab79bade4e874f57df2d9675ea3e2de43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RingBuffer_Reset</definition>
+        <argsstring>(RingBuffer_T *ringBuffer)</argsstring>
+        <name>RingBuffer_Reset</name>
+        <param>
+          <type><ref refid="group___r_i_n_g_b_u_f_f_e_r_1ga94f9784a0739428ba99a3b5a9a3a4fb3" kindref="member">RingBuffer_T</ref> *</type>
+          <declname>ringBuffer</declname>
+        </param>
+        <briefdescription>
+<para>Resets the ring-buffer. All the saved / available data will be lost, if any at the time of trigger. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>We do not guard the buffer. Application is expected to take care of this if needed.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ringBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the ring-buffer descriptor MUST NOT be NULL </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_RingBuffer.h" line="171" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___r_i_n_g_b_u_f_f_e_r_1gaa11997ed9964ebc717d349672904ca47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t RingBuffer_Write</definition>
+        <argsstring>(RingBuffer_T *ringBuffer, uint8_t *data, uint32_t length)</argsstring>
+        <name>RingBuffer_Write</name>
+        <param>
+          <type><ref refid="group___r_i_n_g_b_u_f_f_e_r_1ga94f9784a0739428ba99a3b5a9a3a4fb3" kindref="member">RingBuffer_T</ref> *</type>
+          <declname>ringBuffer</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Copies specified number of bytes into the circular buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The actual number of bytes written may be different depending on the fill-level of the buffer.</para></simplesect>
+<simplesect kind="note"><para>It is the responsibility of the interface user to provide valid input parameters. Since this API is often used in ISR context, we minimize the internal validations.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ringBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the ring-buffer descriptor</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+MUST NOT be NULL</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the user data that is to be copied into the circular buffer MUST NOT be NULL</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to copy</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>actual number of bytes written </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_RingBuffer.h" line="129" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor">#ifndef<sp/>BCDS_RINGBUFFER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BCDS_RINGBUFFER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___utils_8h" kindref="compound">BCDS_Utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>BCDS_FEATURE_RINGBUFFER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___basics_8h" kindref="compound">BCDS_Basics.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="struct_ring_buffer___s" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_ring_buffer___s" kindref="compound">RingBuffer_S</ref></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76" refid="struct_ring_buffer___s_1ab7ff22daf6a04843985a9f7cedb68cf2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*<sp/><ref refid="struct_ring_buffer___s_1ab7ff22daf6a04843985a9f7cedb68cf2" kindref="member">Base</ref>;<sp/></highlight></codeline>
+<codeline lineno="77" refid="struct_ring_buffer___s_1ab88b95bfc0010b1d562fc7f8dfd1d0e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_ring_buffer___s_1ab88b95bfc0010b1d562fc7f8dfd1d0e2" kindref="member">WriteIndex</ref>;<sp/></highlight></codeline>
+<codeline lineno="78" refid="struct_ring_buffer___s_1a956de4cb100bc7250bb58f2be83ba41d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_ring_buffer___s_1a956de4cb100bc7250bb58f2be83ba41d" kindref="member">ReadIndex</ref>;<sp/></highlight></codeline>
+<codeline lineno="79" refid="struct_ring_buffer___s_1a1f5ab05b3305a959d954b796c63807c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_ring_buffer___s_1a1f5ab05b3305a959d954b796c63807c4" kindref="member">Size</ref>;<sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}<sp/><ref refid="group___r_i_n_g_b_u_f_f_e_r_1ga94f9784a0739428ba99a3b5a9a3a4fb3" kindref="member">RingBuffer_T</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___r_i_n_g_b_u_f_f_e_r_1ga4060ee5ec8e5980901c33b757c61e6f3" kindref="member">RingBuffer_Initialize</ref>(<ref refid="struct_ring_buffer___s" kindref="compound">RingBuffer_T</ref><sp/>*<sp/>ringBuffer,<sp/>uint8_t<sp/>*<sp/>bufferSpace,<sp/>uint32_t<sp/>size);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal">uint32_t<sp/><ref refid="group___r_i_n_g_b_u_f_f_e_r_1gaa11997ed9964ebc717d349672904ca47" kindref="member">RingBuffer_Write</ref>(<ref refid="struct_ring_buffer___s" kindref="compound">RingBuffer_T</ref><sp/>*<sp/>ringBuffer,<sp/>uint8_t<sp/>*<sp/>data,<sp/>uint32_t<sp/>length);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal">uint32_t<sp/><ref refid="group___r_i_n_g_b_u_f_f_e_r_1gaf37dbfacbc836229fc519734cc247f8b" kindref="member">RingBuffer_Read</ref>(<ref refid="struct_ring_buffer___s" kindref="compound">RingBuffer_T</ref><sp/>*<sp/>ringBuffer,<sp/>uint8_t<sp/>*<sp/>data,<sp/>uint32_t<sp/>length);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___r_i_n_g_b_u_f_f_e_r_1gab79bade4e874f57df2d9675ea3e2de43" kindref="member">RingBuffer_Reset</ref>(<ref refid="struct_ring_buffer___s" kindref="compound">RingBuffer_T</ref><sp/>*ringBuffer);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>if<sp/>BCDS_FEATURE_RINGBUFFER<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>BCDS_RINGBUFFER_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_RingBuffer.h"/>
+  </compounddef>
+</doxygen>

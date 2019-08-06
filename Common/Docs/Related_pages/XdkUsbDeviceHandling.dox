@@ -1,0 +1,45 @@
+/** 
+@page XDK_USB_DEVICE_HANDLING XDK USB Device Handling
+@brief Outlines XDKs behaviour when connected via USB
+<hr>
+
+XDK is equipped with a micro USB port to connect it to the PC. This port is directly connected to the USB controller on the MCU of XDK and its function is hence dependant on the software running on XDK. XDK SDK defines a standard behaviour of the USB port and allows the user to send and receive data via USB.
+
+
+\section XDK_USB_DEVICE_HANDLING_CDC_ACM CDC ACM Device
+
+When connected to a PC, XDK is recognized as a CDC ACM Device. CDC stands for "communications device class", while ACM stands for "Abstract Control Model". Essentially, this means, that XDK emulates a serial port (so-called virtual serial port) over the USB connection. Operating Systems such as Mac OS X and Linux ship with standard drivers for such devices. For Windows, XDK Workbench automatically installs the necessary drivers. Windows assigns a port identifier "COMx" to XDK, where the number \c x is incremented when new devices are connected. Each XDK has a unique USB serial number. This ensures, that no matter which USB port of your PC you connect XDK to, the assigned port identifier will always be the same.
+
+When running software on XDK, issuing a \c printf command will send data over the virtual serial port. This can be used for simple debugging purposes as well as for sending data over the virtual serial port. Furthermore, the XDK SDK offers a @ref USB Module that also allows to receive data over the serial port. Using the function \c USB_callBackMapping, you can easily register a callback that is called when data is received over the virtual serial port.
+
+
+\section XDK_USB_DEVICE_HANDLING_RESET_REBOOT Reset / Reboot XDK
+
+As outlined in @ref XDK_Bootloader_Engage_1, XDK can receive commands from XDK Workbench over the virtual serial port. Commands are parsed and executed by the @ref URU module in XDK SDK. At the moment, XDK understands the following commands:
+
+Command  | Meaning                      
+---------|----------------------------------------
+#reBoot$ | Reboot XDK and go into bootloader mode
+#reSet$  | Reboot XDK and go into application mode
+
+Sending those commands to XDK via the virtual serial port will either get XDK into bootloader mode or restart XDK into application mode. When sending application data to XDK, please make sure not to use the reserved strings, as XDK might unexpectedly restart.
+
+
+\section XDK_USB_DEVICE_HANDLING_Terminal Using a Serial Terminal
+
+To communicate with XDK, a standard serial terminal application can be used. For example using the 3rd party [Tera Term](http://ttssh2.osdn.jp/index.html.en) allows to open the virtual serial port of XDK and communicate with XDK. Please make sure, that XDK Workbench should not run, when you want to communicate with XDK with a 3rd party program as the two might interfere with one another. When working with XDK, please also pay close attention to the problem outlined in @ref XDK_USB_DEVICE_HANDLING_Driver.
+
+To figure out what the port identifier of your XDK is, simply hover with your mouse over your XDK in XDK Workbench. A mouseover as shown in the picture will show up and give you the "COMx" identifier of your XDK.
+\image html XDK_USB_CDC_ACM_Port.png
+
+
+\section XDK_USB_DEVICE_HANDLING_Driver XDK Windows Driver
+
+Unfortunately, the driver for CDC ACM devices in Microsoft Windows (which is also used by XDK) misbehaves under certain circumstances. When a USB CDC ACM Device is connected and the respective port identifier is in use (by Tera Term for example) and then the device suddenly disappears, the drivers keeps the port identifier blocked. When the device reappears and the identifier is still in use, the device will not be usable. To work around this issue, the port as to be unused (e.g. by closing Tera Term) and the device has to be reconnected.
+
+\note Due to the design of XDKs USB interface, reboot or resetting XDK as well as switching it off and on again make the device disappear from Windows' perspective. 
+
+XDK Workbench works around this issue by closing the port identifier, whenever XDK is disappearing. However, 3rd party applications usually will not do this. So, whenever XDK disappears, please close your terminal session and restart it once XDK is available again.
+
+
+*/

@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___p_a_l__init" kind="group">
+    <compoundname>PAL_init</compoundname>
+    <title>PAL Initialize</title>
+    <innerfile refid="_p_a_l__initialize__ih_8h">PAL_initialize_ih.h</innerfile>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___p_a_l__init_1ga8358cacaefdc97458fa8986128af443f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_serval___types_8h_1a473797d61ec6d5f5a4f91d1d8b56b198" kindref="member">retcode_t</ref></type>
+        <definition>retcode_t PAL_getIpaddress</definition>
+        <argsstring>(uint8_t *URL, Ip_Address_T *destAddr)</argsstring>
+        <name>PAL_getIpaddress</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>URL</declname>
+        </param>
+        <param>
+          <type><ref refid="_p_ip_8h_1ac1d21d89ac985b0d00d1697d098a1d1e" kindref="member">Ip_Address_T</ref> *</type>
+          <declname>destAddr</declname>
+        </param>
+        <briefdescription>
+<para>This API returns back the IP address by the host name. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">URL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The string pointer holding the host name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">destAddr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The variable in which IP address to be stored</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="_serval___exceptions_8h_1a63c2b4e52d920a11ad698d49b6a47a80ab834a5bb2ce6d97c2831fe3d71103c14" kindref="member">RC_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- IP address returned successfully </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="_serval___exceptions_8h_1a63c2b4e52d920a11ad698d49b6a47a80a9b41dda9d9efb79764a8f4b88309e49b" kindref="member">RC_PLATFORM_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Error occurred in fetching the ip address </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/ServalPAL_WiFi/PAL_initialize_ih.h" line="92" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/source/ServalPAL_WiFi.c" bodystart="103" bodyend="114"/>
+        <references refid="_serval___exceptions_8h_1a63c2b4e52d920a11ad698d49b6a47a80ab834a5bb2ce6d97c2831fe3d71103c14" compoundref="_serval___exceptions_8h" startline="123">RC_OK</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_c_d_s___w_l_a_n___n_e_t_w_o_r_k___c_o_n_f_i_g_1ga08ed9de4517316c3744ada07ddb34dcf">WlanNetworkConfig_GetIpAddress</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="_serval___exceptions_8h_1a63c2b4e52d920a11ad698d49b6a47a80a9b41dda9d9efb79764a8f4b88309e49b" compoundref="_serval___exceptions_8h" startline="134">RC_PLATFORM_ERROR</references>
+      </memberdef>
+      <memberdef kind="function" id="group___p_a_l__init_1gaecc4b6dcb6a92b87073b02aac63f8790" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_serval___types_8h_1a473797d61ec6d5f5a4f91d1d8b56b198" kindref="member">retcode_t</ref></type>
+        <definition>retcode_t PAL_initialize</definition>
+        <argsstring>(void)</argsstring>
+        <name>PAL_initialize</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This API initializes the PAL modules required by the serval. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___p_a_l__init_1ga9cef378f37d2bf40e67b264bfc0fec0c" kindref="member">PAL_INITIALIZE_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- PAL was initialized successfully </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___p_a_l__init_1gaa9b27cb6bdc56fb1519cbabb389079bd" kindref="member">PAL_INITIALIZE_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Error occurred in initializing PAL </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/ServalPAL_WiFi/PAL_initialize_ih.h" line="80" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/source/ServalPAL_WiFi.c" bodystart="89" bodyend="101"/>
+        <references refid="_serval___exceptions_8h_1a63c2b4e52d920a11ad698d49b6a47a80ab834a5bb2ce6d97c2831fe3d71103c14" compoundref="_serval___exceptions_8h" startline="123">RC_OK</references>
+        <references refid="_serval_p_a_l___wi_fi_8c_1a4cc092ffe9dfb657a1ce0e9de7067938" compoundref="_serval_p_a_l___wi_fi_8c" startline="75" endline="85">ServalPalSetup</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="_serval___exceptions_8h_1a63c2b4e52d920a11ad698d49b6a47a80a9b41dda9d9efb79764a8f4b88309e49b" compoundref="_serval___exceptions_8h" startline="134">RC_PLATFORM_ERROR</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___p_a_l__init_1gaa9b27cb6bdc56fb1519cbabb389079bd" prot="public" static="no">
+        <name>PAL_INITIALIZE_ERROR</name>
+        <initializer>UINT8_C(1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Error occurred in initializing pal </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/ServalPAL_WiFi/PAL_initialize_ih.h" line="64" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/ServalPAL_WiFi/PAL_initialize_ih.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_a_l__init_1ga9cef378f37d2bf40e67b264bfc0fec0c" prot="public" static="no">
+        <name>PAL_INITIALIZE_SUCCESS</name>
+        <initializer>UINT8_C(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Error occurred in initializing pal </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/ServalPAL_WiFi/PAL_initialize_ih.h" line="63" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/ServalPAL_WiFi/PAL_initialize_ih.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_a_l__init_1gaf3df4ac2b35a3a4a118269c208af445e" prot="public" static="no">
+        <name>PAL_IP_ADDRESS_SIZE</name>
+        <initializer>UINT8_C(15)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum size of the ip address </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/ServalPAL_WiFi/PAL_initialize_ih.h" line="65" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/legacy/include/ServalPAL_WiFi/PAL_initialize_ih.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface header for the PAL_initialize module. </para>    </briefdescription>
+    <detaileddescription>
+<para>The interface header exports the High-level PAL API&apos;s to Initialize PAL &amp; PAL GetIPAddress. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="flowcont_8c" kind="file">
+    <compoundname>flowcont.c</compoundname>
+    <includes refid="simplelink_8h" local="yes">simplelink.h</includes>
+    <includes refid="protocol_8h" local="yes">protocol.h</includes>
+    <includes refid="driver_8h" local="yes">driver.h</includes>
+    <includes refid="flowcont_8h" local="yes">flowcont.h</includes>
+    <incdepgraph>
+      <node id="34285">
+        <label>netcfg.h</label>
+        <link refid="netcfg_8h"/>
+        <childnode refid="34276" relation="include">
+        </childnode>
+      </node>
+      <node id="34277">
+        <label>user.h</label>
+      </node>
+      <node id="34275">
+        <label>SDK/xdk110/Libraries/WiFi/3rd-party/TI/simplelink/source/flowcont.c</label>
+        <link refid="flowcont.c"/>
+        <childnode refid="34276" relation="include">
+        </childnode>
+        <childnode refid="34288" relation="include">
+        </childnode>
+        <childnode refid="34289" relation="include">
+        </childnode>
+        <childnode refid="34290" relation="include">
+        </childnode>
+      </node>
+      <node id="34290">
+        <label>flowcont.h</label>
+        <link refid="flowcont_8h"/>
+      </node>
+      <node id="34278">
+        <label>../source/objInclusion.h</label>
+        <link refid="obj_inclusion_8h"/>
+        <childnode refid="34276" relation="include">
+        </childnode>
+      </node>
+      <node id="34288">
+        <label>protocol.h</label>
+        <link refid="protocol_8h"/>
+      </node>
+      <node id="34280">
+        <label>fs.h</label>
+        <link refid="fs_8h"/>
+        <childnode refid="34276" relation="include">
+        </childnode>
+      </node>
+      <node id="34289">
+        <label>driver.h</label>
+        <link refid="driver_8h"/>
+      </node>
+      <node id="34287">
+        <label>../source/nonos.h</label>
+        <link refid="nonos_8h"/>
+      </node>
+      <node id="34286">
+        <label>wlan_rx_filters.h</label>
+        <link refid="wlan__rx__filters_8h"/>
+        <childnode refid="34276" relation="include">
+        </childnode>
+      </node>
+      <node id="34282">
+        <label>netapp.h</label>
+        <link refid="netapp_8h"/>
+        <childnode refid="34276" relation="include">
+        </childnode>
+      </node>
+      <node id="34283">
+        <label>wlan.h</label>
+        <link refid="_libraries_2_wi_fi_23rd-party_2_t_i_2simplelink_2include_2_w_l_a_n_8h"/>
+        <childnode refid="34276" relation="include">
+        </childnode>
+      </node>
+      <node id="34281">
+        <label>socket.h</label>
+        <link refid="socket_8h"/>
+        <childnode refid="34276" relation="include">
+        </childnode>
+      </node>
+      <node id="34284">
+        <label>device.h</label>
+        <link refid="device_8h"/>
+        <childnode refid="34276" relation="include">
+        </childnode>
+      </node>
+      <node id="34279">
+        <label>trace.h</label>
+        <link refid="trace_8h"/>
+        <childnode refid="34276" relation="include">
+        </childnode>
+      </node>
+      <node id="34276">
+        <label>simplelink.h</label>
+        <link refid="simplelink_8h"/>
+        <childnode refid="34277" relation="include">
+        </childnode>
+        <childnode refid="34278" relation="include">
+        </childnode>
+        <childnode refid="34279" relation="include">
+        </childnode>
+        <childnode refid="34280" relation="include">
+        </childnode>
+        <childnode refid="34281" relation="include">
+        </childnode>
+        <childnode refid="34282" relation="include">
+        </childnode>
+        <childnode refid="34283" relation="include">
+        </childnode>
+        <childnode refid="34284" relation="include">
+        </childnode>
+        <childnode refid="34285" relation="include">
+        </childnode>
+        <childnode refid="34286" relation="include">
+        </childnode>
+        <childnode refid="34287" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>flowcont.c<sp/>-<sp/>CC31xx/CC32xx<sp/>Host<sp/>Driver<sp/>Implementation</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2015<sp/>Texas<sp/>Instruments<sp/>Incorporated<sp/>-<sp/>http://www.ti.com/<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in<sp/>the<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>distribution.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>Neither<sp/>the<sp/>name<sp/>of<sp/>Texas<sp/>Instruments<sp/>Incorporated<sp/>nor<sp/>the<sp/>names<sp/>of</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>its<sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/><sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/><sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>COPYRIGHT<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/><sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,<sp/>INCIDENTAL,<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/><sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/><sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/><sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/><sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/><sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Include<sp/>files<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="simplelink_8h" kindref="compound">simplelink.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="protocol_8h" kindref="compound">protocol.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="driver_8h" kindref="compound">driver.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="flowcont_8h" kindref="compound">flowcont.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>_SlDrvFlowContInit<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>_SlDrvFlowContInit(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="driver_8c_1a4b8ef9e93bdf76f67c2619d9c60ee32b" kindref="member">g_pCB</ref>-&gt;<ref refid="struct___sl_driver_cb__t_1af1aca2a2065995204392c12d644e7698" kindref="member">FlowContCB</ref>.<ref refid="struct___sl_flow_cont_c_b__t_1aa57baa5d8367d9a8180b876236e3c012" kindref="member">TxPoolCnt</ref><sp/>=<sp/><ref refid="flowcont_8h_1add4c7097e60bd464ae392a461679a60f" kindref="member">FLOW_CONT_MIN</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8h_1aea0e29bc7d0624dbbf3b1e1324801d10" kindref="member">OSI_RET_OK_CHECK</ref>(<ref refid="nonos_8h_1ac1d0a12a5afd13d8b7809911c645fd5c" kindref="member">sl_LockObjCreate</ref>(&amp;<ref refid="driver_8c_1a4b8ef9e93bdf76f67c2619d9c60ee32b" kindref="member">g_pCB</ref>-&gt;<ref refid="struct___sl_driver_cb__t_1af1aca2a2065995204392c12d644e7698" kindref="member">FlowContCB</ref>.<ref refid="struct___sl_flow_cont_c_b__t_1a64fa74e5d55707c1a7c13a49e52d5af1" kindref="member">TxLockObj</ref>,<sp/></highlight><highlight class="stringliteral">&quot;TxLockObj&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8h_1aea0e29bc7d0624dbbf3b1e1324801d10" kindref="member">OSI_RET_OK_CHECK</ref>(<ref refid="nonos_8h_1a8c0d4537932fc4d16fdb74b47c87f25c" kindref="member">sl_SyncObjCreate</ref>(&amp;<ref refid="driver_8c_1a4b8ef9e93bdf76f67c2619d9c60ee32b" kindref="member">g_pCB</ref>-&gt;<ref refid="struct___sl_driver_cb__t_1af1aca2a2065995204392c12d644e7698" kindref="member">FlowContCB</ref>.<ref refid="struct___sl_flow_cont_c_b__t_1a1b121e0de03693e9b7eb7611f25e33dd" kindref="member">TxSyncObj</ref>,<sp/></highlight><highlight class="stringliteral">&quot;TxSyncObj&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>_SlDrvFlowContDeinit<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>_SlDrvFlowContDeinit(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="driver_8c_1a4b8ef9e93bdf76f67c2619d9c60ee32b" kindref="member">g_pCB</ref>-&gt;<ref refid="struct___sl_driver_cb__t_1af1aca2a2065995204392c12d644e7698" kindref="member">FlowContCB</ref>.<ref refid="struct___sl_flow_cont_c_b__t_1aa57baa5d8367d9a8180b876236e3c012" kindref="member">TxPoolCnt</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8h_1aea0e29bc7d0624dbbf3b1e1324801d10" kindref="member">OSI_RET_OK_CHECK</ref>(<ref refid="nonos_8h_1a6ac346506983bdee1f92bf25be6242d8" kindref="member">sl_LockObjDelete</ref>(&amp;<ref refid="driver_8c_1a4b8ef9e93bdf76f67c2619d9c60ee32b" kindref="member">g_pCB</ref>-&gt;<ref refid="struct___sl_driver_cb__t_1af1aca2a2065995204392c12d644e7698" kindref="member">FlowContCB</ref>.<ref refid="struct___sl_flow_cont_c_b__t_1a64fa74e5d55707c1a7c13a49e52d5af1" kindref="member">TxLockObj</ref>));</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8h_1aea0e29bc7d0624dbbf3b1e1324801d10" kindref="member">OSI_RET_OK_CHECK</ref>(<ref refid="nonos_8h_1a7c3a3039c187e241dc672012283a1dbd" kindref="member">sl_SyncObjDelete</ref>(&amp;<ref refid="driver_8c_1a4b8ef9e93bdf76f67c2619d9c60ee32b" kindref="member">g_pCB</ref>-&gt;<ref refid="struct___sl_driver_cb__t_1af1aca2a2065995204392c12d644e7698" kindref="member">FlowContCB</ref>.<ref refid="struct___sl_flow_cont_c_b__t_1a1b121e0de03693e9b7eb7611f25e33dd" kindref="member">TxSyncObj</ref>));</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/simplelink/source/flowcont.c"/>
+  </compounddef>
+</doxygen>

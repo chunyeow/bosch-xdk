@@ -1,0 +1,1068 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_grid_eye_service_8c" kind="file">
+    <compoundname>GridEyeService.c</compoundname>
+    <includes refid="_xdk_common_info_8h" local="yes">XdkCommonInfo.h</includes>
+    <includes refid="_b_c_d_s___retcode_8h" local="yes">BCDS_Retcode.h</includes>
+    <includes refid="_free_r_t_o_s_8h" local="yes">FreeRTOS.h</includes>
+    <includes refid="timers_8h" local="yes">timers.h</includes>
+    <includes refid="semphr_8h" local="yes">semphr.h</includes>
+    <includes refid="task_8h" local="yes">task.h</includes>
+    <includes refid="_grid_eye_service_8h" local="yes">GridEyeService.h</includes>
+    <includes refid="_ble_types_8h" local="yes">BleTypes.h</includes>
+    <includes refid="_b_c_d_s___ble_8h" local="yes">BCDS_Ble.h</includes>
+    <includes refid="_b_c_d_s___ble_peripheral_8h" local="yes">BCDS_BlePeripheral.h</includes>
+    <includes refid="attserver_8h" local="yes">attserver.h</includes>
+    <incdepgraph>
+      <node id="24160">
+        <label>stdbool.h</label>
+      </node>
+      <node id="24172">
+        <label>list.h</label>
+      </node>
+      <node id="24166">
+        <label>BCDS_Assert.h</label>
+        <link refid="_b_c_d_s___assert_8h"/>
+        <childnode refid="24157" relation="include">
+        </childnode>
+      </node>
+      <node id="24156">
+        <label>XdkCommonInfo.h</label>
+        <link refid="_xdk_common_info_8h"/>
+        <childnode refid="24157" relation="include">
+        </childnode>
+      </node>
+      <node id="24159">
+        <label>stdint.h</label>
+      </node>
+      <node id="24157">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="24158" relation="include">
+        </childnode>
+      </node>
+      <node id="24162">
+        <label>stdlib.h</label>
+      </node>
+      <node id="24170">
+        <label>timers.h</label>
+        <link refid="timers_8h"/>
+        <childnode refid="24171" relation="include">
+        </childnode>
+      </node>
+      <node id="24179">
+        <label>BCDS_Ble.h</label>
+        <link refid="_b_c_d_s___ble_8h"/>
+        <childnode refid="24157" relation="include">
+        </childnode>
+      </node>
+      <node id="24167">
+        <label>BCDS_TaskConfig.h</label>
+        <link refid="_b_c_d_s___task_config_8h"/>
+      </node>
+      <node id="24173">
+        <label>semphr.h</label>
+        <link refid="semphr_8h"/>
+        <childnode refid="24174" relation="include">
+        </childnode>
+      </node>
+      <node id="24164">
+        <label>stddef.h</label>
+      </node>
+      <node id="24155">
+        <label>SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c</label>
+        <link refid="GridEyeService.c"/>
+        <childnode refid="24156" relation="include">
+        </childnode>
+        <childnode refid="24157" relation="include">
+        </childnode>
+        <childnode refid="24163" relation="include">
+        </childnode>
+        <childnode refid="24170" relation="include">
+        </childnode>
+        <childnode refid="24173" relation="include">
+        </childnode>
+        <childnode refid="24171" relation="include">
+        </childnode>
+        <childnode refid="24175" relation="include">
+        </childnode>
+        <childnode refid="24176" relation="include">
+        </childnode>
+        <childnode refid="24179" relation="include">
+        </childnode>
+        <childnode refid="24180" relation="include">
+        </childnode>
+        <childnode refid="24181" relation="include">
+        </childnode>
+      </node>
+      <node id="24175">
+        <label>GridEyeService.h</label>
+        <link refid="_grid_eye_service_8h"/>
+        <childnode refid="24157" relation="include">
+        </childnode>
+      </node>
+      <node id="24169">
+        <label>portable.h</label>
+      </node>
+      <node id="24161">
+        <label>string.h</label>
+      </node>
+      <node id="24180">
+        <label>BCDS_BlePeripheral.h</label>
+        <link refid="_b_c_d_s___ble_peripheral_8h"/>
+        <childnode refid="24157" relation="include">
+        </childnode>
+        <childnode refid="24179" relation="include">
+        </childnode>
+      </node>
+      <node id="24158">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="24159" relation="include">
+        </childnode>
+        <childnode refid="24160" relation="include">
+        </childnode>
+        <childnode refid="24161" relation="include">
+        </childnode>
+        <childnode refid="24162" relation="include">
+        </childnode>
+      </node>
+      <node id="24168">
+        <label>projdefs.h</label>
+      </node>
+      <node id="24174">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+      </node>
+      <node id="24182">
+        <label>ATT/atttypes.h</label>
+        <link refid="atttypes_8h"/>
+        <childnode refid="24183" relation="include">
+        </childnode>
+      </node>
+      <node id="24171">
+        <label>task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="24172" relation="include">
+        </childnode>
+      </node>
+      <node id="24176">
+        <label>BleTypes.h</label>
+        <link refid="_ble_types_8h"/>
+        <childnode refid="24177" relation="include">
+        </childnode>
+      </node>
+      <node id="24165">
+        <label>FreeRTOSConfig.h</label>
+        <link refid="_free_r_t_o_s_config_8h"/>
+        <childnode refid="24159" relation="include">
+        </childnode>
+        <childnode refid="24166" relation="include">
+        </childnode>
+        <childnode refid="24167" relation="include">
+        </childnode>
+      </node>
+      <node id="24178">
+        <label>BLECustomConfig.h</label>
+        <link refid="_common_2config_2_b_l_e_custom_config_8h"/>
+      </node>
+      <node id="24163">
+        <label>FreeRTOS.h</label>
+        <link refid="_free_r_t_o_s_8h"/>
+        <childnode refid="24164" relation="include">
+        </childnode>
+        <childnode refid="24159" relation="include">
+        </childnode>
+        <childnode refid="24165" relation="include">
+        </childnode>
+        <childnode refid="24168" relation="include">
+        </childnode>
+        <childnode refid="24169" relation="include">
+        </childnode>
+      </node>
+      <node id="24177">
+        <label>BleConfig.h</label>
+        <link refid="_ble_config_8h"/>
+        <childnode refid="24178" relation="include">
+        </childnode>
+      </node>
+      <node id="24181">
+        <label>attserver.h</label>
+        <link refid="attserver_8h"/>
+        <childnode refid="24182" relation="include">
+        </childnode>
+      </node>
+      <node id="24183">
+        <label>ATT/AttConfig.h</label>
+        <link refid="_att_config_8h"/>
+        <childnode refid="24176" relation="include">
+        </childnode>
+        <childnode refid="24177" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="struct_grid_eye___characteristic___s" prot="public">GridEye_Characteristic_S</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_grid_eye_service_8c_1abff8f3a204e79671b98fabaa652198c3" prot="public" static="no">
+        <name>BCDS_MODULE_ID</name>
+        <initializer><ref refid="_xdk_common_info_8h_1a7d550569e587db8903a47a7044e6e935a835046effd740e438b2ad55c97d58a9b" kindref="member">XDK_COMMON_ID_GRIDEYESERVICE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" line="41" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_grid_eye_service_8c_1a7dad1db9b8a138a1a22798b3d421745f" prot="public" static="no">
+        <name>BLE_OS_DELAY_UPON_CONNECT</name>
+        <initializer>(UINT32_C(250))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" line="57" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" bodystart="57" bodyend="-1"/>
+        <referencedby refid="_grid_eye_service_8c_1a9ea933926fbca9369d8f65ddc2098515" compoundref="_grid_eye_service_8c" startline="363" endline="434">GridEyeService_SendData</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_grid_eye_service_8c_1a096d26af2d29f80311b05c8874d24c72" prot="public" static="no">
+        <type>struct <ref refid="struct_grid_eye___characteristic___s" kindref="compound">GridEye_Characteristic_S</ref></type>
+        <definition>typedef struct GridEye_Characteristic_S GridEye_Characteristic_T</definition>
+        <argsstring></argsstring>
+        <name>GridEye_Characteristic_T</name>
+        <briefdescription>
+<para>Typedef to represent the characteristic properties of GridEye communication service. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" line="61" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_grid_eye_service_8c_1accdd5f73169a43d83bbc9854fe6d1248" prot="public" static="yes" mutable="no">
+        <type><ref refid="portmacro_8h_1aa69c48c6e902ce54f70886e6573c92a9" kindref="member">TickType_t</ref></type>
+        <definition>TickType_t BleLastWakeTimeUponConnect</definition>
+        <argsstring></argsstring>
+        <name>BleLastWakeTimeUponConnect</name>
+        <initializer>= 0UL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" line="61" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" bodystart="61" bodyend="-1"/>
+        <referencedby refid="_grid_eye_service_8c_1a9ea933926fbca9369d8f65ddc2098515" compoundref="_grid_eye_service_8c" startline="363" endline="434">GridEyeService_SendData</referencedby>
+        <referencedby refid="_grid_eye_service_8h_1a054f273b17f45a9543dbdf0121fa58f3" compoundref="_grid_eye_service_8c" startline="437" endline="447">GridEyeService_UpdateConnectionStatus</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="_grid_eye_service_8c_1a43ca668f83df15fe65e73c85fec1d082" prot="public" static="yes" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t ConnectionHandle</definition>
+        <argsstring></argsstring>
+        <name>ConnectionHandle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" line="121" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" bodystart="121" bodyend="-1"/>
+        <referencedby refid="_grid_eye_service_8c_1a9ea933926fbca9369d8f65ddc2098515" compoundref="_grid_eye_service_8c" startline="363" endline="434">GridEyeService_SendData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="_grid_eye_service_8c_1a811193d7da7e4e12949759ba440cb3d2" prot="public" static="yes" mutable="no">
+        <type><ref refid="_grid_eye_service_8h_1a990efb2c4d69a18770f2332afb5ff6ca" kindref="member">GridEyeService_DataReceivedCallBack</ref></type>
+        <definition>GridEyeService_DataReceivedCallBack DataReadCallBack</definition>
+        <argsstring></argsstring>
+        <name>DataReadCallBack</name>
+        <initializer>= <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" line="88" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" bodystart="88" bodyend="-1"/>
+        <referencedby refid="_grid_eye_service_8c_1a383a706cf4adfa3a5f324e594adfc157" compoundref="_grid_eye_service_8c" startline="131" endline="196">GridEyeService_ServiceCallback</referencedby>
+        <referencedby refid="_grid_eye_service_8h_1a6215abdd0e841fb4515cdc20595d5015" compoundref="_grid_eye_service_8c" startline="349" endline="361">GridEyeService_Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="_grid_eye_service_8c_1a647fc5b42f41d4444a8bb8ec1e1959dd" prot="public" static="yes" mutable="no">
+        <type><ref refid="_grid_eye_service_8c_1a096d26af2d29f80311b05c8874d24c72" kindref="member">GridEye_Characteristic_T</ref></type>
+        <definition>GridEye_Characteristic_T GridEyeBleNotifyCharProperties</definition>
+        <argsstring></argsstring>
+        <name>GridEyeBleNotifyCharProperties</name>
+        <initializer>= {
+        { 0xB9, 0x5C, 0x49, 0xD2, 0x04, 0xA3, 0x40, 0x71, 0xA0, 0xB5, 0x35, 0x85, 0x3E, 0xB0, 0x83, 0x07 },
+        { 0, { 0 } },
+        { 0, 0, 0, { 0 }, { 0 }, 0, 0, 0, 0, { 0 } },
+        { 0, 0, 0, { 0 }, { 0 }, 0, 0, 0, 0 } }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" line="110" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_grid_eye_service_8c_1a410670743f4039bd9bee064224823ee8" prot="public" static="yes" mutable="no">
+        <type><ref refid="_grid_eye_service_8c_1a096d26af2d29f80311b05c8874d24c72" kindref="member">GridEye_Characteristic_T</ref></type>
+        <definition>GridEye_Characteristic_T GridEyeBleRxCharProperties</definition>
+        <argsstring></argsstring>
+        <name>GridEyeBleRxCharProperties</name>
+        <initializer>= {
+        { 0xBA, 0x5C, 0x49, 0xD2, 0x04, 0xA3, 0x40, 0x71, 0xA0, 0xB5, 0x35, 0x85, 0x3E, 0xB0, 0x83, 0x07 },
+        { 0, { 0 } },
+        { 0, 0, 0, { 0 }, { 0 }, 0, 0, 0, 0, { 0 } },
+        { 0, 0, 0, { 0 }, { 0 }, 0, 0, 0, 0 } }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" line="103" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_grid_eye_service_8c_1a8cdc342d88c99c558e86d5373320525f" prot="public" static="yes" mutable="no">
+        <type><ref refid="_grid_eye_service_8c_1a096d26af2d29f80311b05c8874d24c72" kindref="member">GridEye_Characteristic_T</ref></type>
+        <definition>GridEye_Characteristic_T GridEyeBleTxCharProperties</definition>
+        <argsstring></argsstring>
+        <name>GridEyeBleTxCharProperties</name>
+        <initializer>= {
+        { 0xB8, 0x5C, 0x49, 0xD2, 0x04, 0xA3, 0x40, 0x71, 0xA0, 0xB5, 0x35, 0x85, 0x3E, 0xB0, 0x83, 0x07 },
+        { 0, { 0 } },
+        { 0, 0, 0, { 0 }, { 0 }, 0, 0, 0, 0, { 0 } },
+        { 0, 0, 0, { 0 }, { 0 }, 0, 0, 0, 0 } }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" line="96" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_grid_eye_service_8c_1a9134213fb6381dc1008f111ef4eb2205" prot="public" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t GridEyeCharacteristicWrite[100]</definition>
+        <argsstring>[100]</argsstring>
+        <name>GridEyeCharacteristicWrite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" line="82" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" bodystart="82" bodyend="-1"/>
+        <referencedby refid="_grid_eye_service_8h_1a13695a853a0e3b422f63d0e3fd74e4a3" compoundref="_grid_eye_service_8c" startline="202" endline="346">GridEyeService_Register</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="_grid_eye_service_8c_1a1d31f2c4ec95b499386a1f29a2a73fe4" prot="public" static="yes" mutable="no">
+        <type>AttServiceAttribute</type>
+        <definition>AttServiceAttribute GridEyeServiceAttribute</definition>
+        <argsstring></argsstring>
+        <name>GridEyeServiceAttribute</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" line="85" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" bodystart="85" bodyend="-1"/>
+        <referencedby refid="_grid_eye_service_8h_1a13695a853a0e3b422f63d0e3fd74e4a3" compoundref="_grid_eye_service_8c" startline="202" endline="346">GridEyeService_Register</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="_grid_eye_service_8c_1a279d1c2b68edc052e2b1752a3fc76867" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t GridEyeServiceUUID[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>GridEyeServiceUUID</name>
+        <initializer>= { 0xB7, 0x5C, 0x49, 0xD2, 0x04, 0xA3, 0x40, 0x71, 0xA0, 0xB5, 0x35, 0x85, 0x3E, 0xB0, 0x83, 0x07 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" line="93" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" bodystart="93" bodyend="-1"/>
+        <referencedby refid="_grid_eye_service_8h_1a13695a853a0e3b422f63d0e3fd74e4a3" compoundref="_grid_eye_service_8c" startline="202" endline="346">GridEyeService_Register</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="_grid_eye_service_8c_1a897888d0761ab066a504b1081340526c" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool IsFirstSendPending</definition>
+        <argsstring></argsstring>
+        <name>IsFirstSendPending</name>
+        <initializer>= <ref refid="_serval___types_8h_1a65e9886d74aaee76545e83dd09011727" kindref="member">false</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" line="60" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" bodystart="60" bodyend="-1"/>
+        <referencedby refid="_grid_eye_service_8c_1a9ea933926fbca9369d8f65ddc2098515" compoundref="_grid_eye_service_8c" startline="363" endline="434">GridEyeService_SendData</referencedby>
+        <referencedby refid="_grid_eye_service_8h_1a054f273b17f45a9543dbdf0121fa58f3" compoundref="_grid_eye_service_8c" startline="437" endline="447">GridEyeService_UpdateConnectionStatus</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="_grid_eye_service_8c_1aa196b9e04984077c637b14ac5a757694" prot="public" static="yes" mutable="no">
+        <type><ref refid="_grid_eye_service_8h_1ae4beb4cf97c831a4ca028465480322db" kindref="member">GriEyeService_SendEventCallback</ref></type>
+        <definition>GriEyeService_SendEventCallback SendCallBack</definition>
+        <argsstring></argsstring>
+        <name>SendCallBack</name>
+        <initializer>= <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" line="90" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" bodystart="90" bodyend="-1"/>
+        <referencedby refid="_grid_eye_service_8c_1a383a706cf4adfa3a5f324e594adfc157" compoundref="_grid_eye_service_8c" startline="131" endline="196">GridEyeService_ServiceCallback</referencedby>
+        <referencedby refid="_grid_eye_service_8h_1a6215abdd0e841fb4515cdc20595d5015" compoundref="_grid_eye_service_8c" startline="349" endline="361">GridEyeService_Init</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_grid_eye_service_8c_1a5192d4a68a05445a88b82390aa1fd50e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BleGap_Add128bitsServiceUUID</definition>
+        <argsstring>(const U8 *uuid)</argsstring>
+        <name>BleGap_Add128bitsServiceUUID</name>
+        <param>
+          <type>const <ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref> *</type>
+          <declname>uuid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" line="117" column="1"/>
+        <referencedby refid="_grid_eye_service_8h_1a13695a853a0e3b422f63d0e3fd74e4a3" compoundref="_grid_eye_service_8c" startline="202" endline="346">GridEyeService_Register</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_grid_eye_service_8c_1a6215abdd0e841fb4515cdc20595d5015" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T GridEyeService_Init</definition>
+        <argsstring>(GridEyeService_DataReceivedCallBack readCallback, GriEyeService_SendEventCallback sendCallback)</argsstring>
+        <name>GridEyeService_Init</name>
+        <param>
+          <type><ref refid="_grid_eye_service_8h_1a990efb2c4d69a18770f2332afb5ff6ca" kindref="member">GridEyeService_DataReceivedCallBack</ref></type>
+          <declname>readCallback</declname>
+        </param>
+        <param>
+          <type><ref refid="_grid_eye_service_8h_1ae4beb4cf97c831a4ca028465480322db" kindref="member">GriEyeService_SendEventCallback</ref></type>
+          <declname>sendCallback</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the GridEye Service. </para>        </briefdescription>
+        <detaileddescription>
+<para>Initializes the GridEye Service with a readCallback and a sendCallback to be implemented by the application.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">readCallback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Application Callback that will be called on data reception for any data reception</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">sendCallback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Application Callback that will be notified about the data send status.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise. Refer <ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf6fb6f6ae1be4277d38a8684e1be9acb" kindref="member">Retcode_General_E</ref> and <ref refid="group___b_c_d_s___b_l_e_1ga0f2731d56101ae023851508c9293df01" kindref="member">Ble_Retcode_E</ref> for other values.</para></simplesect>
+<simplesect kind="see"><para><ref refid="_grid_eye_service_8h_1ab77a1f073379ee6c9d507bca6ce7d3d0" kindref="member">GridEyeService_SendData</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" line="349" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" bodystart="349" bodyend="361"/>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="_grid_eye_service_8c_1a811193d7da7e4e12949759ba440cb3d2" compoundref="_grid_eye_service_8c" startline="88">DataReadCallBack</references>
+        <references refid="_grid_eye_service_8c_1aa196b9e04984077c637b14ac5a757694" compoundref="_grid_eye_service_8c" startline="90">SendCallBack</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+      </memberdef>
+      <memberdef kind="function" id="_grid_eye_service_8c_1a13695a853a0e3b422f63d0e3fd74e4a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T GridEyeService_Register</definition>
+        <argsstring>(void)</argsstring>
+        <name>GridEyeService_Register</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This contains the implementation to register the GridEye Service to the BLE stack. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if success error otherwise </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" line="202" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" bodystart="202" bodyend="346"/>
+        <references refid="_ble_types_8h_1ad14b20a1135ee7821fa32d0bb0d7b2fc" compoundref="_ble_types_8h" startline="69">BLESTATUS_SUCCESS</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="_grid_eye_service_8c_1a5192d4a68a05445a88b82390aa1fd50e">BleGap_Add128bitsServiceUUID</references>
+        <references refid="_grid_eye_service_8c_1a279d1c2b68edc052e2b1752a3fc76867" compoundref="_grid_eye_service_8c" startline="93">GridEyeServiceUUID</references>
+        <references refid="_grid_eye_service_8c_1a383a706cf4adfa3a5f324e594adfc157" compoundref="_grid_eye_service_8c" startline="131" endline="196">GridEyeService_ServiceCallback</references>
+        <references refid="_grid_eye_service_8c_1a1d31f2c4ec95b499386a1f29a2a73fe4" compoundref="_grid_eye_service_8c" startline="85">GridEyeServiceAttribute</references>
+        <references refid="_ble_types_8h_1aa58680b13e0898b074410ae3f133c6ab" compoundref="_ble_types_8h" startline="70">BLESTATUS_FAILED</references>
+        <references refid="struct_grid_eye___characteristic___s_1a2e1b262dd78699dcd95adf966ff9053e" compoundref="_grid_eye_service_8c" startline="76">GridEye_Characteristic_S::UUIDType</references>
+        <references refid="struct_grid_eye___characteristic___s_1a456257a26871eb342505ca7774e9aa38" compoundref="_grid_eye_service_8c" startline="75">GridEye_Characteristic_S::CharacteristicUUID</references>
+        <references refid="struct_grid_eye___characteristic___s_1af869fc76e1a08b0c6370900cb1c726cf" compoundref="_grid_eye_service_8c" startline="77">GridEye_Characteristic_S::Characteristic</references>
+        <references refid="_grid_eye_service_8c_1a9134213fb6381dc1008f111ef4eb2205" compoundref="_grid_eye_service_8c" startline="82">GridEyeCharacteristicWrite</references>
+        <references refid="struct_grid_eye___characteristic___s_1a1c0cacf180fc566228d237fc283843f1" compoundref="_grid_eye_service_8c" startline="78">GridEye_Characteristic_S::CharacteristicAttribute</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" compoundref="_b_c_d_s___retcode_8h" startline="106">RETCODE_FAILURE</references>
+      </memberdef>
+      <memberdef kind="function" id="_grid_eye_service_8c_1a9ea933926fbca9369d8f65ddc2098515" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T GridEyeService_SendData</definition>
+        <argsstring>(U8 *payload, U8 payloadLen)</argsstring>
+        <name>GridEyeService_SendData</name>
+        <param>
+          <type><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref> *</type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref></type>
+          <declname>payloadLen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" line="363" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" bodystart="363" bodyend="434"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="struct_grid_eye___characteristic___s_1a1c0cacf180fc566228d237fc283843f1" compoundref="_grid_eye_service_8c" startline="78">GridEye_Characteristic_S::CharacteristicAttribute</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___b_l_e_1gga0f2731d56101ae023851508c9293df01a4e882063d1398517bfde5b51825f057c" compoundref="_b_c_d_s___ble_8h" startline="123">RETCODE_REWRITE_OF_ATT_FAILED</references>
+        <references refid="_grid_eye_service_8c_1a43ca668f83df15fe65e73c85fec1d082" compoundref="_grid_eye_service_8c" startline="121">ConnectionHandle</references>
+        <references refid="group___b_c_d_s___b_l_e___p_e_r_i_p_h_e_r_a_l_1gaa2eea2eabeb60f07785bb527d17add46">BlePeripheral_GetConnectionHandle</references>
+        <references refid="group___b_c_d_s___b_l_e_1gga0f2731d56101ae023851508c9293df01a9042ab714b318b468966117b3ebe8c3a" compoundref="_b_c_d_s___ble_8h" startline="97">RETCODE_NO_DEVICE_PAIRED</references>
+        <references refid="_grid_eye_service_8c_1a897888d0761ab066a504b1081340526c" compoundref="_grid_eye_service_8c" startline="60">IsFirstSendPending</references>
+        <references refid="task_8h_1a067da3e949e248096ec6c01f9cb75a47">vTaskDelayUntil</references>
+        <references refid="_grid_eye_service_8c_1accdd5f73169a43d83bbc9854fe6d1248" compoundref="_grid_eye_service_8c" startline="61">BleLastWakeTimeUponConnect</references>
+        <references refid="_grid_eye_service_8c_1a7dad1db9b8a138a1a22798b3d421745f" compoundref="_grid_eye_service_8c" startline="57">BLE_OS_DELAY_UPON_CONNECT</references>
+        <references refid="group___b_c_d_s___b_l_e_1gga0f2731d56101ae023851508c9293df01ae8886f5b79fb171d6a9189877966fedf" compoundref="_b_c_d_s___ble_8h" startline="95">RETCODE_DATA_SEND_FAIL</references>
+        <references refid="group___b_c_d_s___b_l_e_1gga0f2731d56101ae023851508c9293df01a7732fff886021ffe0576946d166d6c02" compoundref="_b_c_d_s___ble_8h" startline="124">RETCODE_ATT_INVALID_PARAM</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba78de1a3b6af06d147bff0ca273ac0b17" compoundref="_b_c_d_s___retcode_8h" startline="113">RETCODE_UNEXPECTED_BEHAVIOR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" compoundref="_b_c_d_s___retcode_8h" startline="108">RETCODE_INVALID_PARAM</references>
+      </memberdef>
+      <memberdef kind="function" id="_grid_eye_service_8c_1a383a706cf4adfa3a5f324e594adfc157" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void GridEyeService_ServiceCallback</definition>
+        <argsstring>(AttServerCallbackParms *attData)</argsstring>
+        <name>GridEyeService_ServiceCallback</name>
+        <param>
+          <type>AttServerCallbackParms *</type>
+          <declname>attData</declname>
+        </param>
+        <briefdescription>
+<para>This is the GridEye BLE sensor service callback, register at the time of BLE initialization. This application level callback gets triggered on various BLE event such as, Attribute events. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">attData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contains the type of actionEvent triggered by BLE </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" line="131" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" bodystart="131" bodyend="196"/>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6ae50e23ac22de65b64de1424dd9663a3f" compoundref="_b_c_d_s___retcode_8h" startline="132">RETCODE_SEVERITY_WARNING</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="struct_grid_eye___characteristic___s_1a1c0cacf180fc566228d237fc283843f1" compoundref="_grid_eye_service_8c" startline="78">GridEye_Characteristic_S::CharacteristicAttribute</references>
+        <references refid="_grid_eye_service_8c_1a811193d7da7e4e12949759ba440cb3d2" compoundref="_grid_eye_service_8c" startline="88">DataReadCallBack</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___b_l_e_1gga0f2731d56101ae023851508c9293df01ae8886f5b79fb171d6a9189877966fedf" compoundref="_b_c_d_s___ble_8h" startline="95">RETCODE_DATA_SEND_FAIL</references>
+        <references refid="_grid_eye_service_8c_1aa196b9e04984077c637b14ac5a757694" compoundref="_grid_eye_service_8c" startline="90">SendCallBack</references>
+        <referencedby refid="_grid_eye_service_8h_1a13695a853a0e3b422f63d0e3fd74e4a3" compoundref="_grid_eye_service_8c" startline="202" endline="346">GridEyeService_Register</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_grid_eye_service_8c_1a054f273b17f45a9543dbdf0121fa58f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GridEyeService_UpdateConnectionStatus</definition>
+        <argsstring>(bool connectionStatus)</argsstring>
+        <name>GridEyeService_UpdateConnectionStatus</name>
+        <param>
+          <type>bool</type>
+          <declname>connectionStatus</declname>
+        </param>
+        <briefdescription>
+<para>This function notifies the BLE connection status. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function notifies the BLE connection status</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">connectionStatus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BLE connection status </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" line="437" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c" bodystart="437" bodyend="447"/>
+        <references refid="_grid_eye_service_8c_1a897888d0761ab066a504b1081340526c" compoundref="_grid_eye_service_8c" startline="60">IsFirstSendPending</references>
+        <references refid="_grid_eye_service_8c_1accdd5f73169a43d83bbc9854fe6d1248" compoundref="_grid_eye_service_8c" startline="61">BleLastWakeTimeUponConnect</references>
+        <references refid="task_8h_1a753ecfe23e7386066ecccad5d16422f7" compoundref="tasks_8c" startline="2226" endline="2238">xTaskGetTickCount</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_xdk_common_info_8h" kindref="compound">XdkCommonInfo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>BCDS_MODULE_ID<sp/><sp/></highlight><highlight class="comment">/*<sp/>Module<sp/>ID<sp/>define<sp/>before<sp/>including<sp/>Basics<sp/>package*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="_grid_eye_service_8c_1abff8f3a204e79671b98fabaa652198c3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BCDS_MODULE_ID<sp/>XDK_COMMON_ID_GRIDEYESERVICE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___retcode_8h" kindref="compound">BCDS_Retcode.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_free_r_t_o_s_8h" kindref="compound">FreeRTOS.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="timers_8h" kindref="compound">timers.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="semphr_8h" kindref="compound">semphr.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="task_8h" kindref="compound">task.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_grid_eye_service_8h" kindref="compound">GridEyeService.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ble_types_8h" kindref="compound">BleTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___ble_8h" kindref="compound">BCDS_Ble.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___ble_peripheral_8h" kindref="compound">BCDS_BlePeripheral.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">/*lint<sp/>-e652<sp/>-e830<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="attserver_8h" kindref="compound">attserver.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">/*lint<sp/>+e652<sp/>+e830<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BLE_OS_DELAY_UPON_CONNECT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="_grid_eye_service_8c_1a7dad1db9b8a138a1a22798b3d421745f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLE_OS_DELAY_UPON_CONNECT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(UINT32_C(250))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>BLE_OS_DELAY_UPON_CONNECT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="_grid_eye_service_8c_1a897888d0761ab066a504b1081340526c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_grid_eye_service_8c_1a897888d0761ab066a504b1081340526c" kindref="member">IsFirstSendPending</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61" refid="_grid_eye_service_8c_1accdd5f73169a43d83bbc9854fe6d1248" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="portmacro_8h_1aa69c48c6e902ce54f70886e6573c92a9" kindref="member">TickType_t</ref><sp/><ref refid="_grid_eye_service_8c_1accdd5f73169a43d83bbc9854fe6d1248" kindref="member">BleLastWakeTimeUponConnect</ref><sp/>=<sp/>0UL;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>the<sp/>type<sp/>and<sp/>macro<sp/>definitions<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="_grid_eye_service_8c_1a096d26af2d29f80311b05c8874d24c72" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_grid_eye___characteristic___s" kindref="compound">GridEye_Characteristic_S</ref><sp/><ref refid="struct_grid_eye___characteristic___s" kindref="compound">GridEye_Characteristic_T</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="struct_grid_eye___characteristic___s" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_grid_eye___characteristic___s" kindref="compound">GridEye_Characteristic_S</ref></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75" refid="struct_grid_eye___characteristic___s_1a456257a26871eb342505ca7774e9aa38" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="struct_grid_eye___characteristic___s_1a456257a26871eb342505ca7774e9aa38" kindref="member">CharacteristicUUID</ref>[16];</highlight></codeline>
+<codeline lineno="76" refid="struct_grid_eye___characteristic___s_1a2e1b262dd78699dcd95adf966ff9053e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>AttUuid<sp/><ref refid="struct_grid_eye___characteristic___s_1a2e1b262dd78699dcd95adf966ff9053e" kindref="member">UUIDType</ref>;</highlight></codeline>
+<codeline lineno="77" refid="struct_grid_eye___characteristic___s_1af869fc76e1a08b0c6370900cb1c726cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Att128BitCharacteristicAttribute<sp/><ref refid="struct_grid_eye___characteristic___s_1af869fc76e1a08b0c6370900cb1c726cf" kindref="member">Characteristic</ref>;</highlight></codeline>
+<codeline lineno="78" refid="struct_grid_eye___characteristic___s_1a1c0cacf180fc566228d237fc283843f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>AttAttribute<sp/><ref refid="struct_grid_eye___characteristic___s_1a1c0cacf180fc566228d237fc283843f1" kindref="member">CharacteristicAttribute</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">/*Buffer<sp/>to<sp/>write<sp/>BLE<sp/>data<sp/>to<sp/>the<sp/>client*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="_grid_eye_service_8c_1a9134213fb6381dc1008f111ef4eb2205" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="_grid_eye_service_8c_1a9134213fb6381dc1008f111ef4eb2205" kindref="member">GridEyeCharacteristicWrite</ref>[100];</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">/*Attribute<sp/>handle<sp/>for<sp/>the<sp/>BLE<sp/>GridEye<sp/>sensor<sp/>Service<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="_grid_eye_service_8c_1a1d31f2c4ec95b499386a1f29a2a73fe4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>AttServiceAttribute<sp/><ref refid="_grid_eye_service_8c_1a1d31f2c4ec95b499386a1f29a2a73fe4" kindref="member">GridEyeServiceAttribute</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">/*Callback<sp/>function<sp/>of<sp/>type<sp/>Ble_DataReceivedCallBack<sp/>to<sp/>read<sp/>the<sp/>data<sp/>received<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="_grid_eye_service_8c_1a811193d7da7e4e12949759ba440cb3d2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_grid_eye_service_8h_1a990efb2c4d69a18770f2332afb5ff6ca" kindref="member">GridEyeService_DataReceivedCallBack</ref><sp/><ref refid="_grid_eye_service_8c_1a811193d7da7e4e12949759ba440cb3d2" kindref="member">DataReadCallBack</ref><sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="_grid_eye_service_8c_1aa196b9e04984077c637b14ac5a757694" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_grid_eye_service_8h_1ae4beb4cf97c831a4ca028465480322db" kindref="member">GriEyeService_SendEventCallback</ref><sp/><ref refid="_grid_eye_service_8c_1aa196b9e04984077c637b14ac5a757694" kindref="member">SendCallBack</ref><sp/>=<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">/*BLE<sp/>GridEye<sp/>sensor<sp/>Service<sp/>UUID:<sp/>0783B03E-8535-B5A0-7140-A304D2495CB7<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="_grid_eye_service_8c_1a279d1c2b68edc052e2b1752a3fc76867" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="_grid_eye_service_8c_1a279d1c2b68edc052e2b1752a3fc76867" kindref="member">GridEyeServiceUUID</ref>[16]<sp/>=<sp/>{<sp/>0xB7,<sp/>0x5C,<sp/>0x49,<sp/>0xD2,<sp/>0x04,<sp/>0xA3,<sp/>0x40,<sp/>0x71,<sp/>0xA0,<sp/>0xB5,<sp/>0x35,<sp/>0x85,<sp/>0x3E,<sp/>0xB0,<sp/>0x83,<sp/>0x07<sp/>};</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">/*Characteristic<sp/>property<sp/>for<sp/>the<sp/>gridEyeData<sp/>transmit<sp/>Characteristic<sp/>&lt;<sp/>UUID<sp/>-<sp/>0783B03E-8535-B5A0-7140-A304D2495CB8<sp/>&gt;*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="_grid_eye_service_8c_1a8cdc342d88c99c558e86d5373320525f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_grid_eye___characteristic___s" kindref="compound">GridEye_Characteristic_T</ref><sp/><ref refid="_grid_eye_service_8c_1a8cdc342d88c99c558e86d5373320525f" kindref="member">GridEyeBleTxCharProperties</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>0xB8,<sp/>0x5C,<sp/>0x49,<sp/>0xD2,<sp/>0x04,<sp/>0xA3,<sp/>0x40,<sp/>0x71,<sp/>0xA0,<sp/>0xB5,<sp/>0x35,<sp/>0x85,<sp/>0x3E,<sp/>0xB0,<sp/>0x83,<sp/>0x07<sp/>},</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>0,<sp/>{<sp/>0<sp/>}<sp/>},</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>0,<sp/>0,<sp/>0,<sp/>{<sp/>0<sp/>},<sp/>{<sp/>0<sp/>},<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>{<sp/>0<sp/>}<sp/>},</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>0,<sp/>0,<sp/>0,<sp/>{<sp/>0<sp/>},<sp/>{<sp/>0<sp/>},<sp/>0,<sp/>0,<sp/>0,<sp/>0<sp/>}<sp/>};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="comment">/*Characteristic<sp/>property<sp/>for<sp/>gridEyeData<sp/>receive<sp/>Characteristic<sp/>characteristic<sp/>&lt;UUID<sp/>-<sp/><sp/>0783B03E-8535-B5A0-7140-A304D2495CBA&gt;<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="_grid_eye_service_8c_1a410670743f4039bd9bee064224823ee8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_grid_eye___characteristic___s" kindref="compound">GridEye_Characteristic_T</ref><sp/><ref refid="_grid_eye_service_8c_1a410670743f4039bd9bee064224823ee8" kindref="member">GridEyeBleRxCharProperties</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>0xBA,<sp/>0x5C,<sp/>0x49,<sp/>0xD2,<sp/>0x04,<sp/>0xA3,<sp/>0x40,<sp/>0x71,<sp/>0xA0,<sp/>0xB5,<sp/>0x35,<sp/>0x85,<sp/>0x3E,<sp/>0xB0,<sp/>0x83,<sp/>0x07<sp/>},</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>0,<sp/>{<sp/>0<sp/>}<sp/>},</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>0,<sp/>0,<sp/>0,<sp/>{<sp/>0<sp/>},<sp/>{<sp/>0<sp/>},<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>{<sp/>0<sp/>}<sp/>},</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>0,<sp/>0,<sp/>0,<sp/>{<sp/>0<sp/>},<sp/>{<sp/>0<sp/>},<sp/>0,<sp/>0,<sp/>0,<sp/>0<sp/>}<sp/>};</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="comment">/*Characteristic<sp/>property<sp/>for<sp/>the<sp/>flowControl<sp/>Notify<sp/>characteristic<sp/>&lt;UUID<sp/>-<sp/><sp/>0783B03E-8535-B5A0-7140-A304D2495CB9&gt;<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="_grid_eye_service_8c_1a647fc5b42f41d4444a8bb8ec1e1959dd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_grid_eye___characteristic___s" kindref="compound">GridEye_Characteristic_T</ref><sp/><ref refid="_grid_eye_service_8c_1a647fc5b42f41d4444a8bb8ec1e1959dd" kindref="member">GridEyeBleNotifyCharProperties</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>0xB9,<sp/>0x5C,<sp/>0x49,<sp/>0xD2,<sp/>0x04,<sp/>0xA3,<sp/>0x40,<sp/>0x71,<sp/>0xA0,<sp/>0xB5,<sp/>0x35,<sp/>0x85,<sp/>0x3E,<sp/>0xB0,<sp/>0x83,<sp/>0x07<sp/>},</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>0,<sp/>{<sp/>0<sp/>}<sp/>},</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>0,<sp/>0,<sp/>0,<sp/>{<sp/>0<sp/>},<sp/>{<sp/>0<sp/>},<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>{<sp/>0<sp/>}<sp/>},</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>0,<sp/>0,<sp/>0,<sp/>{<sp/>0<sp/>},<sp/>{<sp/>0<sp/>},<sp/>0,<sp/>0,<sp/>0,<sp/>0<sp/>}<sp/>};</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Register/Add<sp/>custom<sp/>UUID<sp/>with<sp/>this<sp/>stack<sp/>API<sp/>to<sp/>show<sp/>service<sp/>UUID<sp/>details<sp/>while<sp/>advertising<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_grid_eye_service_8c_1a5192d4a68a05445a88b82390aa1fd50e" kindref="member">BleGap_Add128bitsServiceUUID</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/>*uuid);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>constant<sp/>and<sp/>variable<sp/>definitions<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="_grid_eye_service_8c_1a43ca668f83df15fe65e73c85fec1d082" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="_grid_eye_service_8c_1a43ca668f83df15fe65e73c85fec1d082" kindref="member">ConnectionHandle</ref>;<sp/></highlight><highlight class="comment">/*Connection<sp/>handle<sp/>to<sp/>client<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>private<sp/>function<sp/>declarations<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="_grid_eye_service_8c_1a383a706cf4adfa3a5f324e594adfc157" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_grid_eye_service_8c_1a383a706cf4adfa3a5f324e594adfc157" kindref="member">GridEyeService_ServiceCallback</ref>(AttServerCallbackParms*<sp/>attData)</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>attData)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2" kindref="member">Retcode_RaiseError</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6ae50e23ac22de65b64de1424dd9663a3f" kindref="member">RETCODE_SEVERITY_WARNING</ref>,<sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref>));</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(attData-&gt;event)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Client<sp/>is<sp/>willing<sp/>to<sp/>write<sp/>value<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ATTEVT_SERVER_WRITE_REQ:</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ATTSTATUS_SUCCESS<sp/>==<sp/>attData-&gt;status)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(attData-&gt;parms.writeReq.attribute<sp/>==<sp/>&amp;GridEyeBleRxCharProperties.<ref refid="struct_grid_eye___characteristic___s_1a1c0cacf180fc566228d237fc283843f1" kindref="member">CharacteristicAttribute</ref>)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attData-&gt;parms.writeReq.response<sp/>=<sp/>ATTPDU_STATUS_SUCCESS;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Client<sp/>has<sp/>successfully<sp/>written<sp/>value<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ATTEVT_SERVER_WRITE_COMPLETE:</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ATTSTATUS_SUCCESS<sp/>==<sp/>attData-&gt;status)</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AttWriteCompleteData<sp/>rxData<sp/>=<sp/>attData-&gt;parms.writeComplete;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(attData-&gt;parms.writeComplete.attribute<sp/>==<sp/>&amp;GridEyeBleRxCharProperties.<ref refid="struct_grid_eye___characteristic___s_1a1c0cacf180fc566228d237fc283843f1" kindref="member">CharacteristicAttribute</ref>)</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*rxValue;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>rxLength;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rxValue<sp/>=<sp/>rxData.value;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rxLength<sp/>=<sp/>rxData.length;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>!=<sp/><ref refid="_grid_eye_service_8c_1a811193d7da7e4e12949759ba440cb3d2" kindref="member">DataReadCallBack</ref>)</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_grid_eye_service_8c_1a811193d7da7e4e12949759ba440cb3d2" kindref="member">DataReadCallBack</ref>((uint8_t<sp/>*)<sp/>rxValue,<sp/>rxLength,<sp/><ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Handle<sp/>value<sp/>indication</highlight></codeline>
+<codeline lineno="171"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Indicates<sp/>the<sp/>Packet<sp/>could<sp/>finally<sp/>be<sp/>sent<sp/>or<sp/>not</highlight></codeline>
+<codeline lineno="172"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ATTEVT_SERVER_HVI_SENT:</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ATTSTATUS_SUCCESS<sp/>!=<sp/>attData-&gt;status)</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___b_l_e_1gga0f2731d56101ae023851508c9293df01ae8886f5b79fb171d6a9189877966fedf" kindref="member">RETCODE_DATA_SEND_FAIL</ref>);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>!=<sp/><ref refid="_grid_eye_service_8c_1aa196b9e04984077c637b14ac5a757694" kindref="member">SendCallBack</ref>)</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_grid_eye_service_8c_1aa196b9e04984077c637b14ac5a757694" kindref="member">SendCallBack</ref>(retcode);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ATTEVT_SERVER_FREE:</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ATTEVT_SERVER_READ_REQ:</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ATTEVT_SERVER_HANDLE_VALUE_CONFIRMATION:</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="_grid_eye_service_8h_1a13695a853a0e3b422f63d0e3fd74e4a3" refkind="member"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_grid_eye_service_8c_1a13695a853a0e3b422f63d0e3fd74e4a3" kindref="member">GridEyeService_Register</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/>registerStatus<sp/>=<sp/><ref refid="_ble_types_8h_1ad14b20a1135ee7821fa32d0bb0d7b2fc" kindref="member">BLESTATUS_SUCCESS</ref>;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>AttStatus<sp/>attRequestStatus;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>ATT_SERVER_SecureDatabaseAccess();</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_grid_eye_service_8c_1a5192d4a68a05445a88b82390aa1fd50e" kindref="member">BleGap_Add128bitsServiceUUID</ref>(&amp;<ref refid="_grid_eye_service_8c_1a279d1c2b68edc052e2b1752a3fc76867" kindref="member">GridEyeServiceUUID</ref>[0]);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>attRequestStatus<sp/>=<sp/>ATT_SERVER_RegisterServiceAttribute(ATTPDU_SIZEOF_128_BIT_UUID,<sp/>(uint8_t<sp/>*)<sp/><ref refid="_grid_eye_service_8c_1a279d1c2b68edc052e2b1752a3fc76867" kindref="member">GridEyeServiceUUID</ref>,</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_grid_eye_service_8c_1a383a706cf4adfa3a5f324e594adfc157" kindref="member">GridEyeService_ServiceCallback</ref>,<sp/>&amp;(<ref refid="_grid_eye_service_8c_1a1d31f2c4ec95b499386a1f29a2a73fe4" kindref="member">GridEyeServiceAttribute</ref>));</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ATTSTATUS_SUCCESS<sp/>!=<sp/>attRequestStatus)</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="218"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>-<sp/>ATTSTATUS_DATABASE_FROZEN<sp/>(only<sp/>in<sp/>case<sp/>ATT_HANDLES_ARE_FREEZABLE)</highlight></codeline>
+<codeline lineno="219"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>if<sp/>ATT_SERVER_FreezeDatabase()<sp/>has<sp/>already<sp/>been<sp/>called,</highlight></codeline>
+<codeline lineno="220"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>in<sp/>which<sp/>case<sp/>more<sp/>change<sp/>is<sp/>accepted<sp/>in<sp/>the<sp/>database.</highlight></codeline>
+<codeline lineno="221"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>-<sp/>ATTSTATUS_BUSY<sp/>if<sp/>there<sp/>is<sp/>at<sp/>least<sp/>one<sp/>link<sp/>layer<sp/>connection,</highlight></codeline>
+<codeline lineno="222"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>in<sp/>which<sp/>case<sp/>the<sp/>database&apos;s<sp/>structure<sp/>shall<sp/>not<sp/>be<sp/>modified.</highlight></codeline>
+<codeline lineno="223"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>-<sp/>ATTSTATUS_DATABASE_FULL<sp/>if<sp/>there<sp/>is<sp/>no<sp/>room<sp/>in<sp/>the<sp/>handle&apos;s<sp/>space</highlight></codeline>
+<codeline lineno="224"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>to<sp/>APPEND<sp/>this<sp/>attribute<sp/>at<sp/>the<sp/>back<sp/>of<sp/>the<sp/>database.</highlight></codeline>
+<codeline lineno="225"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>-<sp/>ATTSTATUS_INVALID_PARM<sp/>(only<sp/>checked<sp/>if<sp/>ATT_PARMS_CHECK<sp/>==<sp/>1<sp/>;</highlight></codeline>
+<codeline lineno="226"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>asserted<sp/>otherwise<sp/>if<sp/>ATT_DEBUG<sp/>==<sp/>1)<sp/>if<sp/>valueLen<sp/>is<sp/>not<sp/>2<sp/>or<sp/>16,</highlight></codeline>
+<codeline lineno="227"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>or<sp/>any<sp/>pointer<sp/>parameter<sp/>is<sp/>NULL.(<sp/>always<sp/>asserted)<sp/>if<sp/>database<sp/>is<sp/>not<sp/>locked.</highlight></codeline>
+<codeline lineno="228"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>-<sp/>ATTSSTATUS_FAILED:<sp/>if<sp/>the<sp/>service<sp/>memory<sp/>is<sp/>already<sp/>in<sp/>the<sp/>database.</highlight></codeline>
+<codeline lineno="229"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>registerStatus<sp/>=<sp/><ref refid="_ble_types_8h_1aa58680b13e0898b074410ae3f133c6ab" kindref="member">BLESTATUS_FAILED</ref>;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>RX<sp/>Characteristic<sp/>(gridEyeDataCharacteristicId)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GridEyeBleRxCharProperties.<ref refid="struct_grid_eye___characteristic___s_1a2e1b262dd78699dcd95adf966ff9053e" kindref="member">UUIDType</ref>.size<sp/>=<sp/>ATT_UUID_SIZE_128;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GridEyeBleRxCharProperties.<ref refid="struct_grid_eye___characteristic___s_1a2e1b262dd78699dcd95adf966ff9053e" kindref="member">UUIDType</ref>.value.uuid128<sp/>=<sp/>(uint8_t<sp/>*)<sp/>GridEyeBleRxCharProperties.<ref refid="struct_grid_eye___characteristic___s_1a456257a26871eb342505ca7774e9aa38" kindref="member">CharacteristicUUID</ref>;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attRequestStatus<sp/>=<sp/>ATT_SERVER_AddCharacteristic(</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ATTPROPERTY_WRITE<sp/>|<sp/>ATTPROPERTY_WRITEWITHOUTRESPONSE,</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(Att16BitCharacteristicAttribute*)<sp/>&amp;GridEyeBleRxCharProperties.<ref refid="struct_grid_eye___characteristic___s_1af869fc76e1a08b0c6370900cb1c726cf" kindref="member">Characteristic</ref>,</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;GridEyeBleRxCharProperties.<ref refid="struct_grid_eye___characteristic___s_1a2e1b262dd78699dcd95adf966ff9053e" kindref="member">UUIDType</ref>,</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ATT_PERMISSIONS_ALLACCESS,<sp/>20,</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint8_t<sp/>*)<sp/>&amp;<ref refid="_grid_eye_service_8c_1a9134213fb6381dc1008f111ef4eb2205" kindref="member">GridEyeCharacteristicWrite</ref>[20],<sp/>0,<sp/>0,</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="_grid_eye_service_8c_1a1d31f2c4ec95b499386a1f29a2a73fe4" kindref="member">GridEyeServiceAttribute</ref>,</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;GridEyeBleRxCharProperties.<ref refid="struct_grid_eye___characteristic___s_1a1c0cacf180fc566228d237fc283843f1" kindref="member">CharacteristicAttribute</ref>);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ATTSTATUS_SUCCESS<sp/>!=<sp/>attRequestStatus)</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>-<sp/>ATTSTATUS_DATABASE_FROZEN<sp/>(only<sp/>in<sp/>case<sp/>ATT_HANDLES_ARE_FREEZABLE)</highlight></codeline>
+<codeline lineno="251"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>if<sp/>ATT_SERVER_FreezeDatabase()<sp/>has<sp/>already<sp/>been<sp/>called,</highlight></codeline>
+<codeline lineno="252"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>in<sp/>which<sp/>case<sp/>more<sp/>change<sp/>is<sp/>accepted<sp/>in<sp/>the<sp/>database.</highlight></codeline>
+<codeline lineno="253"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>-<sp/>ATTSTATUS_BUSY<sp/>if<sp/>there<sp/>is<sp/>at<sp/>least<sp/>one<sp/>link<sp/>layer<sp/>connection,</highlight></codeline>
+<codeline lineno="254"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>in<sp/>which<sp/>case<sp/>the<sp/>database&apos;s<sp/>structure<sp/>shall<sp/>not<sp/>be<sp/>modified.</highlight></codeline>
+<codeline lineno="255"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>-<sp/>ATTSTATUS_DATABASE_FULL<sp/>if<sp/>there<sp/>is<sp/>no<sp/>room<sp/>in<sp/>the<sp/>handle&apos;s<sp/>space</highlight></codeline>
+<codeline lineno="256"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>to<sp/>APPEND<sp/>this<sp/>attribute<sp/>AFTER<sp/>the<sp/>last<sp/>attribute<sp/>currently<sp/>belonging</highlight></codeline>
+<codeline lineno="257"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>to<sp/>this<sp/>service<sp/>(might<sp/>be<sp/>the<sp/>service<sp/>attribute<sp/>itself).</highlight></codeline>
+<codeline lineno="258"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>-<sp/>ATTSTATUS_INVALID_PARM<sp/>(only<sp/>checked<sp/>if<sp/>ATT_PARMS_CHECK<sp/>==<sp/>1<sp/>;</highlight></codeline>
+<codeline lineno="259"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>asserted<sp/>otherwise<sp/>if<sp/>ATT_DEBUG<sp/>==<sp/>1)<sp/>if<sp/>the<sp/>UUID<sp/>is<sp/>not<sp/>a<sp/>16<sp/>or</highlight></codeline>
+<codeline lineno="260"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>128<sp/>bit<sp/>one,<sp/>or<sp/>any<sp/>pointer<sp/>parameter<sp/>is<sp/>NULL,<sp/>or<sp/>the<sp/>serviceAttribute</highlight></codeline>
+<codeline lineno="261"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>is<sp/>invalid<sp/>or<sp/>not<sp/>registered<sp/>or<sp/>memory<sp/>is<sp/>already<sp/>in<sp/>the<sp/>database.</highlight></codeline>
+<codeline lineno="262"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>registerStatus<sp/>=<sp/><ref refid="_ble_types_8h_1aa58680b13e0898b074410ae3f133c6ab" kindref="member">BLESTATUS_FAILED</ref>;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>TX<sp/>Characteristic<sp/>(serialPortCharacterUUID2)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GridEyeBleTxCharProperties.<ref refid="struct_grid_eye___characteristic___s_1a2e1b262dd78699dcd95adf966ff9053e" kindref="member">UUIDType</ref>.size<sp/>=<sp/>ATT_UUID_SIZE_128;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GridEyeBleTxCharProperties.<ref refid="struct_grid_eye___characteristic___s_1a2e1b262dd78699dcd95adf966ff9053e" kindref="member">UUIDType</ref>.value.uuid128<sp/>=<sp/>(uint8_t<sp/>*)<sp/>GridEyeBleTxCharProperties.<ref refid="struct_grid_eye___characteristic___s_1a456257a26871eb342505ca7774e9aa38" kindref="member">CharacteristicUUID</ref>;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attRequestStatus<sp/>=<sp/>ATT_SERVER_AddCharacteristic(</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ATTPROPERTY_NOTIFY<sp/>|<sp/>ATTPROPERTY_INDICATE,</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(Att16BitCharacteristicAttribute*)<sp/>&amp;GridEyeBleTxCharProperties.<ref refid="struct_grid_eye___characteristic___s_1af869fc76e1a08b0c6370900cb1c726cf" kindref="member">Characteristic</ref>,</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;GridEyeBleTxCharProperties.<ref refid="struct_grid_eye___characteristic___s_1a2e1b262dd78699dcd95adf966ff9053e" kindref="member">UUIDType</ref>,</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ATT_PERMISSIONS_ALLACCESS,<sp/>20,</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint8_t<sp/>*)<sp/>&amp;GridEyeCharacteristicWrite[20],<sp/>0,<sp/>0,</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="_grid_eye_service_8c_1a1d31f2c4ec95b499386a1f29a2a73fe4" kindref="member">GridEyeServiceAttribute</ref>,</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;GridEyeBleTxCharProperties.<ref refid="struct_grid_eye___characteristic___s_1a1c0cacf180fc566228d237fc283843f1" kindref="member">CharacteristicAttribute</ref>);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ATTSTATUS_SUCCESS<sp/>!=<sp/>attRequestStatus)</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>-<sp/>ATTSTATUS_DATABASE_FROZEN<sp/>(only<sp/>in<sp/>case<sp/>ATT_HANDLES_ARE_FREEZABLE)</highlight></codeline>
+<codeline lineno="285"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>if<sp/>ATT_SERVER_FreezeDatabase()<sp/>has<sp/>already<sp/>been<sp/>called,</highlight></codeline>
+<codeline lineno="286"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>in<sp/>which<sp/>case<sp/>more<sp/>change<sp/>is<sp/>accepted<sp/>in<sp/>the<sp/>database.</highlight></codeline>
+<codeline lineno="287"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>-<sp/>ATTSTATUS_BUSY<sp/>if<sp/>there<sp/>is<sp/>at<sp/>least<sp/>one<sp/>link<sp/>layer<sp/>connection,</highlight></codeline>
+<codeline lineno="288"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>in<sp/>which<sp/>case<sp/>the<sp/>database&apos;s<sp/>structure<sp/>shall<sp/>not<sp/>be<sp/>modified.</highlight></codeline>
+<codeline lineno="289"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>-<sp/>ATTSTATUS_DATABASE_FULL<sp/>if<sp/>there<sp/>is<sp/>no<sp/>room<sp/>in<sp/>the<sp/>handle&apos;s<sp/>space</highlight></codeline>
+<codeline lineno="290"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>to<sp/>APPEND<sp/>this<sp/>attribute<sp/>AFTER<sp/>the<sp/>last<sp/>attribute<sp/>currently<sp/>belonging</highlight></codeline>
+<codeline lineno="291"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>to<sp/>this<sp/>service<sp/>(might<sp/>be<sp/>the<sp/>service<sp/>attribute<sp/>itself).</highlight></codeline>
+<codeline lineno="292"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>-<sp/>ATTSTATUS_INVALID_PARM<sp/>(only<sp/>checked<sp/>if<sp/>ATT_PARMS_CHECK<sp/>==<sp/>1<sp/>;</highlight></codeline>
+<codeline lineno="293"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>asserted<sp/>otherwise<sp/>if<sp/>ATT_DEBUG<sp/>==<sp/>1)<sp/>if<sp/>the<sp/>UUID<sp/>is<sp/>not<sp/>a<sp/>16<sp/>or</highlight></codeline>
+<codeline lineno="294"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>128<sp/>bit<sp/>one,<sp/>or<sp/>any<sp/>pointer<sp/>parameter<sp/>is<sp/>NULL,<sp/>or<sp/>the<sp/>serviceAttribute</highlight></codeline>
+<codeline lineno="295"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>is<sp/>invalid<sp/>or<sp/>not<sp/>registered<sp/>or<sp/>memory<sp/>is<sp/>already<sp/>in<sp/>the<sp/>database.</highlight></codeline>
+<codeline lineno="296"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>registerStatus<sp/>=<sp/><ref refid="_ble_types_8h_1aa58680b13e0898b074410ae3f133c6ab" kindref="member">BLESTATUS_FAILED</ref>;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Notify<sp/>Characteristic<sp/>(flowControlNotify)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GridEyeBleNotifyCharProperties.<ref refid="struct_grid_eye___characteristic___s_1a2e1b262dd78699dcd95adf966ff9053e" kindref="member">UUIDType</ref>.size<sp/>=<sp/>ATT_UUID_SIZE_128;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GridEyeBleNotifyCharProperties.<ref refid="struct_grid_eye___characteristic___s_1a2e1b262dd78699dcd95adf966ff9053e" kindref="member">UUIDType</ref>.value.uuid128<sp/>=<sp/>(uint8_t<sp/>*)<sp/>GridEyeBleNotifyCharProperties.<ref refid="struct_grid_eye___characteristic___s_1a456257a26871eb342505ca7774e9aa38" kindref="member">CharacteristicUUID</ref>;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attRequestStatus<sp/>=<sp/>ATT_SERVER_AddCharacteristic(</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ATTPROPERTY_NOTIFY,</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(Att16BitCharacteristicAttribute*)<sp/>&amp;GridEyeBleNotifyCharProperties.<ref refid="struct_grid_eye___characteristic___s_1af869fc76e1a08b0c6370900cb1c726cf" kindref="member">Characteristic</ref>,</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;GridEyeBleNotifyCharProperties.<ref refid="struct_grid_eye___characteristic___s_1a2e1b262dd78699dcd95adf966ff9053e" kindref="member">UUIDType</ref>,</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ATT_PERMISSIONS_ALLACCESS,<sp/>20,</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint8_t<sp/>*)<sp/>&amp;GridEyeCharacteristicWrite[20],<sp/>0,<sp/>0,</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="_grid_eye_service_8c_1a1d31f2c4ec95b499386a1f29a2a73fe4" kindref="member">GridEyeServiceAttribute</ref>,</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;GridEyeBleNotifyCharProperties.<ref refid="struct_grid_eye___characteristic___s_1a1c0cacf180fc566228d237fc283843f1" kindref="member">CharacteristicAttribute</ref>);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ATTSTATUS_SUCCESS<sp/>!=<sp/>attRequestStatus)</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>-<sp/>ATTSTATUS_DATABASE_FROZEN<sp/>(only<sp/>in<sp/>case<sp/>ATT_HANDLES_ARE_FREEZABLE)</highlight></codeline>
+<codeline lineno="318"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>if<sp/>ATT_SERVER_FreezeDatabase()<sp/>has<sp/>already<sp/>been<sp/>called,</highlight></codeline>
+<codeline lineno="319"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>in<sp/>which<sp/>case<sp/>more<sp/>change<sp/>is<sp/>accepted<sp/>in<sp/>the<sp/>database.</highlight></codeline>
+<codeline lineno="320"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>-<sp/>ATTSTATUS_BUSY<sp/>if<sp/>there<sp/>is<sp/>at<sp/>least<sp/>one<sp/>link<sp/>layer<sp/>connection,</highlight></codeline>
+<codeline lineno="321"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>in<sp/>which<sp/>case<sp/>the<sp/>database&apos;s<sp/>structure<sp/>shall<sp/>not<sp/>be<sp/>modified.</highlight></codeline>
+<codeline lineno="322"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>-<sp/>ATTSTATUS_DATABASE_FULL<sp/>if<sp/>there<sp/>is<sp/>no<sp/>room<sp/>in<sp/>the<sp/>handle&apos;s<sp/>space</highlight></codeline>
+<codeline lineno="323"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>to<sp/>APPEND<sp/>this<sp/>attribute<sp/>AFTER<sp/>the<sp/>last<sp/>attribute<sp/>currently<sp/>belonging</highlight></codeline>
+<codeline lineno="324"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>to<sp/>this<sp/>service<sp/>(might<sp/>be<sp/>the<sp/>service<sp/>attribute<sp/>itself).</highlight></codeline>
+<codeline lineno="325"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>-<sp/>ATTSTATUS_INVALID_PARM<sp/>(only<sp/>checked<sp/>if<sp/>ATT_PARMS_CHECK<sp/>==<sp/>1<sp/>;</highlight></codeline>
+<codeline lineno="326"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>asserted<sp/>otherwise<sp/>if<sp/>ATT_DEBUG<sp/>==<sp/>1)<sp/>if<sp/>the<sp/>UUID<sp/>is<sp/>not<sp/>a<sp/>16<sp/>or</highlight></codeline>
+<codeline lineno="327"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>128<sp/>bit<sp/>one,<sp/>or<sp/>any<sp/>pointer<sp/>parameter<sp/>is<sp/>NULL,<sp/>or<sp/>the<sp/>serviceAttribute</highlight></codeline>
+<codeline lineno="328"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>is<sp/>invalid<sp/>or<sp/>not<sp/>registered<sp/>or<sp/>memory<sp/>is<sp/>already<sp/>in<sp/>the<sp/>database.</highlight></codeline>
+<codeline lineno="329"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>registerStatus<sp/>=<sp/><ref refid="_ble_types_8h_1aa58680b13e0898b074410ae3f133c6ab" kindref="member">BLESTATUS_FAILED</ref>;</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/>ATT_SERVER_ReleaseDatabaseAccess();</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(registerStatus<sp/>!=<sp/><ref refid="_ble_types_8h_1ad14b20a1135ee7821fa32d0bb0d7b2fc" kindref="member">BLESTATUS_SUCCESS</ref>)</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref>);</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retcode;</highlight></codeline>
+<codeline lineno="346"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>The<sp/>description<sp/>is<sp/>in<sp/>the<sp/>private<sp/>header<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="349" refid="_grid_eye_service_8h_1a6215abdd0e841fb4515cdc20595d5015" refkind="member"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_grid_eye_service_8c_1a6215abdd0e841fb4515cdc20595d5015" kindref="member">GridEyeService_Init</ref>(<ref refid="_grid_eye_service_8h_1a990efb2c4d69a18770f2332afb5ff6ca" kindref="member">GridEyeService_DataReceivedCallBack</ref><sp/>readCallback,<sp/><ref refid="_grid_eye_service_8h_1ae4beb4cf97c831a4ca028465480322db" kindref="member">GriEyeService_SendEventCallback</ref><sp/>sendCallback)</highlight></codeline>
+<codeline lineno="350"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>!=<sp/>readCallback)</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_grid_eye_service_8c_1a811193d7da7e4e12949759ba440cb3d2" kindref="member">DataReadCallBack</ref><sp/>=<sp/>readCallback;</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_grid_eye_service_8c_1aa196b9e04984077c637b14ac5a757694" kindref="member">SendCallBack</ref><sp/>=<sp/>sendCallback;</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref>));</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="361"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight></codeline>
+<codeline lineno="363" refid="_grid_eye_service_8c_1a9ea933926fbca9369d8f65ddc2098515" refkind="member"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_grid_eye_service_8c_1a9ea933926fbca9369d8f65ddc2098515" kindref="member">GridEyeService_SendData</ref>(<ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref>*<sp/>payload,<sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/>payloadLen)</highlight></codeline>
+<codeline lineno="364"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/>AttStatus<sp/>attWriteStatus<sp/>=<sp/>ATTSTATUS_FAILED;</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/>AttStatus<sp/>attSendNotifyStatus<sp/>=<sp/>ATTSTATUS_FAILED;</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>!=<sp/>payload)<sp/>&amp;&amp;<sp/>(UINT8_C(0)<sp/>!=<sp/>payloadLen))</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ATT_SERVER_SecureDatabaseAccess();</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attWriteStatus<sp/>=<sp/>ATT_SERVER_WriteAttributeValue(&amp;GridEyeBleTxCharProperties.<ref refid="struct_grid_eye___characteristic___s_1a1c0cacf180fc566228d237fc283843f1" kindref="member">CharacteristicAttribute</ref>,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*)<sp/>payload,<sp/>payloadLen);</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ATTSTATUS_SUCCESS<sp/>!=<sp/>attWriteStatus)</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="376"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>If:</highlight></codeline>
+<codeline lineno="377"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>-<sp/>ATTSTATUS_INVALID_PARM<sp/>(only<sp/>checked<sp/>if<sp/>ATT_PARMS_CHECK<sp/>==<sp/>1<sp/>;</highlight></codeline>
+<codeline lineno="378"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>asserted<sp/>otherwise<sp/>if<sp/>ATT_DEBUG<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="379"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>-<sp/>ATTSTATUS_FAILED<sp/>if<sp/>the<sp/>attribute<sp/>is<sp/>NULL<sp/>or<sp/>could<sp/>not<sp/>be<sp/>found<sp/>in<sp/>the<sp/>database.</highlight></codeline>
+<codeline lineno="380"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>)<sp/><ref refid="group___b_c_d_s___b_l_e_1gga0f2731d56101ae023851508c9293df01a4e882063d1398517bfde5b51825f057c" kindref="member">RETCODE_REWRITE_OF_ATT_FAILED</ref>);</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_grid_eye_service_8c_1a43ca668f83df15fe65e73c85fec1d082" kindref="member">ConnectionHandle</ref><sp/>=<sp/><ref refid="group___b_c_d_s___b_l_e___p_e_r_i_p_h_e_r_a_l_1gaa2eea2eabeb60f07785bb527d17add46" kindref="member">BlePeripheral_GetConnectionHandle</ref>();</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(UINT16_C(0)<sp/>==<sp/><ref refid="_grid_eye_service_8c_1a43ca668f83df15fe65e73c85fec1d082" kindref="member">ConnectionHandle</ref>)</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>if<sp/>the<sp/>remote<sp/>device<sp/>is<sp/>not<sp/>connected.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>)<sp/><ref refid="group___b_c_d_s___b_l_e_1gga0f2731d56101ae023851508c9293df01a9042ab714b318b468966117b3ebe8c3a" kindref="member">RETCODE_NO_DEVICE_PAIRED</ref>);</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>==<sp/><ref refid="_grid_eye_service_8c_1a897888d0761ab066a504b1081340526c" kindref="member">IsFirstSendPending</ref>)</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="task_8h_1a067da3e949e248096ec6c01f9cb75a47" kindref="member">vTaskDelayUntil</ref>(&amp;<ref refid="_grid_eye_service_8c_1accdd5f73169a43d83bbc9854fe6d1248" kindref="member">BleLastWakeTimeUponConnect</ref>,<sp/>pdMS_TO_TICKS(<ref refid="_grid_eye_service_8c_1a7dad1db9b8a138a1a22798b3d421745f" kindref="member">BLE_OS_DELAY_UPON_CONNECT</ref>));</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_grid_eye_service_8c_1a897888d0761ab066a504b1081340526c" kindref="member">IsFirstSendPending</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attSendNotifyStatus<sp/>=<sp/>ATT_SERVER_SendNotification(&amp;GridEyeBleTxCharProperties.<ref refid="struct_grid_eye___characteristic___s_1a1c0cacf180fc566228d237fc283843f1" kindref="member">CharacteristicAttribute</ref>,<sp/><ref refid="_grid_eye_service_8c_1a43ca668f83df15fe65e73c85fec1d082" kindref="member">ConnectionHandle</ref>);</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ATTSTATUS_PENDING<sp/>==<sp/>attSendNotifyStatus)<sp/>||<sp/>(ATTSTATUS_SUCCESS<sp/>==<sp/>attSendNotifyStatus))</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;</highlight><highlight class="comment">/*<sp/>don&apos;t<sp/>disturb<sp/>retcode<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ATTSTATUS_FAILED<sp/>==<sp/>attSendNotifyStatus)</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>if<sp/>the<sp/>channel<sp/>is<sp/>closed<sp/>at<sp/>the<sp/>level<sp/>below,<sp/>or<sp/>if<sp/>the<sp/>Packet<sp/>can<sp/>not<sp/>be<sp/>placed<sp/>in<sp/>the<sp/>send<sp/>queue.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>)<sp/><ref refid="group___b_c_d_s___b_l_e_1gga0f2731d56101ae023851508c9293df01ae8886f5b79fb171d6a9189877966fedf" kindref="member">RETCODE_DATA_SEND_FAIL</ref>);</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ATTSTATUS_INVALID_PARM<sp/>==<sp/>attSendNotifyStatus)</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>if:</highlight></codeline>
+<codeline lineno="415"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>-<sp/>attribute<sp/>cannot<sp/>be<sp/>found<sp/>in<sp/>the<sp/>database,<sp/>or</highlight></codeline>
+<codeline lineno="416"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>-<sp/>attribute<sp/>can<sp/>be<sp/>found<sp/>in<sp/>the<sp/>database<sp/>but<sp/>is<sp/>not<sp/>committed,<sp/>or</highlight></codeline>
+<codeline lineno="417"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>-<sp/>channel<sp/>is<sp/>an<sp/>invalid<sp/>combination.<sp/>(always<sp/>asserted)</highlight></codeline>
+<codeline lineno="418"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>-<sp/>the<sp/>database<sp/>is<sp/>not<sp/>locked.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>)<sp/><ref refid="group___b_c_d_s___b_l_e_1gga0f2731d56101ae023851508c9293df01a7732fff886021ffe0576946d166d6c02" kindref="member">RETCODE_ATT_INVALID_PARAM</ref>);</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba78de1a3b6af06d147bff0ca273ac0b17" kindref="member">RETCODE_UNEXPECTED_BEHAVIOR</ref>);</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"></highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ATT_SERVER_ReleaseDatabaseAccess();</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref>);</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(retcode);</highlight></codeline>
+<codeline lineno="434"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"></highlight></codeline>
+<codeline lineno="436"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>The<sp/>description<sp/>is<sp/>in<sp/>the<sp/>private<sp/>header<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="437" refid="_grid_eye_service_8h_1a054f273b17f45a9543dbdf0121fa58f3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_grid_eye_service_8c_1a054f273b17f45a9543dbdf0121fa58f3" kindref="member">GridEyeService_UpdateConnectionStatus</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>connectionStatus)</highlight></codeline>
+<codeline lineno="438"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!connectionStatus)</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_grid_eye_service_8c_1a897888d0761ab066a504b1081340526c" kindref="member">IsFirstSendPending</ref><sp/>=<sp/>connectionStatus;</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_grid_eye_service_8c_1accdd5f73169a43d83bbc9854fe6d1248" kindref="member">BleLastWakeTimeUponConnect</ref><sp/>=<sp/><ref refid="task_8h_1a753ecfe23e7386066ecccad5d16422f7" kindref="member">xTaskGetTickCount</ref>();</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="447"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/BLE/GridEyeService.c"/>
+  </compounddef>
+</doxygen>

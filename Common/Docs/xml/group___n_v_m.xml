@@ -1,0 +1,1144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___n_v_m" kind="group">
+    <compoundname>NVM</compoundname>
+    <title>NVM</title>
+    <innerfile refid="_b_c_d_s___n_v_m_8h">BCDS_NVM.h</innerfile>
+    <innerclass refid="struct_n_v_m___item___s" prot="public">NVM_Item_S</innerclass>
+    <innerclass refid="struct_n_v_m___s" prot="public">NVM_S</innerclass>
+    <innerclass refid="struct_n_v_m___section___s" prot="public">NVM_Section_S</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___n_v_m_1ga99a942946bc461cc8bd78d3c3e2d68a8" prot="public" static="no">
+        <name>NVM_Endianness_E</name>
+        <enumvalue id="group___n_v_m_1gga99a942946bc461cc8bd78d3c3e2d68a8a769ac34f562fde860571cdfaab93a03a" prot="public">
+          <name>NVM_ENDIANNESS_NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___n_v_m_1gga99a942946bc461cc8bd78d3c3e2d68a8affc63ff772c51e0d895907fd785ecf02" prot="public">
+          <name>NVM_ENDIANNESS_BIG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___n_v_m_1gga99a942946bc461cc8bd78d3c3e2d68a8ae2a904fa35ce564470e4940e2659fba1" prot="public">
+          <name>NVM_ENDIANNESS_LITTLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" line="72" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" bodystart="71" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___n_v_m_1gae94c83fa064e96f2871ea7edfd9e81d4" prot="public" static="no">
+        <name>NVM_Mode_E</name>
+        <enumvalue id="group___n_v_m_1ggae94c83fa064e96f2871ea7edfd9e81d4a10552f40228ae81939f1973179dbfcac" prot="public">
+          <name>NVM_MODE_R</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___n_v_m_1ggae94c83fa064e96f2871ea7edfd9e81d4a344004b0c241de6a1f388b7e4cdf08e4" prot="public">
+          <name>NVM_MODE_RW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" line="79" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" bodystart="78" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___n_v_m_1ga8d175357e01c43983812b82aed85be84" prot="public" static="no">
+        <name>NVM_Retcode_E</name>
+        <enumvalue id="group___n_v_m_1gga8d175357e01c43983812b82aed85be84a2f03dfa11c3574ff034073f424ddd979" prot="public">
+          <name>NVM_RETCODE_INVALID_ITEM</name>
+          <initializer>= RETCODE_FIRST_CUSTOM_CODE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___n_v_m_1gga8d175357e01c43983812b82aed85be84af4d4b70142e561cb816109a39ea0b8dc" prot="public">
+          <name>NVM_RETCODE_INVALID_BUFFER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___n_v_m_1gga8d175357e01c43983812b82aed85be84a643f3383c109b3b15a6c24e4a647cdce" prot="public">
+          <name>NVM_RETCODE_INVALID_SECTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___n_v_m_1gga8d175357e01c43983812b82aed85be84a1da1cd062dc42cdffc27a8b1595588b4" prot="public">
+          <name>NVM_RETCODE_INVALID_SIZE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___n_v_m_1gga8d175357e01c43983812b82aed85be84aa926af268641b95aa1344986b2cd7b7e" prot="public">
+          <name>NVM_RETCODE_WRITE_FORBIDDEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___n_v_m_1gga8d175357e01c43983812b82aed85be84a155ee178ac0167607c75a7b5f36fa5ad" prot="public">
+          <name>NVM_RETCODE_INTEGRITY_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>reserved </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>return values for Nvm_read* and Nvm_write* </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="_b_c_d_s___retcode_8h" kindref="compound">BCDS_Retcode.h</ref> for generic return codes </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" line="62" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" bodystart="61" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___n_v_m_1ga185e01d7bd874d3bed92f89b826b2a36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T NVM_Deinitialize</definition>
+        <argsstring>(const struct NVM_S *Nvm_obj)</argsstring>
+        <name>NVM_Deinitialize</name>
+        <param>
+          <type>const struct <ref refid="struct_n_v_m___s" kindref="compound">NVM_S</ref> *</type>
+          <declname>Nvm_obj</declname>
+        </param>
+        <briefdescription>
+<para>De-initializes the NVM interface and makes sure all items are written back to flash. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">nvm_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>object instance\</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> NVM de-initialization successful. </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref> nvm_obj is a null pointer</para></simplesect>
+<simplesect kind="warning"><para>any further usage of nvm_obj after that function call leads to undefined behavior of the NVM </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" line="146" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___n_v_m_1ga49ed64fee7640e7e48312ae8c14ac264" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T NVM_Flush</definition>
+        <argsstring>(const struct NVM_S *Nvm_obj)</argsstring>
+        <name>NVM_Flush</name>
+        <param>
+          <type>const struct <ref refid="struct_n_v_m___s" kindref="compound">NVM_S</ref> *</type>
+          <declname>Nvm_obj</declname>
+        </param>
+        <briefdescription>
+<para>Flush all items from an NVM internal buffer to the flash memory. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">nvm_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nvm object holding the used page and section specification</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> Flushing all items from an NVM internal buffer to the flash memory successful </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref> Flushing all items from an NVM internal buffer to the flash memory failed</para></simplesect>
+<simplesect kind="return"><para>In case of any other error refer #MCU_Flash_ErasePage or #MCU_Flash_Write error codes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" line="481" column="1"/>
+        <referencedby refid="group___s_y_s_t_e_m_s_t_a_r_t_u_p_1gab3bf0967da05629b9d5b23b21d15aeb1" compoundref="_system_startup_8c" startline="297" endline="388">systemStartup</referencedby>
+        <referencedby refid="group___f_o_t_a_1gaa17c22be08c000fec0331fab53040c26" compoundref="_f_o_t_a_8c" startline="371" endline="413">FOTA_UpdateSdcardFw</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___n_v_m_1gac14d043f334df1f2eb9ef2e14a3d6d3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T NVM_Initialize</definition>
+        <argsstring>(struct NVM_S *Nvm_obj)</argsstring>
+        <name>NVM_Initialize</name>
+        <param>
+          <type>struct <ref refid="struct_n_v_m___s" kindref="compound">NVM_S</ref> *</type>
+          <declname>Nvm_obj</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the NVM for a certain section specified by the user and the given function parameter nvm_obj. NVM_Init() reads the section content of the flash memory and stores it in the NVM internal buffer for later read and write operations. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">nvm_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>object instance</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> NVM Initialization successful. </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref> NVM Initialization successful.</para></simplesect>
+<simplesect kind="return"><para>In case of any other error refer #MCU_Flash_Read error codes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" line="132" column="1"/>
+        <referencedby refid="group___s_y_s_t_e_m_s_t_a_r_t_u_p_1gab3bf0967da05629b9d5b23b21d15aeb1" compoundref="_system_startup_8c" startline="297" endline="388">systemStartup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___n_v_m_1ga0c74591550f1b6fc54b99dfa62aec130" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T NVM_Read</definition>
+        <argsstring>(const struct NVM_S *Nvm_obj, struct NVM_Item_S Item, void *Value, uint32_t Length)</argsstring>
+        <name>NVM_Read</name>
+        <param>
+          <type>const struct <ref refid="struct_n_v_m___s" kindref="compound">NVM_S</ref> *</type>
+          <declname>Nvm_obj</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="struct_n_v_m___item___s" kindref="compound">NVM_Item_S</ref></type>
+          <declname>Item</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>Value</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>Length</declname>
+        </param>
+        <briefdescription>
+<para>Reads an item from NVM. This function only operates on the NVM internal buffer. In order to store the buffers content to the flash memory use <ref refid="group___n_v_m_1ga49ed64fee7640e7e48312ae8c14ac264" kindref="member">NVM_Flush()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">nvm_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>object instance </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>identifies an item </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must point to a properly sized buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of provided value buffer</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> Reading an item from NVM successful </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___n_v_m_1gga8d175357e01c43983812b82aed85be84a1da1cd062dc42cdffc27a8b1595588b4" kindref="member">NVM_RETCODE_INVALID_SIZE</ref> Provided buffer length does not match item length </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___n_v_m_1gga8d175357e01c43983812b82aed85be84a155ee178ac0167607c75a7b5f36fa5ad" kindref="member">NVM_RETCODE_INTEGRITY_FAILED</ref> The item&apos;s content is corrupt </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" line="165" column="1"/>
+        <referencedby refid="group___x_d_k_u_t_i_l_s_1ga13ca4c3f99487d83c7d5da7312504a35" compoundref="_utils_8c" startline="232" endline="274">Utils_GetMacInfoFromNVM</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___n_v_m_1gaa9667ec8374c66a3221ce9b2b939ae95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T NVM_ReadInt16</definition>
+        <argsstring>(const struct NVM_S *Nvm_obj, struct NVM_Item_S Item, int16_t *Value)</argsstring>
+        <name>NVM_ReadInt16</name>
+        <param>
+          <type>const struct <ref refid="struct_n_v_m___s" kindref="compound">NVM_S</ref> *</type>
+          <declname>Nvm_obj</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="struct_n_v_m___item___s" kindref="compound">NVM_Item_S</ref></type>
+          <declname>Item</declname>
+        </param>
+        <param>
+          <type>int16_t *</type>
+          <declname>Value</declname>
+        </param>
+        <briefdescription>
+<para>Reads an signed int8 item. This function only operates on an NVM internal buffer. In order to store the buffers content to the flash memory use <ref refid="group___n_v_m_1ga49ed64fee7640e7e48312ae8c14ac264" kindref="member">NVM_Flush()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">nvm_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nvm object holding the used page and section specification </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>item to be read </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>read value</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> If the item has been read successfully </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___n_v_m_1gga8d175357e01c43983812b82aed85be84a1da1cd062dc42cdffc27a8b1595588b4" kindref="member">NVM_RETCODE_INVALID_SIZE</ref> If the item size is invalid</para></simplesect>
+<simplesect kind="return"><para>In case of any other error refer <ref refid="group___n_v_m_1ga0c74591550f1b6fc54b99dfa62aec130" kindref="member">NVM_Read</ref> error codes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" line="238" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___n_v_m_1ga59c0f810aab975ec27f742af491a85c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T NVM_ReadInt32</definition>
+        <argsstring>(const struct NVM_S *Nvm_obj, struct NVM_Item_S Item, int32_t *Value)</argsstring>
+        <name>NVM_ReadInt32</name>
+        <param>
+          <type>const struct <ref refid="struct_n_v_m___s" kindref="compound">NVM_S</ref> *</type>
+          <declname>Nvm_obj</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="struct_n_v_m___item___s" kindref="compound">NVM_Item_S</ref></type>
+          <declname>Item</declname>
+        </param>
+        <param>
+          <type>int32_t *</type>
+          <declname>Value</declname>
+        </param>
+        <briefdescription>
+<para>Reads an signed int8 item. This function only operates on an NVM internal buffer. In order to store the buffers content to the flash memory use <ref refid="group___n_v_m_1ga49ed64fee7640e7e48312ae8c14ac264" kindref="member">NVM_Flush()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">nvm_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nvm object holding the used page and section specification </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>item to be read </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>read value</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> If the item has been read successfully </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___n_v_m_1gga8d175357e01c43983812b82aed85be84a1da1cd062dc42cdffc27a8b1595588b4" kindref="member">NVM_RETCODE_INVALID_SIZE</ref> If the item size is invalid</para></simplesect>
+<simplesect kind="return"><para>In case of any other error refer <ref refid="group___n_v_m_1ga0c74591550f1b6fc54b99dfa62aec130" kindref="member">NVM_Read</ref> error codes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" line="272" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___n_v_m_1ga72f250b6fae63fb98826fe96cafd4b17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T NVM_ReadInt64</definition>
+        <argsstring>(const struct NVM_S *Nvm_obj, struct NVM_Item_S Item, int64_t *Value)</argsstring>
+        <name>NVM_ReadInt64</name>
+        <param>
+          <type>const struct <ref refid="struct_n_v_m___s" kindref="compound">NVM_S</ref> *</type>
+          <declname>Nvm_obj</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="struct_n_v_m___item___s" kindref="compound">NVM_Item_S</ref></type>
+          <declname>Item</declname>
+        </param>
+        <param>
+          <type>int64_t *</type>
+          <declname>Value</declname>
+        </param>
+        <briefdescription>
+<para>Reads an signed int8 item. This function only operates on an NVM internal buffer. In order to store the buffers content to the flash memory use <ref refid="group___n_v_m_1ga49ed64fee7640e7e48312ae8c14ac264" kindref="member">NVM_Flush()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">nvm_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nvm object holding the used page and section specification </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>item to be read </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>read value</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> If the item has been read successfully </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___n_v_m_1gga8d175357e01c43983812b82aed85be84a1da1cd062dc42cdffc27a8b1595588b4" kindref="member">NVM_RETCODE_INVALID_SIZE</ref> If the item size is invalid</para></simplesect>
+<simplesect kind="return"><para>In case of any other error refer <ref refid="group___n_v_m_1ga0c74591550f1b6fc54b99dfa62aec130" kindref="member">NVM_Read</ref> error codes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" line="306" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___n_v_m_1gaa0f57cc9a7aec055a48397c36a0031d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T NVM_ReadInt8</definition>
+        <argsstring>(const struct NVM_S *Nvm_obj, struct NVM_Item_S Item, int8_t *Value)</argsstring>
+        <name>NVM_ReadInt8</name>
+        <param>
+          <type>const struct <ref refid="struct_n_v_m___s" kindref="compound">NVM_S</ref> *</type>
+          <declname>Nvm_obj</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="struct_n_v_m___item___s" kindref="compound">NVM_Item_S</ref></type>
+          <declname>Item</declname>
+        </param>
+        <param>
+          <type>int8_t *</type>
+          <declname>Value</declname>
+        </param>
+        <briefdescription>
+<para>Reads an signed int8 item. This function only operates on the NVM internal buffer. In order to store the buffers content to the flash memory use <ref refid="group___n_v_m_1ga49ed64fee7640e7e48312ae8c14ac264" kindref="member">NVM_Flush()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">nvm_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nvm object holding the used page and section specification</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>item to be read </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>read value</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> If the item has been read successfully </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___n_v_m_1gga8d175357e01c43983812b82aed85be84a1da1cd062dc42cdffc27a8b1595588b4" kindref="member">NVM_RETCODE_INVALID_SIZE</ref> If the item size is invalid</para></simplesect>
+<simplesect kind="return"><para>In case of any other error refer <ref refid="group___n_v_m_1ga0c74591550f1b6fc54b99dfa62aec130" kindref="member">NVM_Read</ref> error codes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" line="203" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___n_v_m_1gae76ce69c3d5b1989dfc04e87a60c68f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T NVM_ReadUInt16</definition>
+        <argsstring>(const struct NVM_S *Nvm_obj, struct NVM_Item_S Item, uint16_t *Value)</argsstring>
+        <name>NVM_ReadUInt16</name>
+        <param>
+          <type>const struct <ref refid="struct_n_v_m___s" kindref="compound">NVM_S</ref> *</type>
+          <declname>Nvm_obj</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="struct_n_v_m___item___s" kindref="compound">NVM_Item_S</ref></type>
+          <declname>Item</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>Value</declname>
+        </param>
+        <briefdescription>
+<para>Reads an signed int8 item. This function only operates on an NVM internal buffer. In order to store the buffers content to the flash memory use <ref refid="group___n_v_m_1ga49ed64fee7640e7e48312ae8c14ac264" kindref="member">NVM_Flush()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">nvm_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nvm object holding the used page and section specification </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>item to be read </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>read value</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> If the item has been read successfully </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___n_v_m_1gga8d175357e01c43983812b82aed85be84a1da1cd062dc42cdffc27a8b1595588b4" kindref="member">NVM_RETCODE_INVALID_SIZE</ref> If the item size is invalid</para></simplesect>
+<simplesect kind="return"><para>In case of any other error refer <ref refid="group___n_v_m_1ga0c74591550f1b6fc54b99dfa62aec130" kindref="member">NVM_Read</ref> error codes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" line="255" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___n_v_m_1ga6af6433336d64514c1f50f8d366061d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T NVM_ReadUInt32</definition>
+        <argsstring>(const struct NVM_S *Nvm_obj, struct NVM_Item_S Item, uint32_t *Value)</argsstring>
+        <name>NVM_ReadUInt32</name>
+        <param>
+          <type>const struct <ref refid="struct_n_v_m___s" kindref="compound">NVM_S</ref> *</type>
+          <declname>Nvm_obj</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="struct_n_v_m___item___s" kindref="compound">NVM_Item_S</ref></type>
+          <declname>Item</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>Value</declname>
+        </param>
+        <briefdescription>
+<para>Reads an signed int8 item. This function only operates on an NVM internal buffer. In order to store the buffers content to the flash memory use <ref refid="group___n_v_m_1ga49ed64fee7640e7e48312ae8c14ac264" kindref="member">NVM_Flush()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">nvm_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nvm object holding the used page and section specification </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>item to be read </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>read value</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> If the item has been read successfully </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___n_v_m_1gga8d175357e01c43983812b82aed85be84a1da1cd062dc42cdffc27a8b1595588b4" kindref="member">NVM_RETCODE_INVALID_SIZE</ref> If the item size is invalid</para></simplesect>
+<simplesect kind="return"><para>In case of any other error refer <ref refid="group___n_v_m_1ga0c74591550f1b6fc54b99dfa62aec130" kindref="member">NVM_Read</ref> error codes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" line="289" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___n_v_m_1ga3f841e0342b2a27fd87b0f5096a14bfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T NVM_ReadUInt64</definition>
+        <argsstring>(const struct NVM_S *Nvm_obj, struct NVM_Item_S Item, uint64_t *Value)</argsstring>
+        <name>NVM_ReadUInt64</name>
+        <param>
+          <type>const struct <ref refid="struct_n_v_m___s" kindref="compound">NVM_S</ref> *</type>
+          <declname>Nvm_obj</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="struct_n_v_m___item___s" kindref="compound">NVM_Item_S</ref></type>
+          <declname>Item</declname>
+        </param>
+        <param>
+          <type>uint64_t *</type>
+          <declname>Value</declname>
+        </param>
+        <briefdescription>
+<para>Reads an signed int8 item. This function only operates on an NVM internal buffer. In order to store the buffers content to the flash memory use <ref refid="group___n_v_m_1ga49ed64fee7640e7e48312ae8c14ac264" kindref="member">NVM_Flush()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">nvm_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nvm object holding the used page and section specification </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>item to be read </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>read value</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> if the item has been read successfully </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___n_v_m_1gga8d175357e01c43983812b82aed85be84a1da1cd062dc42cdffc27a8b1595588b4" kindref="member">NVM_RETCODE_INVALID_SIZE</ref> If the item size is invalid</para></simplesect>
+<simplesect kind="return"><para>In case of any other error refer <ref refid="group___n_v_m_1ga0c74591550f1b6fc54b99dfa62aec130" kindref="member">NVM_Read</ref> error codes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" line="323" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___n_v_m_1ga09d6c1a83b40a03cde695099ead6cd38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T NVM_ReadUInt8</definition>
+        <argsstring>(const struct NVM_S *nvm_obj, struct NVM_Item_S item, uint8_t *value)</argsstring>
+        <name>NVM_ReadUInt8</name>
+        <param>
+          <type>const struct <ref refid="struct_n_v_m___s" kindref="compound">NVM_S</ref> *</type>
+          <declname>nvm_obj</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="struct_n_v_m___item___s" kindref="compound">NVM_Item_S</ref></type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Reads an signed int8 item. This function only operates on an NVM internal buffer. In order to store the buffers content to the flash memory use <ref refid="group___n_v_m_1ga49ed64fee7640e7e48312ae8c14ac264" kindref="member">NVM_Flush()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">nvm_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nvm object holding the used page and section specification </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>item to be read </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>read value</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> If the item has been read successfully </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___n_v_m_1gga8d175357e01c43983812b82aed85be84a1da1cd062dc42cdffc27a8b1595588b4" kindref="member">NVM_RETCODE_INVALID_SIZE</ref> If the item size is invalid</para></simplesect>
+<simplesect kind="return"><para>In case of any other error refer <ref refid="group___n_v_m_1ga0c74591550f1b6fc54b99dfa62aec130" kindref="member">NVM_Read</ref> error codes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" line="221" column="1"/>
+        <referencedby refid="group___s_y_s_t_e_m_s_t_a_r_t_u_p_1gab3bf0967da05629b9d5b23b21d15aeb1" compoundref="_system_startup_8c" startline="297" endline="388">systemStartup</referencedby>
+        <referencedby refid="group___x_d_k_u_t_i_l_s_1ga13ca4c3f99487d83c7d5da7312504a35" compoundref="_utils_8c" startline="232" endline="274">Utils_GetMacInfoFromNVM</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___n_v_m_1gabef20a303214c6809f7f44195993660a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T NVM_Write</definition>
+        <argsstring>(const struct NVM_S *Nvm_obj, struct NVM_Item_S Item, const void *Value, uint32_t Length)</argsstring>
+        <name>NVM_Write</name>
+        <param>
+          <type>const struct <ref refid="struct_n_v_m___s" kindref="compound">NVM_S</ref> *</type>
+          <declname>Nvm_obj</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="struct_n_v_m___item___s" kindref="compound">NVM_Item_S</ref></type>
+          <declname>Item</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>Value</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>Length</declname>
+        </param>
+        <briefdescription>
+<para>Writes an item to NVM. This function only operates on the NVM internal buffer. In order to store the buffers content to the flash memory use <ref refid="group___n_v_m_1ga49ed64fee7640e7e48312ae8c14ac264" kindref="member">NVM_Flush()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">nvm_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>object instance </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>identifies an item </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must point to a properly sized buffer which includes data to be written </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of provided value buffer, amount of bytes to be written</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> Writing an item from NVM successful </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___n_v_m_1gga8d175357e01c43983812b82aed85be84a1da1cd062dc42cdffc27a8b1595588b4" kindref="member">NVM_RETCODE_INVALID_SIZE</ref> Provided buffer length does not match item length </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___n_v_m_1gga8d175357e01c43983812b82aed85be84aa926af268641b95aa1344986b2cd7b7e" kindref="member">NVM_RETCODE_WRITE_FORBIDDEN</ref> Item is read-only </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" line="184" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___n_v_m_1ga20f87fcc9883443e10bf3695a00c5028" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T NVM_WriteInt16</definition>
+        <argsstring>(const struct NVM_S *Nvm_obj, struct NVM_Item_S Item, const int16_t *Value)</argsstring>
+        <name>NVM_WriteInt16</name>
+        <param>
+          <type>const struct <ref refid="struct_n_v_m___s" kindref="compound">NVM_S</ref> *</type>
+          <declname>Nvm_obj</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="struct_n_v_m___item___s" kindref="compound">NVM_Item_S</ref></type>
+          <declname>Item</declname>
+        </param>
+        <param>
+          <type>const int16_t *</type>
+          <declname>Value</declname>
+        </param>
+        <briefdescription>
+<para>Writes an unsigned uint8 item to NVM. This function only operates on an NVM internal buffer. In order to store the buffers content to the flash memory use <ref refid="group___n_v_m_1ga49ed64fee7640e7e48312ae8c14ac264" kindref="member">NVM_Flush()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">nvm_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nvm object holding the used page and section specification </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>item specification </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>desired value to write</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> if the item has been successfully written </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___n_v_m_1gga8d175357e01c43983812b82aed85be84a1da1cd062dc42cdffc27a8b1595588b4" kindref="member">NVM_RETCODE_INVALID_SIZE</ref> If the item size is invalid</para></simplesect>
+<simplesect kind="return"><para>In case of any other error refer <ref refid="group___n_v_m_1gabef20a303214c6809f7f44195993660a" kindref="member">NVM_Write</ref> error codes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" line="377" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___n_v_m_1ga176ee779f7f3b13703d07e20a80f3f67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T NVM_WriteInt32</definition>
+        <argsstring>(const struct NVM_S *Nvm_obj, struct NVM_Item_S Item, const int32_t *Value)</argsstring>
+        <name>NVM_WriteInt32</name>
+        <param>
+          <type>const struct <ref refid="struct_n_v_m___s" kindref="compound">NVM_S</ref> *</type>
+          <declname>Nvm_obj</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="struct_n_v_m___item___s" kindref="compound">NVM_Item_S</ref></type>
+          <declname>Item</declname>
+        </param>
+        <param>
+          <type>const int32_t *</type>
+          <declname>Value</declname>
+        </param>
+        <briefdescription>
+<para>Writes an unsigned uint8 item to NVM. This function only operates on an NVM internal buffer. In order to store the buffers content to the flash memory use <ref refid="group___n_v_m_1ga49ed64fee7640e7e48312ae8c14ac264" kindref="member">NVM_Flush()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">nvm_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nvm object holding the used page and section specification </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>item specification </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>desired value to write</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> if the item has been successfully written </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___n_v_m_1gga8d175357e01c43983812b82aed85be84a1da1cd062dc42cdffc27a8b1595588b4" kindref="member">NVM_RETCODE_INVALID_SIZE</ref> If the item size is invalid</para></simplesect>
+<simplesect kind="return"><para>In case of any other error refer <ref refid="group___n_v_m_1gabef20a303214c6809f7f44195993660a" kindref="member">NVM_Write</ref> error codes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" line="413" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___n_v_m_1ga8d283f14b009966c6f33c71fcf9caae6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T NVM_WriteInt64</definition>
+        <argsstring>(const struct NVM_S *Nvm_obj, struct NVM_Item_S Item, const int64_t *Value)</argsstring>
+        <name>NVM_WriteInt64</name>
+        <param>
+          <type>const struct <ref refid="struct_n_v_m___s" kindref="compound">NVM_S</ref> *</type>
+          <declname>Nvm_obj</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="struct_n_v_m___item___s" kindref="compound">NVM_Item_S</ref></type>
+          <declname>Item</declname>
+        </param>
+        <param>
+          <type>const int64_t *</type>
+          <declname>Value</declname>
+        </param>
+        <briefdescription>
+<para>Writes an unsigned uint8 item to NVM. This function only operates on an NVM internal buffer. In order to store the buffers content to the flash memory use <ref refid="group___n_v_m_1ga49ed64fee7640e7e48312ae8c14ac264" kindref="member">NVM_Flush()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">nvm_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nvm object holding the used page and section specification </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>item specification </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>desired value to write</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> if the item has been successfully written </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___n_v_m_1gga8d175357e01c43983812b82aed85be84a1da1cd062dc42cdffc27a8b1595588b4" kindref="member">NVM_RETCODE_INVALID_SIZE</ref> If the item size is invalid</para></simplesect>
+<simplesect kind="return"><para>In case of any other error refer <ref refid="group___n_v_m_1gabef20a303214c6809f7f44195993660a" kindref="member">NVM_Write</ref> error codes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" line="449" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___n_v_m_1ga1a5cba146e5a99edbd53ee689bb8acf3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T NVM_WriteInt8</definition>
+        <argsstring>(const struct NVM_S *Nvm_obj, struct NVM_Item_S Item, const int8_t *Value)</argsstring>
+        <name>NVM_WriteInt8</name>
+        <param>
+          <type>const struct <ref refid="struct_n_v_m___s" kindref="compound">NVM_S</ref> *</type>
+          <declname>Nvm_obj</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="struct_n_v_m___item___s" kindref="compound">NVM_Item_S</ref></type>
+          <declname>Item</declname>
+        </param>
+        <param>
+          <type>const int8_t *</type>
+          <declname>Value</declname>
+        </param>
+        <briefdescription>
+<para>Writes an unsigned uint8 item to NVM. This function only operates on an NVM internal buffer. In order to store the buffers content to the flash memory use <ref refid="group___n_v_m_1ga49ed64fee7640e7e48312ae8c14ac264" kindref="member">NVM_Flush()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">nvm_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nvm object holding the used page and section specification </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>item specification </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>desired value to write</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> if the item has been successfully written </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___n_v_m_1gga8d175357e01c43983812b82aed85be84a1da1cd062dc42cdffc27a8b1595588b4" kindref="member">NVM_RETCODE_INVALID_SIZE</ref> If the item size is invalid</para></simplesect>
+<simplesect kind="return"><para>In case of any other error refer <ref refid="group___n_v_m_1gabef20a303214c6809f7f44195993660a" kindref="member">NVM_Write</ref> error codes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" line="341" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___n_v_m_1ga2fe2c82f1ff2c6c5e641f327edd55db6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T NVM_WriteUInt16</definition>
+        <argsstring>(const struct NVM_S *Nvm_obj, struct NVM_Item_S Item, const uint16_t *Value)</argsstring>
+        <name>NVM_WriteUInt16</name>
+        <param>
+          <type>const struct <ref refid="struct_n_v_m___s" kindref="compound">NVM_S</ref> *</type>
+          <declname>Nvm_obj</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="struct_n_v_m___item___s" kindref="compound">NVM_Item_S</ref></type>
+          <declname>Item</declname>
+        </param>
+        <param>
+          <type>const uint16_t *</type>
+          <declname>Value</declname>
+        </param>
+        <briefdescription>
+<para>Writes an unsigned uint8 item to NVM. This function only operates on an NVM internal buffer. In order to store the buffers content to the flash memory use <ref refid="group___n_v_m_1ga49ed64fee7640e7e48312ae8c14ac264" kindref="member">NVM_Flush()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">nvm_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nvm object holding the used page and section specification </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>item specification </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>desired value to write</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> if the item has been successfully written </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___n_v_m_1gga8d175357e01c43983812b82aed85be84a1da1cd062dc42cdffc27a8b1595588b4" kindref="member">NVM_RETCODE_INVALID_SIZE</ref> If the item size is invalid</para></simplesect>
+<simplesect kind="return"><para>In case of any other error refer <ref refid="group___n_v_m_1gabef20a303214c6809f7f44195993660a" kindref="member">NVM_Write</ref> error codes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" line="395" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___n_v_m_1ga33c1f04518989d1fc3715adfda590a29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T NVM_WriteUInt32</definition>
+        <argsstring>(const struct NVM_S *Nvm_obj, struct NVM_Item_S Item, const uint32_t *Value)</argsstring>
+        <name>NVM_WriteUInt32</name>
+        <param>
+          <type>const struct <ref refid="struct_n_v_m___s" kindref="compound">NVM_S</ref> *</type>
+          <declname>Nvm_obj</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="struct_n_v_m___item___s" kindref="compound">NVM_Item_S</ref></type>
+          <declname>Item</declname>
+        </param>
+        <param>
+          <type>const uint32_t *</type>
+          <declname>Value</declname>
+        </param>
+        <briefdescription>
+<para>Writes an unsigned uint8 item to NVM. This function only operates on an NVM internal buffer. In order to store the buffers content to the flash memory use <ref refid="group___n_v_m_1ga49ed64fee7640e7e48312ae8c14ac264" kindref="member">NVM_Flush()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">nvm_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nvm object holding the used page and section specification </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>item specification </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>desired value to write</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> if the item has been successfully written </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___n_v_m_1gga8d175357e01c43983812b82aed85be84a1da1cd062dc42cdffc27a8b1595588b4" kindref="member">NVM_RETCODE_INVALID_SIZE</ref> If the item size is invalid</para></simplesect>
+<simplesect kind="return"><para>In case of any other error refer <ref refid="group___n_v_m_1gabef20a303214c6809f7f44195993660a" kindref="member">NVM_Write</ref> error codes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" line="431" column="1"/>
+        <referencedby refid="group___f_o_t_a_1gaa17c22be08c000fec0331fab53040c26" compoundref="_f_o_t_a_8c" startline="371" endline="413">FOTA_UpdateSdcardFw</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___n_v_m_1gac8fa04776f22f479f76a48cf0c0282bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T NVM_WriteUInt64</definition>
+        <argsstring>(const struct NVM_S *Nvm_obj, struct NVM_Item_S Item, const uint64_t *Value)</argsstring>
+        <name>NVM_WriteUInt64</name>
+        <param>
+          <type>const struct <ref refid="struct_n_v_m___s" kindref="compound">NVM_S</ref> *</type>
+          <declname>Nvm_obj</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="struct_n_v_m___item___s" kindref="compound">NVM_Item_S</ref></type>
+          <declname>Item</declname>
+        </param>
+        <param>
+          <type>const uint64_t *</type>
+          <declname>Value</declname>
+        </param>
+        <briefdescription>
+<para>Writes an unsigned uint8 item to NVM. This function only operates on an NVM internal buffer. In order to store the buffers content to the flash memory use <ref refid="group___n_v_m_1ga49ed64fee7640e7e48312ae8c14ac264" kindref="member">NVM_Flush()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">nvm_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nvm object holding the used page and section specification </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>item specification </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>desired value to write</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> if the item has been successfully written </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___n_v_m_1gga8d175357e01c43983812b82aed85be84a1da1cd062dc42cdffc27a8b1595588b4" kindref="member">NVM_RETCODE_INVALID_SIZE</ref> If the item size is invalid</para></simplesect>
+<simplesect kind="return"><para>In case of any other error refer <ref refid="group___n_v_m_1gabef20a303214c6809f7f44195993660a" kindref="member">NVM_Write</ref> error codes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" line="468" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___n_v_m_1gaeb6c0ea8605a03bb5d020e1e3f318b5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T NVM_WriteUInt8</definition>
+        <argsstring>(const struct NVM_S *Nvm_obj, struct NVM_Item_S Item, const uint8_t *Value)</argsstring>
+        <name>NVM_WriteUInt8</name>
+        <param>
+          <type>const struct <ref refid="struct_n_v_m___s" kindref="compound">NVM_S</ref> *</type>
+          <declname>Nvm_obj</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="struct_n_v_m___item___s" kindref="compound">NVM_Item_S</ref></type>
+          <declname>Item</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>Value</declname>
+        </param>
+        <briefdescription>
+<para>Writes an unsigned uint8 item to NVM. This function only operates on an NVM internal buffer. In order to store the buffers content to the flash memory use <ref refid="group___n_v_m_1ga49ed64fee7640e7e48312ae8c14ac264" kindref="member">NVM_Flush()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">nvm_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nvm object holding the used page and section specification </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>item specification </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>desired value to write</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> if the item has been successfully written </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___n_v_m_1gga8d175357e01c43983812b82aed85be84a1da1cd062dc42cdffc27a8b1595588b4" kindref="member">NVM_RETCODE_INVALID_SIZE</ref> If the item size is invalid</para></simplesect>
+<simplesect kind="return"><para>In case of any other error refer <ref refid="group___n_v_m_1gabef20a303214c6809f7f44195993660a" kindref="member">NVM_Write</ref> error codes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Drivers/include/BCDS_NVM.h" line="359" column="1"/>
+        <referencedby refid="group___s_y_s_t_e_m_s_t_a_r_t_u_p_1gab3bf0967da05629b9d5b23b21d15aeb1" compoundref="_system_startup_8c" startline="297" endline="388">systemStartup</referencedby>
+        <referencedby refid="group___f_o_t_a_1gaa17c22be08c000fec0331fab53040c26" compoundref="_f_o_t_a_8c" startline="371" endline="413">FOTA_UpdateSdcardFw</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface header for the non-volatile memory (NVM) </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

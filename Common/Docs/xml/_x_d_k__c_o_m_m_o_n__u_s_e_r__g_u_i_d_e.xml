@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_x_d_k__c_o_m_m_o_n__u_s_e_r__g_u_i_d_e" kind="page">
+    <compoundname>XDK_COMMON_USER_GUIDE</compoundname>
+    <title>XDK Common User Guide</title>
+    <detaileddescription>
+<para>Explains XDK common user guide and how the modules can be used for an application</para><para><hruler/>
+</para><para>This simple guide is intended, for the developers who intend to develop a application using the XDK Common module or for developers who intend to use/improve existing sample application.</para><para>XDK application uses Common modules for System startup and feature interfaces(like BLE, Wlan). By default all the feature macros are enabled in common_feature.mk. <bold>XDK_FEATURE_SET</bold> macro is used to select the features needed by application. <programlisting><codeline><highlight class="normal">XDK_FEATURE_SET<sp/>?=&apos;ALL&apos;</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>ALL<sp/><sp/><sp/><sp/>----&gt;<sp/>All<sp/>the<sp/>features<sp/>will<sp/>be<sp/>enabled</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>NONE<sp/><sp/><sp/>----&gt;<sp/>All<sp/>the<sp/>features<sp/>will<sp/>be<sp/>disabled</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>SELECT<sp/>----&gt;<sp/>Application<sp/>has<sp/>to<sp/>select<sp/>the<sp/>required<sp/>features</highlight></codeline>
+</programlisting></para><para>XDK Common module implements the following components,</para><sect1 id="_x_d_k__c_o_m_m_o_n__u_s_e_r__g_u_i_d_e_1XDK_COMMON_USER_GUIDE_STARTUP">
+<title>Startup:</title>
+<para>This module contains &quot;Main&quot; routine and the APIs , in which user can easily integrate application specific routines</para></sect1>
+<sect1 id="_x_d_k__c_o_m_m_o_n__u_s_e_r__g_u_i_d_e_1XDK_COMMON_USER_GUIDE_CONNECTIVITY">
+<title>Connectivity:</title>
+<para>This module contains the following network interfaces,<orderedlist>
+<listitem><para><bold>BLE</bold> : This interface is enabled with XDK_CONNECTIVITY_BLE feature macro. This module handles the BLE peripheral feature which has implementation support for Sensor service, BCDS bidirectional service and Custom service.</para></listitem><listitem><para><bold>HTTPRestClient</bold> : This interface is enabled with XDK_CONNECTIVITY_HTTPRESTCLIENT feature macro. This module handles the HTTP rest client services (POST and GET) with and without security support.</para></listitem><listitem><para><bold>LED</bold> : This interface is enabled with XDK_CONNECTIVITY_LED feature macro. This module handles the LED features.</para></listitem><listitem><para><bold>LoRa</bold> : This interface is enabled with XDK_CONNECTIVITY_LORA feature macro. This module handles the LORA peripheral feature.</para></listitem><listitem><para><bold>LWM2M</bold> : This interface is enabled with XDK_CONNECTIVITY_LORA feature macro. This module supports few standard OMA objects. It also supports the following standard IPSO (OMA standardized) objects and XDK (BCDS vendor specific) objects like Sensor device, Alert notification.</para></listitem><listitem><para><bold>MQTT</bold> : This interface is enabled with XDK_CONNECTIVITY_MQTT feature macro. This module handles the MQTT communication support from AWS and ServalStack.</para></listitem><listitem><para><bold>UDP</bold> : This interface is enabled with XDK_CONNECTIVITY_UDP feature macro. This module handles UDP service from ServalStack.</para></listitem><listitem><para><bold>WLAN</bold> : This interface is enabled with XDK_CONNECTIVITY_WLAN feature macro. This module handles the WLAN services (Personal WPA2 and Enterprise WPA2 connection).</para></listitem></orderedlist>
+</para></sect1>
+<sect1 id="_x_d_k__c_o_m_m_o_n__u_s_e_r__g_u_i_d_e_1XDK_COMMON_USER_GUIDE_SENSOR">
+<title>Sensor:</title>
+<para>This module contains the following sensor interfaces,<orderedlist>
+<listitem><para><bold>BUTTON</bold> : This interface is enabled with XDK_SENSOR_BUTTON feature macro. This module handles the Button features.</para></listitem><listitem><para><bold>EXTERNAL</bold> : This interface is enabled with XDK_SENSOR_EXTERNALSENSOR feature macro. This module interfaces External Sensor features for MAX31865 and LEM.</para></listitem><listitem><para><bold>LEM</bold> : This interface is enabled by default for internal Lem Sensor.</para></listitem><listitem><para><bold>SENSOR</bold> : This interface is enabled with XDK_SENSOR_SENSOR feature macro. Interface file for the In-built Sensor BMI160, BMA280, BMG160, MAX44009, BMM150, BME280.</para></listitem><listitem><para><bold>VIRTUAL</bold> : This interface is enabled with XDK_SENSOR_VIRTUALSENSOR feature macro. This module handles the generic Sensor data sampling and reporting.</para></listitem><listitem><para><bold>NOISE</bold> : This interface is enabled by default. This module interfaces the internal Noise sensor.</para></listitem></orderedlist>
+</para></sect1>
+<sect1 id="_x_d_k__c_o_m_m_o_n__u_s_e_r__g_u_i_d_e_1XDK_COMMON_USER_GUIDE_UTILITY">
+<title>Utility:</title>
+<para>This module contains the following utility interfaces,<orderedlist>
+<listitem><para><bold>CAYENNELPPSERIALIZER</bold> : This interface is enabled by default. The Cayenne Low Power Payload (LPP) provides a convenient and easy way to send data over LPWAN networks such as LoRaWAN.</para></listitem><listitem><para><bold>PPMPSERIALIZER</bold> : This interface is enabled by default for serializing PPMP payload.</para></listitem><listitem><para><bold>FOTA</bold> : This interface is enabled by default for handling FOTA related activities like Firmware validation and Firmware update from the SD Card.</para></listitem><listitem><para><bold>SERVALPAL</bold> : This interface is enabled with XDK_UTILITY_SERVALPAL feature macro. This module handles the Serval stack Platform Adaptation Layer setup.</para></listitem><listitem><para><bold>SNTP</bold> : This interface is enabled with XDK_UTILITY_SNTP feature macro. This module handles the SNTP timestamp (from server and system).</para></listitem><listitem><para><bold>STORAGE</bold> : This interface is enabled with XDK_UTILITY_STORAGE feature macro. This module handles storage in SD card and WiFi file system.</para></listitem><listitem><para><bold>TIMESTAMP</bold> : This interface is enabled by default. This module is responsible for time stamp conversions to ISO 8601 format.</para></listitem><listitem><para><bold>UTILS</bold> : This interface is enabled by default for XDK utility.</para></listitem></orderedlist>
+</para></sect1>
+<sect1 id="_x_d_k__c_o_m_m_o_n__u_s_e_r__g_u_i_d_e_1XDK_COMMON_USER_GUIDE_OTHER">
+<title>Other_Components:</title>
+<para>This module contains other components like,<orderedlist>
+<listitem><para><bold>MCU_ADC</bold> : This interface is enabled by default and handles the ADC Channel configurations, manages the data.</para></listitem><listitem><para><bold>BATTERYMONITOR</bold> : This interface is enabled by default and is used to measure the battery voltage.</para></listitem><listitem><para><bold><ref refid="structc_j_s_o_n" kindref="compound">cJSON</ref></bold> : This interface is enabled by default and used to parse json payload.</para></listitem><listitem><para><bold>EXTENSIONPORTSPI</bold> : This interface is enabled by default and used for SPI communication interface. </para></listitem></orderedlist>
+</para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_serval___ws_8h" kind="file">
+    <compoundname>Serval_Ws.h</compoundname>
+    <includes refid="_serval___defines_8h" local="no">Serval_Defines.h</includes>
+    <includedby refid="_serval___resources_8h" local="no">SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Resources.h</includedby>
+    <incdepgraph>
+      <node id="32049">
+        <label>SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Ws.h</label>
+        <link refid="Serval_Ws.h"/>
+        <childnode refid="32050" relation="include">
+        </childnode>
+      </node>
+      <node id="32050">
+        <label>Serval_Defines.h</label>
+        <link refid="_serval___defines_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="32052">
+        <label>SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Resources.h</label>
+        <link refid="_serval___resources_8h"/>
+      </node>
+      <node id="32051">
+        <label>SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Ws.h</label>
+        <link refid="Serval_Ws.h"/>
+        <childnode refid="32052" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_serval___ws_8h_1a4ae81eda133ec26453ec389e8268ba0c" prot="public" static="no">
+        <name>SERVAL_WS_MAX_NUM_CONNECTIONS</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Max number of WebSocket connections that can be handled </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Ws.h" line="34" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Ws.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface to WebSocket (RFC 6455) methods. </para>    </briefdescription>
+    <detaileddescription>
+<para>This module provides methods which are commonly used by a WebSocket client and server.</para><para>This API has recently been added to the Stack and may be subject to change as feedback from usage is being obtained.</para><para><simplesect kind="since"><para>1.8 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/********************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2010-2018<sp/>Contributors<sp/>to<sp/>this<sp/>project</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>NOTICE<sp/>file(s)<sp/>distributed<sp/>with<sp/>this<sp/>work<sp/>for<sp/>additional</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>information<sp/>regarding<sp/>copyright<sp/>ownership.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>This<sp/>program<sp/>and<sp/>the<sp/>accompanying<sp/>materials<sp/>are<sp/>made<sp/>available<sp/>under<sp/>the</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>terms<sp/>of<sp/>the<sp/>Eclipse<sp/>Public<sp/>License<sp/>2.0<sp/>which<sp/>is<sp/>available<sp/>at</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>http://www.eclipse.org/legal/epl-2.0</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>EPL-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor">#ifndef<sp/>SERVAL_WS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVAL_WS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SERVAL_WS_MAX_NUM_CONNECTIONS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="_serval___ws_8h_1a4ae81eda133ec26453ec389e8268ba0c" refkind="member"><highlight class="preprocessor">#define<sp/>SERVAL_WS_MAX_NUM_CONNECTIONS<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_serval___defines_8h" kindref="compound">Serval_Defines.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>SERVAL_ENABLE_WS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_serval___types_8h" kindref="compound">Serval_Types.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_serval___msg_8h" kindref="compound">Serval_Msg.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_serval___string_descr_8h" kindref="compound">Serval_StringDescr.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>WsEvent_e</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>WS_EVENT_CONNECTION_ESTABLISHED,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>WS_EVENT_CONNECTION_FAILED,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>WS_EVENT_CONTINUATION_DATA,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>WS_EVENT_TEXT_DATA,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>WS_EVENT_BINARY_DATA,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>WS_EVENT_PING,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>WS_EVENT_PONG,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>WS_EVENT_CLOSE,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>WS_EVENT_REDIRECTION,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>WS_EVENT_NOT_FOUND,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>WS_EVENT_ERROR</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>WsEvent_e<sp/>WsEvent_T;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>WS_TYPE_TEXT<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x1,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>WS_TYPE_BINARY<sp/><sp/><sp/><sp/>=<sp/>0x2,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}<sp/>WsType_T;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><ref refid="_serval___types_8h_1a473797d61ec6d5f5a4f91d1d8b56b198" kindref="member">retcode_t</ref><sp/>Ws_initMsgToSend(<ref refid="_serval___msg_8h_1ae00d936510d9d4493cae90cf1ff00ee4" kindref="member">Msg_T</ref><sp/>**msg_pptr,<sp/>uint8_t<sp/>websocketId);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><ref refid="_serval___types_8h_1a473797d61ec6d5f5a4f91d1d8b56b198" kindref="member">retcode_t</ref><sp/>Ws_send(<ref refid="_serval___msg_8h_1ae00d936510d9d4493cae90cf1ff00ee4" kindref="member">Msg_T</ref><sp/>*msg_ptr,<sp/>WsType_T<sp/>wsType);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><ref refid="_serval___types_8h_1a473797d61ec6d5f5a4f91d1d8b56b198" kindref="member">retcode_t</ref><sp/>Ws_ping(uint8_t<sp/>websocketId);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><ref refid="_serval___types_8h_1a473797d61ec6d5f5a4f91d1d8b56b198" kindref="member">retcode_t</ref><sp/>Ws_closeConnection(uint8_t<sp/>websocketId);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>Ws_getPayload(<ref refid="_serval___msg_8h_1ae00d936510d9d4493cae90cf1ff00ee4" kindref="member">Msg_T</ref><sp/>*msg_ptr,<sp/>uint16_t<sp/>*payloadLen);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_string_descr___s" kindref="compound">StringDescr_T</ref>*<sp/>Ws_getLocation(<ref refid="_serval___msg_8h_1ae00d936510d9d4493cae90cf1ff00ee4" kindref="member">Msg_T</ref><sp/>*msg_ptr);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SERVAL_ENABLE_WS<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SERVAL_WS_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Ws.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,576 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t" kind="group">
+    <compoundname>WLAN_NETWORK_MANAGEMENT</compoundname>
+    <title>WlanNetworkManagement</title>
+    <innerfile refid="_wlan_network_management_2source_2_app_controller_8c">AppController.c</innerfile>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga90ce7b07b4530c957f9f83201d8dc8bc" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga41a2f220f03970c1857bd96528307a81" kindref="member">CmdProcessor_T</ref> *</type>
+        <definition>CmdProcessor_T* AppCmdProcessor</definition>
+        <argsstring></argsstring>
+        <name>AppCmdProcessor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle to store the main Command processor handle to be reused by ServalPAL thread </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" line="123" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga6fa700b048407619b5309da95dcce5dd" prot="public" static="yes" mutable="no">
+        <type><ref refid="_free_r_t_o_s_8h_1af7cd8f53b62f0c497b442b504c30f2ec" kindref="member">xTaskHandle</ref></type>
+        <definition>xTaskHandle AppControllerHandle</definition>
+        <argsstring></argsstring>
+        <name>AppControllerHandle</name>
+        <initializer>= <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>OS thread handle for Application controller </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" line="121" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" bodystart="121" bodyend="-1"/>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="633" endline="676">AppControllerEnable</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1gaf7e3126e6d220a81e01f744c35da8963" prot="public" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t dhcpFlag_mdu8</definition>
+        <argsstring></argsstring>
+        <name>dhcpFlag_mdu8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>callback flag for DHCP; let user know that the DHCP IP was acquired </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" line="129" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" bodystart="129" bodyend="-1"/>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga45a7411bed72ce367a7e7b6f053d6545" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="171" endline="187">myDhcpIpCallbackFunc</referencedby>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga6b08614c341359b0edd92c1feaf47fc6" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="203" endline="527">SetAndGetIp</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga2cf7f49e0985a56e9ba0865bc05add08" prot="public" static="yes" mutable="no">
+        <type><ref refid="semphr_8h_1ad88c6df4a04beedeac782918c8a332f5" kindref="member">SemaphoreHandle_t</ref></type>
+        <definition>SemaphoreHandle_t NetworkConfigSemaphore</definition>
+        <argsstring></argsstring>
+        <name>NetworkConfigSemaphore</name>
+        <initializer>= <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" line="126" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" bodystart="126" bodyend="-1"/>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga45a7411bed72ce367a7e7b6f053d6545" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="171" endline="187">myDhcpIpCallbackFunc</referencedby>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga6b08614c341359b0edd92c1feaf47fc6" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="203" endline="527">SetAndGetIp</referencedby>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="633" endline="676">AppControllerEnable</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1gad4991d8bd4d8b0f3800fdba963c61a37" prot="public" static="yes" mutable="no">
+        <type><ref refid="semphr_8h_1ad88c6df4a04beedeac782918c8a332f5" kindref="member">SemaphoreHandle_t</ref></type>
+        <definition>SemaphoreHandle_t WlanEventSemaphore</definition>
+        <argsstring></argsstring>
+        <name>WlanEventSemaphore</name>
+        <initializer>= <ref refid="group___user_events_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" line="125" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" bodystart="125" bodyend="-1"/>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga6565144400437782a01decf74189abd6" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="137" endline="144">WlanConnectStatusCallback</referencedby>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga6b08614c341359b0edd92c1feaf47fc6" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="203" endline="527">SetAndGetIp</referencedby>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="633" endline="676">AppControllerEnable</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga0e412a42d216de0f4feb72dfc0dfa51d" prot="public" static="yes" mutable="no">
+        <type><ref refid="group___w_l_a_n_1ga0e6768bd91dfe20a7c6e5c6ce49533af" kindref="member">WLAN_Setup_T</ref></type>
+        <definition>WLAN_Setup_T WLANSetupInfo</definition>
+        <argsstring></argsstring>
+        <name>WLANSetupInfo</name>
+        <initializer>=
+        {
+                .IsEnterprise = <ref refid="_serval___types_8h_1a65e9886d74aaee76545e83dd09011727" kindref="member">false</ref>,
+                .IsHostPgmEnabled = <ref refid="_serval___types_8h_1a65e9886d74aaee76545e83dd09011727" kindref="member">false</ref>,
+                .SSID = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1af8d23ae6c17168a7ce76f565959a7100" kindref="member">WLAN_SSID</ref>,
+                .Username = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a7595c51ecaebc052ebb16bfee33ef064" kindref="member">WLAN_PSK</ref>,
+                .Password = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a7595c51ecaebc052ebb16bfee33ef064" kindref="member">WLAN_PSK</ref>,
+                .IsStatic = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a3b7cbbe0cc99913db8a349bf04cb7648" kindref="member">WLAN_STATIC_IP</ref>,
+                .IpAddr = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1af8b956915d3648203d2db609f103d400" kindref="member">WLAN_IP_ADDR</ref>,
+                .GwAddr = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1aabe89318c85014d96791cdb2cd9263a8" kindref="member">WLAN_GW_ADDR</ref>,
+                .DnsAddr = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a91bfddd64e54251da5ca4e7b2d4b5774" kindref="member">WLAN_DNS_ADDR</ref>,
+                .Mask = <ref refid="_wlan_network_management_2source_2_app_controller_8h_1a408301af8a45e844e60c3be81a51a5e7" kindref="member">WLAN_MASK</ref>,
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>WLAN setup parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" line="146" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga22919ee3de6947c4b6616a9231e71f67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AppController_Init</definition>
+        <argsstring>(void *cmdProcessorHandle, uint32_t param2)</argsstring>
+        <name>AppController_Init</name>
+        <param>
+          <type>void *</type>
+          <declname>cmdProcessorHandle</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>Gives control to the Application controller. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a template function where the user can write his custom application.</para><para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" line="714" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" bodystart="714" bodyend="736"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e">CmdProcessor_Enqueue</references>
+        <references refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="689" endline="711">AppControllerSetup</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+      </memberdef>
+      <memberdef kind="function" id="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga5ef9cc8f277726dc19c525c8049d388f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerEnable</definition>
+        <argsstring>(void *param1, uint32_t param2)</argsstring>
+        <name>AppControllerEnable</name>
+        <param>
+          <type>void *</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>To enable the necessary modules for the application. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>LED</para></listitem><listitem><para>WLAN</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" line="633" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" bodystart="633" bodyend="676"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___l_e_d_1gae3a60da7a90139abb54f4ddb36456756">LED_Enable</references>
+        <references refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga46177fff2cf54b7c9a504cc509f1b04d">WlanNetworkConnect_Init</references>
+        <references refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga6565144400437782a01decf74189abd6" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="137" endline="144">WlanConnectStatusCallback</references>
+        <references refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga2cf7f49e0985a56e9ba0865bc05add08" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="126">NetworkConfigSemaphore</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba281b77d7bbd0b11781de864c12f32fd9" compoundref="_b_c_d_s___retcode_8h" startline="117">RETCODE_SEMAPHORE_ERROR</references>
+        <references refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1gad4991d8bd4d8b0f3800fdba963c61a37" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="125">WlanEventSemaphore</references>
+        <references refid="semphr_8h_1acd7d0eda0923d7caeeaaee9202c43eab" compoundref="semphr_8h" startline="1098">vSemaphoreDelete</references>
+        <references refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="612" endline="620">AppControllerFire</references>
+        <references refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1af793604cd2dbedfc6b69f10936fe7c41" compoundref="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h" startline="61">TASK_STACK_SIZE_APP_CONTROLLER</references>
+        <references refid="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h_1a4651501b886d4de331b9f06b37265177" compoundref="_aws_send_data_over_m_q_t_t_2source_2_xdk_app_info_8h" startline="59">TASK_PRIO_APP_CONTROLLER</references>
+        <references refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga6fa700b048407619b5309da95dcce5dd" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="121">AppControllerHandle</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba497273b2285191edc1cda8648b67250a" compoundref="_b_c_d_s___retcode_8h" startline="107">RETCODE_OUT_OF_RESOURCES</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+        <references refid="group___x_d_k_u_t_i_l_s_1ga7ffe38d38314b5301a4ddd04f4fa7ca6" compoundref="_utils_8c" startline="277" endline="284">Utils_PrintResetCause</references>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="689" endline="711">AppControllerSetup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerFire</definition>
+        <argsstring>(void *pvParameters)</argsstring>
+        <name>AppControllerFire</name>
+        <param>
+          <type>void *</type>
+          <declname>pvParameters</declname>
+        </param>
+        <briefdescription>
+<para>Responsible for controlling the Wlan network management control flow. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Scan for available networks</para></listitem><listitem><para>Set IP, Connect, Get IP and Disconnect from network</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pvParameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" line="612" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" bodystart="612" bodyend="620"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga12ccd9f7e6c3b8c8ae9840cfc7e052db" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="538" endline="601">ScanNetwork</references>
+        <references refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga6b08614c341359b0edd92c1feaf47fc6" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="203" endline="527">SetAndGetIp</references>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="633" endline="676">AppControllerEnable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga5ca12481e985f2cd2437fe712e08c9b7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AppControllerSetup</definition>
+        <argsstring>(void *param1, uint32_t param2)</argsstring>
+        <name>AppControllerSetup</name>
+        <param>
+          <type>void *</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>To setup the necessary modules for the application. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>LED</para></listitem><listitem><para>WLAN</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" line="689" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" bodystart="689" bodyend="711"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___l_e_d_1gaec11150ded6e8967d64145a758af0616">LED_Setup</references>
+        <references refid="group___w_l_a_n_1ga5e86721c894549287a387d49af37b1e3">WLAN_Setup</references>
+        <references refid="group___c_m_d_p_r_o_c_e_s_s_o_r_1ga3e1b249a3cf9fda8b6d891a3be76eb4e">CmdProcessor_Enqueue</references>
+        <references refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="633" endline="676">AppControllerEnable</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga975eaf9537f3cdb4cd38370c7e58a2c2">Retcode_RaiseError</references>
+        <references refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" compoundref="_b_c_d_s___assert_8h" startline="136">assert</references>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga22919ee3de6947c4b6616a9231e71f67" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="714" endline="736">AppController_Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga45a7411bed72ce367a7e7b6f053d6545" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myDhcpIpCallbackFunc</definition>
+        <argsstring>(WlanNetworkConfig_IpStatus_T returnStatus)</argsstring>
+        <name>myDhcpIpCallbackFunc</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___w_l_a_n___n_e_t_w_o_r_k___c_o_n_f_i_g_1ga6af27191038f58bf2a54c5b4188124ef" kindref="member">WlanNetworkConfig_IpStatus_T</ref></type>
+          <declname>returnStatus</declname>
+        </param>
+        <briefdescription>
+<para>NCI DHCP Callback function. This function is called by the device when an IP was acquired using DHCP. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">returnStatus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Enumeration element containing the IP return status.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" line="171" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" bodystart="171" bodyend="187"/>
+        <references refid="group___b_c_d_s___w_l_a_n___n_e_t_w_o_r_k___c_o_n_f_i_g_1ggae92d6cf23a5ef348fad87fff095665f5a61ce7795c1225a3f66ea501577e688e8" compoundref="_b_c_d_s___wlan_network_config_8h" startline="86">WLANNWCNF_IPSTATUS_IPV4_AQRD</references>
+        <references refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1gaf7e3126e6d220a81e01f744c35da8963" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="129">dhcpFlag_mdu8</references>
+        <references refid="group___b_c_d_s___w_l_a_n___n_e_t_w_o_r_k___c_o_n_f_i_g_1ga415b98d2effebf4cbed353d557f2c1ba" compoundref="_b_c_d_s___wlan_network_config_8h" startline="81">WLANNWCNF_DHCP_FLG_ACQ</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga2cf7f49e0985a56e9ba0865bc05add08" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="126">NetworkConfigSemaphore</references>
+        <references refid="semphr_8h_1aae55761cabfa9bf85c8f4430f78c0953" compoundref="semphr_8h" startline="447">xSemaphoreGive</references>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga6b08614c341359b0edd92c1feaf47fc6" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="203" endline="527">SetAndGetIp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga12ccd9f7e6c3b8c8ae9840cfc7e052db" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ScanNetwork</definition>
+        <argsstring>(void)</argsstring>
+        <name>ScanNetwork</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Local function for scanning networks. This function also calls the SetAndGetIp function in order to set/get IP settings and connect/disconnect from a network. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" line="538" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" bodystart="538" bodyend="601"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="_wlan_network_management_2source_2_app_controller_8h_1a94ae66ba8697786c3808790a66153c65" compoundref="_wlan_network_management_2source_2_app_controller_8h" startline="63">SCAN_INTERVAL</references>
+        <references refid="group___l_e_d_1gaa08f7e9c416b666b93efadee96284629">LED_On</references>
+        <references refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a2b719feebe5e5a744315a07766e16af2" compoundref="_x_d_k___l_e_d_8h" startline="64">LED_INBUILT_RED</references>
+        <references refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a9ef5f00f3a78db87b6b039fcc52f82bd" compoundref="_x_d_k___l_e_d_8h" startline="66">LED_INBUILT_ORANGE</references>
+        <references refid="group___l_e_d_1ggae07b3fd2e8e0fc4b9d9e52daeb5065b8a9563b16cb4e0808638f4838b21350347" compoundref="_x_d_k___l_e_d_8h" startline="65">LED_INBUILT_YELLOW</references>
+        <references refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga35e5b048f01531f6eb47ec09f11a3bb7">WlanNetworkConnect_ScanNetworks</references>
+        <references refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1gac328e551bde3d39b6d7b8cc9e048d941" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="111">ZERO</references>
+        <references refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga2864793d4bea7ae70b37bb732b11ebd2" compoundref="_b_c_d_s___wlan_network_connect_8h" startline="73">WLANNWCT_MAX_SCAN_INFO_BUF</references>
+        <references refid="struct_wlan_network_connect___scan_list___s_1a141ad05ebe1b17361a3587d8d785c55b" compoundref="_b_c_d_s___wlan_network_connect_8h" startline="196">WlanNetworkConnect_ScanList_S::ScanData</references>
+        <references refid="struct_wlan_network_connect___scan_info___s_1aedbd16473e6c1f213770d1a612de939c" compoundref="_b_c_d_s___wlan_network_connect_8h" startline="180">WlanNetworkConnect_ScanInfo_S::SsidLength</references>
+        <references refid="struct_wlan_network_connect___scan_info___s_1a267454892c3e9660c3bd5484a5a594e6" compoundref="_b_c_d_s___wlan_network_connect_8h" startline="179">WlanNetworkConnect_ScanInfo_S::Ssid</references>
+        <references refid="group___a_s_s_e_r_t_1ga92da053d05db23c922b5f4184f22bff3" compoundref="_b_c_d_s___assert_8h" startline="109">static_assert</references>
+        <references refid="_free_r_t_o_s_8h_1a8689cad2afb0c5f65d866e2c356378bf" compoundref="_free_r_t_o_s_8h" startline="916">portTICK_RATE_MS</references>
+        <references refid="task_8h_1aa154068cecd7f31446a7a84af44ab1a3">vTaskDelay</references>
+        <references refid="_free_r_t_o_s_8h_1a324d7087026e1e9dfe6b7567d5bf63c8" compoundref="_free_r_t_o_s_8h" startline="903">portTickType</references>
+        <references refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga13264b5caaf1950731e9fb638eb0ac36" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="116">DELAY_500_MSEC</references>
+        <references refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga3d409df82e4c546a8c031839f8f33293a32439d9aac037461eef58974dbead219" compoundref="_b_c_d_s___wlan_network_connect_8h" startline="93">RETCODE_NO_NW_AVAILABLE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gad609de2b5ec721b86e52effc2d1dd574" compoundref="_b_c_d_s___retcode_8h" startline="309" endline="312">Retcode_GetCode</references>
+        <references refid="group___l_e_d_1ga017ce6b05845f8ea5f91e0103cf025a6">LED_Off</references>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="612" endline="620">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga6b08614c341359b0edd92c1feaf47fc6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SetAndGetIp</definition>
+        <argsstring>(void)</argsstring>
+        <name>SetAndGetIp</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function does the following : </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>disconnects from a network if connected</para></listitem><listitem><para>sets an IP (either static or DHCP),</para></listitem><listitem><para>connects to a known network</para></listitem><listitem><para>get the IP setting</para></listitem><listitem><para>disconnects from WLAN network</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" line="203" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" bodystart="203" bodyend="527"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga45a7411bed72ce367a7e7b6f053d6545" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="171" endline="187">myDhcpIpCallbackFunc</references>
+        <references refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ggadaf1b792db58d4dd52f06df108fd3c42aa7fc4f2829fc443f861d00162c11a138" compoundref="_b_c_d_s___wlan_network_connect_8h" startline="117">WLANNWCT_STATUS_CONNECTED</references>
+        <references refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga0219c7162e0c56ef093ded51a3c17bd4">WlanNetworkConnect_GetStatus</references>
+        <references refid="group___b_c_d_s___w_l_a_n___n_e_t_w_o_r_k___c_o_n_f_i_g_1ggae92d6cf23a5ef348fad87fff095665f5a61ce7795c1225a3f66ea501577e688e8" compoundref="_b_c_d_s___wlan_network_config_8h" startline="86">WLANNWCNF_IPSTATUS_IPV4_AQRD</references>
+        <references refid="group___b_c_d_s___w_l_a_n___n_e_t_w_o_r_k___c_o_n_f_i_g_1ga51c3c1c93110333402dd5ceb00890c54">WlanNetworkConfig_GetIpStatus</references>
+        <references refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga59e805ac62f3860ed3de3cf83206d0a5a1e85391b861a33455c92c37aa6ada4d0" compoundref="_b_c_d_s___wlan_network_connect_8h" startline="132">WLANNWCT_IPSTATUS_DISCT_NAQRD</references>
+        <references refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gae501bfe35eecb13b627779b1ef52a14d">WlanNetworkConnect_GetIpStatus</references>
+        <references refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gga59e805ac62f3860ed3de3cf83206d0a5a8d8f000e3703b7d867bd83ac8e33ed2f" compoundref="_b_c_d_s___wlan_network_connect_8h" startline="131">WLANNWCT_IPSTATUS_DISCT_AQRD</references>
+        <references refid="semphr_8h_1af116e436d2a5ae5bd72dbade2b5ea930" compoundref="semphr_8h" startline="289">xSemaphoreTake</references>
+        <references refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1gad4991d8bd4d8b0f3800fdba963c61a37" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="125">WlanEventSemaphore</references>
+        <references refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gaaf143649a7256e42b39a76f811d66bcd">WlanNetworkConnect_Disconnect</references>
+        <references refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1gae5e2eef82fe8a55df677393f6e9edd0a" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="118">WLANNETWORK_EVENT_TIMEOUT</references>
+        <references refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ggadaf1b792db58d4dd52f06df108fd3c42a1ad838ed313e6207110fc3ca061326c4" compoundref="_b_c_d_s___wlan_network_connect_8h" startline="118">WLANNWCT_STATUS_DISCONNECTED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8baa048c75b5ec280213f18c62e4f2dbe0b" compoundref="_xdk_common_info_8h" startline="230">RETCODE_WLAN_DISCONNECT_FAILED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba281b77d7bbd0b11781de864c12f32fd9" compoundref="_b_c_d_s___retcode_8h" startline="117">RETCODE_SEMAPHORE_ERROR</references>
+        <references refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1gaf7e3126e6d220a81e01f744c35da8963" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="129">dhcpFlag_mdu8</references>
+        <references refid="group___b_c_d_s___w_l_a_n___n_e_t_w_o_r_k___c_o_n_f_i_g_1gab448525836fcf69f37a246a70602ddea" compoundref="_b_c_d_s___wlan_network_config_8h" startline="80">WLANNWCNF_DHCP_FLG_NOT_ACQ</references>
+        <references refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga2cf7f49e0985a56e9ba0865bc05add08" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="126">NetworkConfigSemaphore</references>
+        <references refid="group___b_c_d_s___w_l_a_n___n_e_t_w_o_r_k___c_o_n_f_i_g_1ga198a7e8f40173e71da57a8e79905acfd">WlanNetworkConfig_SetIpDhcp</references>
+        <references refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1gaa513e13b18ac6aa1acdd6dee64a7087c">WlanNetworkConnect_PersonalWPA</references>
+        <references refid="struct_w_l_a_n___setup___s_1a0bd682e71bad5172281d3ac1431d5736" compoundref="_x_d_k___w_l_a_n_8h" startline="62">WLAN_Setup_S::SSID</references>
+        <references refid="struct_w_l_a_n___setup___s_1ab32dd31026bebd559d127ef9bea777e0" compoundref="_x_d_k___w_l_a_n_8h" startline="64">WLAN_Setup_S::Password</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8ba20ed8515b4d4e9daae97e8019ebbdfac" compoundref="_xdk_common_info_8h" startline="229">RETCODE_WLAN_CONNECT_FAILED</references>
+        <references refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1gac328e551bde3d39b6d7b8cc9e048d941" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="111">ZERO</references>
+        <references refid="struct_wlan_network_config___ip_settings___s_1a2bcb3e1d4deead1a36e37cf2f2fe9adf" compoundref="_b_c_d_s___wlan_network_config_8h" startline="95">WlanNetworkConfig_IpSettings_S::isDHCP</references>
+        <references refid="group___b_c_d_s___w_l_a_n___n_e_t_w_o_r_k___c_o_n_f_i_g_1ga96b07012c57394eaf540ae59c2de345f" compoundref="_b_c_d_s___wlan_network_config_8h" startline="74">WLANNWCNF_DHCP_DISABLED</references>
+        <references refid="struct_wlan_network_config___ip_settings___s_1a74a18608655497def3171983ff965430" compoundref="_b_c_d_s___wlan_network_config_8h" startline="96">WlanNetworkConfig_IpSettings_S::ipV4</references>
+        <references refid="socket_8c_1a712c2a31c2844b54c33ede3a9a148d61" compoundref="socket_8c" startline="852" endline="868">sl_Htonl</references>
+        <references refid="struct_w_l_a_n___setup___s_1ad11c187f4827bdf1311d17ef1ed16007" compoundref="_x_d_k___w_l_a_n_8h" startline="66">WLAN_Setup_S::IpAddr</references>
+        <references refid="struct_wlan_network_config___ip_settings___s_1a5d13dac041d3f8ff49e100e8f119c0b0" compoundref="_b_c_d_s___wlan_network_config_8h" startline="99">WlanNetworkConfig_IpSettings_S::ipV4DnsServer</references>
+        <references refid="struct_w_l_a_n___setup___s_1a131704926c7c8aba93373ac659f53530" compoundref="_x_d_k___w_l_a_n_8h" startline="68">WLAN_Setup_S::DnsAddr</references>
+        <references refid="struct_wlan_network_config___ip_settings___s_1ab53f414526c004582473625971391e08" compoundref="_b_c_d_s___wlan_network_config_8h" startline="98">WlanNetworkConfig_IpSettings_S::ipV4Gateway</references>
+        <references refid="struct_w_l_a_n___setup___s_1a04dbb6cc7d759b632db23f93252e98cf" compoundref="_x_d_k___w_l_a_n_8h" startline="67">WLAN_Setup_S::GwAddr</references>
+        <references refid="struct_wlan_network_config___ip_settings___s_1a72e77b01d62e6e9f4bc3a55c96c41ec2" compoundref="_b_c_d_s___wlan_network_config_8h" startline="97">WlanNetworkConfig_IpSettings_S::ipV4Mask</references>
+        <references refid="struct_w_l_a_n___setup___s_1ad43d71b019af6a9e42b555e6a6199200" compoundref="_x_d_k___w_l_a_n_8h" startline="69">WLAN_Setup_S::Mask</references>
+        <references refid="group___b_c_d_s___w_l_a_n___n_e_t_w_o_r_k___c_o_n_f_i_g_1gabbaeb6b12feb60f487acfa8605f40e01">WlanNetworkConfig_SetIpStatic</references>
+        <references refid="group___b_c_d_s___w_l_a_n___n_e_t_w_o_r_k___c_o_n_f_i_g_1gae635ae5f0047c1c4144fbe90a4ed957d">WlanNetworkConfig_Ipv4Byte</references>
+        <references refid="group__wlan_1ga6d5178e45c38f74c99c81449cee716c2" compoundref="_libraries_2_wi_fi_23rd-party_2_t_i_2simplelink_2include_2_w_l_a_n_8h" startline="234">SL_POLICY_CONNECTION</references>
+        <references refid="group__wlan_1gacccfd370efbed7ef1ce4645062e018a1" compoundref="_libraries_2_wi_fi_23rd-party_2_t_i_2simplelink_2include_2_w_l_a_n_8h" startline="242">SL_CONNECTION_POLICY</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___user_events_1gad4295f0de50c216a5ba1b9ce4894086b" compoundref="simplelink_8h" startline="326">SL_RET_CODE_OK</references>
+        <references refid="group___a_s_s_e_r_t_1ga92da053d05db23c922b5f4184f22bff3" compoundref="_b_c_d_s___assert_8h" startline="109">static_assert</references>
+        <references refid="_free_r_t_o_s_8h_1a8689cad2afb0c5f65d866e2c356378bf" compoundref="_free_r_t_o_s_8h" startline="916">portTICK_RATE_MS</references>
+        <references refid="task_8h_1aa154068cecd7f31446a7a84af44ab1a3">vTaskDelay</references>
+        <references refid="_free_r_t_o_s_8h_1a324d7087026e1e9dfe6b7567d5bf63c8" compoundref="_free_r_t_o_s_8h" startline="903">portTickType</references>
+        <references refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga02aafa95ef618584aa327e16d993fe9a" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="117">DELAY_15_SEC</references>
+        <references refid="group___b_c_d_s___w_l_a_n___n_e_t_w_o_r_k___c_o_n_f_i_g_1ga610f25671b673e8ed2df02dd35aeef79">WlanNetworkConfig_GetIpSettings</references>
+        <references refid="group___b_c_d_s___w_l_a_n___n_e_t_w_o_r_k___c_o_n_f_i_g_1ga415b98d2effebf4cbed353d557f2c1ba" compoundref="_b_c_d_s___wlan_network_config_8h" startline="81">WLANNWCNF_DHCP_FLG_ACQ</references>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="612" endline="620">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga6565144400437782a01decf74189abd6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void WlanConnectStatusCallback</definition>
+        <argsstring>(WlanNetworkConnect_Status_T status)</argsstring>
+        <name>WlanConnectStatusCallback</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga54b9b7c3100d2dbaeefe1d8d2fe48fbc" kindref="member">WlanNetworkConnect_Status_T</ref></type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" line="137" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" bodystart="137" bodyend="144"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1gad4991d8bd4d8b0f3800fdba963c61a37" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="125">WlanEventSemaphore</references>
+        <references refid="semphr_8h_1aae55761cabfa9bf85c8f4430f78c0953" compoundref="semphr_8h" startline="447">xSemaphoreGive</references>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="633" endline="676">AppControllerEnable</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1gabff8f3a204e79671b98fabaa652198c3" prot="public" static="no">
+        <name>BCDS_MODULE_ID</name>
+        <initializer><ref refid="_xdk_extension_port_2source_2_xdk_app_info_8h_1a58c5197225b08cbce9809ee5d9b3ae74ac664b9d7c9367aef22abcb23812b6f33" kindref="member">XDK_APP_MODULE_ID_APP_CONTROLLER</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" line="71" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga02aafa95ef618584aa327e16d993fe9a" prot="public" static="no">
+        <name>DELAY_15_SEC</name>
+        <initializer>UINT16_C(15000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro used for delay function for 15 seconds </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" line="117" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" bodystart="117" bodyend="-1"/>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga6b08614c341359b0edd92c1feaf47fc6" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="203" endline="527">SetAndGetIp</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga13264b5caaf1950731e9fb638eb0ac36" prot="public" static="no">
+        <name>DELAY_500_MSEC</name>
+        <initializer>UINT16_C(500)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro used for delay function for 0,5 seconds </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" line="116" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" bodystart="116" bodyend="-1"/>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga12ccd9f7e6c3b8c8ae9840cfc7e052db" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="538" endline="601">ScanNetwork</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga646a66594b38780b2f4a0c3af6a7c54b" prot="public" static="no">
+        <name>MINUS_ONE</name>
+        <initializer>UINT8_C(-1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro for defining -1 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" line="110" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga206b6f5362e56b51ca957635350b70b6" prot="public" static="no">
+        <name>ONE</name>
+        <initializer>UINT8_C(1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro for defining 1 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" line="112" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga1859c475c0bde19dfc1101e35d71b939" prot="public" static="no">
+        <name>THREE</name>
+        <initializer>UINT8_C(3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro for defining 3 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" line="114" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga888e15353eb3d330c743dbdeb47117e2" prot="public" static="no">
+        <name>TWO</name>
+        <initializer>UINT8_C(2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro for defining 2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" line="113" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1gae5e2eef82fe8a55df677393f6e9edd0a" prot="public" static="no">
+        <name>WLANNETWORK_EVENT_TIMEOUT</name>
+        <initializer>UINT32_C(200000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro for wlan event timeout for simplelink </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" line="118" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" bodystart="118" bodyend="-1"/>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga6b08614c341359b0edd92c1feaf47fc6" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="203" endline="527">SetAndGetIp</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1gac328e551bde3d39b6d7b8cc9e048d941" prot="public" static="no">
+        <name>ZERO</name>
+        <initializer>UINT8_C(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro for defining 0 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" line="111" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Apps/WlanNetworkManagement/source/AppController.c" bodystart="111" bodyend="-1"/>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga6b08614c341359b0edd92c1feaf47fc6" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="203" endline="527">SetAndGetIp</referencedby>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga12ccd9f7e6c3b8c8ae9840cfc7e052db" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="538" endline="601">ScanNetwork</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Wlan Network Management demonstrates how to use the XDK WLAN Abstraction to scan for networks, join networks, set a static IP address or dynamically obtain an IP address via DHCP. </para>    </briefdescription>
+    <detaileddescription>
+<para>This application does the following:<itemizedlist>
+<listitem><para>scans for networks</para></listitem><listitem><para>set an IP (either static or DHCP)</para></listitem><listitem><para>connects to a known WPA network</para></listitem><listitem><para>disconnects after a few seconds</para></listitem></itemizedlist>
+</para><para>This cycle repeats over and over until the OS timer expires. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

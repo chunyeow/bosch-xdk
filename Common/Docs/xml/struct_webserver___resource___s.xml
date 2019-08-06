@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="struct_webserver___resource___s" kind="struct" prot="public">
+    <compoundname>Webserver_Resource_S</compoundname>
+    <includes local="no">SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Webserver.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_webserver___resource___s_1a192ef306a4671159cb6e803d8bfe047f" prot="public" static="no" mutable="no">
+        <type>char const *const</type>
+        <definition>char const* const contentType</definition>
+        <argsstring></argsstring>
+        <name>contentType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The content type of the resource, e.g. &quot;text/html&quot; or &quot;image/gif&quot; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Webserver.h" line="61" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Webserver.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_webserver___resource___s_1a2a7ec1356a4ca8f64862835961361976" prot="public" static="no" mutable="no">
+        <type><ref refid="_serval___msg_8h_1ad6397bad63999489219ac10022fba15d" kindref="member">OutMsgRecipe_T</ref> const *</type>
+        <definition>OutMsgRecipe_T const* page</definition>
+        <argsstring></argsstring>
+        <name>page</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The recipe for serializing the resource. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Webserver.h" line="66" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Webserver.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_webserver___resource___s_1a48eb1bae8cd2d04d52fe1d70fd32bd55" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool toCache</definition>
+        <argsstring></argsstring>
+        <name>toCache</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>An indicator whether this resource is cacheable or not. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Webserver.h" line="71" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Webserver.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_webserver___resource___s_1a318cad2de5a950b61a0b4687c01cd873" prot="public" static="no" mutable="no">
+        <type><ref refid="_serval___msg_8h_1a53656309ee47365f9bdffd0e493de25f" kindref="member">ContentHandle_T</ref></type>
+        <definition>ContentHandle_T url</definition>
+        <argsstring></argsstring>
+        <name>url</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The URL of the resource represented as a ContentHandle which is an abstract reference to a string or file entry. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Webserver.h" line="56" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Webserver.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The data structure to represent (real) website resources.</para><para>Notice that virtual URLs are supported using a different mechanism. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="3282">
+        <label>OutMsgRecipe_S</label>
+        <link refid="struct_out_msg_recipe___s"/>
+        <childnode refid="3283" relation="usage">
+          <edgelabel>contentBase_ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="3285">
+        <label>ContentHandle_S</label>
+        <link refid="struct_content_handle___s"/>
+        <childnode refid="3283" relation="usage">
+          <edgelabel>contentBase_ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="3283">
+        <label>ContentBase_S</label>
+        <link refid="struct_content_base___s"/>
+        <childnode refid="3284" relation="usage">
+          <edgelabel>externalContentFileHandle</edgelabel>
+        </childnode>
+      </node>
+      <node id="3281">
+        <label>Webserver_Resource_S</label>
+        <link refid="struct_webserver___resource___s"/>
+        <childnode refid="3282" relation="usage">
+          <edgelabel>page</edgelabel>
+        </childnode>
+        <childnode refid="3285" relation="usage">
+          <edgelabel>url</edgelabel>
+        </childnode>
+      </node>
+      <node id="3284">
+        <label>Pal_File_S</label>
+        <link refid="struct_pal___file___s"/>
+        <childnode refid="3284" relation="usage">
+          <edgelabel>Next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Webserver.h" line="51" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/ServalStack/3rd-party/ServalStack/api/Serval_Webserver.h" bodystart="50" bodyend="72"/>
+    <listofallmembers>
+      <member refid="struct_webserver___resource___s_1a192ef306a4671159cb6e803d8bfe047f" prot="public" virt="non-virtual"><scope>Webserver_Resource_S</scope><name>contentType</name></member>
+      <member refid="struct_webserver___resource___s_1a2a7ec1356a4ca8f64862835961361976" prot="public" virt="non-virtual"><scope>Webserver_Resource_S</scope><name>page</name></member>
+      <member refid="struct_webserver___resource___s_1a48eb1bae8cd2d04d52fe1d70fd32bd55" prot="public" virt="non-virtual"><scope>Webserver_Resource_S</scope><name>toCache</name></member>
+      <member refid="struct_webserver___resource___s_1a318cad2de5a950b61a0b4687c01cd873" prot="public" virt="non-virtual"><scope>Webserver_Resource_S</scope><name>url</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

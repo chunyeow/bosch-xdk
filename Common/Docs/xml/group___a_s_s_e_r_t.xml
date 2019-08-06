@@ -1,0 +1,332 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___a_s_s_e_r_t" kind="group">
+    <compoundname>ASSERT</compoundname>
+    <title>Assertion</title>
+    <innerfile refid="_b_c_d_s___assert_8h">BCDS_Assert.h</innerfile>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___a_s_s_e_r_t_1gafa82a36be6beb7f17a999b4ffa7cde04" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* Assert_Callback_T)(const unsigned long line, const unsigned char *const file)</definition>
+        <argsstring>)(const unsigned long line, const unsigned char *const file)</argsstring>
+        <name>Assert_Callback_T</name>
+        <briefdescription>
+<para>This data type represents a function pointer which would be executed when an assertion is triggered. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Ideally the first operation that is expected from the API implementing this functionality is to disable all the Interrupts of the system (based on the Hardware) and if required, it can trace / LOG the line number and filename from where the assertion came.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: The line number of the source code from where the <ref refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" kindref="member">assert()</ref> is called.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: The file name of the source code from where the <ref refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" kindref="member">assert()</ref> is called. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Assert.h" line="152" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Assert.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___a_s_s_e_r_t_1gad4b05169f21c2dc4a84c3e8bf8e13088" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Assert_Dynamic</definition>
+        <argsstring>(const unsigned long line, const unsigned char *const file)</argsstring>
+        <name>Assert_Dynamic</name>
+        <param>
+          <type>const unsigned <ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga295b9aa203738050fd2137fb81030321" kindref="member">long</ref></type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const unsigned char *const</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Dynamic assert function. The dynamic assert function calls a user mapped callback function (where atleast all the interrupts disabling is expected) and would freeze the system by entering an endless loop. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Release builds must be built with the NDEBUG symbol defined. User shall not use this API and rather call the <ref refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" kindref="member">assert()</ref> macro with required assertion expression. Defining the ASSERT_USE_STD_EXIT macro in CFLAGS_DEBUG make variable would use the standard C exit() API.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: The line number of the source code from where the <ref refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" kindref="member">assert()</ref> is called.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: The file name of the source code from where the <ref refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" kindref="member">assert()</ref> is called. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Assert.h" line="190" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___a_s_s_e_r_t_1ga6bc99ece3950034f3038020f5c483beb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Assert_Initialize</definition>
+        <argsstring>(Assert_Callback_T callback)</argsstring>
+        <name>Assert_Initialize</name>
+        <param>
+          <type><ref refid="group___a_s_s_e_r_t_1gafa82a36be6beb7f17a999b4ffa7cde04" kindref="member">Assert_Callback_T</ref></type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+<para>This function initializes the Assert module. It registers an assertion callback function. When an assertion is hit, registered callback function is called. </para>        </briefdescription>
+        <detaileddescription>
+<para>Ideally, the first thing to be done in the callback function it to disable the interrupts of the system (hardware dependent). For trouble shooting, it can also trace / log the line number and filename from where the assertion came.</para><para><simplesect kind="note"><para>Release builds must be built with the NDEBUG symbol defined. This API should be called before making use of any one of the assertion API&apos;s except for the <ref refid="group___a_s_s_e_r_t_1ga92da053d05db23c922b5f4184f22bff3" kindref="member">static_assert()</ref>.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: A callback function which is executed when an assertion is triggered.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>on success </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if callback is not valid </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Assert.h" line="173" column="1"/>
+        <referencedby refid="group___s_y_s_t_e_m_s_t_a_r_t_u_p_1gab3bf0967da05629b9d5b23b21d15aeb1" compoundref="_system_startup_8c" startline="297" endline="388">systemStartup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___a_s_s_e_r_t_1gacc11a858963261ba48826612b8ecd2f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BCDS_DEPRECATED</definition>
+        <argsstring>(Retcode_T Assert_initialize(Assert_Callback_T callback))</argsstring>
+        <name>BCDS_DEPRECATED</name>
+        <param>
+          <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref> </type>
+          <declname>Assert_initialize</declname>
+          <array>Assert_Callback_T callback</array>
+        </param>
+        <briefdescription>
+<para>This function initializes the Assert module. It registers an assertion callback function. When an assertion is hit, registered callback function is called. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000019"><xreftitle>Deprecated</xreftitle><xrefdescription><para>since version vxx.xx.xx, replaced by <ref refid="group___a_s_s_e_r_t_1ga6bc99ece3950034f3038020f5c483beb" kindref="member">Assert_Initialize</ref> </para></xrefdescription></xrefsect><verbatim>     Ideally, the first thing to be done in the callback function it to
+     disable the interrupts of the system (hardware dependent). For trouble shooting,
+     it can also trace / log the line number and filename from where the assertion
+     came.
+</verbatim></para><para><simplesect kind="note"><para>Release builds must be built with the NDEBUG symbol defined. This API should be called before making use of any one of the assertion API&apos;s except for the <ref refid="group___a_s_s_e_r_t_1ga92da053d05db23c922b5f4184f22bff3" kindref="member">static_assert()</ref>.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: A callback function which is executed when an assertion is triggered.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>on success </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if callback is not valid </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Assert.h" line="214" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___a_s_s_e_r_t_1gaa2439fe5a77e604a32f3205e0a43dc87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BCDS_DEPRECATED</definition>
+        <argsstring>(void Assert_dynamic(const unsigned long line, const unsigned char *const file))</argsstring>
+        <name>BCDS_DEPRECATED</name>
+        <param>
+          <type>void </type>
+          <declname>Assert_dynamic</declname>
+          <array>const unsigned long line, const unsigned char *const file</array>
+        </param>
+        <briefdescription>
+<para>Dynamic assert function. The dynamic assert function calls a user mapped callback function (where atleast all the interrupts disabling is expected) and would freeze the system by entering an endless loop. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000020"><xreftitle>Deprecated</xreftitle><xrefdescription><para>since version vxx.xx.xx, replaced by <ref refid="group___a_s_s_e_r_t_1gad4b05169f21c2dc4a84c3e8bf8e13088" kindref="member">Assert_Dynamic</ref> </para></xrefdescription></xrefsect></para><para><simplesect kind="note"><para>Release builds must be built with the NDEBUG symbol defined. User shall not use this API and rather call the <ref refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" kindref="member">assert()</ref> macro with required assertion expression. Defining the ASSERT_USE_STD_EXIT macro in CFLAGS_DEBUG make variable would use the standard C exit() API.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: The line number of the source code from where the <ref refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" kindref="member">assert()</ref> is called.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: The file name of the source code from where the <ref refid="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" kindref="member">assert()</ref> is called. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Assert.h" line="234" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___a_s_s_e_r_t_1gaf695c592df16f51f3e521fe745c32026" prot="public" static="no">
+        <name>__FILE_</name>
+        <initializer>&quot;Filename not defined&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check for usage of the C99 standard or PC-Lint in order to provide support of the static assertion functionality </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Assert.h" line="71" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Assert.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___a_s_s_e_r_t_1gadbfa1be789063f1c21478696be51bb70" prot="public" static="no">
+        <name>__LINE__</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Assert.h" line="75" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Assert.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___a_s_s_e_r_t_1ga0041af519e0e7d47c9bcc83760c4669e" prot="public" static="no">
+        <name>assert</name>
+        <param><defname>expression</defname></param>
+        <initializer>do{ if (!(expression)) { <ref refid="group___a_s_s_e_r_t_1gad4b05169f21c2dc4a84c3e8bf8e13088" kindref="member">Assert_Dynamic</ref>((unsigned <ref refid="group___b_c_d_s___n_e_t_w_o_r_k___c_o_n_n_e_c_t_1ga295b9aa203738050fd2137fb81030321" kindref="member">long</ref>)<ref refid="group___a_s_s_e_r_t_1gadbfa1be789063f1c21478696be51bb70" kindref="member">__LINE__</ref>,(unsigned char*)__FILE__); } } while (0)</initializer>
+        <briefdescription>
+<para>Program assertion macro. </para>        </briefdescription>
+        <detaileddescription>
+<para>The program assertion macro implements an assertion, which can be used to verify assumptions made by the program and get notified of this information through a callback if this assumption is false and stop program execution. Program assertion is behaving differently in debug and release builds.</para><para><simplesect kind="note"><para>Release builds must be built with the NDEBUG symbol defined.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">expression</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: A logical statement which can be true or false. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Assert.h" line="136" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Assert.h" bodystart="136" bodyend="-1"/>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga9705492018c39d2f2643bb75c503f9b4" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="294" endline="323">AppControllerValidateWLANConnectivity</referencedby>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gab69e900037ff919feff8de34718fd2f5" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="552" endline="721">AppControllerFire</referencedby>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="742" endline="796">AppControllerEnable</referencedby>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="817" endline="870">AppControllerSetup</referencedby>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga22919ee3de6947c4b6616a9231e71f67" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="875" endline="897">AppController_Init</referencedby>
+        <referencedby refid="_aws_send_data_over_m_q_t_t_2source_2_main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="_aws_send_data_over_m_q_t_t_2source_2_main_8c" startline="62" endline="94">main</referencedby>
+        <referencedby refid="_app_txt_parser_8c_1ae4112ad4907f2e586427ef379f249c2b" compoundref="_app_txt_parser_8c" startline="689" endline="706">digitHexToBin</referencedby>
+        <referencedby refid="_app_txt_parser_8c_1ac4bed7255c89354aca0813aa2bdff23d" compoundref="_app_txt_parser_8c" startline="708" endline="751">ATPDecodeHexToBin</referencedby>
+        <referencedby refid="_l_w_m2_m_dns_util_8c_1aaecdbeca56c583d89d1a7325d90b5a2d" compoundref="_l_w_m2_m_dns_util_8c" startline="94" endline="158">LWM2MDnsTask</referencedby>
+        <referencedby refid="_l_w_m2_m_dns_util_8h_1ac36ccc6664c9e678170532efb92f8e56" compoundref="_l_w_m2_m_dns_util_8c" startline="161" endline="186">LWM2MDnsUtil_Init</referencedby>
+        <referencedby refid="_l_w_m2_m_dns_util_8h_1a427e741596232deee7e1720520459dd4" compoundref="_l_w_m2_m_dns_util_8c" startline="189" endline="233">LWM2MDnsUtil_StartResolveHostname</referencedby>
+        <referencedby refid="_l_w_m2_m_object_sensor_device_8h_1aa711e3bca637a54f1ccc6869be661b32" compoundref="_l_w_m2_m_object_sensor_device_8c" startline="307" endline="324">LWM2MObjectSensorDevice_Init</referencedby>
+        <referencedby refid="_l_w_m2_m_object_sensor_device_8h_1a24b705ef9f3cb834d16616e1f220f288" compoundref="_l_w_m2_m_object_sensor_device_8c" startline="327" endline="335">LWM2MObjectSensorDevice_Enable</referencedby>
+        <referencedby refid="_l_w_m2_m_util_8h_1a008c4225a368f8897d018b51e2f6fdca" compoundref="_l_w_m2_m_util_8c" startline="269" endline="280">LWM2MUtil_Schedule</referencedby>
+        <referencedby refid="_serval___string_descr_8h_1a48f840636ff8dc19ddec82ecbb6be6ba" compoundref="_serval___string_descr_8h" startline="106" endline="116">StringDescr_get</referencedby>
+        <referencedby refid="_serval___string_descr_8h_1ae923a3cf3155c2a374223ee119d86859" compoundref="_serval___string_descr_8h" startline="133" endline="141">StringDescr_charAt</referencedby>
+        <referencedby refid="_serval___string_descr_8h_1ad43b4ca414a6593ff60b47abaad08abf" compoundref="_serval___string_descr_8h" startline="156" endline="162">StringDescr_getLength</referencedby>
+        <referencedby refid="_serval___string_descr_8h_1a37de2785404cf3291aa2b11cdbe7ed2a" compoundref="_serval___string_descr_8h" startline="177" endline="184">StringDescr_wrap</referencedby>
+        <referencedby refid="_serval___string_descr_8h_1a0b6f1c3fc0df7102b8fd1aaa1d0f71d9" compoundref="_serval___string_descr_8h" startline="209" endline="221">StringDescr_cloneSegment</referencedby>
+        <referencedby refid="_serval___string_descr_8h_1a74ba7e71611919cba3b4510bd9d08252" compoundref="_serval___string_descr_8h" startline="290" endline="308">StringDescr_copySegment</referencedby>
+        <referencedby refid="_serval___string_descr_8h_1a3c40bb13d0f8453cd0b89f5d53e44370" compoundref="_serval___string_descr_8h" startline="431" endline="445">StringDescr_compareFrom</referencedby>
+        <referencedby refid="_serval___string_descr_8h_1ab6a4d5521d110050509901412566c13e" compoundref="_serval___string_descr_8h" startline="514" endline="529">StringDescr_compareFromNoCase</referencedby>
+        <referencedby refid="_b_s_p___charger___b_q2405_x_8c_1afbb51884b4037997c76dfeca8c53bf5d" compoundref="_b_s_p___charger___b_q2405_x_8c" startline="97" endline="152">BSP_Charger_BQ2405X_GetStatus</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___a_s_s_e_r_t_1ga9fad378d3538885ffce2b40a29334fbb" prot="public" static="no">
+        <name>ASSERT_CONCAT</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer><ref refid="group___a_s_s_e_r_t_1gac41c7fb1ca72aa1768dbc146fe1921c6" kindref="member">ASSERT_CONCAT_</ref>(a, b)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Assert.h" line="82" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Assert.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___a_s_s_e_r_t_1gac41c7fb1ca72aa1768dbc146fe1921c6" prot="public" static="no">
+        <name>ASSERT_CONCAT_</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>a##b</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Assert.h" line="79" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Assert.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___a_s_s_e_r_t_1ga92da053d05db23c922b5f4184f22bff3" prot="public" static="no">
+        <name>static_assert</name>
+        <param><defname>expression</defname></param>
+        <param><defname>message</defname></param>
+        <initializer>enum { <ref refid="group___a_s_s_e_r_t_1ga9fad378d3538885ffce2b40a29334fbb" kindref="member">ASSERT_CONCAT</ref>(ASSERT_LINE_, <ref refid="group___a_s_s_e_r_t_1gadbfa1be789063f1c21478696be51bb70" kindref="member">__LINE__</ref>) = 1/(!!(expression)) };</initializer>
+        <briefdescription>
+<para>Static (compilation time) assertion macro. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>This macro can&apos;t be used twice on the same <bold>LINE</bold> number. The user must ensure that even in header files the <bold>LINE</bold> number is always unique. Protect header files against multiple time inclusions and if possible put static assertions into C files instead of headers.</para></simplesect>
+The C99 standard does not support static assertions, nor the sizeof() keyword in preprocessor macros. To be able to perform compilation time variable size related checks, this macro is provided as a workaround. Note that the macro has some limitations.</para><para>Check if the int integer type is 4 bytes long, the following static assertion can be used:</para><para><programlisting><codeline><highlight class="normal">static_assert(sizeof(int)<sp/>==<sp/>4,<sp/>&quot;The<sp/>int<sp/>type<sp/>shall<sp/>be<sp/>32<sp/>bits<sp/>long.&quot;);</highlight></codeline>
+</programlisting></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">expression</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: A logical statement which can be true or false. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: A string about the test case - note that it is not compiled into the code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Assert.h" line="109" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Essentials/include/BCDS_Assert.h" bodystart="109" bodyend="-1"/>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga6b08614c341359b0edd92c1feaf47fc6" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="203" endline="527">SetAndGetIp</referencedby>
+        <referencedby refid="group___w_l_a_n___n_e_t_w_o_r_k___m_a_n_a_g_e_m_e_n_t_1ga12ccd9f7e6c3b8c8ae9840cfc7e052db" compoundref="_wlan_network_management_2source_2_app_controller_8c" startline="538" endline="601">ScanNetwork</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Enhanced Assertion functionality. </para>    </briefdescription>
+    <detaileddescription>
+<para>This module offers several helpful functions for assertion, like:<itemizedlist>
+<listitem><para>static assertion, i.e. at compile time</para></listitem><listitem><para>dynamic assertion, i.e. during run time, customizable with user defined callback. </para></listitem></itemizedlist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

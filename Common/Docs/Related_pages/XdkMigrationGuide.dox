@@ -1,0 +1,935 @@
+/** 
+@page XDK_MIGRATION_GUIDE XDK Migration Guide
+@brief Outlines the changes between the version XDK-1.3.0 ,XDK-1.5.0, XDK-1.5.2, XDK-2.0.1, XDK-3.0.0, XDK-3.0.1 & above
+<hr>
+\section XDK_MIGRATION_GUIDE_UPDATE1 Changes From the version XDK-3.4.0 & above 
+
+Table to capture the changes from XDK-3.4.0 and above 
+
+XDK-3.4.0				                                                	   										    |                           												  				                            | 
+------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+int32_t BSP_Mic_AKU340_Sense(void)																						|Deprecated
+BCDS_BSP_Extension_Gpio.h																								|Deprecated
+
+\section XDK_MIGRATION_GUIDE_UPDATE Changes From the version XDK-3.0.2 & above 
+
+\subsection XDK_MIGRATION_GUIDE_XDK_SENSORTOOLBOX SensorToolbox API
+
+Summary of Changes for SensorToolbox Files:
+- API: Few function are deprecated
+
+Table to capture the changes from XDK-3.0.2 and above
+
+XDK-1.x.x,XDK-2.x.x,XDK-3.0.0,XDK-3.0.1			                                                	                |                             XDK-3.0.2													  				                            | 
+------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+Retcode_T Orientation_readQuaternionValue(Orientation_QuaternionDataPtr_T quaternionValue)                              |Retcode_T Rotation_readQuaternionValue(Rotation_QuaternionDataPtr_T quaternionValue);
+Retcode_T CalibratedAccel_getStatus(CalibratedAccel_StatusPtr_T calibAccelStatus)										|Deprecated
+Retcode_T CalibratedMag_getStatus(CalibratedMag_CalibStatusPtr_T calibMagStatus)										|Deprecated
+Retcode_T CalibratedGyro_getStatus(CalibratedGyro_CalibStatusPtr_T calibGyroStatus)										|Deprecated
+int32_t BSP_Mic_AKU340_Sense(void)																						|Deprecated
+
+\section XDK_MIGRATION_GUIDE_UPDATE Changes From the version XDK-3.0.0 & above 
+
+Table to capture the changes in XDK structure from version XDK-3.0.0 & above 
+
+Description                                       |XDK-3.0.0           		|				Comments                                    |
+--------------------------------------------------|-------------------------|-----------------------------------------------------------|
+Platform/Peripherals                              |		Not Available		|  instead of Peripherals Lower level drivers can be triggered(enable/disable) by using Drivers & BSP packages under platform  |
+Platform/Power                                    | 	Not Available		|  Power related configurations taken as a part of the modules itself , so decided to not provide options to the user for the power configurations |
+Platform/Basics                                   | 	Not Available		|  As Modularity improvements , Basics moved under Essentials																					   |
+Platform/Control                                  | 	Not Available		|  As Modularity improvements , Control moved under Essentials																					   |
+Platform/MiscDrivers                              | 	Not Available		|  Apply Modularity improvements , MiscDrivers moved under Drivers																			   |
+Platform/SensorDrivers                            | 	Not Available		|  As Modularity improvements , SensorDrivers moved under Drivers																			   |
+Platform/Essentials								  |  	Available           |  Introduced New package including the of Basics & Control packages as a improvement for the modularity |
+Platform/Drivers								  |  	Available           |  Introduced New package including the of MiscDrivers & SensorDrivers packages as a improvement for the modularity and also introducing portable and abstract API, regardless of the type of the underlying hardware |
+Platform/BSP									  |	  	Available           |  Board Support Package is the layer of software containing hardware-specific drivers 	|
+
+\section XDK_MIGRATION_GUIDE_API_UPDATE API Changes from the version XDK-3.0.0 & above on following modules :
+
+\subsection DRIVERS
+	- As per New Improvement for the Modularity , MISCDRIVERS and SensorDrivers moved under Drivers package.
+	- Interface Header file name changes to BCDS_SDCard_Driver.h instead of BCDS_SDCardDriver.h.
+	- Retcode_T SDCardDriver_Connect(void)  Interface API removed. 	
+
+Table to capture the changes in MISCDRIVERS Interface API's in between version XDK-2.0.1 and XDK-3.0.0 & above 
+	
+XDK-2.0.1 & below API								                                               	  					|                              XDK-3.0.0 & above API     								 									   | 
+------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+Retcode_T SDCardDriver_Init(void);																						|		Retcode_T SDCardDriver_Initialize(void);										 									   |
+SDCardDriver_Status_T SDCardDriver_GetDetectStatus(void);																|		SDCardDriver_Status_T SDCardDriver_GetDetectStatus(void);															   |										 		
+void SDCardDriver_Disconnect(void);																						|		Not Available																									   	   |
+Not Available																										    |		Retcode_T SDCardDriver_Deinitialize(void);						 									                   |
+Retcode_T SDCardDriver_Connect(void);																					|		Not Available																										   |
+Retcode_T SDCardDriver_DiskInitialize(uint8_t sdDrive);																	|		Retcode_T SDCardDriver_DiskInitialize(uint8_t SdDrive);							 									   |
+Retcode_T SDCardDriver_DiskWrite(uint8_t drive, const uint8_t *writeBuffer,uint32_t sector, uint32_t writeCount);		|		Retcode_T SDCardDriver_DiskWrite(uint8_t Drive, const uint8_t *WriteBuffer,uint32_t Sector, uint32_t WriteCount);	   |
+Retcode_T SDCardDriver_DiskRead(uint8_t drive, uint8_t *readBuffer,uint32_t sector, uint32_t readCount);				|		Retcode_T SDCardDriver_DiskRead(uint8_t Drive, uint8_t *ReadBuffer,uint32_t Sector, uint32_t ReadCount);	           |
+Retcode_T SDCardDriver_DiskIoctl(uint8_t drive, uint8_t control, void *buffer);											|		Retcode_T SDCardDriver_DiskIoctl(uint8_t Drive, uint8_t Control, void *Buffer);										   |
+Retcode_T SDCardDriver_GetDiskStatus(uint8_t drive);																	|		SDCardDriver_DiskStatus_T SDCardDriver_GetDiskStatus(uint8_t Drive);												   |
+unsigned long get_fattime(void);																						|		unsigned long get_fattime(void);											 									   	   |																															   |																			 									   			   |
+
+\subsection FOTA
+	- FOTA Package Major changes happened in a way like , in XDK-3.0.0 , We have introduced Event Driven Base implementation.
+	- API Name changed from FotaStateMachine_CancelDownload() -FotaStateMachine_ControlDownload()
+	- Introduced Additional parameters for the following API's, Please refer the Interface API Document for the Following API's:
+		- FotaStateMachine_Init 
+		- FotaStateMachine_GetState
+		- DownloadClient_SetupNewDownload
+	- New interface API provided in the validation agent:
+		-ValidationAgent_VerifyIntegrity - This function is called to verify the integrity of the Firmware.
+
+\subsection WLAN
+	- Following Interface API's deprecated(Not Available):
+		- WlanDriver_InterruptEnable() - Function to enable the WIFI device Interrupt         
+		- WlanDriver_InterruptDisable() - Function to disable the WIFI device Interrupt
+	- Wlan interface changed to event driven
+	- Implemented Wlan power management
+
+\subsection BLE
+	- BLE Package Major changes happened in a way like , Interface API names changed.
+	- Following Interface Files has been removed:
+		- BLE_serialDriver_ih.h
+		- BLE_stateHandler_ih.h
+		- BleMemory.h
+		- BTI_bluetoothInterface_ih.h
+	- New Interface Header file introduced for the BLE Connection:
+		- BCDS_Ble.h
+		
+\subsection Utils
+	- DBG_assert_ih.h has been removed.
+	- Following Interface Files has been renamed as follows:
+		- LB2C_lb2cProtocol_ih.h - BCDS_LeanB2CAP.h
+		- LOG_module_ih.h - BCDS_Logging.h
+		- RB_ringBuffer_ih.h -  BCDS_RingBuffer.h
+		- TLV_dataHandler_ih.h - BCDS_TLV.h
+	- New Interface File Added;
+		- BCDS_XProtocol.h
+	- As per the Modularity Improvement , Some of the Control Interface API's moved under Utils:
+		- BCDS_CmdProcessor.h
+		- BCDS_EventHub.h
+		- BCDS_GuardedTask.h
+		- BCDS_Queue.h
+		- BCDS_SleepControl.h
+		- BCDS_TaskMonitor.h
+
+\section XDK_MIGRATION_GUIDE_API_UPDATE_NEW_MODULES New Modules with the Interface API's update from the version XDK-3.0.0 & above on following modules :
+
+\subsection ESSENTIALS
+	- Essentials provides the Interface API's to Access the Peripherals Driver Configurable API's and Basics & Control package Interface API's same as earlier.
+				
+\subsection BSP
+	- Board Support Package is the layer of software containing hardware-specific drivers.
+
+\section XDK_MIGRATION_GUIDE_UPDATE_NEW_METHOD	HAL/BSP Method Introduction:
+		- As per the new HAL/BSP method, User can able to enable/disable the specific feature under <b>Common/config/Essentials/BCDS_HALConfig.h</b> as follows :
+		example:
+		\code
+			#define BCDS_FEATURE_BSP_SD_CARD            1   /* Feature for SD CARD  */
+			#define BCDS_FEATURE_I2C                    1	/* Feature for I2C */
+			#define BCDS_FEATURE_BSP_USB                1	/* Feature for USB */
+			#define BCDS_FEATURE_SPI                    1	/* Feature for SPI */
+			#define BCDS_FEATURE_BSP_LED                1	/* Feature for LED */
+			#define BCDS_FEATURE_BSP_BUTTON             1	/* Feature for BUTTON */
+		\endcode
+	- Once we enabled the feature , we are able to access the peripheral configurable API's of particular feature.
+		
+\subsection Application Common Control Flow Changes by using CommandProcessor:
+
+Example : Message "Hello World" will be printed on the console after flashing the below implementation.  
+
+A more efficient way of doing this however would be to use a timer and CommandProcessor:
+
+\code
+----------------------------------------------------application.c--------------------------------------
+/* system header files */
+#include <stdio.h>
+#include <BCDS_Basics.h>
+
+/* additional interface header files */
+#include "FreeRTOS.h"
+
+#define THREESECONDDELAY UINT32_C(1000) /* one second is represented by this macro */
+#define TIMERBLOCKTIME   UINT32_C(0xffff)    /* Macro used to define block time of a timer */
+#define TIMER_AUTORELOAD_ON             UINT32_C(1)             /**< Auto reload of timer is enabled*/
+
+/*Application Command Processor Instance */
+CmdProcessor_T *AppCmdProcessor;
+
+/** 
+ * @brief The function is to print the Hello world on serial port.
+ *
+ * @param[in] param1 should be defined with the type void *(as argument)
+ *
+ *
+ * @param[in] param2 should be defined with the type uint32_t (as argument)
+ */
+static void printHelloWorld(void * param1, uint32_t param2)
+{
+    BCDS_UNUSED(param1);
+    BCDS_UNUSED(param2);
+	printf("Hello world\r\n");
+}
+/*
+ * @brief Function used to enqueue CmdProcessor to run printHelloWorld
+ * @param[in] pxTimer timer handle
+ */
+void processUsbPrintMsg(xTimerHandle pxTimer)
+{
+
+    BCDS_UNUSED(pxTimer); /* suppressing warning message */
+    Retcode_T returnValue = RETCODE_OK;
+    returnValue = CmdProcessor_enqueue(AppCmdProcessor, printHelloWorld, NULL, UINT32_C(0));
+    if (RETCODE_OK != returnValue)
+    {
+        printf("Enqueuing for PrintHelloWorld callback failed\n\r");
+    }
+}
+
+/*
+ * @brief Application to print "hello world" on serial console.
+ */
+void Application_init(void)
+{
+    xTimerHandle timerHandle_gdt;
+	* Return value for Timer start */
+    int8_t retValPerSwTimer = TIMER_NOT_ENOUGH_MEMORY;
+
+    /* create timer task to read and print light sensor data every three seconds*/
+	 /* Validated for portMAX_DELAY to assist the task to wait Infinitely (without timing out) and ticks cannot be 0 in FreeRTOS timer. So ticks is assigned to 1*/
+    timerHandle_gdt = xTimerCreate(
+        (char * const) "Test Application to print Hello World", (THREESECONDDELAY/portTICK_RATE_MS),
+        TIMER_AUTORELOAD_ON, NULL, processUsbPrintMsg);
+	
+        /* timer create fail case */
+        if (NULL == timerHandle_gdt)
+        {
+            /* Assertion Reason: "This software timer was not Created, Due to Insufficient heap memory" */
+            assert(false);
+        }
+    /*start the timer*/
+    retValPerSwTimer = xTimerStart(timerHandle_gdt, TIMERBLOCKTIME);
+	     /* Timer start fail case */
+        if (TIMER_NOT_ENOUGH_MEMORY == retValPerSwTimer)
+        {
+            /* Assertion Reason: "This software timer was not started, Due to Insufficient heap memory" */
+            assert(false);
+        }
+}
+
+/*
+ * @brief This is a template function where the user can write his/her custom application.
+ */
+void appInitSystem(void * CmdProcessorHandle, uint32_t param2)
+{
+    if (CmdProcessorHandle == NULL)
+    {
+        printf("Command processor handle is null \n\r");
+        assert(false);
+    }
+    AppCmdProcessor = (CmdProcessor_T *)CmdProcessorHandle;
+    BCDS_UNUSED(param2);
+	Application_init();
+}
+----------------------------------------------------End of application------------------------------------
+\endcode
+
+\subsection XDK_MIGRATION_GUIDE_BUILD_SYSTEM_Migration_Details_XDK_3_0_0 Folder Structure Changes in Detailed migration steps of XDK-3.0.0 & above
+This section highlights the necessary changes in folder structure and files. 
+Further please refer to any one of our new example application makefile to know the changes. Also to know how start up sequence code flow changed see @ref XDK_SOFTWARE_STARTUP_GUIDE
+
+\image html Folder_Structure_Change.png
+	
+- Hardware Specific pin configurations(_ph.h files) has been moved to BSP package itself.
+- Third party shared libraries Folder name changes in a way like third party shared code decided to maintain under folder named as <b>3rd-party</b> as follows:
+	- Libraries/BLEStack/3rd-party/Alpwise
+	- Libraries/BSTLib/3rd-party/bstlib
+	- Libraries/ServalStack/3rd-party/ServalStack
+	- Libraries/FATfs/3rd-party/fatfs
+	- Libraries/FreeRTOS/3rd-party/FreeRTOS
+	- Libraries/WiFi/3rd-party/TI/simplelink
+
+\subsection XDK_MIGRATION_GUIDE_LOWER_API Change of API names to Access the HMI (LED ,Button), So As per the new design LED,Button Interface API's exist under Platform/Essentials/include.
+
+XDK-2.0.1 & below API									                                               	  				|                              XDK-3.0.0 & above API     								 | 
+------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
+LED_handle_tp LED_create(const GPIO_handle_tp pin, const GPIO_pinStates_t offState);									|		Retcode_T BSP_LED_Enable(uint32_t id);											 |
+LED_errorTypes_t LED_delete(LED_handle_tp handle);																		|		Retcode_T BSP_LED_Disable(uint32_t id);											 |										 		
+LED_errorTypes_t LED_setState(LED_handle_tp handle, const LED_operations_t state);										|		Retcode_T BSP_LED_Connect(void);												 |
+.																														|		Retcode_T BSP_LED_EnableAll(void);												 |
+.																														|		Retcode_T BSP_LED_Switch(uint32_t id, uint32_t command);						 |
+.																														|		Retcode_T BSP_LED_SwitchAll(uint32_t command);									 |
+.																														|		Retcode_T BSP_LED_Disable(uint32_t id);											 |
+.																														|		Retcode_T BSP_LED_DisableAll(void);												 |
+.																														|		Retcode_T BSP_LED_Disconnect(void);												 |
+
+- For Better understanding , please refer "LedsAndButtons" application under xdk110/Apps.
+
+XDK-2.0.1 & below API   										                                               	  				       	   |                              XDK-3.0.0 & above API     								 | 
+-------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+BUTTON_handle_tp BUTTON_create(const GPIO_handle_tp pin, const GPIO_pinStates_t pressedState);								   			   |		Retcode_T BSP_Button_Connect(void);												 |
+BUTTON_errorTypes_t BUTTON_delete(BUTTON_handle_tp handle);																       			   |		Retcode_T BSP_Button_Enable( uint32_t buttonId, BSP_Button_Callback_T callback); |										 		
+BUTTON_errorTypes_t BUTTON_enable(BUTTON_handle_tp handle);																      			   |		Retcode_T BSP_Button_Disable(uint32_t buttonId );								 |
+BUTTON_errorTypes_t BUTTON_disable(BUTTON_handle_tp handle);															     			   |		Retcode_T BSP_Button_Disconnect(void);											 |
+_Bool BUTTON_isPressed(BUTTON_handle_tp handle);																		     			   |		uint32_t BSP_Button_GetState(uint32_t buttonId);								 |
+_Bool BUTTON_isReleased(BUTTON_handle_tp handle);																		       			   |																						 |
+BUTTON_errorTypes_t BUTTON_setCallback(BUTTON_handle_tp handle, const BUTTON_callback_t callbackFunction, const uint32_t userParameter);   |																						 |
+
+- For Better understanding , please refer "LedsAndButtons" under APPS.																																		   
+
+- Servalpalwifi package shared to the End user as a archive(.a) library instead of Sharing the source files.
+
+- Serval Stack version updated to the latest version (v.1.8.1):
+	- please refer the "Changelog.md" file under Servalstack.
+
+\section XDK_MIGRATION_GUIDE_BUILD_SYSTEM Build system migration guide 
+
+\subsection XDK_MIGRATION_GUIDE_BUILD_SYSTEM_Migration_Guideline Migration Guideline
+- These are the minimal steps required to migrate your old version application to version XDK-1.5.0 & above 
+   - Delete the "make" folder containing the project application makefile. Note:User can make a copy of that any where before deleting for reference.  
+   - Copy the application makefile from any one of the example application into the application project directory 
+   - Copy the main.c file from any of example application into the application project directory 
+   - Replace your required application makefile changes in the copied example makefile. See @ref XDK_MIGRATION_GUIDE_BUILD_SYSTEM_Migration_Details 
+   - Compile the application in workbench.
+   - Apply API changes as mentioned in the section  @ref XDK_MIGRATION_GUIDE_API 
+   - For API changes between XDK-1.5.0 and XDK-1.5.2 & above .See @ref XDK_MIGRATION_GUIDE_API_V1_5_2
+   - For Deprecated file and package list refer section. See @ref XDK_MIGRATION_GUIDE_DEPRICATED_LIST
+   - For FreeRtos API usage migration guide for the version XDK-1.5.2 & above See @ref XDK_MIGRATION_GUIDE_FREERTOS_API_USAGE_GUIDE
+   - Recompile and verify until the build gets successfully completed 
+   
+This table depicts some of the common compilation errors and how it can be resolved 
+
+Compilation Error Message                     		                  | Things that can go wrong                               			    |    
+----------------------------------------------------------------------|---------------------------------------------------------------------|
+application.mk:92: *** multiple target patterns.  Stop.               | Check whether correct application source directory mentioned in this makefile variable BCDS_APP_SOURCE_DIR    			
+fatal error: accelerometer.h: No such file or directory 		      | For example, in this case file name changed to BCDS_Accelerometer.h 
+fatal error: sensorTypes.h: No such file or directory                 | For example in this case file is removed 
+
+ 
+\subsection XDK_MIGRATION_GUIDE_BUILD_SYSTEM_Migration_Details Detailed migration steps
+This section highlights only the necessary changes for the user to know how folder structure and files got changed. 
+Furthermore the new structure is more organized such that in each modules all the source files and interface include files are placed under
+separate folders. Also now application makefile is made much more simple and short than previous.Further please refer to any one of our new example 
+application makefile to know the changes. Also to know how start up sequence code flow changed see @ref XDK_SOFTWARE_STARTUP_GUIDE
+
+\image html Old_New_Folder_Struct.png
+
+Table to capture the changes in XDK structure between version XDK-1.3.0 and XDK-1.5.0 & above 
+
+Description                      		                              | XDK-1.3.0                                                 			            |    XDK-1.5.0 & above           |                 
+----------------------------------------------------------------------|---------------------------------------------------------------------------------|--------------------------------|
+Location of  main function       		                              | Inside SSU_systemStartUp module and it is common for all application   			| Inside the application folder,in a file main.c as shown in the above picture |
+Location of application makefile 		                              | "make" folder within the "application project directory"               			| Inside the "application project directory"as shown in the above picture|
+First API called after system booting                                 | void SSU_initSystem(OS_timerHandle_tp xTimer) {}                       			| void appInitSystem(OS_timerHandle_tp xTimer){}|
+
+Table to capture the changes in XDK application makefile between version XDK-1.3.0 and XDK-1.5.0 & above 
+
+Description                      		                              | XDK-1.3.0                                                 			            |    XDK-1.5.0 & above            |                 
+----------------------------------------------------------------------|---------------------------------------------------------------------------------|---------------------------------|
+Application project directory Makefile variable                       |APPLICATION_DIR                                                        			|export BCDS_APP_DIR|
+Application source directory Makefile variable                        |Not available                                                      			    |export BCDS_APP_SOURCE_DIR |
+Application include files list Makefile variable                      |INCLUDEPATHS += \                                                      			|export BCDS_XDK_INCLUDES = \ |
+Application source file list Makefile variable                        |APP_SRC += \ 	                                                       			|export BCDS_XDK_APP_SOURCE_FILES = \ |
+Project name Makefile variable                                        |PROJECTNAME                                                            			|export BCDS_APP_NAME|
+How to pass application specific C flags                              |override CFLAGS += $(CFLAGS_APP)                                        			|export BCDS_CFLAGS_COMMON = -DMY_DEFINE|
+How to pass application specific assembler flags                      |override ASMFLAGS += $(ASMFLAGS_APP)                                    			|Not required |
+How to pass application specific linker flags                         |override LDFLAGS += $(LDFLAGS_APP)                                      			|Not required |
+Custom startup configuration application Makefile variable            |configured using workbench project settings,not available in application makefile|export BCDS_SYSTEM_STARTUP_METHOD = DEFAULT_STARTUP|
+
+
+\section XDK_MIGRATION_GUIDE_API Changes for the existing modules between the version XDK-1.3.0 and XDK-1.5.0 & above 
+
+\subsection XDK_MIGRATION_GUIDE_XDK_RELATED_PAGE Related Pages Documentation Changes
+
+- The following related pages in the doxygen documents were updated
+   - Known Issues
+   - XDK Extension Bus User Guide
+   - XDK Software Startup Guide
+
+- The following related pages in the doxygen documents were added newly
+	- XDK Workbench Virtual XDK Plugin
+	- XDK Workbench Live Monitor Plugin
+	- XDK Bootloader User Guide
+	- XDK Build System
+	- XDK Energy Management
+	- XDK Example Applications
+	- XDK Operation Modes
+	- XDK USB Device Handling 
+
+\subsection XDK_MIGRATION_GUIDE_XDK_ACCEL_MODULE  Accelerometer Module 
+
+Summary of Changes for Accelerometer Module:
+- API: Function names changed to make them more uniform
+- API: Return types changed
+- API: Few function signatures changed
+- API: Input parameters type changed
+- API: Accelerometer_deInit() added to power off the sensor when not in use
+- API: accelerometerUnregisterCallback() removed, added Accelerometer_disableInterrupt() instead
+- API: accelerometerConfigureSlopeInterrupt() removed, added Accelerometer_configInterrupt() instead
+- ENUMs: Names changed to make them more uniform
+- ENUMs: Element names in each of those are changed
+ 
+
+Version Name           |        Module Interface         |            Module Interface Path                     |
+-----------------------|---------------------------------|------------------------------------------------------|
+XDK-1.3.0              | accelerometer.h                 |      platform/device/sensors/Accelerometer/include   | 
+XDK-1.5.0 & above      | BCDS_Accelerometer.h            |      Platform/Sensors/include                        | 
+
+Table to capture the difference between version XDK-1.3.0 and  XDK-1.5.0 & above 
+
+										  					                                        
+ XDK-1.3.0 API     										                                               	  				|                              XDK-1.5.0 & above API     										  				                               | 
+------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+sensor_errorType_t accelerometerInit(AccelerometerHandle_t )    	                                	  				| Retcode_T Accelerometer_init(Accelerometer_HandlePtr_T)		  									                                           |                               
+sensor_errorType_t accelerometerSetBandwidth(AccelerometerHandle_t , accelerometer_bandwidth_t )						| Retcode_T Accelerometer_setBandwidth(Accelerometer_HandlePtr_T ,Accelerometer_Bandwidth_T)	                                               | 
+sensor_errorType_t accelerometerGetBandwidth(AccelerometerHandle_t , accelerometer_bandwidth_tp )						| Retcode_T Accelerometer_getBandwidth(Accelerometer_HandlePtr_T , Accelerometer_BandwidthPtr_T)                                               | 
+sensor_errorType_t accelerometerSetRange(AccelerometerHandle_t , accelerometer_range_t)									| Retcode_T Accelerometer_setRange(Accelerometer_HandlePtr_T , Accelerometer_Range_T)                                                          | 																									
+sensor_errorType_t accelerometerGetRange(AccelerometerHandle_t , accelerometer_range_tp )								| Retcode_T Accelerometer_getRange(Accelerometer_HandlePtr_T , Accelerometer_RangePtr_T)                                                       | 
+sensor_errorType_t accelerometerSetSleepDuration(AccelerometerHandle_t , accelerometer_sleepduration_t )				| Retcode_T Accelerometer_setSleepDuration(Accelerometer_HandlePtr_T , Accelerometer_SleepDuration_T)                                          | 
+Not Available 																											| Retcode_T Accelerometer_getSleepDuration(Accelerometer_HandlePtr_T , Accelerometer_SleepDurationPtr_T)                                       | 																									
+sensor_errorType_t accelerometerSetMode(AccelerometerHandle_t , accelerometer_powermode_t)								| Retcode_T Accelerometer_setMode(Accelerometer_HandlePtr_T , Accelerometer_Powermode_T)                                                       | 
+sensor_errorType_t accelerometerGetMode(AccelerometerHandle_t , accelerometer_powermode_tp )							| Retcode_T Accelerometer_getMode(Accelerometer_HandlePtr_T , Accelerometer_PowermodePtr_T)                                                    | 
+sensor_errorType_t accelerometerReadXyzLsbValue(AccelerometerHandle_t, accelerometer_xyzData_tp)						| Retcode_T Accelerometer_readXyzLsbValue(Accelerometer_HandlePtr_T , Accelerometer_XyzDataPtr_T)                                              | 
+sensor_errorType_t accelerometerReadXyzGValue(AccelerometerHandle_t , accelerometer_xyzData_tp )						| Retcode_T Accelerometer_readXyzGValue(Accelerometer_HandlePtr_T, Accelerometer_XyzDataPtr_T)                                                 | 
+Not Available 																											| Retcode_T Accelerometer_deInit(Accelerometer_HandlePtr_T)                                                                                    | 
+sensor_errorType_t accelerometerConfigureSlopeInterrupt(AccelerometerHandle_t, accelerometer_ConfigureSlopeInterrupt_t)	| Retcode_T Accelerometer_configInterrupt(Accelerometer_HandlePtr_T, Accelerometer_InterruptChannel_T, Accelerometer_InterruptType_T , void *) | 
+Not Available    																										| Retcode_T Accelerometer_disableInterrupt(Accelerometer_HandlePtr_T , Accelerometer_InterruptChannel_T , Accelerometer_InterruptType_T)       | 
+sensor_errorType_t accelerometerRegisterRealTimeCallback(AccelerometerHandle_t ,interruptCallback ) 	  				| Retcode_T Accelerometer_regRealTimeCallback(Accelerometer_HandlePtr_T , Accelerometer_InterruptChannel_T , accelRealTimeCallback)            | 
+sensor_errorType_t accelerometerRegisterDeferredCallback(AccelerometerHandle_t,deferredInterruptCallback) 				| Retcode_T Accelerometer_regDeferredCallback(Accelerometer_HandlePtr_T , Accelerometer_InterruptChannel_T , accelDeferredTimeCallback)        | 
+sensor_errorType_t accelerometerUnregisterCallback(AccelerometerHandle_t )                                				| Not Available 																    														   | 	
+																									
+\subsection XDK_MIGRATION_GUIDE_XDK_GYRO_MODULE  Gyroscope Module 
+
+Summary of Changes for Gyroscope Module:
+- API: Function names changed to make them more uniform
+- API: Return types changed
+- API: Few function signatures changed
+- API: Input parameters type changed
+- API: Gyroscope_deInit() added to power OFF the sensor when not in use
+- ENUMs: Names changed to make them more uniform
+- ENUMs: Element names in each of those are changed 																									
+																									
+
+Version Name           |        Module Interface         |           Module Interface  Path                     |
+-----------------------|---------------------------------|------------------------------------------------------|
+XDK-1.3.0              | gyroscope.h                     |      platform/device/sensors/GyroScope/include       | 
+XDK-1.5.0 & above      | BCDS_Gyroscope.h                |      Platform/Sensors/include                        | 
+
+Table to capture the difference between version XDK-1.3.0 and  XDK-1.5.0 & above 
+										  					                                        
+ XDK-1.3.0 API     										                                          |                              XDK-1.5.0 & above API     										  				                               | 
+--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+sensor_errorType_t gyroscopeInit(GyroscopeHandle_t )   	                                	  	  | Retcode_T Gyroscope_init(Gyroscope_HandlePtr_T)		  									                                                   | 
+sensor_errorType_t gyroscopeSetBandwidth(GyroscopeHandle_t , gyroscope_bandwidth_t )	   	  	  | Retcode_T Gyroscope_setBandwidth(Gyroscope_HandlePtr_T , Gyroscope_Bandwidth_T)		  									                   |                               
+sensor_errorType_t gyroscopeGetBandwidth(GyroscopeHandle_t , gyroscope_bandwidth_tp )	   	  	  | Retcode_T Gyroscope_getBandwidth(Gyroscope_HandlePtr_T , Gyroscope_BandwidthPtr_T) 		  									               |                               
+sensor_errorType_t gyroscopeSetRange(GyroscopeHandle_t , gyroscope_range_t )  	                  | Retcode_T Gyroscope_setRange(Gyroscope_HandlePtr_T , Gyroscope_Range_T) 		  									                       |                               
+sensor_errorType_t gyroscopeGetRange(GyroscopeHandle_t , gyroscope_range_tp )  	                  | Retcode_T Gyroscope_getRange(Gyroscope_HandlePtr_T , Gyroscope_RangePtr_T)		  									                       |                               
+sensor_errorType_t gyroscopeSetSleepDuration(GyroscopeHandle_t , uint8_t )   	                  | Retcode_T Gyroscope_setSleepDuration(Gyroscope_HandlePtr_T , Gyroscope_SleepDuration_T) 		  									       |                               
+sensor_errorType_t gyroscopeSetAutoSleepDuration(GyroscopeHandle_t , uint8_t )   	              | Retcode_T Gyroscope_setAutoSleepDuration(Gyroscope_HandlePtr_T , Gyroscope_AutoSleepDuration_T , Gyroscope_Bandwidth_T)		  		       |              
+sensor_errorType_t gyroscopeSetMode(GyroscopeHandle_t , gyroscope_powermode_t )   	              | Retcode_T Gyroscope_setMode(Gyroscope_HandlePtr_T , Gyroscope_Powermode_T) 		  									                       |                                
+sensor_errorType_t gyroscopeGetMode(GyroscopeHandle_t , gyroscope_powermode_tp )  	              | Retcode_T Gyroscope_getMode(Gyroscope_HandlePtr_T , Gyroscope_PowermodePtr_T)		  									                   |                               
+sensor_errorType_t gyroscopeReadXyzValue(GyroscopeHandle_t , gyro_xyzData_tp )  	              | Retcode_T Gyroscope_readXyzValue(Gyroscope_HandlePtr_T , Gyroscope_XyzDataPtr_T)		  									               |                                                             
+sensor_errorType_t gyroscopeReadXyzDegreeValue(GyroscopeHandle_t , gyro_xyzData_tp )  	          | Retcode_T Gyroscope_readXyzDegreeValue(Gyroscope_HandlePtr_T , Gyroscope_XyzDataPtr_T) 		  									           |	
+Not Available   	                                                                    	  	  | Retcode_T Gyroscope_deInit(Gyroscope_HandlePtr_T) 		  									                                               |																									
+																									
+\subsection XDK_MIGRATION_GUIDE_XDK_MAG_MODULE  Magnetometer Module 
+
+Summary of Changes for Magnetometer Module:
+- API: Function names changed to make them more uniform
+- API: Return types changed
+- API: Few function signatures changed
+- API: Input parameters type changed
+- API: Magnetometer_deInit() added to power OFF the sensor when not in use
+- ENUMs: Names changed to make them more uniform
+- ENUMs: Element names in each of those are changed 														
+																									
+
+Version Name           |        Module Interface Name    |            Module Interface Path                     |
+-----------------------|---------------------------------|------------------------------------------------------|
+XDK-1.3.0              | magnetometer.h                  |      platform/device/sensors/Magnetometer/include    | 
+XDK-1.5.0 & above      | BCDS_Magnetometer.h             |      Platform/Sensors/include                        | 
+
+Table to capture the difference between version XDK-1.3.0 and  XDK-1.5.0 & above 
+										  					                                        
+ XDK-1.3.0 API     										                                          |                              XDK-1.5.0 & above API     										  				                               | 
+--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+sensor_errorType_t magnetometerInit(MagnetometerHandle_t )  	                                  | Retcode_T Magnetometer_init(Magnetometer_HandlePtr_T)		  									                                           | 
+sensor_errorType_t magnetometerGetDataRate(MagnetometerHandle_t , magnetometer_datarate_tp )  	  | Retcode_T Magnetometer_getDataRate(Magnetometer_HandlePtr_T , Magnetometer_DataRatePtr_T) 		  									       |                               
+sensor_errorType_t magnetometerGetPresetMode(MagnetometerHandle_t , magnetometer_presetmode_tp )  | Retcode_T Magnetometer_getPresetMode(Magnetometer_HandlePtr_T , Magnetometer_PresetModePtr_T)	  									       |                               
+sensor_errorType_t magnetometerSetDataRate(MagnetometerHandle_t , magnetometer_datarate_t )       | Retcode_T Magnetometer_setDataRate(Magnetometer_HandlePtr_T , Magnetometer_DataRate_T)		  									           |                               
+sensor_errorType_t magnetometerSetPresetMode(MagnetometerHandle_t , magnetometer_presetmode_t )   | Retcode_T Magnetometer_setPresetMode(Magnetometer_HandlePtr_T , Magnetometer_PresetMode_T)	  		                                       |              
+sensor_errorType_t magnetometerSetMode(MagnetometerHandle_t , magnetometer_powermode_t )   	      | Retcode_T Magnetometer_setPowerMode(Magnetometer_HandlePtr_T , Magnetometer_PowerMode_T)		  									       |                               
+sensor_errorType_t magnetometerGetMode(MagnetometerHandle_t , magnetometer_powermode_tp ) 	      | Retcode_T Magnetometer_getPowerMode(Magnetometer_HandlePtr_T , Magnetometer_PowerModePtr_T)		  									       |                               
+sensor_errorType_t magnetometerReadXyzLsbData(MagnetometerHandle_t , magnetometer_xyzData_tp ) 	  | Retcode_T Magnetometer_readXyzLsbData(Magnetometer_HandlePtr_T , Magnetometer_XyzDataPtr_T)		  									       |                                                             
+sensor_errorType_t magnetometerReadXyzTeslaData(MagnetometerHandle_t , magnetometer_xyzData_tp )  | Retcode_T Magnetometer_readXyzTeslaData(Magnetometer_HandlePtr_T , Magnetometer_XyzDataPtr_T) 		  									   |	
+Not Available   	                                                                    	  	  | Retcode_T Magnetometer_deInit(Magnetometer_HandlePtr_T)	  									                                               |																									
+																																									
+\subsection XDK_MIGRATION_GUIDE_XDK_LIGHT_MODULE  Lightsensor Module 
+
+Summary of Changes for Lightsensor Module:
+- API: Function names changed to make them more uniform
+- API: Return types changed
+- API: Few function signatures changed
+- API: Input parameters type changed
+- API: LightSensor_deInit() added to power OFF the sensor when not in use
+- API: lightsensorUnregisterCallback() deprecated instead use \n 
+- API: LightSensor_disableInterrupt() method
+- ENUMs: Names changed to make them more uniform
+- ENUMs: Element names in each of those are changed																										
+														
+																									
+
+Version Name           |        Module Interface Name    |            Module Interface Path                     |
+-----------------------|---------------------------------|------------------------------------------------------|
+XDK-1.3.0              | lightsensor.h                   |      platform/device/sensors/lightsensor/include     | 
+XDK-1.5.0 & above      | BCDS_LightSensor.h              |      Platform/Sensors/include                        | 
+
+Table to capture the difference between version XDK-1.3.0 and  XDK-1.5.0 & above 
+										  					                                        
+ XDK-1.3.0 API     										                                                        |                              XDK-1.5.0 & above API     										  				                             | 
+----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+sensor_errorType_t lightsensorInit(lightsensorHandle_t )  	                                                    | Retcode_T LightSensor_init(LightSensor_HandlePtr_T)		  									                                             | 
+sensor_errorType_t lightsensorRegisterRealTimeCallback(lightsensorHandle_t , interruptCallback )  	            | Retcode_T LightSensor_registerRealTimeCallback(LightSensor_HandlePtr_T , interruptCallback)		  									     |                               
+sensor_errorType_t lightsensorRegisterDeferredCallback(lightsensorHandle_t ,deferredInterruptCallback)          | Retcode_T LightSensor_registerDeferredCallback(LightSensor_HandlePtr_T , deferredInterruptCallback)	  									 |                               
+sensor_errorType_t lightsensorUnregisterCallback(lightsensorHandle_t )                                          | Not Available		  									         																	         |                               
+sensor_errorType_t lightsensorConfigureThresholdInterrupt(lightsensorHandle_t , uint32_t , uint32_t , uint32_t )| Retcode_T LightSensor_configureThresholdInterrupt(LightSensor_HandlePtr_T , uint32_t ,uint32_t , uint32_t)	  		                     |              
+sensor_errorType_t lightsensorGetInterruptStatus(lightsensorHandle_t , lightsensor_configInterrupt_tp )  	    | Retcode_T LightSensor_getInterruptStatus(LightSensor_HandlePtr_T , LightSensor_ConfigInterruptPtr_T)		  								 |                               
+sensor_errorType_t lightsensorReadRawData(lightsensorHandle_t , lightsensor_data_tp )	                        | Retcode_T LightSensor_readRawData(LightSensor_HandlePtr_T ,uint16_t *)		  									                         |                                                             
+sensor_errorType_t lightsensorReadLuxData(lightsensorHandle_t , lightsensor_data_tp )                           | Retcode_T LightSensor_readLuxData(LightSensor_HandlePtr_T ,uint32_t *) 		  									                         |
+sensor_errorType_t lightsensorSetManualMode(lightsensorHandle_t ,lightsensor_configMode_t )                     | Retcode_T LightSensor_setManualMode(LightSensor_HandlePtr_T , LightSensor_ConfigMode_T)	                                                 |	  									                                	                                                                    	  	 	  									                    																					
+sensor_errorType_t lightsensorSetContinuousMode(lightsensorHandle_t ,lightsensor_configMode_t )		            | Retcode_T LightSensor_setContinuousMode(LightSensor_HandlePtr_T , LightSensor_ConfigMode_T)	                                             |																																								
+sensor_errorType_t lightsensorSetIntegrationTime(lightsensorHandle_t ,lightsensor_integrationTime_t )	        | Retcode_T LightSensor_setIntegrationTime(LightSensor_HandlePtr_T ,LightSensor_IntegrationTime_T)	                                         |																																												
+ensor_errorType_t lightsensorSetBrightness(lightsensorHandle_t ,lightsensor_configBrightness_t )                | Retcode_T LightSensor_setBrightness(LightSensor_HandlePtr_T ,LightSensor_ConfigBrightness_T)	                                             |	 
+Not Available   	                                                                    	  	                | Retcode_T LightSensor_deInit(LightSensor_HandlePtr_T)																				    	 | 
+Not Available   	                                                                    	  	                | Retcode_T LightSensor_disableInterrupt(LightSensor_HandlePtr_T) 													    					 | 
+
+\subsection XDK_MIGRATION_GUIDE_XDK_ENV_SENSOR_MODULE  Environmental Sensor Module 
+
+Summary of Changes for Environmental Sensor Module:
+- API: Function names changed to make them more uniform
+- API: Return types changed
+- API: Few function signatures changed
+- API: Input parameters type changed
+- API: Environmental_deInit() added to power OFF the sensor when not in use
+- ENUMs: Names changed to make them more uniform
+- ENUMs: Element names in each of those are changed
+
+Version Name           |        Module Interface Name    |           Module Interface Path                      |
+-----------------------|---------------------------------|------------------------------------------------------|
+XDK-1.3.0              | environmentalSensor.h           |      platform/device/sensors/Environmental/include   | 
+XDK-1.5.0 & above      | BCDS_Environmental.h            |      Platform/Sensors/include                        | 
+
+Table to capture the difference between version XDK-1.3.0 and  XDK-1.5.0 & above 
+										  					                                        
+ XDK-1.3.0 API     										                                               	  				|                              XDK-1.5.0 & above API     										  				                               | 
+------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+sensor_errorType_t environmentalInit(EnvironmentalHandle_t )    	                                	  				| Retcode_T Environmental_init(Environmental_HandlePtr_T)		  									                                           |                               
+sensor_errorType_t environmentalSetPowerMode(EnvironmentalHandle_t ,environmental_powerModes_t )						| Retcode_T Environmental_setPowerMode(Environmental_HandlePtr_T ,Environmental_PowerModes_T)	                                               | 
+sensor_errorType_t environmentalGetPowerMode(EnvironmentalHandle_t ,environmental_powerModes_tp )						| Retcode_T Environmental_getPowerMode(Environmental_HandlePtr_T ,Environmental_PowerModesPtr_T)                                               | 
+sensor_errorType_t environmentalChipID(EnvironmentalHandle_t , uint8_t *)												| Not Available                                                          								        							   | 																									
+sensor_errorType_t environmentalReadData(EnvironmentalHandle_t , environmental_data_tp )								| Retcode_T Environmental_readData(Environmental_HandlePtr_T ,Environmental_DataPtr_T)                                                   	   | 
+sensor_errorType_t environmentalReadDataLSB(EnvironmentalHandle_t , environmental_lsbData_tp )							| Retcode_T Environmental_readDataLSB(Environmental_HandlePtr_T ,Environmental_LsbDataPtr_T)                                        		   | 
+sensor_errorType_t environmentalReadTemperatureLSB(EnvironmentalHandle_t , int32_t *)							    	| Retcode_T Environmental_readTemperatureLSB(Environmental_HandlePtr_T ,int32_t *)                                    						   | 																									
+sensor_errorType_t environmentalReadPressureLSB(EnvironmentalHandle_t ,int32_t *)			            				| Retcode_T Environmental_readPressureLSB(Environmental_HandlePtr_T ,int32_t *)                                                                | 
+sensor_errorType_t environmentalReadHumidityLSB(EnvironmentalHandle_t ,int32_t *)				            			| Retcode_T Environmental_readHumidityLSB(Environmental_HandlePtr_T ,int32_t *)                                                                | 
+sensor_errorType_t environmentalReadTemperature(EnvironmentalHandle_t ,int32_t *)										| Retcode_T Environmental_readTemperature(Environmental_HandlePtr_T ,int32_t *)                                            		    		   | 
+sensor_errorType_t environmentalReadPressure(EnvironmentalHandle_t ,uint32_t *)											| Retcode_T Environmental_readPressure(Environmental_HandlePtr_T ,uint32_t *)                                                                  | 
+sensor_errorType_t environmentalReadHumidity(EnvironmentalHandle_t , uint32_t *)										| Retcode_T Environmental_readHumidity(Environmental_HandlePtr_T ,uint32_t *)                                                                  | 
+sensor_errorType_t environmentalSetStandbyDuration(EnvironmentalHandle_t , environmental_standbyTime_t )				| Retcode_T Environmental_setStandbyDuration(Environmental_HandlePtr_T ,Environmental_StandbyTime_T)                                           | 
+sensor_errorType_t environmentalGetStandbyDuration(EnvironmentalHandle_t , environmental_standbyTime_tp ) 				| Retcode_T Environmental_getStandbyDuration(Environmental_HandlePtr_T ,Environmental_StandbyTimePtr_T)                                        | 
+sensor_errorType_t environmentalSetFilterCoefficient(EnvironmentalHandle_t , environmental_filterCoefficient_t )	  	| Retcode_T Environmental_setFilterCoefficient(Environmental_HandlePtr_T , Environmental_FilterCoefficient_T)                                  | 
+sensor_errorType_t environmentalSetOverSamplingTemperature(EnvironmentalHandle_t , environmental_overSampling_t )   	| Retcode_T Environmental_setOverSamplingTemperature(Environmental_HandlePtr_T , Environmental_OverSampling_T)                                 | 
+sensor_errorType_t environmentalSetOverSamplingPressure(EnvironmentalHandle_t , environmental_overSampling_t )       	| Retcode_T Environmental_setOverSamplingPressure(Environmental_HandlePtr_T , Environmental_OverSampling_T)								       | 	
+sensor_errorType_t environmentalSetOverSamplingHumidity(EnvironmentalHandle_t , environmental_overSampling_t )       	| Retcode_T Environmental_setOverSamplingHumidity(Environmental_HandlePtr_T , Environmental_OverSampling_T)								       | 	
+Not Available 																									       	| Retcode_T Environmental_deInit(Environmental_HandlePtr_T)																    			       | 	
+
+\subsection XDK_MIGRATION_GUIDE_XDK_ToolBoxHumidity  Sensor ToolBox Absolute Humidity  
+
+Summary of Changes for Sensor ToolBox Absolute Humidity Module:
+- API: Function names changed to make them more uniform
+- API: Return types changed
+- API: Few function signatures changed
+- API: Input parameters type changed
+- ENUMs: Names changed to make them more uniform
+- ENUMs: Element names in each of those are changed
+
+Version Name           |        Module Interface Name    |           Module Interface Path                      |
+-----------------------|---------------------------------|------------------------------------------------------|
+XDK-1.3.0              | absoluteHumidity.h              |      platform/SensorToolbox/include   				| 
+XDK-1.5.0 & above      | BCDS_AbsoluteHumidity.h         |      Platform/SensorToolbox/include                  | 
+
+Table to capture the difference between version XDK-1.3.0 and  XDK-1.5.0 & above 
+										  					                                        
+ XDK-1.3.0 API     										                                               	  				|                              XDK-1.5.0 & above API     										  				                               | 
+------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+sensor_errorType_t humidityInit(HumiditySensorHandle_t)  	                                	                        | Retcode_T AbsoluteHumidity_init(AbsoluteHumidity_HandlePtr_T)		  									                                       |                               
+sensor_errorType_t humidityAbsoluteValue(HumiditySensorHandle_t ,absHumidity_tp )				                		| Retcode_T AbsoluteHumidity_readValue(AbsoluteHumidity_HandlePtr_T ,AbsoluteHumidity_ValuePtr_T )                                             | 
+sensor_errorType_t humidityDeinit(void);				                                                            	| Retcode_T AbsoluteHumidity_deInit(void) 
+																								
+\subsection XDK_MIGRATION_GUIDE_XDK_ToolBoxStepCounter  Sensor ToolBox Step Counter  
+
+Summary of Changes for Sensor ToolBox Step Counter Module:
+- API: Function names changed to make them more uniform
+- API: Return types changed
+- API: Few function signatures changed
+- API: Input parameters type changed
+- ENUMs: Names changed to make them more uniform
+- ENUMs: Element names in each of those are changed
+
+Version Name           |        Module Interface Name    |           Module Interface Path                       |
+-----------------------|---------------------------------|------------------------------------------------------ |
+XDK-1.3.0              | stepCounter.h                   |      platform/SensorToolbox/include            		 | 
+XDK-1.5.0 & above      | BCDS_StepCounter.h              |      Platform/SensorToolbox/include                   | 
+
+Table to capture the difference between version XDK-1.3.0 and  XDK-1.5.0 & above 
+										  					                                        
+ XDK-1.3.0 API     										                                               	  				|                              XDK-1.5.0 & above API     										  				                               | 
+------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+sensor_errorType_t stepCounterInit(StepCounterHandle_t handle)  	                                	                | Retcode_T StepCounter_init(StepCounter_HandlePtr_T handle)		  									                                       |                               
+sensor_errorType_t stepCounterSetMode(StepCounterHandle_t handle,stepCounterMode_t stepCounterMode)				        | Retcode_T StepCounter_setMode(StepCounter_HandlePtr_T handle, StepCounter_Mode_T stepCounterMode)                                            | 
+sensor_errorType_t stepCounterClear(StepCounterHandle_t handle)				                                            | Retcode_T StepCounter_clear(StepCounter_HandlePtr_T handle)    
+sensor_errorType_t stepCounterRead(StepCounterHandle_t handle,int16_t * stepCounterValue)								| Retcode_T StepCounter_read(StepCounter_HandlePtr_T handle, int16_t * stepCounterValue)	
+sensor_errorType_t stepCounterDeinit(StepCounterHandle_t handle)                                                        | Retcode_T StepCounter_deInit(StepCounter_HandlePtr_T handle)																                                                                																
+
+
+\subsection XDK_MIGRATION_GUIDE_XDK_ToolBoxFingerPrint  Sensor ToolBox Finger Print  
+
+Summary of Changes for Sensor ToolBox Finger Print Module:
+- API: Function names changed to make them more uniform
+- API: Return types changed
+- API: Few function signatures changed
+- API: Input parameters type changed
+- ENUMs: Names changed to make them more uniform
+- ENUMs: Element names in each of those are changed
+
+Version Name           |        Module Interface Name    |           Module Interface Path                       |
+-----------------------|---------------------------------|------------------------------------------------------ |
+XDK-1.3.0              | fingerPrint.h                   |      platform/SensorToolbox/include            		 | 
+XDK-1.5.0 & above      | BCDS_FingerPrint.h              |      Platform/SensorToolbox/include                   | 
+
+Table to capture the difference between version XDK-1.3.0 and  XDK-1.5.0 & above 
+										  					                                        
+ XDK-1.3.0 API     										                                               	  								   |                              XDK-1.5.0 & above API     										  				                              | 
+-------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+sensor_errorType_t fingerprintInit(FingerprintHandle_t handle)  	                                	                				   | Retcode_T FingerPrint_init(FingerPrint_HandlePtr_T handle)		  									                                          |                               
+sensor_errorType_t fingerprintSetValue(fingerprint_number_t fingerPrintNum)				        										   | Retcode_T FingerPrint_setValue(FingerPrint_Number_T fingerPrintNum)                                                                          | 
+sensor_errorType_t fingerprintResetValue(fingerprint_number_t fingerPrintNum)				                            				   | Retcode_T FingerPrint_resetValue(FingerPrint_Number_T fingerPrintNum)    																	  |
+sensor_errorType_t fingerprintCheckStoredValue(fingerprint_number_t fingerPrintNum,fingerprint_storageStatus_tp fingerPrintValueStatus)	   | Retcode_T FingerPrint_checkStoredValue(FingerPrint_Number_T fingerPrintNum, FingerPrint_StorageStatusPtr_T fingerPrintValueStatus)	          |
+sensor_errorType_t fingerprintMonitoring(fingerprint_result_Data_tp fingerPrintResult)                                                     | Retcode_T FingerPrint_monitoring(FingerPrint_Monitor_DataPtr_T fingerPrintResult)	                                                          | 
+sensor_errorType_t fingerprintDeinit(void)																						           | Retcode_T FingerPrint_deInit(void)																											  |		
+
+
+
+\subsection XDK_MIGRATION_GUIDE_XDK_ToolBoxOrientation  Sensor ToolBox Orientation 
+
+Summary of Changes for Sensor ToolBox Orientation Module:
+- API: Function names changed to make them more uniform
+- API: Return types changed
+- API: Few function signatures changed
+- API: Input parameters type changed
+- ENUMs: Names changed to make them more uniform
+- ENUMs: Element names in each of those are changed
+
+Version Name           |        Module Interface Name    |           Module Interface Path                       |
+-----------------------|---------------------------------|------------------------------------------------------ |
+XDK-1.3.0              | orientation.h                   |      platform/SensorToolbox/include           		 | 
+XDK-1.5.0 & above      | BCDS_Orientation.h              |      Platform/SensorToolbox/include                   | 
+
+Table to capture the difference between version XDK-1.3.0 and  XDK-1.5.0 & above 
+										  					                                        
+ XDK-1.3.0 API     										                                               	  				|                              XDK-1.5.0 & above API     										  				                               | 
+------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+sensor_errorType_t orientationInit(OrientationHandle_t handle)  	                                	                | Retcode_T Orientation_init(Orientation_HandlePtr_T handle)		  									                                       |                               
+sensor_errorType_t orientationReadQuaternionValue(orientation_quaternionData_tp quaternionValue)				        | Retcode_T Orientation_readQuaternionValue(Orientation_QuaternionDataPtr_T quaternionValue)                                                   | 
+sensor_errorType_t orientationReadEulerValueInRadian(orientation_eulerData_tp eulerValueInRadian)				        | Retcode_T Orientation_readEulerRadianVal(Orientation_EulerDataPtr_T eulerValueInRadian)                                                      |
+sensor_errorType_t orientationReadEulerValueInDegree(orientation_eulerData_tp eulerValueInDegree)					    | Retcode_T Orientation_readEulerDegreeVal(Orientation_EulerDataPtr_T eulerValueInDegree)	                                                   |
+sensor_errorType_t orientationDeinit(void)                                                                              | Retcode_T Orientation_deInit(void)                                                                                                           |																                                                                																
+
+
+
+\subsection XDK_MIGRATION_GUIDE_XDK_ToolBoxCalibratedMag  Sensor ToolBox Calibrated Magnetometer  
+
+Summary of Changes for Sensor ToolBox Calibrated Magnetometer Module:
+- API: Function names changed to make them more uniform
+- API: Return types changed
+- API: Few function signatures changed
+- API: Input parameters type changed
+- ENUMs: Names changed to make them more uniform
+- ENUMs: Element names in each of those are changed
+
+Version Name           |        Module Interface Name    |           Module Interface Path                       |
+-----------------------|---------------------------------|------------------------------------------------------ |
+XDK-1.3.0              | calibratedMagnetometer.h        |      platform/SensorToolbox/include           		 | 
+XDK-1.5.0 & above      | BCDS_CalibratedMag.h            |      Platform/SensorToolbox/include                   | 
+
+Table to capture the difference between version XDK-1.3.0 and  XDK-1.5.0 & above 
+										  					                                        
+ XDK-1.3.0 API     										                                               	  				   |                              XDK-1.5.0 & above API     										  				                              | 
+---------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+sensor_errorType_t calibratedMagnetometerInit(CalibratedMagnetometerHandle_t handle)  	                                   | Retcode_T CalibratedMag_init(CalibratedMag_HandlePtr_T handle)		  									                                      |                               
+sensor_errorType_t calibratedMagnetometerReadXyzLsbValue(calibratedMagnetometer_xyzLsbData_tp calibMagData)				   | Retcode_T CalibratedMag_readXyzLsbVal(CalibratedMag_XyzLsbDataPtr_T calibMagData)                                                            | 
+sensor_errorType_t calibratedMagnetometerReadXyzMicroTeslaValue(calibratedMagnetometer_xyzMicroTeslaData_tp calibMagData)  | Retcode_T CalibratedMag_readMicroTeslaVal(CalibMag_XyzMicroTeslaDataPtr_T calibMagData)                                                      | 
+sensor_errorType_t calibratedMagnetometerReadXyzGaussValue(calibratedMagnetometer_xyzGaussData_tp calibMagData)			   | Retcode_T CalibratedMag_readXyzGaussVal(CalibratedMag_XyzGaussDataPtr_T calibMagData)	                                                      |
+sensor_errorType_t calibratedMagnetometerGetCalibrationStatus(calibratedMagnetometer_calibStatus_tp calibMagStatus)        | Retcode_T CalibratedMag_getStatus(CalibratedMag_CalibStatusPtr_T calibMagStatus)															  |	                                                                																
+sensor_errorType_t calibratedMagnetometerDeinit(void)																	   | Retcode_T CalibratedMag_deInit(void)                                                                                                         |
+
+
+\subsection XDK_MIGRATION_GUIDE_XDK_ToolBoxCalibratedGyro  Sensor ToolBox Calibrated Gyroscope  
+
+Summary of Changes for Sensor ToolBox Calibrated Gyroscope Module:
+- API: Function names changed to make them more uniform
+- API: Return types changed
+- API: Few function signatures changed
+- API: Input parameters type changed
+- ENUMs: Names changed to make them more uniform
+- ENUMs: Element names in each of those are changed
+
+Version Name      |        Module Interface Name    |           Module Interface Path                       |
+------------------|---------------------------------|------------------------------------------------------ |
+XDK-1.3.0         | calibratedGyroscope.h           |      platform/SensorToolbox/include                   | 
+XDK-1.5.0 & above | BCDS_CalibratedGyro.h           |      Platform/SensorToolbox/include                   | 
+
+Table to capture the difference between version XDK-1.3.0 and  XDK-1.5.0 & above 
+										  					                                        
+ XDK-1.3.0 API     										                                               	  				   |                              XDK-1.5.0 & above API     										  				                              | 
+---------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+sensor_errorType_t calibratedGyroscopeInit(CalibratedGyroscopeHandle_t handle)  	                                       | Retcode_T CalibratedGyro_init(CalibratedGyro_HandlePtr_T handle)		  									                                  |                               
+sensor_errorType_t calibratedGyroscopeReadXyzLsbValue(calibratedGyroscope_xyzLsbData_tp calibGyroData)				       | Retcode_T CalibratedGyro_readXyzLsbValue(CalibratedGyro_XyzLsbDataPtr_T calibGyroData)                                                       | 
+sensor_errorType_t calibratedGyroscopeReadXyzRpsValue(calibratedGyroscope_xyzRpsData_tp calibGyroData)                     | Retcode_T CalibratedGyro_readXyzRpsValue(CalibratedGyro_XyzRpsDataPtr_T calibGyroData)                                                       |
+sensor_errorType_t calibratedGyroscopeReadXyzDpsValue(calibratedGyroscope_xyzDpsData_tp calibGyroData)			           | Retcode_T CalibratedGyro_readXyzDpsValue(CalibratedGyro_XyzDpsDataPtr_T calibGyroData)	                                                      |
+sensor_errorType_t calibratedGyroscopeGetCalibrationStatus(calibratedGyroscope_calibStatus_tp calibGyroStatus)             | Retcode_T CalibratedGyro_getStatus(CalibratedGyro_CalibStatusPtr_T calibGyroStatus)		                                                  |													                                                                																
+sensor_errorType_t calibratedGyroscopeDeinit(void)																	       | Retcode_T CalibratedGyro_deInit(void)                                                                                                        |
+
+\subsection XDK_MIGRATION_GUIDE_XDK_ToolBoxCalibratedAccel  Sensor ToolBox Calibrated Accelerometer  
+
+Summary of Changes for Sensor ToolBox Calibrated Accelerometer Module:
+- API: Function names changed to make them more uniform
+- API: Return types changed
+- API: Few function signatures changed
+- API: Input parameters type changed
+- ENUMs: Names changed to make them more uniform
+- ENUMs: Element names in each of those are changed
+
+Version Name     |        Module Interface Name    |           Module Interface Path                       |
+-----------------|---------------------------------|------------------------------------------------------ |
+XDK-1.3.0        | calibratedAccelerometer.h       |      platform/SensorToolbox/include          	 	   | 
+XDK-1.5.0 & above| BCDS_CalibratedAccel.h          |      Platform/SensorToolbox/include                   | 
+
+Table to capture the difference between version XDK-1.3.0 and  XDK-1.5.0 & above 
+										  					                                        
+ XDK-1.3.0 API     										                                               	  				   |                              XDK-1.5.0 & above API     										  				                              | 
+---------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+sensor_errorType_t calibratedAccelerometerInit(CalibratedAccelerometerHandle_t handle)  	                               | Retcode_T CalibratedAccel_init(CalibratedAccel_HandlePtr_T handle)		  									                                  |                               
+sensor_errorType_t calibratedAccelerometerReadXyzLsbValue(calibratedAccelerometer_xyzLsbData_tp calibAccelData)			   | Retcode_T CalibratedAccel_readXyzLsbValue(CalibratedAccel_XyzLsbDataPtr_T calibAccelData)                                                    | 
+sensor_errorType_t calibratedAccelerometerReadXyzMps2Value(calibratedAccelerometer_xyzMps2Data_tp calibAccelData)          | Retcode_T CalibratedAccel_readXyzMps2Value(CalibratedAccel_XyzMps2DataPtr_T calibAccelData)                                                  |   
+sensor_errorType_t calibratedAccelerometerReadXyzGValue(calibratedAccelerometer_xyzGData_tp calibAccelData)			       | Retcode_T CalibratedAccel_readXyzGValue(CalibratedAccel_XyzGDataPtr_T calibAccelData)                                                        |
+sensor_errorType_t calibratedAccelerometerGetCalibrationStatus(calibratedAccelerometer_calibStatus_tp calibAccelStatus)    | Retcode_T CalibratedAccel_getStatus(CalibratedAccel_StatusPtr_T calibAccelStatus)															  |                                                                																
+sensor_errorType_t calibratedAccelerometerDeinit(void)																	   | Retcode_T CalibratedAccel_deInit(void)                                                                                                       |
+
+\section XDK_MIGRATION_GUIDE_DEPRICATED_LIST  Deprecated,Renamed,moved packages/file list between the version XDK-1.3.0,XDK-1.5.0,XDK-1.5.2 & above 
+
+\subsection XDK_Deprecated  Deprecated/New platform Package list          
+
+Description                                       |    XDK-1.3.0                 |   XDK-1.5.0              |      XDK-1.5.2       |  XDK-1.8.0 & above  | Comments                                          			  |
+--------------------------------------------------|------------------------------|--------------------------|----------------------|---------------------|----------------------------------------------------------------|
+Platform/BST                                      |  Not Deprecated              | Deprecated               |    Deprecated        |    Deprecated       | Platform/SensorUtils does this function now        			  |
+Platform/OS                                       |  Not Deprecated              | Not Deprecated           |    Deprecated        |    Deprecated       | Direct usage of Free RTOS Library API recommended  			  |
+Platform/Power                                    |  Not present                 | Not present              |    Newly Added       |     Present         | Implemented FreeRTOS Sleep Management              			  | 
+Platform/Utils/source/Userpage					  |  Not Present				 | Not Present				|	 Present		   |	Deprecated		 | Userpage has been deprecated from the Utils Package			  |
+Platform/MiscDrivers/Source/NVM					  |  Not Present				 | Not Present				|    Not Present	   |    Newly Added	     | NVM has been newly implemented instead of userpage 			  |
+Platform/Utils/URU								  |  Not Present				 | Not Present				|    Present		   |	 Removed		 | Moved to workbench under the folder "SDK\xdk110\Common\source" |
+
+\subsection XDK_Deprecated_moved_Renamed  Renamed/Moved Platform Package List
+ 
+Description                                       |    XDK-1.3.0                 |         XDK-1.5.0 & above                                            | 
+--------------------------------------------------|------------------------------|----------------------------------------------------------------------|
+Platform/WIFI                                     |  Not Renamed                 | Renamed as <b>Platform/Wlan</b>                                      | 
+Platform/SDcard                                   |  Not Moved                   | Moved under <b>Platform/MiscDrivers</b>                              | 
+                    
+\subsection XDK_Deprecated_filelist   Deprecated file list
+
+Description                                       |    XDK-1.3.0                 |         XDK-1.5.0 & above                                            |
+--------------------------------------------------|------------------------------|----------------------------------------------------------------------|
+Interface header for the sensorsSupport file      | sensorsSupport.h             | Deprecated                                                           |
+Servalstack Integrator Module config file         | SVI_servalInterface_ph.h     | Deprecated                                                           |
+RTOS sleep cofiguration file                      | OS_operatingSystem_ph.h      | Deprecated                                                           |
+RTOS Abstraction header file                      | OS_operatingSystem_ih.h      | Deprecated                                                           |
+RTOS sleep management header file                 | OS_SleepMgt_ih.h             | Deprecated                                                           |
+
+
+\subsection XDK_fileNameChangelist  File name change list  
+
+Description                                       |    XDK-1.3.0                 |         XDK-1.5.0 & above                                            |
+--------------------------------------------------|------------------------------|----------------------------------------------------------------------|
+XDK device handles header file                    |  xdk_board.h                 | XdkBoardHandle.h                                                     |
+XDK device handles source file                    |  xdk_board.c                 | BoardHandle.c                                                        |
+XDK custom startup source file                    |  CSU_chipStartUp_cc.c        | BoardInitialization.c                                                |
+XDK custom startup header file                    |  CSU_chipStartUp_ih.h        | XdkBoardInitialization.h                                             |
+XDK gpio configuration source file                |  PDC_pinDefaultConfig_ih.h   | XdkGpioConfig.h                                                      |
+XDK sensor handles header file                    |  xdk_sensors.h               | XdkSensorHandle.h                                                    |
+XDK system startup header file                    |  SSU_systemStartUp_ch.h      | XdkSystemStartup.h                                                   |
+XDK sensor handles source file                    |  xdk_sensors.c               | SensorHandle.c                                                       |
+XDK system startup source file                    |  SSU_systemStartUp_cc.c      | SystemStartup.c                                                      |
+XDK gpio configuration header file                |  PDC_pinDefaultConfig_cc.c   | GpioConfig.c                                                         |
+
+
+\section XDK_MIGRATION_GUIDE_FREERTOS_API_USAGE_GUIDE  Usage guide explaining how to use FreeRTOS API instead of OS abstraction API's 
+
+\subsection XDK_FreeRtos_API_usage_guide  How to use FreeRTOS API instead of using Deprecated OS abstraction API's
+
+Description                                       |    XDK-1.3.0/XDK-1.5.0                                                                                         |         XDK-1.5.2 & above                                                                             | Remarks                                                       |
+--------------------------------------------------|----------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
+RTOS Timer Creation                               |   OS_timerCreate((const int8_t *) "Timername", 2 , 1, NULL, AppHandler)                                        | xTimerCreate((const char * const ) "Timername", Ticks, 1, NULL, AppHandler)                           |In XDK-1.3.0 the RTOS timer ticks is converted as part of abstraction|
+Return type of Timer create                       |   OS_timerHandle_tp                                                                                            | xTimerHandle                                                                                          |                                                               |
+Pend using timer                                  |   OS_timerPendFunctionCallFromISR(appDeferredISRCallback, NULL, UINT32_C(0))                                   | xTimerPendFunctionCallFromISR(appDeferredISRCallback, NULL, UINT8_C(0), &xHigherPriorityTaskWoken)    |In XDK-1.3.0 the task yeidl from ISR is done as part of abstraction|
+Timer Start                                       |   OS_timerStart(printTimerHandle,3)                                                                            | xTimerStart(printTimerHandle, 3/portTICK_RATE_MS)                                                                      |In XDK-1.3.0 the RTOS timer ticks is converted as part of abstraction|
+Timer Stop                                        |   OS_timerStop(printTimerHandle, 3)                                                                            | xTimerStop(printTimerHandle, 3/portTICK_RATE_MS)                                                                       |In XDK-1.3.0 the RTOS timer ticks is converted as part of abstraction|
+
+When timer ticks need to be specified as input to FreeRtos API then it has to be explicitly converted as shown below
+\code
+        uint32_t Ticks = 2;
+
+        if (Ticks != UINT32_MAX) /* Validated for portMAX_DELAY to assist the task to wait Infinitely (without timing out) */
+        {
+            Ticks /= portTICK_RATE_MS;
+        }
+        if (UINT32_C(0) == Ticks) /* ticks cannot be 0 in FreeRTOS timer. So ticks is assigned to 1 */
+        {
+            Ticks = UINT32_C(1);
+        }
+xTimerStop(printTimerHandle, Ticks);
+                                                                 	
+\endcode 
+
+When using the FreeRTOS API to defer from ISR using pend timer refer the example for this case as mentioned below
+ \code
+    portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
+    if (xTimerPendFunctionCallFromISR(appDeferredISRCallback, NULL, UINT8_C(0), &xHigherPriorityTaskWoken) == pdPASS)
+    {
+        returnValue = INT32_C(0);
+        portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+    }
+    else
+    {
+        Retcode_raiseError(returnValue);
+    }
+\endcode
+
+Description                                       |    XDK-1.3.0/XDK-1.5.0                                                                                                                               |         XDK-1.5.2 & above                                                                                                               | Remarks                                                 																																	    |
+--------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+RTOS Task Creation                                |   OS_taskCreate((OS_taskCode_tp) AppHandler, (const int8_t *) "Timername", 1024, (uint32_t) 2, &TaskHandle)                                          | xTaskCreate(AppHandler, (const char * const ) "Timername", 1024, NULL, (uint32_t) 2, &TaskHandle)                                       |                                                          																																		|
+Return type of Task create                        |   OS_taskHandle_tp                                                                                                                                   | xTaskHandle                                                                                                                             |                                                          																																	    | 
+Task Suspend                                      |   OS_taskSuspend(&TaskHandle)                                                        												                 | vTaskSuspend(&TaskHandle) 																		                        			   | 																																																|		
+Task Delay                                        |   OS_taskDelay(1)                                                                                                                                    | vTaskDelay((portTickType) 1 / portTICK_RATE_MS)                                                                                         |In XDK-1.3.0 the RTOS ticks is converted as part of abstraction 																																|
+Task Delay until                                  |   OS_taskDelayUntil(&timeToDelayTask, OS_getMsDelayTimeInSystemTicks(100))                                                                           | vTaskDelayUntil(&timeToDelayTask, PowerMgt_GetMsDelayTimeInSystemTicks(100))                                                            |In XDK-1.3.0 to get time in milliseconds OS_getMsDelayTimeInSystemTicks() is used , but in XDK-1.5.2 & above  PowerMgt_GetMsDelayTimeInSystemTicks() present in Platform/Power package is used  |
+
+In the above example when using the FreeRTOS Task delay until API refer the example for this case as mentioned below
+
+\code
+
+#include "BCDS_PowerMgt.h"
+#include <FreeRTOS.h>
+#include <task.h>
+static uint32_t timeToDelayTask = UINT32_C(0); /**< variable to delay OS task */
+
+void Task_mainProcess(void *pvParameters)
+{
+    timeToDelayTask = xTaskGetTickCount();
+    for (;;)
+    {
+	 vTaskDelayUntil(&timeToDelayTask, PowerMgt_GetMsDelayTimeInSystemTicks(100));
+    }	
+ }
+\endcode
+
+Description                                       |   XDK-1.3.0/XDK-1.5.0                                                                                          |         XDK-1.5.2 & above                                                                             | 
+--------------------------------------------------|----------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+RTOS Semaphore Handle                             |   OS_semaphoreHandle_tp                                                                                        | SemaphoreHandle_t                                                                                     |
+RTOS Semaphore Create                             |   OS_semaphoreCreate()                                                                                         | xSemaphoreCreateMutex()                                                                               |
+RTOS Semaphore Take                               |   OS_semaphoreTake(*handle, OS_MAX_DELAY)																	   | xSemaphoreTake(*handle, UINT32_MAX) 																   |	
+RTOS Semaphore Give                               |   OS_semaphoreGive(*handle)                                                                                    | xSemaphoreGive(*handle)                                                                               |
+
+
+
+\section XDK_MIGRATION_GUIDE_API_V1_5_2 Changes for the existing modules between the version XDK-1.5.0 and XDK-1.5.2 & above 
+
+\subsection XDK_MIGRATION_GUIDE_XDK_SD_Card_Driver  MiscDriver SD Card driver module 
+Summary of Changes for SD card driver Module:
+- API: Function names changed to make them more uniform
+- API: Return types changed
+- API: Few function signatures changed
+- API: Input parameters type changed
+- ENUMs: Names changed to make them more uniform
+- ENUMs: Element names in each of those are changed
+
+Version Name         |        Module Interface Name    |           Module Interface Path                       |
+---------------------|---------------------------------|------------------------------------------------------ |
+XDK-1.3.0/XDK-1.5.0  | SDC_sdCardDriver_ih.h           |      Platform/MiscDrivers/include          	 	   | 
+XDK-1.5.2 & above    | BCDS_SDCardDriver.h             |      Platform/MiscDrivers/include                     | 
+
+Table to capture the difference between version XDK-1.3.0,XDK-1.5.0 and XDK-1.5.2 & above 
+
+ XDK-1.3.0/XDK-1.5.0 API    							                                            	                |                             XDK-1.5.2 & above  API     										  				                    | 
+------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+SDC_return_t SDC_init(void)                                                      	                       				| Retcode_T SDCardDriver_Init(void)		  							                                                                |                               
+SDC_Status_t SDC_getSdCardDetectStatus(void)	                                                    	   				| SDCardDriver_Status_T SDCardDriver_GetDetectStatus(void)                                                                          | 
+void SDC_sdCardDisconnect(void)             	                                                    	   				| void SDCardDriver_Disconnect(void)                                                                                                | 
+SDC_return_t SDC_sdCardConnect(void)             	                                                  	   				| Retcode_T SDCardDriver_Connect(void)                                                                                              | 
+SDC_diskStatus_t SDC_diskInitialize(uint8_t sdDrive)                                                 	   				| Retcode_T SDCardDriver_DiskInitialize(uint8_t sdDrive)                                                                            | 
+SDC_diskResult_t SDC_sdCardDiskWrite(uint8_t drive, const uint8_t *writeBuffer,uint32_t sector, uint8_t writeCount) 	| Retcode_T SDCardDriver_DiskWrite(uint8_t drive, const uint8_t *writeBuffer,uint32_t sector, uint32_t writeCount)                  |
+SDC_diskResult_t SDC_sdCardDiskRead(uint8_t drive, uint8_t *readBuffer,uint32_t sector, uint8_t readCount) 				| Retcode_T SDCardDriver_DiskRead(uint8_t drive, uint8_t *readBuffer,uint32_t sector, uint32_t readCount)                           | 
+SDC_diskResult_t SDC_diskIoctl(uint8_t drive, uint8_t control, void *buffer)                         	   				| Retcode_T SDCardDriver_DiskIoctl(uint8_t drive, uint8_t control, void *buffer)                                                    | 
+SDC_diskStatus_t SDC_getDiskStatus(uint8_t drive)                                                 	   			    	| Retcode_T SDCardDriver_GetDiskStatus(uint8_t drive)                                                                               | 
+ 
+\subsection XDK_MIGRATION_GUIDE_XDK_FatFs_Library  FatFs LIbrary API
+
+Summary of Changes for FatFs Library Files:
+- API: Few function signatures changed
+- API: Input parameters type changed
+
+
+Table to capture the major difference between version XDK-1.3.0,XDK-1.5.0 and XDK-1.5.2 & above 
+
+ XDK-1.3.0 / XDK-1.5.0 API     						                                                	                |                             XDK-1.5.2 & above  API     										  				                    | 
+------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+ FRESULT f_mount (BYTE, FATFS*)                                                         	              				| FRESULT f_mount (FATFS* fs, const TCHAR* path, BYTE opt)	  							                                                                |                               
+
+ <b> Note: For further changes refer the FatFs library files for more details </b>
+ 
+ 
+\section XDK_MIGRATION_GUIDE_API_V1_6_0 Changes for the existing modules between the version XDK-1.3.0,XDK-1.5.x,XDK-1.6.0 and XDK-1.6.1 & above 
+
+\subsection XDK_MIGRATION_GUIDE_XDK_WLAN  Wlan module 
+Summary of Changes for Wlan Module:
+- API: Function names changed to make them more uniform
+- API: Return types changed
+- API: Input parameters type changed
+- ENUMs: Names changed to make them more uniform
+- ENUMs: Element names in each of those are changed
+
+Table to capture the difference between version  XDK-1.3.0,XDK-1.5.x,XDK-1.6.0 and XDK-1.6.1 & above 
+
+ XDK-1.3.0,XDK-1.5.x,XDK-1.6.0 API                                                                                                            |                             XDK-1.6.1 & above  API                                                                                | 
+----------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+WLI_return_t WLI_init(void)                                                                                                                   | Retcode_T WlanConnect_Init(void);                                                                                                
+WLI_deinit WLI_deinit(void)                                                                                                                   | Retcode_T WlanConnect_DeInit(void);                                                                         
+WLI_return_t WLI_connectOpen(WLI_connectSSID_t connectSSID,WLI_connectCallback_t connectCallback);                                            | Retcode_T WlanConnect_Open(WlanConnect_SSID_T connectSSID, WlanConnect_Callback_T connectCallback)                                                                                             
+WLI_return_t WLI_connectWEP_Open(WLI_connectSSID_t connectSSID,WLI_connectPassPhrase_t connectPass,WLI_connectCallback_t connectCallback);    | Retcode_T WlanConnect_WEP_Open(WlanConnect_SSID_T connectSSID, WlanConnect_PassPhrase_T connectPass,uint8_t passPhraseLength, WlanConnect_Callback_T connectCallback);
+WLI_return_t WLI_connectWPA(WLI_connectSSID_t connectSSID, WLI_connectPassPhrase_t connectPass,WLI_connectCallback_t connectCallback);        | Retcode_T WlanConnect_WPA(WlanConnect_SSID_T connectSSID,WlanConnect_PassPhrase_T connectPass,WlanConnect_Callback_T connectCallback);
+WLI_return_t WLI_connectWPS_PBC(WLI_connectCallback_t connectCallback);                                                                       | Retcode_T WlanConnect_WPS_PBC(WlanConnect_Callback_T connectCallback);
+WLI_return_t WLI_connectWPS_PIN(WLI_connectCallback_t connectCallback);                                                                       | Retcode_T WlanConnect_WPS_PIN(WlanConnect_Callback_T connectCallback);
+WLI_return_t WLI_deleteAllProfiles(void);                                                                                                     | Retcode_T WlanConnect_DeleteAllProfiles(void);
+WLI_return_t WLI_disconnect(WLI_disconnectCallback_t disconnectCallback);                                                                     | Retcode_T WlanConnect_Disconnect(WlanConnect_DisconnectCallback_T disconnectCallback);
+WLI_scanReturnCode_t WLI_scanNetworks(WLI_scanInterval_t f_scanInterval, WLI_scanList_t* f_scanList);                                         | Retcode_T WlanConnect_ScanNetworks(WlanConnect_ScanInterval_T scanInterval, WlanConnect_ScanList_T* scanList);
+WLI_currentStatus_t WLI_getCurrentNetworkStatus(WLI_disconnectCallback_t allDisconnectCallback);                                              | WlanConnect_CurrentNwStatus_T WlanConnect_GetCurrentNwStatus(void);
+WLI_connectStatus_t WLI_getConnectionStatus(void);                                                                                            | WlanConnect_Status_T WlanConnect_GetStatus(void);
+NCI_return_t NCI_getIpSettings(NCI_ipSettings_t* myIpSettings);                                                                               | Retcode_T NetworkConfig_GetIpSettings(NetworkConfig_IpSettings_T* myIpSettings);
+NCI_return_t NCI_setIpStatic(NCI_ipSettings_t myIpSettings);                                                                                  | Retcode_T NetworkConfig_SetIpStatic(NetworkConfig_IpSettings_T myIpSettings);
+NCI_return_t NCI_setIpDhcp(NCI_ipCallback_t myIpCallback);                                                                                    | Retcode_T NetworkConfig_SetIpDhcp(NetworkConfig_IpCallback_T myIpCallback);
+uint32_t NCI_ipv4Value(uint32_t add3, uint32_t add2, uint32_t add1, uint32_t add0);                                                           | uint32_t NetworkConfig_Ipv4Value(uint8_t add3, uint8_t add2, uint8_t add1, uint8_t add0);
+uint32_t NCI_ipv4Byte(uint32_t ipValue, uint8_t index);                                                                                       | uint8_t NetworkConfig_Ipv4Byte(uint32_t ipValue, uint8_t index);
+NCI_ipStatus_t NCI_getIpObtainedStatus(void);                                                                                                 | NetworkConfig_IpStatus_T NetworkConfig_GetIpStatus(void);
+
+
+\section Changes since version XDK-3.5.0
+\subsection XDK_MIGRATION_GUIDE_XDK_COMMON  Common module
+	- WLAN reconnect feature in Common
+*/

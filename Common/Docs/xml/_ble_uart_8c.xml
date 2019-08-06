@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_ble_uart_8c" kind="file">
+    <compoundname>BleUart.c</compoundname>
+    <includes refid="_ble_types_8h" local="yes">BleTypes.h</includes>
+    <includes refid="_ble_transport_8h" local="yes">BleTransport.h</includes>
+    <incdepgraph>
+      <node id="28140">
+        <label>SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleUart.c</label>
+        <link refid="BleUart.c"/>
+        <childnode refid="28141" relation="include">
+        </childnode>
+        <childnode refid="28144" relation="include">
+        </childnode>
+      </node>
+      <node id="28141">
+        <label>BleTypes.h</label>
+        <link refid="_ble_types_8h"/>
+        <childnode refid="28142" relation="include">
+        </childnode>
+      </node>
+      <node id="28143">
+        <label>BLECustomConfig.h</label>
+        <link refid="_common_2config_2_b_l_e_custom_config_8h"/>
+      </node>
+      <node id="28144">
+        <label>BleTransport.h</label>
+        <link refid="_ble_transport_8h"/>
+        <childnode refid="28141" relation="include">
+        </childnode>
+      </node>
+      <node id="28142">
+        <label>BleConfig.h</label>
+        <link refid="_ble_config_8h"/>
+        <childnode refid="28143" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_ble_uart_8c_1a9192f692fa768ebc319595c079ceecb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref></type>
+        <definition>BleStatus BLEUART_Deinit</definition>
+        <argsstring>(void)</argsstring>
+        <name>BLEUART_Deinit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>De-Initialise the Uart.</para><para><ref refid="_ble_uart_8c_1a9192f692fa768ebc319595c079ceecb9" kindref="member">BLEUART_Deinit()</ref> This function is called by the BLE stack (TRANSPORT layer) to de-initialise the UART layer. Eventual thread shall be terminated here. When this function succeed, the UART layer shall be fully de-initialised</para><para>This function is called during the BLESTCK_Deinit() process, failure here will issue a failure in BLESTCK_Deinit()</para><para><simplesect kind="see"><para>BLESTCK_Deinit()</para></simplesect>
+<simplesect kind="return"><para>The status of the operation:<itemizedlist>
+<listitem><para>BLESTATUS_SUCCESS indicates to the BLE stack that the UART have been successfully initialized</para></listitem><listitem><para>BLESTATUS_FAILED indicates to the BLE stack that the UART could not be initialized</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="author"><para>Alexandre GIMARD </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleUart.c" line="117" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleUart.c" bodystart="117" bodyend="124"/>
+        <references refid="_ble_types_8h_1ad14b20a1135ee7821fa32d0bb0d7b2fc" compoundref="_ble_types_8h" startline="69">BLESTATUS_SUCCESS</references>
+      </memberdef>
+      <memberdef kind="function" id="_ble_uart_8c_1a918283086f8069ee7fc2f0d0d7415c64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref></type>
+        <definition>BleStatus BLEUART_Init</definition>
+        <argsstring>(void)</argsstring>
+        <name>BLEUART_Init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialise the Uart.</para><para><ref refid="_ble_uart_8c_1a918283086f8069ee7fc2f0d0d7415c64" kindref="member">BLEUART_Init()</ref> This function is called by the BLE stack (TRANSPORT layer) to initialise the UART layer. The user should uses this function to open and setup parameters for the UART line, eventually create Read Thread or setup RX and TX interrupts.</para><para>When this function succeeds, the UART layer shall be fully functional</para><para>This function is called during the BLESTCK_Init() process, failure here will issue a failure in BLESTCK_Init()</para><para><simplesect kind="see"><para>BLESTCK_Init()</para></simplesect>
+<simplesect kind="return"><para>The status of the operation:<itemizedlist>
+<listitem><para>BLESTATUS_SUCCESS indicates to the BLE stack that the UART have been successfully initialized</para></listitem><listitem><para>BLESTATUS_FAILED indicates to the BLE stack that the UART could not be initialized</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="author"><para>Alexandre GIMARD </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleUart.c" line="85" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleUart.c" bodystart="85" bodyend="92"/>
+        <references refid="_ble_types_8h_1ad14b20a1135ee7821fa32d0bb0d7b2fc" compoundref="_ble_types_8h" startline="69">BLESTATUS_SUCCESS</references>
+      </memberdef>
+      <memberdef kind="function" id="_ble_uart_8c_1ab1d77c7996a40033f78a9b9ae5855175" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref></type>
+        <definition>BleStatus BLEUART_Send</definition>
+        <argsstring>(U8 *uartData, U8 uartDataLen)</argsstring>
+        <name>BLEUART_Send</name>
+        <param>
+          <type><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref> *</type>
+          <declname>uartData</declname>
+        </param>
+        <param>
+          <type><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref></type>
+          <declname>uartDataLen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send data through Uart.</para><para><ref refid="_ble_uart_8c_1ab1d77c7996a40033f78a9b9ae5855175" kindref="member">BLEUART_Send()</ref> This function is called by the BLE stack (TRANSPORT layer) to send data through the UART layer. When the function succeed, the UART layer shall have send all the data It is to the uart layer to retry to sent the data, if the function fails it result to a transport error and stack de-initialisation. Note that BLEUART_Send is always called after <ref refid="_ble_uart_8c_1ac023285a6041518b30a7ac6c4452dc0a" kindref="member">BLEUART_TXStarts()</ref> and before <ref refid="_ble_uart_8c_1a4dc946b15664c502f5f8428e427973bd" kindref="member">BLEUART_TXEnds()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: pointer to received data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: len of the received data contained in the data pointer</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The status of the operation:<itemizedlist>
+<listitem><para>BLESTATUS_SUCCESS indicates to the BLE stack that the data have been successfully sent</para></listitem><listitem><para>BLESTATUS_FAILED indicates to the BLE stack that the data have not been sent, it result to a transport error </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleUart.c" line="150" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleUart.c" bodystart="150" bodyend="158"/>
+        <references refid="_ble_types_8h_1ad14b20a1135ee7821fa32d0bb0d7b2fc" compoundref="_ble_types_8h" startline="69">BLESTATUS_SUCCESS</references>
+      </memberdef>
+      <memberdef kind="function" id="_ble_uart_8c_1a4dc946b15664c502f5f8428e427973bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BLEUART_TXEnds</definition>
+        <argsstring>(void)</argsstring>
+        <name>BLEUART_TXEnds</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Give information to the UART layer that the stack has ends a transmit process.</para><para><ref refid="_ble_uart_8c_1a4dc946b15664c502f5f8428e427973bd" kindref="member">BLEUART_TXEnds()</ref> This function is called by the BLE stack (TRANSPORT layer) to inform the UART layer that a packet has been transmitted. As a packet can be transmitted into several <ref refid="_ble_uart_8c_1ab1d77c7996a40033f78a9b9ae5855175" kindref="member">BLEUART_Send()</ref> calls, the stack inform the UART layer that a transmittion ends. it is usefull for UART line that are not full duplex or with a specific flow control and requiere to know when transmition ends. Otherwise the function should be empty. Note that BLEUART_Send is always called after <ref refid="_ble_uart_8c_1ac023285a6041518b30a7ac6c4452dc0a" kindref="member">BLEUART_TXStarts()</ref> and before <ref refid="_ble_uart_8c_1a4dc946b15664c502f5f8428e427973bd" kindref="member">BLEUART_TXEnds()</ref>.</para><para><simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleUart.c" line="202" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleUart.c" bodystart="202" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="_ble_uart_8c_1ac023285a6041518b30a7ac6c4452dc0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BLEUART_TXStarts</definition>
+        <argsstring>(void)</argsstring>
+        <name>BLEUART_TXStarts</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Give information to the UART layer that the stack will starts a transmit process.</para><para><ref refid="_ble_uart_8c_1ac023285a6041518b30a7ac6c4452dc0a" kindref="member">BLEUART_TXStarts()</ref> This function is called by the BLE stack (TRANSPORT layer) to inform the UART layer that a packet will be transmitted. As a packet can be transmitted into several <ref refid="_ble_uart_8c_1ab1d77c7996a40033f78a9b9ae5855175" kindref="member">BLEUART_Send()</ref> calls, the stack inform the UART layer that a transmittion starts. Then the stack will call one or several <ref refid="_ble_uart_8c_1ab1d77c7996a40033f78a9b9ae5855175" kindref="member">BLEUART_Send()</ref> and then BLEUART_TXEnds API. it is usefull for UARt line that are not full duplex or with a specific flow control and requiere to know when transmition starts. Otherwise the function should be empty. Note that BLEUART_Send is always called after <ref refid="_ble_uart_8c_1ac023285a6041518b30a7ac6c4452dc0a" kindref="member">BLEUART_TXStarts()</ref> and before <ref refid="_ble_uart_8c_1a4dc946b15664c502f5f8428e427973bd" kindref="member">BLEUART_TXEnds()</ref>.</para><para><simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleUart.c" line="177" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleUart.c" bodystart="177" bodyend="184"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>This<sp/>software<sp/>is<sp/>copyrighted<sp/>by<sp/>Alpwise,<sp/>2016.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>The<sp/>use<sp/>of<sp/>this<sp/>software<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>XDK<sp/>SDK<sp/>EULA</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BleUart.c</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Description:<sp/><sp/><sp/>Contains<sp/>routines<sp/>for<sp/>Transport<sp/>specific<sp/>initialisation,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>and<sp/>de-initialisation.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>Created:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>June,<sp/>2008</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>Version:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0.1</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>File<sp/>Revision:<sp/>$Rev:<sp/>2724<sp/>$</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>$Project$</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>trademark<sp/>and<sp/>other<sp/>intellectual<sp/>property<sp/>rights.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ble_types_8h" kindref="compound">BleTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ble_transport_8h" kindref="compound">BleTransport.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/>CONSTANT<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="comment">\***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/>RAM<sp/>data</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">\***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/>MACRO<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="comment">\***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*<sp/>ROM<sp/>data</highlight></codeline>
+<codeline lineno="44"><highlight class="comment">\***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*<sp/><sp/>Local<sp/>functions<sp/>Prototype</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/>*<sp/>External<sp/>Functions<sp/>prototypes</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">\***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************\</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/>*<sp/><sp/>APPLICATION<sp/>INTERCAFES<sp/>functions<sp/>definition</highlight></codeline>
+<codeline lineno="58"><highlight class="comment">\****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="_ble_transport_8h_1a918283086f8069ee7fc2f0d0d7415c64" refkind="member"><highlight class="normal"><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/><ref refid="_ble_uart_8c_1a918283086f8069ee7fc2f0d0d7415c64" kindref="member">BLEUART_Init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>here<sp/>specific<sp/>code<sp/>to<sp/>execute<sp/>during<sp/>Stack<sp/>Initialisation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>order<sp/>to<sp/>initialise<sp/>the<sp/>transport<sp/>drivers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&lt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_ble_types_8h_1ad14b20a1135ee7821fa32d0bb0d7b2fc" kindref="member">BLESTATUS_SUCCESS</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="_ble_transport_8h_1a9192f692fa768ebc319595c079ceecb9" refkind="member"><highlight class="normal"><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/><ref refid="_ble_uart_8c_1a9192f692fa768ebc319595c079ceecb9" kindref="member">BLEUART_Deinit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>here<sp/>specific<sp/>code<sp/>to<sp/>execute<sp/>during<sp/>Stack<sp/>De-Initialisation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>order<sp/>to<sp/>de-initialise<sp/>the<sp/>transport<sp/>drivers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&lt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_ble_types_8h_1ad14b20a1135ee7821fa32d0bb0d7b2fc" kindref="member">BLESTATUS_SUCCESS</ref>;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="_ble_transport_8h_1ab1d77c7996a40033f78a9b9ae5855175" refkind="member"><highlight class="normal"><ref refid="_ble_types_8h_1a51b22dff1300b8e07a6aa1acf7d24734" kindref="member">BleStatus</ref><sp/><ref refid="_ble_uart_8c_1ab1d77c7996a40033f78a9b9ae5855175" kindref="member">BLEUART_Send</ref>(<ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref>*<sp/>uartData<sp/>,<sp/><ref refid="_ble_types_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/>uartDataLen){</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>here<sp/>specific<sp/>code<sp/>to<sp/>execute<sp/>during<sp/>Stack<sp/>Process</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>order<sp/>to<sp/>send<sp/>data<sp/>trough<sp/>transport</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&lt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_ble_types_8h_1ad14b20a1135ee7821fa32d0bb0d7b2fc" kindref="member">BLESTATUS_SUCCESS</ref>;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="_ble_transport_8h_1ac023285a6041518b30a7ac6c4452dc0a" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_ble_uart_8c_1ac023285a6041518b30a7ac6c4452dc0a" kindref="member">BLEUART_TXStarts</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>){</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>here<sp/>specific<sp/>code<sp/>to<sp/>execute<sp/>during<sp/>Stack<sp/>Process</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>order<sp/>to<sp/>run<sp/>specific<sp/>code<sp/>before<sp/>sending<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&lt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="_ble_transport_8h_1a4dc946b15664c502f5f8428e427973bd" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_ble_uart_8c_1a4dc946b15664c502f5f8428e427973bd" kindref="member">BLEUART_TXEnds</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>){</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>here<sp/>specific<sp/>code<sp/>to<sp/>execute<sp/>during<sp/>Stack<sp/>Process</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>order<sp/>to<sp/>run<sp/>specific<sp/>code<sp/>after<sp/>sending<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&lt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="comment">//<sp/>BLEUART_READ<sp/>through<sp/>BLETRANSPORT_UartDataReceived(*buffer,(U8)bytesRead);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************\</highlight></codeline>
+<codeline lineno="215"><highlight class="comment"><sp/>*<sp/><sp/>Local<sp/>functions<sp/>definition</highlight></codeline>
+<codeline lineno="216"><highlight class="comment">\****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/BLEStack/3rd-party/Alpwise/ALPW-BLESDKCM3/BLESW_CoreStack/Integration/_PortingTemplates_/BleUart.c"/>
+  </compounddef>
+</doxygen>

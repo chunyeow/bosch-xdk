@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___a_b_s_o_l_u_t_e_h_u_m_i_d_i_t_y" kind="group">
+    <compoundname>ABSOLUTEHUMIDITY</compoundname>
+    <title>Absolute Humidity</title>
+    <innerfile refid="_b_c_d_s___absolute_humidity_8h">BCDS_AbsoluteHumidity.h</innerfile>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___a_b_s_o_l_u_t_e_h_u_m_i_d_i_t_y_1gafbc9bd69b397c3289de5d7fe35a2b58b" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* AbsoluteHumidity_HandlePtr_T</definition>
+        <argsstring></argsstring>
+        <name>AbsoluteHumidity_HandlePtr_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Defines the handle for absolute humidity sensor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorToolbox/include/BCDS_AbsoluteHumidity.h" line="71" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorToolbox/include/BCDS_AbsoluteHumidity.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___a_b_s_o_l_u_t_e_h_u_m_i_d_i_t_y_1gaedd8d9811a0480ec4a79cb749ddfb963" prot="public" static="no">
+        <type>float *</type>
+        <definition>typedef float* AbsoluteHumidity_ValuePtr_T</definition>
+        <argsstring></argsstring>
+        <name>AbsoluteHumidity_ValuePtr_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Defines the pointer to hold absolute humidity value </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorToolbox/include/BCDS_AbsoluteHumidity.h" line="74" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorToolbox/include/BCDS_AbsoluteHumidity.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___a_b_s_o_l_u_t_e_h_u_m_i_d_i_t_y_1gac269a668a24b7811b6407171cd8da437" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T AbsoluteHumidity_deInit</definition>
+        <argsstring>(void)</argsstring>
+        <name>AbsoluteHumidity_deInit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Deinitializes the Humidity sensor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Humidity sensor De-initialization success. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Humidity sensor De-initialization failure.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>This function needs to be called when we require to stop the humidity sensor data reading.</para></simplesect>
+<simplesect kind="note"><para>The return value consist of (First 1 MSByte represents Package ID, Next byte represents Severity and Last 2 LSBytes represents error code). </para></simplesect>
+<simplesect kind="note"><para>Pass the return value of this function to <ref refid="group___s_e_n_s_o_r_e_r_r_o_r_t_y_p_e_s_1ga7ec9c45fe80fb852e2571634b9081605" kindref="member">BCDS_getSensorErrorCode</ref> API to know the sensor return code present in <ref refid="group___s_e_n_s_o_r_e_r_r_o_r_t_y_p_e_s_1ga8d305b87c1de701ae31b9b0a97f68831" kindref="member">BCDS_SensorErrorType_E</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorToolbox/include/BCDS_AbsoluteHumidity.h" line="127" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___a_b_s_o_l_u_t_e_h_u_m_i_d_i_t_y_1gac8e12516af9413804490d202ec432567" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T AbsoluteHumidity_init</definition>
+        <argsstring>(AbsoluteHumidity_HandlePtr_T handle)</argsstring>
+        <name>AbsoluteHumidity_init</name>
+        <param>
+          <type><ref refid="group___a_b_s_o_l_u_t_e_h_u_m_i_d_i_t_y_1gafbc9bd69b397c3289de5d7fe35a2b58b" kindref="member">AbsoluteHumidity_HandlePtr_T</ref></type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the Humidity sensor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">AbsoluteHumidity_HandlePtr_T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the handle to the humidity sensor object that should be initialized.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Humidity sensor initialization success. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>In case of invalid sensor handle.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>This function needs to be called before calling any other function of the Humidity sensor API.</para></simplesect>
+<simplesect kind="note"><para>The return value consist of (First 1 MSByte represents Package ID, Next byte represents Severity and Last 2 LSBytes represents error code). </para></simplesect>
+<simplesect kind="note"><para>Pass the return value of this function to <ref refid="group___s_e_n_s_o_r_e_r_r_o_r_t_y_p_e_s_1ga7ec9c45fe80fb852e2571634b9081605" kindref="member">BCDS_getSensorErrorCode</ref> API to know the sensor return code present in <ref refid="group___s_e_n_s_o_r_e_r_r_o_r_t_y_p_e_s_1ga8d305b87c1de701ae31b9b0a97f68831" kindref="member">BCDS_SensorErrorType_E</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorToolbox/include/BCDS_AbsoluteHumidity.h" line="93" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___a_b_s_o_l_u_t_e_h_u_m_i_d_i_t_y_1ga38795ce3b00eb7d6f4d27bb0b14bbf14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T AbsoluteHumidity_readValue</definition>
+        <argsstring>(AbsoluteHumidity_HandlePtr_T handle, AbsoluteHumidity_ValuePtr_T absoluteValue)</argsstring>
+        <name>AbsoluteHumidity_readValue</name>
+        <param>
+          <type><ref refid="group___a_b_s_o_l_u_t_e_h_u_m_i_d_i_t_y_1gafbc9bd69b397c3289de5d7fe35a2b58b" kindref="member">AbsoluteHumidity_HandlePtr_T</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type><ref refid="group___a_b_s_o_l_u_t_e_h_u_m_i_d_i_t_y_1gaedd8d9811a0480ec4a79cb749ddfb963" kindref="member">AbsoluteHumidity_ValuePtr_T</ref></type>
+          <declname>absoluteValue</declname>
+        </param>
+        <briefdescription>
+<para>Reads absolute humidity value from the humidity sensor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">AbsoluteHumidity_HandlePtr_T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the handle to the humidity sensor object that should be initialized.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">AbsoluteHumidity_ValuePtr_T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>absoluteHumidityValue, output parameter in which the absoluteHumidity value will be written to, from within the function.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reading absolute humidity value from the humidity sensor success. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>In case of invalid sensor handle or invalid absolute value.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Refer #XdkSensorHandle.h for selecting the proper handle. </para></simplesect>
+<simplesect kind="note"><para>The return value consist of (First 1 MSByte represents Package ID, Next byte represents Severity and Last 2 LSBytes represents error code). </para></simplesect>
+<simplesect kind="note"><para>Pass the return value of this function to <ref refid="group___s_e_n_s_o_r_e_r_r_o_r_t_y_p_e_s_1ga7ec9c45fe80fb852e2571634b9081605" kindref="member">BCDS_getSensorErrorCode</ref> API to know the sensor return code present in <ref refid="group___s_e_n_s_o_r_e_r_r_o_r_t_y_p_e_s_1ga8d305b87c1de701ae31b9b0a97f68831" kindref="member">BCDS_SensorErrorType_E</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorToolbox/include/BCDS_AbsoluteHumidity.h" line="112" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Virtual Absolute Humidity Sensor based on BME280. </para>    </briefdescription>
+    <detaileddescription>
+<para>Virtual Absolute Humidity Sensor that provides absolute Humidity data. <linebreak/>
+ <bold>Humidity</bold> <bold>method</bold> : <linebreak/>
+ Humidity is calculated by moving the sensor from one place to another place.</para><para>Humidity data is read in the following units.<itemizedlist>
+<listitem><para>g/m3 units</para></listitem></itemizedlist>
+</para><para><simplesect kind="note"><para>To know the absoluteHumidity, use <ref refid="group___a_b_s_o_l_u_t_e_h_u_m_i_d_i_t_y_1ga38795ce3b00eb7d6f4d27bb0b14bbf14" kindref="member">AbsoluteHumidity_readValue()</ref> API</para></simplesect>
+<bold>Limitations</bold> <bold>of</bold> <bold>absolute</bold> <bold>humidity:</bold> <linebreak/>
+ This sensor cannot be used while using virtual sensor fingerPrint. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

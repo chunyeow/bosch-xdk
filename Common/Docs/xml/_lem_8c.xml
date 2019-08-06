@@ -1,0 +1,792 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_lem_8c" kind="file">
+    <compoundname>Lem.c</compoundname>
+    <includes refid="_xdk_common_info_8h" local="yes">XdkCommonInfo.h</includes>
+    <includes local="no">math.h</includes>
+    <includes refid="_x_d_k___lem_8h" local="yes">XDK_Lem.h</includes>
+    <includes refid="_b_s_p___board_type_8h" local="yes">BSP_BoardType.h</includes>
+    <includes refid="_free_r_t_o_s_8h" local="yes">FreeRTOS.h</includes>
+    <includes refid="_b_c_d_s___assert_8h" local="yes">BCDS_Assert.h</includes>
+    <includes refid="task_8h" local="yes">task.h</includes>
+    <includes refid="timers_8h" local="yes">timers.h</includes>
+    <includes refid="semphr_8h" local="yes">semphr.h</includes>
+    <includes refid="_b_c_d_s___m_c_u___timer_8h" local="yes">BCDS_MCU_Timer.h</includes>
+    <includes refid="_b_c_d_s___m_c_u___timer___handle_8h" local="yes">BCDS_MCU_Timer_Handle.h</includes>
+    <includes local="yes">em_adc.h</includes>
+    <includes local="yes">em_dma.h</includes>
+    <includes local="yes">em_gpio.h</includes>
+    <includes refid="_b_s_p___adc_8h" local="yes">BSP_Adc.h</includes>
+    <includes refid="_mcu___adc___handle_8h" local="yes">Mcu_Adc_Handle.h</includes>
+    <includes refid="_mcu___adc_8h" local="yes">Mcu_Adc.h</includes>
+    <includes refid="_adc_central_8h" local="yes">AdcCentral.h</includes>
+    <includes refid="_adc_central_config_8h" local="yes">AdcCentralConfig.h</includes>
+    <includes refid="_b_s_p___lem_sensor_8h" local="yes">BSP_LemSensor.h</includes>
+    <incdepgraph>
+      <node id="27717">
+        <label>stdbool.h</label>
+      </node>
+      <node id="27738">
+        <label>BCDS_HALConfig.h</label>
+        <link refid="_b_c_d_s___h_a_l_config_8h"/>
+      </node>
+      <node id="27731">
+        <label>list.h</label>
+      </node>
+      <node id="27745">
+        <label>Mcu_Adc.h</label>
+        <link refid="_mcu___adc_8h"/>
+        <childnode refid="27737" relation="include">
+        </childnode>
+        <childnode refid="27715" relation="include">
+        </childnode>
+        <childnode refid="27740" relation="include">
+        </childnode>
+      </node>
+      <node id="27741">
+        <label>em_dma.h</label>
+      </node>
+      <node id="27726">
+        <label>BCDS_Assert.h</label>
+        <link refid="_b_c_d_s___assert_8h"/>
+        <childnode refid="27714" relation="include">
+        </childnode>
+      </node>
+      <node id="27713">
+        <label>XdkCommonInfo.h</label>
+        <link refid="_xdk_common_info_8h"/>
+        <childnode refid="27714" relation="include">
+        </childnode>
+      </node>
+      <node id="27716">
+        <label>stdint.h</label>
+      </node>
+      <node id="27714">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="27715" relation="include">
+        </childnode>
+      </node>
+      <node id="27719">
+        <label>stdlib.h</label>
+      </node>
+      <node id="27732">
+        <label>timers.h</label>
+        <link refid="timers_8h"/>
+        <childnode refid="27730" relation="include">
+        </childnode>
+      </node>
+      <node id="27740">
+        <label>em_adc.h</label>
+      </node>
+      <node id="27727">
+        <label>BCDS_TaskConfig.h</label>
+        <link refid="_b_c_d_s___task_config_8h"/>
+      </node>
+      <node id="27733">
+        <label>semphr.h</label>
+        <link refid="semphr_8h"/>
+        <childnode refid="27734" relation="include">
+        </childnode>
+      </node>
+      <node id="27746">
+        <label>AdcCentral.h</label>
+        <link refid="_adc_central_8h"/>
+        <childnode refid="27745" relation="include">
+        </childnode>
+      </node>
+      <node id="27735">
+        <label>BCDS_MCU_Timer.h</label>
+        <link refid="_b_c_d_s___m_c_u___timer_8h"/>
+        <childnode refid="27736" relation="include">
+        </childnode>
+        <childnode refid="27737" relation="include">
+        </childnode>
+      </node>
+      <node id="27724">
+        <label>stddef.h</label>
+      </node>
+      <node id="27721">
+        <label>XDK_Lem.h</label>
+        <link refid="_x_d_k___lem_8h"/>
+        <childnode refid="27714" relation="include">
+        </childnode>
+      </node>
+      <node id="27739">
+        <label>BCDS_MCU_Timer_Handle.h</label>
+        <link refid="_b_c_d_s___m_c_u___timer___handle_8h"/>
+      </node>
+      <node id="27743">
+        <label>BSP_Adc.h</label>
+        <link refid="_b_s_p___adc_8h"/>
+        <childnode refid="27737" relation="include">
+        </childnode>
+      </node>
+      <node id="27729">
+        <label>portable.h</label>
+      </node>
+      <node id="27722">
+        <label>BSP_BoardType.h</label>
+        <link refid="_b_s_p___board_type_8h"/>
+      </node>
+      <node id="27718">
+        <label>string.h</label>
+      </node>
+      <node id="27712">
+        <label>SDK/xdk110/Common/source/Sensor/Lem.c</label>
+        <link refid="Lem.c"/>
+        <childnode refid="27713" relation="include">
+        </childnode>
+        <childnode refid="27720" relation="include">
+        </childnode>
+        <childnode refid="27721" relation="include">
+        </childnode>
+        <childnode refid="27722" relation="include">
+        </childnode>
+        <childnode refid="27723" relation="include">
+        </childnode>
+        <childnode refid="27726" relation="include">
+        </childnode>
+        <childnode refid="27730" relation="include">
+        </childnode>
+        <childnode refid="27732" relation="include">
+        </childnode>
+        <childnode refid="27733" relation="include">
+        </childnode>
+        <childnode refid="27735" relation="include">
+        </childnode>
+        <childnode refid="27739" relation="include">
+        </childnode>
+        <childnode refid="27740" relation="include">
+        </childnode>
+        <childnode refid="27741" relation="include">
+        </childnode>
+        <childnode refid="27742" relation="include">
+        </childnode>
+        <childnode refid="27743" relation="include">
+        </childnode>
+        <childnode refid="27744" relation="include">
+        </childnode>
+        <childnode refid="27745" relation="include">
+        </childnode>
+        <childnode refid="27746" relation="include">
+        </childnode>
+        <childnode refid="27747" relation="include">
+        </childnode>
+        <childnode refid="27748" relation="include">
+        </childnode>
+      </node>
+      <node id="27715">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="27716" relation="include">
+        </childnode>
+        <childnode refid="27717" relation="include">
+        </childnode>
+        <childnode refid="27718" relation="include">
+        </childnode>
+        <childnode refid="27719" relation="include">
+        </childnode>
+      </node>
+      <node id="27744">
+        <label>Mcu_Adc_Handle.h</label>
+        <link refid="_mcu___adc___handle_8h"/>
+        <childnode refid="27745" relation="include">
+        </childnode>
+        <childnode refid="27740" relation="include">
+        </childnode>
+      </node>
+      <node id="27728">
+        <label>projdefs.h</label>
+      </node>
+      <node id="27737">
+        <label>BCDS_HAL.h</label>
+        <link refid="_b_c_d_s___h_a_l_8h"/>
+        <childnode refid="27714" relation="include">
+        </childnode>
+        <childnode refid="27738" relation="include">
+        </childnode>
+      </node>
+      <node id="27747">
+        <label>AdcCentralConfig.h</label>
+        <link refid="_adc_central_config_8h"/>
+        <childnode refid="27745" relation="include">
+        </childnode>
+      </node>
+      <node id="27734">
+        <label>queue.h</label>
+        <link refid="queue_8h"/>
+      </node>
+      <node id="27720">
+        <label>math.h</label>
+      </node>
+      <node id="27736">
+        <label>BCDS_Essentials.h</label>
+        <link refid="_b_c_d_s___essentials_8h"/>
+        <childnode refid="27716" relation="include">
+        </childnode>
+        <childnode refid="27717" relation="include">
+        </childnode>
+        <childnode refid="27718" relation="include">
+        </childnode>
+        <childnode refid="27719" relation="include">
+        </childnode>
+        <childnode refid="27737" relation="include">
+        </childnode>
+      </node>
+      <node id="27730">
+        <label>task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="27731" relation="include">
+        </childnode>
+      </node>
+      <node id="27725">
+        <label>FreeRTOSConfig.h</label>
+        <link refid="_free_r_t_o_s_config_8h"/>
+        <childnode refid="27716" relation="include">
+        </childnode>
+        <childnode refid="27726" relation="include">
+        </childnode>
+        <childnode refid="27727" relation="include">
+        </childnode>
+      </node>
+      <node id="27723">
+        <label>FreeRTOS.h</label>
+        <link refid="_free_r_t_o_s_8h"/>
+        <childnode refid="27724" relation="include">
+        </childnode>
+        <childnode refid="27716" relation="include">
+        </childnode>
+        <childnode refid="27725" relation="include">
+        </childnode>
+        <childnode refid="27728" relation="include">
+        </childnode>
+        <childnode refid="27729" relation="include">
+        </childnode>
+      </node>
+      <node id="27749">
+        <label>BSP_ExtensionPort.h</label>
+        <link refid="_b_s_p___extension_port_8h"/>
+        <childnode refid="27737" relation="include">
+        </childnode>
+      </node>
+      <node id="27748">
+        <label>BSP_LemSensor.h</label>
+        <link refid="_b_s_p___lem_sensor_8h"/>
+        <childnode refid="27737" relation="include">
+        </childnode>
+        <childnode refid="27749" relation="include">
+        </childnode>
+      </node>
+      <node id="27742">
+        <label>em_gpio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_lem_8c_1a602abb8ec84dcb3b6f854a738310ea46" prot="public" static="no">
+        <name>ADC_BUFFER_SIZE</name>
+        <initializer>(<ref refid="group___a_d_c_c_e_n_t_r_a_l_c_o_n_f_i_g_1ga14473fd902f8459a5f45f004e4147f33" kindref="member">ADC_CENTRAL_NO_OF_SAMPLES</ref> * <ref refid="_lem_8c_1abb9b83485adce9873274fdc995095de7" kindref="member">NO_OF_CHANNELS_USED</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" line="77" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" bodystart="77" bodyend="-1"/>
+        <referencedby refid="_lem_8c_1a11c1fe48a737ee12f073a9b6cf948e3c" compoundref="_lem_8c" startline="94" endline="119">CalculateRunningRMS</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_lem_8c_1abff8f3a204e79671b98fabaa652198c3" prot="public" static="no">
+        <name>BCDS_MODULE_ID</name>
+        <initializer><ref refid="_xdk_common_info_8h_1a7d550569e587db8903a47a7044e6e935ab39d835a5ada7043f284173caeb96831" kindref="member">XDK_COMMON_ID_LEMSENSOR</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" line="52" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_lem_8c_1abb9b83485adce9873274fdc995095de7" prot="public" static="no">
+        <name>NO_OF_CHANNELS_USED</name>
+        <initializer>UINT32_C(2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" line="76" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" bodystart="76" bodyend="-1"/>
+        <referencedby refid="_lem_8c_1a11c1fe48a737ee12f073a9b6cf948e3c" compoundref="_lem_8c" startline="94" endline="119">CalculateRunningRMS</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_lem_8c_1a5347bdf905135c5b7f1bf822a60206fb" prot="public" static="no">
+        <name>TIMER_SAMPLING_FREQ</name>
+        <initializer>5000UL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ADC Signal sampling frequency in Hz </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" line="75" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" bodystart="75" bodyend="-1"/>
+        <referencedby refid="group___l_e_m_1ga8ba134c64badc08d5b1596c7ba340164" compoundref="_lem_8c" startline="137" endline="162">Lem_Enable</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_lem_8c_1a7cd032d722dcb3832ab3018187c76833" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float CurrentRatedTransformationRatio</definition>
+        <argsstring></argsstring>
+        <name>CurrentRatedTransformationRatio</name>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Current rated transformation ratio for lem sensor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" line="81" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" bodystart="81" bodyend="-1"/>
+        <referencedby refid="group___l_e_m_1ga11e9fd318fc3c9ab209eb18460bfb6b0" compoundref="_lem_8c" startline="122" endline="134">Lem_Setup</referencedby>
+        <referencedby refid="group___l_e_m_1gaa99070df000f2a2c22b12d94dcc2fa2e" compoundref="_lem_8c" startline="196" endline="208">Lem_GetRmsCurrent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="_lem_8c_1aa4b2f938a365f457da6a2f15ca75ff7b" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>volatile float RMSVoltageSumOfSquares</definition>
+        <argsstring></argsstring>
+        <name>RMSVoltageSumOfSquares</name>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>RMS Voltage on Ch5 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" line="80" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" bodystart="80" bodyend="-1"/>
+        <referencedby refid="_lem_8c_1a11c1fe48a737ee12f073a9b6cf948e3c" compoundref="_lem_8c" startline="94" endline="119">CalculateRunningRMS</referencedby>
+        <referencedby refid="group___l_e_m_1ga4736c1b55f6c7aec32925476b23efb62" compoundref="_lem_8c" startline="181" endline="193">Lem_GetRmsVoltage</referencedby>
+        <referencedby refid="group___l_e_m_1gaa99070df000f2a2c22b12d94dcc2fa2e" compoundref="_lem_8c" startline="196" endline="208">Lem_GetRmsCurrent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="_lem_8c_1ac0632c452f104fd61590bab0c439ff73" prot="public" static="yes" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t ScanData[ADC_BUFFER_SIZE]</definition>
+        <argsstring>[ADC_BUFFER_SIZE]</argsstring>
+        <name>ScanData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>LEM sensor ADC user buffer for CH5 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" line="79" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" bodystart="79" bodyend="-1"/>
+        <referencedby refid="group___l_e_m_1ga8ba134c64badc08d5b1596c7ba340164" compoundref="_lem_8c" startline="137" endline="162">Lem_Enable</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_lem_8c_1a11c1fe48a737ee12f073a9b6cf948e3c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void CalculateRunningRMS</definition>
+        <argsstring>(ADC_T adc, uint32_t SamplingFreq, uint16_t *bufferPtr)</argsstring>
+        <name>CalculateRunningRMS</name>
+        <param>
+          <type><ref refid="_mcu___adc_8h_1a5860f527f3003fac5b4c77b3d28f3e9b" kindref="member">ADC_T</ref></type>
+          <declname>adc</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>SamplingFreq</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>bufferPtr</declname>
+        </param>
+        <briefdescription>
+<para>ADC Central callback function which calculates the RMS voltage for the Differential signal from the AD5 &amp; AD6 channels. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">adc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>handle not used.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">SamplingFreq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>which tells the adc samples collected frequency.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">bufferPtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>which is pointer to the application provided adc buffer which holds adc samples for CH5 &amp; Ch6.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+ADC central always provides 256 fixed number of adc samples per channel so the expecting the users to provide the buffer accordingly. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" line="94" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" bodystart="94" bodyend="119"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="_lem_8c_1a602abb8ec84dcb3b6f854a738310ea46" compoundref="_lem_8c" startline="77">ADC_BUFFER_SIZE</references>
+        <references refid="_lem_8c_1abb9b83485adce9873274fdc995095de7" compoundref="_lem_8c" startline="76">NO_OF_CHANNELS_USED</references>
+        <references refid="group___a_d_c_c_e_n_t_r_a_l_c_o_n_f_i_g_1ga698e831ad69f2f79fd77bf9fb93db285" compoundref="_adc_central_config_8h" startline="68">ADC_CONVERSION_FACTOR</references>
+        <references refid="_lem_8c_1aa4b2f938a365f457da6a2f15ca75ff7b" compoundref="_lem_8c" startline="80">RMSVoltageSumOfSquares</references>
+        <referencedby refid="group___l_e_m_1ga8ba134c64badc08d5b1596c7ba340164" compoundref="_lem_8c" startline="137" endline="162">Lem_Enable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___l_e_m_1ga9b1265bbf44186fc16d74ebabfdd6c61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Lem_Disable</definition>
+        <argsstring>(void)</argsstring>
+        <name>Lem_Disable</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>function to Deinitialize lemsensor module. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Status of the LemSensor Deinitialization<itemizedlist>
+<listitem><para>RETCODE_OK if the Deinitialization is successful</para></listitem><listitem><para>Error for failure </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" line="165" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" bodystart="165" bodyend="178"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___m_c_u___a_d_c_1ga624c10c0aaa3e1cf89b2b0aa08c8cc62" compoundref="_adc_central_8c" startline="589" endline="642">AdcCentral_StopScan</references>
+        <references refid="_mcu___adc_8h_1aa647504c454af04bd9f621c93071481aa0335738dd80a5e8d7bb23e8bab9e2a4d" compoundref="_mcu___adc_8h" startline="127">ADC_ENABLE_CH5_SCAN</references>
+        <references refid="_mcu___adc_8h_1aa647504c454af04bd9f621c93071481aa68b1532063006bfa67dd08aaf0d19679" compoundref="_mcu___adc_8h" startline="128">ADC_ENABLE_CH6_SCAN</references>
+        <referencedby refid="group___v_i_r_t_u_a_l___x_d_k___d_e_m_o_1ga0682bfb91b632041c05a68890e0c7beb" compoundref="_virtual_xdk_demo_2source_2_app_controller_8c" startline="473" endline="562">HandleExternalHwHotPlug</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___l_e_m_1ga8ba134c64badc08d5b1596c7ba340164" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Lem_Enable</definition>
+        <argsstring>(void)</argsstring>
+        <name>Lem_Enable</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>function to initialize the ADC, DMA , Board detect pin, Timer required for the LEM sensor sampling &amp; Starts the sampling timer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Status of the LemSensor Initialization<itemizedlist>
+<listitem><para>RETCODE_OK if the initialization is successful</para></listitem><listitem><para>Error for failure </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" line="137" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" bodystart="137" bodyend="162"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___m_c_u___a_d_c_1ga384bfb9ef993b0b92e10b86f753de9b2" compoundref="_adc_central_8c" startline="435" endline="473">AdcCentral_Init</references>
+        <references refid="struct_adc_central___config_scan___s_1ae4398a2ee15010b2562c2825560d44cf" compoundref="_adc_central_8h" startline="93">AdcCentral_ConfigScan_S::BufferPtr</references>
+        <references refid="_lem_8c_1ac0632c452f104fd61590bab0c439ff73" compoundref="_lem_8c" startline="79">ScanData</references>
+        <references refid="struct_adc_central___config_scan___s_1aeef0ecb1357ed3c02bba93c808e78e40" compoundref="_adc_central_8h" startline="95">AdcCentral_ConfigScan_S::Appcallback</references>
+        <references refid="_lem_8c_1a11c1fe48a737ee12f073a9b6cf948e3c" compoundref="_lem_8c" startline="94" endline="119">CalculateRunningRMS</references>
+        <references refid="struct_adc_central___config_scan___s_1a087ed4815f756a0687b5c916b936f11d" compoundref="_adc_central_8h" startline="92">AdcCentral_ConfigScan_S::ChannelScanMask</references>
+        <references refid="_mcu___adc_8h_1aa647504c454af04bd9f621c93071481aa0335738dd80a5e8d7bb23e8bab9e2a4d" compoundref="_mcu___adc_8h" startline="127">ADC_ENABLE_CH5_SCAN</references>
+        <references refid="_mcu___adc_8h_1aa647504c454af04bd9f621c93071481aa68b1532063006bfa67dd08aaf0d19679" compoundref="_mcu___adc_8h" startline="128">ADC_ENABLE_CH6_SCAN</references>
+        <references refid="struct_adc_central___config_scan___s_1a7e11be3a2417ae8e19905c8e13aa2442" compoundref="_adc_central_8h" startline="94">AdcCentral_ConfigScan_S::SamplingRateInHz</references>
+        <references refid="_lem_8c_1a5347bdf905135c5b7f1bf822a60206fb" compoundref="_lem_8c" startline="75">TIMER_SAMPLING_FREQ</references>
+        <references refid="group___m_c_u___a_d_c_1ga4487fdc581149fa5086b20427da36045" compoundref="_adc_central_8c" startline="506" endline="587">AdcCentral_StartScan</references>
+        <referencedby refid="group___v_i_r_t_u_a_l___x_d_k___d_e_m_o_1ga0682bfb91b632041c05a68890e0c7beb" compoundref="_virtual_xdk_demo_2source_2_app_controller_8c" startline="473" endline="562">HandleExternalHwHotPlug</referencedby>
+        <referencedby refid="group___v_i_r_t_u_a_l___x_d_k___d_e_m_o_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_virtual_xdk_demo_2source_2_app_controller_8c" startline="1052" endline="1134">AppControllerEnable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___l_e_m_1gaa99070df000f2a2c22b12d94dcc2fa2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Lem_GetRmsCurrent</definition>
+        <argsstring>(float *rmsCurrent)</argsstring>
+        <name>Lem_GetRmsCurrent</name>
+        <param>
+          <type>float *</type>
+          <declname>rmsCurrent</declname>
+        </param>
+        <briefdescription>
+<para>function to get the RMS current. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">rmsCurrent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>To get the LEM Sensor RMS current in ampere.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Status of the Getting the LemSensor Rms currnt<itemizedlist>
+<listitem><para>RETCODE_OK if the RMS current got successfully</para></listitem><listitem><para>Error for failure. </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" line="196" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" bodystart="196" bodyend="208"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="_lem_8c_1aa4b2f938a365f457da6a2f15ca75ff7b" compoundref="_lem_8c" startline="80">RMSVoltageSumOfSquares</references>
+        <references refid="group___a_d_c_c_e_n_t_r_a_l_c_o_n_f_i_g_1ga14473fd902f8459a5f45f004e4147f33" compoundref="_adc_central_config_8h" startline="60">ADC_CENTRAL_NO_OF_SAMPLES</references>
+        <references refid="_lem_8c_1a7cd032d722dcb3832ab3018187c76833" compoundref="_lem_8c" startline="81">CurrentRatedTransformationRatio</references>
+      </memberdef>
+      <memberdef kind="function" id="group___l_e_m_1ga4736c1b55f6c7aec32925476b23efb62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Lem_GetRmsVoltage</definition>
+        <argsstring>(float *rmsvoltage)</argsstring>
+        <name>Lem_GetRmsVoltage</name>
+        <param>
+          <type>float *</type>
+          <declname>rmsvoltage</declname>
+        </param>
+        <briefdescription>
+<para>function to get the RMS voltage. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">rmsvoltage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>To get the LEM Sensor RMS voltage in volts.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Status of the Getting the LemSensor Rms Voltage<itemizedlist>
+<listitem><para>RETCODE_OK if the RMS voltage got successfully</para></listitem><listitem><para>Error for failure.</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="note"><para>On every #SAMPLING_WINDOW_CYCLES the RMS voltage is updated. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" line="181" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" bodystart="181" bodyend="193"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="_lem_8c_1aa4b2f938a365f457da6a2f15ca75ff7b" compoundref="_lem_8c" startline="80">RMSVoltageSumOfSquares</references>
+        <references refid="group___a_d_c_c_e_n_t_r_a_l_c_o_n_f_i_g_1ga14473fd902f8459a5f45f004e4147f33" compoundref="_adc_central_config_8h" startline="60">ADC_CENTRAL_NO_OF_SAMPLES</references>
+      </memberdef>
+      <memberdef kind="function" id="group___l_e_m_1ga11e9fd318fc3c9ab209eb18460bfb6b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Lem_Setup</definition>
+        <argsstring>(float currentRatedTransformationRatio)</argsstring>
+        <name>Lem_Setup</name>
+        <param>
+          <type>float</type>
+          <declname>currentRatedTransformationRatio</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the required components and variables of lem sensor module. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">currentRatedTransformationRatio</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current transformation ratio for the core used in lemsensor</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>: example- Rated transformation ratio is 44.44 for 75Ampere split core current transformer</para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> upon successful initialization or error code otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" line="122" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c" bodystart="122" bodyend="134"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="_lem_8c_1a7cd032d722dcb3832ab3018187c76833" compoundref="_lem_8c" startline="81">CurrentRatedTransformationRatio</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6ae50e23ac22de65b64de1424dd9663a3f" compoundref="_b_c_d_s___retcode_8h" startline="132">RETCODE_SEVERITY_WARNING</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" compoundref="_b_c_d_s___retcode_8h" startline="108">RETCODE_INVALID_PARAM</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Lem-Sensor signal sampling. </para>    </briefdescription>
+    <detaileddescription>
+<para>This module handles the LEM sensor features.</para><para>This module samples the ADC5 &amp; ADC6 channels and calculates the RMS voltage which is updated on the window period configured by the SAMPLING_WINDOW_CYCLES </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_xdk_common_info_8h" kindref="compound">XdkCommonInfo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>BCDS_MODULE_ID<sp/><sp/></highlight><highlight class="comment">/*<sp/>Module<sp/>ID<sp/>define<sp/>before<sp/>including<sp/>Basics<sp/>package*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="_lem_8c_1abff8f3a204e79671b98fabaa652198c3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BCDS_MODULE_ID<sp/>XDK_COMMON_ID_LEMSENSOR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_x_d_k___lem_8h" kindref="compound">XDK_Lem.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_s_p___board_type_8h" kindref="compound">BSP_BoardType.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_free_r_t_o_s_8h" kindref="compound">FreeRTOS.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___assert_8h" kindref="compound">BCDS_Assert.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="task_8h" kindref="compound">task.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="timers_8h" kindref="compound">timers.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="semphr_8h" kindref="compound">semphr.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___m_c_u___timer_8h" kindref="compound">BCDS_MCU_Timer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___m_c_u___timer___handle_8h" kindref="compound">BCDS_MCU_Timer_Handle.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;em_adc.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;em_dma.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;em_gpio.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_s_p___adc_8h" kindref="compound">BSP_Adc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_mcu___adc___handle_8h" kindref="compound">Mcu_Adc_Handle.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_mcu___adc_8h" kindref="compound">Mcu_Adc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_adc_central_8h" kindref="compound">AdcCentral.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_adc_central_config_8h" kindref="compound">AdcCentralConfig.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_s_p___lem_sensor_8h" kindref="compound">BSP_LemSensor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>the<sp/>type<sp/>and<sp/>macro<sp/>definitions<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="_lem_8c_1a5347bdf905135c5b7f1bf822a60206fb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TIMER_SAMPLING_FREQ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5000UL<sp/><sp/></highlight></codeline>
+<codeline lineno="76" refid="_lem_8c_1abb9b83485adce9873274fdc995095de7" refkind="member"><highlight class="preprocessor">#define<sp/>NO_OF_CHANNELS_USED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT32_C(2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="_lem_8c_1a602abb8ec84dcb3b6f854a738310ea46" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADC_BUFFER_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(ADC_CENTRAL_NO_OF_SAMPLES<sp/>*<sp/>NO_OF_CHANNELS_USED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="_lem_8c_1ac0632c452f104fd61590bab0c439ff73" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="_lem_8c_1ac0632c452f104fd61590bab0c439ff73" kindref="member">ScanData</ref>[<ref refid="_lem_8c_1a602abb8ec84dcb3b6f854a738310ea46" kindref="member">ADC_BUFFER_SIZE</ref>];<sp/></highlight></codeline>
+<codeline lineno="80" refid="_lem_8c_1aa4b2f938a365f457da6a2f15ca75ff7b" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="_lem_8c_1aa4b2f938a365f457da6a2f15ca75ff7b" kindref="member">RMSVoltageSumOfSquares</ref><sp/>=<sp/>0.0f;<sp/></highlight></codeline>
+<codeline lineno="81" refid="_lem_8c_1a7cd032d722dcb3832ab3018187c76833" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="_lem_8c_1a7cd032d722dcb3832ab3018187c76833" kindref="member">CurrentRatedTransformationRatio</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="94" refid="_lem_8c_1a11c1fe48a737ee12f073a9b6cf948e3c" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_lem_8c_1a11c1fe48a737ee12f073a9b6cf948e3c" kindref="member">CalculateRunningRMS</ref>(<ref refid="_mcu___adc_8h_1a5860f527f3003fac5b4c77b3d28f3e9b" kindref="member">ADC_T</ref><sp/>adc,<sp/>uint32_t<sp/>SamplingFreq,<sp/>uint16_t*<sp/>bufferPtr)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" kindref="member">BCDS_UNUSED</ref>(adc);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" kindref="member">BCDS_UNUSED</ref>(SamplingFreq);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>VoltageCh5;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>VoltageCh6;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Voltage<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>sumOfSquares<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>sumCH1<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>sumCH2<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Activate<sp/>DMA<sp/>for<sp/>sampling<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>sumCH1<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>sumCH2<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint32_t<sp/>counter<sp/>=<sp/>0;<sp/>counter<sp/>&lt;<sp/>(<ref refid="_lem_8c_1a602abb8ec84dcb3b6f854a738310ea46" kindref="member">ADC_BUFFER_SIZE</ref>);<sp/>counter<sp/>+=<sp/><ref refid="_lem_8c_1abb9b83485adce9873274fdc995095de7" kindref="member">NO_OF_CHANNELS_USED</ref>)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sumCH1<sp/>=<sp/>*(bufferPtr<sp/>+<sp/>counter);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sumCH2<sp/>=<sp/>*(bufferPtr<sp/>+<sp/>(counter<sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VoltageCh5<sp/>=<sp/>(((float)<sp/>(sumCH1))<sp/>*<sp/><ref refid="group___a_d_c_c_e_n_t_r_a_l_c_o_n_f_i_g_1ga698e831ad69f2f79fd77bf9fb93db285" kindref="member">ADC_CONVERSION_FACTOR</ref>)<sp/>/<sp/>(4095.0f);<sp/></highlight><highlight class="comment">/*<sp/>Converting<sp/>ADC<sp/>Value<sp/>to<sp/>Voltage<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VoltageCh6<sp/>=<sp/>(((float)<sp/>(sumCH2))<sp/>*<sp/>ADC_CONVERSION_FACTOR)<sp/>/<sp/>(4095.0f);<sp/></highlight><highlight class="comment">/*<sp/>Converting<sp/>ADC<sp/>Value<sp/>to<sp/>Voltage<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Voltage<sp/>=<sp/>VoltageCh6<sp/>-<sp/>VoltageCh5;<sp/></highlight><highlight class="comment">/*<sp/>Calculate<sp/>the<sp/>differential<sp/>Voltage<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sumOfSquares<sp/>+=<sp/>(Voltage<sp/>*<sp/>Voltage);<sp/></highlight><highlight class="comment">/*<sp/>Calculation<sp/>the<sp/>Square<sp/>of<sp/>the<sp/>voltages<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_lem_8c_1aa4b2f938a365f457da6a2f15ca75ff7b" kindref="member">RMSVoltageSumOfSquares</ref><sp/>=<sp/>sumOfSquares;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Refer<sp/>Interface<sp/>Header<sp/>for<sp/>API<sp/>documentation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="group___l_e_m_1ga11e9fd318fc3c9ab209eb18460bfb6b0" refkind="member"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___l_e_m_1ga11e9fd318fc3c9ab209eb18460bfb6b0" kindref="member">Lem_Setup</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>currentRatedTransformationRatio)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(currentRatedTransformationRatio)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_lem_8c_1a7cd032d722dcb3832ab3018187c76833" kindref="member">CurrentRatedTransformationRatio</ref><sp/>=<sp/>currentRatedTransformationRatio;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6ae50e23ac22de65b64de1424dd9663a3f" kindref="member">RETCODE_SEVERITY_WARNING</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref>);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retcode;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Refer<sp/>Interface<sp/>Header<sp/>for<sp/>API<sp/>documentation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="group___l_e_m_1ga8ba134c64badc08d5b1596c7ba340164" refkind="member"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___l_e_m_1ga8ba134c64badc08d5b1596c7ba340164" kindref="member">Lem_Enable</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_adc_central___config_scan___s" kindref="compound">AdcCentral_ConfigScan_T</ref><sp/>configScan;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Initialization<sp/>of<sp/>LEM<sp/>Sensor<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>BSP_LemSensor_Connect();</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>BSP_LemSensor_Enable();</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___m_c_u___a_d_c_1ga384bfb9ef993b0b92e10b86f753de9b2" kindref="member">AdcCentral_Init</ref>();</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>configScan.<ref refid="struct_adc_central___config_scan___s_1ae4398a2ee15010b2562c2825560d44cf" kindref="member">BufferPtr</ref><sp/>=<sp/>(uint16_t<sp/>*)<sp/><ref refid="_lem_8c_1ac0632c452f104fd61590bab0c439ff73" kindref="member">ScanData</ref>;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>configScan.<ref refid="struct_adc_central___config_scan___s_1aeef0ecb1357ed3c02bba93c808e78e40" kindref="member">Appcallback</ref><sp/>=<sp/><ref refid="_lem_8c_1a11c1fe48a737ee12f073a9b6cf948e3c" kindref="member">CalculateRunningRMS</ref>;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>configScan.<ref refid="struct_adc_central___config_scan___s_1a087ed4815f756a0687b5c916b936f11d" kindref="member">ChannelScanMask</ref><sp/>=<sp/>(uint32_t)<sp/><ref refid="_mcu___adc_8h_1aa647504c454af04bd9f621c93071481aa0335738dd80a5e8d7bb23e8bab9e2a4d" kindref="member">ADC_ENABLE_CH5_SCAN</ref><sp/>|<sp/>(uint32_t)<sp/><ref refid="_mcu___adc_8h_1aa647504c454af04bd9f621c93071481aa68b1532063006bfa67dd08aaf0d19679" kindref="member">ADC_ENABLE_CH6_SCAN</ref>;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>configScan.<ref refid="struct_adc_central___config_scan___s_1a7e11be3a2417ae8e19905c8e13aa2442" kindref="member">SamplingRateInHz</ref><sp/>=<sp/><ref refid="_lem_8c_1a5347bdf905135c5b7f1bf822a60206fb" kindref="member">TIMER_SAMPLING_FREQ</ref>;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___m_c_u___a_d_c_1ga4487fdc581149fa5086b20427da36045" kindref="member">AdcCentral_StartScan</ref>(BSP_Adc_GetHandle(),<sp/>&amp;configScan);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retcode;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Refer<sp/>Interface<sp/>Header<sp/>for<sp/>API<sp/>documentation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="group___l_e_m_1ga9b1265bbf44186fc16d74ebabfdd6c61" refkind="member"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___l_e_m_1ga9b1265bbf44186fc16d74ebabfdd6c61" kindref="member">Lem_Disable</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___m_c_u___a_d_c_1ga624c10c0aaa3e1cf89b2b0aa08c8cc62" kindref="member">AdcCentral_StopScan</ref>(BSP_Adc_GetHandle(),<sp/>((uint32_t)<sp/><ref refid="_mcu___adc_8h_1aa647504c454af04bd9f621c93071481aa0335738dd80a5e8d7bb23e8bab9e2a4d" kindref="member">ADC_ENABLE_CH5_SCAN</ref><sp/>|<sp/>(uint32_t)<sp/><ref refid="_mcu___adc_8h_1aa647504c454af04bd9f621c93071481aa68b1532063006bfa67dd08aaf0d19679" kindref="member">ADC_ENABLE_CH6_SCAN</ref>));</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>BSP_LemSensor_Disable();</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>retcode)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>BSP_LemSensor_Disconnect();</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retcode;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Refer<sp/>Interface<sp/>Header<sp/>for<sp/>API<sp/>documentation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="group___l_e_m_1ga4736c1b55f6c7aec32925476b23efb62" refkind="member"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___l_e_m_1ga4736c1b55f6c7aec32925476b23efb62" kindref="member">Lem_GetRmsVoltage</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*<sp/>rmsvoltage)</highlight></codeline>
+<codeline lineno="182"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>rmsvoltage)</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref>);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*rmsvoltage<sp/>=<sp/>sqrt(<ref refid="_lem_8c_1aa4b2f938a365f457da6a2f15ca75ff7b" kindref="member">RMSVoltageSumOfSquares</ref><sp/>/<sp/><ref refid="group___a_d_c_c_e_n_t_r_a_l_c_o_n_f_i_g_1ga14473fd902f8459a5f45f004e4147f33" kindref="member">ADC_CENTRAL_NO_OF_SAMPLES</ref>);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retcode;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Refer<sp/>Interface<sp/>Header<sp/>for<sp/>API<sp/>documentation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196" refid="group___l_e_m_1gaa99070df000f2a2c22b12d94dcc2fa2e" refkind="member"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___l_e_m_1gaa99070df000f2a2c22b12d94dcc2fa2e" kindref="member">Lem_GetRmsCurrent</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*<sp/>rmsCurrent)</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>rmsCurrent)</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref>);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*rmsCurrent<sp/>=<sp/>(sqrt(<ref refid="_lem_8c_1aa4b2f938a365f457da6a2f15ca75ff7b" kindref="member">RMSVoltageSumOfSquares</ref><sp/>/<sp/><ref refid="group___a_d_c_c_e_n_t_r_a_l_c_o_n_f_i_g_1ga14473fd902f8459a5f45f004e4147f33" kindref="member">ADC_CENTRAL_NO_OF_SAMPLES</ref>))<sp/>*<sp/><ref refid="_lem_8c_1a7cd032d722dcb3832ab3018187c76833" kindref="member">CurrentRatedTransformationRatio</ref>;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retcode;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Sensor/Lem.c"/>
+  </compounddef>
+</doxygen>

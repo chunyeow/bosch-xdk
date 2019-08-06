@@ -1,0 +1,526 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_wifi_storage_8h" kind="file">
+    <compoundname>WifiStorage.h</compoundname>
+    <includes refid="_b_c_d_s___retcode_8h" local="yes">BCDS_Retcode.h</includes>
+    <includes refid="_xdk_common_info_8h" local="yes">XdkCommonInfo.h</includes>
+    <includedby refid="_wifi_storage_8c" local="yes">SDK/xdk110/Common/source/Utility/WifiStorage.c</includedby>
+    <incdepgraph>
+      <node id="28044">
+        <label>stdbool.h</label>
+      </node>
+      <node id="28047">
+        <label>XdkCommonInfo.h</label>
+        <link refid="_xdk_common_info_8h"/>
+        <childnode refid="28041" relation="include">
+        </childnode>
+      </node>
+      <node id="28043">
+        <label>stdint.h</label>
+      </node>
+      <node id="28041">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="28042" relation="include">
+        </childnode>
+      </node>
+      <node id="28046">
+        <label>stdlib.h</label>
+      </node>
+      <node id="28040">
+        <label>SDK/xdk110/Common/source/Utility/WifiStorage.h</label>
+        <link refid="WifiStorage.h"/>
+        <childnode refid="28041" relation="include">
+        </childnode>
+        <childnode refid="28047" relation="include">
+        </childnode>
+      </node>
+      <node id="28045">
+        <label>string.h</label>
+      </node>
+      <node id="28042">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="28043" relation="include">
+        </childnode>
+        <childnode refid="28044" relation="include">
+        </childnode>
+        <childnode refid="28045" relation="include">
+        </childnode>
+        <childnode refid="28046" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="28049">
+        <label>SDK/xdk110/Common/source/Utility/WifiStorage.c</label>
+        <link refid="_wifi_storage_8c"/>
+      </node>
+      <node id="28048">
+        <label>SDK/xdk110/Common/source/Utility/WifiStorage.h</label>
+        <link refid="WifiStorage.h"/>
+        <childnode refid="28049" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_wifi_storage_8h_1a328d8734aee9a653fcd5c4e2a9773b79" prot="public" static="no">
+        <name>WIFI_STORAGE_FILE_SIZE</name>
+        <initializer>UINT32_C(4096)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.h" line="63" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.h" bodystart="63" bodyend="-1"/>
+        <referencedby refid="_wifi_storage_8h_1a06d4627bfa59684cf1d7007d8224feb9" compoundref="_wifi_storage_8c" startline="56" endline="100">WifiStorage_FileOpen</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09" prot="public" static="no">
+        <name>FileMode_E</name>
+        <enumvalue id="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09af5227de1976aa512992686b28b5578f1" prot="public">
+          <name>WIFI_STORAGE_FOPEN_WRITE_MODE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09ab9ca5e6b7a316860c32f4599319316d1" prot="public">
+          <name>WIFI_STORAGE_FOPEN_READ_MODE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09a208846fae51b5698cb7abdbd2e058d8d" prot="public">
+          <name>WIFI_STORAGE_FOPEN_CREATE_MODE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09abeb11719036d11dc35af02aa610da98a" prot="public">
+          <name>WIFI_STORAGE_FOPEN_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.h" line="53" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.h" bodystart="52" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_wifi_storage_8h_1ac6ae16764361ade56a3b0d3fd0d6c27c" prot="public" static="no">
+        <type>enum <ref refid="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09" kindref="member">FileMode_E</ref></type>
+        <definition>typedef enum FileMode_E WifiFileMode_T</definition>
+        <argsstring></argsstring>
+        <name>WifiFileMode_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.h" line="235" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_wifi_storage_8h_1af7708ff59adfb7fe14fe98f92d6113aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WifiStorage_FileClose</definition>
+        <argsstring>(const int32_t fileHandle)</argsstring>
+        <name>WifiStorage_FileClose</name>
+        <param>
+          <type>const int32_t</type>
+          <declname>fileHandle</declname>
+        </param>
+        <briefdescription>
+<para>This Interface API is used to close a file in the wifi media. </para>        </briefdescription>
+        <detaileddescription>
+<para>A prior call to <ref refid="_wlan_connect_8c_1aedc3e3e198474548cde441070dff7f52" kindref="member">WlanConnect_Init()</ref> is necessary for this function in order to operate, failing which the intended functionality is not guaranteed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fileHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle obtained in <ref refid="_wifi_storage_8h_1a06d4627bfa59684cf1d7007d8224feb9" kindref="member">WifiStorage_FileOpen()</ref> API call</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+RETCODE_OK If in case of the requested file close operation is success  RETCODE_ERROR_IN_FILE_CLOSE_WIFI_MEDIA If in case of failure in closing the requested file</para><para><ref refid="_wifi_storage_8h_1af7708ff59adfb7fe14fe98f92d6113aa" kindref="member">WifiStorage_FileClose()</ref> must be called in the application in same execution context, even if in case <ref refid="_wifi_storage_8h_1ae820b9d5ffd5ebc9adf20a92670bc473" kindref="member">WifiStorage_FileRead()</ref> or <ref refid="_wifi_storage_8h_1a776f3ad735ead50abc4de0789eaa702e" kindref="member">WifiStorage_FileWrite()</ref> operation fails for some reason  <ref refid="_wifi_storage_8h_1af7708ff59adfb7fe14fe98f92d6113aa" kindref="member">WifiStorage_FileClose()</ref> must be called in application in same execution context where <ref refid="_wifi_storage_8h_1a06d4627bfa59684cf1d7007d8224feb9" kindref="member">WifiStorage_FileOpen()</ref>, <ref refid="_wifi_storage_8h_1ae820b9d5ffd5ebc9adf20a92670bc473" kindref="member">WifiStorage_FileRead()</ref> or <ref refid="_wifi_storage_8h_1a776f3ad735ead50abc4de0789eaa702e" kindref="member">WifiStorage_FileWrite()</ref> operations are performed  If no other file operation is performed after calling <ref refid="_wifi_storage_8h_1a06d4627bfa59684cf1d7007d8224feb9" kindref="member">WifiStorage_FileOpen()</ref> , close the file <ref refid="_wifi_storage_8h_1af7708ff59adfb7fe14fe98f92d6113aa" kindref="member">WifiStorage_FileClose()</ref> in the same context. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.h" line="118" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.c" bodystart="222" bodyend="232"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="simplelink_8h_1afcc951421dee921a20980010117583de" compoundref="simplelink_8h" startline="225">_i16</references>
+        <references refid="simplelink_8h_1ada9f3b59b3a217b8f8e5d281ae55a19e" compoundref="simplelink_8h" startline="227">_i32</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8ba91611468c87f1ad2b822580de01dc087" compoundref="_xdk_common_info_8h" startline="206">RETCODE_STORAGE_ERROR_IN_FILE_CLOSE_WIFI_MEDIA</references>
+      </memberdef>
+      <memberdef kind="function" id="_wifi_storage_8h_1aed76db260530bae26ba523551c3219ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WifiStorage_FileDelete</definition>
+        <argsstring>(const uint8_t *fileName, int32_t *fileHandle)</argsstring>
+        <name>WifiStorage_FileDelete</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>int32_t *</type>
+          <declname>fileHandle</declname>
+        </param>
+        <briefdescription>
+<para>This Interface API is used to delete a file in the wifi media in requested file mode. </para>        </briefdescription>
+        <detaileddescription>
+<para>A prior call to <ref refid="_wlan_connect_8c_1aedc3e3e198474548cde441070dff7f52" kindref="member">WlanConnect_Init()</ref> is necessary for this function in order to operate, failing which the intended functionality is not guaranteed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Filename of the file in the wifi media which needs to be deleted </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>[in/out]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>fileHandle Handle obtained in <ref refid="_wifi_storage_8h_1a06d4627bfa59684cf1d7007d8224feb9" kindref="member">WifiStorage_FileOpen()</ref> API call</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+RETCODE_OK If in case of the requested file delete operation is success  RETCODE_ERROR_IN_FILE_DELETE In case the delete operation is not successful</para><para>If file deleted successfully, then the fileHandle will be made invalid on returning from this API call </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.h" line="171" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.c" bodystart="235" bodyend="254"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="simplelink_8h_1afcc951421dee921a20980010117583de" compoundref="simplelink_8h" startline="225">_i16</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="simplelink_8h_1a44f20b191bdb85d44eabe758192d7f11" compoundref="simplelink_8h" startline="222">_u8</references>
+        <references refid="_wifi_storage_8c_1a0c0cbc175764517921d5a9684861016f" compoundref="_wifi_storage_8c" startline="50">INVALID_FILE_HANDLE</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8baf5e88feaacdd1d174233a0479a471a66" compoundref="_xdk_common_info_8h" startline="207">RETCODE_STORAGE_ERROR_IN_FILE_DELETE</references>
+      </memberdef>
+      <memberdef kind="function" id="_wifi_storage_8h_1a06d4627bfa59684cf1d7007d8224feb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WifiStorage_FileOpen</definition>
+        <argsstring>(const uint8_t *fileName, int32_t *fileHandle, WifiFileMode_T fileMode)</argsstring>
+        <name>WifiStorage_FileOpen</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>int32_t *</type>
+          <declname>fileHandle</declname>
+        </param>
+        <param>
+          <type><ref refid="_wifi_storage_8h_1ac6ae16764361ade56a3b0d3fd0d6c27c" kindref="member">WifiFileMode_T</ref></type>
+          <declname>fileMode</declname>
+        </param>
+        <briefdescription>
+<para>This Interface API is used to open a file in the wifi media in requested file mode. </para>        </briefdescription>
+        <detaileddescription>
+<para>A prior call to <ref refid="_wlan_connect_8c_1aedc3e3e198474548cde441070dff7f52" kindref="member">WlanConnect_Init()</ref> is necessary for this function in order to operate, failing which the intended functionality is not guaranteed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Filename which needs to be either created ,opened for read operation or opened for write operation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>[in/out]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>fileHandle Handle obtained as reference which needs to be used for performing file operation like <ref refid="_wifi_storage_8h_1ae820b9d5ffd5ebc9adf20a92670bc473" kindref="member">WifiStorage_FileRead()</ref>, <ref refid="_wifi_storage_8h_1a776f3ad735ead50abc4de0789eaa702e" kindref="member">WifiStorage_FileWrite()</ref>, <ref refid="_wifi_storage_8h_1af7708ff59adfb7fe14fe98f92d6113aa" kindref="member">WifiStorage_FileClose()</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fileMode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the file is opened for which mode for the modes supported please refer enum WifiFileMode_T</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+RETCODE_OK If in case of the requested file open operation is success based on the user selected filemode  RETCODE_WRONG_FILE_MODE If in case of wrong file mode is set while opening the file  RETCODE_ERROR_FILE_HAS_NOT_BEEN_CLOSE_CORRECTLY If in case this API is called before proper close of of file operation using API <ref refid="_wifi_storage_8h_1af7708ff59adfb7fe14fe98f92d6113aa" kindref="member">WifiStorage_FileClose()</ref> in the previous call in application</para><para>fileHandle obtained using this <ref refid="_wifi_storage_8h_1a06d4627bfa59684cf1d7007d8224feb9" kindref="member">WifiStorage_FileOpen()</ref> needs to be protected in application while performing file operation in multi-threading environment. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.h" line="100" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.c" bodystart="56" bodyend="100"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="simplelink_8h_1ada9f3b59b3a217b8f8e5d281ae55a19e" compoundref="simplelink_8h" startline="227">_i32</references>
+        <references refid="simplelink_8h_1a87886b60e61f791da9953f573bc83d8d" compoundref="simplelink_8h" startline="226">_u32</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09abeb11719036d11dc35af02aa610da98a" compoundref="_wifi_storage_8h" startline="57">WIFI_STORAGE_FOPEN_MAX</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" compoundref="_b_c_d_s___retcode_8h" startline="108">RETCODE_INVALID_PARAM</references>
+        <references refid="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09a208846fae51b5698cb7abdbd2e058d8d" compoundref="_wifi_storage_8h" startline="56">WIFI_STORAGE_FOPEN_CREATE_MODE</references>
+        <references refid="group___file_system_1gaaf27b73d19f8e86eed797eb8ff91d565" compoundref="fs_8h" startline="157">FS_MODE_OPEN_CREATE</references>
+        <references refid="_wifi_storage_8h_1a328d8734aee9a653fcd5c4e2a9773b79" compoundref="_wifi_storage_8h" startline="63">WIFI_STORAGE_FILE_SIZE</references>
+        <references refid="group___file_system_1gga555c24f3e1071fa13f8772a0b95cc7d4a0f1428da2bc548e1be547f39c4758a25" compoundref="fs_8h" startline="180">_FS_FILE_OPEN_FLAG_COMMIT</references>
+        <references refid="group___file_system_1gga555c24f3e1071fa13f8772a0b95cc7d4aa460f21229bcbd834e878c6bf6531e75" compoundref="fs_8h" startline="185">_FS_FILE_PUBLIC_WRITE</references>
+        <references refid="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09af5227de1976aa512992686b28b5578f1" compoundref="_wifi_storage_8h" startline="54">WIFI_STORAGE_FOPEN_WRITE_MODE</references>
+        <references refid="group___file_system_1ga4edab0949f89bd32631b7c8a86b0de46" compoundref="fs_8h" startline="155">FS_MODE_OPEN_WRITE</references>
+        <references refid="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09ab9ca5e6b7a316860c32f4599319316d1" compoundref="_wifi_storage_8h" startline="55">WIFI_STORAGE_FOPEN_READ_MODE</references>
+        <references refid="group___file_system_1gac3971725ec11b70a5ea0d9887168f616" compoundref="fs_8h" startline="153">FS_MODE_OPEN_READ</references>
+        <references refid="group___file_system_1gaf76fa3eb98168a9cb34e6d33a82b84c8" compoundref="fs_8h" startline="68">SL_FS_FILE_HAS_NOT_BEEN_CLOSE_CORRECTLY</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8bad2224404dc60bbb994c406f0ebddc53c" compoundref="_xdk_common_info_8h" startline="203">RETCODE_STORAGE_FILE_HAS_NOT_BEEN_CLOSE_CORRECTLY</references>
+        <references refid="group___file_system_1ga9d5f74b928c801ad37b247c3145f9c6c" compoundref="fs_8h" startline="110">SL_FS_ERR_BAD_FILE_MODE</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8ba80f1310ee7977e38f48a270d8ca551a4" compoundref="_xdk_common_info_8h" startline="202">RETCODE_STORAGE_WRONG_FILE_MODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" compoundref="_b_c_d_s___retcode_8h" startline="106">RETCODE_FAILURE</references>
+      </memberdef>
+      <memberdef kind="function" id="_wifi_storage_8h_1ae820b9d5ffd5ebc9adf20a92670bc473" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WifiStorage_FileRead</definition>
+        <argsstring>(const int32_t fileHandle, uint8_t *readBuffer, uint32_t *noOfBytesRead)</argsstring>
+        <name>WifiStorage_FileRead</name>
+        <param>
+          <type>const int32_t</type>
+          <declname>fileHandle</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>readBuffer</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>noOfBytesRead</declname>
+        </param>
+        <briefdescription>
+<para>This Interface API is used to read a file content from the wifi media. </para>        </briefdescription>
+        <detaileddescription>
+<para>A prior call to <ref refid="_wlan_connect_8c_1aedc3e3e198474548cde441070dff7f52" kindref="member">WlanConnect_Init()</ref> is necessary for this function in order to operate, failing which the intended functionality is not guaranteed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fileHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle obtained in <ref refid="_wifi_storage_8h_1a06d4627bfa59684cf1d7007d8224feb9" kindref="member">WifiStorage_FileOpen()</ref> API call in read mode </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">readBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to buffer to collect the read data from the file from media </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>[in/out]noOfBytesRead</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value pointed is used for mentioning the no of bytes to read and while returning, the actual no of bytes read is updated</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+RETCODE_OK If in case of the requested file read operation is success  RETCODE_ERROR_IN_FILE_READ If in case of failure in reading the requested file</para><para>Please note that the <ref refid="_wifi_storage_8h_1af7708ff59adfb7fe14fe98f92d6113aa" kindref="member">WifiStorage_FileClose()</ref> must be called in application in same execution context where <ref refid="_wifi_storage_8h_1ae820b9d5ffd5ebc9adf20a92670bc473" kindref="member">WifiStorage_FileRead()</ref> operation returns either success or failure case </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.h" line="137" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.c" bodystart="145" bodyend="190"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="simplelink_8h_1ada9f3b59b3a217b8f8e5d281ae55a19e" compoundref="simplelink_8h" startline="227">_i32</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" compoundref="_b_c_d_s___retcode_8h" startline="108">RETCODE_INVALID_PARAM</references>
+        <references refid="_wifi_storage_8c_1afd61ea46ad706834d7415c03a85df5ca" compoundref="_wifi_storage_8c" startline="49">WRITE_READ_ALIGN_VAL</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8bab6cc9f2bdbd64420355ab8d0426078f4" compoundref="_xdk_common_info_8h" startline="205">RETCODE_STORAGE_ERROR_IN_FILE_READ</references>
+      </memberdef>
+      <memberdef kind="function" id="_wifi_storage_8h_1a776f3ad735ead50abc4de0789eaa702e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WifiStorage_FileWrite</definition>
+        <argsstring>(const int32_t fileHandle, uint8_t *writeBuffer, uint32_t noOfBytesToWrite)</argsstring>
+        <name>WifiStorage_FileWrite</name>
+        <param>
+          <type>const int32_t</type>
+          <declname>fileHandle</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>writeBuffer</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>noOfBytesToWrite</declname>
+        </param>
+        <briefdescription>
+<para>This Interface API is used to write user buffer file content to the wifi media. </para>        </briefdescription>
+        <detaileddescription>
+<para>A prior call to <ref refid="_wlan_connect_8c_1aedc3e3e198474548cde441070dff7f52" kindref="member">WlanConnect_Init()</ref> is necessary for this function in order to operate, failing which the intended functionality is not guaranteed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fileHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle obtained in <ref refid="_wifi_storage_8h_1a06d4627bfa59684cf1d7007d8224feb9" kindref="member">WifiStorage_FileOpen()</ref> API call in write mode </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">writeBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to user write buffer which needs to be written into the file in media </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">noOfBytesToWrite</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>No of bytes to write</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+RETCODE_OK If in case of the requested file write operation is success  RETCODE_ERROR_IN_FILE_WRITE If in case of failure in writing to the requested file</para><para>Please note that the <ref refid="_wifi_storage_8h_1af7708ff59adfb7fe14fe98f92d6113aa" kindref="member">WifiStorage_FileClose()</ref> must be called in application in same execution context where <ref refid="_wifi_storage_8h_1a776f3ad735ead50abc4de0789eaa702e" kindref="member">WifiStorage_FileWrite()</ref> operation returns either success or failure case </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.h" line="154" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.c" bodystart="103" bodyend="142"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="simplelink_8h_1ada9f3b59b3a217b8f8e5d281ae55a19e" compoundref="simplelink_8h" startline="227">_i32</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" compoundref="_b_c_d_s___retcode_8h" startline="108">RETCODE_INVALID_PARAM</references>
+        <references refid="_wifi_storage_8c_1afd61ea46ad706834d7415c03a85df5ca" compoundref="_wifi_storage_8c" startline="49">WRITE_READ_ALIGN_VAL</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8bad6dae2380feeb1447bb962bf10366eee" compoundref="_xdk_common_info_8h" startline="204">RETCODE_STORAGE_ERROR_IN_FILE_WRITE</references>
+      </memberdef>
+      <memberdef kind="function" id="_wifi_storage_8h_1a6bc33c75f0b8b3b615deed54f539ee13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T WifiStorage_GetFileStatus</definition>
+        <argsstring>(const uint8_t *fileName, uint32_t *fileLength)</argsstring>
+        <name>WifiStorage_GetFileStatus</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>fileLength</declname>
+        </param>
+        <briefdescription>
+<para>Checks whether the requested file exist in the wifi media. </para>        </briefdescription>
+        <detaileddescription>
+<para>A prior call to <ref refid="_wlan_connect_8c_1aedc3e3e198474548cde441070dff7f52" kindref="member">WlanConnect_Init()</ref> is necessary for this function in order to operate, failing which the intended functionality is not guaranteed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Filename for which the status needs to be checked </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>[in/out]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>fileLength : Gives the size of the content in the file in bytes</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+RETCODE_OK If in case of the requested file already exist in the wifi media  RETCODE_FILE_DOES_NOT_EXIST_WIFI_MEDIA If in case of file requested is not present in the wifi media  RETCODE_ERROR_FILE_HAS_NOT_BEEN_CLOSE_CORRECTLY If in case this API is called before proper close of of file operation using API <ref refid="_wifi_storage_8h_1af7708ff59adfb7fe14fe98f92d6113aa" kindref="member">WifiStorage_FileClose()</ref> in the previous call in application </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.h" line="81" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.c" bodystart="193" bodyend="220"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="simplelink_8h_1afcc951421dee921a20980010117583de" compoundref="simplelink_8h" startline="225">_i16</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="simplelink_8h_1a44f20b191bdb85d44eabe758192d7f11" compoundref="simplelink_8h" startline="222">_u8</references>
+        <references refid="struct_sl_fs_file_info__t_1a42e92a9d18f2642049165db21a2bfe82" compoundref="fs_8h" startline="165">SlFsFileInfo_t::FileLen</references>
+        <references refid="group___file_system_1gadfdafe6e49c1c16918961cd7961a8355" compoundref="fs_8h" startline="121">SL_FS_ERR_FILE_NOT_EXISTS</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8baedf090e831354862a5b146c3ed8100ce" compoundref="_xdk_common_info_8h" startline="200">RETCODE_STORAGE_FILE_DOES_NOT_EXIST_WIFI_MEDIA</references>
+        <references refid="group___file_system_1gaf76fa3eb98168a9cb34e6d33a82b84c8" compoundref="fs_8h" startline="68">SL_FS_FILE_HAS_NOT_BEEN_CLOSE_CORRECTLY</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8bad2224404dc60bbb994c406f0ebddc53c" compoundref="_xdk_common_info_8h" startline="203">RETCODE_STORAGE_FILE_HAS_NOT_BEEN_CLOSE_CORRECTLY</references>
+        <references refid="_xdk_common_info_8h_1af47ea12fc017f15b07bf3c5b537cba8baf9bc237d76d876ae4511bbe352624e92" compoundref="_xdk_common_info_8h" startline="208">RETCODE_STORAGE_ERROR_IN_GETTING_FILE_STATUS</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This contains the application interface for storage and retrieval of file inside the device storage medium . </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor">#ifndef<sp/>_WIFISTORAGE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_WIFISTORAGE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Include<sp/>all<sp/>headers<sp/>which<sp/>are<sp/>needed<sp/>by<sp/>this<sp/>file.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___retcode_8h" kindref="compound">BCDS_Retcode.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_xdk_common_info_8h" kindref="compound">XdkCommonInfo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>the<sp/>type<sp/>and<sp/>macro<sp/>definitions<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09" kindref="member">FileMode_E</ref></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54" refid="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09af5227de1976aa512992686b28b5578f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09af5227de1976aa512992686b28b5578f1" kindref="member">WIFI_STORAGE_FOPEN_WRITE_MODE</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="55" refid="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09ab9ca5e6b7a316860c32f4599319316d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09ab9ca5e6b7a316860c32f4599319316d1" kindref="member">WIFI_STORAGE_FOPEN_READ_MODE</ref>,</highlight></codeline>
+<codeline lineno="56" refid="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09a208846fae51b5698cb7abdbd2e058d8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09a208846fae51b5698cb7abdbd2e058d8d" kindref="member">WIFI_STORAGE_FOPEN_CREATE_MODE</ref>,</highlight></codeline>
+<codeline lineno="57" refid="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09abeb11719036d11dc35af02aa610da98a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09abeb11719036d11dc35af02aa610da98a" kindref="member">WIFI_STORAGE_FOPEN_MAX</ref>,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="_wifi_storage_8h_1ac6ae16764361ade56a3b0d3fd0d6c27c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_wifi_storage_8h_1a7af4f8d6c66a653c17386f5f3f5eab09" kindref="member">FileMode_E</ref><sp/><ref refid="_wifi_storage_8h_1ac6ae16764361ade56a3b0d3fd0d6c27c" kindref="member">WifiFileMode_T</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>@todo<sp/>need<sp/>to<sp/>analysiss<sp/>and<sp/>fix<sp/>the<sp/>size<sp/>for<sp/>wifi<sp/>storage*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="_wifi_storage_8h_1a328d8734aee9a653fcd5c4e2a9773b79" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WIFI_STORAGE_FILE_SIZE<sp/><sp/>UINT32_C(4096)<sp/>//4<sp/>*<sp/>1024;<sp/>//4<sp/>K</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>the<sp/>function<sp/>declarations<sp/>here<sp/>*/</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_wifi_storage_8h_1a6bc33c75f0b8b3b615deed54f539ee13" kindref="member">WifiStorage_GetFileStatus</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*<sp/>fileName<sp/>,<sp/>uint32_t<sp/>*fileLength);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_wifi_storage_8h_1a06d4627bfa59684cf1d7007d8224feb9" kindref="member">WifiStorage_FileOpen</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*<sp/>fileName<sp/>,<sp/>int32_t<sp/>*fileHandle<sp/>,<sp/><ref refid="_wifi_storage_8h_1ac6ae16764361ade56a3b0d3fd0d6c27c" kindref="member">WifiFileMode_T</ref><sp/>fileMode);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_wifi_storage_8h_1af7708ff59adfb7fe14fe98f92d6113aa" kindref="member">WifiStorage_FileClose</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32_t<sp/>fileHandle);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_wifi_storage_8h_1ae820b9d5ffd5ebc9adf20a92670bc473" kindref="member">WifiStorage_FileRead</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32_t<sp/>fileHandle,<sp/>uint8_t<sp/>*readBuffer,<sp/>uint32_t<sp/>*noOfBytesRead);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_wifi_storage_8h_1a776f3ad735ead50abc4de0789eaa702e" kindref="member">WifiStorage_FileWrite</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32_t<sp/>fileHandle,uint8_t<sp/>*writeBuffer,<sp/>uint32_t<sp/>noOfBytesToWrite);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_wifi_storage_8h_1aed76db260530bae26ba523551c3219ed" kindref="member">WifiStorage_FileDelete</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*<sp/>fileName,int32_t<sp/>*fileHandle);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_WIFISTORAGE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Utility/WifiStorage.h"/>
+  </compounddef>
+</doxygen>

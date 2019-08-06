@@ -1,0 +1,1457 @@
+/**
+  \defgroup filesystem FAT File System
+  \brief FatFS Documentation
+  \ingroup SDC
+ 
+ \section fatfs_title FatFs - Generic FAT File System Module
+ 
+ \details 
+ FatFs is a generic FAT file system module for small embedded systems.
+ The FatFs is written in compliance with ANSI C and completely separated from the disk I/O layer.
+ Therefore it is independent of hardware architecture.
+ It can be incorporated into small microcontrollers with limited resource, such as AVR, 8051, PIC, ARM, Z80, 68k and etc.
+
+	Features:
+		- Windows compatible FAT file system.
+		- Platform independent. Easy to port.
+		- Very small footprint for code and work area.
+		- Various configuration options:
+			- Multiple volumes (physical drives and partitions).
+			- Multiple ANSI/OEM code pages including DBCS.
+			- Long file name support in ANSI/OEM or Unicode.
+			- RTOS support.
+			- Multiple sector size support.
+			- Read-only, minimized API, I/O buffer and etc..
+			
+\image html layers.jpg
+			
+\section        interface    Device Control Interface
+
+\details
+Since the FatFs module is a file system layer, it is completely separated from physical devices, such as memory card, harddisk and any type of storage devices. FatFs access the storage device via a simple interface described below. 
+The low level device control module is not a part of FatFs module. It is provided by implementer.
+Also sample implementations for some platforms are available in the downloads.
+
+ @{
+
+\file ff.h
+\file  diskio.h
+ 
+**/
+
+/**
+\enum   FRESULT
+\struct FATFS
+\struct FIL
+\struct DIR
+\struct FILINFO
+**/
+
+/**
+\enum   DRESULT
+**/
+
+/**		
+ * @brief		The f_open function creates a file object to be used to access the file
+ * @details 	After f_open() function succeeded, the file object is valid.
+ *				The file object is used for subsequent read/write functions to identify the file. To close an open file, use f_close() function.
+ *				If the file is modified and not closed properly, the file data will be collapsed. \n
+ *				If duplicated file open is needed, read here carefully. 
+ *				However duplicated open of a file with write mode flag is always prohibited. \n
+ *				Before using any file function, a work area (file system object) must be registered to the logical drive with f_mount() function. All API functions except for f_fdisk() function can work after this procedure.
+ *				\n Examples: 
+ * @code
+ * /* Read a text file and display it */
+ *
+ * FATFS FatFs;   /* Work area (file system object) for logical drive */
+ *
+ * int main (void)
+ * {
+ *	FIL fil;       /* File object */
+ *	char line[82]; /* Line buffer */
+ *	FRESULT fr;    /* FatFs return code */
+ *
+ *
+ *   /* Register work area to the default drive */
+ *   f_mount(&FatFs, "", 0);
+ *
+ *   /* Open a text file */
+ *   fr = f_open(&fil, "message.txt", FA_READ);
+ *   if (fr) return (int)fr;
+ *
+ *   /* Read all lines and display it */
+ *   while (f_gets(line, sizeof line, &fil))
+ *       printf(line);
+ *
+ *    /* Close the file */
+ *   f_close(&fil);
+ *
+ *   return 0;
+ *}
+ *
+ * @endcode
+ * @code
+ * /* Copy a file "file.bin" on the drive 1 to drive 0 */
+ *
+ * int main (void)
+ * {
+ *    FATFS fs[2];         /* Work area (file system object) for logical drives */
+ *    FIL fsrc, fdst;      /* File objects */
+ *    BYTE buffer[4096];   /* File copy buffer */
+ *    FRESULT fr;          /* FatFs function common result code */
+ *    UINT br, bw;         /* File read/write count */
+ *
+ *
+ *   /* Register work area for each logical drive */
+ *    f_mount(&fs[0], "0:", 0);
+ *    f_mount(&fs[1], "1:", 0);
+ * 
+ *    /* Open source file on the drive 1 */
+ *    fr = f_open(&fsrc, "1:file.bin", FA_OPEN_EXISTING | FA_READ);
+ *    if (fr) return (int)fr;
+ *
+ *    /* Create destination file on the drive 0 */
+ *    fr = f_open(&fdst, "0:file.bin", FA_CREATE_ALWAYS | FA_WRITE);
+ *    if (fr) return (int)fr;
+ *
+ *    /* Copy source to destination */
+ *    for (;;) {
+ *        fr = f_read(&fsrc, buffer, sizeof buffer, &br);  /* Read a chunk of source file */
+ *        if (fr || br == 0) break; /* error or eof */
+ *        fr = f_write(&fdst, buffer, br, &bw);            /* Write it to the destination file */
+ *        if (fr || bw < br) break; /* error or disk full */
+ *    }
+ *
+ *    /* Close open files */
+ *    f_close(&fsrc);
+ *    f_close(&fdst);
+ *
+ *    /* Unregister work area prior to discard it */
+ *    f_mount(NULL, "0:", 0);
+ *    f_mount(NULL, "1:", 0);
+ *
+ *    return (int)fr;
+ * }
+ * @endcode
+ * @param [out] fp
+ *				Pointer to the blank file object structure to be created.
+ * @param [in]  path
+ *				Pointer to a null-terminated string that specifies the file name to open or create.
+ * @param [in]   mode
+ *				Mode flags that specifies the type of access and open method for the file. It is specified by a combination of following flags.\n
+Value   		     |										Description										                                                                    |                                                                                                                                                                                                                                                                                                                                                                                                          
+---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------
+FA_READ              | Specifies read access to the object. Data can be read from the file. Combine with FA_WRITE for read-write access.										|								                                                                                                                                                                             
+FA_WRITE             | Specifies write access to the object. Data can be written to the file. Combine with FA_READ for read-write access.    									|									                                                                                                                                                                                                                      
+FA_OPEN_EXISTING     | Opens the file. The function fails if the file is not existing. (Default) .                                                               				|															                                                          
+FA_OPEN_ALWAYS       | Opens the file if it is existing. If not, a new file is created. To append data to the file, use f_lseek() function after file open in this method.      |
+FA_CREATE_NEW        | Creates a new file. The function fails with FR_EXIST if the file is existing.                                                                            |
+FA_CREATE_NEW        |Creates a new file. If the file is existing, it will be truncated and overwritten. \n                                                                     |
+
+ * @retval		FR_OK
+ * @retval		FR_DISK_ERR
+ * @retval		FR_INT_ERR
+ * @retval		FR_NOT_READY
+ * @retval		FR_NO_FILE
+ * @retval		FR_NO_PATH
+ * @retval		FR_INVALID_NAME
+ * @retval		FR_DENIED
+ * @retval		FR_EXIST
+ * @retval		FR_INVALID_OBJECT
+ * @retval		FR_WRITE_PROTECTED
+ * @retval		FR_INVALID_DRIVE
+ * @retval		FR_NOT_ENABLED
+ * @retval		FR_NO_FILESYSTEM
+ * @retval		FR_TIMEOUT
+ * @retval		FR_LOCKED
+ * @retval		FR_NOT_ENOUGH_CORE
+ * @retval		FR_TOO_MANY_OPEN_FILES 
+ * @note 		Always available.
+ *				The mode flags, FA_WRITE, FA_CREATE_ALWAYS, FA_CREATE_NEW and FA_OPEN_ALWAYS, are not available when _FS_READONLY == 1.
+ *
+ * 
+ *
+ **/
+FRESULT f_open (
+  FIL* fp,           /* [OUT] Pointer to the file object structure */
+  const TCHAR* path, /* [IN] File name */
+  BYTE mode          /* [IN] Mode flags */
+);
+
+/**
+ * @brief		The f_mount fucntion registers/unregisters file system object to the FatFs module.
+ * @details	    The f_mount() function registers/unregisters a file system object used for the logical drive to the FatFs module as follows: \n
+                1.Determines the logical drive which specified by path. \n
+				2.Clears and unregisters the regsitered work area of the drive. \n
+				3.Clears and registers the new work area to the drive if fs is not NULL. \n
+				4.Performs volume mount process to the drive if forced mount is specified. \n
+				
+				The file system object is the work area needed for each logical drive. 
+				It must be given to the logical drive with this function prior to use any other file functions except for f_fdisk() function. To unregister a work area, specify a NULL to the fs, and then the work area can be discarded. \n
+                If forced mount is not specified, this function always succeeds regardless of the physical drive status due to delayed mount feature. 
+				It only clears (de-initializes) the given work area and registers its address to the internal table. No activity of the physical drive in this function. It can also be used to force de-initialized the registered work area of a logical drive. 
+				The volume mount processes, initialize the corresponding physical drive, find the FAT volume in it and initialize the work area, is performed in the subsequent file access functions when either or both of following condition is true. \n
+                - File system object is not initialized. It is cleared by f_mount().
+                - Physical drive is not initialized. It is de-initialized by system reset or media removal. \n
+				
+		        If the function with forced mount failed, it means that the file system object has been registered successfully but the volume is currently not ready to use.
+		        Mount process will also be attempted in subsequent file access functions. \n
+		        If implementation of the disk I/O layer lacks media change detection, application program needs to perform a f_mount() after each media change to force cleared the file system object.
+
+ * @param [in]	fs
+ *				Pointer to the new file system object to be registered. Null pointer unregisters the registered file system object.
+ * @param [in]	path
+ *				Pointer to the null-terminated string that specifies the logical drive. The string with no drive number means the default drive.
+ * @param [in] 	opt
+ *             	Initialization option. 
+ *              - 0: Do not mount now (to be mounted later), 
+ *              - 1: Force mounted the volume to check if the FAT volume is available.
+ * @retval		FR_OK
+ * @retval		FR_INVALID_DRIVE
+ * @retval		FR_DISK_ERR
+ * @retval		FR_NOT_READY
+ * @retval		FR_NO_FILESYSTEM
+ * @note        Always available.
+ *
+ **/
+FRESULT f_mount (
+  FATFS*       fs,    /* [IN] File system object */
+  const TCHAR* path,  /* [IN] Logical drive number */
+  BYTE         opt    /* [IN] Initialization option */
+);
+
+/**
+ * @brief		The f_close function closes an open file.
+ * @details		The f_close() function closes an open file object. If any data has been written to the file, the cached information of the file is written back to the volume. 
+                After the function succeeded, the file object is no longer valid and it can be discarded. \n
+                Note that if the file object is in read-only mode and _FS_LOCK option is not enabled, the file object can also be discarded without this process. However this is not recommended for future compatibility.
+
+ * @param [in]	fp
+ *				Pointer to the open file object structure to be closed.
+ * @retval		FR_OK
+ * @retval		FR_DISK_ERR
+ * @retval		FR_INT_ERR
+ * @retval		FR_NOT_READY
+ * @retval	    FR_INVALID_OBJECT
+ * @retval		FR_TIMEOUT
+ * @note        Always available.
+ *
+ **/
+ FRESULT f_close (
+  FIL* fp     /* [IN] Pointer to the file object */
+);
+
+/**
+ * @brief		The f_read function reads data from a file.
+ * @details		The file read/write pointer of the file object advances number of bytes read. After the function succeeded, *br should be checked to detect end of the file. 
+                In case of *br is less than btr, it means the read/write pointer reached end of the file during read operation.
+
+ * @param [in]	fp
+ *				Pointer to the open file object.
+ * @param [out]	buff
+ *				Pointer to the buffer to store read data.
+ * @param [in]	btr
+ *				Number of bytes to read in range of UINT type.
+ * @param [out]	br
+ *				Pointer to the UINT variable to return number of bytes read. 
+ *              The value is always valid after the function call regardless of the result.
+ * @retval		FR_OK
+ * @retval		FR_DISK_ERR
+ * @retval		FR_INT_ERR
+ * @retval		FR_NOT_READY
+ * @retval	    FR_INVALID_OBJECT
+ * @retval		FR_TIMEOUT
+ * @note        Always available.
+ *
+ **/
+ FRESULT f_read (
+  FIL* fp,     /* [IN] File object */
+  void* buff,  /* [OUT] Buffer to store read data */
+  UINT btr,    /* [IN] Number of bytes to read */
+  UINT* br     /* [OUT] Number of bytes read */
+);
+
+/**
+ * @brief		The f_write writes data to a file.
+ * @details		The read/write pointer of the file object advances number of bytes written.
+ *              After the function succeeded, *bw should be checked to detect the disk full. In case of *bw is less than btw, it means the volume got full during the write operation. 
+ *              The function can take a time when the volume is full or close to full.
+ * @param [in]	fp
+ *				Pointer to the open file object.
+ * @param [in]	buff
+ *			    Pointer to the data to be written.
+ * @param [in]	btw
+ *				Specifies number of bytes to write in range of UINT type.
+ * @param [out]	bw
+ *				Pointer to the UINT variable to return the number of bytes written.
+ *	            The value is always valid after the function call regardless of the result.
+ * @retval		FR_OK
+ * @retval		FR_DISK_ERR
+ * @retval		FR_INT_ERR
+ * @retval		FR_NOT_READY
+ * @retval	    FR_INVALID_OBJECT
+ * @retval		FR_TIMEOUT
+ * @note        Available when _FS_READONLY == 0.
+ *
+ **/
+ FRESULT f_write (
+  FIL* fp,          /* [IN] Pointer to the file object structure */
+  const void* buff, /* [IN] Pointer to the data to be written */
+  UINT btw,         /* [IN] Number of bytes to write */
+  UINT* bw          /* [OUT] Pointer to the variable to return number of bytes written */
+);
+/**
+ * @brief		The f_lseek function moves the file read/write pointer of an open file object. 
+ *              It can also be used to expand the file size (cluster pre-allocation). 
+ * @details		The f_lseek() function moves the file read/write pointer of an open file. The offset can be specified in only origin from top of the file.
+ *              When an offset beyond the file size is specified at write mode, the file size is expanded to the specified offset. 
+ *              The file data in the expanded area is undefined because no data is written to the file.
+ *              This is suitable to pre-allocate a cluster chain quickly, for fast write operation.
+ *              After the f_lseek() function succeeded, the current read/write pointer should be checked in order to make sure the read/write pointer has been moved correctry. 
+ *				In case of the current read/write pointer is not the expected value, either of followings has been occured. \n
+ *            	\li \c End of file. The specified ofs was clipped at end of the file because the file has been opened in read-only mode. 
+ *              \li \c Disk full. There is insufficient free space on the volume to expand the file. \n
+ *				Fast seek feature is enabled when _USE_FASTSEEK is set to 1 and the member cltbl in the file object is not NULL. 
+ *				This feature enables fast backward/long seek operations without FAT access by using CLMT (cluster link map table). The fast seek feature is also applied to f_read()/f_write() function, however, the file size cannot be expanded by f_write()/f_lseek() function. \n
+ *              The CLMT must be created in the user defined DWORD array prior to use the fast seek feature. 
+ *              To create the CLMT, set address of the DWORD array to the member cltbl in the file object, set the array size in unit of items into the first item and call the f_lseek() function with ofs = CREATE_LINKMAP. 
+ *              After the function succeeded and CLMT is created, no FAT access is occured at subsequent f_read()/f_write()/f_lseek() function to the file. If the function failed with FR_NOT_ENOUGH_CORE, the given array size is insufficient for the file and number of items required is returned into the first item of the array. 
+ *              The required array size is (number of fragments + 1) * 2 items. For example, when the file is fragmented in 5, 12 items will be required for the CLMT.
+ *              \n Examples: 
+ * @code
+ *    /* Open file */
+ *    fp = malloc(sizeof (FIL));
+ *    res = f_open(fp, "file.dat", FA_READ|FA_WRITE);
+ *    if (res) ...
+ * 	  /* Move to offset of 5000 from top of the file */
+ *    res = f_lseek(fp, 5000);
+ *    /* Move to end of the file to append data */
+ *    res = f_lseek(fp, f_size(fp));
+ *    /* Forward 3000 bytes */
+ *    res = f_lseek(fp, f_tell(fp) + 3000);
+ *    /* Rewind 2000 bytes (take care on wraparound) */
+ *    res = f_lseek(fp, f_tell(fp) - 2000);
+ 
+ *    /* Cluster pre-allocation (to prevent buffer overrun on streaming write) */
+ *    res = f_open(fp, recfile, FA_CREATE_NEW | FA_WRITE);   /* Create a file */
+ *    res = f_lseek(fp, PRE_SIZE);             /* Expand file size (cluster pre-allocation) */
+ *    if (res || f_tell(fp) != PRE_SIZE) ...   /* Check if the file has been expanded */
+ *    res = f_lseek(fp, DATA_START);           /* Record data stream WITHOUT cluster allocation delay */
+ *    ...                                      /* DATA_START and write block size should be aligned to sector boundary */
+ *    res = f_truncate(fp);                    /* Truncate unused area */
+ *    res = f_lseek(fp, 0);                    /* Put file header */
+ *    ...
+ *    res = f_close(fp);
+ *
+ * /* Using fast seek feature */
+ *    DWORD clmt[SZ_TBL];                    /* Cluster link map table buffer */
+ *    res = f_lseek(fp, ofs1);               /* This is normal seek (cltbl is nulled on file open) */
+ *    fp->cltbl = clmt;                      /* Enable fast seek feature (cltbl != NULL) */
+ *    clmt[0] = SZ_TBL;                      /* Set table size */
+ *    res = f_lseek(fp, CREATE_LINKMAP);     /* Create CLMT */
+ *    ...
+ *    res = f_lseek(fp, ofs2);               /* This is fast seek */
+ *
+ * @endcode
+ * @param [in]	fp
+ *				Pointer to the open file object.
+ * @param [in]	ofs
+ *			    Byte offset from top of the file.
+ * @retval		FR_OK
+ * @retval		FR_DISK_ERR
+ * @retval		FR_INT_ERR
+ * @retval		FR_NOT_READY
+ * @retval	    FR_INVALID_OBJECT
+ * @retval		FR_TIMEOUT
+ * @note        Available when _FS_MINIMIZE <= 2.
+ * 
+ */
+FRESULT f_lseek (
+  FIL* fp,   /* [IN] File object */
+  DWORD ofs  /* [IN] File read/write pointer */
+); 
+/**
+ * @brief		The f_truncate function truncates the file size. 
+ * @details		The f_truncate() function truncates the file size to the current file read/write pointer. 
+ *              This function has no effect if the file read/write pointer is already pointing end of the file.
+ * @param [in]	fp
+ *				Pointer to the open file object to be truncated.
+ * @retval		FR_OK
+ * @retval		FR_DISK_ERR
+ * @retval		FR_INT_ERR
+ * @retval		FR_NOT_READY
+ * @retval	    FR_INVALID_OBJECT
+ * @retval		FR_TIMEOUT
+ * @note        Available when _FS_READONLY == 0 and _FS_MINIMIZE == 0.
+ * 
+ */
+ FRESULT f_truncate (
+  FIL* fp     /* [IN] File object */
+);
+ /**
+ * @brief		The f_sync function flushes the cached information of a writing file.
+ * @details		The f_sync() function performs the same process as f_close() function but the file is left opened and can continue read/write/seek operations to the file.
+ *              This is suitable for the applications that open files for a long time in write mode, such as data logger. 
+ *              Performing f_sync() function of periodic or immediataly after f_write() function can minimize the risk of data loss due to a sudden blackout or an unintentional media removal. \n
+ *              However there is no sense in f_sync() function immediataly before f_close() function because it performs f_sync() function in it. 
+ *              In other words, the differnce between those functions is that the file object is invalidated or not.
+ * @param [in]	fp
+ *				Pointer to the open file object to be flushed.
+ * @retval		FR_OK
+ * @retval		FR_DISK_ERR
+ * @retval		FR_INT_ERR
+ * @retval		FR_NOT_READY
+ * @retval	    FR_INVALID_OBJECT
+ * @retval		FR_TIMEOUT
+ * @note        Available when _FS_READONLY == 0.
+ * 
+ */
+ FRESULT f_sync (
+  FIL* fp     /* [IN] File object */
+);
+ /**
+ * @brief		The f_forward function reads the file data and forward it to the data streaming device.
+ * @details		The f_forward() function reads the data from the file and forward it to the outgoing stream without data buffer. This is suitable for small memory system because it does not require any data buffer at application module. 
+ *              The file pointer of the file object increases in number of bytes forwarded. In case of *bf is less than btf without error, it means the requested bytes could not be transferred due to end of file or stream goes busy during data transfer.
+ *              \n Examples(Audio playback): 
+ * @code
+ * /*------------------------------------------------------------------------*/
+ * /* Sample code of data transfer function to be called back from f_forward */
+ * /*------------------------------------------------------------------------*/
+ * UINT out_stream (   /* Returns number of bytes sent or stream status */
+ * const BYTE *p,  /* Pointer to the data block to be sent */
+ * UINT btf        /* >0: Transfer call (Number of bytes to be sent). 0: Sense call */
+ * )
+ * {
+ * UINT cnt = 0;
+ *  if (btf == 0) {     /* Sense call */
+ *      /* Return stream status (0: Busy, 1: Ready) */
+ *      /* When once it returned ready to sense call, it must accept a byte at least */
+ *      /* at subsequent transfer call, or f_forward will fail with FR_INT_ERR. */
+ *      if (FIFO_READY) cnt = 1;
+ *  }
+ *  else {              /* Transfer call */
+ *      do {    /* Repeat while there is any data to be sent and the stream is ready */
+ *          FIFO_PORT = *p++;
+ *          cnt++;
+ *      } while (cnt < btf && FIFO_READY);
+ *   }
+ *   return cnt;
+ *  }
+ * /*------------------------------------------------------------------------*/
+ * /* Sample code using f_forward function                                   */
+ * /*------------------------------------------------------------------------*/
+ * FRESULT play_file (
+ *   char *fn        /* Pointer to the audio file name to be played */
+ * )
+ * {
+ * FRESULT rc;
+ *  FIL fil;
+ *  UINT dmy;
+ *  /* Open the audio file in read only mode */
+ *  rc = f_open(&fil, fn, FA_READ);
+ *  if (rc) return rc;
+ *  /* Repeat until the file pointer reaches end of the file */
+ *  while (rc == FR_OK && fil.fptr < fil.fsize) {
+ *  /* any other processes... */
+ *  /* Fill output stream periodicaly or on-demand */ 
+ *  rc = f_forward(&fil, out_stream, 1000, &dmy);
+ *  }
+ *  /* Close the file and return */
+ *  f_close(&fil);
+ *  return rc;
+ *  }
+ * @endcode
+ * @param [in]	fp
+ *				Pointer to the open file object
+ * @param [in]	func
+ *				Pointer to the user-defined data streaming function. 
+ * @param [in]	btf
+ *				Number of bytes to forward in range of UINT.
+ * @param [out]	bf
+ *				Pointer to the UINT variable to return number of bytes forwarded.
+ * @retval		FR_OK
+ * @retval		FR_DISK_ERR
+ * @retval		FR_INT_ERR
+ * @retval		FR_NOT_READY
+ * @retval	    FR_INVALID_OBJECT
+ * @retval		FR_TIMEOUT
+ * @note        Available when _USE_FORWARD == 1 and _FS_TINY == 1.
+ * 
+ */
+FRESULT f_forward (
+  FIL* fp,                        /* [IN] File object */
+  UINT (*func)(const BYTE*,UINT), /* [IN] Data streaming function */
+  UINT btf,                       /* [IN] Number of bytes to forward */
+  UINT* bf                        /* [OUT] Number of bytes forwarded */
+);
+ /**
+ * @brief		The f_stat function checks the existence of a file or sub-directory.
+ * @details		The f_stat() function checks the existence of a file or sub-directory. If not exist, the function returns with FR_NO_FILE. If exist, the function returns with 
+ *              FR_OK and the informations of the object, file size, timestamp, attribute and SFN, are stored to the file information structure. For details of the file 
+ *              information, refer to the FILINFO structure and f_readdir() function. \n
+ *              When LFN feature is enabled, lfname in the file information structure must be NULLed prior to use it.
+ *              \n Examples: 
+ * @code
+ *  FRESULT fr;
+ *  FILINFO fno;
+ *  printf("Test for 'file.txt'...\n");
+ *  #if _USE_LFN
+ *  fno.lfname = 0;
+ *  #endif
+ *  fr = f_stat("file.txt", &fno);
+ *  switch (fr) {
+ *  case FR_OK:
+ *      printf("Size: %u\n", fno.fsize);
+ *      printf("Timestamp: %u/%02u/%02u, %02u:%02u\n",
+ *               (fno.fdate >> 9) + 1980, fno.fdate >> 5 & 15, fno.fdate & 31,
+ *               fno.ftime >> 11, fno.ftime >> 5 & 63);
+ *      printf("Attributes: %c%c%c%c%c\n",
+ *               (fno.fattrib & AM_DIR) ? 'D' : '-',
+ *               (fno.fattrib & AM_RDO) ? 'R' : '-',
+ *               (fno.fattrib & AM_HID) ? 'H' : '-',
+ *               (fno.fattrib & AM_SYS) ? 'S' : '-',
+ *               (fno.fattrib & AM_ARC) ? 'A' : '-');
+ *   break;
+ *   case FR_NO_FILE:
+ *      printf("It is not exist.\n");
+ *      break;
+ *   default:
+ *      printf("An error occured. (%d)\n", fr);
+ *   }
+ * @endcode
+ * @param [in]	path
+ *			    Pointer to the null-terminated string that specifies the object to get its information.
+ * @param [out]	fno
+ *				Pointer to the blank FILINFO structure to store the information of the object. 
+ *              Set null pointer if it is not needed.
+ * @retval		FR_OK
+ * @retval		FR_DISK_ERR
+ * @retval		FR_INT_ERR
+ * @retval		FR_NOT_READY
+ * @retval		FR_NO_FILE
+ * @retval		FR_NO_PATH
+ * @retval		FR_INVALID_NAME
+ * @retval		FR_INVALID_DRIVE
+ * @retval		FR_NOT_ENABLED
+ * @retval		FR_NO_FILESYSTEM
+ * @retval		FR_TIMEOUT
+ * @retval      FR_NOT_ENOUGH_CORE
+ * @note        Available when _FS_MINIMIZE == 0.
+ * 
+ */
+FRESULT f_stat (
+  const TCHAR* path,  /* [IN] Object name */
+  FILINFO* fno        /* [OUT] FILINFO structure */
+);
+/**
+ * @brief		The f_opendir function opens a directory.
+ * @details		The f_opendir() function opens an exsisting directory and creates a directory object for subsequent f_readdir() function.
+ * @param [out]	dp
+ *				Pointer to the blank directory object to create a new one.
+ * @param [in]	path
+ *				Pointer to the null-terminated string that specifies the directory name to be opened.
+ * @retval		FR_OK
+ * @retval		FR_DISK_ERR
+ * @retval		FR_INT_ERR
+ * @retval		FR_NOT_READY
+ * @retval	    FR_NO_PATH
+ * @retval		FR_INVALID_NAME
+ * @retval	    FR_INVALID_OBJECT
+ * @retval	    FR_INVALID_DRIVE
+ * @retval		FR_NOT_ENABLED
+ * @retval		FR_NO_FILESYSTEM
+ * @retval		FR_TIMEOUT
+ * @retval	    FR_NOT_ENOUGH_CORE
+ * @retval		FR_TOO_MANY_OPEN_FILES
+ * @note        Available when _FS_MINIMIZE <= 1.
+ * 
+ */
+FRESULT f_opendir (
+  DIR* dp,           /* [OUT] Pointer to the directory object structure */
+  const TCHAR* path  /* [IN] Directory name */
+);
+/**
+ * @brief		The f_closedir function closes an open directory.
+ * @details		The f_closedir() function closes an open directory object. After the function succeeded, the directory object is no longer valid and it can be discarded. \n
+ *              Note that the directory object can also be discarded without this process if _FS_LOCK option is not enabled. However this is not recommended for future compatibility.
+ * @param [in]	dp
+ *				Pointer to the open directory object structure to be closed.
+ * @retval		FR_OK
+ * @retval		FR_INT_ERR
+ * @retval	    FR_INVALID_OBJECT
+ * @retval		FR_TIMEOUT
+ * @note        Available when _FS_MINIMIZE <= 1.
+ * 
+ */
+FRESULT f_closedir (
+  DIR* dp     /* [IN] Pointer to the directory object */
+);
+ /**
+ * @brief		The f_readdir function reads directory entries.
+ * @details		The f_readdir() function reads directory items, file and directory, in sequence. 
+ *              All items in the directory can be read by calling f_readdir() function repeatedly. When relative path feature is enabled (_FS_RPATH >= 1), dot entries ("." and "..") are not filtered out and they will appear in the read items. 
+ *			    When all directory items have been read and no item to read, a null string is returned into the fname[] without any error. 
+ * 				When a null pointer is given to the fno, the read index of the directory object is rewinded. \n
+ *				When LFN feature is enabled, lfname and lfsize in the file information structure must be initialized with valid value prior to use it. The lfname is a pointer to the LFN read buffer. 
+ *				The lfsize is size of the LFN read buffer in unit of TCHAR. If the LFN is not needed, set a null pointer to the lfname and the LFN is not returned. 
+ *				A null string will be returned into the LFN read buffer in case of following conditions. \n
+ *			    - The directory item has no LFN information.
+ *			    - Either the size of read buffer or LFN working buffer is insufficient for the LFN.
+ *			    - The LFN contains any Unicode character that cannot be converted to OEM code. (not the case at Unicode API cfg.) \n
+ *              When the directory item has no LFN information, lower case characters can be contained in the fname[].
+ *              \n Sample Code: 
+ * @code
+ *  FRESULT scan_files (
+ *  char* path        /* Start node to be scanned (also used as work area) */
+ * )
+ *
+ * {
+ *   FRESULT res;
+ *   FILINFO fno;
+ *   DIR dir;
+ *   int i;
+ *   char *fn;   /* This function assumes non-Unicode configuration */
+ *   #if _USE_LFN
+ *   static char lfn[_MAX_LFN + 1];   /* Buffer to store the LFN */
+ *   fno.lfname = lfn;
+ *   fno.lfsize = sizeof lfn;
+ *   #endif
+ *   res = f_opendir(&dir, path);      /* Open the directory */
+ *   if (res == FR_OK) {
+ *      i = strlen(path);
+ *      for (;;) {
+ *          res = f_readdir(&dir, &fno);                   /* Read a directory item */
+ *          if (res != FR_OK || fno.fname[0] == 0) break;  /* Break on error or end of dir */
+ *          if (fno.fname[0] == '.') continue;             /* Ignore dot entry */
+ *   #if _USE_LFN
+ *           fn = *fno.lfname ? fno.lfname : fno.fname;
+ *   #else
+ *           fn = fno.fname;
+ *   #endif
+ *           if (fno.fattrib & AM_DIR) {                    /* It is a directory */
+ *              sprintf(&path[i], "/%s", fn);
+ *              res = scan_files(path);
+ *              path[i] = 0;
+ *              if (res != FR_OK) break;
+ *          } else {                                       /* It is a file. */
+ *              printf("%s/%s\n", path, fn);
+ *          }
+ *      }
+ *      f_closedir(&dir)
+ *  }
+ *   return res;
+ * }
+ * @endcode
+ * @param [in]	dp
+ *			    Pointer to the open directory object.
+ * @param [out]	fno
+ *				Pointer to the file information structure to store the read item.
+ * @retval		FR_OK
+ * @retval		FR_DISK_ERR
+ * @retval		FR_INT_ERR
+ * @retval		FR_NOT_READY
+ * @retval		FR_INVALID_OBJECT
+ * @retval	    FR_TIMEOUT
+ * @retval		FR_NOT_ENOUGH_CORE
+ * @note        Available when _FS_MINIMIZE <= 1.
+ * 
+ */
+FRESULT f_readdir (
+  DIR* dp,      /* [IN] Directory object */
+  FILINFO* fno  /* [OUT] File information structure */
+);
+/**
+ * @brief		The f_mkdir function creates a new directory.
+ * @details		This function creates a new directory. 
+ *              \n Example:
+ * @code
+ *  res = f_mkdir("sub1");
+ *  if (res) die(res);
+ *  res = f_mkdir("sub1/sub2");
+ *  if (res) die(res);
+ *  res = f_mkdir("sub1/sub2/sub3");
+ *  if (res) die(res);
+ * @endcode
+ * @param [in]	path
+ *				Pointer to the null-terminated string that specifies the directory name to create. 
+ * @retval		FR_OK
+ * @retval		FR_DISK_ERR
+ * @retval		FR_INT_ERR
+ * @retval	    FR_NOT_READY
+ * @retval	    FR_NO_PATH
+ * @retval	    FR_INVALID_NAME
+ * @retval	    FR_DENIED
+ * @retval	    FR_EXIST
+ * @retval	    FR_WRITE_PROTECTED
+ * @retval	    FR_INVALID_DRIVE
+ * @retval	    FR_NOT_ENABLED
+ * @retval	    FR_NO_FILESYSTEM
+ * @retval	    FR_TIMEOUT
+ * @retval	    FR_NOT_ENOUGH_CORE
+ * @note        Available when _FS_READONLY == 0 and _FS_MINIMIZE == 0.
+ * 
+ */
+ FRESULT f_mkdir (
+  const TCHAR* path /* [IN] Directory name */
+);
+/**
+ * @brief		The f_unlink function removes a file or sub-directory.
+ * @details		If condition of the object to be removed is applicable to the following terms, the function will be rejected. \n
+ *              - The file/sub-directory must not have read-only attribute (AM_RDO), or the function will be rejected with FR_DENIED.
+ *              - The sub-directory must be empty and must not be current directory, or the function will be rejected with FR_DENIED.
+ *              - The file/sub-directory must not be opened, or the FAT volume can be collapsed. It can be rejected with FR_LOCKED when file lock feature is enabled.
+ * @param [in]	path
+ *				Pointer to the null-terminated string that specifies an object to be removed.
+ * @retval		FR_OK
+ * @retval		FR_DISK_ERR
+ * @retval		FR_INT_ERR
+ * @retval	    FR_NOT_READY
+ * @retval	    FR_NO_FILE
+ * @retval	    FR_NO_PATH
+ * @retval	    FR_INVALID_NAME
+ * @retval	    FR_DENIED
+ * @retval	    FR_EXIST
+ * @retval	    FR_WRITE_PROTECTED
+ * @retval	    FR_INVALID_DRIVE
+ * @retval	    FR_NOT_ENABLED
+ * @retval	    FR_NO_FILESYSTEM
+ * @retval	    FR_TIMEOUT
+ * @retval	    FR_LOCKED
+ * @retval	    FR_NOT_ENOUGH_CORE
+ * @note        Available when _FS_READONLY == 0 and _FS_MINIMIZE == 0.
+ * 
+ */
+FRESULT f_unlink (
+  const TCHAR* path  /* [IN] Object name */
+);
+/**
+ * @brief		The f_chmod function changes the attribute of a file or sub-directory.
+ * @details		The f_chmod() function changes the attribute of a file or sub-directory.
+ *              \n Example:
+ * @code
+ *  /* Set read-only flag, clear archive flag and others are left unchanged. */
+ *  f_chmod("file.txt", AR_RDO, AR_RDO | AR_ARC);
+ * @endcode 
+ * @param [in]	path
+ *				Pointer to the null-terminated string that specifies an object to be changed
+ * @param [in]	attr
+ *				Attribute flags to be set in one or more combination of the following flags. The specified flags are set and others are cleard.
+Attribute   		 |  Description			|				                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+---------------------|-------------------
+AM_RDO               | 	Read only           |  																				                                                                                                                                                                               
+AM_ARC               | 	Archive    			|															                                                                                                                                                                                                                       
+AM_SYS               | 	System              |
+AM_HID               | 	Hidden              |
+ * @param [in]	mask
+ *				Attribute mask that specifies which attribute is changed. The specified attributes are set or cleard and others are left unchanged.
+ * @retval		FR_OK
+ * @retval		FR_DISK_ERR
+ * @retval		FR_INT_ERR
+ * @retval	    FR_NOT_READY
+ * @retval	    FR_NO_FILE
+ * @retval	    FR_NO_PATH
+ * @retval	    FR_INVALID_NAME
+ * @retval	    FR_WRITE_PROTECTED
+ * @retval	    FR_INVALID_DRIVE
+ * @retval	    FR_NOT_ENABLED
+ * @retval	    FR_NO_FILESYSTEM
+ * @retval	    FR_TIMEOUT
+ * @retval	    FR_NOT_ENOUGH_CORE
+ * @note        Available when _FS_READONLY == 0 and _FS_MINIMIZE == 0.
+ * 
+ */
+FRESULT f_chmod (
+  const TCHAR* path, /* [IN] Object name */
+  BYTE attr,         /* [IN] Attribute flags */
+  BYTE mask          /* [IN] Attribute masks */
+);
+/**
+ * @brief		The f_utime function changes the timestamp of a file or sub-directory.
+ * @details		The f_utime() function changes the timestamp of a file or sub-directory
+ *              \n Example:
+ * @code
+ * FRESULT set_timestamp (
+ *   char *obj,     /* Pointer to the file name */
+ *   int year,
+ *   int month,
+ *   int mday,
+ *   int hour,
+ *   int min,
+ *   int sec
+ * )
+ * {
+ *   FILINFO fno;
+ *   fno.fdate = (WORD)(((year - 1980) * 512U) | month * 32U | mday);
+ *   fno.ftime = (WORD)(hour * 2048U | min * 32U | sec / 2U);
+ *    return f_utime(obj, &fno);
+ * }
+ * @endcode 
+ * @param [in]	path
+ *				Pointer to the null-terminated string that specifies an object to be changed.
+ * @param [in]	fno
+ *				Pointer to the file information structure that has a timestamp to be set in member fdate and ftime. Do not care any other members.
+ * @retval		FR_OK
+ * @retval		FR_DISK_ERR
+ * @retval		FR_INT_ERR
+ * @retval	    FR_NOT_READY
+ * @retval	    FR_NO_FILE
+ * @retval	    FR_NO_PATH
+ * @retval	    FR_INVALID_NAME
+ * @retval	    FR_WRITE_PROTECTED
+ * @retval	    FR_INVALID_DRIVE
+ * @retval	    FR_NOT_ENABLED
+ * @retval	    FR_NO_FILESYSTEM
+ * @retval	    FR_TIMEOUT
+ * @retval	    FR_NOT_ENOUGH_CORE
+ * @note        Available when _FS_READONLY == 0 and _FS_MINIMIZE == 0.
+ * 
+ */
+ FRESULT f_utime (
+  const TCHAR* path,  /* [IN] Object name */
+  const FILINFO* fno  /* [IN] Time and data to be set */
+);
+/**
+ * @brief		Renames a file or sub-directory.
+ * @details		Renames a file or sub-directory and can also move it to other directory within the same logical drive. Do not rename open objects or directry table can be broken.
+ *              \n Example:
+ * @code
+ *    /* Rename an object */
+ *    f_rename("oldname.txt", "newname.txt");
+ *
+ *    /* Rename and move an object to other directory */
+ *    f_rename("oldname.txt", "dir1/newname.txt");
+ * @endcode 
+ * @param [in]	old_name
+ *				Pointer to a null-terminated string that specifies an existing file or sub-directory to be renamed.
+ * @param [in]	new_name
+ *				Pointer to a null-terminated string that specifies the new object name. The drive number specified in this string is ignored and one determined by old_name is used instead.
+ * @retval		FR_OK
+ * @retval		FR_DISK_ERR
+ * @retval		FR_INT_ERR
+ * @retval	    FR_NOT_READY
+ * @retval	    FR_NO_FILE
+ * @retval	    FR_NO_PATH
+ * @retval	    FR_INVALID_NAME
+ * @retval	    FR_DENIED
+ * @retval	    FR_EXIST
+ * @retval	    FR_EXIST
+ * @retval	    FR_WRITE_PROTECTED
+ * @retval	    FR_INVALID_DRIVE
+ * @retval	    FR_NOT_ENABLED
+ * @retval	    FR_NO_FILESYSTEM
+ * @retval	    FR_TIMEOUT
+ * @retval	    FR_LOCKED
+ * @retval	    FR_NOT_ENOUGH_CORE
+ * @note      Available when _FS_READONLY == 0 and _FS_MINIMIZE == 0.
+ * 
+ */
+FRESULT f_rename (
+  const TCHAR* old_name, /* [IN] Old object name */
+  const TCHAR* new_name  /* [IN] New object name */
+);
+/**
+ * @brief		The f_chdir function changes the current directory of a drive.
+ * @details		The f_chdir() function changes the current directory of the logical drive. The current directory of a drive is initialized to the root directory when the drive is auto-mounted. 
+ *              Note that the current directory is retained in the each file system object so that it also affects other tasks that using the volume.
+ *              \n Example:
+ * @code
+ *  /* Change current direcoty of the current drive (dir1 under root dir) */
+ *  f_chdir("/dir1");
+ *  /* Change current direcoty of drive 2 (parent dir) */
+ *  f_chdir("2:..");
+ * @endcode 
+ * @param [in]	path
+ *				Pointer to the null-terminated string that specifies a directory to go.
+ * @retval		FR_OK
+ * @retval		FR_DISK_ERR
+ * @retval		FR_INT_ERR
+ * @retval	    FR_NOT_READY
+ * @retval	    FR_NO_PATH
+ * @retval	    FR_INVALID_NAME
+ * @retval	    FR_INVALID_DRIVE
+ * @retval	    FR_NOT_ENABLED
+ * @retval	    FR_NO_FILESYSTEM
+ * @retval	    FR_TIMEOUT
+ * @retval	    FR_NOT_ENOUGH_CORE
+ * @note        Available when _FS_RPATH >= 1.
+ * 
+ */
+FRESULT f_chdir (
+  const TCHAR* path /* [IN] Path name */
+);
+/**
+ * @brief		The f_chdrive function changes the current drive.
+ * @details		The f_chdrive() function changes the current drive. The initial value of the current drive number is 0. 
+ *              Note that the current drive is retained in a static variable so that it also affects other tasks that using the file functions.
+ * @param [in]	path
+ *				Specifies the logical drive number to be set as the current drive.
+ * @retval		FR_OK
+ * @retval	    FR_INVALID_DRIVE
+ * @note        Available when _FS_RPATH >= 1 and _VOLUMES >= 2.
+ * 
+ */
+FRESULT f_chdrive (
+  const TCHAR* path  /* [IN] Logical drive number */
+);
+/**
+ * @brief		The f_getcwd function retrieves the current directory.
+ * @details		The f_getcwd() function retrieves full path name of the current directory of the current drive. 
+ *              When _VOLUMES is larger than 1, a logical drive number is added to top of the path name.
+ * @param [out]	buff
+ *				Pointer to the buffer to receive the current directory string.
+ * @param [in]	len
+ *				Size of the buffer in unit of TCHAR.
+ * @retval		FR_OK
+ * @retval		FR_DISK_ERR
+ * @retval		FR_INT_ERR
+ * @retval	    FR_NOT_READY
+ * @retval	    FR_NOT_ENABLED
+ * @retval	    FR_NO_FILESYSTEM
+ * @retval	    FR_TIMEOUT
+ * @retval	    FR_NOT_ENOUGH_CORE
+ * @note        Available when _FS_RPATH == 2.
+ * 
+ */
+FRESULT f_getcwd (
+  TCHAR* buff, /* [OUT] Buffer to return path name */
+  UINT len     /* [IN] The length of the buffer */
+);
+/**
+ * @brief		The f_getfree function gets number of the free clusters on the volume.
+ * @details		The f_getfree() function gets number of free clusters on the volume. 
+ *              The member csize in the file system object indicates number of sectors per cluster, so that the free space in unit of sector can be calcurated with this information. 
+ *              When FSINFO structure on the FAT32 volume is not in sync, this function can return an incorrect free cluster count. To avoid this problem, FatFs can be forced full FAT scan by _FS_NOFSINFO option.
+ *              \n Example:
+ * @code
+ *     FATFS *fs;
+ *  DWORD fre_clust, fre_sect, tot_sect;
+ *   /* Get volume information and free clusters of drive 1 */
+ *   res = f_getfree("1:", &fre_clust, &fs);
+ *   if (res) die(res);
+ *   /* Get total sectors and free sectors */
+ *   tot_sect = (fs->n_fatent - 2) * fs->csize;
+ *   fre_sect = fre_clust * fs->csize;
+ *   /* Print the free space (assuming 512 bytes/sector) */
+ *   printf("%10lu KiB total drive space.\n%10lu KiB available.\n",
+ *          tot_sect / 2, fre_sect / 2);
+ * @endcode 
+ * @param [in]	path
+ *				Pointer to the null-terminated string that specifies the logical drive. A null-string means the default drive.
+ * @param [out]	nclst
+ *				Pointer to the DWORD variable to store number of free clusters.
+ * @param [out]	fatfs
+ *				Pointer to pointer that to store a pointer to the corresponding file system object.
+ * @retval		FR_OK
+ * @retval		FR_DISK_ERR
+ * @retval		FR_INT_ERR
+ * @retval	    FR_NOT_READY
+ * @retval	    FR_INVALID_DRIVE
+ * @retval	    FR_NOT_ENABLED
+ * @retval	    FR_NO_FILESYSTEM
+ * @retval	    FR_TIMEOUT
+ * @note        Available when _FS_READONLY == 0 and _FS_MINIMIZE == 0.
+ * 
+ */
+FRESULT f_getfree (
+  const TCHAR* path,  /* [IN] Logical drive number */
+  DWORD* nclst,       /* [OUT] Number of free clusters */
+  FATFS** fatfs       /* [OUT] Corresponding file system object */
+);
+/**
+ * @brief	    The f_getlabel function returns volume label and volume serial number of a drive.
+ *              \n Example:
+ * @code
+ *  char str[12];
+ *  /* Get volume label of the default drive */
+ *  f_getlabel("", str, 0);
+ *  /* Get volume label of the drive 2 */
+ *  f_getlabel("2:", str, 0);
+ * @endcode 
+ * @param [in]	path
+ *				Pointer to the null-terminated string that specifies the logical drive. Null-string specifies the default drive.
+ * @param [out]	label
+ *				Pointer to the buffer to store the volume label. The buffer size must be at least 12 items. If the volume has no label, a null-string will be returned. 
+ *              Set null pointer if this information is not needed.
+ * @param [out]	vsn
+ *				Pointer to the DWORD variable to store the volume serial number. Set null pointer if this information is not needed.
+ * @retval		FR_OK
+ * @retval		FR_DISK_ERR
+ * @retval		FR_INT_ERR
+ * @retval	    FR_NOT_READY
+ * @retval	    FR_INVALID_DRIVE
+ * @retval	    FR_NOT_ENABLED
+ * @retval	    FR_NO_FILESYSTEM
+ * @retval	    FR_TIMEOUT
+ * @note        Available when _USE_LABEL == 1.
+ * 
+ */
+FRESULT f_getlabel (
+  const TCHAR* path,  /* [IN] Drive number */
+  TCHAR* label,       /* [OUT] Volume label */
+  DWORD* vsn          /* [OUT] Volume serial number */
+);
+/**
+ * @brief	   The f_setlabel function sets/removes the label of a volume.
+ * @details    When the string has a drive number, the volume label will be set to the volume specified by the drive number. 
+ *             If not, the label will be set to the default drive. If the given string is a null-string, the volume label on the volume will be removed. 
+ *             The format of the volume label is similar to the short file name but there are some differences shown below:
+ *             - 11 bytes or less in length as local character code. LFN extention is not applied to the volume label.
+ *             - Cannot contain period.
+ *             - Can contain spaces anywhere in the volume label. Trailing spaces are truncated off.
+ *             \n Example:
+ * @code
+ *  /* Set volume label to the default drive */
+ *  f_setlabel("DATA DISK");
+ *  /* Set volume label to the drive 2 */
+ *  f_setlabel("2:DISK 3 OF 4");
+ *  /* Remove volume label of the drive 2 */
+ *  f_setlabel("2:");
+ * @endcode 
+ * @param [in]	label
+ *				Pointer to the null-terminated string that specifies the logical drive. Null-string specifies the default drive.
+ * @retval		FR_OK
+ * @retval		FR_DISK_ERR
+ * @retval		FR_INT_ERR
+ * @retval	    FR_NOT_READY
+ * @retval	    FR_INVALID_NAME
+ * @retval	    FR_WRITE_PROTECTED
+ * @retval	    FR_INVALID_DRIVE
+ * @retval	    FR_NOT_ENABLED
+ * @retval	    FR_NO_FILESYSTEM
+ * @retval	    FR_TIMEOUT
+ * @note        Available when _FS_READONLY == 0 and _USE_LABEL == 1.
+ * 
+ */
+FRESULT f_setlabel (
+  const TCHAR* label  /* [IN] Volume label to be set */
+);
+/**
+ * @brief	   The f_mkfs fucntion creates an FAT file system on the logical drive.
+ * @details    The f_mkfs() function creates an FAT volume on the specified logical drive. When FDISK format is specified, a primary partition occupies entire space of the physical drive is created and then an FAT volume is created on the partition. 
+ *             When SFD format is specified, the FAT volume starts from the first sector of the physical drive. \n
+ *             If the logical drive is bound to the specific partition (1-4) by multiple partition feature (_MULTI_PARTITION), the FAT volume is created into the partition.
+ *             In this case, the second argument sfd is ignored. The physical drive must have been partitioned with f_fdisk() function or any other partitioning tools prior to create the FAT volume with this function. \n
+ *             Note that there are two partitioning rules, FDISK and SFD. The FDISK partitioning is usually used for harddisk, MMC, SDC, CFC and U Disk. 
+ *             It can divide a physical drive into one or more partitions with a partition table on the MBR. However Windows does not support multiple partition on the removable disk. The SFD is non-partitioned method. 
+ *             The FAT volume starts from the first sector on the physical drive without partition table. It is usually used for floppy disk, Microdrive, optical disk and any type of super-floppy media. \n
+ *             The FAT sub-type, FAT12/FAT16/FAT32, is determined by number of clusters on the volume and nothing else, according to the FAT specification issued by Microsoft. Thus which FAT sub-type is selected, is depends on the volume size and the specified cluster size. 
+ *             The cluster size affects read/write throughput and space usage efficiency. Larger cluster size increases the read/write throughput and decreases the space usage efficiency of the volume. \n
+ *             In case of the number of clusters gets near the FAT sub-type boundaries, the function can fail with FR_MKFS_ABORTED.
+ *             \n Example:
+ * @code
+ * /* Format the default drive */
+ * int main (void)
+ * {
+ *  FATFS fs;      /* File system object (volume work area) */
+ *  FIL fil;       /* File object */
+ *  FRESULT res;   /* API result code */
+ *  UINT bw;       /* Bytes written */
+ *  /* Register work area */
+ *  f_mount(&fs, "", 0);
+ *  /* Create FAT volume with default cluster size */
+ *  res = f_mkfs("", 0, 0);
+ *  if (res) ...
+ *  /* Create a file as new */
+ *  res = f_open(&fil, "hello.txt", FA_CREATE_NEW | FA_WRITE);
+ *  if (res) ...
+ *  /* Write a message */
+ *  f_write(&fil, "Hello, World!\r\n", 15, &bw);
+ *  if (bw != 15) ...
+ *  /* Close the file */
+ *  f_close(&fil);
+ *  /* Unregister work area */
+ *  f_mount(0, "", 0);
+ * @endcode 
+ * @param [in]	path
+ *				Pointer to the null-terminated string that specifies the logical drive to be formatted. 
+ *              If there is no drive number, it means the default drive.
+ * @param [in]	sfd
+ *				Specifies partitioning rule (FDISK(0) or SFD(1)). This argument will be ignored on some case.
+ * @param [in]	au
+ *				Specifies size of the allocation unit (cluter) in number of bytes or sectors. When the value is from 1 to 128, it specifies number of sectors. 
+ *              When the value is >= _MIN_SS, it specifies number of bytes. 
+ *              If any invalid value, zero or not power of 2, is given, the cluster size is automatically determined depends on the volume size.
+ * @retval		FR_OK
+ * @retval		FR_DISK_ERR
+ * @retval	    FR_NOT_READY
+ * @retval	    FR_WRITE_PROTECTED
+ * @retval	    FR_INVALID_DRIVE
+ * @retval	    FR_NOT_ENABLED
+ * @retval	    FR_MKFS_ABORTED
+ * @retval	    FR_INVALID_PARAMETER
+ * @note        Available when _FS_READOLNY == 0 and _USE_MKFS == 1.
+ * 
+ */
+FRESULT f_mkfs (
+  const TCHAR* path,  /* [IN] Logical drive number */
+  BYTE  sfd,          /* [IN] Partitioning rule */
+  UINT  au            /* [IN] Size of the allocation unit */
+);
+/**
+ * @brief	   The f_fdisk fucntion divides a physical drive.
+ * @details    The f_fdisk() function creates a partition table into the MBR of the physical drive. 
+ *             The partitioning rule is in generic FDISK format, so that it can create upto four primary partitions.
+ *             Logical volumes in the extended partition is not supported. The part[] with four items specifies how to divide the physical drive. 
+ *             The first item specifies the size of first primary partition and fourth item specifies the fourth primary partition. 
+ *             If the value is less than or equal to 100, it specifies percentage of the partition in the entire disk space. 
+ *             If it is larger than 100, it specifies the partition size in unit of sector.
+ *             \n Example:
+ * @code
+ * /* Volume management table defined by user (required when _MULTI_PARTITION == 1) */
+ *   PARTITION VolToPart[] = {
+ *      {0, 1},    /* Logical drive 0 ==> Physical drive 0, 1st partition */
+ *      {0, 2},    /* Logical drive 1 ==> Physical drive 0, 2nd partition */
+ *      {1, 0}     /* Logical drive 2 ==> Physical drive 1, auto detection */
+ *  };
+ * /* Initialize a brand-new disk drive mapped to physical drive 0 */
+ *   FATFS fs;
+ *   DWORD plist[] = {50, 50, 0, 0};  /* Divide drive into two partitions */
+ *   BYTE work[_MAX_SS];
+ *   f_fdisk(0, plist, work);    /* Divide physical drive 0 */
+ *   f_mount(&fs, "0:", 0);      /* Register work area to the logical drive 0 */
+ *   f_mkfs("0:", 0, 0);         /* Create FAT volume on the logical drive 0. 2nd argument is ignored. */
+ *   f_mount(0, "0:", 0);        /* Unregister work area from the logical drive 0 */
+ *   f_mount(&fs, "1:", 0);      /* Register a work area to the logical drive 1 */
+ *   f_mkfs("1:", 0, 0);         /* Create FAT volume on the logical drive 1. 2nd argument is ignored. */
+ *   f_mount(0, "1:", 0);        /* Unregister work area from the logical drive 1 */
+ * @endcode 
+ * @param [in]	pdrv
+ *				Specifies the physical drive to be divided.
+ * @param [in]	part[]
+ *				Partition map table. It must have four items.
+ * @param [in]	work
+ *				Pointer to the function work area. The size must be at least _MAX_SS bytes.
+ * @retval		FR_OK
+ * @retval		FR_DISK_ERR
+ * @retval	    FR_NOT_READY
+ * @retval	    FR_WRITE_PROTECTED
+ * @retval	    FR_INVALID_PARAMETER
+ * @note        Available when _FS_READOLNY == 0, _USE_MKFS == 1 and _MULTI_PARTITION == 1.
+ */
+FRESULT f_fdisk (
+  BYTE  pdrv,         /* [IN] Physical drive number */
+  const DWORD part[], /* [IN] Partition size */
+  void* work          /* [IN] Work area */
+);
+/**
+ * @brief	    The f_gets reads a string from the file.
+ * @details     The f_gets() function is a wrapper function of f_read() function. The read operation continues until a '\n' is stored, reached end of the file or the buffer is filled with len - 1 characters. 
+ *              The read string is terminated with a '\0'. When no character to read or any error occured during read operation, it returns a null pointer. 
+ *              The status of EOF and error can be examined with f_eof() and f_error() macros. \n
+ *              When FatFs is configured to Unicode API (_LFN_UNICODE == 1), data types on the srting fuctions, f_putc(), f_puts(), f_printf() and f_gets(), is also switched to Unicode.
+ *              The character encoding on the file to be read/written via those functions is selected by _STRF_ENCODE option.
+ * @param [out]	buff
+ *				Pointer to read buffer to store the read string.
+ * @param [in]	len
+ *			    Size of the read buffer in unit of character.
+ * @param [in]	fp
+ *				Pointer to the open file object structure.
+ * @retval		When the function succeeded, buff will be returuned.
+ * @note        Available when _USE_STRFUNC is 1 or 2. When it is set to 2, '\r's contained in the file are stripped out.
+ */
+TCHAR* f_gets (
+  TCHAR* buff, /* [OUT] Read buffer */
+  int len,     /* [IN] Size of the read buffer */
+  FIL* fp      /* [IN] File object */
+);
+/**
+ * @brief	    The f_putc funciton puts a character to the file.
+ * @details     The f_putc() function is a wrapper function of f_write() function.
+ * @param [in]	chr
+ *			    A character to be put.
+ * @param [in]	fp
+ *				Pointer to the open file object structuer.
+ * @retval		When the character was written successfuly, it returns number of characters written. 
+ *              When the function failed due to disk full or any error, an EOF (-1) will be returned. \n
+ *              When FatFs is configured to Unicode API (_LFN_UNICODE == 1), character encoding on the string fuctions, f_putc(), f_puts(), f_printf() and f_gets(), is also switched to Unicode. 
+ *              The character encoding on the file to be read/written via those functions is selected by _STRF_ENCODE option.
+ * @note        Available when _FS_READONLY == 0 and _USE_STRFUNC is 1 or 2. When it is set to 2, a '\n' is converted to '\r'+'\n'.
+ */
+int f_putc (
+  TCHAR chr,  /* [IN] A character to put */
+  FIL* fp     /* [IN] File object */
+);
+/**
+ * @brief	    The f_puts function writes a string to the file.
+ * @details     The f_puts() function is a wrapper function of f_write() function.
+ * @param [in]	str
+ *			    Pointer to the null terminated string to be written. The terminator character will not be written.
+ * @param [in]	fp
+ *				Pointer to the open file object structure.
+ * @retval		When the function succeeded, it returns number of characters written. When the write operation is aborted due to disk full or any error, an EOF (-1) will be returned. \n
+ *              When FatFs is configured to Unicode API (_LFN_UNICODE == 1), character encoding on the srting fuctions, f_putc(), f_puts(), f_printf() and f_gets(), is also switched to Unicode.
+ *              The character encoding on the file to be read/written via those functions is selected by _STRF_ENCODE option.
+ * @note        Available when _FS_READONLY == 0 and _USE_STRFUNC is 1 or 2. When it is set to 2, '\n's contained in the string are converted to '\r'+'\n'.
+ */
+int f_puts (
+  const TCHAR* str, /* [IN] String */
+  FIL* fp           /* [IN] File object */
+);
+/**
+ * @brief	   The f_printf function writes formatted string to the file.
+ * @details    The f_printf() is a wrapper function of f_write(). The format control directive is a sub-set of standard library shown as follows:
+ *             - Type: c C s S d D u U x X b B
+ *             - Size: l L
+ *             - Flag: 0 -
+ *             \n Example:
+ * @code
+ *   f_printf(&fil, "%d", 1234);            /* "1234" */
+ *   f_printf(&fil, "%6d,%3d%%", -200, 5);  /* "  -200,  5%" */
+ *   f_printf(&fil, "%ld", 12345L);         /* "12345" */
+ *   f_printf(&fil, "%06d", 25);            /* "000025" */
+ *   f_printf(&fil, "%06d", -25);           /* "000-25" */
+ *   f_printf(&fil, "%-6d", 25);            /* "25    " */
+ *   f_printf(&fil, "%u", -1);              /* "65535" or "4294967295" */
+ *   f_printf(&fil, "%04x", 0xAB3);         /* "0ab3" */
+ *   f_printf(&fil, "%08LX", 0x123ABCL);    /* "00123ABC" */
+ *   f_printf(&fil, "%016b", 0x550F);       /* "0101010100001111" */
+ *   f_printf(&fil, "%s", "String");        /* "String" */
+ *   f_printf(&fil, "%8s", "abc");          /* "     abc" */
+ *   f_printf(&fil, "%-8s", "abc");         /* "abc     " */
+ *   f_printf(&fil, "%c", 'a');             /* "a" */
+ *   f_printf(&fil, "%f", 10.0);            /* f_printf lacks floating point support */
+ * @endcode 
+ * @param [in]	fp
+ *				Pointer to the open file object structure.
+ * @param [in]	fmt
+ *				Pointer to the null terminated format string. The terminator charactor will not be written.
+ *              ...
+ *              Optional arguments...
+ * @retval		When the function succeeded, it returns number of characters written. When the function failed due to disk full or any error, an EOF (-1) will be returned.
+ * @note        Available when _FS_READONLY == 0 and _USE_STRFUNC is 1 or 2. When it is set to 2, '\n's contained in the output are converted to '\r'+'\n'.  \n
+ *              When FatFs is configured to Unicode API (_LFN_UNICODE == 1), data types on the srting fuctions, f_putc(), f_puts(), f_printf() and f_gets(), is also switched to Unicode. The character encoding on the file to be read/written via those functions is selected by _STRF_ENCODE option.
+ */
+int f_printf (
+  FIL* fp,          /* [IN] File object */
+  const TCHAR* fmt, /* [IN] Format stirng */
+  ...
+);
+/**
+ * @brief	    The f_tell function gets the current read/write pointer of a file.
+ * @details     In this revision, the f_tell() function is implemented as a macro. \n
+ *              #define f_tell(fp) ((fp)->fptr)
+ * @param [in]	fp
+ *				Pointer to the open file object structure.
+ * @retval		Returns current read/write pointer of the file.
+ * @note        Always available.
+ */
+DWORD f_tell (
+  FIL* fp   /* [IN] File object */
+);
+/**
+ * @brief	    The f_eof function tests for end-of-file on a file.
+ * @details     In this revision, this function is implemented as a macro. \n
+ *              #define f_eof(fp) ((int)((fp)->fptr == (fp)->fsize))
+ * @param [in]	fp
+ *				Pointer to the open file object structure.
+ * @retval		The f_eof() function returns a non-zero value if the read/write pointer has reached end of the file; otherwise it returns a zero.
+ * @note        Always available.
+ */
+int f_eof (
+  FIL* fp   /* [IN] File object */
+);
+/**
+ * @brief	    The f_size function gets the size of a file. 
+ * @details     In this revision, the f_size() function is implemented as a macro.\n
+ *              #define f_size(fp) ((fp)->fsize)
+ * @param [in]	fp
+ *				Pointer to the open file object structure.
+ * @retval		Returns the size of the file in unit of byte.
+ * @note        Always available.
+ */
+DWORD f_size (
+  FIL* fp   /* [IN] File object */
+);
+/**
+ * @brief	    The f_error tests for an error on a file.
+ * @details     In this revision, this function is implemented as a macro.
+ *              #define f_error(fp) ((fp)->flag)
+ * @param [in]	fp
+ *				Pointer to the open file object structure.
+ * @retval		Returns a non-zero value if a hard error has occured; otherwise it returns a zero.
+ * @note        Always available.
+ */
+int f_error (
+  FIL* fp   /* [IN] File object */
+);
+/**
+ * @brief	    The disk_status function returns the current drive status. 
+ * @param [in]	pdrv
+ *				Physical drive number to identify the target device. Always zero at single drive system.
+ * @retval		The current drive status is returned in combination of status flags described below. FatFs refers only STA_NOINIT and STA_PROTECT. \n
+ * @retval      STA_NOINIT \n
+ *              Indicates that the device is not initialized. This flag is set on system reset, media removal or failure of disk_initialize() function. 
+ *              It is cleared on disk_initialize() function succeeded. 
+ *              Media change that occurs asynchronously must be captured and reflect it to the status flags, or auto-mount feature will not work correctly. If the system does not support media change detect feature, application program needs to force de-initialize the file system object with f_mount() function after the media change. \n
+ * @retval      STA_NODISK \n
+ *              Indicates that no medium in the drive. This is always cleared on fixed disk drive.
+ *              Note that FatFs does not refer this flag.
+ * @retval      STA_PROTECT \n
+ *              Indicates that the medium is write protected. This is always cleared on the drives without write protect feature.
+ *              Not valid if no medium in the drive. 
+ */
+DSTATUS disk_status (
+  BYTE pdrv     /* [IN] Physical drive number */
+);
+/**
+ * @brief	    The disk_initialize function initializes the storage device.
+ * @details     This function initializes the storage device and put it ready to generic read/write. When the function succeeded, STA_NOINIT flag in the return value is cleared. \n
+ *              <b>Application program MUST NOT call this function, or FAT structure on the volume can be broken. To re-initialize the file system, use f_mount() function instead.</b>
+ *              This function is called at volume mount process by FatFs module to manage the media change.
+ * @param [in]	pdrv
+ *				Physical drive number to identify the target device. Always zero at single drive system.
+ * @retval		This function returns the current drive status flags as the result.
+ *              For details of the drive status, refer to the disk_status() function.
+ */
+DSTATUS disk_initialize (
+  BYTE pdrv           /* [IN] Physical drive number */
+);
+
+/**
+ * @brief	    The disk_read function reads sector(s) from the storage device.
+ * @details     The data read/write operation to the storage devices is done in unit of sector. FatFs supports the sector size in range of from 512 to 4096 bytes. When FatFs is configured to fixed sector size (_MIN_SS == MAX_SS, this will be the most case), the read/write function must work at that sector size.
+ *              If variable sector size is selected (_MIN_SS < MAX_SS), FatFs inquires the sector size with disk_ioctl() after initialization. \n
+ *              The memory address specified by buff is not that always aligned to word boundary because the argument is defined as BYTE*. The misaligned read/write request can occure at direct transfer. 
+ *              If the bus architecture, especially DMA controller, does not allow misaligned memory access, it should be solved in this function. There are some workarounds described below to avoid this issue. \n
+ *              - Convert word transfer to byte transfer in this function if needed. - Recommended.
+ *              - For f_read(), avoid long read request that includes a whole of sector. - Direct transfer will never occure.
+ *              - For f_read(fp, buff, btr, &br), make sure that (((UINT)buff & 3) == (f_tell(fp) & 3)) is true. - Word aligned direct transfer is guaranteed. \n
+ *              Generally, a multiple sector transfer request must not be split into single sector transactions to the storage device, or you will not get good read throughput.
+ * @param [in]	pdrv
+ *				Physical drive number to identify the target device.
+ * @param [out]	buff
+ *				Pointer to the byte array to store the read data.
+ * @param [in]	sector
+ *				Start sector number in 32-bit LBA.
+ * @param [in]	count
+ *			    Number of sectors to read in range of from 1 to 128..
+ * @retval      RES_OK (0) \n
+ *              The function succeeded. \n
+ * @retval      RES_ERROR \n
+ *              Any hard error occured during the read operation and could not recover it. \n
+ * @retval      RES_PARERR \n
+ *              Invalid parameter. \n
+ * @retval      RES_NOTRDY \n
+ *              The device has not been initialized.
+ */
+DRESULT disk_read (
+  BYTE pdrv,     /* [IN] Physical drive number */
+  BYTE* buff,    /* [OUT] Pointer to the read data buffer */
+  DWORD sector,  /* [IN] Start sector number */
+  UINT count     /* [IN] Number of sectros to read */
+);
+/**
+ * @brief	    The disk_write writes sector(s) to the storage device.
+ * @details     The specified memory address is not that always aligned to word boundary because the type of pointer is defined as BYTE*. For more information, refer to the description of disk_read() function. \n
+ *              Generally, a multiple sector transfer request must not be split into single sector transactions to the storage device, or you will never get good write throughput. \n
+ *              FatFs expects delayed write feature of the disk functions. The write operation to the media need not to be completed due to write operation is in progress or only stored it into the cache buffer when return from this function.
+ *              But data on the buff is invalid after return from this function. The write completion request is done by CTRL_SYNC command of disk_ioctl() function. Therefore, if delayed write feature is implemented, the write throughput may be improved. \n
+ *              Application program MUST NOT call this function, or FAT structure on the volume can be collapsed.
+ * @param [in]	pdrv
+ *				Physical drive number to identify the target device.
+ * @param [in]	buff
+ *				Pointer to the byte array to be written. The size of data to be written is sector size * count bytes.
+ * @param [in]	sector
+ *				Start sector number in 32-bit LBA.
+ * @param [in]	count
+ *			    Number of sectors to write in range of from 1 to 128.
+ * @retval    	RES_OK(0)  \n
+ *              The function succeeded.
+ * @retval      RES_ERROR \n
+ *              Any hard error occured during the write operation and could not recover it.
+ * @retval      RES_WRPRT \n
+ *              The medium is write protected.
+ * @retval      RES_PARERR \n
+ *              Invalid parameter.
+ * @retval    	RES_NOTRDY \n
+ *              The device has not been initialized.
+ * @note        This function is not needed when _FS_READONLY == 1.
+ */
+DRESULT disk_write (
+  BYTE drv,         /* [IN] Physical drive number */
+  const BYTE* buff, /* [IN] Pointer to the data to be written */
+  DWORD sector,     /* [IN] Sector number to write from */
+  UINT count        /* [IN] Number of sectors to write */
+);
+/**
+ * @brief	    The disk_ioctl function cntrols device specific features and miscellaneous functions other than generic read/write.
+ * @details     The FatFs module requires only five device independent commands described below. \n
+ *                        \n<center> <b> Standard ioctl command used by FatFs: </b> </center>
+Command	   		     |										Description										                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CTRL_SYNC            | Make sure that the device has finished pending write process. If the disk I/O module has a write back cache, the dirty buffers must be written back to the media immediately. Nothing to do for this command if each write operation to the media is completed within the disk_write() function.          																				                                                                                                                                                                               |
+GET_SECTOR_COUNT     | Returns number of available sectors on the drive into the DWORD variable pointed by buff. This command is used by only f_mkfs() and f_fdisk() function to determine the volume/partition size to be created. Required at _USE_MKFS == 1 or _MULTI_PARTITION == 1.          																		                                                                                                                                                                                                                       |
+GET_SECTOR_SIZE      | Returns sector size of the media into the WORD variable pointed by buff. Valid return values of this command are 512, 1024, 2048 and 4096. This command is required only at variable sector size configuration, _MAX_SS > _MIN_SS. At fixed sector size configuration, _MAX_SS == _MIN_SS, this command is not used and the device must work at that sector size.                                                               																			                                                           |
+GET_BLOCK_SIZE       | Returns erase block size of the flash memory media in unit of sector into the DWORD variable pointed by buff. The allowable value is from 1 to 32768 in power of 2. Return 1 if the erase block size is unknown or non flash memory media. This command is used by only f_mkfs() function and it attempts to align data area to the erase block boundary. Required at _USE_MKFS == 1.          																				                                                                                           |
+CTRL_TRIM            | Informs the device the data on the block of sectors that specified by DWORD array {<start sector>, <end sector>} pointed by buff is no longer needed and it may be erased. This is an identical command to Trim of ATA device. When this feature is not supported or not a flash memory device, nothing to do for this command. The FatFs does not check the result code and the file function is not affected even if the sector block was not erased well. This command is called on removing a cluster chain and f_mkfs() function. Required at _USE_TRIM == 1.     |
+*
+* @details       FatFs never uses any device dependent command nor user defined command. Following table shows an example of non-standard commands usable for some applications.
+*                <center> <b> Example of optional ioctl command </b> </center>
+
+Command	   		     |										Description										                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CTRL_FORMAT          | Create a physical format on the media. If buff is not null, it is pointer to the call-back function for progress notification.|
+CTRL_POWER_IDLE	     | Put the device idle state. STA_NOINIT in status flag may not be set if the device goes active state by generic read/write function.    |
+CTRL_POWER_OFF       | Put the device off state. Shut-down the power to the device and deinitialize the device interface if needed. STA_NOINIT in status flag must be set. The device goes active state by disk_initialize() function.|
+CTRL_LOCK            | Lock media eject mechanism.        |
+CTRL_UNLOCK          | Unlock media eject mechanism.      |
+MMC_GET_CSD          | Eject media cartridge. STA_NOINIT and STA_NODISK in status flag are set after the function succeeded.|
+MMC_GET_CID          | Get card type. The type flags, bit0:MMCv3, bit1:SDv1, bit2:SDv2+ and bit3:LBA, is stored to a BYTE variable pointed by buff. (MMC/SDC specific command)|
+MMC_GET_OCR          | Get OCR register into a 4-byte buffer pointed by buff. (MMC/SDC specific command)|
+MMC_GET_SDSTAT       | Get SDSTATUS register into a 64-byte buffer pointed by buff. (SDC specific command)|
+ATA_GET_REV          | Get the revision string into a 16-byte buffer pointed by buff. (ATA/CFC specific command)|
+ATA_GET_MODEL        | Get the model string into a 40-byte buffer pointed by buff. (ATA/CFC specific command)|
+ATA_GET_SN           | Get the serial number string into a 20-byte buffer pointed by buff. (ATA/CFC specific command)|
+ *
+ * @param [in]	    pdrv
+ *				    Physical drive number to identify the target device.
+ * @param [in]	    cmd
+ *				    Command code.
+ * @param [in,out]  buff
+ *                  Pointer to the parameter depends on the command code. Do not care if no parameter to be passed.
+ * @retval          RES_OK(0) \n
+ *                  The function succeeded.
+ * @retval          RES_ERROR \n
+ *                  An error occured.
+ * @retval          RES_PARERR \n
+ *                  The command code or parameter is invalid.
+ * @retval          RES_NOTRDY \n
+ *                  The device has not been initialized.
+ * @note            The disk_ioctl function is not needed when _FS_READONLY == 1 and _MAX_SS == _MIN_SS.
+ */
+DRESULT disk_ioctl (
+  BYTE pdrv,     /* [IN] Drive number */
+  BYTE cmd,      /* [IN] Control command code */
+  void* buff     /* [I/O] Parameter and data buffer */
+);
+
+/**
+ * @brief	    The get_fattime function gets current time.
+ * @details     The get_fattime() function shall return any valid time even if the system does not support a real time clock. If a zero is returned, the file will not have a valid timestamp.
+ * @param [in]	pdrv
+ *				Physical drive number to identify the target device.
+ * @param [in]	buff
+ *				Pointer to the byte array to be written. The size of data to be written is sector size * count bytes.
+ * @param [in]	sector
+ *				Start sector number in 32-bit LBA.
+ * @param [in]	count
+ *			    Number of sectors to write in range of from 1 to 128.
+ * @retval	    Currnet time is returned with packed into a DWORD value. The bit field is as follows: \n
+ *  @retval	    bit31:25 \n
+ *              Year origin from the 1980 (0..127)
+ *  @retval	    bit24:21 \n
+ *              Month (1..12)
+ *  @retval	    bit20:16  \n
+ *              Day of the month(1..31)
+ *  @retval	    bit15:11 \n
+ *              Hour (0..23)
+ * @retval	    bit10:5  \n
+ *              Minute (0..59)
+ * @retval	    bit4:0  \n
+ *              Second / 2 (0..29)
+ * @note        This function is not needed when _FS_READONLY == 1.
+ */
+DWORD get_fattime (void);
+/*! @} */
+

@@ -1,0 +1,114 @@
+/** 
+@page XDK_AWS_SEND_DATA_OVER_MQTT_USER_GUIDE XDK AwsSendDataOverMQTT Application User Guide 
+@brief XDK AwsSendDataOverMQTT application shows how to use the MQTT protocol to transfer the sensor data to an AWS server using Amazon FreeRTOS.
+
+\section XDK_AWS_SEND_DATA_OVER_MQTT_USER_GUIDE_USAGE XDK AwsSendDataOverMQTT Application User Guide
+
+
+<hr>
+1. Find the files placed under AwsSendDataOverMQTT\source\config(4 files)
+\code
+config.txt – Configuration file
+rootCA.der – Root Certificate
+xdk-cert.der - A certificate for this thing
+xdk-priv.der – Private Certificate
+\endcode
+
+2. Modify the config.txt with ssid, password , serverurl, serverport , brokerurl and broker port as shown below in config.txt.
+@note brokerurl - Go to IoT core available under Internet of Things of Home page after logging into http://console.aws.amazon.com/   brokerurl you can get from Settings under Endpoint 
+\code
+          {
+	"wlan":
+	{
+		"isenterprise" : 0,
+		"ishostpgmenabled" : 0,
+		"ssid" : "xxxxx",
+		"username" : "xxxxx",
+		"password" : "xxxxx",
+		"isstatic" : 0,
+		"ipaddr" : "0.0.0.0",
+		"gwaddr" : "0.0.0.0",
+		"dnsaddr" : "0.0.0.0",
+		"mask" : "0.0.0.0"
+	},
+	"sntp":
+	{
+		"serverurl": "0.de.pool.ntp.org",
+		"serverport": 123
+	},
+	"mqtt":
+	{
+		"clientid": "xyz",
+		"brokerurl": "xyz.iot.eu-central-1.amazonaws.com",
+		"brokerport": 8883
+	}
+}
+\endcode
+
+3. Go to IoT core after looging into http://console.aws.amazon.com/ 
+The Home page will open as shown below
+
+\image html AwsSendDataOverMqtt-1.png "Home Page for Aws" width=\textwidth 
+
+<li>brokerurl can be get from Settings under Endpoint field</li>
+\image html AwsSendDataOverMqtt-2.png "Brokerurl for the config.txt" width=\textwidth 
+
+\subsection XDK_AWS_SEND_DATA_OVER_MQTT_USER_GUIDE_SUBSECTION1 Steps to Generate certificate
+
+1. To create the certificate follow the below steps Go to IoT core page available under Internet of Things
+<ul>
+	<li>Go to Manage ->Things</li>
+	\image html AwsSendDataOverMqtt-3.png
+	
+	<li>Create a Device under Things</li>
+	\image html AwsSendDataOverMqtt-4.png
+
+	<li>Click on "Create a single thing"</li>
+	\image html AwsSendDataOverMqtt-5.png
+
+	<li>Name your device under “Name” and click next</li>
+	\image html AwsSendDataOverMqtt-6.png
+
+	<li>Creating certificate have two possibilities</li>
+	<ul>
+		<li>For the newly created device</li>
+		\image html AwsSendDataOverMqtt-7.png
+		<li>If your device is already created then go to the created device for example XDK-Custom -> Go to Security -> create certificate</li>
+		\image html AwsSendDataOverMqtt-8.png
+	<\ul>
+	<li>Download the certificate and key 1,2 and 3 as per the image given below and afterwards click on Activate. If not activated then the device will not subscribe. So everytime the device should be activated when you flash the code<\li>
+	\image html AwsSendDataOverMqtt-9.png
+
+	<li>Downloaded certificates will be in .pem format which should be converted to .der format </li>
+		After downloading the certificate -> go to the place where it is saved -> open git bash and use the command given below
+\code
+        $ openssl x509 -outform der -in downloaded_cert.pem -out output.der -> for certificate (.cert.pem / root CA )
+        $ openssl rsa -outform der -in key.pem -out private.der -> for converting the private key
+\endcode
+
+@note Downloaded_cert .pem is the downloaded file name and output .der which can be named anything.
+@note Save as a .pem in local system (Kindly remove space while saving the certificate)
+</ul>
+
+\subsection XDK_AWS_SEND_DATA_OVER_MQTT_USER_GUIDE_SUBSECTION2 Steps to flash the application and see the data sent over Mqtt
+
+1.	Modified the AppController.c file with the above modified certificate name
+\code
+APP_ROOT_CA_FILE_NAME- created by RSA 2048 bit key: VeriSign Class 3 Public Primary G5    root CA certificate file name
+APP_PRIVATE_KEY_FILE_NAME – created by Private Key file name
+APP_CLIENT_CERT_KEY_FILE_NAME –created by - A certificate for this thing (.pem.cert) file name
+\endcode
+
+2. 	Place the generated certificates after converting to der format along with config.txt file in the SD Card and after modified as per point 4 compile and flash the Application, after the SNTP is success and the data can be seen in TeraTerm or in any console window
+\image html AwsSendDataOverMqtt-10.png
+
+3.	Go to Test -> and specify the topic for eg : “BCDS/XDK110/example/out” as mention in application and subscribe to the topic
+\image html AwsSendDataOverMqtt-11.png
+
+4.	After subscribing you can see the data streaming as per the below picture
+\image html AwsSendDataOverMqtt-12.png
+
+5.	Once the Application run the files in the SD card is converted to .bkp . The files can be modified again by placing the .der in the SD Card whichever file is required
+\image html AwsSendDataOverMqtt-13.png
+
+*/

@@ -1,0 +1,705 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_x_d_k___storage_8h" kind="file">
+    <compoundname>XDK_Storage.h</compoundname>
+    <includes refid="_b_c_d_s___retcode_8h" local="yes">BCDS_Retcode.h</includes>
+    <includedby refid="_f_o_t_a_8c" local="yes">SDK/xdk110/Common/source/Utility/FOTA.c</includedby>
+    <includedby refid="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" local="yes">SDK/xdk110/Apps/AwsSendDataOverMQTT/source/AppController.c</includedby>
+    <includedby refid="_bosch_x_d_k_cloud_connectivity_2source_2_app_controller_8c" local="yes">SDK/xdk110/Apps/BoschXDKCloudConnectivity/source/AppController.c</includedby>
+    <includedby refid="_sd_card_example_2source_2_app_controller_8c" local="yes">SDK/xdk110/Apps/SdCardExample/source/AppController.c</includedby>
+    <includedby refid="_virtual_xdk_demo_2source_2_app_controller_8c" local="yes">SDK/xdk110/Apps/VirtualXdkDemo/source/AppController.c</includedby>
+    <incdepgraph>
+      <node id="23417">
+        <label>stdbool.h</label>
+      </node>
+      <node id="23416">
+        <label>stdint.h</label>
+      </node>
+      <node id="23414">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="23415" relation="include">
+        </childnode>
+      </node>
+      <node id="23419">
+        <label>stdlib.h</label>
+      </node>
+      <node id="23413">
+        <label>SDK/xdk110/Common/include/Utility/XDK_Storage.h</label>
+        <link refid="XDK_Storage.h"/>
+        <childnode refid="23414" relation="include">
+        </childnode>
+      </node>
+      <node id="23418">
+        <label>string.h</label>
+      </node>
+      <node id="23415">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="23416" relation="include">
+        </childnode>
+        <childnode refid="23417" relation="include">
+        </childnode>
+        <childnode refid="23418" relation="include">
+        </childnode>
+        <childnode refid="23419" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="23424">
+        <label>SDK/xdk110/Apps/SdCardExample/source/AppController.c</label>
+        <link refid="_sd_card_example_2source_2_app_controller_8c"/>
+      </node>
+      <node id="23420">
+        <label>SDK/xdk110/Common/include/Utility/XDK_Storage.h</label>
+        <link refid="XDK_Storage.h"/>
+        <childnode refid="23421" relation="include">
+        </childnode>
+        <childnode refid="23422" relation="include">
+        </childnode>
+        <childnode refid="23423" relation="include">
+        </childnode>
+        <childnode refid="23424" relation="include">
+        </childnode>
+        <childnode refid="23425" relation="include">
+        </childnode>
+      </node>
+      <node id="23421">
+        <label>SDK/xdk110/Common/source/Utility/FOTA.c</label>
+        <link refid="_f_o_t_a_8c"/>
+      </node>
+      <node id="23423">
+        <label>SDK/xdk110/Apps/BoschXDKCloudConnectivity/source/AppController.c</label>
+        <link refid="_bosch_x_d_k_cloud_connectivity_2source_2_app_controller_8c"/>
+      </node>
+      <node id="23422">
+        <label>SDK/xdk110/Apps/AwsSendDataOverMQTT/source/AppController.c</label>
+        <link refid="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c"/>
+      </node>
+      <node id="23425">
+        <label>SDK/xdk110/Apps/VirtualXdkDemo/source/AppController.c</label>
+        <link refid="_virtual_xdk_demo_2source_2_app_controller_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_storage___read___s" prot="public">Storage_Read_S</innerclass>
+    <innerclass refid="struct_storage___rename___s" prot="public">Storage_Rename_S</innerclass>
+    <innerclass refid="struct_storage___setup___s" prot="public">Storage_Setup_S</innerclass>
+    <innerclass refid="struct_storage___transfer___s" prot="public">Storage_Transfer_S</innerclass>
+    <innerclass refid="struct_storage___write___s" prot="public">Storage_Write_S</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___s_t_o_r_a_g_e_1ga7c9527c473ba04ca1adca71dfd3d0cd6" prot="public" static="no">
+        <name>Storage_Medium_S</name>
+        <enumvalue id="group___s_t_o_r_a_g_e_1gga7c9527c473ba04ca1adca71dfd3d0cd6af8592ed1e35cbefa066b578c0afc9d5d" prot="public">
+          <name>STORAGE_MEDIUM_SD_CARD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___s_t_o_r_a_g_e_1gga7c9527c473ba04ca1adca71dfd3d0cd6a67594539c711626f5812b331ffb83afa" prot="public">
+          <name>STORAGE_MEDIUM_WIFI_FILE_SYSTEM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum to represent the Storage mediums. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" line="80" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" bodystart="79" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___s_t_o_r_a_g_e_1ga5c58375594949bb732f989e27c9e793a" prot="public" static="no">
+        <type>enum <ref refid="group___s_t_o_r_a_g_e_1ga7c9527c473ba04ca1adca71dfd3d0cd6" kindref="member">Storage_Medium_S</ref></type>
+        <definition>typedef enum Storage_Medium_S Storage_Medium_T</definition>
+        <argsstring></argsstring>
+        <name>Storage_Medium_T</name>
+        <briefdescription>
+<para>Typedef to represent the Storage medium. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" line="61" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___s_t_o_r_a_g_e_1gaae2b47dbeb659a803231eceb355c68b9" prot="public" static="no">
+        <type>struct <ref refid="struct_storage___read___s" kindref="compound">Storage_Read_S</ref></type>
+        <definition>typedef struct Storage_Read_S Storage_Read_T</definition>
+        <argsstring></argsstring>
+        <name>Storage_Read_T</name>
+        <briefdescription>
+<para>Typedef to represent the Storage read feature. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" line="61" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___s_t_o_r_a_g_e_1ga70fd896dc272e4dd390c931c928e4531" prot="public" static="no">
+        <type>struct <ref refid="struct_storage___rename___s" kindref="compound">Storage_Rename_S</ref></type>
+        <definition>typedef struct Storage_Rename_S Storage_Rename_T</definition>
+        <argsstring></argsstring>
+        <name>Storage_Rename_T</name>
+        <briefdescription>
+<para>Typedef to represent the Storage rename feature. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" line="61" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___s_t_o_r_a_g_e_1ga0a3630a4977c65faf188ae7ffd12364e" prot="public" static="no">
+        <type>struct <ref refid="struct_storage___setup___s" kindref="compound">Storage_Setup_S</ref></type>
+        <definition>typedef struct Storage_Setup_S Storage_Setup_T</definition>
+        <argsstring></argsstring>
+        <name>Storage_Setup_T</name>
+        <briefdescription>
+<para>Typedef to represent the Storage setup feature. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" line="61" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___s_t_o_r_a_g_e_1gaa59ae7ec096e2fe0a896eccaadfea697" prot="public" static="no">
+        <type>struct <ref refid="struct_storage___setup___s" kindref="compound">Storage_Setup_S</ref></type>
+        <definition>typedef struct Storage_Setup_S Storage_Status_T</definition>
+        <argsstring></argsstring>
+        <name>Storage_Status_T</name>
+        <briefdescription>
+<para>Typedef to represent the Storage status feature. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" line="61" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___s_t_o_r_a_g_e_1gac4a1e100d61fce7f4bc0055e9a071999" prot="public" static="no">
+        <type>struct <ref refid="struct_storage___transfer___s" kindref="compound">Storage_Transfer_S</ref></type>
+        <definition>typedef struct Storage_Transfer_S Storage_Transfer_T</definition>
+        <argsstring></argsstring>
+        <name>Storage_Transfer_T</name>
+        <briefdescription>
+<para>Typedef to represent the Storage transfer feature. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" line="61" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___s_t_o_r_a_g_e_1gac44d8d61da49d1f97a4914b0b1e3d379" prot="public" static="no">
+        <type>struct <ref refid="struct_storage___write___s" kindref="compound">Storage_Write_S</ref></type>
+        <definition>typedef struct Storage_Write_S Storage_Write_T</definition>
+        <argsstring></argsstring>
+        <name>Storage_Write_T</name>
+        <briefdescription>
+<para>Typedef to represent the Storage write feature. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" line="61" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___s_t_o_r_a_g_e_1gaa9a50755f6b70e0d7c2833c31cd89d3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Storage_Close</definition>
+        <argsstring>(void)</argsstring>
+        <name>Storage_Close</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This will close the Storage. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para><ref refid="group___s_t_o_r_a_g_e_1gac6798a3d0f8457a7deb43fe8034476a3" kindref="member">Storage_Setup</ref> must have been successful prior.</para></listitem><listitem><para>If <ref refid="group___s_t_o_r_a_g_e_1ga942029eca2abd902ea45626fab4d0dcd" kindref="member">Storage_Enable</ref> is done prior then it should be disabled by calling <ref refid="group___s_t_o_r_a_g_e_1gacffdfe925a56d080c3954eb100396c4e" kindref="member">Storage_Disable</ref> before calling <ref refid="group___s_t_o_r_a_g_e_1gaa9a50755f6b70e0d7c2833c31cd89d3d" kindref="member">Storage_Close</ref>.</para></listitem><listitem><para>After calling this API storage module can&apos;t be used. </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" line="301" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_t_o_r_a_g_e_1ga1611d74fdf8169714651ccf84fc8f46d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Storage_Delete</definition>
+        <argsstring>(Storage_Medium_T medium, const char *fileName)</argsstring>
+        <name>Storage_Delete</name>
+        <param>
+          <type><ref refid="group___s_t_o_r_a_g_e_1ga5c58375594949bb732f989e27c9e793a" kindref="member">Storage_Medium_T</ref></type>
+          <declname>medium</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+<para>This will delete the given file in the storage. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">medium</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Storage medium in which the file is to be deleted.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the file which has to be deleted.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para><ref refid="group___s_t_o_r_a_g_e_1ga942029eca2abd902ea45626fab4d0dcd" kindref="member">Storage_Enable</ref> must have been successful prior. </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" line="257" column="1"/>
+        <referencedby refid="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_sd_card_example_2source_2_app_controller_8c" startline="360" endline="399">AppControllerEnable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___s_t_o_r_a_g_e_1gacffdfe925a56d080c3954eb100396c4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Storage_Disable</definition>
+        <argsstring>(Storage_Medium_T medium)</argsstring>
+        <name>Storage_Disable</name>
+        <param>
+          <type><ref refid="group___s_t_o_r_a_g_e_1ga5c58375594949bb732f989e27c9e793a" kindref="member">Storage_Medium_T</ref></type>
+          <declname>medium</declname>
+        </param>
+        <briefdescription>
+<para>This will disable the Storage medium. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">medium</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Storage medium that has to be disabled.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para><ref refid="group___s_t_o_r_a_g_e_1ga942029eca2abd902ea45626fab4d0dcd" kindref="member">Storage_Enable</ref> must have been successful prior. </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" line="289" column="1"/>
+        <referencedby refid="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_sd_card_example_2source_2_app_controller_8c" startline="259" endline="347">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___s_t_o_r_a_g_e_1ga942029eca2abd902ea45626fab4d0dcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Storage_Enable</definition>
+        <argsstring>(void)</argsstring>
+        <name>Storage_Enable</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This will enable the Storage. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para><ref refid="group___s_t_o_r_a_g_e_1gac6798a3d0f8457a7deb43fe8034476a3" kindref="member">Storage_Setup</ref> must have been successful prior. </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" line="176" column="1"/>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga5ef9cc8f277726dc19c525c8049d388f" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="742" endline="796">AppControllerEnable</referencedby>
+        <referencedby refid="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1ga0d6ae41fbda1777d3e3b17ecb8aa7fc6" compoundref="_sd_card_example_2source_2_app_controller_8c" startline="259" endline="347">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___s_t_o_r_a_g_e_1ga7ba540e994283041d1649880dc411de7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Storage_IsAvailable</definition>
+        <argsstring>(Storage_Medium_T medium, bool *status)</argsstring>
+        <name>Storage_IsAvailable</name>
+        <param>
+          <type><ref refid="group___s_t_o_r_a_g_e_1ga5c58375594949bb732f989e27c9e793a" kindref="member">Storage_Medium_T</ref></type>
+          <declname>medium</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+<para>This will validate if the Storage is available or not. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">medium</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Storage medium to be validated for availability</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the availability of the requested storage medium status</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para>In case of failure the status will be false</para></listitem><listitem><para><ref refid="group___s_t_o_r_a_g_e_1ga942029eca2abd902ea45626fab4d0dcd" kindref="member">Storage_Enable</ref> must have been successful prior.</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" line="193" column="1"/>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gab69e900037ff919feff8de34718fd2f5" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="552" endline="721">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___s_t_o_r_a_g_e_1gae487ac6d88ef258f00717bf48bd76d54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Storage_Read</definition>
+        <argsstring>(Storage_Medium_T medium, Storage_Read_T *readCredentials)</argsstring>
+        <name>Storage_Read</name>
+        <param>
+          <type><ref refid="group___s_t_o_r_a_g_e_1ga5c58375594949bb732f989e27c9e793a" kindref="member">Storage_Medium_T</ref></type>
+          <declname>medium</declname>
+        </param>
+        <param>
+          <type><ref refid="group___s_t_o_r_a_g_e_1gaae2b47dbeb659a803231eceb355c68b9" kindref="member">Storage_Read_T</ref> *</type>
+          <declname>readCredentials</declname>
+        </param>
+        <briefdescription>
+<para>This will read the data from the storage. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">medium</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Storage medium in while the file is to be renamed.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">readCredentials</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the Storage read structure.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para><ref refid="group___s_t_o_r_a_g_e_1ga942029eca2abd902ea45626fab4d0dcd" kindref="member">Storage_Enable</ref> must have been successful prior. </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" line="209" column="1"/>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gab69e900037ff919feff8de34718fd2f5" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="552" endline="721">AppControllerFire</referencedby>
+        <referencedby refid="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1gae8bb7f509ed9f6c4b1e637fe89b1b09a" compoundref="_sd_card_example_2source_2_app_controller_8c" startline="124" endline="191">AppControllerFatFileSystemWriteRead</referencedby>
+        <referencedby refid="_f_o_t_a_8c_1a097478fcf96e268decbc6b9d276b4ea1" compoundref="_f_o_t_a_8c" startline="143" endline="236">VerifyImage</referencedby>
+        <referencedby refid="group___f_o_t_a_1gaaad99c1582b78008e934940d22cd799a" compoundref="_f_o_t_a_8c" startline="239" endline="275">FOTA_ReadHeader</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___s_t_o_r_a_g_e_1ga9378fd207d27f74136a8d94426fce6d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Storage_Rename</definition>
+        <argsstring>(Storage_Medium_T medium, Storage_Rename_T *renameCredentials)</argsstring>
+        <name>Storage_Rename</name>
+        <param>
+          <type><ref refid="group___s_t_o_r_a_g_e_1ga5c58375594949bb732f989e27c9e793a" kindref="member">Storage_Medium_T</ref></type>
+          <declname>medium</declname>
+        </param>
+        <param>
+          <type><ref refid="group___s_t_o_r_a_g_e_1ga70fd896dc272e4dd390c931c928e4531" kindref="member">Storage_Rename_T</ref> *</type>
+          <declname>renameCredentials</declname>
+        </param>
+        <briefdescription>
+<para>This will rename the file in the storage. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">medium</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Storage medium in while the file is to be renamed.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">renameCredentials</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the storage rename credentials.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para><ref refid="group___s_t_o_r_a_g_e_1ga942029eca2abd902ea45626fab4d0dcd" kindref="member">Storage_Enable</ref> must have been successful prior. </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" line="241" column="1"/>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gab69e900037ff919feff8de34718fd2f5" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="552" endline="721">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___s_t_o_r_a_g_e_1gac6798a3d0f8457a7deb43fe8034476a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Storage_Setup</definition>
+        <argsstring>(Storage_Setup_T *setup)</argsstring>
+        <name>Storage_Setup</name>
+        <param>
+          <type><ref refid="group___s_t_o_r_a_g_e_1ga0a3630a4977c65faf188ae7ffd12364e" kindref="member">Storage_Setup_T</ref> *</type>
+          <declname>setup</declname>
+        </param>
+        <briefdescription>
+<para>This will setup the Storage. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">setup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the Storage setup feature</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para>This must be the first API to be called if this storage feature is to be used.</para></listitem><listitem><para>Do not call this API more than once. </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" line="166" column="1"/>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1ga5ca12481e985f2cd2437fe712e08c9b7" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="817" endline="870">AppControllerSetup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___s_t_o_r_a_g_e_1ga5cbf6966badbbc306e0f03d9ce495576" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Storage_Transfer</definition>
+        <argsstring>(Storage_Medium_T sourceMedium, Storage_Medium_T destinationMedium, Storage_Transfer_T *transferCredentials)</argsstring>
+        <name>Storage_Transfer</name>
+        <param>
+          <type><ref refid="group___s_t_o_r_a_g_e_1ga5c58375594949bb732f989e27c9e793a" kindref="member">Storage_Medium_T</ref></type>
+          <declname>sourceMedium</declname>
+        </param>
+        <param>
+          <type><ref refid="group___s_t_o_r_a_g_e_1ga5c58375594949bb732f989e27c9e793a" kindref="member">Storage_Medium_T</ref></type>
+          <declname>destinationMedium</declname>
+        </param>
+        <param>
+          <type><ref refid="group___s_t_o_r_a_g_e_1gac4a1e100d61fce7f4bc0055e9a071999" kindref="member">Storage_Transfer_T</ref> *</type>
+          <declname>transferCredentials</declname>
+        </param>
+        <briefdescription>
+<para>This will transfer the file from source to destination storage medium. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sourceMedium</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source Storage medium from which the file is to be transfered.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">destinationMedium</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination Storage medium to which the file is to be transfered.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">transferCredentials</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the transfer credentials.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para><ref refid="group___s_t_o_r_a_g_e_1ga942029eca2abd902ea45626fab4d0dcd" kindref="member">Storage_Enable</ref> must have been successful prior. </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" line="276" column="1"/>
+        <referencedby refid="group___a_w_s___s_e_n_d___d_a_t_a___o_v_e_r___m_q_t_t_1gab69e900037ff919feff8de34718fd2f5" compoundref="_aws_send_data_over_m_q_t_t_2source_2_app_controller_8c" startline="552" endline="721">AppControllerFire</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___s_t_o_r_a_g_e_1ga552b931bf8ae08bb91e8d1366ee89b66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Storage_Write</definition>
+        <argsstring>(Storage_Medium_T medium, Storage_Write_T *writeCredentials)</argsstring>
+        <name>Storage_Write</name>
+        <param>
+          <type><ref refid="group___s_t_o_r_a_g_e_1ga5c58375594949bb732f989e27c9e793a" kindref="member">Storage_Medium_T</ref></type>
+          <declname>medium</declname>
+        </param>
+        <param>
+          <type><ref refid="group___s_t_o_r_a_g_e_1gac44d8d61da49d1f97a4914b0b1e3d379" kindref="member">Storage_Write_T</ref> *</type>
+          <declname>writeCredentials</declname>
+        </param>
+        <briefdescription>
+<para>This will write the data in the storage. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">medium</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Storage medium in while the file is to be renamed.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">writeCredentials</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the storage write credentials.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RETCODE_OK on success, or an error code otherwise.</para></simplesect>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para><ref refid="group___s_t_o_r_a_g_e_1ga942029eca2abd902ea45626fab4d0dcd" kindref="member">Storage_Enable</ref> must have been successful prior. </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h" line="225" column="1"/>
+        <referencedby refid="group___b_o_s_c_h___x_d_k___c_l_o_u_d___c_o_n_n_e_c_t_i_v_i_t_y_1gab69e900037ff919feff8de34718fd2f5" compoundref="_bosch_x_d_k_cloud_connectivity_2source_2_app_controller_8c" startline="603" endline="726">AppControllerFire</referencedby>
+        <referencedby refid="group___s_d___c_a_r_d___e_x_a_m_p_l_e_1gae8bb7f509ed9f6c4b1e637fe89b1b09a" compoundref="_sd_card_example_2source_2_app_controller_8c" startline="124" endline="191">AppControllerFatFileSystemWriteRead</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">/*<sp/>header<sp/>definition<sp/>********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>XDK_STORAGE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XDK_STORAGE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>local<sp/>interface<sp/>declaration<sp/>**********************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___retcode_8h" kindref="compound">BCDS_Retcode.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="struct_storage___setup___s" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_storage___setup___s" kindref="compound">Storage_Setup_S</ref></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62" refid="struct_storage___setup___s_1a0d144cf229ce7b1bdbd4305268310939" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_storage___setup___s_1a0d144cf229ce7b1bdbd4305268310939" kindref="member">SDCard</ref>;<sp/></highlight></codeline>
+<codeline lineno="63" refid="struct_storage___setup___s_1a3526ab546fb534ff4d87004d5e1d6cdc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_storage___setup___s_1a3526ab546fb534ff4d87004d5e1d6cdc" kindref="member">WiFiFileSystem</ref>;<sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="group___s_t_o_r_a_g_e_1ga0a3630a4977c65faf188ae7ffd12364e" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_storage___setup___s" kindref="compound">Storage_Setup_S</ref><sp/><ref refid="struct_storage___setup___s" kindref="compound">Storage_Setup_T</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="group___s_t_o_r_a_g_e_1gaa59ae7ec096e2fe0a896eccaadfea697" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_storage___setup___s" kindref="compound">Storage_Setup_S</ref><sp/><ref refid="struct_storage___setup___s" kindref="compound">Storage_Status_T</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="group___s_t_o_r_a_g_e_1ga7c9527c473ba04ca1adca71dfd3d0cd6" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group___s_t_o_r_a_g_e_1ga7c9527c473ba04ca1adca71dfd3d0cd6" kindref="member">Storage_Medium_S</ref></highlight></codeline>
+<codeline lineno="80"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81" refid="group___s_t_o_r_a_g_e_1gga7c9527c473ba04ca1adca71dfd3d0cd6af8592ed1e35cbefa066b578c0afc9d5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___s_t_o_r_a_g_e_1gga7c9527c473ba04ca1adca71dfd3d0cd6af8592ed1e35cbefa066b578c0afc9d5d" kindref="member">STORAGE_MEDIUM_SD_CARD</ref>,</highlight></codeline>
+<codeline lineno="82" refid="group___s_t_o_r_a_g_e_1gga7c9527c473ba04ca1adca71dfd3d0cd6a67594539c711626f5812b331ffb83afa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___s_t_o_r_a_g_e_1gga7c9527c473ba04ca1adca71dfd3d0cd6a67594539c711626f5812b331ffb83afa" kindref="member">STORAGE_MEDIUM_WIFI_FILE_SYSTEM</ref>,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="group___s_t_o_r_a_g_e_1ga5c58375594949bb732f989e27c9e793a" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group___s_t_o_r_a_g_e_1ga7c9527c473ba04ca1adca71dfd3d0cd6" kindref="member">Storage_Medium_S</ref><sp/><ref refid="group___s_t_o_r_a_g_e_1ga5c58375594949bb732f989e27c9e793a" kindref="member">Storage_Medium_T</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="struct_storage___read___s" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_storage___read___s" kindref="compound">Storage_Read_S</ref></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="95" refid="struct_storage___read___s_1a3492983b8d236919d67f418b8ebba429" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/><ref refid="struct_storage___read___s_1a3492983b8d236919d67f418b8ebba429" kindref="member">FileName</ref>;<sp/></highlight></codeline>
+<codeline lineno="96" refid="struct_storage___read___s_1a674a91bb44c2ec0104ee28da90cf42c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*<sp/><ref refid="struct_storage___read___s_1a674a91bb44c2ec0104ee28da90cf42c6" kindref="member">ReadBuffer</ref>;<sp/></highlight></codeline>
+<codeline lineno="97" refid="struct_storage___read___s_1af9cf78a657f24523340dfb7dacb116c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_storage___read___s_1af9cf78a657f24523340dfb7dacb116c8" kindref="member">BytesToRead</ref>;<sp/></highlight></codeline>
+<codeline lineno="98" refid="struct_storage___read___s_1a27f5fc57429144d05519349d79c9add3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_storage___read___s_1a27f5fc57429144d05519349d79c9add3" kindref="member">ActualBytesRead</ref>;<sp/></highlight></codeline>
+<codeline lineno="99" refid="struct_storage___read___s_1a674f76759cbcc4b3efb7f8db8aed67bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_storage___read___s_1a674f76759cbcc4b3efb7f8db8aed67bb" kindref="member">Offset</ref>;<sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="group___s_t_o_r_a_g_e_1gaae2b47dbeb659a803231eceb355c68b9" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_storage___read___s" kindref="compound">Storage_Read_S</ref><sp/><ref refid="struct_storage___read___s" kindref="compound">Storage_Read_T</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="struct_storage___write___s" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_storage___write___s" kindref="compound">Storage_Write_S</ref></highlight></codeline>
+<codeline lineno="111"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="112" refid="struct_storage___write___s_1a3492983b8d236919d67f418b8ebba429" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/><ref refid="struct_storage___write___s_1a3492983b8d236919d67f418b8ebba429" kindref="member">FileName</ref>;<sp/></highlight></codeline>
+<codeline lineno="113" refid="struct_storage___write___s_1a8083773472a8c3e9cf7ec12b5546c0ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*<sp/><ref refid="struct_storage___write___s_1a8083773472a8c3e9cf7ec12b5546c0ff" kindref="member">WriteBuffer</ref>;<sp/></highlight></codeline>
+<codeline lineno="114" refid="struct_storage___write___s_1a492e32e04c27ba71fc914606cc5159ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_storage___write___s_1a492e32e04c27ba71fc914606cc5159ef" kindref="member">BytesToWrite</ref>;<sp/></highlight></codeline>
+<codeline lineno="115" refid="struct_storage___write___s_1ae4a87262782fa15d68ea54738ea3ece3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_storage___write___s_1ae4a87262782fa15d68ea54738ea3ece3" kindref="member">ActualBytesWritten</ref>;<sp/></highlight></codeline>
+<codeline lineno="116" refid="struct_storage___write___s_1a674f76759cbcc4b3efb7f8db8aed67bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_storage___write___s_1a674f76759cbcc4b3efb7f8db8aed67bb" kindref="member">Offset</ref>;<sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="group___s_t_o_r_a_g_e_1gac44d8d61da49d1f97a4914b0b1e3d379" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_storage___write___s" kindref="compound">Storage_Write_S</ref><sp/><ref refid="struct_storage___write___s" kindref="compound">Storage_Write_T</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="struct_storage___rename___s" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_storage___rename___s" kindref="compound">Storage_Rename_S</ref></highlight></codeline>
+<codeline lineno="128"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="129" refid="struct_storage___rename___s_1a8557ddfd3d55104b00779cc43c46b677" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/><ref refid="struct_storage___rename___s_1a8557ddfd3d55104b00779cc43c46b677" kindref="member">OriginalFileName</ref>;<sp/></highlight></codeline>
+<codeline lineno="130" refid="struct_storage___rename___s_1af51163e4b2e5a99c31b3e848669bcd48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/><ref refid="struct_storage___rename___s_1af51163e4b2e5a99c31b3e848669bcd48" kindref="member">NewFileName</ref>;<sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="group___s_t_o_r_a_g_e_1ga70fd896dc272e4dd390c931c928e4531" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_storage___rename___s" kindref="compound">Storage_Rename_S</ref><sp/><ref refid="struct_storage___rename___s" kindref="compound">Storage_Rename_T</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="struct_storage___transfer___s" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_storage___transfer___s" kindref="compound">Storage_Transfer_S</ref></highlight></codeline>
+<codeline lineno="142"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="143" refid="struct_storage___transfer___s_1ad95e7933df365d4e0f0a584a97c542f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/><ref refid="struct_storage___transfer___s_1ad95e7933df365d4e0f0a584a97c542f0" kindref="member">SourceFileName</ref>;<sp/></highlight></codeline>
+<codeline lineno="144" refid="struct_storage___transfer___s_1a272aab7a69506053eb3bf9b17571a4bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/><ref refid="struct_storage___transfer___s_1a272aab7a69506053eb3bf9b17571a4bc" kindref="member">DestinationFileName</ref>;<sp/></highlight></codeline>
+<codeline lineno="145" refid="struct_storage___transfer___s_1ae030764ca65ae9b002a76363680bbbec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*<sp/><ref refid="struct_storage___transfer___s_1ae030764ca65ae9b002a76363680bbbec" kindref="member">TransferBuffer</ref>;<sp/></highlight></codeline>
+<codeline lineno="146" refid="struct_storage___transfer___s_1abec1a2acc6eeab9b7ffba49c73c9e137" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_storage___transfer___s_1abec1a2acc6eeab9b7ffba49c73c9e137" kindref="member">TransferBlockSizeSize</ref>;<sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="group___s_t_o_r_a_g_e_1gac4a1e100d61fce7f4bc0055e9a071999" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_storage___transfer___s" kindref="compound">Storage_Transfer_S</ref><sp/><ref refid="struct_storage___transfer___s" kindref="compound">Storage_Transfer_T</ref>;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___s_t_o_r_a_g_e_1gac6798a3d0f8457a7deb43fe8034476a3" kindref="member">Storage_Setup</ref>(<ref refid="struct_storage___setup___s" kindref="compound">Storage_Setup_T</ref><sp/>*<sp/>setup);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___s_t_o_r_a_g_e_1ga942029eca2abd902ea45626fab4d0dcd" kindref="member">Storage_Enable</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___s_t_o_r_a_g_e_1ga7ba540e994283041d1649880dc411de7" kindref="member">Storage_IsAvailable</ref>(<ref refid="group___s_t_o_r_a_g_e_1ga5c58375594949bb732f989e27c9e793a" kindref="member">Storage_Medium_T</ref><sp/>medium,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*<sp/>status);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___s_t_o_r_a_g_e_1gae487ac6d88ef258f00717bf48bd76d54" kindref="member">Storage_Read</ref>(<ref refid="group___s_t_o_r_a_g_e_1ga5c58375594949bb732f989e27c9e793a" kindref="member">Storage_Medium_T</ref><sp/>medium,<sp/><ref refid="struct_storage___read___s" kindref="compound">Storage_Read_T</ref><sp/>*<sp/>readCredentials);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___s_t_o_r_a_g_e_1ga552b931bf8ae08bb91e8d1366ee89b66" kindref="member">Storage_Write</ref>(<ref refid="group___s_t_o_r_a_g_e_1ga5c58375594949bb732f989e27c9e793a" kindref="member">Storage_Medium_T</ref><sp/>medium,<sp/><ref refid="struct_storage___write___s" kindref="compound">Storage_Write_T</ref><sp/>*writeCredentials);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___s_t_o_r_a_g_e_1ga9378fd207d27f74136a8d94426fce6d3" kindref="member">Storage_Rename</ref>(<ref refid="group___s_t_o_r_a_g_e_1ga5c58375594949bb732f989e27c9e793a" kindref="member">Storage_Medium_T</ref><sp/>medium,<sp/><ref refid="struct_storage___rename___s" kindref="compound">Storage_Rename_T</ref><sp/>*renameCredentials);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___s_t_o_r_a_g_e_1ga1611d74fdf8169714651ccf84fc8f46d" kindref="member">Storage_Delete</ref>(<ref refid="group___s_t_o_r_a_g_e_1ga5c58375594949bb732f989e27c9e793a" kindref="member">Storage_Medium_T</ref><sp/>medium,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fileName);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___s_t_o_r_a_g_e_1ga5cbf6966badbbc306e0f03d9ce495576" kindref="member">Storage_Transfer</ref>(<ref refid="group___s_t_o_r_a_g_e_1ga5c58375594949bb732f989e27c9e793a" kindref="member">Storage_Medium_T</ref><sp/>sourceMedium,<sp/><ref refid="group___s_t_o_r_a_g_e_1ga5c58375594949bb732f989e27c9e793a" kindref="member">Storage_Medium_T</ref><sp/>destinationMedium,<sp/><ref refid="struct_storage___transfer___s" kindref="compound">Storage_Transfer_T</ref><sp/>*transferCredentials);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___s_t_o_r_a_g_e_1gacffdfe925a56d080c3954eb100396c4e" kindref="member">Storage_Disable</ref>(<ref refid="group___s_t_o_r_a_g_e_1ga5c58375594949bb732f989e27c9e793a" kindref="member">Storage_Medium_T</ref><sp/>medium);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___s_t_o_r_a_g_e_1gaa9a50755f6b70e0d7c2833c31cd89d3d" kindref="member">Storage_Close</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>XDK_STORAGE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/include/Utility/XDK_Storage.h"/>
+  </compounddef>
+</doxygen>

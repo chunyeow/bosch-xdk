@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_l_w_m2_m_sensor_device_gyroscope_8h" kind="file">
+    <compoundname>LWM2MSensorDeviceGyroscope.h</compoundname>
+    <includes refid="_l_w_m2_m_sensor_device_util_8h" local="yes">LWM2MSensorDeviceUtil.h</includes>
+    <includedby refid="_l_w_m2_m_object_sensor_device_8c" local="yes">SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectSensorDevice.c</includedby>
+    <includedby refid="_l_w_m2_m_sensor_device_gyroscope_8c" local="yes">SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceGyroscope.c</includedby>
+    <incdepgraph>
+      <node id="26846">
+        <label>stdbool.h</label>
+      </node>
+      <node id="26845">
+        <label>LWM2MSensorDeviceUtil.h</label>
+        <link refid="_l_w_m2_m_sensor_device_util_8h"/>
+        <childnode refid="26846" relation="include">
+        </childnode>
+      </node>
+      <node id="26844">
+        <label>SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceGyroscope.h</label>
+        <link refid="LWM2MSensorDeviceGyroscope.h"/>
+        <childnode refid="26845" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="26848">
+        <label>SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectSensorDevice.c</label>
+        <link refid="_l_w_m2_m_object_sensor_device_8c"/>
+      </node>
+      <node id="26849">
+        <label>SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceGyroscope.c</label>
+        <link refid="_l_w_m2_m_sensor_device_gyroscope_8c"/>
+      </node>
+      <node id="26847">
+        <label>SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceGyroscope.h</label>
+        <link refid="LWM2MSensorDeviceGyroscope.h"/>
+        <childnode refid="26848" relation="include">
+        </childnode>
+        <childnode refid="26849" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_l_w_m2_m_sensor_device_gyroscope_8h_1ad78cb5fd79c29bee4b93f36c35bfddcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LWM2MSensorDeviceGyroscope_Activate</definition>
+        <argsstring>(bool enable)</argsstring>
+        <name>LWM2MSensorDeviceGyroscope_Activate</name>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>Initialize sensor. Initialize sensor, setting it active or inactive and initialize the lwm2m object accordingly. Intended to be only called by the sensors timer thread. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true, activate sensor false, disable sensor</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+<para>&lt; set to 0.0625 deg/s in 125 deg/s range</para><para>&lt; set to 0.125 deg/s in 250 deg/s range</para><para>&lt; set to 0.25 deg/s in 500 deg/s range</para><para>&lt; set to 0.5 deg/s in 1000 deg/s range</para><para>&lt; set to 1 deg/s in 2000 deg/s range </para>        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceGyroscope.h" line="66" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceGyroscope.c" bodystart="109" bodyend="157"/>
+        <references refid="struct_sensor_device_process_data_float_1a8740ba80e30dd75e71d09fa1dcf04f3d" compoundref="_l_w_m2_m_sensor_device_util_8h" startline="89">SensorDeviceProcessDataFloat::enabled</references>
+        <references refid="_l_w_m2_m_sensor_device_util_8c_1a6d710c06c751aa1b054aab062a1e9e01" compoundref="_l_w_m2_m_sensor_device_util_8c" startline="60" endline="68">LWM2MSensorDeviceUtil_ResetProcessDataFloat</references>
+        <references refid="group___g_y_r_o_s_c_o_p_e_1gaa2458d131568a5310168493c8de4b008" compoundref="_gyroscope_8c" startline="253" endline="311">Gyroscope_init</references>
+        <references refid="group___sensors_handles_1gaa0df931e602aa3b0a358cb6e773c24b9" compoundref="_sensor_handle_8c" startline="133">XdkGyroscope_BMG160_Handle</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___g_y_r_o_s_c_o_p_e_1ga47c812193cc91cfd76b46ebf70a6f389" compoundref="_gyroscope_8c" startline="450" endline="515">Gyroscope_getRange</references>
+        <references refid="group___g_y_r_o_s_c_o_p_e_1gga9763abd430ce40938bc09740e05ee14aaa273613fbfd3d21385d1f5130fc19953" compoundref="_b_c_d_s___gyroscope_8h" startline="83">GYROSCOPE_BMG160_RANGE_125s</references>
+        <references refid="group___g_y_r_o_s_c_o_p_e_1gga9763abd430ce40938bc09740e05ee14aa2de862a44fb2ee8d78e563a9cb69d8e5" compoundref="_b_c_d_s___gyroscope_8h" startline="84">GYROSCOPE_BMG160_RANGE_250s</references>
+        <references refid="group___g_y_r_o_s_c_o_p_e_1gga9763abd430ce40938bc09740e05ee14aa204822d56f6c04cfd936932797ff50cd" compoundref="_b_c_d_s___gyroscope_8h" startline="85">GYROSCOPE_BMG160_RANGE_500s</references>
+        <references refid="group___g_y_r_o_s_c_o_p_e_1gga9763abd430ce40938bc09740e05ee14aa6501fa363c86fe3cb42189a35d74df56" compoundref="_b_c_d_s___gyroscope_8h" startline="86">GYROSCOPE_BMG160_RANGE_1000s</references>
+        <references refid="group___g_y_r_o_s_c_o_p_e_1gga9763abd430ce40938bc09740e05ee14aab414593bd3a677f954b4774b5ee4cc2c" compoundref="_b_c_d_s___gyroscope_8h" startline="87">GYROSCOPE_BMG160_RANGE_2000s</references>
+        <references refid="_l_w_m2_m_object_gyroscope_8c_1a5b709459a38736bed191879bc4af400a" compoundref="_l_w_m2_m_object_gyroscope_8c" startline="143" endline="146">LWM2MObjectGyroscope_Enable</references>
+        <references refid="group___g_y_r_o_s_c_o_p_e_1gae535c68b0ad78ba4facefb44cf0cb365" compoundref="_gyroscope_8c" startline="960" endline="997">Gyroscope_deInit</references>
+        <references refid="_l_w_m2_m_object_gyroscope_8c_1a5898fb251847eda62e4a4fab17ca01cc" compoundref="_l_w_m2_m_object_gyroscope_8c" startline="149" endline="152">LWM2MObjectGyroscope_Disable</references>
+        <referencedby refid="_l_w_m2_m_object_sensor_device_8c_1a151a15f45e12b28318fbd9deb13733f1" compoundref="_l_w_m2_m_object_sensor_device_8c" startline="123" endline="200">SensorTimerHandler</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_l_w_m2_m_sensor_device_gyroscope_8h_1a2ff865f90813541ac08d439978c3d61e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LWM2MSensorDeviceGyroscope_InitRand</definition>
+        <argsstring>(void)</argsstring>
+        <name>LWM2MSensorDeviceGyroscope_InitRand</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize rand() function using physically random sensor value. </para>        </briefdescription>
+        <detaileddescription>
+<para>Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceGyroscope.h" line="55" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceGyroscope.c" bodystart="69" bodyend="106"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___sensors_handles_1gaa0df931e602aa3b0a358cb6e773c24b9" compoundref="_sensor_handle_8c" startline="133">XdkGyroscope_BMG160_Handle</references>
+        <references refid="group___g_y_r_o_s_c_o_p_e_1gad0b62367ec5b555a1317b052271a795a" compoundref="_b_c_d_s___gyroscope_8h" startline="163">Gyroscope_Handle_S::sensorInfo</references>
+        <references refid="group___g_y_r_o_s_c_o_p_e_1gafb6707b7461ea7c6b50b274299150142" compoundref="_b_c_d_s___gyroscope_8h" startline="155">Gyroscope_SensorInfo_S::initializationStatus</references>
+        <references refid="group___g_y_r_o_s_c_o_p_e_1gaa2458d131568a5310168493c8de4b008" compoundref="_gyroscope_8c" startline="253" endline="311">Gyroscope_init</references>
+        <references refid="group___g_y_r_o_s_c_o_p_e_1ga2f39d95a90398b2998b26dba51665c7d" compoundref="_gyroscope_8c" startline="785" endline="864">Gyroscope_readXyzDegreeValue</references>
+        <references refid="group___g_y_r_o_s_c_o_p_e_1ga0ce3ac9cbd662334c4bf9aa63a74405f" compoundref="_b_c_d_s___gyroscope_8h" startline="170">Gyroscope_XyzData_S::xAxisData</references>
+        <references refid="group___g_y_r_o_s_c_o_p_e_1ga0dcf2e5f14c8ab1e4c671be741b88ce6" compoundref="_b_c_d_s___gyroscope_8h" startline="171">Gyroscope_XyzData_S::yAxisData</references>
+        <references refid="group___g_y_r_o_s_c_o_p_e_1gac71d7f95bd9dd9607df1f7d3ad4b89b1" compoundref="_b_c_d_s___gyroscope_8h" startline="172">Gyroscope_XyzData_S::zAxisData</references>
+        <references refid="group___g_y_r_o_s_c_o_p_e_1gae535c68b0ad78ba4facefb44cf0cb365" compoundref="_gyroscope_8c" startline="960" endline="997">Gyroscope_deInit</references>
+      </memberdef>
+      <memberdef kind="function" id="_l_w_m2_m_sensor_device_gyroscope_8h_1a272a3a3d3be902ae5c793a8f718c194b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LWM2MSensorDeviceGyroscope_Update</definition>
+        <argsstring>(enum ProcessingMode mode, bool notify)</argsstring>
+        <name>LWM2MSensorDeviceGyroscope_Update</name>
+        <param>
+          <type>enum <ref refid="_l_w_m2_m_sensor_device_util_8h_1a1c2b96eed57c1a07443e4877a8e53f12" kindref="member">ProcessingMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>notify</declname>
+        </param>
+        <briefdescription>
+<para>Read sensor values and process them. Read the values from the sensor, process them according the provided mode and transfer them to lwm2m objects, when notify indicates that. Intended to be only called by the sensors timer thread. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>processing mode</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">notify</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true, transfer values to lwm2m objects false, no transfer, process only</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceGyroscope.h" line="81" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceGyroscope.c" bodystart="160" bodyend="186"/>
+        <references refid="struct_sensor_device_process_data_float_1a8740ba80e30dd75e71d09fa1dcf04f3d" compoundref="_l_w_m2_m_sensor_device_util_8h" startline="89">SensorDeviceProcessDataFloat::enabled</references>
+        <references refid="group___g_y_r_o_s_c_o_p_e_1ga2f39d95a90398b2998b26dba51665c7d" compoundref="_gyroscope_8c" startline="785" endline="864">Gyroscope_readXyzDegreeValue</references>
+        <references refid="group___sensors_handles_1gaa0df931e602aa3b0a358cb6e773c24b9" compoundref="_sensor_handle_8c" startline="133">XdkGyroscope_BMG160_Handle</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="struct_sensor_device_sample_data_float_1a399421fbb0c25a2f744f4d6a55905795" compoundref="_l_w_m2_m_sensor_device_util_8h" startline="76">SensorDeviceSampleDataFloat::values</references>
+        <references refid="_l_w_m2_m_sensor_device_gyroscope_8c_1a09ec05c41853101aebf508d4ad925053" compoundref="_l_w_m2_m_sensor_device_gyroscope_8c" startline="62">GYROSCOPE_TO_FLOAT</references>
+        <references refid="group___g_y_r_o_s_c_o_p_e_1ga0ce3ac9cbd662334c4bf9aa63a74405f" compoundref="_b_c_d_s___gyroscope_8h" startline="170">Gyroscope_XyzData_S::xAxisData</references>
+        <references refid="group___g_y_r_o_s_c_o_p_e_1ga0dcf2e5f14c8ab1e4c671be741b88ce6" compoundref="_b_c_d_s___gyroscope_8h" startline="171">Gyroscope_XyzData_S::yAxisData</references>
+        <references refid="group___g_y_r_o_s_c_o_p_e_1gac71d7f95bd9dd9607df1f7d3ad4b89b1" compoundref="_b_c_d_s___gyroscope_8h" startline="172">Gyroscope_XyzData_S::zAxisData</references>
+        <references refid="_l_w_m2_m_sensor_device_util_8c_1ad4475c7cf47f81acf4827826881d0ecb" compoundref="_l_w_m2_m_sensor_device_util_8c" startline="71" endline="119">LWM2MSensorDeviceUtil_ProcessDataFloat</references>
+        <references refid="_l_w_m2_m_sensor_device_util_8c_1a1f403a0df9270d147484bfc33ea8c969" compoundref="_l_w_m2_m_sensor_device_util_8c" startline="122" endline="149">LWM2MSensorDeviceUtil_GetDataFloat</references>
+        <references refid="_l_w_m2_m_object_gyroscope_8c_1aedb3ebe74bd788f2160f7a65ebcd2d9c" compoundref="_l_w_m2_m_object_gyroscope_8c" startline="155" endline="158">LWM2MObjectGyroscope_SetValues</references>
+        <referencedby refid="_l_w_m2_m_object_sensor_device_8c_1a151a15f45e12b28318fbd9deb13733f1" compoundref="_l_w_m2_m_object_sensor_device_8c" startline="123" endline="200">SensorTimerHandler</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface header for SensorDeviceGyroscope file. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>Licensee’s<sp/>application<sp/>development.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>Licensee’s<sp/>applications<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">*<sp/>Contributors:</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">*<sp/>Bosch<sp/>Software<sp/>Innovations<sp/>GmbH</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor">#ifndef<sp/>LWM2MSENSORDEVICEGYROSCOPE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LWM2MSENSORDEVICEGYROSCOPE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_l_w_m2_m_sensor_device_util_8h" kindref="compound">LWM2MSensorDeviceUtil.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_l_w_m2_m_sensor_device_gyroscope_8h_1a2ff865f90813541ac08d439978c3d61e" kindref="member">LWM2MSensorDeviceGyroscope_InitRand</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_l_w_m2_m_sensor_device_gyroscope_8h_1ad78cb5fd79c29bee4b93f36c35bfddcc" kindref="member">LWM2MSensorDeviceGyroscope_Activate</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_l_w_m2_m_sensor_device_gyroscope_8h_1a272a3a3d3be902ae5c793a8f718c194b" kindref="member">LWM2MSensorDeviceGyroscope_Update</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_l_w_m2_m_sensor_device_util_8h_1a1c2b96eed57c1a07443e4877a8e53f12" kindref="member">ProcessingMode</ref><sp/>mode,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>notify);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LWM2MSENSORDEVICEGYROSCOPE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceGyroscope.h"/>
+  </compounddef>
+</doxygen>

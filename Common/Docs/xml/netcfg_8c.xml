@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="netcfg_8c" kind="file">
+    <compoundname>netcfg.c</compoundname>
+    <includes refid="simplelink_8h" local="yes">simplelink.h</includes>
+    <includes refid="protocol_8h" local="yes">protocol.h</includes>
+    <includes refid="driver_8h" local="yes">driver.h</includes>
+    <incdepgraph>
+      <node id="34339">
+        <label>netcfg.h</label>
+        <link refid="netcfg_8h"/>
+        <childnode refid="34330" relation="include">
+        </childnode>
+      </node>
+      <node id="34331">
+        <label>user.h</label>
+      </node>
+      <node id="34332">
+        <label>../source/objInclusion.h</label>
+        <link refid="obj_inclusion_8h"/>
+        <childnode refid="34330" relation="include">
+        </childnode>
+      </node>
+      <node id="34342">
+        <label>protocol.h</label>
+        <link refid="protocol_8h"/>
+      </node>
+      <node id="34334">
+        <label>fs.h</label>
+        <link refid="fs_8h"/>
+        <childnode refid="34330" relation="include">
+        </childnode>
+      </node>
+      <node id="34343">
+        <label>driver.h</label>
+        <link refid="driver_8h"/>
+      </node>
+      <node id="34341">
+        <label>../source/nonos.h</label>
+        <link refid="nonos_8h"/>
+      </node>
+      <node id="34340">
+        <label>wlan_rx_filters.h</label>
+        <link refid="wlan__rx__filters_8h"/>
+        <childnode refid="34330" relation="include">
+        </childnode>
+      </node>
+      <node id="34336">
+        <label>netapp.h</label>
+        <link refid="netapp_8h"/>
+        <childnode refid="34330" relation="include">
+        </childnode>
+      </node>
+      <node id="34329">
+        <label>SDK/xdk110/Libraries/WiFi/3rd-party/TI/simplelink/source/netcfg.c</label>
+        <link refid="netcfg.c"/>
+        <childnode refid="34330" relation="include">
+        </childnode>
+        <childnode refid="34342" relation="include">
+        </childnode>
+        <childnode refid="34343" relation="include">
+        </childnode>
+      </node>
+      <node id="34337">
+        <label>wlan.h</label>
+        <link refid="_libraries_2_wi_fi_23rd-party_2_t_i_2simplelink_2include_2_w_l_a_n_8h"/>
+        <childnode refid="34330" relation="include">
+        </childnode>
+      </node>
+      <node id="34335">
+        <label>socket.h</label>
+        <link refid="socket_8h"/>
+        <childnode refid="34330" relation="include">
+        </childnode>
+      </node>
+      <node id="34338">
+        <label>device.h</label>
+        <link refid="device_8h"/>
+        <childnode refid="34330" relation="include">
+        </childnode>
+      </node>
+      <node id="34333">
+        <label>trace.h</label>
+        <link refid="trace_8h"/>
+        <childnode refid="34330" relation="include">
+        </childnode>
+      </node>
+      <node id="34330">
+        <label>simplelink.h</label>
+        <link refid="simplelink_8h"/>
+        <childnode refid="34331" relation="include">
+        </childnode>
+        <childnode refid="34332" relation="include">
+        </childnode>
+        <childnode refid="34333" relation="include">
+        </childnode>
+        <childnode refid="34334" relation="include">
+        </childnode>
+        <childnode refid="34335" relation="include">
+        </childnode>
+        <childnode refid="34336" relation="include">
+        </childnode>
+        <childnode refid="34337" relation="include">
+        </childnode>
+        <childnode refid="34338" relation="include">
+        </childnode>
+        <childnode refid="34339" relation="include">
+        </childnode>
+        <childnode refid="34340" relation="include">
+        </childnode>
+        <childnode refid="34341" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="union___sl_net_cfg_msg_get__u" prot="public">_SlNetCfgMsgGet_u</innerclass>
+    <innerclass refid="union___sl_net_cfg_msg_set__u" prot="public">_SlNetCfgMsgSet_u</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>netcfg.c<sp/>-<sp/>CC31xx/CC32xx<sp/>Host<sp/>Driver<sp/>Implementation</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2015<sp/>Texas<sp/>Instruments<sp/>Incorporated<sp/>-<sp/>http://www.ti.com/<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in<sp/>the<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>distribution.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>Neither<sp/>the<sp/>name<sp/>of<sp/>Texas<sp/>Instruments<sp/>Incorporated<sp/>nor<sp/>the<sp/>names<sp/>of</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>its<sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/><sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/><sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>COPYRIGHT<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/><sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,<sp/>INCIDENTAL,<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/><sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/><sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/><sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/><sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/><sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Include<sp/>files<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="simplelink_8h" kindref="compound">simplelink.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="protocol_8h" kindref="compound">protocol.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="driver_8h" kindref="compound">driver.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>sl_NetCfgSet<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="union___sl_net_cfg_msg_set__u" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">union</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51" refid="union___sl_net_cfg_msg_set__u_1a2bc6ffd231747521ab39277e0c735c0b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___net_cfg_set_get__t" kindref="compound">_NetCfgSetGet_t</ref><sp/><sp/><sp/><sp/><ref refid="union___sl_net_cfg_msg_set__u_1a2bc6ffd231747521ab39277e0c735c0b" kindref="member">Cmd</ref>;</highlight></codeline>
+<codeline lineno="52" refid="union___sl_net_cfg_msg_set__u_1af1d5a4bd47171b65e43d7a7cd13461c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___basic_response__t" kindref="compound">_BasicResponse_t</ref><sp/><sp/><sp/><ref refid="union___sl_net_cfg_msg_set__u_1af1d5a4bd47171b65e43d7a7cd13461c1" kindref="member">Rsp</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}<ref refid="union___sl_net_cfg_msg_set__u" kindref="compound">_SlNetCfgMsgSet_u</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>_SL_INCLUDE_FUNC(sl_NetCfgSet)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct___sl_cmd_ctrl__t" kindref="compound">_SlCmdCtrl_t</ref><sp/>_SlNetCfgSetCmdCtrl<sp/>=</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protocol_8h_1a8b68fa580ab0801b54532534955e699f" kindref="member">SL_OPCODE_DEVICE_NETCFG_SET_COMMAND</ref>,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="group___user_events_1ga2f2a85254420dd9f180bd7b1ed9290e6" kindref="member">_SlArgSize_t</ref>)</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct___net_cfg_set_get__t" kindref="compound">_NetCfgSetGet_t</ref>),</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="group___user_events_1ga2f2a85254420dd9f180bd7b1ed9290e6" kindref="member">_SlArgSize_t</ref>)</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct___basic_response__t" kindref="compound">_BasicResponse_t</ref>)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><ref refid="simplelink_8h_1ada9f3b59b3a217b8f8e5d281ae55a19e" kindref="member">_i32</ref><sp/>sl_NetCfgSet(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="simplelink_8h_1a44f20b191bdb85d44eabe758192d7f11" kindref="member">_u8</ref><sp/>ConfigId<sp/>,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="simplelink_8h_1a44f20b191bdb85d44eabe758192d7f11" kindref="member">_u8</ref><sp/>ConfigOpt,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="simplelink_8h_1a44f20b191bdb85d44eabe758192d7f11" kindref="member">_u8</ref><sp/>ConfigLen,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="simplelink_8h_1a44f20b191bdb85d44eabe758192d7f11" kindref="member">_u8</ref><sp/>*pValues)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="union___sl_net_cfg_msg_set__u" kindref="compound">_SlNetCfgMsgSet_u</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Msg;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___sl_cmd_ext__t" kindref="compound">_SlCmdExt_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CmdExt;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>verify<sp/>no<sp/>erorr<sp/>handling<sp/>in<sp/>progress.<sp/>if<sp/>in<sp/>progress<sp/>than</highlight></codeline>
+<codeline lineno="70"><highlight class="comment"><sp/><sp/><sp/><sp/>ignore<sp/>the<sp/>API<sp/>execution<sp/>and<sp/>return<sp/>immediately<sp/>with<sp/>an<sp/>error<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8h_1aff90f5ef790e591a65da369324bc4528" kindref="member">VERIFY_NO_ERROR_HANDLING_IN_PROGRESS</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="driver_8c_1a7632d0a924157365d4792f50ec69a06f" kindref="member">_SlDrvResetCmdExt</ref>(&amp;CmdExt);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>CmdExt.<ref refid="struct___sl_cmd_ext__t_1a6342911366ce7b489bfe8136b92fb20f" kindref="member">TxPayloadLen</ref><sp/>=<sp/>(ConfigLen+3)<sp/>&amp;<sp/>(~3);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>CmdExt.<ref refid="struct___sl_cmd_ext__t_1a4521a1bbe8724b5dbb3c52d2ccd75cc8" kindref="member">pTxPayload</ref><sp/>=<sp/>(<ref refid="simplelink_8h_1a44f20b191bdb85d44eabe758192d7f11" kindref="member">_u8</ref><sp/>*)pValues;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>Msg.<ref refid="union___sl_net_cfg_msg_set__u_1a2bc6ffd231747521ab39277e0c735c0b" kindref="member">Cmd</ref>.<ref refid="struct___net_cfg_set_get__t_1a72f4bc59d3c323e84ef7593f69d7a155" kindref="member">ConfigId</ref><sp/><sp/><sp/><sp/>=<sp/>ConfigId;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>Msg.<ref refid="union___sl_net_cfg_msg_set__u_1a2bc6ffd231747521ab39277e0c735c0b" kindref="member">Cmd</ref>.<ref refid="struct___net_cfg_set_get__t_1a2d9eed51898863fde71a580974d43ff0" kindref="member">ConfigLen</ref><sp/><sp/><sp/>=<sp/>ConfigLen;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>Msg.<ref refid="union___sl_net_cfg_msg_set__u_1a2bc6ffd231747521ab39277e0c735c0b" kindref="member">Cmd</ref>.<ref refid="struct___net_cfg_set_get__t_1ad9c49d734e5e4e73186157a641a16191" kindref="member">ConfigOpt</ref><sp/><sp/><sp/>=<sp/>ConfigOpt;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8h_1a8d3e4950b5e2e0accab9753c68223ef2" kindref="member">VERIFY_RET_OK</ref>(<ref refid="driver_8c_1a442fb2f7327f3073f2ddc00d410b9325" kindref="member">_SlDrvCmdOp</ref>((<ref refid="struct___sl_cmd_ctrl__t" kindref="compound">_SlCmdCtrl_t</ref><sp/>*)&amp;_SlNetCfgSetCmdCtrl,<sp/>&amp;Msg,<sp/>&amp;CmdExt));</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="simplelink_8h_1afcc951421dee921a20980010117583de" kindref="member">_i16</ref>)Msg.<ref refid="union___sl_net_cfg_msg_set__u_1af1d5a4bd47171b65e43d7a7cd13461c1" kindref="member">Rsp</ref>.<ref refid="struct___basic_response__t_1a88b0e46c9227c27bb67842b895edbc6f" kindref="member">status</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>sl_NetCfgGet<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="union___sl_net_cfg_msg_get__u" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">union</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="94" refid="union___sl_net_cfg_msg_get__u_1a2bc6ffd231747521ab39277e0c735c0b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___net_cfg_set_get__t" kindref="compound">_NetCfgSetGet_t</ref><sp/><sp/><sp/><sp/><sp/><ref refid="union___sl_net_cfg_msg_get__u_1a2bc6ffd231747521ab39277e0c735c0b" kindref="member">Cmd</ref>;</highlight></codeline>
+<codeline lineno="95" refid="union___sl_net_cfg_msg_get__u_1a98b15ed896f7dec82deaf54d98fa8e02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___net_cfg_set_get__t" kindref="compound">_NetCfgSetGet_t</ref><sp/><sp/><sp/><sp/><sp/><ref refid="union___sl_net_cfg_msg_get__u_1a98b15ed896f7dec82deaf54d98fa8e02" kindref="member">Rsp</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}<ref refid="union___sl_net_cfg_msg_get__u" kindref="compound">_SlNetCfgMsgGet_u</ref>;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>_SL_INCLUDE_FUNC(sl_NetCfgGet)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct___sl_cmd_ctrl__t" kindref="compound">_SlCmdCtrl_t</ref><sp/>_SlNetCfgGetCmdCtrl<sp/>=</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protocol_8h_1a549d7caf75b3d415222bf61fa0232b5e" kindref="member">SL_OPCODE_DEVICE_NETCFG_GET_COMMAND</ref>,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="group___user_events_1ga2f2a85254420dd9f180bd7b1ed9290e6" kindref="member">_SlArgSize_t</ref>)</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct___net_cfg_set_get__t" kindref="compound">_NetCfgSetGet_t</ref>),</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="group___user_events_1ga2f2a85254420dd9f180bd7b1ed9290e6" kindref="member">_SlArgSize_t</ref>)</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct___net_cfg_set_get__t" kindref="compound">_NetCfgSetGet_t</ref>)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><ref refid="simplelink_8h_1ada9f3b59b3a217b8f8e5d281ae55a19e" kindref="member">_i32</ref><sp/>sl_NetCfgGet(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="simplelink_8h_1a44f20b191bdb85d44eabe758192d7f11" kindref="member">_u8</ref><sp/>ConfigId,<sp/><ref refid="simplelink_8h_1a44f20b191bdb85d44eabe758192d7f11" kindref="member">_u8</ref><sp/>*pConfigOpt,<ref refid="simplelink_8h_1a44f20b191bdb85d44eabe758192d7f11" kindref="member">_u8</ref><sp/>*pConfigLen,<sp/><ref refid="simplelink_8h_1a44f20b191bdb85d44eabe758192d7f11" kindref="member">_u8</ref><sp/>*pValues)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="union___sl_net_cfg_msg_get__u" kindref="compound">_SlNetCfgMsgGet_u</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Msg;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___sl_cmd_ext__t" kindref="compound">_SlCmdExt_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CmdExt;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>verify<sp/>no<sp/>erorr<sp/>handling<sp/>in<sp/>progress.<sp/>if<sp/>in<sp/>progress<sp/>than</highlight></codeline>
+<codeline lineno="113"><highlight class="comment"><sp/><sp/><sp/><sp/>ignore<sp/>the<sp/>API<sp/>execution<sp/>and<sp/>return<sp/>immediately<sp/>with<sp/>an<sp/>error<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8h_1aff90f5ef790e591a65da369324bc4528" kindref="member">VERIFY_NO_ERROR_HANDLING_IN_PROGRESS</ref>();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*pConfigLen<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__device_1gabc034d553d2b90f9caf2a76df2de09c7" kindref="member">SL_EZEROLEN</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="driver_8c_1a7632d0a924157365d4792f50ec69a06f" kindref="member">_SlDrvResetCmdExt</ref>(&amp;CmdExt);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>CmdExt.<ref refid="struct___sl_cmd_ext__t_1ace847308363fd500a8cf292d260ec351" kindref="member">RxPayloadLen</ref><sp/>=<sp/>(<ref refid="simplelink_8h_1afcc951421dee921a20980010117583de" kindref="member">_i16</ref>)(*pConfigLen);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>CmdExt.<ref refid="struct___sl_cmd_ext__t_1a179bf368eaa36ae04ecd81ad4c989b01" kindref="member">pRxPayload</ref><sp/>=<sp/>(<ref refid="simplelink_8h_1a44f20b191bdb85d44eabe758192d7f11" kindref="member">_u8</ref><sp/>*)pValues;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>Msg.<ref refid="union___sl_net_cfg_msg_get__u_1a2bc6ffd231747521ab39277e0c735c0b" kindref="member">Cmd</ref>.<ref refid="struct___net_cfg_set_get__t_1a2d9eed51898863fde71a580974d43ff0" kindref="member">ConfigLen</ref><sp/><sp/><sp/><sp/>=<sp/>*pConfigLen;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>Msg.<ref refid="union___sl_net_cfg_msg_get__u_1a2bc6ffd231747521ab39277e0c735c0b" kindref="member">Cmd</ref>.<ref refid="struct___net_cfg_set_get__t_1a72f4bc59d3c323e84ef7593f69d7a155" kindref="member">ConfigId</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>ConfigId;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>pConfigOpt<sp/>)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Msg.<ref refid="union___sl_net_cfg_msg_get__u_1a2bc6ffd231747521ab39277e0c735c0b" kindref="member">Cmd</ref>.<ref refid="struct___net_cfg_set_get__t_1ad9c49d734e5e4e73186157a641a16191" kindref="member">ConfigOpt</ref><sp/><sp/><sp/>=<sp/>(<ref refid="simplelink_8h_1a9d6870dfa3caa32f75a395f9c20ec5d8" kindref="member">_u16</ref>)*pConfigOpt;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8h_1a8d3e4950b5e2e0accab9753c68223ef2" kindref="member">VERIFY_RET_OK</ref>(<ref refid="driver_8c_1a442fb2f7327f3073f2ddc00d410b9325" kindref="member">_SlDrvCmdOp</ref>((<ref refid="struct___sl_cmd_ctrl__t" kindref="compound">_SlCmdCtrl_t</ref><sp/>*)&amp;_SlNetCfgGetCmdCtrl,<sp/>&amp;Msg,<sp/>&amp;CmdExt));</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>pConfigOpt<sp/>)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*pConfigOpt<sp/>=<sp/>(<ref refid="simplelink_8h_1a44f20b191bdb85d44eabe758192d7f11" kindref="member">_u8</ref>)Msg.<ref refid="union___sl_net_cfg_msg_get__u_1a98b15ed896f7dec82deaf54d98fa8e02" kindref="member">Rsp</ref>.<ref refid="struct___net_cfg_set_get__t_1ad9c49d734e5e4e73186157a641a16191" kindref="member">ConfigOpt</ref>;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(CmdExt.<ref refid="struct___sl_cmd_ext__t_1ace847308363fd500a8cf292d260ec351" kindref="member">RxPayloadLen</ref><sp/>&lt;<sp/>CmdExt.<ref refid="struct___sl_cmd_ext__t_1a8225d6e9771f79d346a427bfbe4ba0a6" kindref="member">ActualRxPayloadLen</ref>)<sp/></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*pConfigLen<sp/>=<sp/>(<ref refid="simplelink_8h_1a44f20b191bdb85d44eabe758192d7f11" kindref="member">_u8</ref>)CmdExt.<ref refid="struct___sl_cmd_ext__t_1ace847308363fd500a8cf292d260ec351" kindref="member">RxPayloadLen</ref>;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="group__netcfg_1gga31ed8e2d95f7c81822731e6e4dbe3b4eab13224ae76c9463337753465553b82dc" kindref="member">SL_MAC_ADDRESS_GET</ref><sp/>==<sp/>ConfigId<sp/>)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group___user_events_1gad4295f0de50c216a5ba1b9ce4894086b" kindref="member">SL_RET_CODE_OK</ref>;<sp/><sp/></highlight><highlight class="comment">/*<sp/>sp<sp/>fix<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__device_1gaa2e763b3abdce8c8ca88c9868576f0fb" kindref="member">SL_ESMALLBUF</ref>;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*pConfigLen<sp/>=<sp/>(<ref refid="simplelink_8h_1a44f20b191bdb85d44eabe758192d7f11" kindref="member">_u8</ref>)CmdExt.<ref refid="struct___sl_cmd_ext__t_1a8225d6e9771f79d346a427bfbe4ba0a6" kindref="member">ActualRxPayloadLen</ref>;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="simplelink_8h_1ada9f3b59b3a217b8f8e5d281ae55a19e" kindref="member">_i32</ref>)Msg.<ref refid="union___sl_net_cfg_msg_get__u_1a98b15ed896f7dec82deaf54d98fa8e02" kindref="member">Rsp</ref>.<ref refid="struct___net_cfg_set_get__t_1a2f0230cf3edfc98ea9ac97c93f163f9c" kindref="member">Status</ref>;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/WiFi/3rd-party/TI/simplelink/source/netcfg.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,959 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="diskio_8h" kind="file">
+    <compoundname>diskio.h</compoundname>
+    <includes refid="integer_8h" local="yes">integer.h</includes>
+    <includedby refid="ffconf_8h" local="yes">SDK/xdk110/Common/config/ffconf.h</includedby>
+    <includedby refid="diskio_8c" local="yes">SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.c</includedby>
+    <includedby refid="ff_8c" local="yes">SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/ff.c</includedby>
+    <incdepgraph>
+      <node id="29017">
+        <label>integer.h</label>
+        <link refid="integer_8h"/>
+      </node>
+      <node id="29016">
+        <label>SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h</label>
+        <link refid="diskio.h"/>
+        <childnode refid="29017" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="29019">
+        <label>SDK/xdk110/Common/config/ffconf.h</label>
+        <link refid="ffconf_8h"/>
+        <childnode refid="29020" relation="include">
+        </childnode>
+      </node>
+      <node id="29029">
+        <label>SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/option/ccsbcs.c</label>
+        <link refid="ccsbcs_8c"/>
+      </node>
+      <node id="29031">
+        <label>SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.c</label>
+        <link refid="diskio_8c"/>
+      </node>
+      <node id="29018">
+        <label>SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h</label>
+        <link refid="diskio.h"/>
+        <childnode refid="29019" relation="include">
+        </childnode>
+        <childnode refid="29031" relation="include">
+        </childnode>
+        <childnode refid="29023" relation="include">
+        </childnode>
+      </node>
+      <node id="29025">
+        <label>SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/option/unicode.c</label>
+        <link refid="unicode_8c"/>
+      </node>
+      <node id="29022">
+        <label>SDK/xdk110/Common/source/Utility/FOTA.c</label>
+        <link refid="_f_o_t_a_8c"/>
+      </node>
+      <node id="29028">
+        <label>SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/option/cc950.c</label>
+        <link refid="cc950_8c"/>
+      </node>
+      <node id="29021">
+        <label>SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectFirmwareUpdate.c</label>
+        <link refid="_l_w_m2_m_object_firmware_update_8c"/>
+      </node>
+      <node id="29026">
+        <label>SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/option/cc936.c</label>
+        <link refid="cc936_8c"/>
+      </node>
+      <node id="29024">
+        <label>SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/option/cc932.c</label>
+        <link refid="cc932_8c"/>
+        <childnode refid="29025" relation="include">
+        </childnode>
+      </node>
+      <node id="29023">
+        <label>SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/ff.c</label>
+        <link refid="ff_8c"/>
+      </node>
+      <node id="29020">
+        <label>SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/ff.h</label>
+        <link refid="ff_8h"/>
+        <childnode refid="29021" relation="include">
+        </childnode>
+        <childnode refid="29022" relation="include">
+        </childnode>
+        <childnode refid="29023" relation="include">
+        </childnode>
+        <childnode refid="29024" relation="include">
+        </childnode>
+        <childnode refid="29026" relation="include">
+        </childnode>
+        <childnode refid="29027" relation="include">
+        </childnode>
+        <childnode refid="29028" relation="include">
+        </childnode>
+        <childnode refid="29029" relation="include">
+        </childnode>
+        <childnode refid="29030" relation="include">
+        </childnode>
+        <childnode refid="29025" relation="include">
+        </childnode>
+      </node>
+      <node id="29030">
+        <label>SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/option/syscall.c</label>
+        <link refid="syscall_8c"/>
+      </node>
+      <node id="29027">
+        <label>SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/option/cc949.c</label>
+        <link refid="cc949_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="diskio_8h_1afe6d1224687dede333375a2475c78ff6" prot="public" static="no">
+        <name>_USE_IOCTL</name>
+        <initializer>1	/* 1: Enable <ref refid="group__filesystem_1gab00fa450a811dbdabe3c655c1a36fab4" kindref="member">disk_ioctl</ref> fucntion */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="13" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="diskio_8h_1a1dd0d2b46dce637878416d489d2ddde2" prot="public" static="no">
+        <name>_USE_WRITE</name>
+        <initializer>1	/* 1: Enable <ref refid="group__filesystem_1gac03220b2c8a090b4f76eb2c9407b84fb" kindref="member">disk_write</ref> function */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="12" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="diskio_8h_1a31f556ab98ab80c39058b38d9283865d" prot="public" static="no">
+        <name>ATA_GET_MODEL</name>
+        <initializer>21	/* Get model name */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="73" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="diskio_8h_1a23f5fff3341e98825ea1f7367fd09f1a" prot="public" static="no">
+        <name>ATA_GET_REV</name>
+        <initializer>20	/* Get F/W revision */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="72" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="diskio_8h_1a469c4f989757ee1ee404134fea3c74ba" prot="public" static="no">
+        <name>ATA_GET_SN</name>
+        <initializer>22	/* Get serial number */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="74" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="diskio_8h_1a5e40e16d2d7ce196858950f070b9ec03" prot="public" static="no">
+        <name>CTRL_EJECT</name>
+        <initializer>7	/* Eject media */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="61" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="diskio_8h_1add07021167069f5914211a2f8830fabb" prot="public" static="no">
+        <name>CTRL_FORMAT</name>
+        <initializer>8	/* Create physical format on the media */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="62" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="diskio_8h_1af40e5cf3000553a978ff6e30dae70858" prot="public" static="no">
+        <name>CTRL_LOCK</name>
+        <initializer>6	/* Lock/Unlock media removal */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="60" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="diskio_8h_1a345531a07462afbd999f414708e3b65b" prot="public" static="no">
+        <name>CTRL_POWER</name>
+        <initializer>5	/* Get/Set power status */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="59" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="diskio_8h_1a1b3c492f9aec325f0655941b75256f3c" prot="public" static="no">
+        <name>CTRL_SYNC</name>
+        <initializer>0	/* Complete pending write process (needed at <ref refid="group___f_f_c_o_n_f_i_g_1gafb8d35370cfe0c23832ac2d82e854ec6" kindref="member">_FS_READONLY</ref> == 0) */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="52" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="ff_8c_1aec6b108298553219ebb2b960b528459d" compoundref="ff_8c" startline="760" endline="789">sync_fs</referencedby>
+        <referencedby refid="group__filesystem_1ga799aff9594e708c8be357281cf85428b" compoundref="ff_8c" startline="4063" endline="4300">f_mkfs</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="diskio_8h_1af09fd84bea8d4e889e272471f44d60d6" prot="public" static="no">
+        <name>CTRL_TRIM</name>
+        <initializer>4	/* Inform device that the data on the block of sectors is no longer used (needed at <ref refid="group___f_f_c_o_n_f_i_g_1ga1f93ee7e57bb9d1221f34bfe80e18a61" kindref="member">_USE_TRIM</ref> == 1) */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="56" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" bodystart="56" bodyend="-1"/>
+        <referencedby refid="ff_8c_1ab88651d19a5597dec220fe7538cccf23" compoundref="ff_8c" startline="937" endline="979">remove_chain</referencedby>
+        <referencedby refid="group__filesystem_1ga799aff9594e708c8be357281cf85428b" compoundref="ff_8c" startline="4063" endline="4300">f_mkfs</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="diskio_8h_1aec3bb4dfe075d0ba2f3b07b300a95500" prot="public" static="no">
+        <name>GET_BLOCK_SIZE</name>
+        <initializer>3	/* Get erase block size (needed at <ref refid="group___f_f_c_o_n_f_i_g_1ga62cdce547af40f0c1599698ee151bbd7" kindref="member">_USE_MKFS</ref> == 1) */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="55" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" bodystart="55" bodyend="-1"/>
+        <referencedby refid="group__filesystem_1ga799aff9594e708c8be357281cf85428b" compoundref="ff_8c" startline="4063" endline="4300">f_mkfs</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="diskio_8h_1a570216006f6a8fc4e1698b1bbb2d1dde" prot="public" static="no">
+        <name>GET_SECTOR_COUNT</name>
+        <initializer>1	/* Get media size (needed at <ref refid="group___f_f_c_o_n_f_i_g_1ga62cdce547af40f0c1599698ee151bbd7" kindref="member">_USE_MKFS</ref> == 1) */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="53" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" bodystart="53" bodyend="-1"/>
+        <referencedby refid="group__filesystem_1ga799aff9594e708c8be357281cf85428b" compoundref="ff_8c" startline="4063" endline="4300">f_mkfs</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="diskio_8h_1ac73b5cf2135cbd459d109b96c9aa346a" prot="public" static="no">
+        <name>GET_SECTOR_SIZE</name>
+        <initializer>2	/* Get sector size (needed at <ref refid="group___f_f_c_o_n_f_i_g_1gac271b697378912f17132cb9c7d0de024" kindref="member">_MAX_SS</ref> != <ref refid="group___f_f_c_o_n_f_i_g_1gad03aa6d0e294709ae15898ee2c14dc3a" kindref="member">_MIN_SS</ref>) */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="54" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" bodystart="54" bodyend="-1"/>
+        <referencedby refid="ff_8c_1a4258e0b66f37b7d5f50b906facc55fb3" compoundref="ff_8c" startline="2203" endline="2362">find_volume</referencedby>
+        <referencedby refid="group__filesystem_1ga799aff9594e708c8be357281cf85428b" compoundref="ff_8c" startline="4063" endline="4300">f_mkfs</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="diskio_8h_1a17ad303dd18b19a4c90ab30a8a1c14c4" prot="public" static="no">
+        <name>MMC_GET_CID</name>
+        <initializer>12	/* Get CID */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="67" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="diskio_8h_1ae3b858b81287929f7c7bea3b7aec3087" prot="public" static="no">
+        <name>MMC_GET_CSD</name>
+        <initializer>11	/* Get CSD */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="66" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="diskio_8h_1aff118ba6bd7a9fe7699cee049cff5d6c" prot="public" static="no">
+        <name>MMC_GET_OCR</name>
+        <initializer>13	/* Get OCR */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="68" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="diskio_8h_1a5cc43c8449b872e16ea5ab42592f793e" prot="public" static="no">
+        <name>MMC_GET_SDSTAT</name>
+        <initializer>14	/* Get <ref refid="driver_8c_1af0b48351ca80316714b273fa1afddaf9" kindref="member">SD</ref> status */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="69" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="diskio_8h_1aba3a81a9a47c7d1bf3ac7749bc72dcfd" prot="public" static="no">
+        <name>MMC_GET_TYPE</name>
+        <initializer>10	/* Get card type */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="65" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="diskio_8h_1aec625080763d6cf487e550a6c9a2dd19" prot="public" static="no">
+        <name>STA_NODISK</name>
+        <initializer>0x02	/* No medium in the drive */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="45" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="diskio_8h_1abd6503c70d862b979a3f7080a59e9acd" prot="public" static="no">
+        <name>STA_NOINIT</name>
+        <initializer>0x01	/* Drive not initialized */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="44" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="group__filesystem_1ga8348ac5ee6d709420c02e45c111f4793" compoundref="diskio_8c" startline="25" endline="55">disk_status</referencedby>
+        <referencedby refid="group__filesystem_1ga09cdaa6f36fa409bdf002727bff98eb1" compoundref="diskio_8c" startline="63" endline="93">disk_initialize</referencedby>
+        <referencedby refid="ff_8c_1a4258e0b66f37b7d5f50b906facc55fb3" compoundref="ff_8c" startline="2203" endline="2362">find_volume</referencedby>
+        <referencedby refid="ff_8c_1aa7193f5b86c3996b5312043a0c26da5f" compoundref="ff_8c" startline="2372" endline="2385">validate</referencedby>
+        <referencedby refid="group__filesystem_1ga799aff9594e708c8be357281cf85428b" compoundref="ff_8c" startline="4063" endline="4300">f_mkfs</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="diskio_8h_1a9ec6dc5f6620a33fabe388d3a111ca8c" prot="public" static="no">
+        <name>STA_PROTECT</name>
+        <initializer>0x04	/* Write protected */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="46" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" bodystart="46" bodyend="-1"/>
+        <referencedby refid="ff_8c_1a4258e0b66f37b7d5f50b906facc55fb3" compoundref="ff_8c" startline="2203" endline="2362">find_volume</referencedby>
+        <referencedby refid="group__filesystem_1ga799aff9594e708c8be357281cf85428b" compoundref="ff_8c" startline="4063" endline="4300">f_mkfs</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__filesystem_1gaacdfef1dad6565f65c26d12fe0ea4b2b" prot="public" static="no">
+        <name>DRESULT</name>
+        <enumvalue id="diskio_8h_1gaacdfef1dad6565f65c26d12fe0ea4b2ba2ea4b6ef3fffc17dd1d38ab5c2837737" prot="public">
+          <name>RES_OK</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="diskio_8h_1gaacdfef1dad6565f65c26d12fe0ea4b2ba78011f5557679ec178fb40bd21e89840" prot="public">
+          <name>RES_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="diskio_8h_1gaacdfef1dad6565f65c26d12fe0ea4b2ba442a6d4393dc404827067bc4e981b322" prot="public">
+          <name>RES_WRPRT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="diskio_8h_1gaacdfef1dad6565f65c26d12fe0ea4b2baad64c27c69eb1ff39ae67c5f77bb2b1d" prot="public">
+          <name>RES_NOTRDY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="diskio_8h_1gaacdfef1dad6565f65c26d12fe0ea4b2baf4dcc07fd46310b5495fa8025c89a9f3" prot="public">
+          <name>RES_PARERR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="22" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" bodystart="22" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="diskio_8h_1adba6790898ce4029c20a34b898ce73c1" prot="public" static="no">
+        <type><ref refid="integer_8h_1a4ae1dab0fb4b072a66584546209e7d58" kindref="member">BYTE</ref></type>
+        <definition>typedef BYTE DSTATUS</definition>
+        <argsstring></argsstring>
+        <name>DSTATUS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="19" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__filesystem_1ga09cdaa6f36fa409bdf002727bff98eb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="diskio_8h_1adba6790898ce4029c20a34b898ce73c1" kindref="member">DSTATUS</ref></type>
+        <definition>DSTATUS disk_initialize</definition>
+        <argsstring>(BYTE pdrv)</argsstring>
+        <name>disk_initialize</name>
+        <param>
+          <type><ref refid="integer_8h_1a4ae1dab0fb4b072a66584546209e7d58" kindref="member">BYTE</ref></type>
+          <declname>pdrv</declname>
+        </param>
+        <briefdescription>
+<para>The disk_initialize function initializes the storage device. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function initializes the storage device and put it ready to generic read/write. When the function succeeded, STA_NOINIT flag in the return value is cleared. <linebreak/>
+ <bold>Application program MUST NOT call this function, or FAT structure on the volume can be broken. To re-initialize the file system, use <ref refid="group__filesystem_1ga16a934c2bbfa2160295810adc49d5509" kindref="member">f_mount()</ref> function instead.</bold> This function is called at volume mount process by FatFs module to manage the media change. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pdrv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Physical drive number to identify the target device. Always zero at single drive system. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>This</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function returns the current drive status flags as the result. For details of the drive status, refer to the <ref refid="group__filesystem_1ga8348ac5ee6d709420c02e45c111f4793" kindref="member">disk_status()</ref> function. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="35" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.c" bodystart="63" bodyend="93"/>
+        <references refid="diskio_8c_1a2c51f8df39130923660818986234711f" compoundref="diskio_8c" startline="16">ATA</references>
+        <references refid="diskio_8c_1ab5a7d5477e55758bde614bda3250a93c" compoundref="diskio_8c" startline="17">MMC</references>
+        <references refid="diskio_8c_1a779bf099075a999d1074357fccbd466b" compoundref="diskio_8c" startline="18">USB</references>
+        <references refid="diskio_8h_1abd6503c70d862b979a3f7080a59e9acd" compoundref="diskio_8h" startline="44">STA_NOINIT</references>
+      </memberdef>
+      <memberdef kind="function" id="group__filesystem_1gab00fa450a811dbdabe3c655c1a36fab4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__filesystem_1gaacdfef1dad6565f65c26d12fe0ea4b2b" kindref="member">DRESULT</ref></type>
+        <definition>DRESULT disk_ioctl</definition>
+        <argsstring>(BYTE pdrv, BYTE cmd, void *buff)</argsstring>
+        <name>disk_ioctl</name>
+        <param>
+          <type><ref refid="integer_8h_1a4ae1dab0fb4b072a66584546209e7d58" kindref="member">BYTE</ref></type>
+          <declname>pdrv</declname>
+        </param>
+        <param>
+          <type><ref refid="integer_8h_1a4ae1dab0fb4b072a66584546209e7d58" kindref="member">BYTE</ref></type>
+          <declname>cmd</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>buff</declname>
+        </param>
+        <briefdescription>
+<para>The disk_ioctl function cntrols device specific features and miscellaneous functions other than generic read/write. </para>        </briefdescription>
+        <detaileddescription>
+<para>The FatFs module requires only five device independent commands described below. <linebreak/>
+ <linebreak/>
+<center> <bold> Standard ioctl command used by FatFs: </bold> </center> <table rows="6" cols="2"><row>
+<entry thead="yes"><para>Command </para></entry><entry thead="yes"><para>Description  </para></entry></row>
+<row>
+<entry thead="no"><para>CTRL_SYNC </para></entry><entry thead="no"><para>Make sure that the device has finished pending write process. If the disk I/O module has a write back cache, the dirty buffers must be written back to the media immediately. Nothing to do for this command if each write operation to the media is completed within the <ref refid="group__filesystem_1gac03220b2c8a090b4f76eb2c9407b84fb" kindref="member">disk_write()</ref> function. </para></entry></row>
+<row>
+<entry thead="no"><para>GET_SECTOR_COUNT </para></entry><entry thead="no"><para>Returns number of available sectors on the drive into the DWORD variable pointed by buff. This command is used by only <ref refid="group__filesystem_1ga799aff9594e708c8be357281cf85428b" kindref="member">f_mkfs()</ref> and <ref refid="group__filesystem_1ga0c1bd3e3872abbda0e256e7c73da9f3b" kindref="member">f_fdisk()</ref> function to determine the volume/partition size to be created. Required at _USE_MKFS == 1 or _MULTI_PARTITION == 1. </para></entry></row>
+<row>
+<entry thead="no"><para>GET_SECTOR_SIZE </para></entry><entry thead="no"><para>Returns sector size of the media into the WORD variable pointed by buff. Valid return values of this command are 512, 1024, 2048 and 4096. This command is required only at variable sector size configuration, _MAX_SS &gt; _MIN_SS. At fixed sector size configuration, _MAX_SS == _MIN_SS, this command is not used and the device must work at that sector size. </para></entry></row>
+<row>
+<entry thead="no"><para>GET_BLOCK_SIZE </para></entry><entry thead="no"><para>Returns erase block size of the flash memory media in unit of sector into the DWORD variable pointed by buff. The allowable value is from 1 to 32768 in power of 2. Return 1 if the erase block size is unknown or non flash memory media. This command is used by only <ref refid="group__filesystem_1ga799aff9594e708c8be357281cf85428b" kindref="member">f_mkfs()</ref> function and it attempts to align data area to the erase block boundary. Required at _USE_MKFS == 1. </para></entry></row>
+<row>
+<entry thead="no"><para>CTRL_TRIM </para></entry><entry thead="no"><para>Informs the device the data on the block of sectors that specified by DWORD array {&lt;start sector&gt;=&quot;&quot;&gt;, &lt;end sector&gt;=&quot;&quot;&gt;} pointed by buff is no longer needed and it may be erased. This is an identical command to Trim of ATA device. When this feature is not supported or not a flash memory device, nothing to do for this command. The FatFs does not check the result code and the file function is not affected even if the sector block was not erased well. This command is called on removing a cluster chain and <ref refid="group__filesystem_1ga799aff9594e708c8be357281cf85428b" kindref="member">f_mkfs()</ref> function. Required at _USE_TRIM == 1. </para></entry></row>
+</table>
+</para><para>FatFs never uses any device dependent command nor user defined command. Following table shows an example of non-standard commands usable for some applications. <center> <bold> Example of optional ioctl command </bold> </center></para><para><table rows="13" cols="2"><row>
+<entry thead="yes"><para>Command </para></entry><entry thead="yes"><para>Description  </para></entry></row>
+<row>
+<entry thead="no"><para>CTRL_FORMAT </para></entry><entry thead="no"><para>Create a physical format on the media. If buff is not null, it is pointer to the call-back function for progress notification. </para></entry></row>
+<row>
+<entry thead="no"><para>CTRL_POWER_IDLE </para></entry><entry thead="no"><para>Put the device idle state. STA_NOINIT in status flag may not be set if the device goes active state by generic read/write function. </para></entry></row>
+<row>
+<entry thead="no"><para>CTRL_POWER_OFF </para></entry><entry thead="no"><para>Put the device off state. Shut-down the power to the device and deinitialize the device interface if needed. STA_NOINIT in status flag must be set. The device goes active state by <ref refid="group__filesystem_1ga09cdaa6f36fa409bdf002727bff98eb1" kindref="member">disk_initialize()</ref> function. </para></entry></row>
+<row>
+<entry thead="no"><para>CTRL_LOCK </para></entry><entry thead="no"><para>Lock media eject mechanism. </para></entry></row>
+<row>
+<entry thead="no"><para>CTRL_UNLOCK </para></entry><entry thead="no"><para>Unlock media eject mechanism. </para></entry></row>
+<row>
+<entry thead="no"><para>MMC_GET_CSD </para></entry><entry thead="no"><para>Eject media cartridge. STA_NOINIT and STA_NODISK in status flag are set after the function succeeded. </para></entry></row>
+<row>
+<entry thead="no"><para>MMC_GET_CID </para></entry><entry thead="no"><para>Get card type. The type flags, bit0:MMCv3, bit1:SDv1, bit2:SDv2+ and bit3:LBA, is stored to a BYTE variable pointed by buff. (MMC/SDC specific command) </para></entry></row>
+<row>
+<entry thead="no"><para>MMC_GET_OCR </para></entry><entry thead="no"><para>Get OCR register into a 4-byte buffer pointed by buff. (MMC/SDC specific command) </para></entry></row>
+<row>
+<entry thead="no"><para>MMC_GET_SDSTAT </para></entry><entry thead="no"><para>Get SDSTATUS register into a 64-byte buffer pointed by buff. (SDC specific command) </para></entry></row>
+<row>
+<entry thead="no"><para>ATA_GET_REV </para></entry><entry thead="no"><para>Get the revision string into a 16-byte buffer pointed by buff. (ATA/CFC specific command) </para></entry></row>
+<row>
+<entry thead="no"><para>ATA_GET_MODEL </para></entry><entry thead="no"><para>Get the model string into a 40-byte buffer pointed by buff. (ATA/CFC specific command) </para></entry></row>
+<row>
+<entry thead="no"><para>ATA_GET_SN </para></entry><entry thead="no"><para>Get the serial number string into a 20-byte buffer pointed by buff. (ATA/CFC specific command) </para></entry></row>
+</table>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pdrv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Physical drive number to identify the target device. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command code. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">buff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the parameter depends on the command code. Do not care if no parameter to be passed. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RES_OK(0)</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><linebreak/>
+ The function succeeded. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RES_ERROR</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><linebreak/>
+ An error occured. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RES_PARERR</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><linebreak/>
+ The command code or parameter is invalid. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RES_NOTRDY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><linebreak/>
+ The device has not been initialized. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The disk_ioctl function is not needed when _FS_READONLY == 1 and _MAX_SS == _MIN_SS. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="39" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.c" bodystart="199" bodyend="229"/>
+        <references refid="diskio_8c_1a2c51f8df39130923660818986234711f" compoundref="diskio_8c" startline="16">ATA</references>
+        <references refid="diskio_8c_1ab5a7d5477e55758bde614bda3250a93c" compoundref="diskio_8c" startline="17">MMC</references>
+        <references refid="diskio_8c_1a779bf099075a999d1074357fccbd466b" compoundref="diskio_8c" startline="18">USB</references>
+        <references refid="diskio_8h_1gaacdfef1dad6565f65c26d12fe0ea4b2baf4dcc07fd46310b5495fa8025c89a9f3" compoundref="diskio_8h" startline="27">RES_PARERR</references>
+      </memberdef>
+      <memberdef kind="function" id="group__filesystem_1ga075d27f59f550e2cee07d00abcff32e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__filesystem_1gaacdfef1dad6565f65c26d12fe0ea4b2b" kindref="member">DRESULT</ref></type>
+        <definition>DRESULT disk_read</definition>
+        <argsstring>(BYTE pdrv, BYTE *buff, DWORD sector, UINT count)</argsstring>
+        <name>disk_read</name>
+        <param>
+          <type><ref refid="integer_8h_1a4ae1dab0fb4b072a66584546209e7d58" kindref="member">BYTE</ref></type>
+          <declname>pdrv</declname>
+        </param>
+        <param>
+          <type><ref refid="integer_8h_1a4ae1dab0fb4b072a66584546209e7d58" kindref="member">BYTE</ref> *</type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type><ref refid="integer_8h_1ad342ac907eb044443153a22f964bf0af" kindref="member">DWORD</ref></type>
+          <declname>sector</declname>
+        </param>
+        <param>
+          <type><ref refid="integer_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>The disk_read function reads sector(s) from the storage device. </para>        </briefdescription>
+        <detaileddescription>
+<para>The data read/write operation to the storage devices is done in unit of sector. FatFs supports the sector size in range of from 512 to 4096 bytes. When FatFs is configured to fixed sector size (_MIN_SS == MAX_SS, this will be the most case), the read/write function must work at that sector size. If variable sector size is selected (_MIN_SS &lt; MAX_SS), FatFs inquires the sector size with <ref refid="group__filesystem_1gab00fa450a811dbdabe3c655c1a36fab4" kindref="member">disk_ioctl()</ref> after initialization. <linebreak/>
+ The memory address specified by buff is not that always aligned to word boundary because the argument is defined as BYTE*. The misaligned read/write request can occure at direct transfer. If the bus architecture, especially DMA controller, does not allow misaligned memory access, it should be solved in this function. There are some workarounds described below to avoid this issue. <linebreak/>
+<itemizedlist>
+<listitem><para>Convert word transfer to byte transfer in this function if needed. - Recommended.</para></listitem><listitem><para>For <ref refid="group__filesystem_1gac4c3dcb6869ca252888eebabe39727b3" kindref="member">f_read()</ref>, avoid long read request that includes a whole of sector. - Direct transfer will never occure.</para></listitem><listitem><para>For f_read(fp, buff, btr, &amp;br), make sure that (((UINT)buff &amp; 3) == (<ref refid="ff_8h_1a5e1daca7ce13cdc277e42185f7f9124f" kindref="member">f_tell(fp)</ref> &amp; 3)) is true. - Word aligned direct transfer is guaranteed. <linebreak/>
+ Generally, a multiple sector transfer request must not be split into single sector transactions to the storage device, or you will not get good read throughput. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pdrv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Physical drive number to identify the target device. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">buff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the byte array to store the read data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">sector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Start sector number in 32-bit LBA. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of sectors to read in range of from 1 to 128.. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RES_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(0) <linebreak/>
+ The function succeeded. <linebreak/>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RES_ERROR</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><linebreak/>
+ Any hard error occured during the read operation and could not recover it. <linebreak/>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RES_PARERR</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><linebreak/>
+ Invalid parameter. <linebreak/>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RES_NOTRDY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><linebreak/>
+ The device has not been initialized. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="37" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.c" bodystart="101" bodyend="141"/>
+        <references refid="diskio_8c_1a2c51f8df39130923660818986234711f" compoundref="diskio_8c" startline="16">ATA</references>
+        <references refid="diskio_8c_1ab5a7d5477e55758bde614bda3250a93c" compoundref="diskio_8c" startline="17">MMC</references>
+        <references refid="diskio_8c_1a779bf099075a999d1074357fccbd466b" compoundref="diskio_8c" startline="18">USB</references>
+        <references refid="diskio_8h_1gaacdfef1dad6565f65c26d12fe0ea4b2baf4dcc07fd46310b5495fa8025c89a9f3" compoundref="diskio_8h" startline="27">RES_PARERR</references>
+      </memberdef>
+      <memberdef kind="function" id="group__filesystem_1ga8348ac5ee6d709420c02e45c111f4793" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="diskio_8h_1adba6790898ce4029c20a34b898ce73c1" kindref="member">DSTATUS</ref></type>
+        <definition>DSTATUS disk_status</definition>
+        <argsstring>(BYTE pdrv)</argsstring>
+        <name>disk_status</name>
+        <param>
+          <type><ref refid="integer_8h_1a4ae1dab0fb4b072a66584546209e7d58" kindref="member">BYTE</ref></type>
+          <declname>pdrv</declname>
+        </param>
+        <briefdescription>
+<para>The disk_status function returns the current drive status. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pdrv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Physical drive number to identify the target device. Always zero at single drive system. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current drive status is returned in combination of status flags described below. FatFs refers only STA_NOINIT and STA_PROTECT. <linebreak/>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>STA_NOINIT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><linebreak/>
+ Indicates that the device is not initialized. This flag is set on system reset, media removal or failure of <ref refid="group__filesystem_1ga09cdaa6f36fa409bdf002727bff98eb1" kindref="member">disk_initialize()</ref> function. It is cleared on <ref refid="group__filesystem_1ga09cdaa6f36fa409bdf002727bff98eb1" kindref="member">disk_initialize()</ref> function succeeded. Media change that occurs asynchronously must be captured and reflect it to the status flags, or auto-mount feature will not work correctly. If the system does not support media change detect feature, application program needs to force de-initialize the file system object with <ref refid="group__filesystem_1ga16a934c2bbfa2160295810adc49d5509" kindref="member">f_mount()</ref> function after the media change. <linebreak/>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>STA_NODISK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><linebreak/>
+ Indicates that no medium in the drive. This is always cleared on fixed disk drive. Note that FatFs does not refer this flag. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>STA_PROTECT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><linebreak/>
+ Indicates that the medium is write protected. This is always cleared on the drives without write protect feature. Not valid if no medium in the drive. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="36" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.c" bodystart="25" bodyend="55"/>
+        <references refid="diskio_8c_1a2c51f8df39130923660818986234711f" compoundref="diskio_8c" startline="16">ATA</references>
+        <references refid="diskio_8c_1ab5a7d5477e55758bde614bda3250a93c" compoundref="diskio_8c" startline="17">MMC</references>
+        <references refid="diskio_8c_1a779bf099075a999d1074357fccbd466b" compoundref="diskio_8c" startline="18">USB</references>
+        <references refid="diskio_8h_1abd6503c70d862b979a3f7080a59e9acd" compoundref="diskio_8h" startline="44">STA_NOINIT</references>
+      </memberdef>
+      <memberdef kind="function" id="group__filesystem_1gac03220b2c8a090b4f76eb2c9407b84fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__filesystem_1gaacdfef1dad6565f65c26d12fe0ea4b2b" kindref="member">DRESULT</ref></type>
+        <definition>DRESULT disk_write</definition>
+        <argsstring>(BYTE pdrv, const BYTE *buff, DWORD sector, UINT count)</argsstring>
+        <name>disk_write</name>
+        <param>
+          <type><ref refid="integer_8h_1a4ae1dab0fb4b072a66584546209e7d58" kindref="member">BYTE</ref></type>
+          <declname>pdrv</declname>
+        </param>
+        <param>
+          <type>const <ref refid="integer_8h_1a4ae1dab0fb4b072a66584546209e7d58" kindref="member">BYTE</ref> *</type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type><ref refid="integer_8h_1ad342ac907eb044443153a22f964bf0af" kindref="member">DWORD</ref></type>
+          <declname>sector</declname>
+        </param>
+        <param>
+          <type><ref refid="integer_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>The disk_write writes sector(s) to the storage device. </para>        </briefdescription>
+        <detaileddescription>
+<para>The specified memory address is not that always aligned to word boundary because the type of pointer is defined as BYTE*. For more information, refer to the description of <ref refid="group__filesystem_1ga075d27f59f550e2cee07d00abcff32e0" kindref="member">disk_read()</ref> function. <linebreak/>
+ Generally, a multiple sector transfer request must not be split into single sector transactions to the storage device, or you will never get good write throughput. <linebreak/>
+ FatFs expects delayed write feature of the disk functions. The write operation to the media need not to be completed due to write operation is in progress or only stored it into the cache buffer when return from this function. But data on the buff is invalid after return from this function. The write completion request is done by CTRL_SYNC command of <ref refid="group__filesystem_1gab00fa450a811dbdabe3c655c1a36fab4" kindref="member">disk_ioctl()</ref> function. Therefore, if delayed write feature is implemented, the write throughput may be improved. <linebreak/>
+ Application program MUST NOT call this function, or FAT structure on the volume can be collapsed. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pdrv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Physical drive number to identify the target device. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the byte array to be written. The size of data to be written is sector size * count bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">sector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Start sector number in 32-bit LBA. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of sectors to write in range of from 1 to 128. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RES_OK(0)</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><linebreak/>
+ The function succeeded. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RES_ERROR</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><linebreak/>
+ Any hard error occured during the write operation and could not recover it. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RES_WRPRT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><linebreak/>
+ The medium is write protected. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RES_PARERR</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><linebreak/>
+ Invalid parameter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RES_NOTRDY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><linebreak/>
+ The device has not been initialized. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function is not needed when _FS_READONLY == 1. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h" line="38" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.c" bodystart="150" bodyend="190"/>
+        <references refid="diskio_8c_1a2c51f8df39130923660818986234711f" compoundref="diskio_8c" startline="16">ATA</references>
+        <references refid="diskio_8c_1ab5a7d5477e55758bde614bda3250a93c" compoundref="diskio_8c" startline="17">MMC</references>
+        <references refid="diskio_8c_1a779bf099075a999d1074357fccbd466b" compoundref="diskio_8c" startline="18">USB</references>
+        <references refid="diskio_8h_1gaacdfef1dad6565f65c26d12fe0ea4b2baf4dcc07fd46310b5495fa8025c89a9f3" compoundref="diskio_8h" startline="27">RES_PARERR</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*-----------------------------------------------------------------------/</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">/<sp/><sp/>Low<sp/>level<sp/>disk<sp/>interface<sp/>modlue<sp/>include<sp/>file<sp/><sp/><sp/>(C)ChaN,<sp/>2014<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">/-----------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_DISKIO_DEFINED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_DISKIO_DEFINED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="diskio_8h_1a1dd0d2b46dce637878416d489d2ddde2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_USE_WRITE<sp/><sp/>1<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>1:<sp/>Enable<sp/>disk_write<sp/>function<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="diskio_8h_1afe6d1224687dede333375a2475c78ff6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_USE_IOCTL<sp/><sp/>1<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>1:<sp/>Enable<sp/>disk_ioctl<sp/>fucntion<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="integer_8h" kindref="compound">integer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Status<sp/>of<sp/>Disk<sp/>Functions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="diskio_8h_1adba6790898ce4029c20a34b898ce73c1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="integer_8h_1a4ae1dab0fb4b072a66584546209e7d58" kindref="member">BYTE</ref><sp/><sp/><sp/><sp/><ref refid="diskio_8h_1adba6790898ce4029c20a34b898ce73c1" kindref="member">DSTATUS</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Results<sp/>of<sp/>Disk<sp/>Functions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="group__filesystem_1gaacdfef1dad6565f65c26d12fe0ea4b2b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="23" refid="diskio_8h_1gaacdfef1dad6565f65c26d12fe0ea4b2ba2ea4b6ef3fffc17dd1d38ab5c2837737" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="diskio_8h_1gaacdfef1dad6565f65c26d12fe0ea4b2ba2ea4b6ef3fffc17dd1d38ab5c2837737" kindref="member">RES_OK</ref><sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0:<sp/>Successful<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="diskio_8h_1gaacdfef1dad6565f65c26d12fe0ea4b2ba78011f5557679ec178fb40bd21e89840" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="diskio_8h_1gaacdfef1dad6565f65c26d12fe0ea4b2ba78011f5557679ec178fb40bd21e89840" kindref="member">RES_ERROR</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>1:<sp/>R/W<sp/>Error<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="diskio_8h_1gaacdfef1dad6565f65c26d12fe0ea4b2ba442a6d4393dc404827067bc4e981b322" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="diskio_8h_1gaacdfef1dad6565f65c26d12fe0ea4b2ba442a6d4393dc404827067bc4e981b322" kindref="member">RES_WRPRT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>2:<sp/>Write<sp/>Protected<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="diskio_8h_1gaacdfef1dad6565f65c26d12fe0ea4b2baad64c27c69eb1ff39ae67c5f77bb2b1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="diskio_8h_1gaacdfef1dad6565f65c26d12fe0ea4b2baad64c27c69eb1ff39ae67c5f77bb2b1d" kindref="member">RES_NOTRDY</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>3:<sp/>Not<sp/>Ready<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="diskio_8h_1gaacdfef1dad6565f65c26d12fe0ea4b2baf4dcc07fd46310b5495fa8025c89a9f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="diskio_8h_1gaacdfef1dad6565f65c26d12fe0ea4b2baf4dcc07fd46310b5495fa8025c89a9f3" kindref="member">RES_PARERR</ref><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>4:<sp/>Invalid<sp/>Parameter<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}<sp/><ref refid="group__filesystem_1gaacdfef1dad6565f65c26d12fe0ea4b2b" kindref="member">DRESULT</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">/*---------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Prototypes<sp/>for<sp/>disk<sp/>control<sp/>functions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">DSTATUS<sp/><ref refid="group__filesystem_1ga09cdaa6f36fa409bdf002727bff98eb1" kindref="member">disk_initialize</ref><sp/>(<ref refid="integer_8h_1a4ae1dab0fb4b072a66584546209e7d58" kindref="member">BYTE</ref><sp/>pdrv);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">DSTATUS<sp/><ref refid="group__filesystem_1ga8348ac5ee6d709420c02e45c111f4793" kindref="member">disk_status</ref><sp/>(<ref refid="integer_8h_1a4ae1dab0fb4b072a66584546209e7d58" kindref="member">BYTE</ref><sp/>pdrv);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="group__filesystem_1gaacdfef1dad6565f65c26d12fe0ea4b2b" kindref="member">DRESULT</ref><sp/><ref refid="group__filesystem_1ga075d27f59f550e2cee07d00abcff32e0" kindref="member">disk_read</ref><sp/>(<ref refid="integer_8h_1a4ae1dab0fb4b072a66584546209e7d58" kindref="member">BYTE</ref><sp/>pdrv,<sp/><ref refid="integer_8h_1a4ae1dab0fb4b072a66584546209e7d58" kindref="member">BYTE</ref>*<sp/>buff,<sp/><ref refid="integer_8h_1ad342ac907eb044443153a22f964bf0af" kindref="member">DWORD</ref><sp/>sector,<sp/><ref refid="integer_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/>count);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><ref refid="group__filesystem_1gaacdfef1dad6565f65c26d12fe0ea4b2b" kindref="member">DRESULT</ref><sp/><ref refid="group__filesystem_1gac03220b2c8a090b4f76eb2c9407b84fb" kindref="member">disk_write</ref><sp/>(<ref refid="integer_8h_1a4ae1dab0fb4b072a66584546209e7d58" kindref="member">BYTE</ref><sp/>pdrv,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="integer_8h_1a4ae1dab0fb4b072a66584546209e7d58" kindref="member">BYTE</ref>*<sp/>buff,<sp/><ref refid="integer_8h_1ad342ac907eb044443153a22f964bf0af" kindref="member">DWORD</ref><sp/>sector,<sp/><ref refid="integer_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/>count);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><ref refid="group__filesystem_1gaacdfef1dad6565f65c26d12fe0ea4b2b" kindref="member">DRESULT</ref><sp/><ref refid="group__filesystem_1gab00fa450a811dbdabe3c655c1a36fab4" kindref="member">disk_ioctl</ref><sp/>(<ref refid="integer_8h_1a4ae1dab0fb4b072a66584546209e7d58" kindref="member">BYTE</ref><sp/>pdrv,<sp/><ref refid="integer_8h_1a4ae1dab0fb4b072a66584546209e7d58" kindref="member">BYTE</ref><sp/>cmd,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buff);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Disk<sp/>Status<sp/>Bits<sp/>(DSTATUS)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="diskio_8h_1abd6503c70d862b979a3f7080a59e9acd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STA_NOINIT<sp/><sp/><sp/><sp/><sp/><sp/>0x01<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Drive<sp/>not<sp/>initialized<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="diskio_8h_1aec625080763d6cf487e550a6c9a2dd19" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STA_NODISK<sp/><sp/><sp/><sp/><sp/><sp/>0x02<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>No<sp/>medium<sp/>in<sp/>the<sp/>drive<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="diskio_8h_1a9ec6dc5f6620a33fabe388d3a111ca8c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STA_PROTECT<sp/><sp/><sp/><sp/><sp/>0x04<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Write<sp/>protected<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Command<sp/>code<sp/>for<sp/>disk_ioctrl<sp/>fucntion<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Generic<sp/>command<sp/>(Used<sp/>by<sp/>FatFs)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="diskio_8h_1a1b3c492f9aec325f0655941b75256f3c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CTRL_SYNC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Complete<sp/>pending<sp/>write<sp/>process<sp/>(needed<sp/>at<sp/>_FS_READONLY<sp/>==<sp/>0)<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="diskio_8h_1a570216006f6a8fc4e1698b1bbb2d1dde" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GET_SECTOR_COUNT<sp/><sp/><sp/><sp/>1<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>media<sp/>size<sp/>(needed<sp/>at<sp/>_USE_MKFS<sp/>==<sp/>1)<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="diskio_8h_1ac73b5cf2135cbd459d109b96c9aa346a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GET_SECTOR_SIZE<sp/><sp/><sp/><sp/><sp/>2<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>sector<sp/>size<sp/>(needed<sp/>at<sp/>_MAX_SS<sp/>!=<sp/>_MIN_SS)<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="diskio_8h_1aec3bb4dfe075d0ba2f3b07b300a95500" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GET_BLOCK_SIZE<sp/><sp/><sp/><sp/><sp/><sp/>3<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>erase<sp/>block<sp/>size<sp/>(needed<sp/>at<sp/>_USE_MKFS<sp/>==<sp/>1)<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="diskio_8h_1af09fd84bea8d4e889e272471f44d60d6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CTRL_TRIM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Inform<sp/>device<sp/>that<sp/>the<sp/>data<sp/>on<sp/>the<sp/>block<sp/>of<sp/>sectors<sp/>is<sp/>no<sp/>longer<sp/>used<sp/>(needed<sp/>at<sp/>_USE_TRIM<sp/>==<sp/>1)<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Generic<sp/>command<sp/>(Not<sp/>used<sp/>by<sp/>FatFs)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="diskio_8h_1a345531a07462afbd999f414708e3b65b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CTRL_POWER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Get/Set<sp/>power<sp/>status<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="diskio_8h_1af40e5cf3000553a978ff6e30dae70858" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CTRL_LOCK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>6<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Lock/Unlock<sp/>media<sp/>removal<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="diskio_8h_1a5e40e16d2d7ce196858950f070b9ec03" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CTRL_EJECT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Eject<sp/>media<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="diskio_8h_1add07021167069f5914211a2f8830fabb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CTRL_FORMAT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Create<sp/>physical<sp/>format<sp/>on<sp/>the<sp/>media<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>MMC/SDC<sp/>specific<sp/>ioctl<sp/>command<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="diskio_8h_1aba3a81a9a47c7d1bf3ac7749bc72dcfd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MMC_GET_TYPE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>10<sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>card<sp/>type<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="diskio_8h_1ae3b858b81287929f7c7bea3b7aec3087" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MMC_GET_CSD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>11<sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>CSD<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="diskio_8h_1a17ad303dd18b19a4c90ab30a8a1c14c4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MMC_GET_CID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>12<sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>CID<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="diskio_8h_1aff118ba6bd7a9fe7699cee049cff5d6c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MMC_GET_OCR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>13<sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>OCR<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="diskio_8h_1a5cc43c8449b872e16ea5ab42592f793e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MMC_GET_SDSTAT<sp/><sp/><sp/><sp/><sp/><sp/>14<sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>SD<sp/>status<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ATA/CF<sp/>specific<sp/>ioctl<sp/>command<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="diskio_8h_1a23f5fff3341e98825ea1f7367fd09f1a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ATA_GET_REV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20<sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>F/W<sp/>revision<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="diskio_8h_1a31f556ab98ab80c39058b38d9283865d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ATA_GET_MODEL<sp/><sp/><sp/><sp/><sp/><sp/><sp/>21<sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>model<sp/>name<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="diskio_8h_1a469c4f989757ee1ee404134fea3c74ba" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ATA_GET_SN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>22<sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>serial<sp/>number<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Libraries/FATfs/3rd-party/fatfs/src/diskio.h"/>
+  </compounddef>
+</doxygen>

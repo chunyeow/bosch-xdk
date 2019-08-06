@@ -1,0 +1,1250 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_bma280_utils_8c" kind="file">
+    <compoundname>Bma280Utils.c</compoundname>
+    <includes refid="_b_c_d_s___sensor_utils_8h" local="yes">BCDS_SensorUtils.h</includes>
+    <includes refid="_b_c_d_s___bma280_utils_8h" local="yes">BCDS_Bma280Utils.h</includes>
+    <includes local="yes">SensorUtilsAxisRemap.h</includes>
+    <includes refid="_b_c_d_s___i2_c_transceiver_8h" local="yes">BCDS_I2CTransceiver.h</includes>
+    <includes refid="_sensor_node_mapping_8h" local="yes">SensorNodeMapping.h</includes>
+    <includes refid="_b_c_d_s___b_s_p___board_8h" local="yes">BCDS_BSP_Board.h</includes>
+    <includes refid="bma2x2_8h" local="no">bma2x2.h</includes>
+    <incdepgraph>
+      <node id="38484">
+        <label>stdbool.h</label>
+      </node>
+      <node id="38491">
+        <label>BCDS_HALConfig.h</label>
+        <link refid="_b_c_d_s___h_a_l_config_8h"/>
+      </node>
+      <node id="38489">
+        <label>BCDS_BSP_SensorNode.h</label>
+        <link refid="_b_c_d_s___b_s_p___sensor_node_8h"/>
+        <childnode refid="38490" relation="include">
+        </childnode>
+      </node>
+      <node id="38487">
+        <label>BCDS_Bma280Utils.h</label>
+        <link refid="_b_c_d_s___bma280_utils_8h"/>
+        <childnode refid="38488" relation="include">
+        </childnode>
+        <childnode refid="38489" relation="include">
+        </childnode>
+      </node>
+      <node id="38488">
+        <label>BCDS_AxisRemap.h</label>
+        <link refid="_b_c_d_s___axis_remap_8h"/>
+        <childnode refid="38481" relation="include">
+        </childnode>
+      </node>
+      <node id="38483">
+        <label>stdint.h</label>
+      </node>
+      <node id="38481">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="38482" relation="include">
+        </childnode>
+      </node>
+      <node id="38486">
+        <label>stdlib.h</label>
+      </node>
+      <node id="38492">
+        <label>SensorUtilsAxisRemap.h</label>
+      </node>
+      <node id="38493">
+        <label>BCDS_I2CTransceiver.h</label>
+        <link refid="_b_c_d_s___i2_c_transceiver_8h"/>
+        <childnode refid="38494" relation="include">
+        </childnode>
+        <childnode refid="38481" relation="include">
+        </childnode>
+        <childnode refid="38490" relation="include">
+        </childnode>
+      </node>
+      <node id="38479">
+        <label>SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c</label>
+        <link refid="Bma280Utils.c"/>
+        <childnode refid="38480" relation="include">
+        </childnode>
+        <childnode refid="38487" relation="include">
+        </childnode>
+        <childnode refid="38492" relation="include">
+        </childnode>
+        <childnode refid="38493" relation="include">
+        </childnode>
+        <childnode refid="38496" relation="include">
+        </childnode>
+        <childnode refid="38497" relation="include">
+        </childnode>
+        <childnode refid="38498" relation="include">
+        </childnode>
+      </node>
+      <node id="38495">
+        <label>BCDS_UtilsConfig.h</label>
+        <link refid="_b_c_d_s___utils_config_8h"/>
+      </node>
+      <node id="38485">
+        <label>string.h</label>
+      </node>
+      <node id="38494">
+        <label>BCDS_Utils.h</label>
+        <link refid="_b_c_d_s___utils_8h"/>
+        <childnode refid="38495" relation="include">
+        </childnode>
+        <childnode refid="38481" relation="include">
+        </childnode>
+      </node>
+      <node id="38496">
+        <label>SensorNodeMapping.h</label>
+        <link refid="_sensor_node_mapping_8h"/>
+        <childnode refid="38482" relation="include">
+        </childnode>
+      </node>
+      <node id="38482">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="38483" relation="include">
+        </childnode>
+        <childnode refid="38484" relation="include">
+        </childnode>
+        <childnode refid="38485" relation="include">
+        </childnode>
+        <childnode refid="38486" relation="include">
+        </childnode>
+      </node>
+      <node id="38480">
+        <label>BCDS_SensorUtils.h</label>
+        <link refid="_b_c_d_s___sensor_utils_8h"/>
+        <childnode refid="38481" relation="include">
+        </childnode>
+      </node>
+      <node id="38490">
+        <label>BCDS_HAL.h</label>
+        <link refid="_b_c_d_s___h_a_l_8h"/>
+        <childnode refid="38481" relation="include">
+        </childnode>
+        <childnode refid="38491" relation="include">
+        </childnode>
+      </node>
+      <node id="38498">
+        <label>bma2x2.h</label>
+        <link refid="bma2x2_8h"/>
+      </node>
+      <node id="38497">
+        <label>BCDS_BSP_Board.h</label>
+        <link refid="_b_c_d_s___b_s_p___board_8h"/>
+        <childnode refid="38490" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_bma280_utils_8c_1abff8f3a204e79671b98fabaa652198c3" prot="public" static="no">
+        <name>BCDS_MODULE_ID</name>
+        <initializer><ref refid="group___s_e_n_s_o_r___u_t_i_l_s_1ggaba1885b5f54a444c5604d7c229527edbae7a0023abe39724a58a8578a7382a57d" kindref="member">BCDS_SENSORUTILS_ID_BMA280</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" line="42" column="10" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_bma280_utils_8c_1a513ad449c3371235845cf6274894dfdb" prot="public" static="no">
+        <name>BMA280_MAX_ALLOWED_SLOPE_DURATION</name>
+        <initializer>UINT8_C(3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>macro to set maximum allowed slope duration </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" line="57" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" bodystart="57" bodyend="-1"/>
+        <referencedby refid="_bma280_utils_8c_1a8dd47fd99bb6a894f1fdb7765f113a72" compoundref="_bma280_utils_8c" startline="136" endline="180">configureSlopeInterrupt</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_bma280_utils_8c_1a45c8d0ec207fa5c05f58e4035e4af70c" prot="public" static="no">
+        <name>CONFIGURATION_DELAY</name>
+        <initializer>UINT32_C(10)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>macro used to represent the delay needed between changing the configuration and enabling the interrupt variable to check initialization status </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" line="59" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" bodystart="58" bodyend="-1"/>
+        <referencedby refid="_bma280_utils_8c_1a8dd47fd99bb6a894f1fdb7765f113a72" compoundref="_bma280_utils_8c" startline="136" endline="180">configureSlopeInterrupt</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_bma280_utils_8c_1a95c77d8921862d5024a7103ab5fd5dce" prot="public" static="no">
+        <name>DISABLE_INTERRUPT</name>
+        <initializer>UINT8_C(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>macro used to disable the interrupt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" line="55" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" bodystart="55" bodyend="-1"/>
+        <referencedby refid="_bma280_utils_8c_1a8dd47fd99bb6a894f1fdb7765f113a72" compoundref="_bma280_utils_8c" startline="136" endline="180">configureSlopeInterrupt</referencedby>
+        <referencedby refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ga4daa634b2002897a2d80476d3a96e73b" compoundref="_bma280_utils_8c" startline="314" endline="347">Bma280Utils_disableInterrupt</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_bma280_utils_8c_1a6df14839855fbe40c2b8a48f30a423f0" prot="public" static="no">
+        <name>ENABLE_INTERRUPT</name>
+        <initializer>UINT8_C(1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>macro used to enable the interrupt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" line="56" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" bodystart="56" bodyend="-1"/>
+        <referencedby refid="_bma280_utils_8c_1a757a5789faa34f8d735a34ce4fb2950a" compoundref="_bma280_utils_8c" startline="108" endline="123">configureNewDataInterrupt</referencedby>
+        <referencedby refid="_bma280_utils_8c_1a8dd47fd99bb6a894f1fdb7765f113a72" compoundref="_bma280_utils_8c" startline="136" endline="180">configureSlopeInterrupt</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_bma280_utils_8c_1aa4943092b5c180c4d3c45efd5397a970" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structbma2x2__t" kindref="compound">bma2x2_t</ref></type>
+        <definition>struct bma2x2_t bma280Initialization</definition>
+        <argsstring></argsstring>
+        <name>bma280Initialization</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" line="63" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" bodystart="66" bodyend="-1"/>
+        <referencedby refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gad28cd9dcdad4868c49a8f0b366129159" compoundref="_bma280_utils_8c" startline="194" endline="241">Bma280Utils_initialize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="_bma280_utils_8c_1af2cc74878676abb62a86f1ac7db56447" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool initializationStatus</definition>
+        <argsstring></argsstring>
+        <name>initializationStatus</name>
+        <initializer>= <ref refid="_serval___types_8h_1a65e9886d74aaee76545e83dd09011727" kindref="member">false</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>BMA280 initialization structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" line="63" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" bodystart="63" bodyend="-1"/>
+        <referencedby refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gad28cd9dcdad4868c49a8f0b366129159" compoundref="_bma280_utils_8c" startline="194" endline="241">Bma280Utils_initialize</referencedby>
+        <referencedby refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gacbfe1aa23afcc1a2202cb59641ff6911" compoundref="_bma280_utils_8c" startline="246" endline="269">Bma280Utils_remapAxis</referencedby>
+        <referencedby refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gaea1554403ec5ae6ad5a634c231dd5954" compoundref="_bma280_utils_8c" startline="272" endline="311">Bma280Utils_configInterrupt</referencedby>
+        <referencedby refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ga4daa634b2002897a2d80476d3a96e73b" compoundref="_bma280_utils_8c" startline="314" endline="347">Bma280Utils_disableInterrupt</referencedby>
+        <referencedby refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ga78022e6a93c3ad60bc81a7c8411aba39" compoundref="_bma280_utils_8c" startline="350" endline="375">Bma280Utils_uninitialize</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gaea1554403ec5ae6ad5a634c231dd5954" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Bma280Utils_configInterrupt</definition>
+        <argsstring>(Bma280Utils_InfoPtr_T bma280Info, Bma280Utils_ConfigInterruptPtr_T interruptConfig)</argsstring>
+        <name>Bma280Utils_configInterrupt</name>
+        <param>
+          <type><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gabf7f476cbe4378e20a6bc623ee72c7fb" kindref="member">Bma280Utils_InfoPtr_T</ref></type>
+          <declname>bma280Info</declname>
+        </param>
+        <param>
+          <type><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ga46402367e7d0e558267084416f3ed1f1" kindref="member">Bma280Utils_ConfigInterruptPtr_T</ref></type>
+          <declname>interruptConfig</declname>
+        </param>
+        <briefdescription>
+<para>Function to Configure interrupts of Bma280. Before calling this API Update the below information in the appropriate structure 1) Update callback function in Bma280Utils_InfoPtr_T. 2) Update the type of callback(deferred or real time) in Bma280Utils_InfoPtr_T. 3) Update interrupt type and channel to Which interrupt needs be associated in Bma280Utils_ConfigInterrupt_T. 4) Update Bma280Utils_IntrConfigPtr_T with appropriate interrupt configuration After calling this API the given interrupt will be enabled on the given channel and the callback will be associated with the interrupt. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">bma280Info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>:Structure holding the bma280 specific configurations.Callback for the interrupt and its type should be given in this handle </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">interruptConfig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>:Structure holding the information about interrupt type,channel and its related configuration should be given here</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration of interrupt for BMA280 is success. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when any of the input parameter(interruptConfig &amp; interruptConfig-&gt;configInterrupt) is NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___s_e_n_s_o_r___u_t_i_l_s_1ggadb78aed5ac68b65e2fec1ca81ba8f13ea6e58ef167cfeaa21fe57f2a05380aab7" kindref="member">RETCODE_LIB_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when any of the input parameter for BST library API is NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___s_e_n_s_o_r___u_t_i_l_s_1ggadb78aed5ac68b65e2fec1ca81ba8f13eaf8001fd3d5f767faa47423286aea041e" kindref="member">RETCODE_BST_BMA280_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when error is returned from BST library API. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the interrupt configuration parameter is invalid. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" kindref="member">RETCODE_UNINITIALIZED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when this api is called before initializing Bma280 sensor</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The return value consist of (First 1 MSByte represents Package ID, Next byte represents Severity and Last 2 LSBytes represents error code). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" line="272" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" bodystart="272" bodyend="311"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" compoundref="_b_c_d_s___retcode_8h" startline="106">RETCODE_FAILURE</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6acec8ccdc2bb7d9c1e4806729ea2acb76" compoundref="_b_c_d_s___retcode_8h" startline="130">RETCODE_SEVERITY_FATAL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="_bma280_utils_8c_1af2cc74878676abb62a86f1ac7db56447" compoundref="_bma280_utils_8c" startline="63">initializationStatus</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" compoundref="_b_c_d_s___retcode_8h" startline="111">RETCODE_UNINITIALIZED</references>
+        <references refid="struct_bma280_utils___config_interrupt___s_1a5320821b0e882116ba1df3b8f624a9c3" compoundref="_b_c_d_s___bma280_utils_8h" startline="109">Bma280Utils_ConfigInterrupt_S::interruptChannel</references>
+        <references refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ggab6b856a288854f98174589a7f97b2cc1ade3d867e5ff2327a0017afaabaa5b86b" compoundref="_b_c_d_s___bma280_utils_8h" startline="74">BMA280UTILS_INTERRUPT_CHANNEL2</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" compoundref="_b_c_d_s___retcode_8h" startline="108">RETCODE_INVALID_PARAM</references>
+        <references refid="struct_bma280_utils___config_interrupt___s_1a4dcba88aa89ed776adf8ae048408e504" compoundref="_b_c_d_s___bma280_utils_8h" startline="108">Bma280Utils_ConfigInterrupt_S::interruptType</references>
+        <references refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gga28c037368c2a3bda1af5274fe598e276a51ccec60dc90fb3f1471b17858dd2018" compoundref="_b_c_d_s___bma280_utils_8h" startline="63">BMA280UTILS_SLOPE_INTERRUPT</references>
+        <references refid="_bma280_utils_8c_1a8dd47fd99bb6a894f1fdb7765f113a72" compoundref="_bma280_utils_8c" startline="136" endline="180">configureSlopeInterrupt</references>
+        <references refid="struct_bma280_utils___config_interrupt___s_1a8e4997b32b60693d2e8086feaa35838d" compoundref="_b_c_d_s___bma280_utils_8h" startline="110">Bma280Utils_ConfigInterrupt_S::configInterrupt</references>
+        <references refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gga28c037368c2a3bda1af5274fe598e276a332cca1efaeb081f15f9e91a76e0f288" compoundref="_b_c_d_s___bma280_utils_8h" startline="62">BMA280UTILS_NEW_DATA_INTERRUPT</references>
+        <references refid="_bma280_utils_8c_1a757a5789faa34f8d735a34ce4fb2950a" compoundref="_bma280_utils_8c" startline="108" endline="123">configureNewDataInterrupt</references>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gac04dfe1f1d0f10a41008eb54b0258a8e" compoundref="_accelerometer_8c" startline="1079" endline="1141">Accelerometer_configInterrupt</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_bma280_utils_8c_1aa11c21709da28e0b579c21e56644ec70" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Bma280Utils_DelayMS</definition>
+        <argsstring>(BMA2x2_MDELAY_DATA_TYPE delayMS)</argsstring>
+        <name>Bma280Utils_DelayMS</name>
+        <param>
+          <type><ref refid="bma2x2_8h_1a89b2eb95aca0e87f27ebe5d8ae08edcd" kindref="member">BMA2x2_MDELAY_DATA_TYPE</ref></type>
+          <declname>delayMS</declname>
+        </param>
+        <briefdescription>
+<para>Function to provide a delay. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>delayMS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Delay in milliseconds </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" line="186" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" bodystart="186" bodyend="189"/>
+        <references refid="group___b_c_d_s___h_a_l___b_s_p___board_1ga3c12de2d1d4a59f5a1c9794e88ff6608" compoundref="_b_s_p___board_8c" startline="412" endline="419">BSP_Board_Delay</references>
+        <referencedby refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gad28cd9dcdad4868c49a8f0b366129159" compoundref="_bma280_utils_8c" startline="194" endline="241">Bma280Utils_initialize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ga4daa634b2002897a2d80476d3a96e73b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Bma280Utils_disableInterrupt</definition>
+        <argsstring>(Bma280Utils_InfoPtr_T bma280Info, Bma280Utils_IntrType_T interruptType, Bma280Utils_IntrChannel_T interruptChannel)</argsstring>
+        <name>Bma280Utils_disableInterrupt</name>
+        <param>
+          <type><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gabf7f476cbe4378e20a6bc623ee72c7fb" kindref="member">Bma280Utils_InfoPtr_T</ref></type>
+          <declname>bma280Info</declname>
+        </param>
+        <param>
+          <type><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ga6ab72fa2c9c4bd2ebe0e53995a3e32d5" kindref="member">Bma280Utils_IntrType_T</ref></type>
+          <declname>interruptType</declname>
+        </param>
+        <param>
+          <type><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ga09dc18f20dc5418748026532cef6066b" kindref="member">Bma280Utils_IntrChannel_T</ref></type>
+          <declname>interruptChannel</declname>
+        </param>
+        <briefdescription>
+<para>Function to Disable the Interrupt. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">bma280Info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>:structure holding the Bma280 specific configurations </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">interruptType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>:type of interrupt that needs to be disabled </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">interruptChannel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>:interrupt channel in which interrupt needs to be disabled</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BMA280 disable interrupt success </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___s_e_n_s_o_r___u_t_i_l_s_1ggadb78aed5ac68b65e2fec1ca81ba8f13ea6e58ef167cfeaa21fe57f2a05380aab7" kindref="member">RETCODE_LIB_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when any of the input parameter for BST library API is NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___s_e_n_s_o_r___u_t_i_l_s_1ggadb78aed5ac68b65e2fec1ca81ba8f13eaf8001fd3d5f767faa47423286aea041e" kindref="member">RETCODE_BST_BMA280_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when error is returned from BST library API. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the interrupt configuration parameter is invalid. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" kindref="member">RETCODE_UNINITIALIZED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when this api is called before initializing Bma280 sensor.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The return value consist of (First MSB Byte represents Package ID,Next Byte represents Severity and Last 2LSB Bytes represents error code). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" line="314" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" bodystart="314" bodyend="347"/>
+        <references refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" compoundref="_b_c_d_s___basics_8h" startline="93">BCDS_UNUSED</references>
+        <references refid="bma2x2_8h_1af9e5f60f4f87f874eac57b79bc98f892" compoundref="bma2x2_8h" startline="462">BMA2x2_RETURN_FUNCTION_TYPE</references>
+        <references refid="bma2x2_8h_1a5e7e68944cce7c2ff8c4286db2a058bc" compoundref="bma2x2_8h" startline="454">E_OUT_OF_RANGE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" compoundref="_b_c_d_s___retcode_8h" startline="106">RETCODE_FAILURE</references>
+        <references refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ggab6b856a288854f98174589a7f97b2cc1a676ccefcc514fb37ad1542d2b06dbcaa" compoundref="_b_c_d_s___bma280_utils_8h" startline="75">BMA280UTILS_INTERRUPT_CHANNEL_INVALID</references>
+        <references refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gga28c037368c2a3bda1af5274fe598e276a6372a506c443f9432d95645b96492fe5" compoundref="_b_c_d_s___bma280_utils_8h" startline="66">BMA280UTILS_INVALID_INTERRUPT</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6acec8ccdc2bb7d9c1e4806729ea2acb76" compoundref="_b_c_d_s___retcode_8h" startline="130">RETCODE_SEVERITY_FATAL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" compoundref="_b_c_d_s___retcode_8h" startline="108">RETCODE_INVALID_PARAM</references>
+        <references refid="_bma280_utils_8c_1af2cc74878676abb62a86f1ac7db56447" compoundref="_bma280_utils_8c" startline="63">initializationStatus</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" compoundref="_b_c_d_s___retcode_8h" startline="111">RETCODE_UNINITIALIZED</references>
+        <references refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gga28c037368c2a3bda1af5274fe598e276a51ccec60dc90fb3f1471b17858dd2018" compoundref="_b_c_d_s___bma280_utils_8h" startline="63">BMA280UTILS_SLOPE_INTERRUPT</references>
+        <references refid="bma2x2_8c_1a3568640db5d840312f3843aed3a09c09" compoundref="bma2x2_8c" startline="3100" endline="3146">bma2x2_set_intr_slope</references>
+        <references refid="_bma280_utils_8c_1a95c77d8921862d5024a7103ab5fd5dce" compoundref="_bma280_utils_8c" startline="55">DISABLE_INTERRUPT</references>
+        <references refid="_bma280_utils_8c_1ab1ae8735535720bfbb8c21dfe9e7da04" compoundref="_bma280_utils_8c" startline="79" endline="97">libErrorMapping</references>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga4b8d0377af6ed3ea55a4832707f2575c" compoundref="_accelerometer_8c" startline="1144" endline="1181">Accelerometer_disableInterrupt</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gad28cd9dcdad4868c49a8f0b366129159" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Bma280Utils_initialize</definition>
+        <argsstring>(Bma280Utils_InfoPtr_T bma280Info)</argsstring>
+        <name>Bma280Utils_initialize</name>
+        <param>
+          <type><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gabf7f476cbe4378e20a6bc623ee72c7fb" kindref="member">Bma280Utils_InfoPtr_T</ref></type>
+          <declname>bma280Info</declname>
+        </param>
+        <briefdescription>
+<para>Function to initialize Bma280. This needs to be called before calling any other API. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">bma280Info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>:structure holding the bma280 specific configurations</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BMA280 is initialized successfully. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when any of the input parameter(bma280Info-&gt;ISRCallback or bma280Info) is NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___s_e_n_s_o_r___u_t_i_l_s_1ggadb78aed5ac68b65e2fec1ca81ba8f13ea6e58ef167cfeaa21fe57f2a05380aab7" kindref="member">RETCODE_LIB_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when any of the input parameter for BST library API is NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___s_e_n_s_o_r___u_t_i_l_s_1ggadb78aed5ac68b65e2fec1ca81ba8f13eaf8001fd3d5f767faa47423286aea041e" kindref="member">RETCODE_BST_BMA280_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when error is returned from BST library API. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gabed20789ada55c303bb4ef8e0669a4ac" kindref="member">RETCODE_DOPPLE_INITIALIZATION</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>When initialization is already done.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>In case of other failures refer <ref refid="group___b_c_d_s___h_a_l___b_s_p___sensor___node_1ga311d37af892ea5672b90ddac5d658440" kindref="member">BSP_SensorNode_Enable</ref> or #I2CSensorTransceiver_Init API&apos;s.</para></simplesect>
+<simplesect kind="note"><para>1) The return value consist of (First MSB Byte represents Package ID,Next Byte represents Severity and Last 2LSB Bytes represents error code). </para></simplesect>
+<simplesect kind="note"><para>2) The support of multiple instances is not possible due to the limitation in the BST library. </para></simplesect>
+<simplesect kind="note"><para>3) Calling Bma280 initialization API present in sensorUtils (Bma280Utils_initialize) and BST library (bma2x2_init) concurrently will lead to unexpected behaviour. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" line="194" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" bodystart="194" bodyend="241"/>
+        <references refid="bma2x2_8h_1af9e5f60f4f87f874eac57b79bc98f892" compoundref="bma2x2_8h" startline="462">BMA2x2_RETURN_FUNCTION_TYPE</references>
+        <references refid="bma2x2_8h_1a5e7e68944cce7c2ff8c4286db2a058bc" compoundref="bma2x2_8h" startline="454">E_OUT_OF_RANGE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" compoundref="_b_c_d_s___retcode_8h" startline="106">RETCODE_FAILURE</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="struct_bma280_utils___info___s_1a9359e67ad790bad1d00f072dc3e28243" compoundref="_b_c_d_s___bma280_utils_8h" startline="85">Bma280Utils_Info_S::ISRCallback</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6acec8ccdc2bb7d9c1e4806729ea2acb76" compoundref="_b_c_d_s___retcode_8h" startline="130">RETCODE_SEVERITY_FATAL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="_bma280_utils_8c_1af2cc74878676abb62a86f1ac7db56447" compoundref="_bma280_utils_8c" startline="63">initializationStatus</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6ae50e23ac22de65b64de1424dd9663a3f" compoundref="_b_c_d_s___retcode_8h" startline="132">RETCODE_SEVERITY_WARNING</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gabed20789ada55c303bb4ef8e0669a4ac" compoundref="_b_c_d_s___retcode_8h" startline="93">RETCODE_DOPPLE_INITIALIZATION</references>
+        <references refid="_sensor_node_mapping_8c_1a76bdc1fd6f340a0a598dadddb9ab278a" compoundref="_sensor_node_mapping_8c" startline="62" endline="88">SensorNodeMapping_Init</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_c_d_s___h_a_l___b_s_p___sensor___node_1ga311d37af892ea5672b90ddac5d658440" compoundref="_b_s_p___sensor_node_8c" startline="206" endline="519">BSP_SensorNode_Enable</references>
+        <references refid="struct_bma280_utils___info___s_1afb8d35b33d31d052c1ff16de62ba1014" compoundref="_b_c_d_s___bma280_utils_8h" startline="83">Bma280Utils_Info_S::BspSensorId</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6ae21ed2b53ddce83b92604ecb3c51a9ec" compoundref="_b_c_d_s___retcode_8h" startline="133">RETCODE_SEVERITY_INFO</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29cf262307b032a013a9a7349a3fb20e" compoundref="_b_c_d_s___retcode_8h" startline="297" endline="300">Retcode_GetSeverity</references>
+        <references refid="_bma280_utils_8c_1aa4943092b5c180c4d3c45efd5397a970" compoundref="_bma280_utils_8c" startline="66">bma280Initialization</references>
+        <references refid="_sensor_node_mapping_8c_1a77b5d6036b31e0f795e5167c9435db6c" compoundref="_sensor_node_mapping_8c" startline="102" endline="110">SensorNodeMapping_Read</references>
+        <references refid="_sensor_node_mapping_8c_1ac656d2e1648f159bb70e26e1666a94c3" compoundref="_sensor_node_mapping_8c" startline="91" endline="100">SensorNodeMapping_Write</references>
+        <references refid="structbma2x2__t_1af1e75e49dd4e1ed9c19f67ac7685697b" compoundref="bma2x2_8h" startline="610">bma2x2_t::delay_msec</references>
+        <references refid="_bma280_utils_8c_1aa11c21709da28e0b579c21e56644ec70" compoundref="_bma280_utils_8c" startline="186" endline="189">Bma280Utils_DelayMS</references>
+        <references refid="structbma2x2__t_1aa50b0df71b19db77268cdf44177cd536" compoundref="bma2x2_8h" startline="605">bma2x2_t::dev_addr</references>
+        <references refid="struct_bma280_utils___info___s_1a1997a5306d6d04a9ce867303d1a6d9e1" compoundref="_b_c_d_s___bma280_utils_8h" startline="86">Bma280Utils_Info_S::dev_addr</references>
+        <references refid="bma2x2_8c_1a4b452f2f93c1cef59a56d3c7f85c22f4" compoundref="bma2x2_8c" startline="117" endline="137">bma2x2_init</references>
+        <references refid="bma2x2_8h_1aa90cac659d18e8ef6294c7ae337f6b58" compoundref="bma2x2_8h" startline="458">SUCCESS</references>
+        <references refid="bma2x2_8c_1a570002751fef34c21501ccb83bd68a9f" compoundref="bma2x2_8c" startline="1158" endline="1290">bma2x2_set_bw</references>
+        <references refid="bma2x2_8h_1a390ab7b8f8e875193f3712cd5ba28bd0" compoundref="bma2x2_8h" startline="1700">BMA2x2_BW_500HZ</references>
+        <references refid="_bma280_utils_8c_1ab1ae8735535720bfbb8c21dfe9e7da04" compoundref="_bma280_utils_8c" startline="79" endline="97">libErrorMapping</references>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gada44fddcce4df8b6f4d19fcd06b0f0f3" compoundref="_accelerometer_8c" startline="288" endline="350">Accelerometer_init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gacbfe1aa23afcc1a2202cb59641ff6911" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Bma280Utils_remapAxis</definition>
+        <argsstring>(Bma280Utils_InfoPtr_T bma280Info, AxisRemap_Data_T *accelData)</argsstring>
+        <name>Bma280Utils_remapAxis</name>
+        <param>
+          <type><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gabf7f476cbe4378e20a6bc623ee72c7fb" kindref="member">Bma280Utils_InfoPtr_T</ref></type>
+          <declname>bma280Info</declname>
+        </param>
+        <param>
+          <type><ref refid="group___a_x_i_s___r_e_m_a_p_1ga47fb10054907791a22486da605dc02fc" kindref="member">AxisRemap_Data_T</ref> *</type>
+          <declname>accelData</declname>
+        </param>
+        <briefdescription>
+<para>Function to read remapped Bma280 data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">bma280Info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>:structure holding the Bma280 specific configurations. The information about remap configuration should be given in this struct </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">accelData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: while calling this API structure will hold the Bma280 data that needs to be the remapped. After calling this API the structure will hold remapped data</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BMA280 axis remap success </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when any of the input parameter is NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" kindref="member">RETCODE_UNINITIALIZED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when this api is called before initializing Bma280 sensor.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>In case of other failures refer <ref refid="_axis_remap_8c_1aa5483f1ef3e297e895b29bb26745c578" kindref="member">AxisRemap_remapSensorData</ref> API.</para></simplesect>
+<simplesect kind="note"><para>The return value consist of (First MSB Byte represents Package ID,Next Byte represents Severity and Last 2LSB Bytes represents error code). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>copying the actual sensor data into a local variable </para>        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" line="246" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" bodystart="246" bodyend="269"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" compoundref="_b_c_d_s___retcode_8h" startline="106">RETCODE_FAILURE</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6acec8ccdc2bb7d9c1e4806729ea2acb76" compoundref="_b_c_d_s___retcode_8h" startline="130">RETCODE_SEVERITY_FATAL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="_bma280_utils_8c_1af2cc74878676abb62a86f1ac7db56447" compoundref="_bma280_utils_8c" startline="63">initializationStatus</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" compoundref="_b_c_d_s___retcode_8h" startline="111">RETCODE_UNINITIALIZED</references>
+        <references refid="struct_axis_remap___data___s_1af6d3062751bd565decb1a2cd3b63bdb2" compoundref="_b_c_d_s___axis_remap_8h" startline="60">AxisRemap_Data_S::x</references>
+        <references refid="struct_axis_remap___data___s_1af64066d134a77e01b3d6eb8da813627a" compoundref="_b_c_d_s___axis_remap_8h" startline="61">AxisRemap_Data_S::y</references>
+        <references refid="struct_axis_remap___data___s_1ac2fb30be1b894e32b31b68bb513262a3" compoundref="_b_c_d_s___axis_remap_8h" startline="62">AxisRemap_Data_S::z</references>
+        <references refid="_axis_remap_8c_1aa5483f1ef3e297e895b29bb26745c578" compoundref="_axis_remap_8c" startline="77" endline="186">AxisRemap_remapSensorData</references>
+        <references refid="struct_bma280_utils___info___s_1a148dc427778c71272cb0de06c4c4630d" compoundref="_b_c_d_s___bma280_utils_8h" startline="84">Bma280Utils_Info_S::remap</references>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga5dcaf1b81b63ccce1a85ab649b920aca" compoundref="_accelerometer_8c" startline="874" endline="947">Accelerometer_readXyzLsbValue</referencedby>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga0db11ba711c71c40c97a971065f02fef" compoundref="_accelerometer_8c" startline="950" endline="1038">Accelerometer_readXyzGValue</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ga78022e6a93c3ad60bc81a7c8411aba39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T Bma280Utils_uninitialize</definition>
+        <argsstring>(Bma280Utils_InfoPtr_T bma280Info)</argsstring>
+        <name>Bma280Utils_uninitialize</name>
+        <param>
+          <type><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gabf7f476cbe4378e20a6bc623ee72c7fb" kindref="member">Bma280Utils_InfoPtr_T</ref></type>
+          <declname>bma280Info</declname>
+        </param>
+        <briefdescription>
+<para>Function to uninitialize Accel.After calling this API sensor is no more usable without initializing it again by calling <ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gad28cd9dcdad4868c49a8f0b366129159" kindref="member">Bma280Utils_initialize()</ref> API. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">bma280Info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>:structure holding the bma280 specific configurations</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BMA280 un-initialization success </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when bma280Info is NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" kindref="member">RETCODE_UNINITIALIZED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when this api is called before initializing Bma280 sensor.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>In case of other failures refer <ref refid="group___b_c_d_s___h_a_l___b_s_p___sensor___node_1ga5af05449409434d39749e474f3c1096c" kindref="member">BSP_SensorNode_Disable</ref> or <ref refid="group___b_c_d_s___h_a_l___b_s_p___sensor___node_1ga0d143eb863c1549f0433cfe3e852bd77" kindref="member">BSP_SensorNode_IsAllNodesDisabled</ref> or #I2CSensorTransceiver_Deinit API.</para></simplesect>
+<simplesect kind="note"><para>The return value consist of (First MSB Byte represents Package ID,Next Byte represents Severity and Last 2LSB Bytes represents error code). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" line="350" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" bodystart="350" bodyend="375"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" compoundref="_b_c_d_s___retcode_8h" startline="106">RETCODE_FAILURE</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6acec8ccdc2bb7d9c1e4806729ea2acb76" compoundref="_b_c_d_s___retcode_8h" startline="130">RETCODE_SEVERITY_FATAL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="_bma280_utils_8c_1af2cc74878676abb62a86f1ac7db56447" compoundref="_bma280_utils_8c" startline="63">initializationStatus</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" compoundref="_b_c_d_s___retcode_8h" startline="111">RETCODE_UNINITIALIZED</references>
+        <references refid="group___b_c_d_s___h_a_l___b_s_p___sensor___node_1ga5af05449409434d39749e474f3c1096c" compoundref="_b_s_p___sensor_node_8c" startline="523" endline="684">BSP_SensorNode_Disable</references>
+        <references refid="struct_bma280_utils___info___s_1afb8d35b33d31d052c1ff16de62ba1014" compoundref="_b_c_d_s___bma280_utils_8h" startline="83">Bma280Utils_Info_S::BspSensorId</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="_sensor_node_mapping_8c_1ac03bdbce5f464b417b6341db3e1e999d" compoundref="_sensor_node_mapping_8c" startline="124" endline="140">SensorNodeMapping_DeInit</references>
+        <referencedby refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gaddf51f53b785d82dd8232b7f94e676f8" compoundref="_accelerometer_8c" startline="1041" endline="1076">Accelerometer_deInit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_bma280_utils_8c_1a757a5789faa34f8d735a34ce4fb2950a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>static Retcode_T configureNewDataInterrupt</definition>
+        <argsstring>(Bma280Utils_IntrChannel_T interruptChannel)</argsstring>
+        <name>configureNewDataInterrupt</name>
+        <param>
+          <type><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ga09dc18f20dc5418748026532cef6066b" kindref="member">Bma280Utils_IntrChannel_T</ref></type>
+          <declname>interruptChannel</declname>
+        </param>
+        <briefdescription>
+<para>Function responsible to configure interrupt for new sensor data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">interruptChannel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Channel to which interrupt needs to be configured</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BMA280 sensor configure slope interrupt success. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_FAILURE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BMA280 sensor configure slope interrupt failed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_INVALID_PARAM</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BMA280 sensor configure slope interrupt failed because of invalid input parameter. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" line="108" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" bodystart="108" bodyend="123"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" compoundref="_b_c_d_s___retcode_8h" startline="106">RETCODE_FAILURE</references>
+        <references refid="bma2x2_8h_1af9e5f60f4f87f874eac57b79bc98f892" compoundref="bma2x2_8h" startline="462">BMA2x2_RETURN_FUNCTION_TYPE</references>
+        <references refid="bma2x2_8h_1a5e7e68944cce7c2ff8c4286db2a058bc" compoundref="bma2x2_8h" startline="454">E_OUT_OF_RANGE</references>
+        <references refid="bma2x2_8c_1a467f4546477b3f42a806b00eeb8a70b4" compoundref="bma2x2_8c" startline="3939" endline="3985">bma2x2_set_new_data</references>
+        <references refid="_bma280_utils_8c_1a6df14839855fbe40c2b8a48f30a423f0" compoundref="_bma280_utils_8c" startline="56">ENABLE_INTERRUPT</references>
+        <references refid="bma2x2_8h_1aa90cac659d18e8ef6294c7ae337f6b58" compoundref="bma2x2_8h" startline="458">SUCCESS</references>
+        <references refid="bma2x2_8c_1a4d4148c870b5d70f9eb763db64075a77" compoundref="bma2x2_8c" startline="2264" endline="2358">bma2x2_set_intr_enable</references>
+        <references refid="bma2x2_8h_1a4a123f3c99f72953adfefb42daa8f1e8" compoundref="bma2x2_8h" startline="1798">BMA2x2_DATA_ENABLE</references>
+        <references refid="bma2x2_8h_1a4133fca0120efaceb6b9c1de5f79a3e2" compoundref="bma2x2_8h" startline="1640">INTR_ENABLE</references>
+        <references refid="_bma280_utils_8c_1ab1ae8735535720bfbb8c21dfe9e7da04" compoundref="_bma280_utils_8c" startline="79" endline="97">libErrorMapping</references>
+        <referencedby refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gaea1554403ec5ae6ad5a634c231dd5954" compoundref="_bma280_utils_8c" startline="272" endline="311">Bma280Utils_configInterrupt</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_bma280_utils_8c_1a8dd47fd99bb6a894f1fdb7765f113a72" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>static Retcode_T configureSlopeInterrupt</definition>
+        <argsstring>(Bma280Utils_SlopeIntrConfigPtr_T slopeIntrConfig, Bma280Utils_IntrChannel_T interruptChannel)</argsstring>
+        <name>configureSlopeInterrupt</name>
+        <param>
+          <type><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ga637e56547e8fd69aa00e041ef2b7697f" kindref="member">Bma280Utils_SlopeIntrConfigPtr_T</ref></type>
+          <declname>slopeIntrConfig</declname>
+        </param>
+        <param>
+          <type><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ga09dc18f20dc5418748026532cef6066b" kindref="member">Bma280Utils_IntrChannel_T</ref></type>
+          <declname>interruptChannel</declname>
+        </param>
+        <briefdescription>
+<para>Function responsible to configure interrupt conditions in the support layer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">slopeIntrConfig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>structure representing to slope interrupt configuration</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">interruptChannel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel to which interrupt needs to be configured</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RETCODE_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BMA280 sensor configure slope interrupt success. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_FAILURE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BMA280 sensor configure slope interrupt failed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RETCODE_INVALID_PARAM</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BMA280 sensor configure slope interrupt failed because of invalid input parameter. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" line="136" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" bodystart="136" bodyend="180"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" compoundref="_b_c_d_s___retcode_8h" startline="106">RETCODE_FAILURE</references>
+        <references refid="bma2x2_8h_1af9e5f60f4f87f874eac57b79bc98f892" compoundref="bma2x2_8h" startline="462">BMA2x2_RETURN_FUNCTION_TYPE</references>
+        <references refid="bma2x2_8h_1a5e7e68944cce7c2ff8c4286db2a058bc" compoundref="bma2x2_8h" startline="454">E_OUT_OF_RANGE</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6acec8ccdc2bb7d9c1e4806729ea2acb76" compoundref="_b_c_d_s___retcode_8h" startline="130">RETCODE_SEVERITY_FATAL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="struct_bma280_utils___slope_intr_config___s_1a4681808b7a492ea97199d8c3237e8f0b" compoundref="_b_c_d_s___bma280_utils_8h" startline="94">Bma280Utils_SlopeIntrConfig_S::slopeEnableX</references>
+        <references refid="_bma280_utils_8c_1a6df14839855fbe40c2b8a48f30a423f0" compoundref="_bma280_utils_8c" startline="56">ENABLE_INTERRUPT</references>
+        <references refid="struct_bma280_utils___slope_intr_config___s_1ad939d466effdf65bf5e83ab419a1535b" compoundref="_b_c_d_s___bma280_utils_8h" startline="95">Bma280Utils_SlopeIntrConfig_S::slopeEnableY</references>
+        <references refid="struct_bma280_utils___slope_intr_config___s_1ae632fb997823d9d117612cc3cf1b18b8" compoundref="_b_c_d_s___bma280_utils_8h" startline="96">Bma280Utils_SlopeIntrConfig_S::slopeEnableZ</references>
+        <references refid="struct_bma280_utils___slope_intr_config___s_1a816e6e04857deb749d8adc88a9bf6181" compoundref="_b_c_d_s___bma280_utils_8h" startline="98">Bma280Utils_SlopeIntrConfig_S::slopeDuration</references>
+        <references refid="_bma280_utils_8c_1a513ad449c3371235845cf6274894dfdb" compoundref="_bma280_utils_8c" startline="57">BMA280_MAX_ALLOWED_SLOPE_DURATION</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" compoundref="_b_c_d_s___retcode_8h" startline="108">RETCODE_INVALID_PARAM</references>
+        <references refid="bma2x2_8c_1a3568640db5d840312f3843aed3a09c09" compoundref="bma2x2_8c" startline="3100" endline="3146">bma2x2_set_intr_slope</references>
+        <references refid="_bma280_utils_8c_1a95c77d8921862d5024a7103ab5fd5dce" compoundref="_bma280_utils_8c" startline="55">DISABLE_INTERRUPT</references>
+        <references refid="bma2x2_8h_1aa90cac659d18e8ef6294c7ae337f6b58" compoundref="bma2x2_8h" startline="458">SUCCESS</references>
+        <references refid="bma2x2_8c_1a4d4148c870b5d70f9eb763db64075a77" compoundref="bma2x2_8c" startline="2264" endline="2358">bma2x2_set_intr_enable</references>
+        <references refid="bma2x2_8h_1ad56d3f5e03d182d9b3d2e945ddb1cb4e" compoundref="bma2x2_8h" startline="1800">BMA2x2_SLOPE_X_INTR</references>
+        <references refid="bma2x2_8h_1a21b2a528801d8f2d8513586ce9310341" compoundref="bma2x2_8h" startline="1802">BMA2x2_SLOPE_Y_INTR</references>
+        <references refid="bma2x2_8h_1afe06afbc030173408047d106a0e6d155" compoundref="bma2x2_8h" startline="1804">BMA2x2_SLOPE_Z_INTR</references>
+        <references refid="bma2x2_8c_1a1f64e9c25569f13af7427f4d101173e4" compoundref="bma2x2_8c" startline="5205" endline="5266">bma2x2_set_durn</references>
+        <references refid="bma2x2_8h_1a8c7a0f6fbfb0465b34e93e4b792e84e5" compoundref="bma2x2_8h" startline="1887">BMA2x2_SLOPE_DURN</references>
+        <references refid="bma2x2_8c_1ac223d82aebde6b71089961d5ee2f13cb" compoundref="bma2x2_8c" startline="5439" endline="5491">bma2x2_set_thres</references>
+        <references refid="bma2x2_8h_1ae0d33eb42e4e93613130441644d89be7" compoundref="bma2x2_8h" startline="1895">BMA2x2_SLOPE_THRES</references>
+        <references refid="struct_bma280_utils___slope_intr_config___s_1a7fcca79bdc612ca74c936d913a86bafe" compoundref="_b_c_d_s___bma280_utils_8h" startline="97">Bma280Utils_SlopeIntrConfig_S::slopeThreshold</references>
+        <references refid="group___b_c_d_s___h_a_l___b_s_p___board_1ga3c12de2d1d4a59f5a1c9794e88ff6608" compoundref="_b_s_p___board_8c" startline="412" endline="419">BSP_Board_Delay</references>
+        <references refid="_bma280_utils_8c_1a45c8d0ec207fa5c05f58e4035e4af70c" compoundref="_bma280_utils_8c" startline="58">CONFIGURATION_DELAY</references>
+        <references refid="_bma280_utils_8c_1ab1ae8735535720bfbb8c21dfe9e7da04" compoundref="_bma280_utils_8c" startline="79" endline="97">libErrorMapping</references>
+        <referencedby refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gaea1554403ec5ae6ad5a634c231dd5954" compoundref="_bma280_utils_8c" startline="272" endline="311">Bma280Utils_configInterrupt</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_bma280_utils_8c_1ab1ae8735535720bfbb8c21dfe9e7da04" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>static Retcode_T libErrorMapping</definition>
+        <argsstring>(BMA2x2_RETURN_FUNCTION_TYPE bmaLibReturn)</argsstring>
+        <name>libErrorMapping</name>
+        <param>
+          <type><ref refid="bma2x2_8h_1af9e5f60f4f87f874eac57b79bc98f892" kindref="member">BMA2x2_RETURN_FUNCTION_TYPE</ref></type>
+          <declname>bmaLibReturn</declname>
+        </param>
+        <briefdescription>
+<para>This function maps error codes returned from BMA280 library to retcode values. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">bmaLibReturn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Return value from BMA2X2 library</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BMA2X2 sensor API call success </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___s_e_n_s_o_r___u_t_i_l_s_1ggadb78aed5ac68b65e2fec1ca81ba8f13eaf8001fd3d5f767faa47423286aea041e" kindref="member">RETCODE_BST_BMA280_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BMA2X2 sensor API call failed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___s_e_n_s_o_r___u_t_i_l_s_1ggadb78aed5ac68b65e2fec1ca81ba8f13ea6e58ef167cfeaa21fe57f2a05380aab7" kindref="member">RETCODE_LIB_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BMA2X2 sensor API call failed because of NULL input parameter </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" line="79" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c" bodystart="79" bodyend="97"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" compoundref="_b_c_d_s___retcode_8h" startline="106">RETCODE_FAILURE</references>
+        <references refid="bma2x2_8h_1aa90cac659d18e8ef6294c7ae337f6b58" compoundref="bma2x2_8h" startline="458">SUCCESS</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="bma2x2_8h_1ac6822a9328c536b0b9b506e0b2fe2785" compoundref="bma2x2_8h" startline="455">E_BMA2x2_NULL_PTR</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <references refid="group___s_e_n_s_o_r___u_t_i_l_s_1ggadb78aed5ac68b65e2fec1ca81ba8f13ea6e58ef167cfeaa21fe57f2a05380aab7" compoundref="_b_c_d_s___sensor_utils_8h" startline="79">RETCODE_LIB_NULL_POINTER</references>
+        <references refid="group___s_e_n_s_o_r___u_t_i_l_s_1ggadb78aed5ac68b65e2fec1ca81ba8f13eaf8001fd3d5f767faa47423286aea041e" compoundref="_b_c_d_s___sensor_utils_8h" startline="80">RETCODE_BST_BMA280_ERROR</references>
+        <referencedby refid="_bma280_utils_8c_1a757a5789faa34f8d735a34ce4fb2950a" compoundref="_bma280_utils_8c" startline="108" endline="123">configureNewDataInterrupt</referencedby>
+        <referencedby refid="_bma280_utils_8c_1a8dd47fd99bb6a894f1fdb7765f113a72" compoundref="_bma280_utils_8c" startline="136" endline="180">configureSlopeInterrupt</referencedby>
+        <referencedby refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gad28cd9dcdad4868c49a8f0b366129159" compoundref="_bma280_utils_8c" startline="194" endline="241">Bma280Utils_initialize</referencedby>
+        <referencedby refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ga4daa634b2002897a2d80476d3a96e73b" compoundref="_bma280_utils_8c" startline="314" endline="347">Bma280Utils_disableInterrupt</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>system<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___sensor_utils_8h" kindref="compound">BCDS_SensorUtils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>BCDS_MODULE_ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="_bma280_utils_8c_1abff8f3a204e79671b98fabaa652198c3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BCDS_MODULE_ID<sp/>BCDS_SENSORUTILS_ID_BMA280</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>own<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___bma280_utils_8h" kindref="compound">BCDS_Bma280Utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;SensorUtilsAxisRemap.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___i2_c_transceiver_8h" kindref="compound">BCDS_I2CTransceiver.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_sensor_node_mapping_8h" kindref="compound">SensorNodeMapping.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___b_s_p___board_8h" kindref="compound">BCDS_BSP_Board.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>additional<sp/>interface<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="bma2x2_8h" kindref="compound">bma2x2.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>constant<sp/>and<sp/>variable<sp/>definitions<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="_bma280_utils_8c_1a95c77d8921862d5024a7103ab5fd5dce" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DISABLE_INTERRUPT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT8_C(0)<sp/></highlight></codeline>
+<codeline lineno="56" refid="_bma280_utils_8c_1a6df14839855fbe40c2b8a48f30a423f0" refkind="member"><highlight class="preprocessor">#define<sp/>ENABLE_INTERRUPT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT8_C(1)<sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="_bma280_utils_8c_1a513ad449c3371235845cf6274894dfdb" refkind="member"><highlight class="preprocessor">#define<sp/>BMA280_MAX_ALLOWED_SLOPE_DURATION<sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT8_C(3)<sp/></highlight></codeline>
+<codeline lineno="58" refid="_bma280_utils_8c_1a45c8d0ec207fa5c05f58e4035e4af70c" refkind="member"><highlight class="preprocessor">#define<sp/>CONFIGURATION_DELAY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT32_C(10)<sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="preprocessor">static<sp/>bool<sp/>initializationStatus<sp/>=<sp/>false;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="_bma280_utils_8c_1af2cc74878676abb62a86f1ac7db56447" refkind="member"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbma2x2__t" kindref="compound">bma2x2_t</ref><sp/><ref refid="_bma280_utils_8c_1aa4943092b5c180c4d3c45efd5397a970" kindref="member">bma280Initialization</ref>;</highlight></codeline>
+<codeline lineno="66" refid="_bma280_utils_8c_1aa4943092b5c180c4d3c45efd5397a970" refkind="member"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>private<sp/>function<sp/>declarations<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_bma280_utils_8c_1ab1ae8735535720bfbb8c21dfe9e7da04" kindref="member">libErrorMapping</ref>(<ref refid="bma2x2_8h_1af9e5f60f4f87f874eac57b79bc98f892" kindref="member">BMA2x2_RETURN_FUNCTION_TYPE</ref><sp/>bmaLibReturn)</highlight></codeline>
+<codeline lineno="79" refid="_bma280_utils_8c_1ab1ae8735535720bfbb8c21dfe9e7da04" refkind="member"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>returnValue<sp/>=<sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="bma2x2_8h_1aa90cac659d18e8ef6294c7ae337f6b58" kindref="member">SUCCESS</ref><sp/>==<sp/>bmaLibReturn)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>returnValue<sp/>=<sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="bma2x2_8h_1ac6822a9328c536b0b9b506e0b2fe2785" kindref="member">E_BMA2x2_NULL_PTR</ref><sp/>==<sp/>bmaLibReturn)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>returnValue<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___s_e_n_s_o_r___u_t_i_l_s_1ggadb78aed5ac68b65e2fec1ca81ba8f13ea6e58ef167cfeaa21fe57f2a05380aab7" kindref="member">RETCODE_LIB_NULL_POINTER</ref>);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>returnValue<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/><ref refid="group___s_e_n_s_o_r___u_t_i_l_s_1ggadb78aed5ac68b65e2fec1ca81ba8f13eaf8001fd3d5f767faa47423286aea041e" kindref="member">RETCODE_BST_BMA280_ERROR</ref>);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(returnValue);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_bma280_utils_8c_1a757a5789faa34f8d735a34ce4fb2950a" kindref="member">configureNewDataInterrupt</ref>(<ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ga09dc18f20dc5418748026532cef6066b" kindref="member">Bma280Utils_IntrChannel_T</ref><sp/>interruptChannel)</highlight></codeline>
+<codeline lineno="108" refid="_bma280_utils_8c_1a757a5789faa34f8d735a34ce4fb2950a" refkind="member"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>returnValue<sp/>=<sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bma2x2_8h_1af9e5f60f4f87f874eac57b79bc98f892" kindref="member">BMA2x2_RETURN_FUNCTION_TYPE</ref><sp/>bmaLibReturn<sp/>=<sp/><ref refid="bma2x2_8h_1a5e7e68944cce7c2ff8c4286db2a058bc" kindref="member">E_OUT_OF_RANGE</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>bmaLibReturn<sp/>=<sp/><ref refid="bma2x2_8c_1a467f4546477b3f42a806b00eeb8a70b4" kindref="member">bma2x2_set_new_data</ref>((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>interruptChannel,<sp/><ref refid="_bma280_utils_8c_1a6df14839855fbe40c2b8a48f30a423f0" kindref="member">ENABLE_INTERRUPT</ref>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="bma2x2_8h_1aa90cac659d18e8ef6294c7ae337f6b58" kindref="member">SUCCESS</ref><sp/>==<sp/>bmaLibReturn)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bmaLibReturn<sp/>=<sp/><ref refid="bma2x2_8c_1a4d4148c870b5d70f9eb763db64075a77" kindref="member">bma2x2_set_intr_enable</ref>(<ref refid="bma2x2_8h_1a4a123f3c99f72953adfefb42daa8f1e8" kindref="member">BMA2x2_DATA_ENABLE</ref>,<sp/><ref refid="bma2x2_8h_1a4133fca0120efaceb6b9c1de5f79a3e2" kindref="member">INTR_ENABLE</ref>);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>returnValue<sp/>=<sp/><ref refid="_bma280_utils_8c_1ab1ae8735535720bfbb8c21dfe9e7da04" kindref="member">libErrorMapping</ref>(bmaLibReturn);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>returnValue;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_bma280_utils_8c_1a8dd47fd99bb6a894f1fdb7765f113a72" kindref="member">configureSlopeInterrupt</ref>(<ref refid="struct_bma280_utils___slope_intr_config___s" kindref="compound">Bma280Utils_SlopeIntrConfigPtr_T</ref><sp/>slopeIntrConfig,<sp/><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ga09dc18f20dc5418748026532cef6066b" kindref="member">Bma280Utils_IntrChannel_T</ref><sp/>interruptChannel)</highlight></codeline>
+<codeline lineno="136" refid="_bma280_utils_8c_1a8dd47fd99bb6a894f1fdb7765f113a72" refkind="member"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>returnValue<sp/>=<sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref>;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bma2x2_8h_1af9e5f60f4f87f874eac57b79bc98f892" kindref="member">BMA2x2_RETURN_FUNCTION_TYPE</ref><sp/>bmaLibReturn<sp/>=<sp/><ref refid="bma2x2_8h_1a5e7e68944cce7c2ff8c4286db2a058bc" kindref="member">E_OUT_OF_RANGE</ref>;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>slopeIntrConfig)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6acec8ccdc2bb7d9c1e4806729ea2acb76" kindref="member">RETCODE_SEVERITY_FATAL</ref>,<sp/>(uint32_t)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref>));</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((slopeIntrConfig-&gt;<ref refid="struct_bma280_utils___slope_intr_config___s_1a4681808b7a492ea97199d8c3237e8f0b" kindref="member">slopeEnableX</ref><sp/>&gt;<sp/><ref refid="_bma280_utils_8c_1a6df14839855fbe40c2b8a48f30a423f0" kindref="member">ENABLE_INTERRUPT</ref>)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>(slopeIntrConfig-&gt;<ref refid="struct_bma280_utils___slope_intr_config___s_1ad939d466effdf65bf5e83ab419a1535b" kindref="member">slopeEnableY</ref><sp/>&gt;<sp/><ref refid="_bma280_utils_8c_1a6df14839855fbe40c2b8a48f30a423f0" kindref="member">ENABLE_INTERRUPT</ref>)</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>(slopeIntrConfig-&gt;<ref refid="struct_bma280_utils___slope_intr_config___s_1ae632fb997823d9d117612cc3cf1b18b8" kindref="member">slopeEnableZ</ref><sp/>&gt;<sp/><ref refid="_bma280_utils_8c_1a6df14839855fbe40c2b8a48f30a423f0" kindref="member">ENABLE_INTERRUPT</ref>)</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>(slopeIntrConfig-&gt;<ref refid="struct_bma280_utils___slope_intr_config___s_1a816e6e04857deb749d8adc88a9bf6181" kindref="member">slopeDuration</ref><sp/>&gt;<sp/><ref refid="_bma280_utils_8c_1a513ad449c3371235845cf6274894dfdb" kindref="member">BMA280_MAX_ALLOWED_SLOPE_DURATION</ref>))</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/>(uint32_t)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref>));</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>It<sp/>is<sp/>recommended<sp/>in<sp/>the<sp/>data<sp/>sheet<sp/>that<sp/>while<sp/>changing<sp/>configuration<sp/>parameter,<sp/>we<sp/>should</highlight></codeline>
+<codeline lineno="154"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>disable<sp/>the<sp/>corresponding<sp/>Interrupt<sp/>and<sp/>wait<sp/>for<sp/>10ms<sp/>before<sp/>enabling<sp/>it<sp/>back.</highlight></codeline>
+<codeline lineno="155"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>bmaLibReturn<sp/>=<sp/><ref refid="bma2x2_8c_1a3568640db5d840312f3843aed3a09c09" kindref="member">bma2x2_set_intr_slope</ref>((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>interruptChannel,<sp/><ref refid="_bma280_utils_8c_1a95c77d8921862d5024a7103ab5fd5dce" kindref="member">DISABLE_INTERRUPT</ref>);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="bma2x2_8h_1aa90cac659d18e8ef6294c7ae337f6b58" kindref="member">SUCCESS</ref><sp/>==<sp/>bmaLibReturn)</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bmaLibReturn<sp/>=<sp/><ref refid="bma2x2_8c_1a4d4148c870b5d70f9eb763db64075a77" kindref="member">bma2x2_set_intr_enable</ref>(<ref refid="bma2x2_8h_1ad56d3f5e03d182d9b3d2e945ddb1cb4e" kindref="member">BMA2x2_SLOPE_X_INTR</ref>,<sp/>slopeIntrConfig-&gt;<ref refid="struct_bma280_utils___slope_intr_config___s_1a4681808b7a492ea97199d8c3237e8f0b" kindref="member">slopeEnableX</ref>);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bmaLibReturn<sp/>+=<sp/><ref refid="bma2x2_8c_1a4d4148c870b5d70f9eb763db64075a77" kindref="member">bma2x2_set_intr_enable</ref>(<ref refid="bma2x2_8h_1a21b2a528801d8f2d8513586ce9310341" kindref="member">BMA2x2_SLOPE_Y_INTR</ref>,<sp/>slopeIntrConfig-&gt;<ref refid="struct_bma280_utils___slope_intr_config___s_1ad939d466effdf65bf5e83ab419a1535b" kindref="member">slopeEnableY</ref>);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bmaLibReturn<sp/>+=<sp/><ref refid="bma2x2_8c_1a4d4148c870b5d70f9eb763db64075a77" kindref="member">bma2x2_set_intr_enable</ref>(<ref refid="bma2x2_8h_1afe06afbc030173408047d106a0e6d155" kindref="member">BMA2x2_SLOPE_Z_INTR</ref>,<sp/>slopeIntrConfig-&gt;<ref refid="struct_bma280_utils___slope_intr_config___s_1ae632fb997823d9d117612cc3cf1b18b8" kindref="member">slopeEnableZ</ref>);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bmaLibReturn<sp/>+=<sp/><ref refid="bma2x2_8c_1a1f64e9c25569f13af7427f4d101173e4" kindref="member">bma2x2_set_durn</ref>(<ref refid="bma2x2_8h_1a8c7a0f6fbfb0465b34e93e4b792e84e5" kindref="member">BMA2x2_SLOPE_DURN</ref>,<sp/>slopeIntrConfig-&gt;<ref refid="struct_bma280_utils___slope_intr_config___s_1a816e6e04857deb749d8adc88a9bf6181" kindref="member">slopeDuration</ref>);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bmaLibReturn<sp/>+=<sp/><ref refid="bma2x2_8c_1ac223d82aebde6b71089961d5ee2f13cb" kindref="member">bma2x2_set_thres</ref>(<ref refid="bma2x2_8h_1ae0d33eb42e4e93613130441644d89be7" kindref="member">BMA2x2_SLOPE_THRES</ref>,<sp/>slopeIntrConfig-&gt;<ref refid="struct_bma280_utils___slope_intr_config___s_1a7fcca79bdc612ca74c936d913a86bafe" kindref="member">slopeThreshold</ref>);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="bma2x2_8h_1aa90cac659d18e8ef6294c7ae337f6b58" kindref="member">SUCCESS</ref><sp/>==<sp/>bmaLibReturn)</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>It<sp/>is<sp/>recommended<sp/>in<sp/>the<sp/>data<sp/>sheet<sp/>that<sp/>we<sp/>need<sp/>10ms<sp/>delay<sp/>between<sp/>changing<sp/>the<sp/>configuration<sp/>and<sp/>enabling<sp/>interrupt<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___h_a_l___b_s_p___board_1ga3c12de2d1d4a59f5a1c9794e88ff6608" kindref="member">BSP_Board_Delay</ref>(<ref refid="_bma280_utils_8c_1a45c8d0ec207fa5c05f58e4035e4af70c" kindref="member">CONFIGURATION_DELAY</ref>);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>enabling<sp/>the<sp/>interrupt<sp/>after<sp/>modifying<sp/>the<sp/>interrupt<sp/>configuration<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bmaLibReturn<sp/>+=<sp/><ref refid="bma2x2_8c_1a3568640db5d840312f3843aed3a09c09" kindref="member">bma2x2_set_intr_slope</ref>((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>interruptChannel,<sp/><ref refid="_bma280_utils_8c_1a6df14839855fbe40c2b8a48f30a423f0" kindref="member">ENABLE_INTERRUPT</ref>);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>returnValue<sp/>=<sp/><ref refid="_bma280_utils_8c_1ab1ae8735535720bfbb8c21dfe9e7da04" kindref="member">libErrorMapping</ref>(bmaLibReturn);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>returnValue;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_bma280_utils_8c_1aa11c21709da28e0b579c21e56644ec70" kindref="member">Bma280Utils_DelayMS</ref>(<ref refid="bma2x2_8h_1a89b2eb95aca0e87f27ebe5d8ae08edcd" kindref="member">BMA2x2_MDELAY_DATA_TYPE</ref><sp/>delayMS)</highlight></codeline>
+<codeline lineno="186" refid="_bma280_utils_8c_1aa11c21709da28e0b579c21e56644ec70" refkind="member"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___h_a_l___b_s_p___board_1ga3c12de2d1d4a59f5a1c9794e88ff6608" kindref="member">BSP_Board_Delay</ref>((uint32_t)<sp/>delayMS);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Public<sp/>Functions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>API<sp/>documentation<sp/>is<sp/>in<sp/>the<sp/>interface<sp/>header<sp/>file<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gad28cd9dcdad4868c49a8f0b366129159" kindref="member">Bma280Utils_initialize</ref>(<ref refid="struct_bma280_utils___info___s" kindref="compound">Bma280Utils_InfoPtr_T</ref><sp/>bma280Info)</highlight></codeline>
+<codeline lineno="194" refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gad28cd9dcdad4868c49a8f0b366129159" refkind="member"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bma2x2_8h_1af9e5f60f4f87f874eac57b79bc98f892" kindref="member">BMA2x2_RETURN_FUNCTION_TYPE</ref><sp/>bmaLibReturn<sp/>=<sp/><ref refid="bma2x2_8h_1a5e7e68944cce7c2ff8c4286db2a058bc" kindref="member">E_OUT_OF_RANGE</ref>;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>returnValue<sp/>=<sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref>;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>bma280Info)<sp/>||<sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>bma280Info-&gt;<ref refid="struct_bma280_utils___info___s_1a9359e67ad790bad1d00f072dc3e28243" kindref="member">ISRCallback</ref>))</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6acec8ccdc2bb7d9c1e4806729ea2acb76" kindref="member">RETCODE_SEVERITY_FATAL</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref>);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>==<sp/><ref refid="_bma280_utils_8c_1af2cc74878676abb62a86f1ac7db56447" kindref="member">initializationStatus</ref>)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6ae50e23ac22de65b64de1424dd9663a3f" kindref="member">RETCODE_SEVERITY_WARNING</ref>,<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gabed20789ada55c303bb4ef8e0669a4ac" kindref="member">RETCODE_DOPPLE_INITIALIZATION</ref>);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>returnValue<sp/>=<sp/><ref refid="_sensor_node_mapping_8c_1a76bdc1fd6f340a0a598dadddb9ab278a" kindref="member">SensorNodeMapping_Init</ref>();</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>returnValue)</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>returnValue<sp/>=<sp/><ref refid="group___b_c_d_s___h_a_l___b_s_p___sensor___node_1ga311d37af892ea5672b90ddac5d658440" kindref="member">BSP_SensorNode_Enable</ref>(bma280Info-&gt;<ref refid="struct_bma280_utils___info___s_1afb8d35b33d31d052c1ff16de62ba1014" kindref="member">BspSensorId</ref>,<sp/>bma280Info-&gt;<ref refid="struct_bma280_utils___info___s_1a9359e67ad790bad1d00f072dc3e28243" kindref="member">ISRCallback</ref>);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*TODO:<sp/>Since<sp/>the<sp/>BSP<sp/>error<sp/>codes<sp/>for<sp/>sensornode<sp/>module<sp/>is<sp/>not<sp/>exposed<sp/>this<sp/>is<sp/>temporary<sp/>fix.<sp/>This<sp/>is<sp/>the<sp/>only<sp/>severity<sp/>in<sp/>that<sp/>case</highlight></codeline>
+<codeline lineno="213"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>hence<sp/>it<sp/>can<sp/>be<sp/>reverted<sp/>to<sp/>use<sp/>the<sp/>logic<sp/>(RETCODE_BSP_SENSOR_NODE_BMA280_INT2_BUSY<sp/>!=<sp/>(Retcode_getCode(returnValue))<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>!=<sp/>returnValue)<sp/>&amp;&amp;<sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6ae21ed2b53ddce83b92604ecb3c51a9ec" kindref="member">RETCODE_SEVERITY_INFO</ref><sp/>!=<sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29cf262307b032a013a9a7349a3fb20e" kindref="member">Retcode_GetSeverity</ref>(returnValue))))</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>returnValue;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_bma280_utils_8c_1aa4943092b5c180c4d3c45efd5397a970" kindref="member">bma280Initialization</ref>.bus_read<sp/>=<sp/><ref refid="_sensor_node_mapping_8c_1a77b5d6036b31e0f795e5167c9435db6c" kindref="member">SensorNodeMapping_Read</ref>;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_bma280_utils_8c_1aa4943092b5c180c4d3c45efd5397a970" kindref="member">bma280Initialization</ref>.bus_write<sp/>=<sp/><ref refid="_sensor_node_mapping_8c_1ac656d2e1648f159bb70e26e1666a94c3" kindref="member">SensorNodeMapping_Write</ref>;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_bma280_utils_8c_1aa4943092b5c180c4d3c45efd5397a970" kindref="member">bma280Initialization</ref>.<ref refid="structbma2x2__t_1af1e75e49dd4e1ed9c19f67ac7685697b" kindref="member">delay_msec</ref><sp/>=<sp/><ref refid="_bma280_utils_8c_1aa11c21709da28e0b579c21e56644ec70" kindref="member">Bma280Utils_DelayMS</ref>;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_bma280_utils_8c_1aa4943092b5c180c4d3c45efd5397a970" kindref="member">bma280Initialization</ref>.<ref refid="structbma2x2__t_1aa50b0df71b19db77268cdf44177cd536" kindref="member">dev_addr</ref><sp/>=<sp/>bma280Info-&gt;<ref refid="struct_bma280_utils___info___s_1a1997a5306d6d04a9ce867303d1a6d9e1" kindref="member">dev_addr</ref>;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>bmaLibReturn<sp/>=<sp/><ref refid="bma2x2_8c_1a4b452f2f93c1cef59a56d3c7f85c22f4" kindref="member">bma2x2_init</ref>(&amp;<ref refid="_bma280_utils_8c_1aa4943092b5c180c4d3c45efd5397a970" kindref="member">bma280Initialization</ref>);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="bma2x2_8h_1aa90cac659d18e8ef6294c7ae337f6b58" kindref="member">SUCCESS</ref><sp/>==<sp/>bmaLibReturn)</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bmaLibReturn<sp/>=<sp/><ref refid="bma2x2_8c_1a570002751fef34c21501ccb83bd68a9f" kindref="member">bma2x2_set_bw</ref>(<ref refid="bma2x2_8h_1a390ab7b8f8e875193f3712cd5ba28bd0" kindref="member">BMA2x2_BW_500HZ</ref>);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>returnValue<sp/>=<sp/><ref refid="_bma280_utils_8c_1ab1ae8735535720bfbb8c21dfe9e7da04" kindref="member">libErrorMapping</ref>(bmaLibReturn);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>returnValue)</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_bma280_utils_8c_1af2cc74878676abb62a86f1ac7db56447" kindref="member">initializationStatus</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(returnValue);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>function<sp/>implementations<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>API<sp/>documentation<sp/>is<sp/>in<sp/>the<sp/>interface<sp/>header<sp/>file<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gacbfe1aa23afcc1a2202cb59641ff6911" kindref="member">Bma280Utils_remapAxis</ref>(<ref refid="struct_bma280_utils___info___s" kindref="compound">Bma280Utils_InfoPtr_T</ref><sp/>bma280Info,<sp/><ref refid="struct_axis_remap___data___s" kindref="compound">AxisRemap_Data_T</ref><sp/>*accelData)</highlight></codeline>
+<codeline lineno="246" refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gacbfe1aa23afcc1a2202cb59641ff6911" refkind="member"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>returnValue<sp/>=<sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref>;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_axis_remap___data___s" kindref="compound">AxisRemap_Data_T</ref><sp/>actualData;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>accelData)<sp/>||<sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>bma280Info))</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6acec8ccdc2bb7d9c1e4806729ea2acb76" kindref="member">RETCODE_SEVERITY_FATAL</ref>,<sp/>(uint32_t)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref>));</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>==<sp/><ref refid="_bma280_utils_8c_1af2cc74878676abb62a86f1ac7db56447" kindref="member">initializationStatus</ref>)</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/>(uint32_t)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" kindref="member">RETCODE_UNINITIALIZED</ref>));</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>actualData.<ref refid="struct_axis_remap___data___s_1af6d3062751bd565decb1a2cd3b63bdb2" kindref="member">x</ref><sp/>=<sp/>accelData-&gt;<ref refid="struct_axis_remap___data___s_1af6d3062751bd565decb1a2cd3b63bdb2" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>actualData.<ref refid="struct_axis_remap___data___s_1af64066d134a77e01b3d6eb8da813627a" kindref="member">y</ref><sp/>=<sp/>accelData-&gt;<ref refid="struct_axis_remap___data___s_1af64066d134a77e01b3d6eb8da813627a" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>actualData.<ref refid="struct_axis_remap___data___s_1ac2fb30be1b894e32b31b68bb513262a3" kindref="member">z</ref><sp/>=<sp/>accelData-&gt;<ref refid="struct_axis_remap___data___s_1ac2fb30be1b894e32b31b68bb513262a3" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>returnValue<sp/>=<sp/><ref refid="_axis_remap_8c_1aa5483f1ef3e297e895b29bb26745c578" kindref="member">AxisRemap_remapSensorData</ref>(actualData,<sp/>bma280Info-&gt;<ref refid="struct_bma280_utils___info___s_1a148dc427778c71272cb0de06c4c4630d" kindref="member">remap</ref>,<sp/>accelData);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(returnValue);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>API<sp/>documentation<sp/>is<sp/>in<sp/>the<sp/>interface<sp/>header<sp/>file<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gaea1554403ec5ae6ad5a634c231dd5954" kindref="member">Bma280Utils_configInterrupt</ref>(<ref refid="struct_bma280_utils___info___s" kindref="compound">Bma280Utils_InfoPtr_T</ref><sp/>bma280Info,<sp/><ref refid="struct_bma280_utils___config_interrupt___s" kindref="compound">Bma280Utils_ConfigInterruptPtr_T</ref><sp/>interruptConfig)</highlight></codeline>
+<codeline lineno="272" refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gaea1554403ec5ae6ad5a634c231dd5954" refkind="member"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" kindref="member">BCDS_UNUSED</ref>(bma280Info);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>returnValue<sp/>=<sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref>;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>interruptConfig)</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6acec8ccdc2bb7d9c1e4806729ea2acb76" kindref="member">RETCODE_SEVERITY_FATAL</ref>,<sp/>(uint32_t)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref>));</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>==<sp/><ref refid="_bma280_utils_8c_1af2cc74878676abb62a86f1ac7db56447" kindref="member">initializationStatus</ref>)</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/>(uint32_t)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" kindref="member">RETCODE_UNINITIALIZED</ref>));</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(interruptConfig-&gt;<ref refid="struct_bma280_utils___config_interrupt___s_1a5320821b0e882116ba1df3b8f624a9c3" kindref="member">interruptChannel</ref><sp/>&gt;<sp/><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ggab6b856a288854f98174589a7f97b2cc1ade3d867e5ff2327a0017afaabaa5b86b" kindref="member">BMA280UTILS_INTERRUPT_CHANNEL2</ref>)</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/>(uint32_t)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref>));</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(interruptConfig-&gt;<ref refid="struct_bma280_utils___config_interrupt___s_1a4dcba88aa89ed776adf8ae048408e504" kindref="member">interruptType</ref>)</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gga28c037368c2a3bda1af5274fe598e276a51ccec60dc90fb3f1471b17858dd2018" kindref="member">BMA280UTILS_SLOPE_INTERRUPT</ref>:</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>returnValue<sp/>=<sp/><ref refid="_bma280_utils_8c_1a8dd47fd99bb6a894f1fdb7765f113a72" kindref="member">configureSlopeInterrupt</ref>((<ref refid="struct_bma280_utils___slope_intr_config___s" kindref="compound">Bma280Utils_SlopeIntrConfigPtr_T</ref>)<sp/>interruptConfig-&gt;<ref refid="struct_bma280_utils___config_interrupt___s_1a8e4997b32b60693d2e8086feaa35838d" kindref="member">configInterrupt</ref>,<sp/>interruptConfig-&gt;<ref refid="struct_bma280_utils___config_interrupt___s_1a5320821b0e882116ba1df3b8f624a9c3" kindref="member">interruptChannel</ref>);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gga28c037368c2a3bda1af5274fe598e276a332cca1efaeb081f15f9e91a76e0f288" kindref="member">BMA280UTILS_NEW_DATA_INTERRUPT</ref>:</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>returnValue<sp/>=<sp/><ref refid="_bma280_utils_8c_1a757a5789faa34f8d735a34ce4fb2950a" kindref="member">configureNewDataInterrupt</ref>(interruptConfig-&gt;<ref refid="struct_bma280_utils___config_interrupt___s_1a5320821b0e882116ba1df3b8f624a9c3" kindref="member">interruptChannel</ref>);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>returnValue<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/>(uint32_t)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref>);</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(returnValue);</highlight></codeline>
+<codeline lineno="310"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>API<sp/>documentation<sp/>is<sp/>in<sp/>the<sp/>interface<sp/>header<sp/>file<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ga4daa634b2002897a2d80476d3a96e73b" kindref="member">Bma280Utils_disableInterrupt</ref>(<ref refid="struct_bma280_utils___info___s" kindref="compound">Bma280Utils_InfoPtr_T</ref><sp/>bma280Info,<sp/><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ga6ab72fa2c9c4bd2ebe0e53995a3e32d5" kindref="member">Bma280Utils_IntrType_T</ref><sp/>interruptType,</highlight></codeline>
+<codeline lineno="314" refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ga4daa634b2002897a2d80476d3a96e73b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ga09dc18f20dc5418748026532cef6066b" kindref="member">Bma280Utils_IntrChannel_T</ref><sp/>interruptChannel)</highlight></codeline>
+<codeline lineno="315"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_a_s_i_c_s_1ga58d989b8568ab592dc4bcf48d05f28e4" kindref="member">BCDS_UNUSED</ref>(bma280Info);</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bma2x2_8h_1af9e5f60f4f87f874eac57b79bc98f892" kindref="member">BMA2x2_RETURN_FUNCTION_TYPE</ref><sp/>bmaLibReturn<sp/>=<sp/><ref refid="bma2x2_8h_1a5e7e68944cce7c2ff8c4286db2a058bc" kindref="member">E_OUT_OF_RANGE</ref>;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>returnValue<sp/>=<sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref>;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((interruptChannel<sp/>&gt;=<sp/><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ggab6b856a288854f98174589a7f97b2cc1a676ccefcc514fb37ad1542d2b06dbcaa" kindref="member">BMA280UTILS_INTERRUPT_CHANNEL_INVALID</ref>)</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>(interruptType<sp/>&gt;=<sp/><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gga28c037368c2a3bda1af5274fe598e276a6372a506c443f9432d95645b96492fe5" kindref="member">BMA280UTILS_INVALID_INTERRUPT</ref>))</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6acec8ccdc2bb7d9c1e4806729ea2acb76" kindref="member">RETCODE_SEVERITY_FATAL</ref>,<sp/>(uint32_t)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref>));</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>==<sp/><ref refid="_bma280_utils_8c_1af2cc74878676abb62a86f1ac7db56447" kindref="member">initializationStatus</ref>)</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/>(uint32_t)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" kindref="member">RETCODE_UNINITIALIZED</ref>));</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(interruptType)</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gga28c037368c2a3bda1af5274fe598e276a51ccec60dc90fb3f1471b17858dd2018" kindref="member">BMA280UTILS_SLOPE_INTERRUPT</ref>:</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bmaLibReturn<sp/>=<sp/><ref refid="bma2x2_8c_1a3568640db5d840312f3843aed3a09c09" kindref="member">bma2x2_set_intr_slope</ref>((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>interruptChannel,<sp/><ref refid="_bma280_utils_8c_1a95c77d8921862d5024a7103ab5fd5dce" kindref="member">DISABLE_INTERRUPT</ref>);</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>returnValue<sp/>=<sp/><ref refid="_bma280_utils_8c_1ab1ae8735535720bfbb8c21dfe9e7da04" kindref="member">libErrorMapping</ref>(bmaLibReturn);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>returnValue<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/>(uint32_t)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref>);</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(returnValue);</highlight></codeline>
+<codeline lineno="346"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>API<sp/>documentation<sp/>is<sp/>in<sp/>the<sp/>interface<sp/>header<sp/>file<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ga78022e6a93c3ad60bc81a7c8411aba39" kindref="member">Bma280Utils_uninitialize</ref>(<ref refid="struct_bma280_utils___info___s" kindref="compound">Bma280Utils_InfoPtr_T</ref><sp/>bma280Info)</highlight></codeline>
+<codeline lineno="350" refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1ga78022e6a93c3ad60bc81a7c8411aba39" refkind="member"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>returnValue<sp/>=<sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref>;</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>bma280Info)</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6acec8ccdc2bb7d9c1e4806729ea2acb76" kindref="member">RETCODE_SEVERITY_FATAL</ref>,<sp/>(uint32_t)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref>));</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>==<sp/><ref refid="_bma280_utils_8c_1af2cc74878676abb62a86f1ac7db56447" kindref="member">initializationStatus</ref>)</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/>(uint32_t)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" kindref="member">RETCODE_UNINITIALIZED</ref>));</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/>returnValue<sp/>=<sp/><ref refid="group___b_c_d_s___h_a_l___b_s_p___sensor___node_1ga5af05449409434d39749e474f3c1096c" kindref="member">BSP_SensorNode_Disable</ref>(bma280Info-&gt;<ref refid="struct_bma280_utils___info___s_1afb8d35b33d31d052c1ff16de62ba1014" kindref="member">BspSensorId</ref>);</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>returnValue)</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>returnValue<sp/>=<sp/><ref refid="_sensor_node_mapping_8c_1ac03bdbce5f464b417b6341db3e1e999d" kindref="member">SensorNodeMapping_DeInit</ref>();</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>==<sp/>returnValue)</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_bma280_utils_8c_1af2cc74878676abb62a86f1ac7db56447" kindref="member">initializationStatus</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(returnValue);</highlight></codeline>
+<codeline lineno="374"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/Carbon/Bma280Utils/Bma280Utils.c"/>
+  </compounddef>
+</doxygen>

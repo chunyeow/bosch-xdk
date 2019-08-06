@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_retarget_stdio_8c" kind="file">
+    <compoundname>RetargetStdio.c</compoundname>
+    <includes refid="_xdk_common_info_8h" local="yes">XdkCommonInfo.h</includes>
+    <incdepgraph>
+      <node id="27686">
+        <label>stdbool.h</label>
+      </node>
+      <node id="27681">
+        <label>SDK/xdk110/Common/source/RetargetStdio.c</label>
+        <link refid="RetargetStdio.c"/>
+        <childnode refid="27682" relation="include">
+        </childnode>
+      </node>
+      <node id="27682">
+        <label>XdkCommonInfo.h</label>
+        <link refid="_xdk_common_info_8h"/>
+        <childnode refid="27683" relation="include">
+        </childnode>
+      </node>
+      <node id="27685">
+        <label>stdint.h</label>
+      </node>
+      <node id="27683">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="27684" relation="include">
+        </childnode>
+      </node>
+      <node id="27688">
+        <label>stdlib.h</label>
+      </node>
+      <node id="27687">
+        <label>string.h</label>
+      </node>
+      <node id="27684">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="27685" relation="include">
+        </childnode>
+        <childnode refid="27686" relation="include">
+        </childnode>
+        <childnode refid="27687" relation="include">
+        </childnode>
+        <childnode refid="27688" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_retarget_stdio_8c_1abff8f3a204e79671b98fabaa652198c3" prot="public" static="no">
+        <name>BCDS_MODULE_ID</name>
+        <initializer><ref refid="_xdk_common_info_8h_1a7d550569e587db8903a47a7044e6e935a78e69fc67da9920bea5cf72fe9351b14" kindref="member">XDK_COMMON_ID_RETARGETSTDIO</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/RetargetStdio.c" line="47" column="11" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/RetargetStdio.c" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_retarget_stdio_8c_1a5af724185f484056b02b42f4ab184bfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int RETARGET_ReadChar</definition>
+        <argsstring>(void)</argsstring>
+        <name>RETARGET_ReadChar</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>RETARGET API used by printf to Get single byte from USB. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>retargetio.c</para></simplesect>
+<simplesect kind="return"><para>byte : The byte which was received from USB </para></simplesect>
+<simplesect kind="warning"><para>This API was made to retarget the scanf API to transmit data through USB The USB_receiveByte API is blocking and other API(TBD) must be used for interrupt based USB transfers. </para></simplesect>
+<simplesect kind="warning"><para>Usage of <ref refid="_b_c_d_s___u_s_b_8h_1ab119ee5a4d07a9a0558e1b47fc0ba70a" kindref="member">RETARGET_ReadChar</ref> should not be used in application code , since this api is required only for usb library </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/RetargetStdio.c" line="49" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/RetargetStdio.c" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="_retarget_stdio_8c_1a9769f68c8b6969d71fcef47682009ba1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int RETARGET_WriteChar</definition>
+        <argsstring>(const char *data, int length)</argsstring>
+        <name>RETARGET_WriteChar</name>
+        <param>
+          <type>const char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/RetargetStdio.c" line="50" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/RetargetStdio.c" bodystart="57" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Provide stdio retargeting for all supported toolchains. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Energy Micro AS </para></simplesect>
+<simplesect kind="version"><para>3.20.2</para></simplesect>
+</para><sect1 id="_b_s_p___u_s_b___descriptors_8h_1License">
+<title>License</title>
+<para><bold>(C) Copyright 2012 Energy Micro AS, <ulink url="http://www.energymicro.com">http://www.energymicro.com</ulink></bold></para><para>Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:</para><para><orderedlist>
+<listitem><para>The origin of this software must not be misrepresented; you must not claim that you wrote the original software.</para></listitem><listitem><para>Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.</para></listitem><listitem><para>This notice may not be removed or altered from any source distribution.</para></listitem><listitem><para>The source and compiled code may only be used on Energy Micro &quot;EFM32&quot; microcontrollers and &quot;EFR4&quot; radios.</para></listitem></orderedlist>
+</para><para>DISCLAIMER OF WARRANTY/LIMITATION OF REMEDIES: Energy Micro AS has no obligation to support this Software. Energy Micro AS is providing the Software &quot;AS IS&quot;, with no express or implied warranties of any kind, including, but not limited to, any implied warranties of merchantability or fitness for any particular purpose or warranties against infringement of any proprietary rights of a third party.</para><para>Energy Micro AS will not be liable for any consequential, incidental, or special damages, or any other relief, or for any claim by any third party, arising from your use of this Software. </para></sect1>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***************************************************************************/</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">/***************************************************************************/</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_xdk_common_info_8h" kindref="compound">XdkCommonInfo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>BCDS_MODULE_ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="_retarget_stdio_8c_1abff8f3a204e79671b98fabaa652198c3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BCDS_MODULE_ID<sp/>XDK_COMMON_ID_RETARGETSTDIO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_retarget_stdio_8c_1a5af724185f484056b02b42f4ab184bfb" kindref="member">RETARGET_ReadChar</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_retarget_stdio_8c_1a9769f68c8b6969d71fcef47682009ba1" kindref="member">RETARGET_WriteChar</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>data,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BCDS_EMLIB_INCLUDE_USB<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="_b_c_d_s___u_s_b_8h_1ab119ee5a4d07a9a0558e1b47fc0ba70a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_retarget_stdio_8c_1a5af724185f484056b02b42f4ab184bfb" kindref="member">RETARGET_ReadChar</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57" refid="_retarget_stdio_8c_1a9769f68c8b6969d71fcef47682009ba1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_retarget_stdio_8c_1a9769f68c8b6969d71fcef47682009ba1" kindref="member">RETARGET_WriteChar</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>data,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)<sp/>data;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)<sp/>length;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(__CROSSWORKS_ARM)<sp/>&amp;&amp;<sp/>defined(__GNUC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/stat.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;em_device.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fileno(FILE<sp/>*);</highlight></codeline>
+<codeline lineno="76"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_close(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_b_l_e_s_w-_a_l_p_w_data_exchange_01_release_notes_8txt_1ac483df48653e4a0d787de0c45a6755b6" kindref="member">file</ref>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_fstat(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_b_l_e_s_w-_a_l_p_w_data_exchange_01_release_notes_8txt_1ac483df48653e4a0d787de0c45a6755b6" kindref="member">file</ref>,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>stat<sp/>*st);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_isatty(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_b_l_e_s_w-_a_l_p_w_data_exchange_01_release_notes_8txt_1ac483df48653e4a0d787de0c45a6755b6" kindref="member">file</ref>);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_lseek(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_b_l_e_s_w-_a_l_p_w_data_exchange_01_release_notes_8txt_1ac483df48653e4a0d787de0c45a6755b6" kindref="member">file</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ptr,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dir);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_read(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_b_l_e_s_w-_a_l_p_w_data_exchange_01_release_notes_8txt_1ac483df48653e4a0d787de0c45a6755b6" kindref="member">file</ref>,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ptr,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">caddr_t<sp/>_sbrk(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>incr);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_write(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_b_l_e_s_w-_a_l_p_w_data_exchange_01_release_notes_8txt_1ac483df48653e4a0d787de0c45a6755b6" kindref="member">file</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ptr,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>_end;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="comment">/**************************************************************************/</highlight></codeline>
+<codeline lineno="96"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_close(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_b_l_e_s_w-_a_l_p_w_data_exchange_01_release_notes_8txt_1ac483df48653e4a0d787de0c45a6755b6" kindref="member">file</ref>)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>(void)<sp/>file;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight></codeline>
+<codeline lineno="107"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>_exit<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>status)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>(void)<sp/>status;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)<sp/>{}<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Hang<sp/>here<sp/>forever...<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight></codeline>
+<codeline lineno="126"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_fstat(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_b_l_e_s_w-_a_l_p_w_data_exchange_01_release_notes_8txt_1ac483df48653e4a0d787de0c45a6755b6" kindref="member">file</ref>,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>stat<sp/>*st)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/>(void)<sp/>file;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>st-&gt;st_mode<sp/>=<sp/>S_IFCHR;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight></codeline>
+<codeline lineno="136"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_getpid(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight></codeline>
+<codeline lineno="151"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_isatty(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_b_l_e_s_w-_a_l_p_w_data_exchange_01_release_notes_8txt_1ac483df48653e4a0d787de0c45a6755b6" kindref="member">file</ref>)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>(void)<sp/>file;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight></codeline>
+<codeline lineno="162"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_kill(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pid,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sig)</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>(void)pid;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>(void)sig;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight></codeline>
+<codeline lineno="185"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_lseek(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_b_l_e_s_w-_a_l_p_w_data_exchange_01_release_notes_8txt_1ac483df48653e4a0d787de0c45a6755b6" kindref="member">file</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ptr,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dir)</highlight></codeline>
+<codeline lineno="186"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/>(void)<sp/>file;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/>(void)<sp/>ptr;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/>(void)<sp/>dir;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight></codeline>
+<codeline lineno="209"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_read(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_b_l_e_s_w-_a_l_p_w_data_exchange_01_release_notes_8txt_1ac483df48653e4a0d787de0c45a6755b6" kindref="member">file</ref>,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ptr,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len)</highlight></codeline>
+<codeline lineno="210"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>c,<sp/>rxCount<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/>(void)<sp/>file;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(len--)</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((c<sp/>=<sp/><ref refid="_retarget_stdio_8c_1a5af724185f484056b02b42f4ab184bfb" kindref="member">RETARGET_ReadChar</ref>())<sp/>!=<sp/>-1)</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>*ptr++<sp/>=<sp/>c;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>rxCount++;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rxCount<sp/>&lt;=<sp/>0)</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Error<sp/>exit<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rxCount;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight></codeline>
+<codeline lineno="246"><highlight class="normal">caddr_t<sp/>_sbrk(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>incr)</highlight></codeline>
+<codeline lineno="247"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*heap_end;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*prev_heap_end;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>heaperr[]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Heap<sp/>and<sp/>stack<sp/>collision\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(heap_end<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>heap_end<sp/>=<sp/>&amp;_end;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/>prev_heap_end<sp/>=<sp/>heap_end;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((heap_end<sp/>+<sp/>incr)<sp/>&gt;<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>__get_MSP())</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>_write(fileno(stdout),<sp/>heaperr,<sp/>strlen(heaperr));</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/>heap_end<sp/>+=<sp/>incr;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(caddr_t)<sp/>prev_heap_end;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight></codeline>
+<codeline lineno="284"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_write(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>file,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ptr,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len)</highlight></codeline>
+<codeline lineno="285"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/>(void)<sp/>file;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_retarget_stdio_8c_1a9769f68c8b6969d71fcef47682009ba1" kindref="member">RETARGET_WriteChar</ref>(ptr,len);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>len;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!defined(<sp/>__CROSSWORKS_ARM<sp/>)<sp/>&amp;&amp;<sp/>defined(<sp/>__GNUC__<sp/>)<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/RetargetStdio.c"/>
+  </compounddef>
+</doxygen>

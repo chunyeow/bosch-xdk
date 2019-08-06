@@ -1,0 +1,469 @@
+/**
+\defgroup CONFIGURATION Configuration
+\brief Configuration Headers
+**/
+
+/**
+\defgroup APPS_LIST Applications
+\brief Sample applications
+**/
+
+/**
+ * @defgroup COMMON Common
+ * @brief Reusable components across applications like connectivity,utility,etc..
+ *
+ * @defgroup CONNECTIVITY Connectivity
+ * @ingroup COMMON
+ *
+ * @defgroup SENSOR Sensor
+ * @ingroup COMMON
+ *
+ * @defgroup UTILITY Utility
+ * @ingroup COMMON
+**/
+
+/**
+ * @defgroup SENSORS_ALL Sensors
+ * @brief Sensors related APIs
+ *
+ * @defgroup SENSOR_UTILS
+ * @ingroup SENSORS_ALL
+ *
+ * @defgroup SENSORTOOLBOX
+ * @ingroup SENSORS_ALL
+ *
+ * @defgroup SENSORS
+ * @ingroup SENSORS_ALL
+**/
+
+/**
+\defgroup NETWORK Network
+@brief Network related APIs such as BLE or WLAN
+
+\defgroup WLAN_NETWORKING WLAN
+\ingroup NETWORK
+
+\defgroup BCDS_WLAN WLAN network management
+\ingroup WLAN_NETWORKING
+
+\defgroup PORTING Porting
+\brief Porting related macros and interfaces
+\ingroup WLAN_NETWORKING
+
+\defgroup porting_capabilities        Porting - Capabilities Set
+\ingroup PORTING
+
+\defgroup porting_user_include        Porting - User Include Files
+\ingroup PORTING
+
+\defgroup porting_enable_device       Porting - Device Enable/Disable
+\ingroup PORTING
+
+\defgroup porting_interface         Porting - Communication Interface
+\ingroup PORTING
+
+\defgroup   porting_mem_mgm             Porting - Memory Management
+\ingroup PORTING
+
+\defgroup   porting_os          Porting - Operating System
+\ingroup PORTING
+
+\defgroup       porting_events      Porting - Event Handlers
+\ingroup PORTING
+
+\defgroup ti_networking TI Simple Link API
+\ingroup WLAN_NETWORKING
+
+\defgroup NETWORK_PROTOCOLS Network Protocols
+\brief Network Protocols such as CoAP, HTTP, LwM2M, REST...
+\ingroup WLAN_NETWORKING
+
+\defgroup httpgroup HTTP
+\brief Interface to HTTP
+\ingroup NETWORK_PROTOCOLS
+
+\defgroup coapgroup COAP
+\brief Interface to CoAP
+\ingroup NETWORK_PROTOCOLS
+
+\defgroup webservergroup WebServer
+\brief Interface to the WebServer
+\ingroup NETWORK_PROTOCOLS
+
+\defgroup restgroup REST
+\brief Interface to the REST
+\ingroup NETWORK_PROTOCOLS
+
+\defgroup msggroup MSG
+\brief Interface to the Messaging
+\ingroup NETWORK_PROTOCOLS
+
+\defgroup lwm2mgroup LWM2M
+\brief Interface to the LwM2M Server
+\ingroup NETWORK_PROTOCOLS
+
+\defgroup xudpgroup UDP
+\brief Interface to UDP
+\ingroup NETWORK_PROTOCOLS
+
+\defgroup xtcpgroup TCP
+\brief Callback-based TCP Interface
+\ingroup NETWORK_PROTOCOLS
+@{
+\file Serval_XTcpClient.h
+\file Serval_XTcpServer.h
+@}
+
+\defgroup utilgroup Utility Package
+\brief Utility Packages
+\ingroup NETWORK_PROTOCOLS
+
+**/
+
+/**
+\defgroup device Device
+\brief Device Interface 
+\ingroup ti_networking
+
+\defgroup wlan WLAN
+\brief WLAN Interface
+\ingroup ti_networking
+
+\defgroup socket Socket
+\brief Socket Interface
+\ingroup ti_networking
+
+\defgroup netcfg NetCfg
+\brief Network Configurations
+\ingroup ti_networking
+
+\defgroup UserEvents User Events
+\brief SimpleLink User Events
+\ingroup ti_networking
+
+\defgroup netapp NetApp
+\brief SimpleLink NetApp
+\ingroup ti_networking
+
+\defgroup FileSystem Filesystem
+\brief SimpleLink Filesystem
+\ingroup ti_networking
+
+\defgroup Trace Trace
+\link trace.h \endlink \n
+\brief SimpleLink Trace
+\ingroup ti_networking
+
+\defgroup Wlan_rx_filters WLAN Rx Filters
+\link wlan_rx_filters.h \endlink \n
+\brief SimpleLink WLAN Rx Filters
+\ingroup ti_networking
+**/
+
+
+/**
+\defgroup BCDS_BLE
+\ingroup NETWORK
+
+\defgroup ALPWISE_BLE_SERVICES ALPWISE BLE Services
+\brief BLE Standard Services
+\ingroup BCDS_BLE
+
+\section BLE_Services_title ALPWISE BLE Services
+\brief BLE Services provided by the ALPWISE Bluetooth Low Energy stack. \n
+Please refer to the implementer's guides provided by ALPWISE\n
+
+\dontinclude core_cm3.h 
+\subsection AlertNotification_title ALPWISE Alert Notification Profiles
+\link BleAlertNotification_Client.h \endlink \n
+\link BleAlertNotification_Server.h \endlink \n
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_AlertNotification\Documentation\BLESW_AlertNotification CLIENT implementer's guide.pdf \endverbatim
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_AlertNotification\Documentation\BLESW_AlertNotification SERVER implementer's guide.pdf \endverbatim
+    
+\subsection AlertNotificationCenter_title ALPWISE Apple Notification Center Profile
+\link BleAppleNotificationCenter_Consumer.h \endlink \n
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_AppleNotificationCenter\Documentation\BLESW_AppleNotificationCenter CONSUMER implementer's guide.pdf \endverbatim
+
+\subsection BloodPressure_title ALPWISE Blood Pressure Profiles
+\link BleBloodPressure_Collector.h \endlink \n
+\link BleBloodPressure_Sensor.h \endlink \n
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_BloodPressure\Documentation\BLESW_BloodPressure COLLECTOR implementer's guide.pdf \endverbatim
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_BloodPressure\Documentation\BLESW_BloodPressure SENSOR implementer's guide.pdf \endverbatim
+
+\subsection CyclingPower_title ALPWISE Cycling Power Profiles
+\link BleCyclingPower_Collector.h \endlink \n
+\link BleCyclingPower_Sensor.h \endlink \n
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_CyclingPower\Documentation\BLESW_CyclingPower COLLECTOR implementer's guide.pdf \endverbatim
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_CyclingPower\Documentation\BLESW_CyclingPower SENSOR implementer's guide.pdf \endverbatim
+
+\subsection CyclingSpeedAndCadence_title ALPWISE Cycling Speed And Cadence Profiles
+\link BleCyclingSpeedAndCadence_Collector.h \endlink \n
+\link BleCyclingSpeedAndCadence_Sensor.h \endlink \n
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_CyclingSpeedAndCadence\Documentation\BLESW_CyclingSpeedAndCadence COLLECTOR implementer's guide.pdf \endverbatim
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_CyclingSpeedAndCadence\Documentation\BLESW_CyclingSpeedAndCadence SENSOR implementer's guide.pdf \endverbatim
+
+\subsection FindMe_title ALPWISE FindMe Profiles
+\link BleFindMe_Locator.h \endlink \n
+\link BleFindMe_Target.h \endlink \n
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_FindMe\Documentation\BLESW-FindMe LOCATOR implementer's guide.pdf \endverbatim
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_FindMe\Documentation\BLESW-FindMe TARGET implementer's guide.pdf \endverbatim
+    
+\subsection Glucose_title ALPWISE Glucose Profiles
+\link BleGlucose_Collector.h \endlink \n
+\link BleGlucose_Sensor.h \endlink \n
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_Glucose\Documentation\BLESW_Glucose COLLECTOR implementer's guide.pdf \endverbatim
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_Glucose\Documentation\BLESW_Glucose SENSOR implementer's guide.pdf \endverbatim
+
+\subsection HealthThermometer_title ALPWISE Health Thermometer Profile
+\link BleHealthThermometer_Collector.h \endlink \n
+\link BleHealthThermometer_Thermometer.h \endlink \n
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_HealthThermometer\Documentation\BLESW_HealthThermometer COLLECTOR implementer's guide.pdf \endverbatim
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_HealthThermometer\Documentation\BLESW_HealthThermometer THERMOMETER implementer's guide.pdf \endverbatim
+
+\subsection HeartRate_title ALPWISE Heart Rate Profiles
+\link BleHeartRate_Collector.h \endlink \n
+\link BleHeartRate_Sensor.h \endlink \n
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_HeartRate\Documentation\BLESW_HeartRate COLLECTOR implementer's guide.pdf \endverbatim
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_HeartRate\Documentation\BLESW_HeartRate SENSOR implementer's guide.pdf \endverbatim
+
+\subsection HumanInterfaceDevice_title ALPWISE Human Interface Device Profiles
+\link BleHumanInterfaceDevice_Device.h \endlink \n
+\link BleHumanInterfaceDevice_Host.h \endlink \n
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_HumanInterfaceDevice\Documentation\BLESW_HumanInterfaceDevice DEVICE implementer's guide.pdf \endverbatim
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_HumanInterfaceDevice\Documentation\BLESW_HumanInterfaceDevice HOST implementer's guide.pdf \endverbatim
+
+\subsection IBeacon_Reporter_title ALPWISE iBeacon Reporter Profile
+\link BleIBeacon_Reporter.h \endlink \n
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_iBeacon\Documentation\BLESW_IBeacon REPORTER implementer's guide.pdf \endverbatim
+    
+\subsection LocationAndNavigation_title ALPWISE Location And Navigation Profiles
+\link BleLocationAndNavigation_Collector.h \endlink \n
+\link BleLocationAndNavigation_Sensor.h \endlink \n
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_LocationAndNavigation\Documentation\BLESW_LocationAndNavigation COLLECTOR implementer's guide.pdf \endverbatim
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_LocationAndNavigation\Documentation\BLESW_LocationAndNavigation SENSOR implementer's guide.pdf \endverbatim
+    
+\subsection NetworkAvailability_title ALPWISE Network Availability Profiles
+\link BleNetworkAvailability_Monitor.h \endlink \n
+\link BleNetworkAvailability_Reporter.h \endlink \n
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_NetworkAvailability\Documentation\BLESW_NetworkAvailability Monitor implementer's guide.pdf \endverbatim
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_NetworkAvailability\Documentation\BLESW_NetworkAvailability REPORTER implementer's guide.pdf \endverbatim
+
+\subsection PhoneAlertStatus_title ALPWISE Phone Alert Status Profiles
+\link BlePhoneAlertStatus_Client.h \endlink \n
+\link BlePhoneAlertStatus_Server.h \endlink \n
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_PhoneAlertStatus\Documentation\BLESW_PhoneAlertStatus CLIENT implementer's guide.pdf \endverbatim
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_PhoneAlertStatus\Documentation\BLESW_PhoneAlertStatus SERVER implementer's guide.pdf \endverbatim
+
+\subsection Proximity_title ALPWISE Proximity Profiles
+\link BleProximity_Monitor.h \endlink \n
+\link BleProximity_Reporter.h \endlink \n
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_Proximity\Documentation\BLESW-Proximity MONITOR implementer's guide.pdf \endverbatim
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_Proximity\Documentation\BLESW-Proximity REPORTER implementer's guide.pdf \endverbatim
+
+\subsection RunningSpeedAndCadence_title ALPWISE Running Speed And Cadence Profiles
+\link BleRunningSpeedAndCadence_Collector.h \endlink \n
+\link BleRunningSpeedAndCadence_Sensor.h \endlink \n
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_RunningSpeedAndCadence\Documentation\BLESW_RunningSpeedAndCadence COLLECTOR implementer's guide.pdf \endverbatim
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_RunningSpeedAndCadence\Documentation\BLESW_RunningSpeedAndCadence SENSOR implementer's guide.pdf \endverbatim
+
+\subsection Time_title ALPWISE Time Profiles
+\link BleTime_Client.h \endlink \n
+\link BleTime_Server.h \endlink \n
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_Time\Documentation\BLESW_Time SERVER implementer's guide.pdf \endverbatim
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\BLESW_Time\Documentation\BLESW_Time CLIENT implementer's guide.pdf \endverbatim
+
+\subsection AlpwDataExchange_title ALPWISE Data Exchange Profiles
+\link BleAlpwDataExchange_Client.h \endlink \n
+\link BleAlpwDataExchange_Server.h \endlink \n
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\Data_Exchange_Service\Documentation\BLESW-ALPWDataExchange CLIENT implementer's guide.pdf \endverbatim
+\verbatim   SDK\Libraries\BLEStack\Alpwise\Service\Data_Exchange_Service\Documentation\BLESW-ALPWDataExchange SERVER implementer's guide.pdf \endverbatim
+
+**/
+
+/**
+\defgroup BST_Sensor_API Low Level Sensor API
+\brief Low-Level Sensor Interface
+\ingroup SENSORS_ALL
+
+\defgroup BMA2X2_API BMA2X2
+\brief BMA2X2 Sensor Library
+\ingroup BST_Sensor_API
+@{
+\file bma2x2.h
+@}
+
+\defgroup BME280_API BME280
+\brief BME280 Sensor Library
+\ingroup BST_Sensor_API
+@{
+\file bme280.h
+@}
+
+\defgroup BMG160_API BMG160
+\brief BMG160 Sensor Library
+\ingroup BST_Sensor_API
+@{
+\file bmg160.h
+@}
+
+\defgroup BMI160_API BMI160
+\brief BMI160 Sensor Library
+\ingroup BST_Sensor_API
+@{
+\file bmi160.h
+@}
+
+\defgroup MAX44009 MAX44009
+\brief MAX44009 Sensor Library
+\ingroup BST_Sensor_API
+
+\defgroup BMM050_API BMM050
+\brief BMM050 Sensor Library
+\ingroup BST_Sensor_API
+@{
+\file bmm050.h
+@}
+
+**/
+
+/**
+\defgroup SERVAL_PAL_WIFI
+\ingroup WLAN_NETWORKING
+**/
+
+/**
+\defgroup freertos_api FreeRTOS API
+\brief FreeRTOS API
+
+\defgroup FreeRTOS_Includes FreeRTOS Includes
+\brief FreeRTOS Macro Inclusions
+\ingroup freertos_api
+@{
+\file FreeRTOS.h
+@}
+
+\defgroup Queue_Main Queue
+\brief FreeRTOS Queue API's Information
+\ingroup freertos_api
+
+\defgroup TaskNotifications TaskNotifications
+\brief TaskNotifications
+\ingroup freertos_api
+
+\defgroup QueueManagement Queue API Examples
+\brief FreeRTOS Queue API's Information
+\ingroup Queue_Main
+
+\defgroup Queue_Defines Queue Defines
+\brief FreeRTOS Semaphore API's Information
+\ingroup Queue_Main
+@{
+\file queue.h
+@}
+
+\defgroup Semaphore_Main Semaphore
+\brief FreeRTOS Semaphore
+\ingroup freertos_api
+
+\defgroup Semaphores Semaphore API Examples
+\brief FreeRTOS Semaphore API Examples
+\ingroup Semaphore_Main
+
+\defgroup Sempaphore_API Semaphore Defines
+\brief FreeRTOS Semaphore Defines
+\ingroup Semaphore_Main
+@{
+\file semphr.h
+@}
+
+\defgroup Task_Main Task
+\brief FreeRTOS Semaphore
+\ingroup freertos_api
+
+\defgroup SchedulerControl Task API Examples
+\brief FreeRTOS Task API Examples
+\ingroup Task_Main
+
+\defgroup TaskCtrl Task Control API Examples
+\brief FreeRTOS Task API Examples
+\ingroup Task_Main
+
+\defgroup TaskUtils Task Utils API Examples
+\brief FreeRTOS Task API Examples
+\ingroup Task_Main
+
+\defgroup Tasks Tasks API Examples
+\brief FreeRTOS Task API Examples
+\ingroup Task_Main
+
+\defgroup Task_API Task Defines
+\brief FreeRTOS Task Defines
+\ingroup Task_Main
+@{
+\file task.h
+@}
+
+\defgroup TIMER_API Timer
+\brief FreeRTOS Timer API's Information
+\ingroup freertos_api
+@{
+\file timers.h
+@}
+
+\defgroup Power Power
+\brief FreeRTOS Wrapper for the RTOS Sleep Management
+\ingroup freertos_api
+@{
+\file BCDS_PowerMgt.h
+@}
+
+**/
+
+
+
+/**
+\defgroup EMLIB_SPECIFICATIONS EMLIB Mathematical APIs
+\brief Mathematical APIs for Complex, Matrix, Statistics...
+
+\defgroup groupMath Basic Math Functions
+\brief Basic Math Functions
+\ingroup EMLIB_SPECIFICATIONS
+
+\defgroup groupFastMath Fast Math Functions
+\brief Fast Math Functions
+\ingroup EMLIB_SPECIFICATIONS
+
+\defgroup groupCmplxMath Complex Math Functions
+\brief Complex Math Functions
+\ingroup EMLIB_SPECIFICATIONS
+
+\defgroup groupFilters Filtering Functions
+\brief Filtering Functions
+\ingroup EMLIB_SPECIFICATIONS
+
+\defgroup groupMatrix Matrix Functions
+\brief Matrix Functions
+\ingroup EMLIB_SPECIFICATIONS
+
+\defgroup groupTransforms Transform Functions
+\brief Transform Functions
+\ingroup EMLIB_SPECIFICATIONS
+
+\defgroup groupController Controller Functions
+\brief Controller Functions
+\ingroup EMLIB_SPECIFICATIONS
+
+\defgroup groupStats Statistics Functions
+\brief Statistics Functions
+\ingroup EMLIB_SPECIFICATIONS
+
+\defgroup groupSupport Support Functions
+\brief Support Functions
+\ingroup EMLIB_SPECIFICATIONS
+
+\defgroup groupInterpolation Interpolation Functions
+\brief Interpolation Functions
+\ingroup EMLIB_SPECIFICATIONS
+
+
+**/

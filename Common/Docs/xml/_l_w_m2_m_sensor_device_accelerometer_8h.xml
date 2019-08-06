@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_l_w_m2_m_sensor_device_accelerometer_8h" kind="file">
+    <compoundname>LWM2MSensorDeviceAccelerometer.h</compoundname>
+    <includes refid="_l_w_m2_m_sensor_device_util_8h" local="yes">LWM2MSensorDeviceUtil.h</includes>
+    <includedby refid="_l_w_m2_m_object_sensor_device_8c" local="yes">SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectSensorDevice.c</includedby>
+    <includedby refid="_l_w_m2_m_sensor_device_accelerometer_8c" local="yes">SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceAccelerometer.c</includedby>
+    <incdepgraph>
+      <node id="26668">
+        <label>stdbool.h</label>
+      </node>
+      <node id="26666">
+        <label>SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceAccelerometer.h</label>
+        <link refid="LWM2MSensorDeviceAccelerometer.h"/>
+        <childnode refid="26667" relation="include">
+        </childnode>
+      </node>
+      <node id="26667">
+        <label>LWM2MSensorDeviceUtil.h</label>
+        <link refid="_l_w_m2_m_sensor_device_util_8h"/>
+        <childnode refid="26668" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="26671">
+        <label>SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceAccelerometer.c</label>
+        <link refid="_l_w_m2_m_sensor_device_accelerometer_8c"/>
+      </node>
+      <node id="26669">
+        <label>SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceAccelerometer.h</label>
+        <link refid="LWM2MSensorDeviceAccelerometer.h"/>
+        <childnode refid="26670" relation="include">
+        </childnode>
+        <childnode refid="26671" relation="include">
+        </childnode>
+      </node>
+      <node id="26670">
+        <label>SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MObjectSensorDevice.c</label>
+        <link refid="_l_w_m2_m_object_sensor_device_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_l_w_m2_m_sensor_device_accelerometer_8h_1af7ab85ac3234cb1bebe4ee912c7364f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LWM2MSensorDeviceAccelerometer_Activate</definition>
+        <argsstring>(bool enable)</argsstring>
+        <name>LWM2MSensorDeviceAccelerometer_Activate</name>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>Initialize sensor. Initialize sensor, setting it active or inactive and initialize the lwm2m object accordingly. Intended to be only called by the sensors timer thread. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true, activate sensor, false, disable sensor</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceAccelerometer.h" line="62" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceAccelerometer.c" bodystart="68" bodyend="117"/>
+        <references refid="struct_sensor_device_process_data_float_1a8740ba80e30dd75e71d09fa1dcf04f3d" compoundref="_l_w_m2_m_sensor_device_util_8h" startline="89">SensorDeviceProcessDataFloat::enabled</references>
+        <references refid="_l_w_m2_m_sensor_device_util_8c_1a6d710c06c751aa1b054aab062a1e9e01" compoundref="_l_w_m2_m_sensor_device_util_8c" startline="60" endline="68">LWM2MSensorDeviceUtil_ResetProcessDataFloat</references>
+        <references refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gada44fddcce4df8b6f4d19fcd06b0f0f3" compoundref="_accelerometer_8c" startline="288" endline="350">Accelerometer_init</references>
+        <references refid="group___sensors_handles_1ga15d0b783f0e91563cff52ea676bf7094" compoundref="_sensor_handle_8c" startline="112">XdkAccelerometer_BMA280_Handle</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gacf67a297289375fd8843e1de4d7e4be3" compoundref="_accelerometer_8c" startline="582" endline="646">Accelerometer_getRange</references>
+        <references refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gga5ae92cc29b7520cc75f239f19df00a59add82c8c23c28683b9361cef892231625" compoundref="_b_c_d_s___accelerometer_8h" startline="103">ACCELEROMETER_BMA280_RANGE_2G</references>
+        <references refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gga5ae92cc29b7520cc75f239f19df00a59aad4c2f6498a854411628e8d00520a63e" compoundref="_b_c_d_s___accelerometer_8h" startline="107">ACCELEROMETER_BMI160_RANGE_2G</references>
+        <references refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gga5ae92cc29b7520cc75f239f19df00a59ad26ca040fb15bb50badb4e8d74e285f5" compoundref="_b_c_d_s___accelerometer_8h" startline="104">ACCELEROMETER_BMA280_RANGE_4G</references>
+        <references refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gga5ae92cc29b7520cc75f239f19df00a59a85f7b14b1af7e015ab2e8eb28476f3be" compoundref="_b_c_d_s___accelerometer_8h" startline="108">ACCELEROMETER_BMI160_RANGE_4G</references>
+        <references refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gga5ae92cc29b7520cc75f239f19df00a59a6360f71b5fde5f1312ae003b40fd6b0c" compoundref="_b_c_d_s___accelerometer_8h" startline="105">ACCELEROMETER_BMA280_RANGE_8G</references>
+        <references refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gga5ae92cc29b7520cc75f239f19df00a59aa5692b953cc441da022bd169c6a0fda9" compoundref="_b_c_d_s___accelerometer_8h" startline="109">ACCELEROMETER_BMI160_RANGE_8G</references>
+        <references refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gga5ae92cc29b7520cc75f239f19df00a59a26f5de2305d81c4549b0b9484d02c9db" compoundref="_b_c_d_s___accelerometer_8h" startline="106">ACCELEROMETER_BMA280_RANGE_16G</references>
+        <references refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gga5ae92cc29b7520cc75f239f19df00a59a5c0476d3804726b7b00e2e19ff856702" compoundref="_b_c_d_s___accelerometer_8h" startline="110">ACCELEROMETER_BMI160_RANGE_16G</references>
+        <references refid="_l_w_m2_m_object_accelerometer_8c_1a995e97f51ecf7a45d206448812473746" compoundref="_l_w_m2_m_object_accelerometer_8c" startline="142" endline="145">LWM2MObjectAccelerometer_Enable</references>
+        <references refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1gaddf51f53b785d82dd8232b7f94e676f8" compoundref="_accelerometer_8c" startline="1041" endline="1076">Accelerometer_deInit</references>
+        <references refid="_l_w_m2_m_object_accelerometer_8c_1af5a6c285c3f303e997644e21f70bbf9f" compoundref="_l_w_m2_m_object_accelerometer_8c" startline="148" endline="151">LWM2MObjectAccelerometer_Disable</references>
+        <referencedby refid="_l_w_m2_m_object_sensor_device_8c_1a151a15f45e12b28318fbd9deb13733f1" compoundref="_l_w_m2_m_object_sensor_device_8c" startline="123" endline="200">SensorTimerHandler</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_l_w_m2_m_sensor_device_accelerometer_8h_1aa53834569500f6e9305caa9a9cb0ca14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LWM2MSensorDeviceAccelerometer_Update</definition>
+        <argsstring>(enum ProcessingMode mode, bool notify)</argsstring>
+        <name>LWM2MSensorDeviceAccelerometer_Update</name>
+        <param>
+          <type>enum <ref refid="_l_w_m2_m_sensor_device_util_8h_1a1c2b96eed57c1a07443e4877a8e53f12" kindref="member">ProcessingMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>notify</declname>
+        </param>
+        <briefdescription>
+<para>Read sensor values and process them. Read the values from the sensor, process them according the provided mode and transfer them to lwm2m objects, when notify indicates that. Intended to be only called by the sensors timer thread. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>processing mode</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">notify</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true - transfer values to lwm2m objects false - no transfer, process only</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Refer interface header for description </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceAccelerometer.h" line="77" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceAccelerometer.c" bodystart="120" bodyend="145"/>
+        <references refid="struct_sensor_device_process_data_float_1a8740ba80e30dd75e71d09fa1dcf04f3d" compoundref="_l_w_m2_m_sensor_device_util_8h" startline="89">SensorDeviceProcessDataFloat::enabled</references>
+        <references refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga0db11ba711c71c40c97a971065f02fef" compoundref="_accelerometer_8c" startline="950" endline="1038">Accelerometer_readXyzGValue</references>
+        <references refid="group___sensors_handles_1ga15d0b783f0e91563cff52ea676bf7094" compoundref="_sensor_handle_8c" startline="112">XdkAccelerometer_BMA280_Handle</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="struct_sensor_device_sample_data_float_1a399421fbb0c25a2f744f4d6a55905795" compoundref="_l_w_m2_m_sensor_device_util_8h" startline="76">SensorDeviceSampleDataFloat::values</references>
+        <references refid="_l_w_m2_m_sensor_device_accelerometer_8c_1ae94a34e8c733dcca7d4b92876e098f3a" compoundref="_l_w_m2_m_sensor_device_accelerometer_8c" startline="61">ACCELEROMETER_TO_FLOAT</references>
+        <references refid="struct_accelerometer___xyz_data___s_1a0ce3ac9cbd662334c4bf9aa63a74405f" compoundref="_b_c_d_s___accelerometer_8h" startline="231">Accelerometer_XyzData_S::xAxisData</references>
+        <references refid="struct_accelerometer___xyz_data___s_1a0dcf2e5f14c8ab1e4c671be741b88ce6" compoundref="_b_c_d_s___accelerometer_8h" startline="232">Accelerometer_XyzData_S::yAxisData</references>
+        <references refid="struct_accelerometer___xyz_data___s_1ac71d7f95bd9dd9607df1f7d3ad4b89b1" compoundref="_b_c_d_s___accelerometer_8h" startline="233">Accelerometer_XyzData_S::zAxisData</references>
+        <references refid="_l_w_m2_m_sensor_device_util_8c_1ad4475c7cf47f81acf4827826881d0ecb" compoundref="_l_w_m2_m_sensor_device_util_8c" startline="71" endline="119">LWM2MSensorDeviceUtil_ProcessDataFloat</references>
+        <references refid="_l_w_m2_m_sensor_device_util_8c_1a1f403a0df9270d147484bfc33ea8c969" compoundref="_l_w_m2_m_sensor_device_util_8c" startline="122" endline="149">LWM2MSensorDeviceUtil_GetDataFloat</references>
+        <references refid="_l_w_m2_m_object_accelerometer_8c_1a7d2aa9770b12006cd3a522c1f6d11da6" compoundref="_l_w_m2_m_object_accelerometer_8c" startline="154" endline="157">LWM2MObjectAccelerometer_SetValues</references>
+        <referencedby refid="_l_w_m2_m_object_sensor_device_8c_1a151a15f45e12b28318fbd9deb13733f1" compoundref="_l_w_m2_m_object_sensor_device_8c" startline="123" endline="200">SensorTimerHandler</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface header for SensorDeviceAccelerometer file. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>Licensee’s<sp/>application<sp/>development.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>Licensee’s<sp/>applications<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">*<sp/>Contributors:</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">*<sp/>Bosch<sp/>Software<sp/>Innovations<sp/>GmbH</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="comment">/*<sp/>header<sp/>definition<sp/>********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LWM2MSENSORDEVICEACCELEROMETER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LWM2MSENSORDEVICEACCELEROMETER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_l_w_m2_m_sensor_device_util_8h" kindref="compound">LWM2MSensorDeviceUtil.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_l_w_m2_m_sensor_device_accelerometer_8h_1af7ab85ac3234cb1bebe4ee912c7364f9" kindref="member">LWM2MSensorDeviceAccelerometer_Activate</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_l_w_m2_m_sensor_device_accelerometer_8h_1aa53834569500f6e9305caa9a9cb0ca14" kindref="member">LWM2MSensorDeviceAccelerometer_Update</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_l_w_m2_m_sensor_device_util_8h_1a1c2b96eed57c1a07443e4877a8e53f12" kindref="member">ProcessingMode</ref><sp/>mode,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>notify);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LWM2MSENSORDEVICEACCELEROMETER_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Common/source/Connectivity/LWM2M/LWM2MSensorDeviceAccelerometer.h"/>
+  </compounddef>
+</doxygen>

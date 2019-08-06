@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___b_c_d_s___f_o_t_a___c_o_p_y_a_g_e_n_t" kind="group">
+    <compoundname>BCDS_FOTA_COPYAGENT</compoundname>
+    <title>FotaCopyAgent</title>
+    <innerfile refid="_b_c_d_s___fota_copy_agent_8h">BCDS_FotaCopyAgent.h</innerfile>
+    <innerclass refid="struct_fota_copy_agent___s" prot="public">FotaCopyAgent_S</innerclass>
+    <innergroup refid="group___b_c_d_s___f_o_t_a___b_l_o_c_k512_a_g_e_n_t">Block512CopyAgent</innergroup>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___b_c_d_s___f_o_t_a___c_o_p_y_a_g_e_n_t_1gad0077a70ff975a8f42c60aa45414d47c" prot="public" static="no">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>(*</type>
+        <definition>typedef Retcode_T(* FotaCopyAgent_Deinitialize_T)(void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>FotaCopyAgent_Deinitialize_T</name>
+        <briefdescription>
+<para>Deinitialize the agent. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> Deinit successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaCopyAgent.h" line="102" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaCopyAgent.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___f_o_t_a___c_o_p_y_a_g_e_n_t_1ga842ec93ff89c50f744a16d66fd9d114e" prot="public" static="no">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>(*</type>
+        <definition>typedef Retcode_T(* FotaCopyAgent_Initialize_T)(FotaRegistryAgent_T *registryAgent, EventHub_T *hub, FotaPartitionAgent_T *primaryPartitionAgent, FotaPartitionAgent_T *backupPartitionAgent, FotaPartitionAgent_T *downloadPartitionAgent)</definition>
+        <argsstring>)(FotaRegistryAgent_T *registryAgent, EventHub_T *hub, FotaPartitionAgent_T *primaryPartitionAgent, FotaPartitionAgent_T *backupPartitionAgent, FotaPartitionAgent_T *downloadPartitionAgent)</argsstring>
+        <name>FotaCopyAgent_Initialize_T</name>
+        <briefdescription>
+<para>During the initialization, the agent will save in his internal context the different handle to 3 already initialized partitionAgents, registryAgent and EventHub. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">FotaRegistryAgent_T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>* registryAgent This agent is used to save the internal state of the agent before a reboot. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">EventHub_T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>* hub This hub allows to the agent to communicate in an asynchrony way with the application using it. In the case of the bootloader, NULL can be provided here. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">FotaPartitionAgent_T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>* primaryPartitionAgent This agent handle the primary partition (where the bootloader will jump). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">FotaPartitionAgent_T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>* backupPartitionAgent This agent handle the backup partition (where we will store our primary partition after a fota). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">FotaPartitionAgent_T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>* downloadPartitionAgent This agent handle the download partition (where we will store our new firmware after a fota). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref> A null pointer was provided (not applicable to the eventHub) </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___f_o_t_a_1ggab92a1d77f039787d2a23ae7f945c43c2a7b137135b249a949efae862a1e1d20e6" kindref="member">FOTA_CPY_SIZE_WRONG</ref> The 3 partitionAgents does not have a same partition size set </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> Initialization was successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaCopyAgent.h" line="74" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaCopyAgent.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___f_o_t_a___c_o_p_y_a_g_e_n_t_1gafe03bd2ddb3dd6d62d8f550895132ef4" prot="public" static="no">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>(*</type>
+        <definition>typedef Retcode_T(* FotaCopyAgent_Rollback_T)(void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>FotaCopyAgent_Rollback_T</name>
+        <briefdescription>
+<para>Copy always from backup to primary partition. If eventHub was given, messages will also transit through it. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>#RETXXXXXXX The partition agents will return errors and this function will forward them </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> Swap was successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaCopyAgent.h" line="95" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaCopyAgent.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___f_o_t_a___c_o_p_y_a_g_e_n_t_1gafd7b352e29b635f4e1917ab2ead10b43" prot="public" static="no">
+        <type>struct <ref refid="struct_fota_copy_agent___s" kindref="compound">FotaCopyAgent_S</ref></type>
+        <definition>typedef struct FotaCopyAgent_S FotaCopyAgent_T</definition>
+        <argsstring></argsstring>
+        <name>FotaCopyAgent_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaCopyAgent.h" line="102" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaCopyAgent.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___b_c_d_s___f_o_t_a___c_o_p_y_a_g_e_n_t_1ga547c2e2c8bf668a75b77787c86c7dcd3" prot="public" static="no">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>(*</type>
+        <definition>typedef Retcode_T(* FotaCopyAgent_Update_T)(void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>FotaCopyAgent_Update_T</name>
+        <briefdescription>
+<para>Copy always from primary to backup partition and download to primary partition. If eventHub was given, messages will also transit through it. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>#RETXXXXXXX The partition agents will return errors and this function will forward them </para></simplesect>
+<simplesect kind="return"><para><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref> Swap was successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaCopyAgent.h" line="86" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/FOTA/include/BCDS_FotaCopyAgent.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>API of the copyAgent. </para>    </briefdescription>
+    <detaileddescription>
+<para>It&apos;s role is to swap paritions. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

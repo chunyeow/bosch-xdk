@@ -1,0 +1,55 @@
+/** 
+@page XDK_EXTENSION_BUS_GUIDE XDK Extension Bus User Guide
+@brief Outlines the implementation of additional functionality to the XDK main board, like radios or sensors.
+\section XDK General Information
+<hr>
+The extension bus allows the implementation of additional functionality to the XDK main board, like radios or sensors. 
+This way, developers can use the hardware and software of XDK for testing out new components with minimal application effort.
+
+\note Extension bus documentation updated as per the XDK user Guide documentation section 4.2.5 Errata. This Documentation is applicable for XDK Gateway V1.0 extension board
+
+\section XDK_EXTENSION_BUS_GUIDE_Assignments Extension header pin assignment
+
+Please find the mapping of the XDK extension connector in the following table.
+
+pin on connector   |    pin on MCU    |   Suggested Usage                       |   Macro    
+-------------------|------------------|-----------------------------------------|-------------------------
+A1				   |	 PA0	      |   Timer0 compare operations             |  EXTENSION_TIM0_CC0
+A2				   |	 PC0          |   Timer0 compare operations             |  EXTENSION_TIM0_CC1 
+A3                 | 	 PC1          |   Timer0 compare operations             |  EXTENSION_TIM0_CC2
+A4                 | 	 PC2          |   Timer0 Dead time insertion operations |  EXTENSION_TIM0_CDTI0 
+A5                 | 	 PC3          |   Timer0 Dead time insertion operations |  EXTENSION_TIM0_CDTI1
+A6                 | 	 PC4          |   Timer0 Dead time insertion operations |  EXTENSION_TIM0_CDTI2
+A7                 | 	 PC8          |   Timer2 Capture operations             |  EXTENSION_TIM2_CC0
+A8                 | 	 PC9          |   Timer2 Capture operations             |  EXTENSION_TIM2_CC1
+A9                 | 	 PC10         |   Timer2 Capture operations             |  EXTENSION_TIM2_CC2
+A10                |     PD6          |   ADC0 operations                       |  EXTENSION_ADC0_CH5
+A11                | 	 PD5          |   ADC0 operations                       |  EXTENSION_ADC0_CH6
+A12                | 	 PA1          |   General purpose I/O                   |  EXTENSION_GPIO_IN_OUT_0
+A13                | 	 PE2          |   General purpose I/O                   |  EXTENSION_GPIO_IN_OUT_1
+B1                 |  	 PB9          |   UART1_TX operations                   |  EXTENSION_UART1_TX
+B2                 |     PB10         |   UART1_RX operations                   |  EXTENSION_UART1_RX   
+B3                 |     PB2          |   UART1_RTS operations                  |  EXTENSION_UART1_RTS     
+B4                 |     PF6          |   UART1_CTS operations                  |  EXTENSION_UART1_CTS    
+B5                 |     PB4          |   US2 MISO operations                   |  EXTENSION_US2_MISO
+B6                 |     PB3          |   US2 MOSI operations                   |  EXTENSION_US2_MOSI
+B7                 |     PB5          |   US2 clock operations                  |  EXTENSION_US2_SCK
+B8                 |     PD8          |   US2 chip select                       |  EXTENSION_US2_CS    
+B9                 |     PB11         |   I2C1 data line                        |  EXTENSION_I2C1_SDA      
+B10                |     PB12         |   I2C1 clock line                       |  EXTENSION_I2C1_SCL         
+B11                |     2V5          |   Power Limit 100mA continuous/ peak    |    -          
+B12                |     3V3          |   Power Limit 100mA continuous/ peak    |    -       
+B13                |     GND          |   Power                                 |    -        
+
+The extension bus connector of XDK is a 26-pin male connector of type [ERNI Male 054595](https://www.erni-x-press.com/en/artikel/steckverbinder/smc/zweireihige-smc/054595-smc-male-26-pins-right-angle.html). For your extension boards, please use the same connector and use the flat ribbon cable to connect your extension board to XDK.
+
+The MCU pins refer to the Giant Gecko microcontroller on the XDK. For details on the configuration, please refer to the [MCU datasheet](https://www.silabs.com/Support%20Documents/TechnicalDocs/EFM32GG390.pdf) and [MCU Reference Manual](http://www.silabs.com/Support%20Documents/TechnicalDocs/EFM32GG-RM.pdf).
+
+\warning I2C1 data pin (PB11) and I2C clock pin (PB12) have an internal pull up resistor of 3.32k and hence cannot be used as GPIO.
+\note For XDK Worbench 1.3.0, extension bus can be configured with below mentioned file. For XDK Worbench 1.5.2 and above, use BSP to configure extension bus 
+
+Any pin that you want to use will have to be configured accordingly. Please refer to the @ref GPIO_Driver and @ref PTD_portDriver modules for doing so. All pins are assigned with default modes and values in file xdk110/HWconfig/HW_XDK_v1/PDC_pinDefaultConfig\PDC_pinDefaultConfig_cc.c. Please refer to the code for further information.
+
+The example XdkExtensionPort outlines the usage of external interface I2C, SPI, UART  and GPIO device to XDK via extension Bus. Refer XdkExtensionPort in xdk110/Apps
+
+*/

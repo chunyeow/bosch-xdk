@@ -1,0 +1,340 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___e_v_e_n_t_h_u_b" kind="group">
+    <compoundname>EVENTHUB</compoundname>
+    <title>EventHub</title>
+    <innerfile refid="_b_c_d_s___event_hub_8h">BCDS_EventHub.h</innerfile>
+    <innerclass refid="struct_event_hub___s" prot="public">EventHub_S</innerclass>
+    <innerclass refid="struct_event_observer___s" prot="public">EventObserver_S</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___e_v_e_n_t_h_u_b_1gab1c4a8739623fe9d76f6dd51954da1fd" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* EventHandler_T)(TaskEvent_T event, void *data)</definition>
+        <argsstring>)(TaskEvent_T event, void *data)</argsstring>
+        <name>EventHandler_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_EventHub.h" line="72" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_EventHub.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___e_v_e_n_t_h_u_b_1ga69635189e519d85190f8d198d4a7cb69" prot="public" static="no">
+        <type>struct <ref refid="struct_event_hub___s" kindref="compound">EventHub_S</ref></type>
+        <definition>typedef struct EventHub_S EventHub_T</definition>
+        <argsstring></argsstring>
+        <name>EventHub_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_EventHub.h" line="72" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_EventHub.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___e_v_e_n_t_h_u_b_1gae441fecd663cd99e3eae1af1c9a12652" prot="public" static="no">
+        <type>struct <ref refid="struct_event_observer___s" kindref="compound">EventObserver_S</ref></type>
+        <definition>typedef struct EventObserver_S EventObserver_T</definition>
+        <argsstring></argsstring>
+        <name>EventObserver_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_EventHub.h" line="72" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_EventHub.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___e_v_e_n_t_h_u_b_1gaa9f80d54c9040ed97f319e57a95b0c8f" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t TaskEvent_T</definition>
+        <argsstring></argsstring>
+        <name>TaskEvent_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_EventHub.h" line="70" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_EventHub.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___e_v_e_n_t_h_u_b_1gae6cb6915e3c140bc67566167feeb2d04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T EventHub_Initialize</definition>
+        <argsstring>(EventHub_T *hub)</argsstring>
+        <name>EventHub_Initialize</name>
+        <param>
+          <type><ref refid="group___e_v_e_n_t_h_u_b_1ga69635189e519d85190f8d198d4a7cb69" kindref="member">EventHub_T</ref> *</type>
+          <declname>hub</declname>
+        </param>
+        <briefdescription>
+<para>This function initializes a given event hub handle. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">hub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- A pointer to an EventHub structure</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the event hub is initialized successfully </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the hub parameter pointer is NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba281b77d7bbd0b11781de864c12f32fd9" kindref="member">RETCODE_SEMAPHORE_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the associated lock is not created successfully </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_EventHub.h" line="99" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___e_v_e_n_t_h_u_b_1ga9477205c2cffdaaf42886b048d94e994" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T EventHub_Notify</definition>
+        <argsstring>(EventHub_T *hub, TaskEvent_T Event, void *data)</argsstring>
+        <name>EventHub_Notify</name>
+        <param>
+          <type><ref refid="group___e_v_e_n_t_h_u_b_1ga69635189e519d85190f8d198d4a7cb69" kindref="member">EventHub_T</ref> *</type>
+          <declname>hub</declname>
+        </param>
+        <param>
+          <type><ref refid="group___e_v_e_n_t_h_u_b_1gaa9f80d54c9040ed97f319e57a95b0c8f" kindref="member">TaskEvent_T</ref></type>
+          <declname>Event</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>This function informs the hub that a given event has occurred. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">hub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- A pointer to an EventHub structure </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The event that occurred </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Additional data to hand to the observer</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Event notifications from interrupt context is not supported.</para><para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when all observers have been notified successfully </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the hub pointer is NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" kindref="member">RETCODE_UNINITIALIZED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the hub has not been initialized previously </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba281b77d7bbd0b11781de864c12f32fd9" kindref="member">RETCODE_SEMAPHORE_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the hub lock can&apos;t be taken or released successfully </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_EventHub.h" line="144" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___e_v_e_n_t_h_u_b_1gab764c2fd6737e89dcc2d2400bae4562e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T EventHub_Observe</definition>
+        <argsstring>(EventHub_T *hub, EventHandler_T handler, TaskEvent_T event)</argsstring>
+        <name>EventHub_Observe</name>
+        <param>
+          <type><ref refid="group___e_v_e_n_t_h_u_b_1ga69635189e519d85190f8d198d4a7cb69" kindref="member">EventHub_T</ref> *</type>
+          <declname>hub</declname>
+        </param>
+        <param>
+          <type><ref refid="group___e_v_e_n_t_h_u_b_1gab1c4a8739623fe9d76f6dd51954da1fd" kindref="member">EventHandler_T</ref></type>
+          <declname>handler</declname>
+        </param>
+        <param>
+          <type><ref refid="group___e_v_e_n_t_h_u_b_1gaa9f80d54c9040ed97f319e57a95b0c8f" kindref="member">TaskEvent_T</ref></type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>This function adds an observe of a given event to a hub. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">hub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- A pointer to an EventHub structure </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- A function pointer to the user-code run function that should be called when the event is signaled </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The event that should be observed</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the observation is added successfully </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the hub parameter pointer is NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbaea901b927978b56cbfae3fa93c3ddfa4" kindref="member">RETCODE_UNINITIALIZED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the hub has not been initialized previously </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba281b77d7bbd0b11781de864c12f32fd9" kindref="member">RETCODE_SEMAPHORE_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the hub lock can&apos;t be taken or released successfully </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba497273b2285191edc1cda8648b67250a" kindref="member">RETCODE_OUT_OF_RESOURCES</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when the maximum number of observation is already reached (see <ref refid="group___e_v_e_n_t_h_u_b_1ga6e63c16bc40f5be59ed76a77e4411b44" kindref="member">CONFIG_EVENTHUB_MAX_OBSERVERS</ref>) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_EventHub.h" line="116" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group___e_v_e_n_t_h_u_b_1ga625acb921a70a494a3c31151d39a4346" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T EventHub_ObserveAll</definition>
+        <argsstring>(EventHub_T *hub, EventHandler_T handler)</argsstring>
+        <name>EventHub_ObserveAll</name>
+        <param>
+          <type><ref refid="group___e_v_e_n_t_h_u_b_1ga69635189e519d85190f8d198d4a7cb69" kindref="member">EventHub_T</ref> *</type>
+          <declname>hub</declname>
+        </param>
+        <param>
+          <type><ref refid="group___e_v_e_n_t_h_u_b_1gab1c4a8739623fe9d76f6dd51954da1fd" kindref="member">EventHandler_T</ref></type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>This function adds an observe of all events to a hub. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">hub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- A pointer to an EventHub structure </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- A function pointer to the user-code run function that should be called when the event is signaled</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when observations for all event are added successfully </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when hub or handler pointer is NULL </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_EventHub.h" line="128" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___e_v_e_n_t_h_u_b_1ga6e63c16bc40f5be59ed76a77e4411b44" prot="public" static="no">
+        <name>CONFIG_EVENTHUB_MAX_OBSERVERS</name>
+        <initializer>(16)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_EventHub.h" line="67" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/Utils/include/BCDS_EventHub.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A framework for distributing events in a system. </para>    </briefdescription>
+    <detaileddescription>
+<para>A module can register a callback to be called when another module informs the system that an event has occurred. This can be used for detecting connection to or disconnection from a network, updated LWM2M resources and so on. By default, the module allows for up to 16 observers per event hub but this can be overridden by changing the CONFIG_EVENTHUB_MAX_OBSERVERS flag. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

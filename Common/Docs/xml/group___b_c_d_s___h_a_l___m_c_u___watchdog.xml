@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group___b_c_d_s___h_a_l___m_c_u___watchdog" kind="group">
+    <compoundname>BCDS_HAL_MCU_Watchdog</compoundname>
+    <title>Watchdog</title>
+    <innerfile refid="_b_c_d_s___m_c_u___watchdog_8h">BCDS_MCU_Watchdog.h</innerfile>
+    <briefdescription>
+<para>Unified watchdog API for CoSP (Connected Software Platform) </para>    </briefdescription>
+    <detaileddescription>
+<para>Application must initialize the watchdog timer with timeout. After which application must enable and feed the watchdog. The watchdog component also provides a function to determine the reset cause after a program reset.</para><para><programlisting><codeline><highlight class="normal">#include<sp/>&quot;BCDS_MCU_Watchdog.h</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">MCU_Watchdog_Init_T<sp/>wdgInitStruct;</highlight></codeline>
+<codeline><highlight class="normal">wdgInitStruct.WdgCallback<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline><highlight class="normal">wdgInitStruct.ResetMode<sp/>=<sp/>WATCHDOG_RESET_ON;</highlight></codeline>
+<codeline><highlight class="normal">wdgInitStruct.RunOnCpuHalt<sp/>=<sp/>true;</highlight></codeline>
+<codeline><highlight class="normal">wdgInitStruct.Timeout<sp/>=<sp/>6002;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">wdgHandle<sp/>=<sp/>(WdgHandle_T)&amp;wdgInitStruct;</highlight></codeline>
+<codeline><highlight class="normal">retcode<sp/>=<sp/>MCU_Watchdog_Init(wdgHandle);</highlight></codeline>
+<codeline><highlight class="normal">if(RETCODE_OK<sp/>==<sp/>retcode)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>//<sp/>enable<sp/>the<sp/>watchdog</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>MCU_Watchdog_Enable();</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">if(RETCODE_OK<sp/>==<sp/>retcode)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>//<sp/>Feed<sp/>the<sp/>watchdog</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>MCU_Watchdog_Feed();</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para><simplesect kind="note"><para>It is possible to disable the entire watchdog feature in the HAL-BSP configuration file. I.e. the watchdog code will only be compiled and linked if the feature <bold>BCDS_FEATURE_WATCHDOG</bold> is set to 1 in the configuration file. </para></simplesect>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

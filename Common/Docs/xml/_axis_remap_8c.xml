@@ -1,0 +1,472 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_axis_remap_8c" kind="file">
+    <compoundname>AxisRemap.c</compoundname>
+    <includes refid="_b_c_d_s___sensor_utils_8h" local="yes">BCDS_SensorUtils.h</includes>
+    <includes refid="_b_c_d_s___axis_remap_8h" local="yes">BCDS_AxisRemap.h</includes>
+    <includes local="yes">SensorUtilsAxisRemap.h</includes>
+    <incdepgraph>
+      <node id="38473">
+        <label>stdbool.h</label>
+      </node>
+      <node id="38476">
+        <label>BCDS_AxisRemap.h</label>
+        <link refid="_b_c_d_s___axis_remap_8h"/>
+        <childnode refid="38470" relation="include">
+        </childnode>
+      </node>
+      <node id="38472">
+        <label>stdint.h</label>
+      </node>
+      <node id="38470">
+        <label>BCDS_Retcode.h</label>
+        <link refid="_b_c_d_s___retcode_8h"/>
+        <childnode refid="38471" relation="include">
+        </childnode>
+      </node>
+      <node id="38475">
+        <label>stdlib.h</label>
+      </node>
+      <node id="38477">
+        <label>SensorUtilsAxisRemap.h</label>
+      </node>
+      <node id="38474">
+        <label>string.h</label>
+      </node>
+      <node id="38471">
+        <label>BCDS_Basics.h</label>
+        <link refid="_b_c_d_s___basics_8h"/>
+        <childnode refid="38472" relation="include">
+        </childnode>
+        <childnode refid="38473" relation="include">
+        </childnode>
+        <childnode refid="38474" relation="include">
+        </childnode>
+        <childnode refid="38475" relation="include">
+        </childnode>
+      </node>
+      <node id="38469">
+        <label>BCDS_SensorUtils.h</label>
+        <link refid="_b_c_d_s___sensor_utils_8h"/>
+        <childnode refid="38470" relation="include">
+        </childnode>
+      </node>
+      <node id="38468">
+        <label>SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c</label>
+        <link refid="AxisRemap.c"/>
+        <childnode refid="38469" relation="include">
+        </childnode>
+        <childnode refid="38476" relation="include">
+        </childnode>
+        <childnode refid="38477" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_axis_remap_8c_1abff8f3a204e79671b98fabaa652198c3" prot="public" static="no">
+        <name>BCDS_MODULE_ID</name>
+        <initializer><ref refid="group___s_e_n_s_o_r___u_t_i_l_s_1ggaba1885b5f54a444c5604d7c229527edba04a4d9ec9daee240b1c29e0418c2d534" kindref="member">BCDS_SENSORUTILS_ID_AXISREMAP</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" line="44" column="10" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_axis_remap_8c_1a60143a76e9a4537041e7fa6890bf2625" prot="public" static="no">
+        <name>MAP_X_TO_Y</name>
+        <initializer>UINT32_C(0x01)                  /* Condition check for mapping X to Y */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" line="61" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" bodystart="61" bodyend="-1"/>
+        <referencedby refid="_axis_remap_8c_1aa5483f1ef3e297e895b29bb26745c578" compoundref="_axis_remap_8c" startline="77" endline="186">AxisRemap_remapSensorData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_axis_remap_8c_1ab5ce663be2ccd15e840dd913cde25764" prot="public" static="no">
+        <name>MAP_X_TO_Z</name>
+        <initializer>UINT32_C(0x01)                  /* Condition check for mapping X to Z */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" line="63" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" bodystart="63" bodyend="-1"/>
+        <referencedby refid="_axis_remap_8c_1aa5483f1ef3e297e895b29bb26745c578" compoundref="_axis_remap_8c" startline="77" endline="186">AxisRemap_remapSensorData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_axis_remap_8c_1a409ccad3e57f37f9400e486d687ded26" prot="public" static="no">
+        <name>MAP_Y_TO_X</name>
+        <initializer>UINT32_C(0x01)                  /* Condition check for mapping Y to X */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" line="59" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" bodystart="59" bodyend="-1"/>
+        <referencedby refid="_axis_remap_8c_1aa5483f1ef3e297e895b29bb26745c578" compoundref="_axis_remap_8c" startline="77" endline="186">AxisRemap_remapSensorData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_axis_remap_8c_1aa7b921fb8fd3a9b999b95678a9745225" prot="public" static="no">
+        <name>MAP_Y_TO_Z</name>
+        <initializer>UINT32_C(0x02)                  /* Condition check for mapping Y to Z */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" line="64" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" bodystart="64" bodyend="-1"/>
+        <referencedby refid="_axis_remap_8c_1aa5483f1ef3e297e895b29bb26745c578" compoundref="_axis_remap_8c" startline="77" endline="186">AxisRemap_remapSensorData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_axis_remap_8c_1a1c5fd4946b63a6fb66d86d7a2f1e669b" prot="public" static="no">
+        <name>MAP_Z_TO_X</name>
+        <initializer>UINT32_C(0x02)                  /* Condition check for mapping Z to X */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" line="60" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" bodystart="60" bodyend="-1"/>
+        <referencedby refid="_axis_remap_8c_1aa5483f1ef3e297e895b29bb26745c578" compoundref="_axis_remap_8c" startline="77" endline="186">AxisRemap_remapSensorData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_axis_remap_8c_1a21ed580722d5630fdf6a875ce67bddd3" prot="public" static="no">
+        <name>MAP_Z_TO_Y</name>
+        <initializer>UINT32_C(0x02)                  /* Condition check for mapping Z to Y */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" line="62" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" bodystart="62" bodyend="-1"/>
+        <referencedby refid="_axis_remap_8c_1aa5483f1ef3e297e895b29bb26745c578" compoundref="_axis_remap_8c" startline="77" endline="186">AxisRemap_remapSensorData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_axis_remap_8c_1afd4c8237776d06fb7eb766c1bd9ba5c2" prot="public" static="no">
+        <name>MASK_TWO_LEAST_SIGNIFICANT_BITS</name>
+        <initializer>UINT32_C(0x03)                  /* Masking condition for all axis config variable */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" line="53" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" bodystart="53" bodyend="-1"/>
+        <referencedby refid="_axis_remap_8c_1aa5483f1ef3e297e895b29bb26745c578" compoundref="_axis_remap_8c" startline="77" endline="186">AxisRemap_remapSensorData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_axis_remap_8c_1ab3e040b9dfdf181255592ee29da92242" prot="public" static="no">
+        <name>X_AXIS_SIGN_MASK_VAL</name>
+        <initializer>UINT32_C(0x01)                  /* Masking value for sign of X axis */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" line="56" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" bodystart="56" bodyend="-1"/>
+        <referencedby refid="_axis_remap_8c_1aa5483f1ef3e297e895b29bb26745c578" compoundref="_axis_remap_8c" startline="77" endline="186">AxisRemap_remapSensorData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_axis_remap_8c_1aa06d16f19e1e8008614fee7fe9fa1902" prot="public" static="no">
+        <name>Y_AXIS_CONFIG_SHIFT_VAL</name>
+        <initializer>UINT32_C(0x02)                  /* shift config variable for Y axis */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" line="54" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" bodystart="54" bodyend="-1"/>
+        <referencedby refid="_axis_remap_8c_1aa5483f1ef3e297e895b29bb26745c578" compoundref="_axis_remap_8c" startline="77" endline="186">AxisRemap_remapSensorData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_axis_remap_8c_1aa2823162bbdd31bce856256878ee2604" prot="public" static="no">
+        <name>Y_AXIS_SIGN_MASK_VAL</name>
+        <initializer>UINT32_C(0x02)                  /* Masking value for sign of Y axis */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" line="57" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" bodystart="57" bodyend="-1"/>
+        <referencedby refid="_axis_remap_8c_1aa5483f1ef3e297e895b29bb26745c578" compoundref="_axis_remap_8c" startline="77" endline="186">AxisRemap_remapSensorData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_axis_remap_8c_1a22ee98519a42a67eb7981574169e1f8c" prot="public" static="no">
+        <name>Z_AXIS_CONFIG_SHIFT_VAL</name>
+        <initializer>UINT32_C(0x04)                  /* shift config variable for Z axis */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" line="55" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" bodystart="55" bodyend="-1"/>
+        <referencedby refid="_axis_remap_8c_1aa5483f1ef3e297e895b29bb26745c578" compoundref="_axis_remap_8c" startline="77" endline="186">AxisRemap_remapSensorData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_axis_remap_8c_1af56f3ed544d87cab2a29ba63612879ec" prot="public" static="no">
+        <name>Z_AXIS_SIGN_MASK_VAL</name>
+        <initializer>UINT32_C(0x04)                  /* Masking value for sign of Z axis */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" line="58" column="9" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" bodystart="58" bodyend="-1"/>
+        <referencedby refid="_axis_remap_8c_1aa5483f1ef3e297e895b29bb26745c578" compoundref="_axis_remap_8c" startline="77" endline="186">AxisRemap_remapSensorData</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_axis_remap_8c_1aa5483f1ef3e297e895b29bb26745c578" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref></type>
+        <definition>Retcode_T AxisRemap_remapSensorData</definition>
+        <argsstring>(AxisRemap_Data_T actualSensorDataXyz, AxisRemap_Config_T remapConfigData, AxisRemap_Data_T *remapSensorDataXyz_p)</argsstring>
+        <name>AxisRemap_remapSensorData</name>
+        <param>
+          <type><ref refid="group___a_x_i_s___r_e_m_a_p_1ga47fb10054907791a22486da605dc02fc" kindref="member">AxisRemap_Data_T</ref></type>
+          <declname>actualSensorDataXyz</declname>
+        </param>
+        <param>
+          <type><ref refid="group___a_x_i_s___r_e_m_a_p_1gafec9a560b57cfe23523d2a3da3b2e511" kindref="member">AxisRemap_Config_T</ref></type>
+          <declname>remapConfigData</declname>
+        </param>
+        <param>
+          <type><ref refid="group___a_x_i_s___r_e_m_a_p_1ga47fb10054907791a22486da605dc02fc" kindref="member">AxisRemap_Data_T</ref> *</type>
+          <declname>remapSensorDataXyz_p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" line="77" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c" bodystart="77" bodyend="186"/>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" compoundref="_b_c_d_s___retcode_8h" startline="106">RETCODE_FAILURE</references>
+        <references refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="_b_c_d_s___basics_8h" startline="80">NULL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" compoundref="_b_c_d_s___retcode_8h" startline="257">RETCODE</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6acec8ccdc2bb7d9c1e4806729ea2acb76" compoundref="_b_c_d_s___retcode_8h" startline="130">RETCODE_SEVERITY_FATAL</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" compoundref="_b_c_d_s___retcode_8h" startline="112">RETCODE_NULL_POINTER</references>
+        <references refid="struct_axis_remap___config___s_1aeedf9ac3d29a2cda2186ff1ebade794c" compoundref="_b_c_d_s___axis_remap_8h" startline="100">AxisRemap_Config_S::axisConfig</references>
+        <references refid="struct_axis_remap___config___s_1ac1872b630a6fa58fea5115b15fc26b7f" compoundref="_b_c_d_s___axis_remap_8h" startline="101">AxisRemap_Config_S::axisSign</references>
+        <references refid="_axis_remap_8c_1afd4c8237776d06fb7eb766c1bd9ba5c2" compoundref="_axis_remap_8c" startline="53">MASK_TWO_LEAST_SIGNIFICANT_BITS</references>
+        <references refid="_axis_remap_8c_1ab3e040b9dfdf181255592ee29da92242" compoundref="_axis_remap_8c" startline="56">X_AXIS_SIGN_MASK_VAL</references>
+        <references refid="_axis_remap_8c_1aa06d16f19e1e8008614fee7fe9fa1902" compoundref="_axis_remap_8c" startline="54">Y_AXIS_CONFIG_SHIFT_VAL</references>
+        <references refid="_axis_remap_8c_1aa2823162bbdd31bce856256878ee2604" compoundref="_axis_remap_8c" startline="57">Y_AXIS_SIGN_MASK_VAL</references>
+        <references refid="_axis_remap_8c_1a22ee98519a42a67eb7981574169e1f8c" compoundref="_axis_remap_8c" startline="55">Z_AXIS_CONFIG_SHIFT_VAL</references>
+        <references refid="_axis_remap_8c_1af56f3ed544d87cab2a29ba63612879ec" compoundref="_axis_remap_8c" startline="58">Z_AXIS_SIGN_MASK_VAL</references>
+        <references refid="_axis_remap_8c_1a409ccad3e57f37f9400e486d687ded26" compoundref="_axis_remap_8c" startline="59">MAP_Y_TO_X</references>
+        <references refid="struct_axis_remap___data___s_1af6d3062751bd565decb1a2cd3b63bdb2" compoundref="_b_c_d_s___axis_remap_8h" startline="60">AxisRemap_Data_S::x</references>
+        <references refid="struct_axis_remap___data___s_1af64066d134a77e01b3d6eb8da813627a" compoundref="_b_c_d_s___axis_remap_8h" startline="61">AxisRemap_Data_S::y</references>
+        <references refid="_axis_remap_8c_1a1c5fd4946b63a6fb66d86d7a2f1e669b" compoundref="_axis_remap_8c" startline="60">MAP_Z_TO_X</references>
+        <references refid="struct_axis_remap___data___s_1ac2fb30be1b894e32b31b68bb513262a3" compoundref="_b_c_d_s___axis_remap_8h" startline="62">AxisRemap_Data_S::z</references>
+        <references refid="_axis_remap_8c_1a60143a76e9a4537041e7fa6890bf2625" compoundref="_axis_remap_8c" startline="61">MAP_X_TO_Y</references>
+        <references refid="_axis_remap_8c_1a21ed580722d5630fdf6a875ce67bddd3" compoundref="_axis_remap_8c" startline="62">MAP_Z_TO_Y</references>
+        <references refid="_axis_remap_8c_1ab5ce663be2ccd15e840dd913cde25764" compoundref="_axis_remap_8c" startline="63">MAP_X_TO_Z</references>
+        <references refid="_axis_remap_8c_1aa7b921fb8fd3a9b999b95678a9745225" compoundref="_axis_remap_8c" startline="64">MAP_Y_TO_Z</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" compoundref="_b_c_d_s___retcode_8h" startline="263">RETCODE_OK</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" compoundref="_b_c_d_s___retcode_8h" startline="108">RETCODE_INVALID_PARAM</references>
+        <references refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" compoundref="_b_c_d_s___retcode_8h" startline="131">RETCODE_SEVERITY_ERROR</references>
+        <referencedby refid="group___b_m_a280___s_e_n_s_o_r_u_t_i_l_s_1gacbfe1aa23afcc1a2202cb59641ff6911" compoundref="_bma280_utils_8c" startline="246" endline="269">Bma280Utils_remapAxis</referencedby>
+        <referencedby refid="group___b_m_g160___s_e_n_s_o_r_u_t_i_l_s_1gaf0e41ccbd5a733cbea4d72783d1d518c" compoundref="_bmg160_utils_8c" startline="178" endline="206">Bmg160Utils_remapAxis</referencedby>
+        <referencedby refid="group___b_m_i160___s_e_n_s_o_r_u_t_i_l_s_1ga448a33506d894b5f181ec6ca72cc558a" compoundref="_bmi160_utils_8c" startline="171" endline="195">Bmi160Utils_remapAxis</referencedby>
+        <referencedby refid="group___b_m_m150___s_e_n_s_o_r_u_t_i_l_s_1ga4d6b91067fbdaf51211640801eec92d5" compoundref="_bmm150_utils_8c" startline="156" endline="180">Bmm150Utils_remapAxis</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Licensee<sp/>agrees<sp/>that<sp/>the<sp/>example<sp/>code<sp/>provided<sp/>to<sp/>Licensee<sp/>has<sp/>been<sp/>developed<sp/>and<sp/>released<sp/>by<sp/>Bosch<sp/>solely<sp/>as<sp/>an<sp/>example<sp/>to<sp/>be<sp/>used<sp/>as<sp/>a<sp/>potential<sp/>reference<sp/>for<sp/>application<sp/>development<sp/>by<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Fitness<sp/>and<sp/>suitability<sp/>of<sp/>the<sp/>example<sp/>code<sp/>for<sp/>any<sp/>use<sp/>within<sp/>application<sp/>developed<sp/>by<sp/>Licensee<sp/>need<sp/>to<sp/>be<sp/>verified<sp/>by<sp/>Licensee<sp/>on<sp/>its<sp/>own<sp/>authority<sp/>by<sp/>taking<sp/>appropriate<sp/>state<sp/>of<sp/>the<sp/>art<sp/>actions<sp/>and<sp/>measures<sp/>(e.g.<sp/>by<sp/>means<sp/>of<sp/>quality<sp/>assurance<sp/>measures).</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>for<sp/>conducting<sp/>the<sp/>development<sp/>of<sp/>its<sp/>applications<sp/>as<sp/>well<sp/>as<sp/>integration<sp/>of<sp/>parts<sp/>of<sp/>the<sp/>example<sp/>code<sp/>into<sp/>such<sp/>applications,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>state<sp/>of<sp/>the<sp/>art<sp/>of<sp/>technology<sp/>and<sp/>any<sp/>statutory<sp/>regulations<sp/>and<sp/>provisions<sp/>applicable<sp/>for<sp/>such<sp/>applications.<sp/>Compliance<sp/>with<sp/>the<sp/>functional<sp/>system<sp/>requirements<sp/>and<sp/>testing<sp/>there<sp/>of<sp/>(including<sp/>validation<sp/>of<sp/>information/data<sp/>security<sp/>aspects<sp/>and<sp/>functional<sp/>safety)<sp/>and<sp/>release<sp/>shall<sp/>be<sp/>solely<sp/>incumbent<sp/>upon<sp/>Licensee.<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>For<sp/>the<sp/>avoidance<sp/>of<sp/>doubt,<sp/>Licensee<sp/>shall<sp/>be<sp/>responsible<sp/>and<sp/>fully<sp/>liable<sp/>for<sp/>the<sp/>applications<sp/>and<sp/>any<sp/>distribution<sp/>of<sp/>such<sp/>applications<sp/>into<sp/>the<sp/>market.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(1)<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(2)<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>distribution.<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>(3)The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/><sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>module<sp/>includes<sp/>**********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>system<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___sensor_utils_8h" kindref="compound">BCDS_SensorUtils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>BCDS_MODULE_ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="_axis_remap_8c_1abff8f3a204e79671b98fabaa652198c3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BCDS_MODULE_ID<sp/>BCDS_SENSORUTILS_ID_AXISREMAP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>own<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_c_d_s___axis_remap_8h" kindref="compound">BCDS_AxisRemap.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;SensorUtilsAxisRemap.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>additional<sp/>interface<sp/>header<sp/>files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>constant<sp/>definitions<sp/>*****************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="_axis_remap_8c_1afd4c8237776d06fb7eb766c1bd9ba5c2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MASK_TWO_LEAST_SIGNIFICANT_BITS<sp/><sp/>UINT32_C(0x03)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Masking<sp/>condition<sp/>for<sp/>all<sp/>axis<sp/>config<sp/>variable<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="_axis_remap_8c_1aa06d16f19e1e8008614fee7fe9fa1902" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Y_AXIS_CONFIG_SHIFT_VAL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT32_C(0x02)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>shift<sp/>config<sp/>variable<sp/>for<sp/>Y<sp/>axis<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="_axis_remap_8c_1a22ee98519a42a67eb7981574169e1f8c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Z_AXIS_CONFIG_SHIFT_VAL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT32_C(0x04)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>shift<sp/>config<sp/>variable<sp/>for<sp/>Z<sp/>axis<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="_axis_remap_8c_1ab3e040b9dfdf181255592ee29da92242" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>X_AXIS_SIGN_MASK_VAL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT32_C(0x01)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Masking<sp/>value<sp/>for<sp/>sign<sp/>of<sp/>X<sp/>axis<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="_axis_remap_8c_1aa2823162bbdd31bce856256878ee2604" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Y_AXIS_SIGN_MASK_VAL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT32_C(0x02)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Masking<sp/>value<sp/>for<sp/>sign<sp/>of<sp/>Y<sp/>axis<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="_axis_remap_8c_1af56f3ed544d87cab2a29ba63612879ec" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Z_AXIS_SIGN_MASK_VAL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT32_C(0x04)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Masking<sp/>value<sp/>for<sp/>sign<sp/>of<sp/>Z<sp/>axis<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="_axis_remap_8c_1a409ccad3e57f37f9400e486d687ded26" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAP_Y_TO_X<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT32_C(0x01)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Condition<sp/>check<sp/>for<sp/>mapping<sp/>Y<sp/>to<sp/>X<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="_axis_remap_8c_1a1c5fd4946b63a6fb66d86d7a2f1e669b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAP_Z_TO_X<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT32_C(0x02)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Condition<sp/>check<sp/>for<sp/>mapping<sp/>Z<sp/>to<sp/>X<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="_axis_remap_8c_1a60143a76e9a4537041e7fa6890bf2625" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAP_X_TO_Y<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT32_C(0x01)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Condition<sp/>check<sp/>for<sp/>mapping<sp/>X<sp/>to<sp/>Y<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="_axis_remap_8c_1a21ed580722d5630fdf6a875ce67bddd3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAP_Z_TO_Y<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT32_C(0x02)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Condition<sp/>check<sp/>for<sp/>mapping<sp/>Z<sp/>to<sp/>Y<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="_axis_remap_8c_1ab5ce663be2ccd15e840dd913cde25764" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAP_X_TO_Z<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT32_C(0x01)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Condition<sp/>check<sp/>for<sp/>mapping<sp/>X<sp/>to<sp/>Z<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="_axis_remap_8c_1aa7b921fb8fd3a9b999b95678a9745225" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAP_Y_TO_Z<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT32_C(0x02)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Condition<sp/>check<sp/>for<sp/>mapping<sp/>Y<sp/>to<sp/>Z<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>local<sp/>variables<sp/>**********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>global<sp/>variables<sp/>*********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>inline<sp/>functions<sp/>*********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>local<sp/>functions<sp/>**********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>global<sp/>functions<sp/>*********************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>API<sp/>documentation<sp/>is<sp/>in<sp/>the<sp/>interface<sp/>header<sp/>file<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="_axis_remap_8c_1aa5483f1ef3e297e895b29bb26745c578" refkind="member"><highlight class="normal"><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/><ref refid="_axis_remap_8c_1aa5483f1ef3e297e895b29bb26745c578" kindref="member">AxisRemap_remapSensorData</ref>(<ref refid="struct_axis_remap___data___s" kindref="compound">AxisRemap_Data_T</ref><sp/>actualSensorDataXyz,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_axis_remap___config___s" kindref="compound">AxisRemap_Config_T</ref><sp/>remapConfigData,<sp/><ref refid="struct_axis_remap___data___s" kindref="compound">AxisRemap_Data_T</ref><sp/>*remapSensorDataXyz_p)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref><sp/>returnValue<sp/>=<sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acbafeee3d6fd430b337ab3dd2f2a7732c1f" kindref="member">RETCODE_FAILURE</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_a_s_i_c_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>==<sp/>remapSensorDataXyz_p)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6acec8ccdc2bb7d9c1e4806729ea2acb76" kindref="member">RETCODE_SEVERITY_FATAL</ref>,<sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba5d476dcd59fa4e9cf717ce9484a0df08" kindref="member">RETCODE_NULL_POINTER</ref>));</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>allAxisCfgVariable<sp/>=<sp/>UINT8_C(0);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>allAxisSignVariable<sp/>=<sp/>UINT8_C(0);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>xAxisCfgVariable<sp/>=<sp/>UINT8_C(0);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>xAxisSignVariable<sp/>=<sp/>UINT8_C(0);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>yAxisCfgVariable<sp/>=<sp/>UINT8_C(0);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>yAxisSignVariable<sp/>=<sp/>UINT8_C(0);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>zAxisCfgVariable<sp/>=<sp/>UINT8_C(0);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>zAxisSignVariable<sp/>=<sp/>UINT8_C(0);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>allAxisCfgVariable<sp/>=<sp/>remapConfigData.<ref refid="struct_axis_remap___config___s_1aeedf9ac3d29a2cda2186ff1ebade794c" kindref="member">axisConfig</ref>;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>allAxisSignVariable<sp/>=<sp/>remapConfigData.<ref refid="struct_axis_remap___config___s_1ac1872b630a6fa58fea5115b15fc26b7f" kindref="member">axisSign</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((allAxisCfgVariable<sp/>&lt;<sp/>UINT8_C(64))<sp/>&amp;&amp;<sp/>(allAxisSignVariable<sp/>&lt;<sp/>UINT8_C(8)))</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Extract<sp/>Axis<sp/>and<sp/>Sign<sp/>configurations<sp/>for<sp/>X<sp/>axis*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xAxisCfgVariable<sp/>=<sp/>allAxisCfgVariable;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xAxisCfgVariable<sp/>&amp;=<sp/><ref refid="_axis_remap_8c_1afd4c8237776d06fb7eb766c1bd9ba5c2" kindref="member">MASK_TWO_LEAST_SIGNIFICANT_BITS</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xAxisSignVariable<sp/>=<sp/>allAxisSignVariable<sp/>&amp;<sp/><ref refid="_axis_remap_8c_1ab3e040b9dfdf181255592ee29da92242" kindref="member">X_AXIS_SIGN_MASK_VAL</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Extract<sp/>Axis<sp/>and<sp/>Sign<sp/>configurations<sp/>for<sp/>Y<sp/>axis*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>yAxisCfgVariable<sp/>=<sp/>allAxisCfgVariable<sp/>&gt;&gt;<sp/><ref refid="_axis_remap_8c_1aa06d16f19e1e8008614fee7fe9fa1902" kindref="member">Y_AXIS_CONFIG_SHIFT_VAL</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>yAxisCfgVariable<sp/>&amp;=<sp/><ref refid="_axis_remap_8c_1afd4c8237776d06fb7eb766c1bd9ba5c2" kindref="member">MASK_TWO_LEAST_SIGNIFICANT_BITS</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>yAxisSignVariable<sp/>=<sp/>allAxisSignVariable<sp/>&amp;<sp/><ref refid="_axis_remap_8c_1aa2823162bbdd31bce856256878ee2604" kindref="member">Y_AXIS_SIGN_MASK_VAL</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Extract<sp/>Axis<sp/>and<sp/>Sign<sp/>configurations<sp/>for<sp/>Z<sp/>axis*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zAxisCfgVariable<sp/>=<sp/>allAxisCfgVariable<sp/>&gt;&gt;<sp/><ref refid="_axis_remap_8c_1a22ee98519a42a67eb7981574169e1f8c" kindref="member">Z_AXIS_CONFIG_SHIFT_VAL</ref>;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zAxisCfgVariable<sp/>&amp;=<sp/><ref refid="_axis_remap_8c_1afd4c8237776d06fb7eb766c1bd9ba5c2" kindref="member">MASK_TWO_LEAST_SIGNIFICANT_BITS</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zAxisSignVariable<sp/>=<sp/>allAxisSignVariable<sp/>&amp;<sp/><ref refid="_axis_remap_8c_1af56f3ed544d87cab2a29ba63612879ec" kindref="member">Z_AXIS_SIGN_MASK_VAL</ref>;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Re-mapping<sp/>for<sp/>X<sp/>axis<sp/>based<sp/>on<sp/>the<sp/>Configuration<sp/>data*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(xAxisCfgVariable<sp/>==<sp/><ref refid="_axis_remap_8c_1a409ccad3e57f37f9400e486d687ded26" kindref="member">MAP_Y_TO_X</ref>)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remapSensorDataXyz_p-&gt;<ref refid="struct_axis_remap___data___s_1af6d3062751bd565decb1a2cd3b63bdb2" kindref="member">x</ref><sp/>=<sp/>actualSensorDataXyz.<ref refid="struct_axis_remap___data___s_1af64066d134a77e01b3d6eb8da813627a" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(xAxisCfgVariable<sp/>==<sp/><ref refid="_axis_remap_8c_1a1c5fd4946b63a6fb66d86d7a2f1e669b" kindref="member">MAP_Z_TO_X</ref>)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remapSensorDataXyz_p-&gt;<ref refid="struct_axis_remap___data___s_1af6d3062751bd565decb1a2cd3b63bdb2" kindref="member">x</ref><sp/>=<sp/>actualSensorDataXyz.<ref refid="struct_axis_remap___data___s_1ac2fb30be1b894e32b31b68bb513262a3" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remapSensorDataXyz_p-&gt;<ref refid="struct_axis_remap___data___s_1af6d3062751bd565decb1a2cd3b63bdb2" kindref="member">x</ref><sp/>=<sp/>actualSensorDataXyz.<ref refid="struct_axis_remap___data___s_1af6d3062751bd565decb1a2cd3b63bdb2" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(xAxisSignVariable)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remapSensorDataXyz_p-&gt;<ref refid="struct_axis_remap___data___s_1af6d3062751bd565decb1a2cd3b63bdb2" kindref="member">x</ref><sp/>=<sp/>(-remapSensorDataXyz_p-&gt;<ref refid="struct_axis_remap___data___s_1af6d3062751bd565decb1a2cd3b63bdb2" kindref="member">x</ref>);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Re-mapping<sp/>for<sp/>Y<sp/>axis<sp/>based<sp/>on<sp/>the<sp/>Configuration<sp/>data*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(yAxisCfgVariable<sp/>==<sp/><ref refid="_axis_remap_8c_1a60143a76e9a4537041e7fa6890bf2625" kindref="member">MAP_X_TO_Y</ref>)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remapSensorDataXyz_p-&gt;<ref refid="struct_axis_remap___data___s_1af64066d134a77e01b3d6eb8da813627a" kindref="member">y</ref><sp/>=<sp/>actualSensorDataXyz.<ref refid="struct_axis_remap___data___s_1af6d3062751bd565decb1a2cd3b63bdb2" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(yAxisCfgVariable<sp/>==<sp/><ref refid="_axis_remap_8c_1a21ed580722d5630fdf6a875ce67bddd3" kindref="member">MAP_Z_TO_Y</ref>)</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remapSensorDataXyz_p-&gt;<ref refid="struct_axis_remap___data___s_1af64066d134a77e01b3d6eb8da813627a" kindref="member">y</ref><sp/>=<sp/>actualSensorDataXyz.<ref refid="struct_axis_remap___data___s_1ac2fb30be1b894e32b31b68bb513262a3" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remapSensorDataXyz_p-&gt;<ref refid="struct_axis_remap___data___s_1af64066d134a77e01b3d6eb8da813627a" kindref="member">y</ref><sp/>=<sp/>actualSensorDataXyz.<ref refid="struct_axis_remap___data___s_1af64066d134a77e01b3d6eb8da813627a" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(yAxisSignVariable)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remapSensorDataXyz_p-&gt;<ref refid="struct_axis_remap___data___s_1af64066d134a77e01b3d6eb8da813627a" kindref="member">y</ref><sp/>=<sp/>(-remapSensorDataXyz_p-&gt;<ref refid="struct_axis_remap___data___s_1af64066d134a77e01b3d6eb8da813627a" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Re-mapping<sp/>for<sp/>Z<sp/>axis<sp/>based<sp/>on<sp/>the<sp/>Configuration<sp/>data*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(zAxisCfgVariable<sp/>==<sp/><ref refid="_axis_remap_8c_1ab5ce663be2ccd15e840dd913cde25764" kindref="member">MAP_X_TO_Z</ref>)</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remapSensorDataXyz_p-&gt;<ref refid="struct_axis_remap___data___s_1ac2fb30be1b894e32b31b68bb513262a3" kindref="member">z</ref><sp/>=<sp/>actualSensorDataXyz.<ref refid="struct_axis_remap___data___s_1af6d3062751bd565decb1a2cd3b63bdb2" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(zAxisCfgVariable<sp/>==<sp/><ref refid="_axis_remap_8c_1aa7b921fb8fd3a9b999b95678a9745225" kindref="member">MAP_Y_TO_Z</ref>)</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remapSensorDataXyz_p-&gt;<ref refid="struct_axis_remap___data___s_1ac2fb30be1b894e32b31b68bb513262a3" kindref="member">z</ref><sp/>=<sp/>actualSensorDataXyz.<ref refid="struct_axis_remap___data___s_1af64066d134a77e01b3d6eb8da813627a" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remapSensorDataXyz_p-&gt;<ref refid="struct_axis_remap___data___s_1ac2fb30be1b894e32b31b68bb513262a3" kindref="member">z</ref><sp/>=<sp/>actualSensorDataXyz.<ref refid="struct_axis_remap___data___s_1ac2fb30be1b894e32b31b68bb513262a3" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(zAxisSignVariable)</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remapSensorDataXyz_p-&gt;<ref refid="struct_axis_remap___data___s_1ac2fb30be1b894e32b31b68bb513262a3" kindref="member">z</ref><sp/>=<sp/>(-remapSensorDataXyz_p-&gt;<ref refid="struct_axis_remap___data___s_1ac2fb30be1b894e32b31b68bb513262a3" kindref="member">z</ref>);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>returnValue<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref>;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>returnValue<sp/>=<sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga0e1ebc675650b0ceffc059d6b67699c7" kindref="member">Retcode_T</ref>)<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ggaf6fb6f6ae1be4277d38a8684e1be9acba7f63243a04e8ca247613e6713801f6f5" kindref="member">RETCODE_INVALID_PARAM</ref>;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1ga29ad456a36368a4ba96e18b18cb0f7bc" kindref="member">RETCODE_OK</ref><sp/>!=<sp/>returnValue)</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>returnValue<sp/>=<sp/><ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gaf3d88b09f14c70141276ad2f817313e8" kindref="member">RETCODE</ref>(<ref refid="group___b_c_d_s___r_e_t_c_o_d_e_1gga3ce26363bdf4978dc972e8ccce5046d6a822e4e2bf138bd0ac1387ad140a3051e" kindref="member">RETCODE_SEVERITY_ERROR</ref>,<sp/>(uint32_t)<sp/>returnValue);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(returnValue);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorUtils/source/AxisRemap/AxisRemap.c"/>
+  </compounddef>
+</doxygen>

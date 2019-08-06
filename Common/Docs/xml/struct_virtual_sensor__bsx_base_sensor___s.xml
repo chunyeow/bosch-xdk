@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="struct_virtual_sensor__bsx_base_sensor___s" kind="struct" prot="public">
+    <compoundname>VirtualSensor_bsxBaseSensor_S</compoundname>
+    <includes local="no">SDK/xdk110/Platform/SensorToolbox/include/BCDS_VirtualSensorHandle.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_virtual_sensor__bsx_base_sensor___s_1a6dd98bdd1ef0e54b19982d50dbc691df" prot="public" static="no" mutable="no">
+        <type><ref refid="group___a_c_c_e_l_e_r_o_m_e_t_e_r_1ga4b7970700c4307a311d7464927837b4a" kindref="member">Accelerometer_HandlePtr_T</ref></type>
+        <definition>Accelerometer_HandlePtr_T accelerometerHandle</definition>
+        <argsstring></argsstring>
+        <name>accelerometerHandle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle for accelerometer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorToolbox/include/BCDS_VirtualSensorHandle.h" line="77" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorToolbox/include/BCDS_VirtualSensorHandle.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_virtual_sensor__bsx_base_sensor___s_1a81988effe1122f6bb8eeaf7775b4f676" prot="public" static="no" mutable="no">
+        <type><ref refid="group___g_y_r_o_s_c_o_p_e_1ga0dff40202dfb4ed42a471d9498418d9f" kindref="member">Gyroscope_HandlePtr_T</ref></type>
+        <definition>Gyroscope_HandlePtr_T gyroscopeHandle</definition>
+        <argsstring></argsstring>
+        <name>gyroscopeHandle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle for gyroscope </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorToolbox/include/BCDS_VirtualSensorHandle.h" line="79" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorToolbox/include/BCDS_VirtualSensorHandle.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_virtual_sensor__bsx_base_sensor___s_1aeb433a2a362b124f6de551797e6f82c8" prot="public" static="no" mutable="no">
+        <type><ref refid="group___m_a_g_n_e_t_o_m_e_t_e_r_1gab6c27ff087775a5b19a581a6cecb6946" kindref="member">Magnetometer_HandlePtr_T</ref></type>
+        <definition>Magnetometer_HandlePtr_T magnetometerHandle</definition>
+        <argsstring></argsstring>
+        <name>magnetometerHandle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle for magnetometer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorToolbox/include/BCDS_VirtualSensorHandle.h" line="78" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorToolbox/include/BCDS_VirtualSensorHandle.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Data Structure to hold the accel, mag and gyro handles </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="3249">
+        <label>Magnetometer_SensorInfo_S</label>
+        <link refid="struct_magnetometer___sensor_info___s"/>
+      </node>
+      <node id="3254">
+        <label>Acceleromter_SensorInfo_S</label>
+        <link refid="struct_acceleromter___sensor_info___s"/>
+      </node>
+      <node id="3251">
+        <label>Gyroscope_SensorInfo_S</label>
+        <link refid="struct_gyroscope___sensor_info___s"/>
+      </node>
+      <node id="3247">
+        <label>VirtualSensor_bsxBaseSensor_S</label>
+        <link refid="struct_virtual_sensor__bsx_base_sensor___s"/>
+        <childnode refid="3248" relation="usage">
+          <edgelabel>magnetometerHandle</edgelabel>
+        </childnode>
+        <childnode refid="3250" relation="usage">
+          <edgelabel>gyroscopeHandle</edgelabel>
+        </childnode>
+        <childnode refid="3252" relation="usage">
+          <edgelabel>accelerometerHandle</edgelabel>
+        </childnode>
+      </node>
+      <node id="3252">
+        <label>Accelerometer_Handle_S</label>
+        <link refid="struct_accelerometer___handle___s"/>
+        <childnode refid="3253" relation="usage">
+          <edgelabel>IntChannel1</edgelabel>
+          <edgelabel>IntChannel2</edgelabel>
+        </childnode>
+        <childnode refid="3254" relation="usage">
+          <edgelabel>SensorInformation</edgelabel>
+        </childnode>
+      </node>
+      <node id="3250">
+        <label>Gyroscope_Handle_S</label>
+        <link refid="struct_gyroscope___handle___s"/>
+        <childnode refid="3251" relation="usage">
+          <edgelabel>sensorInfo</edgelabel>
+        </childnode>
+      </node>
+      <node id="3248">
+        <label>Magnetometer_Handle_S</label>
+        <link refid="struct_magnetometer___handle___s"/>
+        <childnode refid="3249" relation="usage">
+          <edgelabel>SensorInformation</edgelabel>
+        </childnode>
+      </node>
+      <node id="3253">
+        <label>Accelerometer_InterruptCallback_S</label>
+        <link refid="struct_accelerometer___interrupt_callback___s"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorToolbox/include/BCDS_VirtualSensorHandle.h" line="76" column="1" bodyfile="C:/Jenkins/XDK/Pipeline/xdk110/SDK/xdk110/Platform/SensorToolbox/include/BCDS_VirtualSensorHandle.h" bodystart="75" bodyend="80"/>
+    <listofallmembers>
+      <member refid="struct_virtual_sensor__bsx_base_sensor___s_1a6dd98bdd1ef0e54b19982d50dbc691df" prot="public" virt="non-virtual"><scope>VirtualSensor_bsxBaseSensor_S</scope><name>accelerometerHandle</name></member>
+      <member refid="struct_virtual_sensor__bsx_base_sensor___s_1a81988effe1122f6bb8eeaf7775b4f676" prot="public" virt="non-virtual"><scope>VirtualSensor_bsxBaseSensor_S</scope><name>gyroscopeHandle</name></member>
+      <member refid="struct_virtual_sensor__bsx_base_sensor___s_1aeb433a2a362b124f6de551797e6f82c8" prot="public" virt="non-virtual"><scope>VirtualSensor_bsxBaseSensor_S</scope><name>magnetometerHandle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

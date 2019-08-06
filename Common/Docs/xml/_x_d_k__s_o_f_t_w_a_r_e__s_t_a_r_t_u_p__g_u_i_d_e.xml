@@ -1,0 +1,493 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_x_d_k__s_o_f_t_w_a_r_e__s_t_a_r_t_u_p__g_u_i_d_e" kind="page">
+    <compoundname>XDK_SOFTWARE_STARTUP_GUIDE</compoundname>
+    <title>XDK Software Startup Guide</title>
+    <detaileddescription>
+<para>Explains XDK Startup Procedure and how you can customize it</para><para><hruler/>
+</para><para>This simple guide is intended, for the developers who are going to develop applications for XDK, to know the basic startup procedure of the system before they start writing their application.</para><para>XDK software can be configured to start in two ways as described below. The configuration can be done using <bold>BCDS_SYSTEM_STARTUP_METHOD</bold> macro present in the <bold>application Makefile</bold>. Refer the code block below representing the change. Also Note that by default XDK is shipped with <bold>DEFAULT_STARTUP</bold> enabled.</para><para><programlisting><codeline><highlight class="normal">export<sp/>BCDS_SYSTEM_STARTUP_METHOD=CUSTOM_STARTUP</highlight></codeline>
+</programlisting></para><sect1 id="_x_d_k__s_o_f_t_w_a_r_e__s_t_a_r_t_u_p__g_u_i_d_e_1XDK_SOFTWARE_STARTUP_GUIDE_Default_startup">
+<title>Default Startup:</title>
+<para>The <computeroutput>Main()</computeroutput> function implemented in SystemStartUp module will be the first C function executed during power ON and it does the following,<orderedlist>
+<listitem><para>EFM32 chip is configured to a proper state with the help of library function exported by emlib.</para></listitem><listitem><para>All the interrupt sources are configured to maximum priority to ensure, ISR runs at highest priority.</para></listitem><listitem><para>System peripherals like GPIO,I2C and USB are initialized to a proper state.</para></listitem><listitem><para>GPIO pins related to the device are configured to its default value.</para></listitem><listitem><para>User page module is initialized, which is used to save configuration information like Wifi MAC address, Bluetooth MAC address, etc., in the user page area of flash.</para></listitem><listitem><para>Create a default application specific initialization timer and start it.</para></listitem><listitem><para>Give control to operating system by starting task scheduler of FreeRTOS.</para></listitem></orderedlist>
+</para></sect1>
+<sect1 id="_x_d_k__s_o_f_t_w_a_r_e__s_t_a_r_t_u_p__g_u_i_d_e_1XDK_SOFTWARE_STARTUP_GUIDE_Custom_startup">
+<title>Custom Startup:</title>
+<para>Custom startup procedure will exclude step 3 to 5 described above in default startup procedure, to give flexibility to users, in order to have their own way of initializing system peripherals. The user can choose to initialize and configure the peripherals which he wants to use in his application. If, Custom startup procedure is configured, the user has to ensure the GPIO pins that they are using are initialized to a proper default state. In both of the above configurations XDK&apos;s SystemStartUp module will schedule a default application specific initialization timer &quot;appInitSystem&quot;, which will run in the timer task context with task priority 2. <simplesect kind="note"><para>While creating the OS task inside place holder &quot;appInitSystem&quot; the priority of OS tasks created shall be preferably less than or equal to 2. Because assigning priority greater than 2 may block all the timer task having lesser priority in this case. So, all the user applications are expected to have the implementation of the task &quot;appInitSystem&quot; and this will be the place holder for application specific initialization function. Application specific initialization function can further create either &quot;timers&quot; or &quot;OS tasks&quot; as suitable for its purpose (refer <ref refid="_free_r_t_o_s_8h" kindref="compound">FreeRTOS.h</ref> for API reference).</para></simplesect>
+</para></sect1>
+<sect1 id="_x_d_k__s_o_f_t_w_a_r_e__s_t_a_r_t_u_p__g_u_i_d_e_1Task_priority">
+<title>Task creation and its priority:</title>
+<para>Users can find configuration related to FreeRTOS in a file called, <ref refid="_free_r_t_o_s_config_8h" kindref="compound">FreeRTOSConfig.h</ref> and it is present in path <bold>&quot;xdk110\Common\config\AmazonFreeRTOS&quot;</bold>. This contains information like maximum task priority, stack size, heap size, software timer configurations, CPU clock and interrupt priority configurations. As explained, the user can create &quot;Timer&quot; or &quot;OS Task&quot; for its application use. Since, the creation of OS task requires the user to specify the task priority and stack size, we expect the user, to understand the task priorities of FreeRTOS, if, they prefer to create and use OS task for their application (see <ulink url="http://www.freertos.org/RTOS.html">FreeRTOS</ulink> documentation). The maximum priority of a task in XDK software is presently configured to 5, which is controlled by the macro configMAX_PRIORITIES. Considering the fact that the interrupt routines should run in the highest task priority, XDK assigns maximum priority to its interrupt sources. So, any task running in XDK should have the priority less than the configMAX_PRIORITIES that is 5. For a user who does not want to get into the complexities of handling independent OS tasks, we suggest to use timers to realize their use cases.</para></sect1>
+<sect1 id="_x_d_k__s_o_f_t_w_a_r_e__s_t_a_r_t_u_p__g_u_i_d_e_1Hardware_Interrupt_priority">
+<title>Hardware Interrupt Priority:</title>
+<para>All hardware interrupts are configured to SYSCALL_INTERRUPT_PRIORITY_MAX.If user want to change the priority of any peripheral interrupts then it can be changed from 0 to SYSCALL_INTERRUPT_PRIORITY_MAX.Priority 0 means highest priority and SYSCALL_INTERRUPT_PRIORITY_MAX means least priority, within this priority range the ISR routine can call freeRTOS ISR safe API&apos;s(like xSemaphoreGiveFromISR)</para><para>Note: If the priority is set greater than SYSCALL_INTERRUPT_PRIORITY_MAX then freeRTOS ISR safe API&apos;s(like xSemaphoreGiveFromISR) must not be called in that particular peripheral ISR,violating this may have undesired behavior</para></sect1>
+<sect1 id="_x_d_k__s_o_f_t_w_a_r_e__s_t_a_r_t_u_p__g_u_i_d_e_1XDK_SOFTWARE_STARTUP_GUIDE_helloworld1">
+<title>Startup code for v3.4.0 and above</title>
+<para><programlisting><codeline><highlight class="normal">----------------------------------------------------Main.c--------------------------------------</highlight></codeline>
+<codeline><highlight class="normal">/*<sp/>own<sp/>header<sp/>files<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;XdkAppInfo.h&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#undef<sp/>BCDS_MODULE_ID<sp/><sp/>/*<sp/>Module<sp/>ID<sp/>define<sp/>before<sp/>including<sp/>Basics<sp/>package*/</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>BCDS_MODULE_ID<sp/>XDK_APP_MODULE_ID_MAIN</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*<sp/>system<sp/>header<sp/>files<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;stdio.h&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;BCDS_Basics.h&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*<sp/>additional<sp/>interface<sp/>header<sp/>files<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;XdkSystemStartup.h&quot;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;BCDS_Assert.h&quot;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;AppController.h&quot;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;BCDS_CmdProcessor.h&quot;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;FreeRTOS.h&quot;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;task.h&quot;</highlight></codeline>
+<codeline><highlight class="normal">/*<sp/>own<sp/>header<sp/>files<sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*<sp/>global<sp/>variables<sp/>*********************************************************<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">static<sp/>CmdProcessor_T<sp/>MainCmdProcessor;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*<sp/>functions<sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>main(void)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>/*<sp/>Mapping<sp/>Default<sp/>Error<sp/>Handling<sp/>function<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Retcode_T<sp/>retcode<sp/>=<sp/>Retcode_Initialize(DefaultErrorHandlingFunc);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(RETCODE_OK<sp/>==<sp/>retcode)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>systemStartup();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(RETCODE_OK<sp/>==<sp/>retcode)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>CmdProcessor_Initialize(&amp;MainCmdProcessor,<sp/>(char<sp/>*)<sp/>&quot;MainCmdProcessor&quot;,<sp/>TASK_PRIO_MAIN_CMD_PROCESSOR,<sp/>TASK_STACK_SIZE_MAIN_CMD_PROCESSOR,<sp/>TASK_Q_LEN_MAIN_CMD_PROCESSOR);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(RETCODE_OK<sp/>==<sp/>retcode)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/*<sp/>Here<sp/>we<sp/>enqueue<sp/>the<sp/>application<sp/>initialization<sp/>into<sp/>the<sp/>command</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>processor,<sp/>such<sp/>that<sp/>the<sp/>initialization<sp/>function<sp/>will<sp/>be<sp/>invoked</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>once<sp/>the<sp/>RTOS<sp/>scheduler<sp/>is<sp/>started<sp/>below.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>CmdProcessor_Enqueue(&amp;MainCmdProcessor,<sp/>AppController_Init,<sp/>&amp;MainCmdProcessor,<sp/>UINT32_C(0));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(RETCODE_OK<sp/>==<sp/>retcode)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/*<sp/>start<sp/>scheduler<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vTaskStartScheduler();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/*<sp/>Code<sp/>must<sp/>not<sp/>reach<sp/>here<sp/>since<sp/>the<sp/>OS<sp/>must<sp/>take<sp/>control.<sp/>If<sp/>not,<sp/>we<sp/>will<sp/>assert.<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>else</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Retcode_RaiseError(retcode);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;main<sp/>:<sp/>XDK<sp/>System<sp/>Startup<sp/>failed.\r\n&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>assert(false);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">----------------------------------------------------End<sp/>of<sp/>application------------------------------------</highlight></codeline>
+</programlisting></para><sect2 id="_x_d_k__s_o_f_t_w_a_r_e__s_t_a_r_t_u_p__g_u_i_d_e_1XDK_SOFTWARE_STARTUP_GUIDE_helloworld">
+<title>As per the Application Common Control Flow Changes by using CommandProcessor in XDK-3.4.0 &amp; above:</title>
+<para>Example : The following is the sample application to write a application using xdk modules.</para><para><orderedlist>
+<listitem><para>Application should follow the below three steps : <itemizedlist>
+<listitem>
+<para><bold>Setup</bold> - Here necessary modules required for the application like WLAN, BLE ,Sensors etc from the common are defined </para></listitem>
+<listitem>
+<para><bold>Enable</bold> - Here necessary modules required for the application are enabled </para></listitem>
+<listitem>
+<para><bold>Fire</bold> - After the setup and enable is done , fire is responsible for controlling application control flow. Any application logic which is blocking in nature or fixed time dependent can be placed in this API. </para></listitem>
+</itemizedlist>
+</para></listitem><listitem><para>Command processor should be used for all event based operation</para></listitem><listitem><para>Tasks should be used for polling based operation</para></listitem><listitem><para>Try to avoid Software timer usage</para></listitem><listitem><para>All reusable components/modules should be placed in common repo. Application Features should be independent from BCDS shared package/3rd party library.</para></listitem><listitem><para>Common repository : <itemizedlist>
+<listitem>
+<para>Feature control should be based on run time configurable Ex. security enable/disable </para></listitem>
+<listitem>
+<para>Feature enable/disable should be controlled from config macro. Ex. #define XDK_BLE_FEATURE 1 </para></listitem>
+<listitem>
+<para>Features should be RTOS and ServalStack independent </para></listitem>
+<listitem>
+<para>Each module/components should support Setup, Enable APIs. <itemizedlist>
+<listitem>
+<para>These Setup, Enable apis should be a blocking call and must be command processor independent </para></listitem>
+<listitem>
+<para>Optionally modules should support Disable, Close apis. </para></listitem>
+<listitem>
+<para>All used resources properly initialized and de-initialized incluing static variables. </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Variable naming for function return value <itemizedlist>
+<listitem>
+<para>retcode - Retcode_T </para></listitem>
+<listitem>
+<para>rc - retcode_t </para></listitem>
+<listitem>
+<para>result - any other result value </para></listitem>
+<listitem>
+<para>status - any other status value </para></listitem>
+</itemizedlist>
+</para></listitem>
+</itemizedlist>
+<programlisting><codeline><highlight class="normal">----------------------------------------------------Application.c--------------------------------------</highlight></codeline>
+<codeline><highlight class="normal">/*<sp/>own<sp/>header<sp/>files<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;XdkAppInfo.h&quot;</highlight></codeline>
+<codeline><highlight class="normal">#undef<sp/>BCDS_MODULE_ID<sp/><sp/>/*<sp/>Module<sp/>ID<sp/>define<sp/>before<sp/>including<sp/>Basics<sp/>package*/</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>BCDS_MODULE_ID<sp/>XDK_APP_MODULE_ID_APP_CONTROLLER</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*<sp/>own<sp/>header<sp/>files<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;AppController.h&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*<sp/>system<sp/>header<sp/>files<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;stdio.h&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*<sp/>additional<sp/>interface<sp/>header<sp/>files<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;BCDS_CmdProcessor.h&quot;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;FreeRTOS.h&quot;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;task.h&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*<sp/>constant<sp/>definitions<sp/>*****************************************************<sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*<sp/>local<sp/>variables<sp/>**********************************************************<sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**&lt;<sp/>Handle<sp/>to<sp/>store<sp/>the<sp/>main<sp/>Command<sp/>processor<sp/>handle<sp/>to<sp/>be<sp/>used<sp/>by<sp/>run-time<sp/>event<sp/>driven<sp/>threads<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">static<sp/>CmdProcessor_T<sp/>*<sp/>AppCmdProcessor;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**&lt;<sp/>OS<sp/>thread<sp/>handle<sp/>for<sp/>Application<sp/>controller<sp/>to<sp/>be<sp/>used<sp/>by<sp/>run-time<sp/>blocking<sp/>threads<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">static<sp/>xTaskHandle<sp/>AppControllerHandle<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*<sp/>global<sp/>variables<sp/>*********************************************************<sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*<sp/>inline<sp/>functions<sp/>*********************************************************<sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*<sp/>local<sp/>functions<sp/>**********************************************************<sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@brief<sp/>Responsible<sp/>for<sp/>controlling<sp/>application<sp/>control<sp/>flow.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Any<sp/>application<sp/>logic<sp/>which<sp/>is<sp/>blocking<sp/>in<sp/>nature<sp/>or<sp/>fixed<sp/>time<sp/>dependent</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>can<sp/>be<sp/>placed<sp/>here.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@param[in]<sp/>pvParameters</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>FreeRTOS<sp/>task<sp/>handle.<sp/>Could<sp/>be<sp/>used<sp/>if<sp/>more<sp/>than<sp/>one<sp/>thread<sp/>is<sp/>using<sp/>this<sp/>function<sp/>block.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">static<sp/>void<sp/>AppControllerFire(void*<sp/>pvParameters)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>BCDS_UNUSED(pvParameters);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>/*<sp/>A<sp/>function<sp/>that<sp/>implements<sp/>a<sp/>task<sp/>must<sp/>not<sp/>exit<sp/>or<sp/>attempt<sp/>to<sp/>return<sp/>to</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>its<sp/>caller<sp/>function<sp/>as<sp/>there<sp/>is<sp/>nothing<sp/>to<sp/>return<sp/>to.<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>while<sp/>(1)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/*<sp/>code<sp/>to<sp/>implement<sp/>application<sp/>control<sp/>flow<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@brief<sp/>To<sp/>enable<sp/>the<sp/>necessary<sp/>modules<sp/>for<sp/>the<sp/>application</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@param<sp/>[in]<sp/>param1</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>A<sp/>generic<sp/>pointer<sp/>to<sp/>any<sp/>context<sp/>data<sp/>structure<sp/>which<sp/>will<sp/>be<sp/>passed<sp/>to<sp/>the<sp/>function<sp/>when<sp/>it<sp/>is<sp/>invoked<sp/>by<sp/>the<sp/>command<sp/>processor.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@param<sp/>[in]<sp/>param2</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>A<sp/>generic<sp/>32<sp/>bit<sp/>value<sp/><sp/>which<sp/>will<sp/>be<sp/>passed<sp/>to<sp/>the<sp/>function<sp/>when<sp/>it<sp/>is<sp/>invoked<sp/>by<sp/>the<sp/>command<sp/>processor..</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">static<sp/>void<sp/>AppControllerEnable(void<sp/>*<sp/>param1,<sp/>uint32_t<sp/>param2)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>BCDS_UNUSED(param1);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>BCDS_UNUSED(param2);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Retcode_T<sp/>retcode<sp/>=<sp/>RETCODE_OK;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>/*<sp/>@todo<sp/>-<sp/>Enable<sp/>necessary<sp/>modules<sp/>for<sp/>the<sp/>application<sp/>and<sp/>check<sp/>their<sp/>return<sp/>values<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(RETCODE_OK<sp/>==<sp/>retcode)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(pdPASS<sp/>!=<sp/>xTaskCreate(AppControllerFire,<sp/>(const<sp/>char<sp/>*<sp/>const<sp/>)<sp/>&quot;AppController&quot;,<sp/>TASK_STACK_SIZE_APP_CONTROLLER,<sp/>NULL,<sp/>TASK_PRIO_APP_CONTROLLER,<sp/>&amp;AppControllerHandle))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>RETCODE(RETCODE_SEVERITY_ERROR,<sp/>RETCODE_OUT_OF_RESOURCES);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(RETCODE_OK<sp/>!=<sp/>retcode)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;AppControllerEnable<sp/>:<sp/>Failed<sp/>\r\n&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Retcode_RaiseError(retcode);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@brief<sp/>To<sp/>setup<sp/>the<sp/>necessary<sp/>modules<sp/>for<sp/>the<sp/>application</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@param<sp/>[in]<sp/>param1</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>A<sp/>generic<sp/>pointer<sp/>to<sp/>any<sp/>context<sp/>data<sp/>structure<sp/>which<sp/>will<sp/>be<sp/>passed<sp/>to<sp/>the<sp/>function<sp/>when<sp/>it<sp/>is<sp/>invoked<sp/>by<sp/>the<sp/>command<sp/>processor.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@param<sp/>[in]<sp/>param2</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>A<sp/>generic<sp/>32<sp/>bit<sp/>value<sp/><sp/>which<sp/>will<sp/>be<sp/>passed<sp/>to<sp/>the<sp/>function<sp/>when<sp/>it<sp/>is<sp/>invoked<sp/>by<sp/>the<sp/>command<sp/>processor..</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">static<sp/>void<sp/>AppControllerSetup(void<sp/>*<sp/>param1,<sp/>uint32_t<sp/>param2)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>BCDS_UNUSED(param1);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>BCDS_UNUSED(param2);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Retcode_T<sp/>retcode<sp/>=<sp/>RETCODE_OK;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>/*<sp/>@todo<sp/>-<sp/>Setup<sp/>the<sp/>necessary<sp/>modules<sp/>required<sp/>for<sp/>the<sp/>application<sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>CmdProcessor_Enqueue(AppCmdProcessor,<sp/>AppControllerEnable,<sp/>NULL,<sp/>UINT32_C(0));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(RETCODE_OK<sp/>!=<sp/>retcode)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;AppControllerSetup<sp/>:<sp/>Failed<sp/>\r\n&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Retcode_RaiseError(retcode);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*<sp/>global<sp/>functions<sp/>*********************************************************<sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**<sp/>Refer<sp/>interface<sp/>header<sp/>for<sp/>description<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>AppController_Init(void<sp/>*<sp/>cmdProcessorHandle,<sp/>uint32_t<sp/>param2)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>BCDS_UNUSED(param2);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Retcode_T<sp/>retcode<sp/>=<sp/>RETCODE_OK;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(cmdProcessorHandle<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;AppController_Run<sp/>:<sp/>Command<sp/>processor<sp/>handle<sp/>is<sp/>NULL<sp/>\r\n&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>RETCODE(RETCODE_SEVERITY_ERROR,<sp/>RETCODE_NULL_POINTER);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>else</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AppCmdProcessor<sp/>=<sp/>(CmdProcessor_T<sp/>*)<sp/>cmdProcessorHandle;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retcode<sp/>=<sp/>CmdProcessor_Enqueue(AppCmdProcessor,<sp/>AppControllerSetup,<sp/>NULL,<sp/>UINT32_C(0));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(RETCODE_OK<sp/>!=<sp/>retcode)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Retcode_RaiseError(retcode);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">----------------------------------------------------End<sp/>of<sp/>application------------------------------------</highlight></codeline>
+</programlisting></para></listitem></orderedlist>
+</para></sect2>
+</sect1>
+<sect1 id="_x_d_k__s_o_f_t_w_a_r_e__s_t_a_r_t_u_p__g_u_i_d_e_1XDK_SOFTWARE_STARTUP_GUIDE_helloworld_program">
+<title>Procedure to realize &apos;hello world&apos; program on XDK for version below XDK-3.0.0:</title>
+<para>Realizing &quot;Hello World&quot; program in XDK is straight forward and pretty simple. All, the user has to do is, as explained, implement default application specific initialization task and print &apos;hello world&apos; as below,</para><para><programlisting><codeline><highlight class="normal">----------------------------------------------------Main.c--------------------------------------</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;stdio.h&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*<sp/>system<sp/>header<sp/>files<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;BCDS_Basics.h&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;BCDS_CmdProcessor.h&quot;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;BCDS_Assert.h&quot;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;FreeRTOS.h&quot;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;task.h&quot;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;BEA_bleEchoData_cc.h&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*<sp/>additional<sp/>interface<sp/>header<sp/>files<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;XdkSystemStartup.h&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*<sp/>global<sp/>variables<sp/>*********************************************************<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">static<sp/>CmdProcessor_T<sp/>MainCmdProcessor;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>main(void)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>/*<sp/>Mapping<sp/>Default<sp/>Error<sp/>Handling<sp/>function<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Retcode_T<sp/>returnValue<sp/>=<sp/>Retcode_initialize(DefaultErrorHandlingFunc);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(RETCODE_OK<sp/>==<sp/>returnValue)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>returnValue<sp/>=<sp/>systemStartup();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(RETCODE_OK<sp/>==<sp/>returnValue)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>returnValue<sp/>=<sp/>CmdProcessor_initialize(&amp;MainCmdProcessor,<sp/>(char<sp/>*)<sp/>&quot;MainCmdProcessor&quot;,<sp/>TASK_PRIO_MAIN_CMD_PROCESSOR,<sp/>TASK_STACK_SIZE_MAIN_CMD_PROCESSOR,<sp/>TASK_Q_LEN_MAIN_CMD_PROCESSOR);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(RETCODE_OK<sp/>==<sp/>returnValue)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/*<sp/>Here<sp/>we<sp/>enqueue<sp/>the<sp/>application<sp/>initialization<sp/>into<sp/>the<sp/>command</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>processor,<sp/>such<sp/>that<sp/>the<sp/>initialization<sp/>function<sp/>will<sp/>be<sp/>invoked</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>once<sp/>the<sp/>RTOS<sp/>scheduler<sp/>is<sp/>started<sp/>below.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>returnValue<sp/>=<sp/>CmdProcessor_enqueue(&amp;MainCmdProcessor,<sp/>appInitSystem,<sp/>&amp;MainCmdProcessor,<sp/>UINT32_C(0));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(RETCODE_OK<sp/>!=<sp/>returnValue)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;System<sp/>Startup<sp/>failed&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(false);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>/*<sp/>start<sp/>scheduler<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>vTaskStartScheduler();</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para><programlisting><codeline><highlight class="normal">----------------------------------------------------application.c--------------------------------------</highlight></codeline>
+<codeline><highlight class="normal">/*<sp/>system<sp/>header<sp/>files<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;stdio.h&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;BCDS_Basics.h&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*<sp/>additional<sp/>interface<sp/>header<sp/>files<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;FreeRTOS.h&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">xTaskHandle<sp/>Application_gdt;<sp/>/**&lt;<sp/>variable<sp/>to<sp/>store<sp/>task<sp/>handle<sp/>for<sp/>Application_init<sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@brief<sp/>Application<sp/>to<sp/>print<sp/>&quot;hello<sp/>world&quot;<sp/>on<sp/>serial<sp/>console.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>Application_init(void<sp/>*<sp/>pvParameters)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>(void)<sp/>pvParameters;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(;;)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;Hello<sp/>world\r\n&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vTaskDelay((portTickType)<sp/>1000<sp/>/<sp/>portTICK_RATE_MS);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@brief<sp/>This<sp/>is<sp/>a<sp/>template<sp/>function<sp/>where<sp/>the<sp/>user<sp/>can<sp/>write<sp/>his/her<sp/>custom<sp/>application.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>appInitSystem(void<sp/>*<sp/>CmdProcessorHandle,<sp/>uint32_t<sp/>param2)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>BCDS_UNUSED(CmdProcessorHandle);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>BCDS_UNUSED(param2);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>/*Call<sp/>the<sp/>Application<sp/>Init<sp/>API*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>xTaskCreate(Application_init,<sp/>(const<sp/>char<sp/>*<sp/>const)<sp/>&quot;Application_init&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>256,NULL,1,&amp;Application_gdt);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">----------------------------------End<sp/>of<sp/>application----------------------------------------------------</highlight></codeline>
+</programlisting></para><para>Message &quot;Hello World&quot; will be printed on the console after flashing the above implementation.</para><para>A more efficient way of doing this however would be to use a timer:</para><para><programlisting><codeline><highlight class="normal">----------------------------------------------------application.c--------------------------------------</highlight></codeline>
+<codeline><highlight class="normal">/*<sp/>system<sp/>header<sp/>files<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;stdio.h&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;BCDS_Basics.h&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*<sp/>additional<sp/>interface<sp/>header<sp/>files<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;FreeRTOS.h&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#define<sp/>THREESECONDDELAY<sp/>UINT32_C(1000)<sp/>/*<sp/>one<sp/>second<sp/>is<sp/>represented<sp/>by<sp/>this<sp/>macro<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>TIMERBLOCKTIME<sp/><sp/><sp/>UINT32_C(0xffff)<sp/><sp/><sp/><sp/>/*<sp/>Macro<sp/>used<sp/>to<sp/>define<sp/>blocktime<sp/>of<sp/>a<sp/>timer<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>TIMER_AUTORELOAD_ON<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT32_C(1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/**&lt;<sp/>Auto<sp/>reload<sp/>of<sp/>timer<sp/>is<sp/>enabled*/</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@brief<sp/>Print<sp/>string<sp/>&quot;Hello<sp/>World&quot;<sp/>on<sp/>the<sp/>console</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@param[in]<sp/>pxTimer<sp/>timer<sp/>handle</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>printHelloWorld(xTimerHandle<sp/>pxTimer)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>BCDS_UNUSED(pxTimer);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>printf(&quot;Hello<sp/>world\r\n&quot;);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@brief<sp/>Application<sp/>to<sp/>print<sp/>&quot;hello<sp/>world&quot;<sp/>on<sp/>serial<sp/>console.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>Application_init(void)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>xTimerHandle<sp/>timerHandle_gdt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>/*<sp/>create<sp/>timer<sp/>task<sp/>to<sp/>read<sp/>and<sp/>print<sp/>lightsensor<sp/>data<sp/>every<sp/>three<sp/>seconds*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>/*<sp/>Validated<sp/>for<sp/>portMAX_DELAY<sp/>to<sp/>assist<sp/>the<sp/>task<sp/>to<sp/>wait<sp/>Infinitely<sp/>(without<sp/>timing<sp/>out)<sp/>and<sp/>ticks<sp/>cannot<sp/>be<sp/>0<sp/>in<sp/>FreeRTOS<sp/>timer.<sp/>So<sp/>ticks<sp/>is<sp/>assigned<sp/>to<sp/>1*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>timerHandle_gdt<sp/>=<sp/>xTimerCreate(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(char<sp/>*<sp/>const)<sp/>&quot;Test<sp/>Application<sp/>to<sp/>print<sp/>Hello<sp/>World&quot;,<sp/>(THREESECONDDELAY/portTICK_RATE_MS),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TIMER_AUTORELOAD_ON,<sp/>NULL,<sp/>printHelloWorld);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>/*start<sp/>the<sp/>timer*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>xTimerStart(timerHandle_gdt,<sp/>TIMERBLOCKTIME);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@brief<sp/>This<sp/>is<sp/>a<sp/>template<sp/>function<sp/>where<sp/>the<sp/>user<sp/>can<sp/>write<sp/>his/her<sp/>custom<sp/>application.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>appInitSystem(void<sp/>*<sp/>CmdProcessorHandle,<sp/>uint32_t<sp/>param2)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>BCDS_UNUSED(CmdProcessorHandle);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>BCDS_UNUSED(param2);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Application_init();</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">----------------------------------------------------End<sp/>of<sp/>application------------------------------------</highlight></codeline>
+</programlisting></para><sect2 id="_x_d_k__s_o_f_t_w_a_r_e__s_t_a_r_t_u_p__g_u_i_d_e_1XDK-XDK_SOFTWARE_STARTUP_GUIDE_helloworld_program">
+<title>As per the Application Common Control Flow Changes by using CommandProcessor in XDK-3.0.0 to XDK-3.3.1:</title>
+<para>Example : Message &quot;Hello World&quot; will be printed on the console after flashing the above implementation.</para><para>A more efficient way of doing this however would be to use a timer and CommandProcessor:</para><para><programlisting><codeline><highlight class="normal">----------------------------------------------------application.c--------------------------------------</highlight></codeline>
+<codeline><highlight class="normal">/*<sp/>system<sp/>header<sp/>files<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;stdio.h&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;BCDS_Basics.h&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*<sp/>additional<sp/>interface<sp/>header<sp/>files<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;FreeRTOS.h&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#define<sp/>THREESECONDDELAY<sp/>UINT32_C(1000)<sp/>/*<sp/>one<sp/>second<sp/>is<sp/>represented<sp/>by<sp/>this<sp/>macro<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>TIMERBLOCKTIME<sp/><sp/><sp/>UINT32_C(0xffff)<sp/><sp/><sp/><sp/>/*<sp/>Macro<sp/>used<sp/>to<sp/>define<sp/>blocktime<sp/>of<sp/>a<sp/>timer<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>TIMER_AUTORELOAD_ON<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT32_C(1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/**&lt;<sp/>Auto<sp/>reload<sp/>of<sp/>timer<sp/>is<sp/>enabled*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*Application<sp/>Command<sp/>Processor<sp/>Instance<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">CmdProcessor_T<sp/>*AppCmdProcessor;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@brief<sp/>The<sp/>function<sp/>is<sp/>to<sp/>print<sp/>the<sp/>Hello<sp/>world<sp/>on<sp/>serialport.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@param[in]<sp/>param1<sp/>should<sp/>be<sp/>defined<sp/>with<sp/>the<sp/>type<sp/>void<sp/>*(as<sp/>argument)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@param[in]<sp/>param2<sp/>should<sp/>be<sp/>defined<sp/>with<sp/>the<sp/>type<sp/>uint32_t<sp/>(as<sp/>argument)</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">static<sp/>void<sp/>printHelloWorld(void<sp/>*<sp/>param1,<sp/>uint32_t<sp/>param2)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>BCDS_UNUSED(param1);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>BCDS_UNUSED(param2);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>printf(&quot;Hello<sp/>world\r\n&quot;);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">/*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@brief<sp/>Print<sp/>string<sp/>&quot;Hello<sp/>World&quot;<sp/>on<sp/>the<sp/>console</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@param[in]<sp/>pxTimer<sp/>timer<sp/>handle</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>processUsbPrintMsg(xTimerHandle<sp/>pxTimer)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>BCDS_UNUSED(pxTimer);<sp/>/*<sp/>suppressing<sp/>warning<sp/>message<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Retcode_T<sp/>returnValue<sp/>=<sp/>RETCODE_OK;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>returnValue<sp/>=<sp/>CmdProcessor_enqueue(AppCmdProcessor,<sp/>printHelloWorld,<sp/>NULL,<sp/>UINT32_C(0));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(RETCODE_OK<sp/>!=<sp/>returnValue)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;Enqueuing<sp/>for<sp/>PrintHelloWorld<sp/>callback<sp/>failed\n\r&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@brief<sp/>Application<sp/>to<sp/>print<sp/>&quot;hello<sp/>world&quot;<sp/>on<sp/>serial<sp/>console.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>Application_init(void)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>xTimerHandle<sp/>timerHandle_gdt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>*<sp/>Return<sp/>value<sp/>for<sp/>Timer<sp/>start<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/>retValPerSwTimer<sp/>=<sp/>TIMER_NOT_ENOUGH_MEMORY;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>/*<sp/>create<sp/>timer<sp/>task<sp/>to<sp/>read<sp/>and<sp/>print<sp/>lightsensor<sp/>data<sp/>every<sp/>three<sp/>seconds*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>/*<sp/>Validated<sp/>for<sp/>portMAX_DELAY<sp/>to<sp/>assist<sp/>the<sp/>task<sp/>to<sp/>wait<sp/>Infinitely<sp/>(without<sp/>timing<sp/>out)<sp/>and<sp/>ticks<sp/>cannot<sp/>be<sp/>0<sp/>in<sp/>FreeRTOS<sp/>timer.<sp/>So<sp/>ticks<sp/>is<sp/>assigned<sp/>to<sp/>1*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>timerHandle_gdt<sp/>=<sp/>xTimerCreate(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(char<sp/>*<sp/>const)<sp/>&quot;Test<sp/>Application<sp/>to<sp/>print<sp/>Hello<sp/>World&quot;,<sp/>(THREESECONDDELAY/portTICK_RATE_MS),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TIMER_AUTORELOAD_ON,<sp/>NULL,<sp/>processUsbPrintMsg);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/*<sp/>timer<sp/>create<sp/>fail<sp/>case<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(NULL<sp/>==<sp/>timerHandle_gdt)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/*<sp/>Assertion<sp/>Reason:<sp/>&quot;This<sp/>software<sp/>timer<sp/>was<sp/>not<sp/>Created,<sp/>Due<sp/>to<sp/>Insufficient<sp/>heap<sp/>memory&quot;<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(false);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>/*start<sp/>the<sp/>timer*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>retValPerSwTimer<sp/>=<sp/>xTimerStart(timerHandle_gdt,<sp/>TIMERBLOCKTIME);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/*<sp/>Timer<sp/>start<sp/>fail<sp/>case<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(TIMER_NOT_ENOUGH_MEMORY<sp/>==<sp/>retValPerSwTimer)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/*<sp/>Assertion<sp/>Reason:<sp/>&quot;This<sp/>software<sp/>timer<sp/>was<sp/>not<sp/>started,<sp/>Due<sp/>to<sp/>Insufficient<sp/>heap<sp/>memory&quot;<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(false);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@brief<sp/>This<sp/>is<sp/>a<sp/>template<sp/>function<sp/>where<sp/>the<sp/>user<sp/>can<sp/>write<sp/>his/her<sp/>custom<sp/>application.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>appInitSystem(void<sp/>*<sp/>CmdProcessorHandle,<sp/>uint32_t<sp/>param2)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(CmdProcessorHandle<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;Command<sp/>processor<sp/>handle<sp/>is<sp/>null<sp/>\n\r&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(false);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>AppCmdProcessor<sp/>=<sp/>(CmdProcessor_T<sp/>*)CmdProcessorHandle;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>BCDS_UNUSED(param2);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Application_init();</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">----------------------------------------------------End<sp/>of<sp/>application------------------------------------</highlight></codeline>
+</programlisting> </para></sect2>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>
