@@ -93,6 +93,8 @@ struct MQTT_Connect_S
     uint16_t BrokerPort; /**< The port number of the MQTT broker */
     bool CleanSession; /**< The clean session flag indicates to the broker whether the client wants to establish a clean session or a persistent session where all subscriptions and messages (QoS 1 & 2) are stored for the client. */
     uint32_t KeepAliveInterval; /**< The keep alive interval (in seconds) is the time the client commits to for when sending regular pings to the broker. The broker responds to the pings enabling both sides to determine if the other one is still alive and reachable */
+    const char * device_uname;
+    const char * device_pwd;
 };
 
 /**

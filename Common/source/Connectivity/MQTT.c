@@ -400,6 +400,8 @@ Retcode_T MQTT_ConnectToBroker(MQTT_Connect_T * mqttConnect, uint32_t timeout)
             {
             Ip_Address_T brokerIpAddress = 0UL;
             StringDescr_T clientID;
+            StringDescr_T username;
+            StringDescr_T password;
             char mqttBrokerURL[30] = { 0 };
             char serverIpStringBuffer[16] = { 0 };
 
@@ -430,6 +432,10 @@ Retcode_T MQTT_ConnectToBroker(MQTT_Connect_T * mqttConnect, uint32_t timeout)
             if (RETCODE_OK == retcode)
             {
                 MqttSession.MQTTVersion = 3;
+            	StringDescr_wrap(&username, mqttConnect->device_uname);
+            	MqttSession.username = username;
+            	StringDescr_wrap(&password, mqttConnect->device_pwd);
+            	MqttSession.password = password;
                 MqttSession.keepAliveInterval = mqttConnect->KeepAliveInterval;
                 MqttSession.cleanSession = mqttConnect->CleanSession;
                 MqttSession.will.haveWill = false;
